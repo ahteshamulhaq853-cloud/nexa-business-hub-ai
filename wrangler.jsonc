@@ -4,6 +4,9 @@
   "name": "nexa-business-hub-ai",
   "main": "worker.js",
   "compatibility_date": "2026-10-21",
+  "ai": {
+    "binding": "AI"
+  },
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",
