@@ -31,7 +31,7 @@
       display:flex;justify-content:space-between;align-items:center;
       gap:15px;flex-wrap:wrap;padding:15px 20px;
       border:1px solid var(--line);border-radius:20px;
-      background:#0d1527eF;margin-bottom:22px;
+      background:#0d1527ef;margin-bottom:22px;
     }
     .brand {display:flex;gap:12px;align-items:center}
     .brand-logo {
@@ -115,7 +115,7 @@
       border-radius:18px;padding:20px;margin-bottom:18px;
     }
     .form-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-    .field-wrap {display:flex;flex-direction:column;gap:7px}
+    .field-wrap {display:flex;flex-direction:column;gap:7px;min-width:0}
     .field-wrap.full {grid-column:1/-1}
     label {font-size:13px;color:#d5e0f4}
     .field {
@@ -136,6 +136,16 @@
     }
     .notice.error {border-color:#8c414a;color:#ffb5b5}
     .notice.success {border-color:#226c58;color:#a8f2d4}
+    .cv-builder {
+      grid-column:1/-1;padding:17px;border:1px solid #4c477f;
+      background:linear-gradient(145deg,#171b38,#101b30);
+      border-radius:15px;
+    }
+    .cv-builder h3 {margin-bottom:5px}
+    .cv-builder .intro {font-size:13px;color:var(--muted);margin-bottom:16px}
+    .cv-builder .form-grid {margin-top:12px}
+    .cv-builder .field {min-width:0}
+    .field-help {font-size:11px;color:var(--muted)}
     .progress-track {height:7px;background:#27334a;border-radius:20px;overflow:hidden}
     .progress-bar {height:100%;background:linear-gradient(90deg,var(--primary),var(--cyan));width:0}
     .lesson-list {display:grid;gap:9px;margin-top:16px}
@@ -150,7 +160,7 @@
     .empty {grid-column:1/-1;text-align:center;color:var(--muted);padding:25px}
     footer {text-align:center;padding:28px 10px;color:var(--muted);font-size:12px}
     .auth-overlay {
-      position:fixed;inset:0;background:#030713eF;z-index:50;
+      position:fixed;inset:0;background:#030713ef;z-index:50;
       display:grid;place-items:center;padding:18px;overflow:auto;
     }
     .auth-card {
@@ -178,7 +188,7 @@
       .stats {grid-template-columns:1fr 1fr}
       .stats .stat:last-child {grid-column:1/-1}
       .service-grid,.course-grid,.form-grid {grid-template-columns:1fr}
-      .field-wrap.full {grid-column:auto}
+      .field-wrap.full,.cv-builder {grid-column:auto}
       .panel {padding:14px}
       .section-head {align-items:stretch}
       .search {width:100%}
@@ -246,7 +256,7 @@
 
       <section class="section" id="generatorSection">
         <div class="section-head">
-          <div><h2 id="generatorTitle">AI Content Generator</h2><p>اپنی تفصیلات درج کریں اور AI سے مواد تیار کروائیں۔</p></div>
+          <div><h2 id="generatorTitle">AI Content Generator</h2><p id="generatorDescription">اپنی تفصیلات درج کریں اور AI سے مواد تیار کروائیں۔</p></div>
         </div>
         <div class="panel">
           <form id="generatorForm">
@@ -264,7 +274,117 @@
                   <option value="Pashto">Pashto</option>
                 </select>
               </div>
-              <div class="field-wrap full">
+
+              <!-- CV BUILDER: appears only for the CV service -->
+              <div class="cv-builder hidden" id="cvOptions">
+                <h3>📑 Professional CV Builder</h3>
+                <p class="intro">اپنی CV کی قسم منتخب کریں اور بنیادی معلومات بھریں۔ لمبی تفصیل لکھنے کی ضرورت نہیں۔ اختیاری خانے خالی چھوڑ سکتے ہیں۔</p>
+
+                <div class="form-grid">
+                  <div class="field-wrap full">
+                    <label for="cvType">CV کی قسم / مطلوبہ ملازمت</label>
+                    <select class="field" id="cvType">
+                      <option value="Professional General CV">Professional General CV</option>
+                      <option value="Fresh Candidate CV">Fresh Candidate / No Experience</option>
+                      <option value="Student CV">Student CV</option>
+                      <option value="Experienced Candidate CV">Experienced Candidate</option>
+                      <option value="Computer Operator CV">Computer Operator</option>
+                      <option value="Office Assistant CV">Office Assistant</option>
+                      <option value="Data Entry Operator CV">Data Entry Operator</option>
+                      <option value="Graphic Designer CV">Graphic Designer</option>
+                      <option value="Web Developer CV">Web Developer</option>
+                      <option value="Teacher CV">Teacher</option>
+                      <option value="Accountant CV">Accountant</option>
+                      <option value="Advocate CV">Advocate / Lawyer</option>
+                      <option value="Salesman CV">Salesman</option>
+                      <option value="Customer Service CV">Customer Service</option>
+                      <option value="Driver CV">Driver</option>
+                      <option value="Office Management CV">Office Management</option>
+                      <option value="Freelancer CV">Freelancer</option>
+                      <option value="Internship CV">Internship</option>
+                      <option value="Government Job CV">Government Job</option>
+                      <option value="Private Job CV">Private Job</option>
+                    </select>
+                  </div>
+
+                  <div class="field-wrap">
+                    <label for="cvName">Full Name *</label>
+                    <input class="field" id="cvName" maxlength="120" autocomplete="name" placeholder="اپنا پورا نام لکھیں">
+                  </div>
+                  <div class="field-wrap">
+                    <label for="cvPhone">Phone / WhatsApp (اختیاری)</label>
+                    <input class="field" id="cvPhone" maxlength="50" autocomplete="tel" placeholder="0300 1234567">
+                  </div>
+                  <div class="field-wrap">
+                    <label for="cvEmail">Email (اختیاری)</label>
+                    <input class="field" id="cvEmail" type="email" maxlength="254" autocomplete="email" placeholder="you@example.com">
+                  </div>
+                  <div class="field-wrap">
+                    <label for="cvCity">City / Address (اختیاری)</label>
+                    <input class="field" id="cvCity" maxlength="150" autocomplete="address-level2" placeholder="شہر یا علاقہ">
+                  </div>
+
+                  <div class="field-wrap">
+                    <label for="cvEducation">Highest Education *</label>
+                    <select class="field" id="cvEducation">
+                      <option value="">تعلیم منتخب کریں</option>
+                      <option>Middle</option>
+                      <option>Matric</option>
+                      <option>Intermediate / FA / FSc / ICS / ICom</option>
+                      <option>BA / BSc / BCom / ADP</option>
+                      <option>BS / Bachelor's Degree</option>
+                      <option>MA / MSc / Master's Degree</option>
+                      <option>MPhil / MS</option>
+                      <option>PhD</option>
+                      <option>DIT / Diploma</option>
+                      <option>Technical / Vocational Diploma</option>
+                      <option>Other qualification</option>
+                    </select>
+                  </div>
+                  <div class="field-wrap">
+                    <label for="cvInstitute">Institute / Board (اختیاری)</label>
+                    <input class="field" id="cvInstitute" maxlength="180" placeholder="ادارے یا بورڈ کا نام">
+                  </div>
+
+                  <div class="field-wrap">
+                    <label for="cvExperience">Experience Level</label>
+                    <select class="field" id="cvExperience">
+                      <option value="Fresh candidate with no formal work experience">Fresh Candidate — تجربہ نہیں</option>
+                      <option value="Some work experience">Some Experience — کچھ تجربہ</option>
+                      <option value="Experienced professional">Experienced Professional — تجربہ کار</option>
+                      <option value="Student seeking internship">Student / Internship</option>
+                    </select>
+                  </div>
+                  <div class="field-wrap">
+                    <label for="cvDesign">CV Format</label>
+                    <select class="field" id="cvDesign">
+                      <option value="ATS-friendly simple professional">ATS-Friendly Professional</option>
+                      <option value="Modern professional">Modern Professional</option>
+                      <option value="Simple clean one-page">Simple One-Page</option>
+                      <option value="Traditional formal">Traditional Formal</option>
+                    </select>
+                  </div>
+
+                  <div class="field-wrap full">
+                    <label for="cvSkills">Skills (اختیاری)</label>
+                    <input class="field" id="cvSkills" maxlength="1500" placeholder="مثلاً MS Office، Typing، Graphic Design، Communication">
+                    <span class="field-help">صرف وہ مہارتیں درج کریں جو واقعی آپ کو آتی ہیں۔</span>
+                  </div>
+
+                  <div class="field-wrap full">
+                    <label for="cvWork">Work Experience / Internship (اختیاری)</label>
+                    <textarea class="field" id="cvWork" maxlength="3000" style="min-height:85px" placeholder="ادارے کا نام، عہدہ اور مدت؛ اگر تجربہ نہیں تو خالی چھوڑ دیں۔"></textarea>
+                  </div>
+
+                  <div class="field-wrap full">
+                    <label for="cvOther">Additional Information (اختیاری)</label>
+                    <textarea class="field" id="cvOther" maxlength="2000" style="min-height:75px" placeholder="سرٹیفکیٹ، زبانیں، حاصل کردہ کامیابیاں یا دوسری متعلقہ معلومات"></textarea>
+                  </div>
+                </div>
+                <div class="notice">اہم: AI آپ کی فراہم کردہ معلومات استعمال کرے گا۔ جعلی تعلیم، تجربہ، سرٹیفکیٹ یا مہارتیں شامل نہیں کی جائیں گی۔</div>
+              </div>
+
+              <div class="field-wrap full" id="generalDetailsWrap">
                 <label for="userDetails">اپنی ضروری تفصیلات لکھیں</label>
                 <textarea class="field" id="userDetails" required maxlength="12000" placeholder="مثلاً: نام، تعلیم، تجربہ، مقصد، کاروبار کی تفصیل یا خط لکھنے کی وجہ..."></textarea>
               </div>
@@ -280,6 +400,7 @@
             <div id="generatorNotice" aria-live="polite"></div>
           </form>
         </div>
+
         <div class="panel">
           <div class="section-head">
             <h3>Generated Result</h3>
@@ -355,11 +476,7 @@
 <script>
 "use strict";
 
-/* -------------------------------------------------------
-   SUPABASE CONFIGURATION
-   The publishable/anon key is intended for browser use.
-   Protect user data with correct Supabase RLS policies.
--------------------------------------------------------- */
+/* SUPABASE CONFIGURATION */
 const SUPABASE_URL = "https://njfobttocvkjsrvlcjaj.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_EkEFOVho4ryOYcIOVAqMhQ_z9yoD9TB";
 
@@ -372,7 +489,7 @@ if (window.supabase && SUPABASE_URL.startsWith("https://") &&
   );
 }
 
-/* Your existing Cloudflare Worker endpoint */
+/* Existing Cloudflare Worker endpoint */
 const API_URL = "/api/generate";
 
 const services = [
@@ -384,7 +501,7 @@ const services = [
   {id:"social",icon:"📱",name:"Social Media Posts",ur:"سوشل میڈیا پوسٹس",desc:"فیس بک اور دیگر پلیٹ فارمز کی پوسٹس۔",prompt:"Create engaging social media post copy with a clear call to action."},
   {id:"typing",icon:"⌨️",name:"Urdu & English Typing",ur:"اردو اور انگلش ٹائپنگ",desc:"متن کی ترتیب اور زبان کی اصلاح۔",prompt:"Organize and proofread the supplied Urdu or English text. Preserve its intended meaning."},
   {id:"official",icon:"🏛️",name:"Applications & Official Letters",ur:"درخواستیں اور سرکاری خطوط",desc:"رسمی درخواست اور دفتری خط۔",prompt:"Write a formal application or official letter using the supplied facts."},
-  {id:"cv",icon:"📑",name:"CV & Resume",ur:"سی وی اور ریزیومے",desc:"پروفیشنل CV اور ریزیومے کا مسودہ۔",prompt:"Create a professional ATS-friendly resume. Do not invent qualifications or work experience."},
+  {id:"cv",icon:"📑",name:"CV & Resume",ur:"سی وی اور ریزیومے",desc:"آپشنز کے ذریعے پروفیشنل CV تیار کریں۔",prompt:"Create a professional ATS-friendly resume. Do not invent qualifications or work experience."},
   {id:"forms",icon:"📝",name:"Form Filling Guide",ur:"فارم بھرنے میں مدد",desc:"فارم کے خانوں کو سمجھنے میں مدد۔",prompt:"Explain how to complete the described form using only the information provided."},
   {id:"pdf",icon:"📕",name:"PDF Creation & Editing",ur:"پی ڈی ایف کا مواد",desc:"PDF دستاویز کے لیے منظم متن۔",prompt:"Organize the supplied content into a clean document structure suitable for exporting to PDF."},
   {id:"scan",icon:"🖨️",name:"Scanning & Printing",ur:"اسکیننگ اور پرنٹنگ",desc:"اسکیننگ اور پرنٹنگ کے لیے چیک لسٹ۔",prompt:"Provide a practical scanning and printing checklist for the described document."},
@@ -406,8 +523,6 @@ const services = [
   {id:"custom",icon:"⚙️",name:"Custom Digital Work",ur:"دیگر ڈیجیٹل کام",desc:"اپنی ضرورت کے مطابق خصوصی مدد۔",prompt:"Help plan the requested digital task and produce a useful draft or step-by-step guide."}
 ];
 
-/* Courses include a learning outline.
-   Lessons are instructional outlines, not claims of accredited certification. */
 const courses = [
   {id:"computer",icon:"💻",name:"Computer Basics",ur:"کمپیوٹر کی بنیادی تعلیم",level:"Beginner",duration:"4 weeks",desc:"کمپیوٹر استعمال کرنے کی بنیادی مہارتیں۔",lessons:[
     ["کمپیوٹر کا تعارف","کمپیوٹر، ہارڈویئر اور سافٹ ویئر کی بنیادی سمجھ۔"],
@@ -524,9 +639,10 @@ function notify(message) {
   toast.textContent = message;
   toast.classList.remove("hidden");
   clearTimeout(state.toastTimer);
-  state.toastTimer = setTimeout(() => toast.classList.add("hidden"), 3500);
+  state.toastTimer = setTimeout(() => toast.classList.add("hidden"),3500);
 }
-function showNotice(targetId, message, type="") {
+
+function showNotice(targetId,message,type="") {
   const target = $(targetId);
   target.innerHTML = "";
   if (!message) return;
@@ -535,6 +651,7 @@ function showNotice(targetId, message, type="") {
   box.textContent = message;
   target.appendChild(box);
 }
+
 function showSection(sectionId) {
   const section = $(sectionId);
   if (!section) return;
@@ -543,9 +660,66 @@ function showSection(sectionId) {
     btn.classList.toggle("active",btn.dataset.section === sectionId);
   });
 }
+
 document.querySelectorAll(".nav-btn").forEach(btn => {
-  btn.addEventListener("click", () => showSection(btn.dataset.section));
+  btn.addEventListener("click",() => showSection(btn.dataset.section));
 });
+
+/* CV form visibility and data */
+function toggleCVOptions() {
+  const isCV = $("serviceType").value === "cv";
+
+  $("cvOptions").classList.toggle("hidden",!isCV);
+  $("generalDetailsWrap").classList.toggle("hidden",isCV);
+
+  $("userDetails").required = !isCV;
+  $("cvName").required = isCV;
+  $("cvEducation").required = isCV;
+
+  $("generatorTitle").textContent = isCV
+    ? "Professional CV Builder"
+    : (services.find(s => s.id === $("serviceType").value)?.name || "AI Content Generator");
+
+  $("generatorDescription").textContent = isCV
+    ? "آپشنز منتخب کریں اور اپنی بنیادی معلومات درج کرکے CV بنائیں۔"
+    : "اپنی تفصیلات درج کریں اور AI سے مواد تیار کروائیں۔";
+}
+
+function getCVDetails() {
+  const fields = [
+    ["CV Type", $("cvType").value],
+    ["Full Name", $("cvName").value.trim()],
+    ["Phone", $("cvPhone").value.trim()],
+    ["Email", $("cvEmail").value.trim()],
+    ["City / Address", $("cvCity").value.trim()],
+    ["Education", $("cvEducation").value],
+    ["Institute / Board", $("cvInstitute").value.trim()],
+    ["Experience Level", $("cvExperience").value],
+    ["CV Format", $("cvDesign").value],
+    ["Skills", $("cvSkills").value.trim()],
+    ["Work Experience / Internship", $("cvWork").value.trim()],
+    ["Additional Information", $("cvOther").value.trim()]
+  ];
+
+  return fields.map(([label,value]) =>
+    label + ": " + (value || "Not provided")
+  ).join("\n");
+}
+
+function resetCVFields() {
+  $("cvType").selectedIndex = 0;
+  $("cvName").value = "";
+  $("cvPhone").value = "";
+  $("cvEmail").value = "";
+  $("cvCity").value = "";
+  $("cvEducation").value = "";
+  $("cvInstitute").value = "";
+  $("cvExperience").selectedIndex = 0;
+  $("cvDesign").selectedIndex = 0;
+  $("cvSkills").value = "";
+  $("cvWork").value = "";
+  $("cvOther").value = "";
+}
 
 function renderServices(filter="") {
   const grid = $("serviceGrid");
@@ -553,11 +727,14 @@ function renderServices(filter="") {
   const list = services.filter(s =>
     [s.name,s.ur,s.desc].join(" ").toLowerCase().includes(q)
   );
+
   grid.innerHTML = "";
+
   if (!list.length) {
     grid.innerHTML = '<div class="empty">No matching services found.</div>';
     return;
   }
+
   list.forEach(s => {
     const card = document.createElement("article");
     card.className = "item-card";
@@ -567,27 +744,32 @@ function renderServices(filter="") {
       <span class="pill">${escapeHTML(s.ur)}</span>
       <p>${escapeHTML(s.desc)}</p>
       <button class="btn" type="button">Use Service →</button>`;
-    card.querySelector("button").addEventListener("click", () => {
-      $("serviceType").value = s.id;
+
+    card.querySelector("button").addEventListener("click",() => {
       selectService(s.id);
       showSection("generatorSection");
-      $("userDetails").focus();
+      if (s.id === "cv") $("cvName").focus();
+      else $("userDetails").focus();
     });
+
     grid.appendChild(card);
   });
 }
+
 function renderServiceOptions() {
   $("serviceType").innerHTML = services.map(s =>
     `<option value="${escapeHTML(s.id)}">${escapeHTML(s.name)} — ${escapeHTML(s.ur)}</option>`
   ).join("");
   $("serviceType").value = state.currentService;
+  toggleCVOptions();
 }
+
 function selectService(id) {
   const s = services.find(item => item.id === id);
   if (!s) return;
   state.currentService = id;
   $("serviceType").value = id;
-  $("generatorTitle").textContent = s.name;
+  toggleCVOptions();
 }
 
 function renderCourses(filter="") {
@@ -596,11 +778,14 @@ function renderCourses(filter="") {
   const list = courses.filter(c =>
     [c.name,c.ur,c.desc,c.level].join(" ").toLowerCase().includes(q)
   );
+
   grid.innerHTML = "";
+
   if (!list.length) {
     grid.innerHTML = '<div class="empty">No matching courses found.</div>';
     return;
   }
+
   list.forEach(c => {
     const card = document.createElement("article");
     card.className = "item-card";
@@ -615,7 +800,8 @@ function renderCourses(filter="") {
         <span class="pill">${c.lessons.length} Lessons</span>
       </div>
       <button class="btn primary" type="button">Start Learning →</button>`;
-    card.querySelector("button").addEventListener("click", () => openCourse(c.id));
+
+    card.querySelector("button").addEventListener("click",() => openCourse(c.id));
     grid.appendChild(card);
   });
 }
@@ -623,12 +809,14 @@ function renderCourses(filter="") {
 function localProgressKey() {
   return state.user ? "nexa-progress:" + state.user.id : null;
 }
+
 function getProgress() {
   const key = localProgressKey();
   if (!key) return {};
   try { return JSON.parse(localStorage.getItem(key) || "{}"); }
   catch { return {}; }
 }
+
 function saveProgress(progress) {
   const key = localProgressKey();
   if (!key) {
@@ -643,16 +831,20 @@ function saveProgress(progress) {
     return false;
   }
 }
+
 function openCourse(courseId) {
   const course = courses.find(c => c.id === courseId);
   if (!course) return;
+
   state.currentCourse = courseId;
   $("courseDetailSection").classList.remove("hidden");
+
   const progress = getProgress();
   const completed = new Set(progress[courseId] || []);
   const doneCount = completed.size;
   const percent = Math.round(doneCount / course.lessons.length * 100);
   const content = $("courseDetailContent");
+
   content.innerHTML = `
     <div style="font-size:42px">${course.icon}</div>
     <h2>${escapeHTML(course.name)}</h2>
@@ -666,47 +858,61 @@ function openCourse(courseId) {
       <button class="btn primary" id="continueLessonBtn">Continue Learning</button>
       <button class="btn" id="resetProgressBtn">Reset Progress</button>
     </div>`;
+
   const lessonList = $("lessonList");
+
   course.lessons.forEach((lesson,index) => {
     const row = document.createElement("label");
     row.className = "lesson" + (completed.has(index) ? " done" : "");
     row.innerHTML = `
       <input type="checkbox" ${completed.has(index) ? "checked" : ""}>
       <span><strong>${index+1}. ${escapeHTML(lesson[0])}</strong><br><small class="muted">${escapeHTML(lesson[1])}</small></span>`;
-    row.querySelector("input").addEventListener("change", event => {
+
+    row.querySelector("input").addEventListener("change",event => {
       if (!state.user) {
         event.target.checked = completed.has(index);
         openAuth("login");
         notify("اپنی پیش رفت محفوظ کرنے کے لیے Login کریں۔");
         return;
       }
+
       if (event.target.checked) completed.add(index);
       else completed.delete(index);
+
       const latest = getProgress();
       latest[courseId] = [...completed];
       if (saveProgress(latest)) openCourse(courseId);
     });
+
     lessonList.appendChild(row);
   });
-  $("continueLessonBtn").addEventListener("click", () => {
+
+  $("continueLessonBtn").addEventListener("click",() => {
     const rows = [...document.querySelectorAll("#lessonList .lesson")];
     const next = rows.find(row => !row.querySelector("input").checked);
+
     if (next) {
       next.scrollIntoView({behavior:"smooth",block:"center"});
       next.querySelector("input").focus();
-    } else notify("مبارک ہو! آپ نے اس کورس کے تمام لیسنز مکمل کر لیے ہیں۔");
+    } else {
+      notify("مبارک ہو! آپ نے اس کورس کے تمام لیسنز مکمل کر لیے ہیں۔");
+    }
   });
-  $("resetProgressBtn").addEventListener("click", () => {
+
+  $("resetProgressBtn").addEventListener("click",() => {
     if (!state.user) return openAuth("login");
     if (!confirm("کیا آپ اس کورس کی محفوظ شدہ پیش رفت ختم کرنا چاہتے ہیں؟")) return;
+
     const latest = getProgress();
     delete latest[courseId];
     saveProgress(latest);
     openCourse(courseId);
   });
+
   showSection("courseDetailSection");
 }
-$("backToCoursesBtn").addEventListener("click", () => {
+
+$("backToCoursesBtn").addEventListener("click",() => {
   $("courseDetailSection").classList.add("hidden");
   showSection("coursesSection");
 });
@@ -714,16 +920,20 @@ $("backToCoursesBtn").addEventListener("click", () => {
 function renderMyLearning() {
   const grid = $("learningList");
   grid.innerHTML = "";
+
   const progress = getProgress();
   const started = courses.filter(c => (progress[c.id] || []).length > 0);
+
   if (!state.user) {
     grid.innerHTML = '<div class="empty">اپنے کورسز کی پیش رفت محفوظ کرنے کے لیے Login کریں۔</div>';
     return;
   }
+
   if (!started.length) {
     grid.innerHTML = '<div class="empty">آپ نے ابھی کسی کورس کی پیش رفت شروع نہیں کی۔ Courses سیکشن سے ایک کورس منتخب کریں۔</div>';
     return;
   }
+
   started.forEach(c => {
     const count = (progress[c.id] || []).length;
     const percent = Math.round(count/c.lessons.length*100);
@@ -735,7 +945,8 @@ function renderMyLearning() {
       <p>${count}/${c.lessons.length} lessons completed · ${percent}%</p>
       <div class="progress-track"><div class="progress-bar" style="width:${percent}%"></div></div>
       <button class="btn" type="button">Continue Course</button>`;
-    card.querySelector("button").addEventListener("click", () => openCourse(c.id));
+
+    card.querySelector("button").addEventListener("click",() => openCourse(c.id));
     grid.appendChild(card);
   });
 }
@@ -743,17 +954,20 @@ function renderMyLearning() {
 function updateAccountUI() {
   $("loginTopBtn").classList.toggle("hidden",!!state.user);
   $("logoutBtn").classList.toggle("hidden",!state.user);
+
   const panel = $("accountPanel");
   panel.innerHTML = "";
+
   if (!state.user) {
     const p = document.createElement("p");
     p.className = "muted";
     p.textContent = "اکاؤنٹ کی معلومات دیکھنے کے لیے لاگ اِن کریں۔";
     panel.appendChild(p);
+
     const b = document.createElement("button");
     b.className = "btn primary";
     b.textContent = "Login / Register";
-    b.addEventListener("click", () => openAuth("login"));
+    b.addEventListener("click",() => openAuth("login"));
     panel.appendChild(b);
   } else {
     const email = document.createElement("p");
@@ -762,15 +976,18 @@ function updateAccountUI() {
     value.textContent = state.user.email || "";
     email.appendChild(value);
     panel.appendChild(email);
+
     const uid = document.createElement("p");
     uid.className = "muted small";
     uid.textContent = "Account ID: " + state.user.id;
     panel.appendChild(uid);
+
     const tip = document.createElement("div");
     tip.className = "notice";
     tip.textContent = "آپ کے کورسز کی پیش رفت اس براؤزر میں مقامی طور پر محفوظ ہوتی ہے۔ اسے دوسرے آلات پر ہم آہنگ کرنے کے لیے database integration درکار ہوگی۔";
     panel.appendChild(tip);
   }
+
   renderMyLearning();
 }
 
@@ -782,57 +999,79 @@ function openAuth(mode="login") {
   setAuthMode(mode);
   $("authOverlay").classList.remove("hidden");
 }
+
 function closeAuth() {
   $("authOverlay").classList.add("hidden");
   showNotice("authNotice","");
 }
+
 function setAuthMode(mode) {
   state.authMode = mode;
   const register = mode === "register";
+
   $("authHeading").textContent = register ? "Create Your Account" :
     mode === "reset" ? "Reset Password" : "Welcome Back";
+
   $("authNameWrap").classList.toggle("hidden",!register);
   $("authPasswordWrap").classList.toggle("hidden",mode === "reset");
+  $("authPassword").required = mode !== "reset";
+
   $("authSubmitBtn").textContent = register ? "Register" :
     mode === "reset" ? "Send Reset Email" : "Login";
+
   $("forgotPasswordBtn").classList.toggle("hidden",register || mode === "reset");
   $("showLoginBtn").classList.toggle("primary",!register);
   $("showRegisterBtn").classList.toggle("primary",register);
+
   showNotice("authNotice","");
 }
+
 $("loginTopBtn").addEventListener("click",() => openAuth("login"));
+
 $("logoutBtn").addEventListener("click",async () => {
   if (!supabaseClient) return;
+
   const {error} = await supabaseClient.auth.signOut();
   if (error) return notify(error.message);
+
   state.user = null;
   updateAccountUI();
   closeAuth();
   notify("آپ Logout ہو گئے ہیں۔");
 });
+
 $("closeAuthBtn").addEventListener("click",closeAuth);
 $("showLoginBtn").addEventListener("click",() => setAuthMode("login"));
 $("showRegisterBtn").addEventListener("click",() => setAuthMode("register"));
 $("forgotPasswordBtn").addEventListener("click",() => setAuthMode("reset"));
+
 $("authOverlay").addEventListener("click",e => {
   if (e.target === $("authOverlay")) closeAuth();
 });
 
 $("authForm").addEventListener("submit",async event => {
   event.preventDefault();
-  if (!supabaseClient) return showNotice("authNotice","Supabase is not configured.","error");
+
+  if (!supabaseClient) {
+    return showNotice("authNotice","Supabase is not configured.","error");
+  }
+
   const email = $("authEmail").value.trim();
   const password = $("authPassword").value;
   const name = $("authName").value.trim();
   const btn = $("authSubmitBtn");
+
   btn.disabled = true;
   showNotice("authNotice","Please wait...");
+
   try {
     let result;
+
     if (state.authMode === "register") {
       result = await supabaseClient.auth.signUp({
         email,password,options:{data:{full_name:name}}
       });
+
       if (!result.error && !result.data.session) {
         showNotice("authNotice","Registration submitted. Check your email for confirmation if required.","success");
         return;
@@ -841,6 +1080,7 @@ $("authForm").addEventListener("submit",async event => {
       result = await supabaseClient.auth.resetPasswordForEmail(email,{
         redirectTo:location.origin + location.pathname
       });
+
       if (!result.error) {
         showNotice("authNotice","If the account exists, a password reset email will be sent.","success");
         return;
@@ -848,7 +1088,9 @@ $("authForm").addEventListener("submit",async event => {
     } else {
       result = await supabaseClient.auth.signInWithPassword({email,password});
     }
+
     if (result.error) throw result.error;
+
     state.user = result.data.user || null;
     updateAccountUI();
     closeAuth();
@@ -860,57 +1102,114 @@ $("authForm").addEventListener("submit",async event => {
   }
 });
 
-/* AI generation: Worker should return JSON containing {result:"..."}
-   or {response:"..."} or {text:"..."}.
-*/
+/* Service selection */
 $("serviceType").addEventListener("change",e => selectService(e.target.value));
+
+/* AI generation */
 $("generatorForm").addEventListener("submit",async event => {
   event.preventDefault();
   if (state.loading) return;
+
   const service = services.find(s => s.id === $("serviceType").value);
-  const details = $("userDetails").value.trim();
+  const isCV = $("serviceType").value === "cv";
+
+  const details = isCV
+    ? getCVDetails()
+    : $("userDetails").value.trim();
+
   const extra = $("extraInstructions").value.trim();
   const language = $("outputLanguage").value;
-  if (!service || !details) return;
+
+  if (!service) return;
+
+  if (isCV) {
+    if (!$("cvName").value.trim()) {
+      showNotice("generatorNotice","براہ کرم اپنا پورا نام درج کریں۔","error");
+      $("cvName").focus();
+      return;
+    }
+
+    if (!$("cvEducation").value) {
+      showNotice("generatorNotice","براہ کرم اپنی تعلیم منتخب کریں۔","error");
+      $("cvEducation").focus();
+      return;
+    }
+  } else if (!details) {
+    showNotice("generatorNotice","براہ کرم اپنی ضروری تفصیلات درج کریں۔","error");
+    $("userDetails").focus();
+    return;
+  }
+
   if (details.length > 12000 || extra.length > 2000) {
     return showNotice("generatorNotice","براہ کرم متن کی حد کے اندر رہیں۔","error");
   }
+
+  const cvInstructions = isCV ? [
+    "Create a complete, professional, ATS-friendly CV/resume.",
+    "Use the selected CV type and format.",
+    "Include suitable headings such as Professional Summary, Education, Skills, Experience, and Languages only where appropriate.",
+    "Write a short professional summary based on the provided facts, without making unsupported claims.",
+    "For a fresh candidate, focus on education, real skills, relevant projects, and career objective.",
+    "Do not invent jobs, employers, dates, qualifications, grades, certificates, achievements, languages, or personal information.",
+    "Do not claim that the candidate has a skill unless it was provided.",
+    "Do not include an empty experience section as if experience exists.",
+    "If optional details are missing, omit them or use a clear placeholder only when necessary.",
+    "Do not include advice or commentary before or after the CV. Return the CV itself."
+  ].join("\n") : "";
+
   const prompt = [
     "You are the writing assistant for Nexa Business Hub AI.",
     "Service: " + service.name + ".",
     "Task: " + service.prompt,
+    isCV ? cvInstructions : "",
     "Output language: " + language + ".",
     "User details:\n" + details,
     extra ? "Additional instructions:\n" + extra : "",
     "Be useful, clear, professional, and accurate. Do not invent personal facts, credentials, dates, prices, official approvals, or legal requirements. Use placeholders where facts are missing. Return only the requested content, with headings where useful."
   ].filter(Boolean).join("\n\n");
+
   const btn = $("generateBtn");
   state.loading = true;
   btn.disabled = true;
   btn.textContent = "Generating...";
+
   showNotice("generatorNotice","AI مواد تیار کر رہا ہے، براہ کرم انتظار کریں۔");
+
   try {
     const response = await fetch(API_URL,{
       method:"POST",
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify({prompt,language})
     });
+
     const data = await response.json().catch(() => ({}));
+
     if (!response.ok) {
       throw new Error(data.error || data.message || "AI request failed ("+response.status+").");
     }
+
     const output = data.result ?? data.response ?? data.text ??
       data.output ?? data.content;
+
     if (typeof output !== "string" || !output.trim()) {
       throw new Error("Worker returned no text. Check /api/generate response format.");
     }
+
     state.result = output.trim();
     $("resultBox").textContent = state.result;
-    showNotice("generatorNotice","مواد کامیابی سے تیار ہو گیا۔","success");
+
+    showNotice(
+      "generatorNotice",
+      isCV ? "آپ کی CV کامیابی سے تیار ہو گئی۔" : "مواد کامیابی سے تیار ہو گیا۔",
+      "success"
+    );
   } catch (error) {
-    showNotice("generatorNotice",
+    showNotice(
+      "generatorNotice",
       (error.message || "Generation failed.") +
-      " اگر مسئلہ برقرار رہے تو Worker کے /api/generate endpoint کو چیک کریں۔","error");
+      " اگر مسئلہ برقرار رہے تو Worker کے /api/generate endpoint کو چیک کریں۔",
+      "error"
+    );
   } finally {
     state.loading = false;
     btn.disabled = false;
@@ -921,12 +1220,18 @@ $("generatorForm").addEventListener("submit",async event => {
 $("clearGeneratorBtn").addEventListener("click",() => {
   $("userDetails").value = "";
   $("extraInstructions").value = "";
+  resetCVFields();
+
   $("resultBox").textContent = "آپ کا تیار کردہ مواد یہاں ظاہر ہوگا۔";
   state.result = "";
+
   showNotice("generatorNotice","");
+  toggleCVOptions();
 });
+
 $("copyResultBtn").addEventListener("click",async () => {
   if (!state.result) return notify("پہلے AI سے مواد تیار کریں۔");
+
   try {
     await navigator.clipboard.writeText(state.result);
     notify("مواد Copy ہو گیا۔");
@@ -935,37 +1240,52 @@ $("copyResultBtn").addEventListener("click",async () => {
     area.value = state.result;
     document.body.appendChild(area);
     area.select();
+
     const ok = document.execCommand("copy");
     area.remove();
+
     notify(ok ? "مواد Copy ہو گیا۔" : "Copy نہیں ہوا؛ متن منتخب کرکے کاپی کریں۔");
   }
 });
+
 $("downloadResultBtn").addEventListener("click",() => {
   if (!state.result) return notify("پہلے AI سے مواد تیار کریں۔");
+
   const blob = new Blob(["\uFEFF",state.result],{type:"text/plain;charset=utf-8"});
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
+
   a.href = url;
-  a.download = "nexa-ai-result.txt";
+  a.download = $("serviceType").value === "cv"
+    ? "nexa-professional-cv.txt"
+    : "nexa-ai-result.txt";
+
   document.body.appendChild(a);
   a.click();
   a.remove();
+
   setTimeout(() => URL.revokeObjectURL(url),1000);
 });
+
 $("serviceSearch").addEventListener("input",e => renderServices(e.target.value));
 $("courseSearch").addEventListener("input",e => renderCourses(e.target.value));
+
 $("languageBtn").addEventListener("click",() => {
   state.isUrdu = !state.isUrdu;
+
   document.documentElement.lang = state.isUrdu ? "ur" : "en";
   document.documentElement.dir = state.isUrdu ? "rtl" : "ltr";
   document.body.classList.toggle("rtl",state.isUrdu);
-  $("heroTitle").textContent = state.isUrdu ?
-    "آپ کا AI اور ڈیجیٹل سروسز پلیٹ فارم" :
-    "Your AI & Digital Services Platform";
-  $("heroDesc").textContent = state.isUrdu ?
-    "پروفیشنل ڈاکومنٹس تیار کریں، کاروباری آئیڈیاز حاصل کریں اور نئے ہنر سیکھیں۔" :
-    "Create professional documents, explore business ideas and learn new skills.";
+
+  $("heroTitle").textContent = state.isUrdu
+    ? "آپ کا AI اور ڈیجیٹل سروسز پلیٹ فارم"
+    : "Your AI & Digital Services Platform";
+
+  $("heroDesc").textContent = state.isUrdu
+    ? "پروفیشنل ڈاکومنٹس تیار کریں، کاروباری آئیڈیاز حاصل کریں اور نئے ہنر سیکھیں۔"
+    : "Create professional documents, explore business ideas and learn new skills.";
 });
+
 $("year").textContent = new Date().getFullYear();
 $("courseCount").textContent = courses.length;
 
@@ -974,20 +1294,26 @@ async function initializeApp() {
   renderServiceOptions();
   renderCourses();
   updateAccountUI();
+  toggleCVOptions();
+
   if (!supabaseClient) {
     $("loginTopBtn").title = "Check Supabase configuration and network connection";
     return;
   }
+
   const {data,error} = await supabaseClient.auth.getSession();
+
   if (!error) {
     state.user = data.session?.user || null;
     updateAccountUI();
   }
+
   supabaseClient.auth.onAuthStateChange((_event,session) => {
     state.user = session?.user || null;
     updateAccountUI();
   });
 }
+
 initializeApp();
 </script>
 </body>
