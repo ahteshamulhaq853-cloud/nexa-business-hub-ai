@@ -1,125 +1,575 @@
 
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="ur" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b1224">
+  <meta name="theme-color" content="#080d1c">
+  <meta name="description" content="Nexa Business Hub AI - کاروباری تحریروں، منصوبوں، CV اور روزمرہ کاموں کے لیے AI اسسٹنٹ۔">
   <title>Nexa Business Hub AI</title>
+
   <style>
     :root {
-      --bg:#080e1d; --panel:#111c32; --gold:#f6c65b;
-      --text:#f5f7ff; --muted:#aab5cb; --border:#293650;
+      color-scheme: dark;
+      --bg: #080d1c;
+      --panel: #111a30;
+      --panel2: #151f38;
+      --border: rgba(167, 183, 220, .15);
+      --text: #f5f7ff;
+      --muted: #a6b2ce;
+      --blue: #6687ff;
+      --cyan: #51e0db;
+      --purple: #a78bfa;
+      --radius: 20px;
     }
-    * { box-sizing:border-box }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      margin:0; font-family:Arial,"Noto Nastaliq Urdu",sans-serif;
-      background:var(--bg); color:var(--text); line-height:1.7;
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 10% 0%, rgba(102,135,255,.13), transparent 36%),
+        radial-gradient(ellipse at 90% 25%, rgba(81,224,219,.07), transparent 32%),
+        var(--bg);
+      color: var(--text);
+      font-family: Arial, "Noto Nastaliq Urdu", sans-serif;
+      line-height: 1.8;
+      min-height: 100vh;
     }
+
+    button, input, textarea, select { font: inherit; }
+    button { cursor: pointer; }
+    button:focus-visible, input:focus-visible,
+    textarea:focus-visible, select:focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: 3px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1160px, calc(100% - 36px));
+      margin-inline: auto;
+    }
+
     header {
-      padding:18px 5%; display:flex; justify-content:space-between;
-      align-items:center; gap:12px; border-bottom:1px solid var(--border);
-      background:#0b1428; position:sticky; top:0; z-index:2;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(8,13,28,.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
     }
-    .brand { font-size:20px; font-weight:800 }
-    .brand span { color:var(--gold) }
-    button,input,textarea,select { font:inherit }
-    button {
-      border:0; border-radius:10px; padding:11px 15px; cursor:pointer;
-      font-weight:700; background:var(--gold); color:#151515;
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
     }
-    button.secondary { background:#202d46;color:white;border:1px solid var(--border) }
-    main { max-width:1100px; margin:auto; padding:26px 16px 60px }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      direction: ltr;
+      font-weight: 900;
+      font-size: 19px;
+      letter-spacing: .3px;
+    }
+
+    .brand-mark {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      box-shadow: 0 6px 25px rgba(102,135,255,.25);
+      font-size: 23px;
+    }
+
+    .brand-name span {
+      display: block;
+      color: var(--cyan);
+      font-size: 10px;
+      letter-spacing: 2px;
+      line-height: 1.3;
+    }
+
+    .btn {
+      border: 1px solid transparent;
+      border-radius: 13px;
+      padding: 11px 18px;
+      font-weight: 700;
+      transition: transform .2s, opacity .2s, border-color .2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn:disabled { opacity: .55; cursor: wait; transform: none; }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(120deg, #587cff, #8664f6);
+      box-shadow: 0 8px 24px rgba(93,111,255,.22);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,.045);
+      border-color: var(--border);
+    }
+
     .hero {
-      padding:35px 22px; border:1px solid #3c3c43; border-radius:22px;
-      background:linear-gradient(135deg,#152746,#111529 65%,#35291b);
-      text-align:center;
+      padding: 76px 0 40px;
+      text-align: center;
     }
-    .hero h1 { font-size:clamp(27px,6vw,44px); line-height:1.3;margin:0 0 12px }
-    .hero h1 span { color:var(--gold) }
-    .hero p { color:var(--muted);max-width:680px;margin:0 auto 22px }
-    .search { width:100%;margin:24px 0 15px;padding:14px 16px;
-      background:var(--panel);border:1px solid var(--border);color:white;border-radius:12px }
-    .grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px }
-    .card { background:var(--panel);border:1px solid var(--border);
-      border-radius:15px;padding:18px;display:flex;flex-direction:column;align-items:flex-start }
-    .card .emoji { font-size:28px }
-    .card h3 { margin:8px 0 5px;font-size:18px }
-    .card p { color:var(--muted);margin:0 0 14px;flex:1;font-size:14px }
-    .card button { width:100% }
-    .section-title { margin:28px 0 12px }
-    .notice { margin:18px 0;background:#16243a;padding:14px;border-radius:12px;color:#c9d6ea }
-    footer { border-top:1px solid var(--border);padding:24px 16px;text-align:center;color:var(--muted) }
-    dialog { width:min(600px,94vw);max-height:90vh;overflow:auto;
-      background:var(--panel);color:var(--text);border:1px solid var(--border);
-      border-radius:18px;padding:22px }
-    dialog::backdrop { background:#000b }
-    label { display:block;margin:12px 0 5px;font-weight:700 }
-    textarea,select { width:100%;padding:12px;border-radius:10px;
-      border:1px solid var(--border);background:#0b1428;color:white }
-    textarea { min-height:120px;resize:vertical }
-    #result { white-space:pre-wrap;background:#0b1428;padding:14px;border-radius:10px;
-      margin-top:15px;overflow-wrap:anywhere }
-    .actions { display:flex;flex-wrap:wrap;gap:9px;margin-top:12px }
-    .hidden { display:none }
-    @media(max-width:500px) {
-      header { padding:12px }
-      .brand { font-size:17px }
-      .hero { padding:28px 15px }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border: 1px solid rgba(81,224,219,.25);
+      border-radius: 999px;
+      background: rgba(81,224,219,.06);
+      color: var(--cyan);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      max-width: 850px;
+      margin: 22px auto 14px;
+      font-size: clamp(34px, 6vw, 61px);
+      line-height: 1.35;
+      letter-spacing: -.8px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(100deg, var(--cyan), #94a9ff, var(--purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 26px;
+      color: var(--muted);
+      font-size: clamp(15px, 2vw, 18px);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      padding: 22px 0 38px;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      background: linear-gradient(145deg, rgba(21,31,56,.9), rgba(17,26,48,.72));
+    }
+
+    .feature-icon {
+      width: 45px;
+      height: 45px;
+      flex: 0 0 45px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: rgba(102,135,255,.13);
+      font-size: 23px;
+    }
+
+    .feature strong { display: block; font-size: 15px; }
+    .feature small { color: var(--muted); font-size: 12px; }
+
+    .services-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      margin: 30px 0 20px;
+    }
+
+    .section-kicker {
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .services-head h2 {
+      margin: 3px 0 0;
+      font-size: clamp(25px, 4vw, 34px);
+    }
+
+    .services-head p {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .search-wrap {
+      position: relative;
+      margin-bottom: 22px;
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 17px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .search {
+      width: 100%;
+      padding: 15px 48px 15px 16px;
+      border-radius: 15px;
+      border: 1px solid var(--border);
+      background: rgba(17,26,48,.9);
+      color: var(--text);
+    }
+
+    .search::placeholder { color: #8491ae; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 15px;
+    }
+
+    .card {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(150deg, rgba(21,31,56,.95), rgba(13,21,39,.96));
+      transition: transform .22s, border-color .22s, box-shadow .22s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(102,135,255,.55);
+      box-shadow: 0 14px 35px rgba(0,0,0,.17);
+    }
+
+    .emoji {
+      width: 49px;
+      height: 49px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(167,139,250,.16);
+      border-radius: 15px;
+      background: linear-gradient(145deg, rgba(102,135,255,.16), rgba(167,139,250,.12));
+      font-size: 25px;
+    }
+
+    .card h3 { margin: 15px 0 4px; font-size: 17px; }
+    .card p { flex: 1; margin: 0 0 17px; color: var(--muted); font-size: 13px; }
+
+    .card button { width: 100%; padding: 10px 12px; font-size: 13px; }
+
+    .empty {
+      display: none;
+      padding: 35px 12px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .notice {
+      margin: 35px 0;
+      padding: 17px 20px;
+      border: 1px solid rgba(81,224,219,.18);
+      border-radius: 16px;
+      background: rgba(81,224,219,.045);
+      color: #cbd7ed;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 65px;
+      padding: 35px 0;
+      border-top: 1px solid var(--border);
+      background: rgba(6,10,22,.6);
+      text-align: center;
+    }
+
+    footer p { color: var(--muted); margin: 5px 0 18px; }
+    .footer-brand { direction: ltr; font-weight: 800; font-size: 19px; }
+    .footer-brand span { color: var(--cyan); }
+
+    dialog {
+      width: min(660px, calc(100% - 24px));
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 0;
+      border: 1px solid rgba(167,183,220,.22);
+      border-radius: 23px;
+      background: #0d1529;
+      color: var(--text);
+      box-shadow: 0 25px 90px #0009;
+    }
+
+    dialog::backdrop {
+      background: rgba(2,5,15,.78);
+      backdrop-filter: blur(5px);
+    }
+
+    .modal-head {
+      padding: 23px 24px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(120deg, rgba(102,135,255,.12), transparent);
+    }
+
+    .modal-head h2 { margin: 0; font-size: 24px; }
+    .modal-head p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+    .modal-body { padding: 20px 24px 24px; }
+
+    label { display: block; margin: 14px 0 6px; font-weight: 700; font-size: 14px; }
+
+    textarea, select {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: #111b32;
+      color: var(--text);
+    }
+
+    textarea { min-height: 145px; resize: vertical; }
+    textarea::placeholder { color: #8491ae; }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .actions .btn { flex: 1; min-width: 120px; }
+
+    #status { color: var(--cyan); font-size: 14px; overflow-wrap: anywhere; }
+
+    #result {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      line-height: 2;
+      margin-top: 16px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: #080f20;
+      font-size: 15px;
+      user-select: text;
+    }
+
+    .hidden { display: none !important; }
+
+    .modal-close-row { display: flex; justify-content: flex-end; margin-top: 15px; }
+
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+      .features { grid-template-columns: 1fr; }
+      .feature { padding: 14px 17px; }
+    }
+
+    @media (max-width: 620px) {
+      .container { width: min(100% - 24px, 1160px); }
+      .nav { min-height: 67px; }
+      .brand { font-size: 15px; gap: 8px; }
+      .brand-mark { width: 37px; height: 37px; font-size: 20px; }
+      .brand-name span { font-size: 8px; }
+      .nav .btn { padding: 9px 11px; font-size: 12px; }
+      .hero { padding: 51px 0 25px; }
+      .hero h1 { font-size: clamp(31px, 9vw, 45px); }
+      .services-head { align-items: flex-start; }
+      .grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+      .card { padding: 14px; border-radius: 16px; }
+      .card h3 { font-size: 15px; }
+      .card p { font-size: 12px; }
+      .card button { font-size: 12px; padding: 9px 6px; }
+      .emoji { width: 43px; height: 43px; font-size: 22px; }
+      .modal-head { padding: 19px; }
+      .modal-body { padding: 15px 19px 20px; }
+      .hero-actions .btn { width: 100%; }
+    }
+
+    @media (max-width: 360px) {
+      .brand { font-size: 13px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      header, main, footer, .modal-head, .modal-body > label,
+      .modal-body > select, .modal-body > textarea,
+      .modal-body > .actions, #status, .modal-close-row {
+        display: none !important;
+      }
+      dialog {
+        display: block !important;
+        position: static;
+        width: 100%;
+        max-height: none;
+        border: 0;
+        color: black;
+        background: white;
+        box-shadow: none;
+      }
+      #result {
+        display: block !important;
+        color: black;
+        background: white;
+        border: 0;
+        white-space: pre-wrap;
+      }
     }
   </style>
 </head>
+
 <body>
 <header>
-  <div class="brand">NEXA <span>BUSINESS HUB AI</span></div>
-  <button class="secondary" id="langBtn">اردو / English</button>
+  <div class="container nav">
+    <a class="brand" href="#" aria-label="Nexa Business Hub AI home">
+      <span class="brand-mark">✦</span>
+      <span class="brand-name">
+        NEXA
+        <span>BUSINESS HUB AI</span>
+      </span>
+    </a>
+    <button class="btn btn-secondary" id="langBtn" type="button">اردو / English</button>
+  </div>
 </header>
 
-<main>
+<main class="container">
   <section class="hero">
-    <h1 id="heroTitle">آپ کے کاروبار کا <span>ذہین ساتھی</span></h1>
-    <p id="heroDesc">AI کی مدد سے کاروباری تحریریں، درخواستیں، CV، سوشل میڈیا پوسٹس اور روزمرہ کام آسان بنائیں۔</p>
-    <button id="startBtn">AI اسسٹنٹ شروع کریں ✨</button>
+    <div class="eyebrow">✦ آپ کا ڈیجیٹل AI اسسٹنٹ</div>
+    <h1 id="heroTitle">آپ کے کاروبار کا <span class="gradient-text">ذہین ساتھی</span></h1>
+    <p id="heroDesc">
+      کاروباری منصوبے، درخواستیں، CV، مارکیٹنگ اور روزمرہ تحریری کام
+      ایک ہی جگہ پر آسانی سے تیار کریں۔
+    </p>
+    <div class="hero-actions">
+      <button class="btn btn-primary" id="startBtn" type="button">AI اسسٹنٹ شروع کریں ✨</button>
+      <a class="btn btn-secondary" href="#services" id="exploreBtn">تمام سروسز دیکھیں ↓</a>
+    </div>
   </section>
 
-  <div class="notice" id="notice">اپنی ضرورت کی سروس منتخب کریں، تفصیل لکھیں اور AI سے جواب حاصل کریں۔</div>
-  <input class="search" id="search" placeholder="🔎 سروس تلاش کریں..." aria-label="سروس تلاش کریں">
-  <h2 class="section-title" id="servicesTitle">ہماری سروسز</h2>
-  <section class="grid" id="services"></section>
+  <section class="features" aria-label="اہم خصوصیات">
+    <div class="feature">
+      <div class="feature-icon">⚡</div>
+      <div><strong>تیز AI معاونت</strong><small>اپنی ضرورت لکھیں اور جواب حاصل کریں</small></div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🌐</div>
+      <div><strong>متعدد زبانیں</strong><small>اردو، English اور Roman Urdu</small></div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📄</div>
+      <div><strong>کاپی اور پرنٹ</strong><small>جواب محفوظ کریں یا PDF بنائیں</small></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="services-head">
+      <div>
+        <div class="section-kicker">EXPLORE TOOLS</div>
+        <h2 id="servicesTitle">ہماری AI سروسز</h2>
+        <p id="servicesDesc">اپنے کام کے مطابق سروس منتخب کریں۔</p>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input
+        class="search"
+        id="search"
+        type="search"
+        placeholder="سروس تلاش کریں..."
+        aria-label="سروس تلاش کریں"
+      >
+    </div>
+
+    <div class="grid" id="servicesGrid"></div>
+    <div class="empty" id="emptyState">کوئی سروس نہیں ملی۔ دوسرا لفظ تلاش کریں۔</div>
+  </section>
+
+  <div class="notice" id="notice">
+    💡 <strong>مشورہ:</strong>
+    بہتر جواب کے لیے اپنی ضرورت، اہم تفصیلات اور مطلوبہ انداز واضح لکھیں۔
+  </div>
 </main>
 
 <footer>
-  <div>Nexa Business Hub AI</div>
-  <p>کاروباری خدمات اور AI معاونت</p>
-  <button class="secondary" id="whatsappBtn">WhatsApp پر رابطہ</button>
+  <div class="container">
+    <div class="footer-brand">NEXA <span>BUSINESS HUB AI</span></div>
+    <p id="footerDesc">کاروباری خدمات اور AI معاونت — ایک ہی جگہ پر۔</p>
+    <button class="btn btn-secondary" id="whatsappBtn" type="button">WhatsApp پر رابطہ</button>
+    <p style="font-size:12px;margin-top:22px;">AI کے جوابات کی اہم معلومات خود بھی تصدیق کریں۔</p>
+  </div>
 </footer>
 
 <dialog id="assistant">
-  <h2 id="modalTitle">Nexa AI اسسٹنٹ</h2>
-  <p id="selectedService">اپنی ضرورت بتائیں۔</p>
-  <label for="language" id="languageLabel">جواب کی زبان</label>
-  <select id="language">
-    <option value="Urdu">اردو</option>
-    <option value="English">English</option>
-    <option value="Roman Urdu">Roman Urdu</option>
-  </select>
-  <label for="tone" id="toneLabel">جواب کا انداز</label>
-  <select id="tone">
-    <option value="professional">Professional / پیشہ ورانہ</option>
-    <option value="simple">Simple / آسان</option>
-    <option value="detailed">Detailed / تفصیلی</option>
-  </select>
-  <label for="details" id="detailsLabel">اپنی تفصیل لکھیں</label>
-  <textarea id="details" placeholder="یہاں اپنی درخواست یا ضرورت لکھیں..."></textarea>
-  <div class="actions">
-    <button id="generateBtn">AI جواب بنائیں</button>
-    <button class="secondary" id="closeBtn">بند کریں</button>
+  <div class="modal-head">
+    <h2 id="modalTitle">✦ Nexa AI اسسٹنٹ</h2>
+    <p id="selectedService">اپنی ضرورت بتائیں۔</p>
   </div>
-  <p id="status" role="status"></p>
-  <div id="result" class="hidden"></div>
-  <div class="actions">
-    <button class="secondary" id="copyBtn">جواب کاپی کریں</button>
-    <button class="secondary" id="printBtn">Print / PDF</button>
+
+  <div class="modal-body">
+    <label for="language" id="languageLabel">جواب کی زبان</label>
+    <select id="language">
+      <option value="Urdu">اردو</option>
+      <option value="English">English</option>
+      <option value="Roman Urdu">Roman Urdu</option>
+    </select>
+
+    <label for="tone" id="toneLabel">جواب کا انداز</label>
+    <select id="tone">
+      <option value="professional">Professional / پیشہ ورانہ</option>
+      <option value="simple">Simple / آسان</option>
+      <option value="detailed">Detailed / تفصیلی</option>
+    </select>
+
+    <label for="details" id="detailsLabel">اپنی تفصیل لکھیں</label>
+    <textarea id="details" maxlength="6000"
+      placeholder="یہاں اپنی درخواست یا ضرورت لکھیں..."></textarea>
+
+    <div class="actions">
+      <button class="btn btn-primary" id="generateBtn" type="button">AI جواب بنائیں</button>
+      <button class="btn btn-secondary" id="closeBtn" type="button">بند کریں</button>
+    </div>
+
+    <p id="status" role="status" aria-live="polite"></p>
+    <div id="result" class="hidden" aria-live="polite"></div>
+
+    <div class="actions">
+      <button class="btn btn-secondary" id="copyBtn" type="button">جواب کاپی کریں</button>
+      <button class="btn btn-secondary" id="printBtn" type="button">Print / PDF</button>
+    </div>
+    <div class="modal-close-row">
+      <button class="btn btn-secondary" id="doneBtn" type="button">مکمل</button>
+    </div>
   </div>
 </dialog>
 
@@ -154,61 +604,113 @@ const services = [
   ["📦","Invoice Text","انوائس کے لیے متن کی تیاری۔"],
   ["⭐","Professional Bio","پیشہ ورانہ تعارف اور بائیو۔"]
 ];
-let chosen = services[23][1];
+
+let chosen = "Content Writing";
 let english = false;
 const $ = id => document.getElementById(id);
 
-function renderServices(filter="") {
-  $("services").innerHTML = "";
-  services.filter(s => s.join(" ").toLowerCase().includes(filter.toLowerCase()))
-  .forEach(s => {
+function renderServices(filter = "") {
+  const grid = $("servicesGrid");
+  grid.replaceChildren();
+
+  const matching = services.filter(s =>
+    s.join(" ").toLowerCase().includes(filter.trim().toLowerCase())
+  );
+
+  matching.forEach(s => {
     const card = document.createElement("article");
     card.className = "card";
+
     const icon = document.createElement("div");
-    icon.className = "emoji"; icon.textContent = s[0];
-    const title = document.createElement("h3"); title.textContent = s[1];
-    const desc = document.createElement("p"); desc.textContent = s[2];
-    const btn = document.createElement("button"); btn.textContent = "یہ سروس استعمال کریں";
+    icon.className = "emoji";
+    icon.textContent = s[0];
+
+    const title = document.createElement("h3");
+    title.textContent = s[1];
+
+    const desc = document.createElement("p");
+    desc.textContent = s[2];
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "btn btn-primary";
+    btn.textContent = english ? "Use this service" : "یہ سروس استعمال کریں";
     btn.addEventListener("click", () => openAssistant(s[1]));
-    card.append(icon,title,desc,btn);
-    $("services").append(card);
+
+    card.append(icon, title, desc, btn);
+    grid.append(card);
   });
+
+  $("emptyState").style.display = matching.length ? "none" : "block";
 }
+
 function openAssistant(service) {
   chosen = service;
-  $("selectedService").textContent = "منتخب سروس: " + service;
+  $("selectedService").textContent =
+    (english ? "Selected service: " : "منتخب سروس: ") + service;
   $("result").classList.add("hidden");
+  $("result").textContent = "";
   $("status").textContent = "";
   $("assistant").showModal();
 }
+
 $("search").addEventListener("input", e => renderServices(e.target.value));
 $("startBtn").addEventListener("click", () => openAssistant("AI Assistant"));
 $("closeBtn").addEventListener("click", () => $("assistant").close());
+$("doneBtn").addEventListener("click", () => $("assistant").close());
+
 $("langBtn").addEventListener("click", () => {
   english = !english;
+  document.documentElement.lang = english ? "en" : "ur";
+  document.documentElement.dir = english ? "ltr" : "rtl";
+
   $("heroTitle").innerHTML = english
-    ? 'Your Business <span>Smart Partner</span>'
-    : 'آپ کے کاروبار کا <span>ذہین ساتھی</span>';
+    ? 'Your Business <span class="gradient-text">Smart Partner</span>'
+    : 'آپ کے کاروبار کا <span class="gradient-text">ذہین ساتھی</span>';
+
   $("heroDesc").textContent = english
-    ? "Create business writing, applications, CVs and social media content with AI."
-    : "AI کی مدد سے کاروباری تحریریں، درخواستیں، CV، سوشل میڈیا پوسٹس اور روزمرہ کام آسان بنائیں۔";
-  $("servicesTitle").textContent = english ? "Our Services" : "ہماری سروسز";
-  $("search").placeholder = english ? "🔎 Search services..." : "🔎 سروس تلاش کریں...";
+    ? "Create business plans, applications, CVs, marketing content and everyday writing with AI."
+    : "کاروباری منصوبے، درخواستیں، CV، مارکیٹنگ اور روزمرہ تحریری کام ایک ہی جگہ پر آسانی سے تیار کریں۔";
+
+  $("servicesTitle").textContent = english ? "Our AI Services" : "ہماری AI سروسز";
+  $("servicesDesc").textContent = english
+    ? "Choose a service that matches your task."
+    : "اپنے کام کے مطابق سروس منتخب کریں۔";
+  $("search").placeholder = english ? "Search services..." : "سروس تلاش کریں...";
+  $("search").setAttribute("aria-label", english ? "Search services" : "سروس تلاش کریں");
   $("startBtn").textContent = english ? "Start AI Assistant ✨" : "AI اسسٹنٹ شروع کریں ✨";
+  $("exploreBtn").textContent = english ? "Explore services ↓" : "تمام سروسز دیکھیں ↓";
+  $("footerDesc").textContent = english
+    ? "Business services and AI assistance — all in one place."
+    : "کاروباری خدمات اور AI معاونت — ایک ہی جگہ پر۔";
+  $("notice").textContent = english
+    ? "Tip: For a better answer, clearly describe your task, important details and preferred style."
+    : "💡 مشورہ: بہتر جواب کے لیے اپنی ضرورت، اہم تفصیلات اور مطلوبہ انداز واضح لکھیں۔";
+
+  renderServices($("search").value);
 });
+
 $("generateBtn").addEventListener("click", async () => {
   const details = $("details").value.trim();
+
   if (!details) {
-    $("status").textContent = "براہ کرم پہلے اپنی ضرورت لکھیں۔";
+    $("status").textContent = english
+      ? "Please enter your request first."
+      : "براہ کرم پہلے اپنی ضرورت لکھیں۔";
+    $("details").focus();
     return;
   }
-  $("generateBtn").disabled = true;
-  $("status").textContent = "AI جواب تیار کر رہا ہے...";
+
+  const btn = $("generateBtn");
+  btn.disabled = true;
+  btn.textContent = english ? "Generating..." : "جواب تیار ہو رہا ہے...";
+  $("status").textContent = english ? "AI is preparing your answer..." : "AI جواب تیار کر رہا ہے...";
   $("result").classList.add("hidden");
+
   try {
     const response = await fetch("/api/generate", {
       method: "POST",
-      headers: {"Content-Type":"application/json"},
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         service: chosen,
         language: $("language").value,
@@ -216,47 +718,92 @@ $("generateBtn").addEventListener("click", async () => {
         details
       })
     });
+
     const data = await response.json();
-    if (!response.ok) throw new Error(data.error || "درخواست مکمل نہیں ہو سکی۔");
+
+    if (!response.ok) {
+      throw new Error(data.error || "درخواست مکمل نہیں ہو سکی۔");
+    }
+
     $("result").textContent = data.text || "کوئی جواب موصول نہیں ہوا۔";
     $("result").classList.remove("hidden");
-    $("status").textContent = "جواب تیار ہے۔";
+    $("status").textContent = english ? "Your answer is ready." : "جواب تیار ہے۔";
   } catch (err) {
-    $("status").textContent = "AI سے رابطہ نہیں ہو سکا: " + err.message +
-      "۔ ہوسٹنگ اور API Key کی سیٹنگ چیک کریں۔";
+    $("status").textContent = (english
+      ? "Unable to get an AI response: "
+      : "AI سے جواب حاصل نہیں ہوا: ") + err.message;
   } finally {
-    $("generateBtn").disabled = false;
+    btn.disabled = false;
+    btn.textContent = english ? "Generate AI Answer" : "AI جواب بنائیں";
   }
 });
+
 $("copyBtn").addEventListener("click", async () => {
   const text = $("result").textContent;
-  if (!text || $("result").classList.contains("hidden")) return;
+
+  if (!text || $("result").classList.contains("hidden")) {
+    $("status").textContent = english ? "There is no answer to copy yet." : "کاپی کرنے کے لیے پہلے جواب حاصل کریں۔";
+    return;
+  }
+
   try {
     await navigator.clipboard.writeText(text);
-    $("status").textContent = "جواب کاپی ہو گیا۔";
+    $("status").textContent = english ? "Answer copied." : "جواب کاپی ہو گیا۔";
   } catch {
-    $("status").textContent = "جواب منتخب کرکے کاپی کریں۔";
+    $("status").textContent = english
+      ? "Please select and copy the answer manually."
+      : "جواب منتخب کرکے کاپی کریں۔";
   }
 });
+
 $("printBtn").addEventListener("click", () => {
   const text = $("result").textContent;
+
   if (!text || $("result").classList.contains("hidden")) {
-    window.print(); return;
+    $("status").textContent = english ? "Generate an answer first." : "پہلے AI جواب تیار کریں۔";
+    return;
   }
+
   const w = window.open("", "_blank");
-  if (!w) { window.print(); return; }
-  const pre = w.document.createElement("pre");
-  pre.style.cssText = "white-space:pre-wrap;font:16px Arial;padding:24px";
+
+  if (!w) {
+    $("status").textContent = english
+      ? "Please allow pop-ups to print the answer."
+      : "پرنٹ کے لیے براؤزر میں پاپ اَپ کی اجازت دیں۔";
+    return;
+  }
+
+  const doc = w.document;
+  doc.title = "Nexa AI Response";
+
+  const style = doc.createElement("style");
+  style.textContent = `
+    body { font-family: Arial, sans-serif; padding: 28px; color: #111; }
+    h1 { font-size: 22px; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; font: 16px/1.9 Arial,sans-serif; }
+  `;
+
+  const heading = doc.createElement("h1");
+  heading.textContent = "Nexa Business Hub AI";
+
+  const pre = doc.createElement("pre");
   pre.textContent = text;
-  w.document.body.appendChild(pre);
-  w.document.title = "Nexa AI Response";
+
+  doc.head.appendChild(style);
+  doc.body.append(heading, pre);
+  w.focus();
   w.print();
 });
+
 $("whatsappBtn").addEventListener("click", () => {
-  window.open("https://wa.me/923342709019?text=" +
-    encodeURIComponent("Assalam-o-Alaikum, mujhe Nexa Business Hub ki service chahiye."),
-    "_blank", "noopener");
+  window.open(
+    "https://wa.me/923342709019?text=" +
+      encodeURIComponent("Assalam-o-Alaikum, mujhe Nexa Business Hub ki service chahiye."),
+    "_blank",
+    "noopener"
+  );
 });
+
 renderServices();
 </script>
 </body>
