@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nexa Business Hub</title>
+
 <style>
 :root {
   --navy: #102a56;
@@ -13,15 +14,19 @@
   --bg: #f4f7fb;
   --border: #dce5f0;
 }
+
 * { box-sizing: border-box; }
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #26364a;
   background: var(--bg);
 }
+
 button, input, textarea { font: inherit; }
 button { cursor: pointer; }
+
 .topbar {
   background: white;
   padding: 16px 25px;
@@ -30,7 +35,13 @@ button { cursor: pointer; }
   justify-content: space-between;
   border-bottom: 1px solid var(--border);
 }
-.brand { font-size: 21px; font-weight: 800; color: var(--navy); }
+
+.brand {
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--navy);
+}
+
 .btn {
   padding: 11px 15px;
   background: var(--blue);
@@ -41,15 +52,18 @@ button { cursor: pointer; }
   text-decoration: none;
   display: inline-block;
 }
+
 .layout {
   display: grid;
   grid-template-columns: 230px minmax(0, 1fr);
   min-height: calc(100vh - 65px);
 }
+
 .sidebar {
   background: var(--navy);
   padding: 20px 12px;
 }
+
 .nav-btn {
   width: 100%;
   padding: 13px;
@@ -60,13 +74,29 @@ button { cursor: pointer; }
   color: white;
   background: transparent;
 }
-.nav-btn:hover, .nav-btn.active { background: #24518b; }
-main { padding: 26px; min-width: 0; }
+
+.nav-btn:hover,
+.nav-btn.active {
+  background: #24518b;
+}
+
+main {
+  padding: 26px;
+  min-width: 0;
+}
+
 .view { display: none; }
 .view.active { display: block; }
+
 h1, h2, h3 { color: var(--navy); }
+
 .page-heading { margin-bottom: 22px; }
-.page-heading p { color: #68788d; line-height: 1.6; }
+
+.page-heading p {
+  color: #68788d;
+  line-height: 1.6;
+}
+
 .hero {
   padding: 30px;
   background: linear-gradient(120deg, #102a56, #1769d2);
@@ -74,20 +104,32 @@ h1, h2, h3 { color: var(--navy); }
   border-radius: 15px;
   margin-bottom: 22px;
 }
-.hero h2 { color: white; font-size: 30px; }
+
+.hero h2 {
+  color: white;
+  font-size: 30px;
+}
+
 .hero p { line-height: 1.7; }
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 15px;
 }
+
 .card, .form-panel {
   background: white;
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 18px;
 }
-.card p { color: #68788d; line-height: 1.5; }
+
+.card p {
+  color: #68788d;
+  line-height: 1.5;
+}
+
 .card-icon {
   background: var(--light);
   padding: 12px;
@@ -95,6 +137,7 @@ h1, h2, h3 { color: var(--navy); }
   display: inline-block;
   font-size: 23px;
 }
+
 .card button {
   border: 0;
   background: transparent;
@@ -102,13 +145,16 @@ h1, h2, h3 { color: var(--navy); }
   font-weight: bold;
   padding: 0;
 }
+
 .cv-workspace {
   display: grid;
   grid-template-columns: minmax(300px, 420px) minmax(0, 1fr);
   gap: 20px;
   align-items: start;
 }
+
 .form-panel { padding: 20px; }
+
 .form-section {
   color: var(--blue);
   border-bottom: 1px solid var(--border);
@@ -119,31 +165,58 @@ h1, h2, h3 { color: var(--navy); }
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
 .field { margin-bottom: 13px; }
+
 .field label {
   display: block;
   font-size: 12px;
   font-weight: bold;
   margin-bottom: 6px;
 }
-.field input, .field textarea {
+
+.field input,
+.field textarea {
   width: 100%;
   border: 1px solid #cdd8e7;
   border-radius: 7px;
   padding: 10px;
   background: white;
 }
-.field textarea { min-height: 85px; resize: vertical; }
-.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.field textarea {
+  min-height: 85px;
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .actions button {
   border: 0;
   border-radius: 7px;
   padding: 11px;
   font-weight: bold;
 }
-.actions .save { background: var(--blue); color: white; }
-.actions .clear { background: #fff0f0; color: #a82929; }
-.preview-label { margin-bottom: 10px; color: #68788d; }
+
+.actions .save {
+  background: var(--blue);
+  color: white;
+}
+
+.actions .clear {
+  background: #fff0f0;
+  color: #a82929;
+}
+
+.preview-label {
+  margin-bottom: 10px;
+  color: #68788d;
+}
+
 .cv-paper {
   background: white;
   display: grid;
@@ -152,12 +225,14 @@ h1, h2, h3 { color: var(--navy); }
   border: 1px solid var(--border);
   box-shadow: 0 8px 25px #142e5015;
 }
+
 .cv-sidebar {
   background: #123c75;
   color: white;
   padding: 24px 17px;
   overflow-wrap: anywhere;
 }
+
 .cv-photo {
   width: 100%;
   max-width: 140px;
@@ -169,6 +244,7 @@ h1, h2, h3 { color: var(--navy); }
   border: 3px solid white;
   border-radius: 4px;
 }
+
 .side-title {
   font-size: 12px;
   letter-spacing: 1px;
@@ -177,28 +253,33 @@ h1, h2, h3 { color: var(--navy); }
   padding-bottom: 7px;
   margin: 20px 0 10px;
 }
+
 .side-text {
   font-size: 11px;
   line-height: 1.7;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
+
 .cv-contact {
   font-size: 11px;
   line-height: 1.7;
   overflow-wrap: anywhere;
   margin: 6px 0;
 }
+
 .cv-content {
   padding: 30px 25px;
   overflow-wrap: anywhere;
 }
+
 .cv-name {
   margin: 0 0 8px;
   font-size: 28px;
   text-transform: uppercase;
   overflow-wrap: anywhere;
 }
+
 .cv-title {
   color: var(--blue);
   font-size: 12px;
@@ -206,7 +287,9 @@ h1, h2, h3 { color: var(--navy); }
   margin-bottom: 20px;
   text-transform: uppercase;
 }
+
 .cv-section { margin-top: 22px; }
+
 .cv-section h3 {
   color: white;
   background: var(--blue);
@@ -215,39 +298,91 @@ h1, h2, h3 { color: var(--navy); }
   font-size: 12px;
   letter-spacing: .5px;
 }
+
 .cv-body {
   font-size: 12px;
   line-height: 1.7;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
-footer { text-align: center; padding: 25px; color: #68788d; font-size: 12px; }
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #68788d;
+  font-size: 12px;
+}
+
+/* CV کھولنے پر صرف اوپر والا WhatsApp بٹن چھپائیں */
+body.cv-mode .topbar > a {
+  display: none;
+}
+
 @media(max-width:1050px) {
   .cv-workspace { grid-template-columns: 1fr; }
   .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
 @media(max-width:700px) {
   .layout { grid-template-columns: 1fr; }
-  .sidebar { display: flex; overflow-x: auto; gap: 5px; padding: 10px; }
-  .nav-btn { white-space: nowrap; width: auto; }
+
+  .sidebar {
+    display: flex;
+    overflow-x: auto;
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .nav-btn {
+    white-space: nowrap;
+    width: auto;
+  }
+
   main { padding: 14px; }
+
   .cards { grid-template-columns: 1fr; }
-  .cv-paper { grid-template-columns: 34% 66%; min-height: 600px; }
+
+  .cv-paper {
+    grid-template-columns: 34% 66%;
+    min-height: 600px;
+  }
+
   .cv-sidebar { padding: 13px 9px; }
   .cv-content { padding: 18px 12px; }
   .cv-name { font-size: 21px; }
   .cv-photo { height: 105px; }
 }
+
 @media print {
-  @page { size: A4; margin: 0; }
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
   body { background: white; }
-  .topbar, .sidebar, .page-heading, .form-panel,
-  .preview-label, footer, .no-print { display: none !important; }
-  .layout { display: block; min-height: 0; }
+
+  .topbar,
+  .sidebar,
+  .page-heading,
+  .form-panel,
+  .preview-label,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  .layout {
+    display: block;
+    min-height: 0;
+  }
+
   main { padding: 0; }
+
   .view { display: none !important; }
   #cvView { display: block !important; }
+
   .cv-workspace { display: block; }
+
   .cv-paper {
     display: grid;
     grid-template-columns: 32% 68%;
@@ -256,47 +391,63 @@ footer { text-align: center; padding: 25px; color: #68788d; font-size: 12px; }
     border: 0;
     box-shadow: none;
   }
-  .cv-sidebar, .cv-section h3 {
+
+  .cv-sidebar,
+  .cv-section h3 {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 }
 </style>
 </head>
+
 <body>
 
 <header class="topbar">
   <div class="brand">🔷 Nexa Business Hub</div>
-  <a class="btn" href="https://wa.me/923342709019"
-     target="_blank" rel="noopener">WhatsApp: 0334-2709019</a>
+
+  <a class="btn"
+     href="https://wa.me/923342709019"
+     target="_blank"
+     rel="noopener">
+    WhatsApp: 0334-2709019
+  </a>
 </header>
 
 <div class="layout">
+
   <aside class="sidebar">
     <button class="nav-btn active" data-view="homeView"
       onclick="showView('homeView')">🏠 Dashboard</button>
+
     <button class="nav-btn" data-view="servicesView"
       onclick="showView('servicesView')">🧰 Online Services</button>
+
     <button class="nav-btn" data-view="coursesView"
       onclick="showView('coursesView')">🎓 Courses</button>
+
     <button class="nav-btn" data-view="cvView"
       onclick="showView('cvView')">📄 CV &amp; Resume</button>
+
     <button class="nav-btn" data-view="contactView"
       onclick="showView('contactView')">💬 Contact</button>
   </aside>
 
   <main>
+
     <!-- DASHBOARD -->
     <section class="view active" id="homeView">
       <div class="page-heading">
         <h1>Nexa Business Hub</h1>
         <p>Your digital services, learning resources and career tools in one place.</p>
       </div>
+
       <div class="hero">
         <h2>Build. Learn. Move Forward.</h2>
         <p>Explore online services, improve your skills and create a professional CV using our built-in CV Builder.</p>
         <button class="btn" onclick="showView('cvView')">Create Your CV →</button>
       </div>
+
       <div class="cards">
         <article class="card">
           <div class="card-icon">📄</div>
@@ -304,12 +455,14 @@ footer { text-align: center; padding: 25px; color: #68788d; font-size: 12px; }
           <p>Create a modern blue CV with a photo and live preview.</p>
           <button onclick="showView('cvView')">Open CV Builder →</button>
         </article>
+
         <article class="card">
           <div class="card-icon">🖨️</div>
           <h3>Printing &amp; Composing</h3>
           <p>Document typing, formatting and printing assistance.</p>
           <button onclick="contactService('Printing and Composing')">Ask about service →</button>
         </article>
+
         <article class="card">
           <div class="card-icon">🎓</div>
           <h3>Courses</h3>
@@ -319,7 +472,7 @@ footer { text-align: center; padding: 25px; color: #68788d; font-size: 12px; }
       </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- ONLINE SERVICES -->
     <section class="view" id="servicesView">
       <div class="page-heading">
         <h1>Online Services</h1>
@@ -337,7 +490,7 @@ footer { text-align: center; padding: 25px; color: #68788d; font-size: 12px; }
       <div class="cards" id="courseCards"></div>
     </section>
 
-    <!-- CV & RESUME: BUILDER IS INSIDE THIS SECTION -->
+    <!-- CV & RESUME -->
     <section class="view" id="cvView">
       <div class="page-heading">
         <h1>CV &amp; Resume Builder</h1>
@@ -345,48 +498,58 @@ footer { text-align: center; padding: 25px; color: #68788d; font-size: 12px; }
       </div>
 
       <div class="cv-workspace">
+
         <form class="form-panel no-print" id="cvForm" onsubmit="return false">
           <h2>CV Information</h2>
 
           <div class="form-section">Personal Information</div>
+
           <div class="field">
             <label for="cvName">Full Name *</label>
             <input id="cvName" value="YOUR NAME" required>
           </div>
+
           <div class="field">
             <label for="cvTitle">Professional Title</label>
             <input id="cvTitle" value="PROFESSIONAL TITLE">
           </div>
+
           <div class="field">
             <label for="cvPhone">Phone Number</label>
             <input id="cvPhone" placeholder="+92 300 0000000">
           </div>
+
           <div class="field">
             <label for="cvEmail">Email Address</label>
             <input id="cvEmail" type="email" placeholder="name@email.com">
           </div>
+
           <div class="field">
             <label for="cvAddress">City / Address</label>
             <input id="cvAddress" placeholder="City, Country">
           </div>
+
           <div class="field">
             <label for="cvPhoto">Profile Photo</label>
             <input id="cvPhoto" type="file" accept="image/*">
           </div>
 
           <div class="form-section">Professional Profile</div>
+
           <div class="field">
             <label for="cvSummary">Professional Summary</label>
             <textarea id="cvSummary">Motivated and responsible professional eager to contribute skills, learn continuously, and support a productive team.</textarea>
           </div>
 
           <div class="form-section">Education</div>
+
           <div class="field">
             <label for="cvEducation">Education Details</label>
             <textarea id="cvEducation" placeholder="Qualification — Institution — Year">Your qualification — Institution name — Year</textarea>
           </div>
 
           <div class="form-section">Work Experience</div>
+
           <div class="field">
             <label for="cvExperience">Experience &amp; Responsibilities</label>
             <textarea id="cvExperience" placeholder="Job title — Company — Dates">Job Title — Company — Dates
@@ -394,6 +557,7 @@ footer { text-align: center; padding: 25px; color: #68788d; font-size: 12px; }
           </div>
 
           <div class="form-section">Skills</div>
+
           <div class="field">
             <label for="cvSkills">Skills (one per line)</label>
             <textarea id="cvSkills">Communication
@@ -407,6 +571,7 @@ Teamwork</textarea>
           </div>
 
           <div class="form-section">Certifications &amp; References</div>
+
           <div class="field">
             <label for="cvReferences">Additional Details</label>
             <textarea id="cvReferences">References available upon request.</textarea>
@@ -417,6 +582,7 @@ Teamwork</textarea>
             <button type="button" class="save" onclick="downloadText()">Download Text</button>
             <button type="button" class="clear" onclick="clearCV()">Clear Form</button>
           </div>
+
           <p style="font-size:12px;color:#68788d;line-height:1.6">
             To save a PDF, choose “Save as PDF” in the browser's print window.
             Your CV is generated locally; no AI API is used.
@@ -426,10 +592,14 @@ Teamwork</textarea>
         <!-- LIVE CV PREVIEW -->
         <div>
           <div class="preview-label">LIVE PREVIEW · MODERN BLUE · A4</div>
+
           <article class="cv-paper" id="cvPaper">
             <aside class="cv-sidebar">
-              <img id="previewPhoto" class="cv-photo" alt="Profile photo"
-                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='230'%3E%3Crect width='200' height='230' fill='%23dceaff'/%3E%3Ccircle cx='100' cy='75' r='40' fill='%239ab7dc'/%3E%3Cpath d='M20 220 Q25 125 100 125 Q175 125 180 220' fill='%239ab7dc'/%3E%3C/svg%3E">
+
+              <img id="previewPhoto"
+                   class="cv-photo"
+                   alt="Profile photo"
+                   src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='230'%3E%3Crect width='200' height='230' fill='%23dceaff'/%3E%3Ccircle cx='100' cy='75' r='40' fill='%239ab7dc'/%3E%3Cpath d='M20 220 Q25 125 100 125 Q175 125 180 220' fill='%239ab7dc'/%3E%3C/svg%3E">
 
               <div class="side-title">CONTACT</div>
               <div class="cv-contact" id="prevPhone">☎ Phone</div>
@@ -472,6 +642,7 @@ Teamwork</div>
             </div>
           </article>
         </div>
+
       </div>
     </section>
 
@@ -481,15 +652,20 @@ Teamwork</div>
         <h1>Contact Us</h1>
         <p>Contact Nexa Business Hub for service details and support.</p>
       </div>
+
       <div class="card">
         <div class="card-icon">💬</div>
         <h2>WhatsApp Support</h2>
         <p>Message us for information about available services.</p>
-        <a class="btn" href="https://wa.me/923342709019" target="_blank" rel="noopener">0334-2709019</a>
+        <a class="btn"
+           href="https://wa.me/923342709019"
+           target="_blank"
+           rel="noopener">0334-2709019</a>
       </div>
     </section>
 
     <footer>© <span id="year"></span> Nexa Business Hub</footer>
+
   </main>
 </div>
 
@@ -526,8 +702,11 @@ const courses = [
 
 function escapeHTML(value) {
   return String(value).replace(/[&<>"']/g, char => ({
-    "&":"&amp;", "<":"&lt;", ">":"&gt;",
-    '"':"&quot;", "'":"&#39;"
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
   }[char]));
 }
 
@@ -541,33 +720,60 @@ function card(item, action, buttonText) {
 }
 
 document.getElementById("serviceCards").innerHTML = services.map(item =>
-  card(item, `contactService('${item[1].replace(/'/g,"\\'")}')`, "Ask about service →")
+  card(
+    item,
+    `contactService('${item[1].replace(/'/g,"\\'")}')`,
+    "Ask about service →"
+  )
 ).join("");
 
 document.getElementById("courseCards").innerHTML = courses.map(item =>
-  card(item, `contactCourse('${item[1].replace(/'/g,"\\'")}')`, "Course details →")
+  card(
+    item,
+    `contactCourse('${item[1].replace(/'/g,"\\'")}')`,
+    "Course details →"
+  )
 ).join("");
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
+/* Navigation and CV-specific WhatsApp visibility */
 function showView(id) {
   document.querySelectorAll(".view").forEach(view => {
     view.classList.toggle("active", view.id === id);
   });
+
   document.querySelectorAll(".nav-btn").forEach(button => {
     button.classList.toggle("active", button.dataset.view === id);
   });
+
+  document.body.classList.toggle("cv-mode", id === "cvView");
+
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function contactService(name) {
-  const message = encodeURIComponent("Hello Nexa Business Hub, I want to ask about " + name + ".");
-  window.open("https://wa.me/923342709019?text=" + message, "_blank", "noopener");
+  const message = encodeURIComponent(
+    "Hello Nexa Business Hub, I want to ask about " + name + "."
+  );
+
+  window.open(
+    "https://wa.me/923342709019?text=" + message,
+    "_blank",
+    "noopener"
+  );
 }
 
 function contactCourse(name) {
-  const message = encodeURIComponent("Hello Nexa Business Hub, please share details about " + name + ".");
-  window.open("https://wa.me/923342709019?text=" + message, "_blank", "noopener");
+  const message = encodeURIComponent(
+    "Hello Nexa Business Hub, please share details about " + name + "."
+  );
+
+  window.open(
+    "https://wa.me/923342709019?text=" + message,
+    "_blank",
+    "noopener"
+  );
 }
 
 /* Live CV preview */
@@ -595,6 +801,7 @@ const fallback = {
 
 Object.entries(bindings).forEach(([inputId, previewId]) => {
   const input = document.getElementById(inputId);
+
   input.addEventListener("input", () => {
     document.getElementById(previewId).textContent =
       input.value.trim() || fallback[inputId];
@@ -626,9 +833,11 @@ document.getElementById("cvPhoto").addEventListener("change", function() {
   }
 
   const reader = new FileReader();
+
   reader.onload = event => {
     document.getElementById("previewPhoto").src = event.target.result;
   };
+
   reader.readAsDataURL(file);
 });
 
@@ -658,16 +867,22 @@ function downloadText() {
     label.toUpperCase() + "\n" + document.getElementById(id).value
   ).join("\n\n");
 
-  const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+  const blob = new Blob(
+    [text],
+    { type: "text/plain;charset=utf-8" }
+  );
+
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
+
   const name = document.getElementById("cvName").value.trim()
     .replace(/[^a-z0-9]+/gi, "_") || "resume";
 
   link.href = url;
   link.download = name + ".txt";
   link.click();
-  URL.revokeObjectURL(url);
+
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
 /* Clear CV fields */
@@ -683,6 +898,7 @@ function clearCV() {
 
   contactBindings.forEach(([inputId, previewId, icon, placeholder]) => {
     const value = document.getElementById(inputId).value.trim();
+
     document.getElementById(previewId).textContent =
       value ? icon + value : placeholder;
   });
@@ -691,5 +907,6 @@ function clearCV() {
     "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='230'%3E%3Crect width='200' height='230' fill='%23dceaff'/%3E%3Ccircle cx='100' cy='75' r='40' fill='%239ab7dc'/%3E%3Cpath d='M20 220 Q25 125 100 125 Q175 125 180 220' fill='%239ab7dc'/%3E%3C/svg%3E";
 }
 </script>
+
 </body>
 </html>
