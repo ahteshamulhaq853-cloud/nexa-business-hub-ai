@@ -2,375 +2,885 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b1220">
-<title>Nexa Business Hub AI</title>
-<style>
-:root{font-family:Arial,Helvetica,sans-serif;color:#f4f7ff;background:#0b1220;--panel:#131f33;--line:#29374d;--cyan:#55d9e7;--muted:#aab7ca}
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(ellipse at top right,#182e52,#0b1220 55%);min-height:100vh}
-button,input,select,textarea{font:inherit}
-button{cursor:pointer}
-header{height:74px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 max(22px,calc((100% - 1100px)/2));gap:15px}
-.brand{font-weight:800;font-size:18px}.logo{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#55d9e7,#8192ff);color:#091321;margin-right:9px}
-button,.btn{border:1px solid var(--line);background:#18263c;color:white;border-radius:10px;padding:11px 16px;font-weight:700}
-.primary{background:linear-gradient(120deg,#55d9e7,#91a1ff);border:0;color:#07131e}
-.wrap{max-width:1100px;width:calc(100% - 36px);margin:auto}
-.hero{padding:60px 0 35px}.eyebrow{color:var(--cyan);font-size:12px;font-weight:bold;letter-spacing:1.4px;text-transform:uppercase}
-h1{font-size:clamp(35px,6vw,58px);line-height:1.08;letter-spacing:-1.8px;margin:15px 0}
-.muted{color:var(--muted);line-height:1.7}.hero p{max-width:650px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding-bottom:55px}
-.panel{background:#131f33ed;border:1px solid var(--line);border-radius:19px;padding:23px;min-width:0}
-.panel h2{margin:0 0 7px;font-size:22px}
-.field{margin:14px 0}.field label{display:block;font-size:13px;margin-bottom:7px;color:#dce6f5}
-input,select,textarea{display:block;width:100%;padding:12px 13px;border:1px solid #34445e;border-radius:10px;background:#0b1525;color:#fff;outline:none}
-input:focus,select:focus,textarea:focus{border-color:var(--cyan)}
-textarea{min-height:130px;resize:vertical}
-.full{width:100%}.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
-.message{display:none;padding:11px;border:1px solid #31556a;background:#102b3a;border-radius:9px;color:#b8f7fa;font-size:13px;margin-top:13px;overflow-wrap:anywhere}
-.message.show{display:block}.message.error{color:#ffc2c2;border-color:#70404a;background:#301821}
-.tabs{display:flex;gap:8px;margin:18px 0}.tabs button{flex:1}.tabs .active{border-color:var(--cyan);color:var(--cyan)}
-.small{font-size:12px;color:var(--muted);line-height:1.6}
-.link{background:none;border:0;padding:0;color:var(--cyan);font-weight:600}
-#result{white-space:pre-wrap;overflow-wrap:anywhere;min-height:80px;line-height:1.7;margin-top:16px}
-footer{border-top:1px solid var(--line);padding:22px;text-align:center;color:var(--muted);font-size:12px}
-.hidden{display:none!important}
-@media(max-width:760px){.grid{grid-template-columns:1fr}.hero{padding-top:42px}header{padding:0 15px}.brand{font-size:14px}.panel{padding:18px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1220">
+  <title>Nexa Business Hub AI</title>
+  <meta name="description" content="Create professional business content with Nexa Business Hub AI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1220;
+      --panel: #111c2e;
+      --panel2: #16243a;
+      --line: #263650;
+      --text: #f3f7ff;
+      --muted: #9eacc3;
+      --accent: #48d6c5;
+      --blue: #6395ff;
+      --danger: #ff8585;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 80% 0%, #16344c 0, transparent 38%),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button, input, textarea, select {
+      font: inherit;
+    }
+
+    button { cursor: pointer; }
+
+    .container {
+      width: min(1100px, calc(100% - 36px));
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(11,18,32,.9);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 12px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -.5px;
+    }
+
+    .brand-icon {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      border-radius: 13px;
+      color: #071b27;
+      background: linear-gradient(135deg, var(--accent), var(--blue));
+      font-weight: 900;
+    }
+
+    .brand span small {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    .nav-actions, .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 17px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: var(--panel2);
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+      transition: .2s;
+    }
+
+    .btn:hover { transform: translateY(-1px); filter: brightness(1.12); }
+
+    .btn-primary {
+      background: linear-gradient(110deg, var(--accent), #73e6b5);
+      border-color: transparent;
+      color: #071b27;
+    }
+
+    .btn-outline { background: transparent; }
+    .btn-danger { color: var(--danger); }
+    .btn:disabled { opacity: .6; cursor: wait; transform: none; }
+
+    .hero {
+      padding: 64px 0 35px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      background: #48d6c514;
+      border: 1px solid #48d6c533;
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 20px auto 14px;
+      font-size: clamp(34px, 6vw, 61px);
+      line-height: 1.12;
+      letter-spacing: -2px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--accent), #8eafff);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .status {
+      margin: 18px auto 0;
+      max-width: 760px;
+      font-size: 13px;
+      color: var(--muted);
+      overflow-wrap: anywhere;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
+      gap: 22px;
+      padding: 20px 0 55px;
+      align-items: start;
+    }
+
+    .panel {
+      min-width: 0;
+      background: linear-gradient(155deg, #142137, #0f1929);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 18px 60px #00000016;
+    }
+
+    .panel h2 { margin: 0 0 6px; font-size: 22px; }
+    .sub { margin: 0 0 22px; color: var(--muted); font-size: 14px; }
+
+    .field { margin-bottom: 17px; }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #dce7f8;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      min-width: 0;
+      color: var(--text);
+      background: #0a1322;
+      border: 1px solid #2a3b55;
+      border-radius: 11px;
+      padding: 13px 14px;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px #48d6c51a;
+    }
+
+    textarea { resize: vertical; min-height: 160px; }
+    input::placeholder, textarea::placeholder { color: #6e809a; }
+
+    .full { width: 100%; }
+    .hidden { display: none !important; }
+
+    .auth-tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+      background: #0a1322;
+      padding: 5px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .auth-tab {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      padding: 10px;
+      border-radius: 9px;
+      font-weight: 700;
+    }
+
+    .auth-tab.active { background: var(--panel2); color: var(--text); }
+
+    .muted { color: var(--muted); font-size: 13px; }
+    .link-button {
+      color: var(--accent);
+      background: none;
+      border: 0;
+      padding: 4px 0;
+      text-decoration: underline;
+    }
+
+    .message {
+      margin: 14px 0;
+      padding: 12px 13px;
+      border-radius: 10px;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+    }
+
+    .message:empty { display: none; }
+    .message.info { background: #6395ff17; border: 1px solid #6395ff55; }
+    .message.success { background: #48d6c515; border: 1px solid #48d6c555; }
+    .message.error { background: #ff85851a; border: 1px solid #ff858555; color: #ffb3b3; }
+
+    .check-row {
+      display: flex;
+      gap: 9px;
+      align-items: flex-start;
+      margin: 14px 0;
+    }
+
+    .check-row input { width: auto; margin-top: 5px; }
+    .check-row label { margin: 0; color: var(--muted); font-weight: 400; }
+
+    .user-chip {
+      color: var(--accent);
+      font-size: 12px;
+      overflow-wrap: anywhere;
+      margin-bottom: 12px;
+    }
+
+    .feature-list { display: grid; gap: 13px; margin-top: 22px; }
+
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px;
+      border-radius: 12px;
+      background: #ffffff05;
+      border: 1px solid #ffffff0d;
+    }
+
+    .feature-icon {
+      flex: 0 0 34px;
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      background: #48d6c516;
+      border-radius: 10px;
+      color: var(--accent);
+    }
+
+    .feature strong { display: block; font-size: 14px; }
+    .feature span { color: var(--muted); font-size: 12px; }
+
+    .output {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      background: #091321;
+      border-radius: 13px;
+      padding: 17px;
+      min-height: 100px;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+      font-size: 14px;
+    }
+
+    .output:empty::before {
+      content: "Your AI-generated content will appear here.";
+      color: #6e809a;
+    }
+
+    .divider { height: 1px; background: var(--line); margin: 22px 0; }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 25px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 760px) {
+      .layout { grid-template-columns: 1fr; }
+      .hero { padding-top: 42px; }
+      .panel { padding: 20px; }
+      h1 { letter-spacing: -1px; }
+      .nav { align-items: flex-start; }
+    }
+
+    @media (max-width: 420px) {
+      .container { width: calc(100% - 22px); }
+      .brand { font-size: 16px; }
+      .nav-actions { width: 100%; }
+      .nav-actions .btn { flex: 1; }
+      .panel { padding: 16px; border-radius: 15px; }
+      .hero p { font-size: 15px; }
+    }
+  </style>
 </head>
+
 <body>
 <header>
-  <div class="brand"><span class="logo">N</span>Nexa Business Hub AI</div>
-  <div class="row">
-    <button id="headerLogin">Log in</button>
-    <button class="primary" id="headerRegister">Register</button>
+  <div class="container nav">
+    <div class="brand">
+      <div class="brand-icon">N</div>
+      <span>NEXA <small>BUSINESS HUB AI</small></span>
+    </div>
+    <div class="nav-actions">
+      <button class="btn btn-outline" id="navLogin" type="button">Login</button>
+      <button class="btn btn-primary" id="navRegister" type="button">Create Account</button>
+      <button class="btn btn-outline hidden" id="logoutBtn" type="button">Logout</button>
+    </div>
   </div>
 </header>
 
-<main class="wrap">
+<main class="container">
   <section class="hero">
-    <div class="eyebrow">Your smarter business workspace</div>
-    <h1>Work smarter.<br><span style="color:#55d9e7">Build faster.</span></h1>
-    <p class="muted">AI-powered help for writing, business tasks, applications and everyday productivity. Sign in to use your workspace.</p>
-    <div class="row">
-      <button class="primary" id="heroRegister">Create your account →</button>
-      <button id="heroLogin">I already have an account</button>
-    </div>
+    <div class="eyebrow">✦ AI-powered business workspace</div>
+    <h1>Work smarter with <span class="gradient-text">Nexa AI</span></h1>
+    <p>Create professional content, business ideas, applications, and useful writing with your AI-powered business assistant.</p>
+    <div class="status" id="topStatus" role="status" aria-live="polite">Connect your account to get started.</div>
   </section>
 
-  <section class="grid">
-    <div class="panel" id="authPanel">
-      <h2 id="authTitle">Welcome back</h2>
-      <p class="muted" id="authSubtitle">Log in to your account.</p>
-      <div class="tabs">
-        <button id="loginTab" class="active">Log in</button>
-        <button id="registerTab">Register</button>
-      </div>
+  <div class="layout">
+    <section class="panel" id="authPanel">
+      <div id="authForms">
+        <h2 id="authTitle">Welcome back</h2>
+        <p class="sub" id="authSubtitle">Log in to your Nexa account.</p>
 
-      <form id="authForm">
-        <div class="field hidden" id="nameBox">
-          <label for="fullName">Full name</label>
-          <input id="fullName" autocomplete="name" placeholder="Your full name">
+        <div class="auth-tabs">
+          <button class="auth-tab active" type="button" id="loginTab">Login</button>
+          <button class="auth-tab" type="button" id="registerTab">Register</button>
         </div>
-        <div class="field">
-          <label for="email">Email address</label>
-          <input id="email" type="email" required autocomplete="email" placeholder="you@example.com">
+
+        <form id="authForm">
+          <div class="field hidden" id="nameField">
+            <label for="fullName">Full name</label>
+            <input id="fullName" type="text" autocomplete="name" maxlength="100" placeholder="Enter your full name">
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com">
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" type="password" autocomplete="current-password" required minlength="8" maxlength="128" placeholder="At least 8 characters">
+          </div>
+
+          <div class="field hidden" id="confirmField">
+            <label for="confirmPassword">Confirm password</label>
+            <input id="confirmPassword" type="password" autocomplete="new-password" minlength="8" maxlength="128" placeholder="Enter password again">
+          </div>
+
+          <div class="check-row hidden" id="termsRow">
+            <input id="terms" type="checkbox">
+            <label for="terms">I agree to use this service responsibly and provide a valid email address.</label>
+          </div>
+
+          <button class="btn btn-primary full" type="submit" id="authSubmit">Login to account</button>
+        </form>
+
+        <div class="actions" style="justify-content:space-between;margin-top:12px">
+          <button class="link-button" id="forgotBtn" type="button">Forgot password?</button>
+          <button class="link-button" id="backLoginBtn" type="button">Back to login</button>
         </div>
-        <div class="field">
-          <label for="password">Password (minimum 8 characters)</label>
-          <input id="password" type="password" required minlength="8" autocomplete="current-password" placeholder="Enter password">
-        </div>
-        <div class="field hidden" id="confirmBox">
-          <label for="confirmPassword">Confirm password</label>
-          <input id="confirmPassword" type="password" minlength="8" autocomplete="new-password" placeholder="Enter password again">
-        </div>
-        <div class="field hidden" id="termsBox">
-          <label><input id="terms" type="checkbox" style="display:inline;width:auto"> I agree to the website terms.</label>
-        </div>
-        <button class="primary full" id="submitAuth" type="submit">Log in</button>
-        <div class="row" style="justify-content:space-between;margin-top:14px">
-          <button type="button" class="link" id="forgotBtn">Forgot password?</button>
-          <button type="button" class="link" id="logoutBtn">Log out</button>
-        </div>
+
         <div id="authMessage" class="message" role="status" aria-live="polite"></div>
-      </form>
-
-      <div id="resetBox" class="hidden">
-        <h3>Set a new password</h3>
-        <p class="small">Open this page from the password-reset email before using this form.</p>
-        <div class="field"><label for="newPassword">New password</label><input id="newPassword" type="password" minlength="8" autocomplete="new-password"></div>
-        <div class="field"><label for="newPasswordConfirm">Confirm new password</label><input id="newPasswordConfirm" type="password" minlength="8" autocomplete="new-password"></div>
-        <button class="primary full" id="savePassword" type="button">Update password</button>
       </div>
-      <p class="small">Secure authentication is provided by Supabase.</p>
-    </div>
 
-    <div class="panel">
-      <h2>AI Writing Assistant</h2>
-      <p class="muted">Choose a response language and enter your task.</p>
+      <div id="resetPanel" class="hidden">
+        <h2>Set a new password</h2>
+        <p class="sub">Choose a new password for your account.</p>
+        <form id="resetForm">
+          <div class="field">
+            <label for="newPassword">New password</label>
+            <input id="newPassword" type="password" required minlength="8" maxlength="128" autocomplete="new-password">
+          </div>
+          <div class="field">
+            <label for="newPasswordConfirm">Confirm new password</label>
+            <input id="newPasswordConfirm" type="password" required minlength="8" maxlength="128" autocomplete="new-password">
+          </div>
+          <button class="btn btn-primary full" type="submit" id="resetSubmit">Update password</button>
+        </form>
+        <div id="resetMessage" class="message" role="status" aria-live="polite"></div>
+      </div>
+
+      <div id="signedInPanel" class="hidden">
+        <h2>You’re signed in</h2>
+        <p class="sub">Your Nexa account is connected.</p>
+        <div class="user-chip" id="userEmail"></div>
+        <p class="muted">You can now use the AI content generator.</p>
+        <button class="btn btn-primary full" type="button" id="startBtn">Open AI Generator</button>
+        <div id="signedMessage" class="message" role="status" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Your business assistant</h2>
+      <p class="sub">Simple tools for everyday business and writing tasks.</p>
+
+      <div class="feature-list">
+        <div class="feature">
+          <div class="feature-icon">✦</div>
+          <div><strong>AI Content Generator</strong><span>Draft useful content from your instructions.</span></div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">文</div>
+          <div><strong>Multiple Languages</strong><span>Choose English, Urdu, or Roman Urdu.</span></div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">✓</div>
+          <div><strong>Account Access</strong><span>Email confirmation and password recovery.</span></div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <p class="muted">Tip: Be specific about the purpose, audience, and style you want.</p>
+    </section>
+  </div>
+
+  <section class="panel hidden" id="generatorPanel" style="margin-bottom:45px">
+    <h2>AI Content Generator</h2>
+    <p class="sub">Write a prompt and choose your preferred response language.</p>
+
+    <form id="generateForm">
       <div class="field">
-        <label for="language">AI response language</label>
+        <label for="language">Response language</label>
         <select id="language">
           <option value="English">English</option>
-          <option value="Urdu">Urdu</option>
+          <option value="Urdu">اردو</option>
           <option value="Roman Urdu">Roman Urdu</option>
         </select>
       </div>
       <div class="field">
-        <label for="prompt">What would you like help with?</label>
-        <textarea id="prompt" placeholder="Write your task here..."></textarea>
+        <label for="prompt">What would you like to create?</label>
+        <textarea id="prompt" required maxlength="12000" placeholder="Example: Write a professional business introduction for my online service center..."></textarea>
       </div>
-      <button class="primary full" id="generateBtn">Generate with AI</button>
-      <div id="aiMessage" class="message" role="status"></div>
-      <div id="result" class="muted">Your AI response will appear here.</div>
-      <button id="copyBtn" type="button">Copy response</button>
+      <button class="btn btn-primary" type="submit" id="generateBtn">✦ Generate Content</button>
+    </form>
+
+    <div id="generateMessage" class="message" role="status" aria-live="polite"></div>
+    <div class="output" id="output" aria-live="polite"></div>
+    <div class="actions" style="margin-top:12px">
+      <button class="btn" type="button" id="copyBtn">Copy result</button>
+      <button class="btn btn-outline" type="button" id="clearBtn">Clear</button>
     </div>
   </section>
 </main>
-<footer>© <span id="year"></span> Nexa Business Hub AI</footer>
 
-<!-- Supabase client library -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<footer>
+  <div class="container">© <span id="year"></span> Nexa Business Hub AI. Built for smarter work.</div>
+</footer>
+
 <script>
-(() => {
-  "use strict";
+"use strict";
 
-  /*
-    STEP 1:
-    Replace these two placeholders with your Supabase Project URL
-    and Publishable key (or legacy anon key).
-    Never put a service_role or secret key here.
-  */
-  const SUPABASE_URL = "PASTE_SUPABASE_PROJECT_URL";
-  const SUPABASE_PUBLISHABLE_KEY = "PASTE_SUPABASE_PUBLISHABLE_KEY";
+/*
+  Replace only these two placeholders with values from your Supabase project.
+  Use the Project URL and Publishable Key, never a service_role/secret key.
+*/
+const SUPABASE_URL = "PASTE_SUPABASE_PROJECT_URL";
+const SUPABASE_PUBLISHABLE_KEY = "PASTE_SUPABASE_PUBLISHABLE_KEY";
 
-  const $ = id => document.getElementById(id);
-  $("year").textContent = new Date().getFullYear();
+const $ = (id) => document.getElementById(id);
 
-  let client = null;
-  let mode = "login";
-  let busy = false;
+$("year").textContent = new Date().getFullYear();
 
-  function message(id, text, error = false) {
-    const el = $(id);
-    el.textContent = text;
-    el.classList.add("show");
-    el.classList.toggle("error", error);
+let supabaseClient = null;
+let authMode = "login";
+let currentSession = null;
+let resetMode = false;
+
+function setMessage(id, text, type = "info") {
+  const el = $(id);
+  el.textContent = text || "";
+  el.className = "message" + (text ? " " + type : "");
+}
+
+function setBusy(button, busy, busyText, originalText) {
+  button.disabled = busy;
+  button.textContent = busy ? busyText : originalText;
+}
+
+function configured() {
+  return SUPABASE_URL.startsWith("https://") &&
+    !SUPABASE_URL.includes("https://njfobttocvkjsrvlcjaj.supabase.co") &&
+    SUPABASE_PUBLISHABLE_KEY &&
+    !SUPABASE_PUBLISHABLE_KEY.includes("sb_publishable_EkEFOVho4ryOYcIOVAqMhQ_z9yoD9TB");
+}
+
+function redirectUrl() {
+  return window.location.origin + window.location.pathname;
+}
+
+function showAuth(mode = "login") {
+  authMode = mode;
+  resetMode = false;
+  $("authForms").classList.remove("hidden");
+  $("resetPanel").classList.add("hidden");
+  $("signedInPanel").classList.add("hidden");
+  $("generatorPanel").classList.add("hidden");
+  $("authPanel").classList.remove("hidden");
+  $("authTitle").textContent = mode === "register" ? "Create your account" : "Welcome back";
+  $("authSubtitle").textContent = mode === "register"
+    ? "Register to start using Nexa AI."
+    : "Log in to your Nexa account.";
+  $("nameField").classList.toggle("hidden", mode !== "register");
+  $("confirmField").classList.toggle("hidden", mode !== "register");
+  $("termsRow").classList.toggle("hidden", mode !== "register");
+  $("forgotBtn").classList.toggle("hidden", mode !== "login");
+  $("backLoginBtn").classList.add("hidden");
+  $("loginTab").classList.toggle("active", mode === "login");
+  $("registerTab").classList.toggle("active", mode === "register");
+  $("authSubmit").textContent = mode === "register" ? "Create account" : "Login to account";
+  setMessage("authMessage", "");
+  $("authPanel").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function showResetForm() {
+  resetMode = true;
+  $("authForms").classList.add("hidden");
+  $("signedInPanel").classList.add("hidden");
+  $("resetPanel").classList.remove("hidden");
+  $("authPanel").classList.remove("hidden");
+  $("generatorPanel").classList.add("hidden");
+  setMessage("resetMessage", "Enter your new password.");
+}
+
+function showSignedIn(session) {
+  currentSession = session;
+  $("authForms").classList.add("hidden");
+  $("resetPanel").classList.add("hidden");
+  $("signedInPanel").classList.remove("hidden");
+  $("authPanel").classList.remove("hidden");
+  $("generatorPanel").classList.remove("hidden");
+  $("logoutBtn").classList.remove("hidden");
+  $("navLogin").classList.add("hidden");
+  $("navRegister").classList.add("hidden");
+  $("userEmail").textContent = session.user.email || "Signed-in user";
+  $("topStatus").textContent = "Signed in. Your AI workspace is ready.";
+}
+
+function showSignedOut() {
+  currentSession = null;
+  $("authForms").classList.remove("hidden");
+  $("resetPanel").classList.add("hidden");
+  $("signedInPanel").classList.add("hidden");
+  $("generatorPanel").classList.add("hidden");
+  $("logoutBtn").classList.add("hidden");
+  $("navLogin").classList.remove("hidden");
+  $("navRegister").classList.remove("hidden");
+  $("topStatus").textContent = "Log in or create an account to use your workspace.";
+}
+
+async function getCurrentSession() {
+  if (!supabaseClient) return;
+  const { data, error } = await supabaseClient.auth.getSession();
+  if (error) throw error;
+  if (data.session) {
+    showSignedIn(data.session);
+  } else {
+    showSignedOut();
   }
-  function clearMessage(id) {
-    $(id).textContent = "";
-    $(id).className = "message";
+}
+
+$("loginTab").addEventListener("click", () => showAuth("login"));
+$("registerTab").addEventListener("click", () => showAuth("register"));
+$("navLogin").addEventListener("click", () => showAuth("login"));
+$("navRegister").addEventListener("click", () => showAuth("register"));
+$("backLoginBtn").addEventListener("click", () => showAuth("login"));
+
+$("authForm").addEventListener("submit", async (event) => {
+  event.preventDefault();
+  if (!supabaseClient) {
+    setMessage("authMessage", "Supabase is not configured. Add your Project URL and Publishable Key in this file.", "error");
+    return;
   }
 
-  function setMode(next) {
-    mode = next;
-    const registering = mode === "register";
-    $("loginTab").classList.toggle("active", !registering);
-    $("registerTab").classList.toggle("active", registering);
-    $("authTitle").textContent = registering ? "Create your account" : "Welcome back";
-    $("authSubtitle").textContent = registering
-      ? "Register with your email address."
-      : "Log in to your account.";
-    $("nameBox").classList.toggle("hidden", !registering);
-    $("confirmBox").classList.toggle("hidden", !registering);
-    $("termsBox").classList.toggle("hidden", !registering);
-    $("fullName").required = registering;
-    $("confirmPassword").required = registering;
-    $("forgotBtn").classList.toggle("hidden", registering);
-    $("submitAuth").textContent = registering ? "Create account" : "Log in";
-    $("password").autocomplete = registering ? "new-password" : "current-password";
-    clearMessage("authMessage");
-    $("resetBox").classList.add("hidden");
-    $("authForm").classList.remove("hidden");
-  }
+  const email = $("email").value.trim();
+  const password = $("password").value;
+  const button = $("authSubmit");
+  setBusy(button, true, "Please wait...", authMode === "register" ? "Create account" : "Login to account");
+  setMessage("authMessage", "");
 
-  function openAuth(next) {
-    setMode(next);
-    $("authPanel").scrollIntoView({behavior:"smooth",block:"center"});
-    $("email").focus({preventScroll:true});
-  }
+  try {
+    if (authMode === "register") {
+      const fullName = $("fullName").value.trim();
+      if (!fullName) throw new Error("Please enter your full name.");
+      if (password !== $("confirmPassword").value) throw new Error("Passwords do not match.");
+      if (!$("terms").checked) throw new Error("Please accept the terms to continue.");
 
-  $("headerLogin").onclick = $("heroLogin").onclick = () => openAuth("login");
-  $("headerRegister").onclick = $("heroRegister").onclick = () => openAuth("register");
-  $("loginTab").onclick = () => setMode("login");
-  $("registerTab").onclick = () => setMode("register");
-
-  function ready() {
-    if (!window.supabase) {
-      message("authMessage", "Supabase library failed to load. Check your internet connection.", true);
-      return false;
-    }
-    if (SUPABASE_URL.includes("PASTE_") || SUPABASE_PUBLISHABLE_KEY.includes("PASTE_")) {
-      message("authMessage", "Add your Supabase Project URL and Publishable key in the code first.", true);
-      return false;
-    }
-    if (!client) client = window.supabase.createClient(
-      SUPABASE_URL,
-      SUPABASE_PUBLISHABLE_KEY
-    );
-    return true;
-  }
-
-  $("authForm").addEventListener("submit", async event => {
-    event.preventDefault();
-    if (busy || !ready()) return;
-    clearMessage("authMessage");
-
-    const email = $("email").value.trim();
-    const password = $("password").value;
-    busy = true;
-    $("submitAuth").disabled = true;
-
-    try {
-      if (mode === "register") {
-        const fullName = $("fullName").value.trim();
-        if (password.length < 8) throw new Error("Use at least 8 characters for your password.");
-        if (password !== $("confirmPassword").value) throw new Error("Passwords do not match.");
-        if (!$("terms").checked) throw new Error("Please agree to the website terms.");
-
-        const { error } = await client.auth.signUp({
-          email,
-          password,
-          options: {
-            data: { full_name: fullName },
-            emailRedirectTo: location.origin + location.pathname
-          }
-        });
-        if (error) throw error;
-        message("authMessage", "Registration received. Check your email and verify your account before logging in.");
-      } else {
-        const { data, error } = await client.auth.signInWithPassword({email, password});
-        if (error) throw error;
-        if (!data.user || !data.user.email_confirmed_at) {
-          await client.auth.signOut();
-          throw new Error("Please verify your email before logging in.");
+      const { data, error } = await supabaseClient.auth.signUp({
+        email,
+        password,
+        options: {
+          emailRedirectTo: redirectUrl(),
+          data: { full_name: fullName }
         }
-        message("authMessage", "You are logged in successfully.");
-        updateSession(data.session);
+      });
+      if (error) throw error;
+
+      if (data.session) {
+        showSignedIn(data.session);
+        setMessage("signedMessage", "Your account has been created.", "success");
+      } else {
+        setMessage("authMessage", "Registration received. Check your email and click the verification link before logging in.", "success");
       }
-    } catch (e) {
-      message("authMessage", e.message || "Authentication failed.", true);
-    } finally {
-      busy = false;
-      $("submitAuth").disabled = false;
-    }
-  });
-
-  $("forgotBtn").onclick = async () => {
-    if (!ready()) return;
-    const email = $("email").value.trim();
-    if (!email) {
-      message("authMessage", "Enter your email address first.", true);
-      $("email").focus();
-      return;
-    }
-    try {
-      const {error} = await client.auth.resetPasswordForEmail(email, {
-        redirectTo: location.origin + location.pathname + "?reset-password"
-      });
-      if (error) throw error;
-      message("authMessage", "If the address is eligible, a password reset email will be sent.");
-    } catch (e) {
-      message("authMessage", e.message || "Could not send reset email.", true);
-    }
-  };
-
-  $("savePassword").onclick = async () => {
-    if (!ready()) return;
-    const p = $("newPassword").value;
-    const c = $("newPasswordConfirm").value;
-    if (p.length < 8) return message("authMessage", "Use at least 8 characters.", true);
-    if (p !== c) return message("authMessage", "Passwords do not match.", true);
-    try {
-      const {error} = await client.auth.updateUser({password:p});
-      if (error) throw error;
-      message("authMessage", "Password updated. You can now log in with your new password.");
-      $("resetBox").classList.add("hidden");
-      $("authForm").classList.remove("hidden");
-      setMode("login");
-    } catch (e) {
-      message("authMessage", e.message || "Could not update password.", true);
-    }
-  };
-
-  function updateSession(session) {
-    if (session) {
-      $("authSubtitle").textContent = "Signed in as " + (session.user.email || "your account");
-      $("logoutBtn").classList.remove("hidden");
     } else {
-      $("logoutBtn").classList.add("hidden");
+      const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+      if (error) throw error;
+      if (!data.session) throw new Error("No active session was returned. Please verify your email.");
+      showSignedIn(data.session);
     }
+  } catch (error) {
+    setMessage("authMessage", error.message || "Authentication failed.", "error");
+  } finally {
+    setBusy(button, false, "", authMode === "register" ? "Create account" : "Login to account");
   }
-  $("logoutBtn").onclick = async () => {
-    if (!ready()) return;
-    const {error} = await client.auth.signOut();
-    if (error) return message("authMessage", error.message, true);
-    updateSession(null);
-    message("authMessage", "You have been logged out.");
-  };
+});
 
-  // Handle Supabase auth callback and password-recovery links.
-  async function initAuth() {
-    if (!ready()) return;
-    const {data, error} = await client.auth.getSession();
-    if (error) message("authMessage", error.message, true);
-    updateSession(data?.session || null);
-
-    if (location.search.includes("reset-password") ||
-        location.hash.includes("type=recovery")) {
-      $("resetBox").classList.remove("hidden");
-      $("authForm").classList.add("hidden");
-      $("authTitle").textContent = "Reset your password";
-      $("authSubtitle").textContent = "Choose a new password for your account.";
-    }
-    client.auth.onAuthStateChange((_event, session) => updateSession(session));
+$("forgotBtn").addEventListener("click", async () => {
+  if (!supabaseClient) {
+    setMessage("authMessage", "Please configure Supabase first.", "error");
+    return;
   }
-  initAuth();
+  const email = $("email").value.trim();
+  if (!email) {
+    setMessage("authMessage", "Enter your email address first, then click Forgot password.", "info");
+    $("email").focus();
+    return;
+  }
 
-  // AI request: keep the existing Cloudflare Worker endpoint.
-  // If your Worker expects different JSON fields, adapt this request to worker.js.
-  $("generateBtn").onclick = async () => {
-    clearMessage("aiMessage");
-    const prompt = $("prompt").value.trim();
-    const language = $("language").value;
-    if (!prompt) return message("aiMessage", "Please enter a task first.", true);
+  try {
+    const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
+      redirectTo: redirectUrl()
+    });
+    if (error) throw error;
+    setMessage("authMessage", "If an account exists for this email, a password reset link will be sent. Check your inbox.", "success");
+  } catch (error) {
+    setMessage("authMessage", error.message || "Could not send the reset email.", "error");
+  }
+});
 
-    $("generateBtn").disabled = true;
-    $("generateBtn").textContent = "Generating...";
-    $("result").textContent = "";
+$("resetForm").addEventListener("submit", async (event) => {
+  event.preventDefault();
+  if (!supabaseClient) return;
 
-    try {
-      const response = await fetch("/api/generate", {
-        method: "POST",
-        headers: {"Content-Type":"application/json"},
-        body: JSON.stringify({prompt, language})
-      });
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.error || "AI request failed.");
+  const password = $("newPassword").value;
+  if (password !== $("newPasswordConfirm").value) {
+    setMessage("resetMessage", "Passwords do not match.", "error");
+    return;
+  }
 
-      // Support common response field names.
-      const output = data.text || data.response || data.result || data.output;
-      if (!output) throw new Error("AI response format was not recognized. Check worker.js.");
-      $("result").textContent = output;
-    } catch (e) {
-      message("aiMessage", e.message || "Could not reach the AI service.", true);
-    } finally {
-      $("generateBtn").disabled = false;
-      $("generateBtn").textContent = "Generate with AI";
+  const button = $("resetSubmit");
+  setBusy(button, true, "Updating...", "Update password");
+
+  try {
+    const { error } = await supabaseClient.auth.updateUser({ password });
+    if (error) throw error;
+    setMessage("resetMessage", "Password updated successfully. You can now log in with your new password.", "success");
+    $("resetForm").reset();
+    await supabaseClient.auth.signOut();
+    showAuth("login");
+    setMessage("authMessage", "Your password has been changed. Please log in.", "success");
+  } catch (error) {
+    setMessage("resetMessage", error.message || "Could not update password.", "error");
+  } finally {
+    setBusy(button, false, "", "Update password");
+  }
+});
+
+$("logoutBtn").addEventListener("click", async () => {
+  if (!supabaseClient) return;
+  const { error } = await supabaseClient.auth.signOut();
+  if (error) {
+    $("topStatus").textContent = "Could not log out: " + error.message;
+    return;
+  }
+  showSignedOut();
+  showAuth("login");
+});
+
+$("startBtn").addEventListener("click", () => {
+  $("generatorPanel").classList.remove("hidden");
+  $("generatorPanel").scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
+$("generateForm").addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  if (!currentSession) {
+    setMessage("generateMessage", "Please log in first.", "error");
+    return;
+  }
+
+  const prompt = $("prompt").value.trim();
+  const language = $("language").value;
+  if (!prompt) {
+    setMessage("generateMessage", "Please enter a prompt.", "error");
+    return;
+  }
+
+  const button = $("generateBtn");
+  setBusy(button, true, "Generating...", "✦ Generate Content");
+  setMessage("generateMessage", "Your request is being processed.");
+  $("output").textContent = "";
+
+  try {
+    /*
+      Keeps the existing Worker endpoint.
+      If your worker requires a different JSON shape, match this body to worker.js.
+    */
+    const response = await fetch("/api/generate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt, language })
+    });
+
+    const raw = await response.text();
+    let result;
+    try { result = JSON.parse(raw); }
+    catch { result = { text: raw }; }
+
+    if (!response.ok) {
+      throw new Error(result.error || result.message || "AI request failed (" + response.status + ").");
     }
-  };
 
-  $("copyBtn").onclick = async () => {
-    const text = $("result").textContent;
-    try {
-      await navigator.clipboard.writeText(text);
-      message("aiMessage", "Response copied.");
-    } catch {
-      message("aiMessage", "Copy is unavailable in this browser. Select the response text and copy it.");
+    const content = result.text ?? result.response ?? result.result ?? result.output;
+    if (typeof content === "string" && content.length) {
+      $("output").textContent = content;
+    } else {
+      $("output").textContent = JSON.stringify(result, null, 2);
     }
-  };
-})();
+
+    setMessage("generateMessage", "Content generated successfully.", "success");
+  } catch (error) {
+    setMessage("generateMessage", error.message || "Something went wrong while generating content.", "error");
+  } finally {
+    setBusy(button, false, "", "✦ Generate Content");
+  }
+});
+
+$("copyBtn").addEventListener("click", async () => {
+  const content = $("output").textContent.trim();
+  if (!content) {
+    setMessage("generateMessage", "There is no result to copy yet.", "info");
+    return;
+  }
+  try {
+    await navigator.clipboard.writeText(content);
+    setMessage("generateMessage", "Result copied to clipboard.", "success");
+  } catch {
+    setMessage("generateMessage", "Copy is not available in this browser. Select the text and copy it manually.", "error");
+  }
+});
+
+$("clearBtn").addEventListener("click", () => {
+  $("prompt").value = "";
+  $("output").textContent = "";
+  setMessage("generateMessage", "");
+});
+
+async function initialize() {
+  if (!configured()) {
+    $("topStatus").textContent = "Setup required: add your Supabase Project URL and Publishable Key in index.html.";
+    setMessage("authMessage", "Supabase credentials have not been added yet.", "info");
+    showSignedOut();
+    return;
+  }
+
+  if (!window.supabase || !window.supabase.createClient) {
+    $("topStatus").textContent = "Supabase library did not load. Check your internet connection and reload.";
+    return;
+  }
+
+  try {
+    supabaseClient = window.supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_PUBLISHABLE_KEY,
+      {
+        auth: {
+          persistSession: true,
+          autoRefreshToken: true,
+          detectSessionInUrl: true
+        }
+      }
+    );
+
+    supabaseClient.auth.onAuthStateChange((event, session) => {
+      if (event === "PASSWORD_RECOVERY") {
+        showResetForm();
+      } else if (session) {
+        showSignedIn(session);
+      } else {
+        showSignedOut();
+      }
+    });
+
+    const { data, error } = await supabaseClient.auth.getSession();
+    if (error) throw error;
+
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("reset-password") || window.location.hash.includes("type=recovery")) {
+      showResetForm();
+    } else if (data.session) {
+      showSignedIn(data.session);
+    } else {
+      showSignedOut();
+    }
+  } catch (error) {
+    $("topStatus").textContent = "Could not connect to Supabase.";
+    setMessage("authMessage", error.message || "Supabase initialization failed.", "error");
+  }
+}
+
+initialize();
 </script>
 </body>
 </html>
