@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#080d1b">
-  <title>Nexa Business Hub AI</title>
-  <meta name="description" content="AI tools, digital services and online learning courses in one place.">
+  <title>Nexa Business Hub</title>
+  <meta name="description" content="Digital services and online learning courses in one place.">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <style>
     :root {
@@ -114,38 +114,6 @@
       background:var(--panel);border:1px solid var(--line);
       border-radius:18px;padding:20px;margin-bottom:18px;
     }
-    .form-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-    .field-wrap {display:flex;flex-direction:column;gap:7px;min-width:0}
-    .field-wrap.full {grid-column:1/-1}
-    label {font-size:13px;color:#d5e0f4}
-    .field {
-      width:100%;padding:12px;background:#0a1324;color:var(--text);
-      border:1px solid var(--line);border-radius:11px;outline:none;
-    }
-    textarea.field {resize:vertical;min-height:125px}
-    select.field option {background:#101a2e}
-    .form-actions {display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
-    .result {
-      white-space:pre-wrap;overflow-wrap:anywhere;background:#091222;
-      border:1px solid var(--line);padding:18px;border-radius:14px;
-      min-height:100px;font-size:14px;line-height:1.85;
-    }
-    .notice {
-      padding:12px 14px;border:1px solid var(--line);
-      background:#0b1426;border-radius:11px;font-size:13px;margin:10px 0;
-    }
-    .notice.error {border-color:#8c414a;color:#ffb5b5}
-    .notice.success {border-color:#226c58;color:#a8f2d4}
-    .cv-builder {
-      grid-column:1/-1;padding:17px;border:1px solid #4c477f;
-      background:linear-gradient(145deg,#171b38,#101b30);
-      border-radius:15px;
-    }
-    .cv-builder h3 {margin-bottom:5px}
-    .cv-builder .intro {font-size:13px;color:var(--muted);margin-bottom:16px}
-    .cv-builder .form-grid {margin-top:12px}
-    .cv-builder .field {min-width:0}
-    .field-help {font-size:11px;color:var(--muted)}
     .progress-track {height:7px;background:#27334a;border-radius:20px;overflow:hidden}
     .progress-bar {height:100%;background:linear-gradient(90deg,var(--primary),var(--cyan));width:0}
     .lesson-list {display:grid;gap:9px;margin-top:16px}
@@ -158,6 +126,12 @@
     .lesson.done {border-color:#286c5c}
     .lesson.done span {color:#9ce6cb}
     .empty {grid-column:1/-1;text-align:center;color:var(--muted);padding:25px}
+    .notice {
+      padding:12px 14px;border:1px solid var(--line);
+      background:#0b1426;border-radius:11px;font-size:13px;margin:10px 0;
+    }
+    .notice.error {border-color:#8c414a;color:#ffb5b5}
+    .notice.success {border-color:#226c58;color:#a8f2d4}
     footer {text-align:center;padding:28px 10px;color:var(--muted);font-size:12px}
     .auth-overlay {
       position:fixed;inset:0;background:#030713ef;z-index:50;
@@ -169,6 +143,12 @@
     }
     .auth-tabs {display:flex;gap:8px;margin:18px 0}
     .auth-tabs .btn {flex:1}
+    .field-wrap {display:flex;flex-direction:column;gap:7px;min-width:0}
+    .field {
+      width:100%;padding:12px;background:#0a1324;color:var(--text);
+      border:1px solid var(--line);border-radius:11px;outline:none;
+    }
+    label {font-size:13px;color:#d5e0f4}
     .toast {
       position:fixed;bottom:20px;right:20px;z-index:100;
       max-width:min(90vw,400px);background:#172640;border:1px solid #45587a;
@@ -187,8 +167,7 @@
       .hero {padding:20px}
       .stats {grid-template-columns:1fr 1fr}
       .stats .stat:last-child {grid-column:1/-1}
-      .service-grid,.course-grid,.form-grid {grid-template-columns:1fr}
-      .field-wrap.full,.cv-builder {grid-column:auto}
+      .service-grid,.course-grid {grid-template-columns:1fr}
       .panel {padding:14px}
       .section-head {align-items:stretch}
       .search {width:100%}
@@ -202,8 +181,8 @@
     <div class="brand">
       <div class="brand-logo">N</div>
       <div>
-        <h1>Nexa Business Hub AI</h1>
-        <p class="muted small">AI Tools · Digital Services · Online Learning</p>
+        <h1>Nexa Business Hub</h1>
+        <p class="muted small">Digital Services · Online Learning</p>
       </div>
     </div>
     <div class="actions">
@@ -215,24 +194,23 @@
 
   <section class="hero">
     <span class="hero-tag">YOUR DIGITAL WORKSPACE</span>
-    <h1 id="heroTitle">آپ کا AI اور ڈیجیٹل سروسز پلیٹ فارم</h1>
-    <p id="heroDesc">پروفیشنل ڈاکومنٹس تیار کریں، کاروباری آئیڈیاز حاصل کریں اور نئے ہنر سیکھیں۔ تمام اہم ٹولز ایک ہی جگہ۔</p>
+    <h1 id="heroTitle">آپ کا ڈیجیٹل سروسز پلیٹ فارم</h1>
+    <p id="heroDesc">دفتری کام، آن لائن درخواستوں، دستاویزات اور نئے ہنر سیکھنے کے لیے اپنی مطلوبہ سروس منتخب کریں۔</p>
     <div class="actions">
       <button class="btn primary" onclick="showSection('servicesSection')">Explore Services</button>
       <button class="btn cyan" onclick="showSection('coursesSection')">Explore Courses</button>
     </div>
     <div class="stats">
-      <div class="stat"><strong>28</strong><span>Digital Services</span></div>
+      <div class="stat"><strong id="serviceCount">28</strong><span>Digital Services</span></div>
       <div class="stat"><strong id="courseCount">12</strong><span>Learning Courses</span></div>
-      <div class="stat"><strong>AI</strong><span>Content Assistant</span></div>
+      <div class="stat"><strong>12</strong><span>Learning Paths</span></div>
     </div>
   </section>
 
   <div class="layout">
     <aside class="sidebar">
-      <button class="nav-btn active" data-section="servicesSection">✦ AI Services</button>
+      <button class="nav-btn active" data-section="servicesSection">✦ Digital Services</button>
       <button class="nav-btn" data-section="coursesSection">▣ Courses</button>
-      <button class="nav-btn" data-section="generatorSection">✎ AI Generator</button>
       <button class="nav-btn" data-section="learningSection">▶ My Learning</button>
       <button class="nav-btn" data-section="accountSection">♙ My Account</button>
     </aside>
@@ -240,7 +218,10 @@
     <main class="main">
       <section class="section" id="servicesSection">
         <div class="section-head">
-          <div><h2>AI & Digital Services</h2><p>اپنی ضرورت کی سروس منتخب کریں۔</p></div>
+          <div>
+            <h2>Digital Services</h2>
+            <p>اپنی ضرورت کی سروس منتخب کریں۔</p>
+          </div>
           <input class="search" id="serviceSearch" placeholder="Search services..." aria-label="Search services">
         </div>
         <div class="service-grid" id="serviceGrid"></div>
@@ -248,180 +229,32 @@
 
       <section class="section" id="coursesSection">
         <div class="section-head">
-          <div><h2>Online Learning Courses</h2><p>نئے ہنر سیکھیں، لیسنز مکمل کریں اور اپنی پیش رفت دیکھیں۔</p></div>
+          <div>
+            <h2>Online Learning Courses</h2>
+            <p>نئے ہنر سیکھیں، لیسنز مکمل کریں اور اپنی پیش رفت دیکھیں۔</p>
+          </div>
           <input class="search" id="courseSearch" placeholder="Search courses..." aria-label="Search courses">
         </div>
         <div class="course-grid" id="courseGrid"></div>
       </section>
 
-      <section class="section" id="generatorSection">
-        <div class="section-head">
-          <div><h2 id="generatorTitle">AI Content Generator</h2><p id="generatorDescription">اپنی تفصیلات درج کریں اور AI سے مواد تیار کروائیں۔</p></div>
-        </div>
-        <div class="panel">
-          <form id="generatorForm">
-            <div class="form-grid">
-              <div class="field-wrap">
-                <label for="serviceType">Service</label>
-                <select class="field" id="serviceType"></select>
-              </div>
-              <div class="field-wrap">
-                <label for="outputLanguage">Output language</label>
-                <select class="field" id="outputLanguage">
-                  <option value="Urdu">اردو</option>
-                  <option value="English">English</option>
-                  <option value="Roman Urdu">Roman Urdu</option>
-                  <option value="Pashto">Pashto</option>
-                </select>
-              </div>
-
-              <!-- CV BUILDER: appears only for the CV service -->
-              <div class="cv-builder hidden" id="cvOptions">
-                <h3>📑 Professional CV Builder</h3>
-                <p class="intro">اپنی CV کی قسم منتخب کریں اور بنیادی معلومات بھریں۔ لمبی تفصیل لکھنے کی ضرورت نہیں۔ اختیاری خانے خالی چھوڑ سکتے ہیں۔</p>
-
-                <div class="form-grid">
-                  <div class="field-wrap full">
-                    <label for="cvType">CV کی قسم / مطلوبہ ملازمت</label>
-                    <select class="field" id="cvType">
-                      <option value="Professional General CV">Professional General CV</option>
-                      <option value="Fresh Candidate CV">Fresh Candidate / No Experience</option>
-                      <option value="Student CV">Student CV</option>
-                      <option value="Experienced Candidate CV">Experienced Candidate</option>
-                      <option value="Computer Operator CV">Computer Operator</option>
-                      <option value="Office Assistant CV">Office Assistant</option>
-                      <option value="Data Entry Operator CV">Data Entry Operator</option>
-                      <option value="Graphic Designer CV">Graphic Designer</option>
-                      <option value="Web Developer CV">Web Developer</option>
-                      <option value="Teacher CV">Teacher</option>
-                      <option value="Accountant CV">Accountant</option>
-                      <option value="Advocate CV">Advocate / Lawyer</option>
-                      <option value="Salesman CV">Salesman</option>
-                      <option value="Customer Service CV">Customer Service</option>
-                      <option value="Driver CV">Driver</option>
-                      <option value="Office Management CV">Office Management</option>
-                      <option value="Freelancer CV">Freelancer</option>
-                      <option value="Internship CV">Internship</option>
-                      <option value="Government Job CV">Government Job</option>
-                      <option value="Private Job CV">Private Job</option>
-                    </select>
-                  </div>
-
-                  <div class="field-wrap">
-                    <label for="cvName">Full Name *</label>
-                    <input class="field" id="cvName" maxlength="120" autocomplete="name" placeholder="اپنا پورا نام لکھیں">
-                  </div>
-                  <div class="field-wrap">
-                    <label for="cvPhone">Phone / WhatsApp (اختیاری)</label>
-                    <input class="field" id="cvPhone" maxlength="50" autocomplete="tel" placeholder="0300 1234567">
-                  </div>
-                  <div class="field-wrap">
-                    <label for="cvEmail">Email (اختیاری)</label>
-                    <input class="field" id="cvEmail" type="email" maxlength="254" autocomplete="email" placeholder="you@example.com">
-                  </div>
-                  <div class="field-wrap">
-                    <label for="cvCity">City / Address (اختیاری)</label>
-                    <input class="field" id="cvCity" maxlength="150" autocomplete="address-level2" placeholder="شہر یا علاقہ">
-                  </div>
-
-                  <div class="field-wrap">
-                    <label for="cvEducation">Highest Education *</label>
-                    <select class="field" id="cvEducation">
-                      <option value="">تعلیم منتخب کریں</option>
-                      <option>Middle</option>
-                      <option>Matric</option>
-                      <option>Intermediate / FA / FSc / ICS / ICom</option>
-                      <option>BA / BSc / BCom / ADP</option>
-                      <option>BS / Bachelor's Degree</option>
-                      <option>MA / MSc / Master's Degree</option>
-                      <option>MPhil / MS</option>
-                      <option>PhD</option>
-                      <option>DIT / Diploma</option>
-                      <option>Technical / Vocational Diploma</option>
-                      <option>Other qualification</option>
-                    </select>
-                  </div>
-                  <div class="field-wrap">
-                    <label for="cvInstitute">Institute / Board (اختیاری)</label>
-                    <input class="field" id="cvInstitute" maxlength="180" placeholder="ادارے یا بورڈ کا نام">
-                  </div>
-
-                  <div class="field-wrap">
-                    <label for="cvExperience">Experience Level</label>
-                    <select class="field" id="cvExperience">
-                      <option value="Fresh candidate with no formal work experience">Fresh Candidate — تجربہ نہیں</option>
-                      <option value="Some work experience">Some Experience — کچھ تجربہ</option>
-                      <option value="Experienced professional">Experienced Professional — تجربہ کار</option>
-                      <option value="Student seeking internship">Student / Internship</option>
-                    </select>
-                  </div>
-                  <div class="field-wrap">
-                    <label for="cvDesign">CV Format</label>
-                    <select class="field" id="cvDesign">
-                      <option value="ATS-friendly simple professional">ATS-Friendly Professional</option>
-                      <option value="Modern professional">Modern Professional</option>
-                      <option value="Simple clean one-page">Simple One-Page</option>
-                      <option value="Traditional formal">Traditional Formal</option>
-                    </select>
-                  </div>
-
-                  <div class="field-wrap full">
-                    <label for="cvSkills">Skills (اختیاری)</label>
-                    <input class="field" id="cvSkills" maxlength="1500" placeholder="مثلاً MS Office، Typing، Graphic Design، Communication">
-                    <span class="field-help">صرف وہ مہارتیں درج کریں جو واقعی آپ کو آتی ہیں۔</span>
-                  </div>
-
-                  <div class="field-wrap full">
-                    <label for="cvWork">Work Experience / Internship (اختیاری)</label>
-                    <textarea class="field" id="cvWork" maxlength="3000" style="min-height:85px" placeholder="ادارے کا نام، عہدہ اور مدت؛ اگر تجربہ نہیں تو خالی چھوڑ دیں۔"></textarea>
-                  </div>
-
-                  <div class="field-wrap full">
-                    <label for="cvOther">Additional Information (اختیاری)</label>
-                    <textarea class="field" id="cvOther" maxlength="2000" style="min-height:75px" placeholder="سرٹیفکیٹ، زبانیں، حاصل کردہ کامیابیاں یا دوسری متعلقہ معلومات"></textarea>
-                  </div>
-                </div>
-                <div class="notice">اہم: AI آپ کی فراہم کردہ معلومات استعمال کرے گا۔ جعلی تعلیم، تجربہ، سرٹیفکیٹ یا مہارتیں شامل نہیں کی جائیں گی۔</div>
-              </div>
-
-              <div class="field-wrap full" id="generalDetailsWrap">
-                <label for="userDetails">اپنی ضروری تفصیلات لکھیں</label>
-                <textarea class="field" id="userDetails" required maxlength="12000" placeholder="مثلاً: نام، تعلیم، تجربہ، مقصد، کاروبار کی تفصیل یا خط لکھنے کی وجہ..."></textarea>
-              </div>
-              <div class="field-wrap full">
-                <label for="extraInstructions">اضافی ہدایات (اختیاری)</label>
-                <input class="field" id="extraInstructions" maxlength="2000" placeholder="مثلاً: مختصر، رسمی، پروفیشنل یا تفصیلی">
-              </div>
-            </div>
-            <div class="form-actions">
-              <button class="btn primary" type="submit" id="generateBtn">✦ Generate with AI</button>
-              <button class="btn" type="button" id="clearGeneratorBtn">Clear</button>
-            </div>
-            <div id="generatorNotice" aria-live="polite"></div>
-          </form>
-        </div>
-
-        <div class="panel">
-          <div class="section-head">
-            <h3>Generated Result</h3>
-            <div class="actions">
-              <button class="btn" id="copyResultBtn">Copy</button>
-              <button class="btn" id="downloadResultBtn">Download TXT</button>
-            </div>
-          </div>
-          <div class="result" id="resultBox">آپ کا تیار کردہ مواد یہاں ظاہر ہوگا۔</div>
-        </div>
-      </section>
-
       <section class="section" id="learningSection">
         <div class="section-head">
-          <div><h2>My Learning</h2><p>اپنے کورسز اور مکمل کیے گئے لیسنز دیکھیں۔</p></div>
+          <div>
+            <h2>My Learning</h2>
+            <p>اپنے کورسز اور مکمل کیے گئے لیسنز دیکھیں۔</p>
+          </div>
         </div>
         <div id="learningList" class="course-grid"></div>
       </section>
 
       <section class="section" id="accountSection">
-        <div class="section-head"><div><h2>My Account</h2><p>اپنی لاگ اِن معلومات دیکھیں۔</p></div></div>
+        <div class="section-head">
+          <div>
+            <h2>My Account</h2>
+            <p>اپنی لاگ اِن معلومات دیکھیں۔</p>
+          </div>
+        </div>
         <div class="panel" id="accountPanel">
           <p class="muted">اکاؤنٹ کی معلومات دیکھنے کے لیے لاگ اِن کریں۔</p>
           <button class="btn primary" onclick="openAuth('login')">Login / Register</button>
@@ -436,14 +269,17 @@
       </section>
     </main>
   </div>
-  <footer>© <span id="year"></span> Nexa Business Hub AI · Learn, Create, Grow</footer>
+  <footer>© <span id="year"></span> Nexa Business Hub · Learn, Create, Grow</footer>
 </div>
 
 <!-- Authentication -->
 <div class="auth-overlay hidden" id="authOverlay">
   <div class="auth-card">
     <div class="section-head">
-      <div><h2 id="authHeading">Welcome Back</h2><p class="muted small">Sign in to your Nexa account</p></div>
+      <div>
+        <h2 id="authHeading">Welcome Back</h2>
+        <p class="muted small">Sign in to your Nexa account</p>
+      </div>
       <button class="btn" id="closeAuthBtn" aria-label="Close">✕</button>
     </div>
     <div class="auth-tabs">
@@ -451,7 +287,7 @@
       <button class="btn" id="showRegisterBtn">Register</button>
     </div>
     <form id="authForm">
-      <div class="field-wrap" id="authNameWrap" style="margin-bottom:12px">
+      <div class="field-wrap hidden" id="authNameWrap" style="margin-bottom:12px">
         <label for="authName">Full name</label>
         <input class="field" id="authName" autocomplete="name" maxlength="100" placeholder="Your name">
       </div>
@@ -476,51 +312,53 @@
 <script>
 "use strict";
 
-/* SUPABASE CONFIGURATION */
+/* SUPABASE CONFIGURATION — Authentication only */
 const SUPABASE_URL = "https://njfobttocvkjsrvlcjaj.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_EkEFOVho4ryOYcIOVAqMhQ_z9yoD9TB";
 
 let supabaseClient = null;
-if (window.supabase && SUPABASE_URL.startsWith("https://") &&
-    SUPABASE_PUBLISHABLE_KEY.startsWith("sb_publishable_")) {
+if (
+  window.supabase &&
+  SUPABASE_URL.startsWith("https://") &&
+  SUPABASE_PUBLISHABLE_KEY.startsWith("sb_publishable_")
+) {
   supabaseClient = window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_PUBLISHABLE_KEY
   );
 }
 
-/* Existing Cloudflare Worker endpoint */
-const API_URL = "/api/generate";
+/* No AI API or generation endpoint is used in this version. */
 
 const services = [
-  {id:"logo",icon:"🎨",name:"Logo Design",ur:"لوگو ڈیزائن",desc:"لوگو کے آئیڈیاز اور ڈیزائن بریف تیار کریں۔",prompt:"Create a professional logo design brief and image-generation prompt."},
-  {id:"poster",icon:"🖼️",name:"Poster & Banner Design",ur:"پوسٹر اور بینر",desc:"اشتہارات کے لیے پروفیشنل مواد تیار کریں۔",prompt:"Create a professional poster or banner concept with layout and text."},
-  {id:"card",icon:"💳",name:"Visiting Card",ur:"وزٹنگ کارڈ",desc:"بزنس کارڈ کے لیے خوبصورت متن اور ترتیب۔",prompt:"Prepare professional business card content and layout."},
-  {id:"letterhead",icon:"📄",name:"Letterhead & Envelope",ur:"لیٹر ہیڈ اور لفافہ",desc:"آفیشل لیٹر ہیڈ کے لیے مواد۔",prompt:"Prepare a professional letterhead and envelope layout specification."},
-  {id:"invitation",icon:"💌",name:"Invitation & Greeting Cards",ur:"دعوت نامے اور کارڈز",desc:"تقریبات کے لیے دعوتی پیغامات۔",prompt:"Write attractive invitation or greeting card wording."},
-  {id:"social",icon:"📱",name:"Social Media Posts",ur:"سوشل میڈیا پوسٹس",desc:"فیس بک اور دیگر پلیٹ فارمز کی پوسٹس۔",prompt:"Create engaging social media post copy with a clear call to action."},
-  {id:"typing",icon:"⌨️",name:"Urdu & English Typing",ur:"اردو اور انگلش ٹائپنگ",desc:"متن کی ترتیب اور زبان کی اصلاح۔",prompt:"Organize and proofread the supplied Urdu or English text. Preserve its intended meaning."},
-  {id:"official",icon:"🏛️",name:"Applications & Official Letters",ur:"درخواستیں اور سرکاری خطوط",desc:"رسمی درخواست اور دفتری خط۔",prompt:"Write a formal application or official letter using the supplied facts."},
-  {id:"cv",icon:"📑",name:"CV & Resume",ur:"سی وی اور ریزیومے",desc:"آپشنز کے ذریعے پروفیشنل CV تیار کریں۔",prompt:"Create a professional ATS-friendly resume. Do not invent qualifications or work experience."},
-  {id:"forms",icon:"📝",name:"Form Filling Guide",ur:"فارم بھرنے میں مدد",desc:"فارم کے خانوں کو سمجھنے میں مدد۔",prompt:"Explain how to complete the described form using only the information provided."},
-  {id:"pdf",icon:"📕",name:"PDF Creation & Editing",ur:"پی ڈی ایف کا مواد",desc:"PDF دستاویز کے لیے منظم متن۔",prompt:"Organize the supplied content into a clean document structure suitable for exporting to PDF."},
-  {id:"scan",icon:"🖨️",name:"Scanning & Printing",ur:"اسکیننگ اور پرنٹنگ",desc:"اسکیننگ اور پرنٹنگ کے لیے چیک لسٹ۔",prompt:"Provide a practical scanning and printing checklist for the described document."},
-  {id:"jobs",icon:"💼",name:"Online Job Applications",ur:"آن لائن جاب درخواستیں",desc:"نوکری کے لیے درخواست اور کور لیٹر۔",prompt:"Prepare a job application and tailored cover letter using the provided details."},
-  {id:"admission",icon:"🎓",name:"Admission Forms",ur:"داخلہ فارم",desc:"داخلے کے لیے ضروری معلومات کی فہرست۔",prompt:"Create an admission application checklist based on the supplied institution and requirements."},
-  {id:"registration",icon:"🗂️",name:"Online Registration",ur:"آن لائن رجسٹریشن",desc:"رجسٹریشن کے مراحل کی رہنمائی۔",prompt:"Explain the registration steps for the service described. Do not claim to submit it."},
-  {id:"exam",icon:"📚",name:"Examination Forms",ur:"امتحانی فارم",desc:"امتحانی فارم کی تیاری میں مدد۔",prompt:"Create a checklist for filling the described examination form accurately."},
-  {id:"appointment",icon:"📅",name:"Online Appointments",ur:"آن لائن اپائنٹمنٹ",desc:"اپائنٹمنٹ کے لیے پیغام اور تیاری۔",prompt:"Draft an appointment request and preparation checklist."},
-  {id:"otherapps",icon:"🌐",name:"Other Online Applications",ur:"دیگر آن لائن درخواستیں",desc:"آن لائن درخواست کے لیے متن۔",prompt:"Help draft the described online application using only supplied facts."},
-  {id:"passport",icon:"📸",name:"Passport Size Photo Guide",ur:"پاسپورٹ سائز تصویر",desc:"تصویر کے سائز اور تیاری کی ہدایات۔",prompt:"Provide a checklist for preparing a passport-size photo. Explain that exact requirements vary by authority."},
-  {id:"enhance",icon:"✨",name:"Photo Enhancement Guide",ur:"تصویر بہتر بنانا",desc:"تصویر بہتر کرنے کے لیے ایڈیٹنگ ہدایات۔",prompt:"Provide a careful photo-enhancement editing brief that preserves the subject's identity."},
-  {id:"background",icon:"🌄",name:"Photo Background Change",ur:"تصویر کا بیک گراؤنڈ",desc:"بیک گراؤنڈ ایڈیٹنگ کے لیے ہدایات۔",prompt:"Write a clear image-editing prompt for changing the background while preserving the person."},
-  {id:"resize",icon:"📐",name:"Photo Crop & Resize",ur:"تصویر کراپ اور ری سائز",desc:"تصویر کے سائز کے لیے رہنمائی۔",prompt:"Explain crop and resize requirements based on the user's intended platform or document."},
-  {id:"collage",icon:"🧩",name:"Photo Collage",ur:"تصاویر کا کولاج",desc:"کولاج کی ترتیب اور ڈیزائن آئیڈیاز۔",prompt:"Create a professional photo-collage layout brief using the supplied requirements."},
-  {id:"data",icon:"📊",name:"Data Entry",ur:"ڈیٹا انٹری",desc:"ریکارڈز کے لیے منظم فارمیٹ۔",prompt:"Design a clear data-entry table structure and data validation checklist."},
-  {id:"office",icon:"🧮",name:"Excel & Word Work",ur:"ایکسل اور ورڈ",desc:"دفتری ڈاکومنٹس اور اسپریڈشیٹس۔",prompt:"Provide a step-by-step Microsoft Word or Excel solution for the described task."},
-  {id:"presentation",icon:"📽️",name:"Presentations",ur:"پریزنٹیشنز",desc:"سلائیڈز اور پریزنٹیشن کا مواد۔",prompt:"Create a structured presentation outline with slide titles and concise bullet points."},
-  {id:"page",icon:"📣",name:"Social Media Page Design",ur:"سوشل میڈیا پیج",desc:"پیج بایو، تعارف اور مواد۔",prompt:"Create a social media page setup brief, bio, category suggestions and content plan."},
-  {id:"custom",icon:"⚙️",name:"Custom Digital Work",ur:"دیگر ڈیجیٹل کام",desc:"اپنی ضرورت کے مطابق خصوصی مدد۔",prompt:"Help plan the requested digital task and produce a useful draft or step-by-step guide."}
+  {id:"logo",icon:"🎨",name:"Logo Design",ur:"لوگو ڈیزائن",desc:"لوگو کے آئیڈیاز، برانڈنگ اور ڈیزائن بریف۔"},
+  {id:"poster",icon:"🖼️",name:"Poster & Banner Design",ur:"پوسٹر اور بینر",desc:"اشتہارات اور کاروباری بینرز کی ڈیزائننگ۔"},
+  {id:"card",icon:"💳",name:"Visiting Card",ur:"وزٹنگ کارڈ",desc:"پروفیشنل بزنس کارڈ کا متن اور ترتیب۔"},
+  {id:"letterhead",icon:"📄",name:"Letterhead & Envelope",ur:"لیٹر ہیڈ اور لفافہ",desc:"آفیشل لیٹر ہیڈ اور لفافے کی تیاری۔"},
+  {id:"invitation",icon:"💌",name:"Invitation & Greeting Cards",ur:"دعوت نامے اور کارڈز",desc:"تقریبات کے دعوت نامے اور مبارک باد کے کارڈز۔"},
+  {id:"social",icon:"📱",name:"Social Media Posts",ur:"سوشل میڈیا پوسٹس",desc:"فیس بک اور دوسرے پلیٹ فارمز کے لیے پوسٹس۔"},
+  {id:"typing",icon:"⌨️",name:"Urdu & English Typing",ur:"اردو اور انگلش ٹائپنگ",desc:"اردو اور انگلش ٹائپنگ اور متن کی فارمیٹنگ۔"},
+  {id:"official",icon:"🏛️",name:"Applications & Official Letters",ur:"درخواستیں اور سرکاری خطوط",desc:"رسمی درخواستوں اور دفتری خطوط کی تیاری۔"},
+  {id:"cv",icon:"📑",name:"CV & Resume",ur:"سی وی اور ریزیومے",desc:"پروفیشنل CV اور ریزیومے کی فارمیٹنگ۔"},
+  {id:"forms",icon:"📝",name:"Form Filling Guide",ur:"فارم بھرنے میں مدد",desc:"فارم کے خانے سمجھنے اور معلومات ترتیب دینے میں مدد۔"},
+  {id:"pdf",icon:"📕",name:"PDF Creation & Editing",ur:"پی ڈی ایف",desc:"PDF دستاویزات کی ترتیب، تیاری اور فارمیٹنگ۔"},
+  {id:"scan",icon:"🖨️",name:"Scanning & Printing",ur:"اسکیننگ اور پرنٹنگ",desc:"دستاویزات کی اسکیننگ اور پرنٹنگ۔"},
+  {id:"jobs",icon:"💼",name:"Online Job Applications",ur:"آن لائن جاب درخواستیں",desc:"نوکری کے فارم اور متعلقہ دستاویزات میں مدد۔"},
+  {id:"admission",icon:"🎓",name:"Admission Forms",ur:"داخلہ فارم",desc:"تعلیمی اداروں کے داخلہ فارم کی تیاری۔"},
+  {id:"registration",icon:"🗂️",name:"Online Registration",ur:"آن لائن رجسٹریشن",desc:"آن لائن رجسٹریشن کے مراحل میں رہنمائی۔"},
+  {id:"exam",icon:"📚",name:"Examination Forms",ur:"امتحانی فارم",desc:"امتحانی فارم اور متعلقہ معلومات کی ترتیب۔"},
+  {id:"appointment",icon:"📅",name:"Online Appointments",ur:"آن لائن اپائنٹمنٹ",desc:"اپائنٹمنٹ کی درخواست اور ضروری تیاری۔"},
+  {id:"otherapps",icon:"🌐",name:"Other Online Applications",ur:"دیگر آن لائن درخواستیں",desc:"مختلف آن لائن درخواستوں میں رہنمائی۔"},
+  {id:"passport",icon:"📸",name:"Passport Size Photo Guide",ur:"پاسپورٹ سائز تصویر",desc:"پاسپورٹ سائز تصویر کے تقاضوں کے مطابق تیاری۔"},
+  {id:"enhance",icon:"✨",name:"Photo Enhancement",ur:"تصویر بہتر بنانا",desc:"تصویر کی روشنی، وضاحت اور معیار بہتر کرنا۔"},
+  {id:"background",icon:"🌄",name:"Photo Background Change",ur:"تصویر کا بیک گراؤنڈ",desc:"تصویر کے پس منظر کی تبدیلی۔"},
+  {id:"resize",icon:"📐",name:"Photo Crop & Resize",ur:"تصویر کراپ اور ری سائز",desc:"تصویر کو مطلوبہ سائز اور تناسب میں ترتیب دینا۔"},
+  {id:"collage",icon:"🧩",name:"Photo Collage",ur:"تصاویر کا کولاج",desc:"متعدد تصاویر کو ایک ڈیزائن میں ترتیب دینا۔"},
+  {id:"data",icon:"📊",name:"Data Entry",ur:"ڈیٹا انٹری",desc:"ریکارڈز اور ڈیٹا کو منظم انداز میں درج کرنا۔"},
+  {id:"office",icon:"🧮",name:"Excel & Word Work",ur:"ایکسل اور ورڈ",desc:"Word دستاویزات اور Excel شیٹس کی تیاری۔"},
+  {id:"presentation",icon:"📽️",name:"Presentations",ur:"پریزنٹیشنز",desc:"پروفیشنل پریزنٹیشن اور سلائیڈز کی ترتیب۔"},
+  {id:"page",icon:"📣",name:"Social Media Page Design",ur:"سوشل میڈیا پیج",desc:"سوشل میڈیا پیج کی بنیادی سیٹنگ اور ڈیزائن۔"},
+  {id:"custom",icon:"⚙️",name:"Custom Digital Work",ur:"دیگر ڈیجیٹل کام",desc:"دوسرے ڈیجیٹل کاموں کے لیے حسبِ ضرورت خدمات۔"}
 ];
 
 const courses = [
@@ -566,12 +404,12 @@ const courses = [
     ["DOM Interaction","بٹن کلک اور صفحے کے مواد کو بدلنا۔"],
     ["Website Project","ایک سادہ ریسپانسیو ویب سائٹ بنائیں۔"]
   ]},
-  {id:"ai",icon:"🤖",name:"AI & Prompt Engineering",ur:"اے آئی اور پرامپٹ انجینئرنگ",level:"Beginner",duration:"3 weeks",desc:"AI سے بہتر نتائج حاصل کرنے کے طریقے۔",lessons:[
+  {id:"ai",icon:"🤖",name:"AI & Prompt Engineering",ur:"اے آئی اور پرامپٹ انجینئرنگ",level:"Beginner",duration:"3 weeks",desc:"AI ٹیکنالوجی اور ہدایات لکھنے کے طریقوں کا تعارف۔",lessons:[
     ["AI Fundamentals","AI کی صلاحیتیں اور محدودیتیں۔"],
     ["Writing Prompts","مقصد، سیاق و سباق اور مطلوبہ فارمیٹ۔"],
     ["Better Instructions","مثالوں اور واضح ہدایات کا استعمال۔"],
-    ["AI for Documents","خطوط، CV اور خلاصے تیار کرنا۔"],
-    ["Fact Checking","AI کے نتائج کی تصدیق اور غلطیوں کی شناخت۔"],
+    ["AI for Documents","خطوط، CV اور خلاصے تیار کرنے کے طریقے۔"],
+    ["Fact Checking","نتائج کی تصدیق اور غلطیوں کی شناخت۔"],
     ["Prompt Project","مختلف کاموں کے لیے مفید پرامپٹس کا مجموعہ بنائیں۔"]
   ]},
   {id:"freelancing",icon:"💼",name:"Freelancing",ur:"فری لانسنگ",level:"Beginner",duration:"4 weeks",desc:"مہارت، پورٹ فولیو اور کلائنٹ کمیونیکیشن۔",lessons:[
@@ -625,11 +463,15 @@ const courses = [
 ];
 
 const state = {
-  user:null, authMode:"login", isUrdu:false, currentCourse:null,
-  result:"", currentService:"cv", toastTimer:null, loading:false
+  user:null,
+  authMode:"login",
+  isUrdu:false,
+  currentCourse:null,
+  toastTimer:null
 };
 
 const $ = id => document.getElementById(id);
+
 const escapeHTML = value => String(value ?? "").replace(/[&<>"']/g, c => ({
   "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
 }[c]));
@@ -665,62 +507,7 @@ document.querySelectorAll(".nav-btn").forEach(btn => {
   btn.addEventListener("click",() => showSection(btn.dataset.section));
 });
 
-/* CV form visibility and data */
-function toggleCVOptions() {
-  const isCV = $("serviceType").value === "cv";
-
-  $("cvOptions").classList.toggle("hidden",!isCV);
-  $("generalDetailsWrap").classList.toggle("hidden",isCV);
-
-  $("userDetails").required = !isCV;
-  $("cvName").required = isCV;
-  $("cvEducation").required = isCV;
-
-  $("generatorTitle").textContent = isCV
-    ? "Professional CV Builder"
-    : (services.find(s => s.id === $("serviceType").value)?.name || "AI Content Generator");
-
-  $("generatorDescription").textContent = isCV
-    ? "آپشنز منتخب کریں اور اپنی بنیادی معلومات درج کرکے CV بنائیں۔"
-    : "اپنی تفصیلات درج کریں اور AI سے مواد تیار کروائیں۔";
-}
-
-function getCVDetails() {
-  const fields = [
-    ["CV Type", $("cvType").value],
-    ["Full Name", $("cvName").value.trim()],
-    ["Phone", $("cvPhone").value.trim()],
-    ["Email", $("cvEmail").value.trim()],
-    ["City / Address", $("cvCity").value.trim()],
-    ["Education", $("cvEducation").value],
-    ["Institute / Board", $("cvInstitute").value.trim()],
-    ["Experience Level", $("cvExperience").value],
-    ["CV Format", $("cvDesign").value],
-    ["Skills", $("cvSkills").value.trim()],
-    ["Work Experience / Internship", $("cvWork").value.trim()],
-    ["Additional Information", $("cvOther").value.trim()]
-  ];
-
-  return fields.map(([label,value]) =>
-    label + ": " + (value || "Not provided")
-  ).join("\n");
-}
-
-function resetCVFields() {
-  $("cvType").selectedIndex = 0;
-  $("cvName").value = "";
-  $("cvPhone").value = "";
-  $("cvEmail").value = "";
-  $("cvCity").value = "";
-  $("cvEducation").value = "";
-  $("cvInstitute").value = "";
-  $("cvExperience").selectedIndex = 0;
-  $("cvDesign").selectedIndex = 0;
-  $("cvSkills").value = "";
-  $("cvWork").value = "";
-  $("cvOther").value = "";
-}
-
+/* Digital services catalog — no AI generation or API calls */
 function renderServices(filter="") {
   const grid = $("serviceGrid");
   const q = filter.toLowerCase().trim();
@@ -743,33 +530,14 @@ function renderServices(filter="") {
       <h3>${escapeHTML(s.name)}</h3>
       <span class="pill">${escapeHTML(s.ur)}</span>
       <p>${escapeHTML(s.desc)}</p>
-      <button class="btn" type="button">Use Service →</button>`;
+      <button class="btn" type="button">Service Details →</button>`;
 
     card.querySelector("button").addEventListener("click",() => {
-      selectService(s.id);
-      showSection("generatorSection");
-      if (s.id === "cv") $("cvName").focus();
-      else $("userDetails").focus();
+      notify(s.name + " — اس سروس کے لیے اپنے کاروبار یا سروس سینٹر سے رابطہ کریں۔");
     });
 
     grid.appendChild(card);
   });
-}
-
-function renderServiceOptions() {
-  $("serviceType").innerHTML = services.map(s =>
-    `<option value="${escapeHTML(s.id)}">${escapeHTML(s.name)} — ${escapeHTML(s.ur)}</option>`
-  ).join("");
-  $("serviceType").value = state.currentService;
-  toggleCVOptions();
-}
-
-function selectService(id) {
-  const s = services.find(item => item.id === id);
-  if (!s) return;
-  state.currentService = id;
-  $("serviceType").value = id;
-  toggleCVOptions();
 }
 
 function renderCourses(filter="") {
@@ -806,6 +574,7 @@ function renderCourses(filter="") {
   });
 }
 
+/* Local course progress */
 function localProgressKey() {
   return state.user ? "nexa-progress:" + state.user.id : null;
 }
@@ -813,8 +582,11 @@ function localProgressKey() {
 function getProgress() {
   const key = localProgressKey();
   if (!key) return {};
-  try { return JSON.parse(localStorage.getItem(key) || "{}"); }
-  catch { return {}; }
+  try {
+    return JSON.parse(localStorage.getItem(key) || "{}");
+  } catch {
+    return {};
+  }
 }
 
 function saveProgress(progress) {
@@ -850,11 +622,14 @@ function openCourse(courseId) {
     <h2>${escapeHTML(course.name)}</h2>
     <p class="muted">${escapeHTML(course.ur)} · ${escapeHTML(course.level)} · ${escapeHTML(course.duration)}</p>
     <p>${escapeHTML(course.desc)}</p>
-    <div class="section-head"><strong>Course Progress</strong><span>${doneCount}/${course.lessons.length} Lessons · ${percent}%</span></div>
+    <div class="section-head">
+      <strong>Course Progress</strong>
+      <span>${doneCount}/${course.lessons.length} Lessons · ${percent}%</span>
+    </div>
     <div class="progress-track"><div class="progress-bar" style="width:${percent}%"></div></div>
-    <div class="notice">یہ تعلیمی کورس کا مطالعہ کرنے کے لیے سبق وار خاکہ ہے۔ ہر سبق کا مواد نیچے دستیاب ہے۔</div>
+    <div class="notice">ہر سبق مکمل ہونے پر اس کے سامنے موجود چیک باکس منتخب کریں تاکہ پیش رفت محفوظ ہو سکے۔</div>
     <div class="lesson-list" id="lessonList"></div>
-    <div class="form-actions">
+    <div class="actions" style="margin-top:15px">
       <button class="btn primary" id="continueLessonBtn">Continue Learning</button>
       <button class="btn" id="resetProgressBtn">Reset Progress</button>
     </div>`;
@@ -866,7 +641,10 @@ function openCourse(courseId) {
     row.className = "lesson" + (completed.has(index) ? " done" : "");
     row.innerHTML = `
       <input type="checkbox" ${completed.has(index) ? "checked" : ""}>
-      <span><strong>${index+1}. ${escapeHTML(lesson[0])}</strong><br><small class="muted">${escapeHTML(lesson[1])}</small></span>`;
+      <span>
+        <strong>${index+1}. ${escapeHTML(lesson[0])}</strong>
+        <br><small class="muted">${escapeHTML(lesson[1])}</small>
+      </span>`;
 
     row.querySelector("input").addEventListener("change",event => {
       if (!state.user) {
@@ -881,6 +659,7 @@ function openCourse(courseId) {
 
       const latest = getProgress();
       latest[courseId] = [...completed];
+
       if (saveProgress(latest)) openCourse(courseId);
     });
 
@@ -936,7 +715,7 @@ function renderMyLearning() {
 
   started.forEach(c => {
     const count = (progress[c.id] || []).length;
-    const percent = Math.round(count/c.lessons.length*100);
+    const percent = Math.round(count / c.lessons.length * 100);
     const card = document.createElement("article");
     card.className = "item-card";
     card.innerHTML = `
@@ -951,6 +730,7 @@ function renderMyLearning() {
   });
 }
 
+/* Account UI */
 function updateAccountUI() {
   $("loginTopBtn").classList.toggle("hidden",!!state.user);
   $("logoutBtn").classList.toggle("hidden",!state.user);
@@ -984,13 +764,14 @@ function updateAccountUI() {
 
     const tip = document.createElement("div");
     tip.className = "notice";
-    tip.textContent = "آپ کے کورسز کی پیش رفت اس براؤزر میں مقامی طور پر محفوظ ہوتی ہے۔ اسے دوسرے آلات پر ہم آہنگ کرنے کے لیے database integration درکار ہوگی۔";
+    tip.textContent = "آپ کے کورسز کی پیش رفت اس براؤزر میں مقامی طور پر محفوظ ہوتی ہے۔ دوسرے آلات پر ہم آہنگ کرنے کے لیے database integration درکار ہوگی۔";
     panel.appendChild(tip);
   }
 
   renderMyLearning();
 }
 
+/* Authentication */
 function openAuth(mode="login") {
   if (!supabaseClient) {
     notify("Supabase configuration یا CDN دستیاب نہیں۔");
@@ -1009,15 +790,17 @@ function setAuthMode(mode) {
   state.authMode = mode;
   const register = mode === "register";
 
-  $("authHeading").textContent = register ? "Create Your Account" :
-    mode === "reset" ? "Reset Password" : "Welcome Back";
+  $("authHeading").textContent = register
+    ? "Create Your Account"
+    : mode === "reset" ? "Reset Password" : "Welcome Back";
 
   $("authNameWrap").classList.toggle("hidden",!register);
   $("authPasswordWrap").classList.toggle("hidden",mode === "reset");
   $("authPassword").required = mode !== "reset";
 
-  $("authSubmitBtn").textContent = register ? "Register" :
-    mode === "reset" ? "Send Reset Email" : "Login";
+  $("authSubmitBtn").textContent = register
+    ? "Register"
+    : mode === "reset" ? "Send Reset Email" : "Login";
 
   $("forgotPasswordBtn").classList.toggle("hidden",register || mode === "reset");
   $("showLoginBtn").classList.toggle("primary",!register);
@@ -1069,11 +852,17 @@ $("authForm").addEventListener("submit",async event => {
 
     if (state.authMode === "register") {
       result = await supabaseClient.auth.signUp({
-        email,password,options:{data:{full_name:name}}
+        email,
+        password,
+        options:{data:{full_name:name}}
       });
 
       if (!result.error && !result.data.session) {
-        showNotice("authNotice","Registration submitted. Check your email for confirmation if required.","success");
+        showNotice(
+          "authNotice",
+          "Registration submitted. Check your email for confirmation if required.",
+          "success"
+        );
         return;
       }
     } else if (state.authMode === "reset") {
@@ -1082,7 +871,11 @@ $("authForm").addEventListener("submit",async event => {
       });
 
       if (!result.error) {
-        showNotice("authNotice","If the account exists, a password reset email will be sent.","success");
+        showNotice(
+          "authNotice",
+          "If the account exists, a password reset email will be sent.",
+          "success"
+        );
         return;
       }
     } else {
@@ -1102,174 +895,11 @@ $("authForm").addEventListener("submit",async event => {
   }
 });
 
-/* Service selection */
-$("serviceType").addEventListener("change",e => selectService(e.target.value));
-
-/* AI generation */
-$("generatorForm").addEventListener("submit",async event => {
-  event.preventDefault();
-  if (state.loading) return;
-
-  const service = services.find(s => s.id === $("serviceType").value);
-  const isCV = $("serviceType").value === "cv";
-
-  const details = isCV
-    ? getCVDetails()
-    : $("userDetails").value.trim();
-
-  const extra = $("extraInstructions").value.trim();
-  const language = $("outputLanguage").value;
-
-  if (!service) return;
-
-  if (isCV) {
-    if (!$("cvName").value.trim()) {
-      showNotice("generatorNotice","براہ کرم اپنا پورا نام درج کریں۔","error");
-      $("cvName").focus();
-      return;
-    }
-
-    if (!$("cvEducation").value) {
-      showNotice("generatorNotice","براہ کرم اپنی تعلیم منتخب کریں۔","error");
-      $("cvEducation").focus();
-      return;
-    }
-  } else if (!details) {
-    showNotice("generatorNotice","براہ کرم اپنی ضروری تفصیلات درج کریں۔","error");
-    $("userDetails").focus();
-    return;
-  }
-
-  if (details.length > 12000 || extra.length > 2000) {
-    return showNotice("generatorNotice","براہ کرم متن کی حد کے اندر رہیں۔","error");
-  }
-
-  const cvInstructions = isCV ? [
-    "Create a complete, professional, ATS-friendly CV/resume.",
-    "Use the selected CV type and format.",
-    "Include suitable headings such as Professional Summary, Education, Skills, Experience, and Languages only where appropriate.",
-    "Write a short professional summary based on the provided facts, without making unsupported claims.",
-    "For a fresh candidate, focus on education, real skills, relevant projects, and career objective.",
-    "Do not invent jobs, employers, dates, qualifications, grades, certificates, achievements, languages, or personal information.",
-    "Do not claim that the candidate has a skill unless it was provided.",
-    "Do not include an empty experience section as if experience exists.",
-    "If optional details are missing, omit them or use a clear placeholder only when necessary.",
-    "Do not include advice or commentary before or after the CV. Return the CV itself."
-  ].join("\n") : "";
-
-  const prompt = [
-    "You are the writing assistant for Nexa Business Hub AI.",
-    "Service: " + service.name + ".",
-    "Task: " + service.prompt,
-    isCV ? cvInstructions : "",
-    "Output language: " + language + ".",
-    "User details:\n" + details,
-    extra ? "Additional instructions:\n" + extra : "",
-    "Be useful, clear, professional, and accurate. Do not invent personal facts, credentials, dates, prices, official approvals, or legal requirements. Use placeholders where facts are missing. Return only the requested content, with headings where useful."
-  ].filter(Boolean).join("\n\n");
-
-  const btn = $("generateBtn");
-  state.loading = true;
-  btn.disabled = true;
-  btn.textContent = "Generating...";
-
-  showNotice("generatorNotice","AI مواد تیار کر رہا ہے، براہ کرم انتظار کریں۔");
-
-  try {
-    const response = await fetch(API_URL,{
-      method:"POST",
-      headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({prompt,language})
-    });
-
-    const data = await response.json().catch(() => ({}));
-
-    if (!response.ok) {
-      throw new Error(data.error || data.message || "AI request failed ("+response.status+").");
-    }
-
-    const output = data.result ?? data.response ?? data.text ??
-      data.output ?? data.content;
-
-    if (typeof output !== "string" || !output.trim()) {
-      throw new Error("Worker returned no text. Check /api/generate response format.");
-    }
-
-    state.result = output.trim();
-    $("resultBox").textContent = state.result;
-
-    showNotice(
-      "generatorNotice",
-      isCV ? "آپ کی CV کامیابی سے تیار ہو گئی۔" : "مواد کامیابی سے تیار ہو گیا۔",
-      "success"
-    );
-  } catch (error) {
-    showNotice(
-      "generatorNotice",
-      (error.message || "Generation failed.") +
-      " اگر مسئلہ برقرار رہے تو Worker کے /api/generate endpoint کو چیک کریں۔",
-      "error"
-    );
-  } finally {
-    state.loading = false;
-    btn.disabled = false;
-    btn.textContent = "✦ Generate with AI";
-  }
-});
-
-$("clearGeneratorBtn").addEventListener("click",() => {
-  $("userDetails").value = "";
-  $("extraInstructions").value = "";
-  resetCVFields();
-
-  $("resultBox").textContent = "آپ کا تیار کردہ مواد یہاں ظاہر ہوگا۔";
-  state.result = "";
-
-  showNotice("generatorNotice","");
-  toggleCVOptions();
-});
-
-$("copyResultBtn").addEventListener("click",async () => {
-  if (!state.result) return notify("پہلے AI سے مواد تیار کریں۔");
-
-  try {
-    await navigator.clipboard.writeText(state.result);
-    notify("مواد Copy ہو گیا۔");
-  } catch {
-    const area = document.createElement("textarea");
-    area.value = state.result;
-    document.body.appendChild(area);
-    area.select();
-
-    const ok = document.execCommand("copy");
-    area.remove();
-
-    notify(ok ? "مواد Copy ہو گیا۔" : "Copy نہیں ہوا؛ متن منتخب کرکے کاپی کریں۔");
-  }
-});
-
-$("downloadResultBtn").addEventListener("click",() => {
-  if (!state.result) return notify("پہلے AI سے مواد تیار کریں۔");
-
-  const blob = new Blob(["\uFEFF",state.result],{type:"text/plain;charset=utf-8"});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-
-  a.href = url;
-  a.download = $("serviceType").value === "cv"
-    ? "nexa-professional-cv.txt"
-    : "nexa-ai-result.txt";
-
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-
-  setTimeout(() => URL.revokeObjectURL(url),1000);
-});
-
+/* Search */
 $("serviceSearch").addEventListener("input",e => renderServices(e.target.value));
 $("courseSearch").addEventListener("input",e => renderCourses(e.target.value));
 
+/* Language toggle */
 $("languageBtn").addEventListener("click",() => {
   state.isUrdu = !state.isUrdu;
 
@@ -1278,23 +908,23 @@ $("languageBtn").addEventListener("click",() => {
   document.body.classList.toggle("rtl",state.isUrdu);
 
   $("heroTitle").textContent = state.isUrdu
-    ? "آپ کا AI اور ڈیجیٹل سروسز پلیٹ فارم"
-    : "Your AI & Digital Services Platform";
+    ? "آپ کا ڈیجیٹل سروسز پلیٹ فارم"
+    : "Your Digital Services Platform";
 
   $("heroDesc").textContent = state.isUrdu
-    ? "پروفیشنل ڈاکومنٹس تیار کریں، کاروباری آئیڈیاز حاصل کریں اور نئے ہنر سیکھیں۔"
-    : "Create professional documents, explore business ideas and learn new skills.";
+    ? "دفتری کام، آن لائن درخواستوں، دستاویزات اور نئے ہنر سیکھنے کے لیے اپنی مطلوبہ سروس منتخب کریں۔"
+    : "Explore digital services, document support and online learning courses in one place.";
 });
 
+/* Initialize */
 $("year").textContent = new Date().getFullYear();
 $("courseCount").textContent = courses.length;
+$("serviceCount").textContent = services.length;
 
 async function initializeApp() {
   renderServices();
-  renderServiceOptions();
   renderCourses();
   updateAccountUI();
-  toggleCVOptions();
 
   if (!supabaseClient) {
     $("loginTopBtn").title = "Check Supabase configuration and network connection";
