@@ -3,45 +3,57 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    const headers = {
-      "Content-Type": "application/json; charset=utf-8",
-      "Access-Control-Allow-Origin": "*"
+    const corsHeaders = {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type"
     };
 
     if (request.method === "OPTIONS") {
       return new Response(null, {
-        headers: {
-          ...headers,
-          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-          "Access-Control-Allow-Headers": "Content-Type"
-        }
+        status: 204,
+        headers: corsHeaders
       });
     }
 
     if (url.pathname === "/api/health") {
-      return Response.json({
-        status: "ok",
-        aiConfigured: Boolean(env.AI)
-      }, { headers });
+      return Response.json(
+        {
+          status: "ok",
+          aiConfigured: Boolean(env.AI)
+        },
+        { headers: corsHeaders }
+      );
     }
 
     if (url.pathname === "/api/generate" && request.method === "POST") {
       try {
         const body = await request.json();
-        const service = String(body.service || "").slice(0, 150).trim();
-        const details = String(body.details || "").slice(0, 6000).trim();
-        const language = String(body.language || "Urdu").slice(0, 30);
+
+        const service = String(body.service || "")
+          .trim()
+          .slice(0, 150);
+
+        const details = String(body.details || "")
+          .trim()
+          .slice(0, 6000);
+
+        const language = String(body.language || "Urdu")
+          .trim()
+          .slice(0, 30);
 
         if (!service || !details) {
-          return Response.json({
-            error: "براہِ کرم سروس اور تفصیلات درج کریں۔"
-          }, { status: 400, headers });
+          return Response.json(
+            { error: "براہِ کرم سروس اور تفصیلات درج کریں۔" },
+            { status: 400, headers: corsHeaders }
+          );
         }
 
         if (!env.AI) {
-          return Response.json({
-            error: "AI binding موجود نہیں۔ Cloudflare کی سیٹنگ چیک کریں۔"
-          }, { status: 503, headers });
+          return Response.json(
+            { error: "Cloudflare AI binding موجود نہیں۔" },
+            { status: 503, headers: corsHeaders }
+          );
         }
 
         const result = await env.AI.run(
@@ -50,50 +62,78 @@ export default {
             messages: [
               {
                 role: "system",
-                content: `You are Nexa Business Hub AI, a professional business assistant.
+                content: `You are Nexa Business Hub AI, a professional and helpful business assistant.
 
-Respond in the language requested by the user. For Urdu, use natural, readable Urdu script.
+LANGUAGE:
+- Respond in the language requested by the user.
+- For Urdu, use natural, correct Urdu script.
+- Avoid mixing Urdu with unrelated Hindi, Punjabi, or other scripts.
+- Use clear headings, lists, tables when useful, and readable paragraphs.
 
-Make answers useful, complete, organized, and easy to read. Use clear headings, short paragraphs, numbered steps, and bullet points.
+ANSWER QUALITY:
+- Give complete, practical, well-organized answers.
+- Explain unfamiliar concepts in simple language.
+- For business plans, include an overview, services, target customers, startup costs, monthly expenses, revenue estimates, profit calculations, marketing, risks, and practical next steps when relevant.
+- Clearly label estimates and assumptions.
+- Do not claim to perform actions that you have not actually performed.
+- Never invent exact local prices or guarantee business success.
 
-For business plans, include:
-1. Business overview and goals.
-2. Services and target customers.
-3. Startup costs in Pakistani rupees when relevant.
-4. Monthly expenses, including rent, electricity, internet, supplies and maintenance when applicable.
-5. Possible income and profit estimates, clearly marked as estimates with assumptions.
-6. Marketing strategies.
-7. Practical steps to get started.
-8. Risks and ways to reduce them.
-9. A concise conclusion.
+MATH AND FINANCIAL ACCURACY:
+- Calculate all totals and subtractions carefully.
+- Check arithmetic before giving the final answer.
+- Distinguish revenue from expenses and net profit.
+- Do not confuse startup costs with recurring monthly expenses.
+- When amounts are given as ranges, calculate the minimum possible result using the minimum income and maximum expenses.
+- Calculate the maximum possible result using the maximum income and minimum expenses.
+- Clearly explain that these are mathematical bounds, not guaranteed outcomes.
+- If monthly income is 80,000 to 170,000 PKR and monthly expenses are 42,000 to 95,000 PKR, the lowest possible difference is 80,000 - 95,000 = -15,000 PKR, and the highest possible difference is 170,000 - 42,000 = 128,000 PKR.
+- Do not present a profit figure unless it follows from the numbers provided.
+- Mention important excluded costs when relevant.
 
-Do not invent exact market prices. Label uncertain amounts as estimates and advise checking local prices. Show calculations where useful. Finish the answer with a clear conclusion; do not end mid-sentence. If information is missing, state reasonable assumptions.
+COMPLETENESS:
+- Use enough detail to answer the request.
+- Finish with a clear conclusion.
+- Do not intentionally end in the middle of a sentence.
+- If the answer must be concise, preserve the most important information first.
 
-Never claim to have submitted applications, made purchases, or performed actions you did not perform.`
+SAFETY AND HONESTY:
+- Protect personal information.
+- Do not request passwords or secret API keys.
+- Explain uncertainties instead of making unsupported claims.`
               },
               {
                 role: "user",
-                content: `Service: ${service}\nRequested language: ${language}\nUser details: ${details}\n\nPlease provide a complete, well-structured answer.`
+                content:
+                  `Service: ${service}\n` +
+                  `Requested language: ${language}\n` +
+                  `User details: ${details}\n\n` +
+                  `Provide a complete, accurate and well-structured answer. ` +
+                  `Verify any calculations before presenting them.`
               }
             ],
             max_tokens: 1800,
-            temperature: 0.4
+            temperature: 0.2
           }
         );
 
         const answer = result?.response;
 
-        if (!answer) {
-          return Response.json({
-            error: "AI سے جواب موصول نہیں ہوا۔ براہِ کرم دوبارہ کوشش کریں۔"
-          }, { status: 502, headers });
+        if (typeof answer !== "string" || !answer.trim()) {
+          return Response.json(
+            { error: "AI سے جواب موصول نہیں ہوا۔ دوبارہ کوشش کریں۔" },
+            { status: 502, headers: corsHeaders }
+          );
         }
 
-        return Response.json({ text: answer }, { headers });
+        return Response.json(
+          { text: answer.trim() },
+          { headers: corsHeaders }
+        );
       } catch (error) {
-        return Response.json({
-          error: "AI جواب تیار نہیں کر سکا۔ دوبارہ کوشش کریں۔"
-        }, { status: 500, headers });
+        return Response.json(
+          { error: "AI جواب تیار نہیں کر سکا۔ براہِ کرم دوبارہ کوشش کریں۔" },
+          { status: 500, headers: corsHeaders }
+        );
       }
     }
 
