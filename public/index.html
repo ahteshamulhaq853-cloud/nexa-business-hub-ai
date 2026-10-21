@@ -5,98 +5,655 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nexa Business Hub</title>
+
 <style>
-/* CV Skills bullet formatting */
-.cv-body,
-.cv-contact,
-.side-text {
-  font-size: 15px;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-  word-break: break-word;
+:root {
+  --navy:#102a56;
+  --blue:#1769d2;
+  --light:#eaf3ff;
+  --bg:#f4f7fb;
+  --border:#dce5f0;
 }
-.cv-name { font-size: 28px; }
-.cv-title { font-size: 12px; }
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#26364a;background:var(--bg)}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+.topbar{background:white;padding:16px 25px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)}
+.brand{font-size:21px;font-weight:800;color:var(--navy)}
+.btn{padding:11px 15px;background:var(--blue);color:white;border:0;border-radius:8px;font-weight:bold;text-decoration:none;display:inline-block}
+.layout{display:grid;grid-template-columns:230px minmax(0,1fr);min-height:calc(100vh - 65px)}
+.sidebar{background:var(--navy);padding:20px 12px}
+.nav-btn{width:100%;padding:13px;margin-bottom:6px;border:0;border-radius:8px;text-align:left;color:white;background:transparent}
+.nav-btn:hover,.nav-btn.active{background:#24518b}
+main{padding:26px;min-width:0}
+.view{display:none}
+.view.active{display:block}
+h1,h2,h3{color:var(--navy)}
+.page-heading{margin-bottom:22px}
+.page-heading p{color:#68788d;line-height:1.6}
+.hero{padding:30px;background:linear-gradient(120deg,#102a56,#1769d2);color:white;border-radius:15px;margin-bottom:22px}
+.hero h2{color:white;font-size:30px}
+.hero p{line-height:1.7}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.card,.form-panel{background:white;border:1px solid var(--border);border-radius:12px;padding:18px}
+.card p{color:#68788d;line-height:1.5}
+.card-icon{background:var(--light);padding:12px;border-radius:10px;display:inline-block;font-size:23px}
+.card button{border:0;background:transparent;color:var(--blue);font-weight:bold;padding:0}
+.cv-workspace{display:grid;grid-template-columns:minmax(300px,420px) minmax(0,1fr);gap:20px;align-items:start}
+.form-panel{padding:20px}
+.form-section{color:var(--blue);border-bottom:1px solid var(--border);padding-bottom:8px;margin:22px 0 14px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.field{margin-bottom:13px}
+.field label{display:block;font-size:12px;font-weight:bold;margin-bottom:6px}
+.field input,.field textarea,.field select{width:100%;border:1px solid #cdd8e7;border-radius:7px;padding:10px;background:white}
+.field textarea{min-height:85px;resize:vertical}
+.actions{display:flex;flex-wrap:wrap;gap:8px}
+.actions button{border:0;border-radius:7px;padding:11px;font-weight:bold}
+.actions .save{background:var(--blue);color:white}
+.actions .clear{background:#fff0f0;color:#a82929}
+.preview-label{margin-bottom:10px;color:#68788d}
+.cv-paper{background:white;display:grid;grid-template-columns:32% 68%;min-height:800px;border:1px solid var(--border);box-shadow:0 8px 25px #142e5015}
+.cv-sidebar{background:#123c75;color:white;padding:24px 17px;overflow-wrap:anywhere;min-width:0}
+.cv-photo{width:100%;max-width:140px;height:145px;display:block;object-fit:cover;margin:0 auto 20px;background:#dceaff;border:3px solid white;border-radius:4px}
+.side-title{font-size:12px;letter-spacing:1px;font-weight:bold;border-bottom:1px solid #ffffff77;padding-bottom:7px;margin:20px 0 10px}
+.side-text{font-size:15px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+.cv-contact{font-size:15px;line-height:1.5;overflow-wrap:anywhere;word-break:break-word;margin:6px 0}
+.cv-content{padding:30px 25px;overflow-wrap:anywhere;min-width:0}
+.cv-name{margin:0 0 8px;font-size:28px;text-transform:uppercase;overflow-wrap:anywhere}
+.cv-title{color:var(--blue);font-size:12px;font-weight:bold;margin-bottom:20px;text-transform:uppercase}
+.cv-section{margin-top:22px}
+.cv-section h3{color:white;background:var(--blue);padding:9px;margin:0 0 10px;font-size:12px;letter-spacing:.5px}
+.cv-body{font-size:15px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word}
+.education-record,.experience-record{margin-bottom:14px;border:1px solid var(--border);border-radius:10px;padding:14px;background:#fbfdff}
+.education-record h3,.experience-record h3{margin-top:0}
+.education-record .remove-btn,.experience-record .remove-btn{background:#fff0f0;color:#a82929;border:0;padding:9px;border-radius:7px}
+.record-percent{font-size:13px;color:var(--blue);font-weight:bold}
+footer{text-align:center;padding:25px;color:#68788d;font-size:12px}
+body.cv-mode .topbar>a{display:none}
+
+@media(max-width:1050px){
+  .cv-workspace{grid-template-columns:1fr}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+  .layout{grid-template-columns:1fr}
+  .sidebar{display:flex;overflow-x:auto;gap:5px;padding:10px}
+  .nav-btn{white-space:nowrap;width:auto}
+  main{padding:14px}
+  .cards{grid-template-columns:1fr}
+  .cv-paper{grid-template-columns:34% 66%;min-height:600px}
+  .cv-sidebar{padding:13px 9px}
+  .cv-content{padding:18px 12px}
+  .cv-name{font-size:21px}
+  .cv-photo{height:105px}
+}
 
 @page {
-  size: A4 portrait;
-  margin: 5mm;
+  size:A4 portrait;
+  margin:5mm;
 }
 
 @media print {
-  .topbar, .sidebar, .page-heading, .form-panel,
-  .preview-label, footer, .no-print {
-    display: none !important;
+  html,body {
+    width:200mm;
+    margin:0!important;
+    padding:0!important;
+    background:white!important;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
   }
 
-  .layout, main, #cvView, .cv-workspace {
-    display: block !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
+  .topbar,.sidebar,.page-heading,.form-panel,
+  .preview-label,footer,.no-print {
+    display:none!important;
   }
 
-  .view { display: none !important; }
-  #cvView { display: block !important; }
+  .layout,main {
+    display:block!important;
+    width:100%!important;
+    min-height:0!important;
+    margin:0!important;
+    padding:0!important;
+  }
+
+  .view {display:none!important}
+  #cvView {display:block!important;margin:0!important;padding:0!important}
+  .cv-workspace {display:block!important;width:100%!important;margin:0!important;padding:0!important}
 
   .cv-paper {
-    display: grid !important;
-    grid-template-columns: 32% 68% !important;
-    width: 100% !important;
-    min-height: 0 !important;
-    margin: 0 !important;
-    border: 0 !important;
-    box-shadow: none !important;
+    display:grid!important;
+    grid-template-columns:32% 68%!important;
+    width:100%!important;
+    min-height:0!important;
+    margin:0!important;
+    border:0!important;
+    box-shadow:none!important;
   }
 
-  .cv-sidebar { padding: 10px 8px !important; }
-  .cv-content { padding: 12px 10px !important; }
-  .cv-body, .cv-contact, .side-text {
-    font-size: 15px !important;
-    line-height: 1.3 !important;
-  }
-
-  .cv-photo {
-    width: 85px !important;
-    height: 95px !important;
-  }
-
-  .cv-section { margin-top: 10px !important; }
-  .cv-section h3 { padding: 5px 6px !important; }
+  .cv-sidebar {padding:10px 8px!important;min-width:0}
+  .cv-content {padding:12px 10px!important;min-width:0}
+  .cv-photo {width:85px!important;height:95px!important;margin-bottom:8px!important}
+  .cv-name {font-size:20px!important;line-height:1.2!important;margin-bottom:5px!important}
+  .cv-title {font-size:11px!important;margin-bottom:10px!important}
+  .side-title {font-size:10px!important;margin:10px 0 5px!important;padding-bottom:4px!important}
+  .side-text,.cv-contact {font-size:15px!important;line-height:1.25!important;overflow-wrap:anywhere;word-break:break-word}
+  .cv-section {margin-top:10px!important}
+  .cv-section h3 {font-size:11px!important;padding:5px 6px!important;margin-bottom:5px!important}
+  .cv-body {font-size:15px!important;line-height:1.3!important;overflow-wrap:anywhere;word-break:break-word}
 }
 </style>
 </head>
-<body>
 
-<!-- Apni existing website ka HTML yahan rakhein. -->
+<body>
+<header class="topbar">
+  <div class="brand">🔷 Nexa Business Hub</div>
+  <a class="btn" href="https://wa.me/923342709019" target="_blank" rel="noopener">WhatsApp: 0334-2709019</a>
+</header>
+
+<div class="layout">
+<aside class="sidebar">
+  <button class="nav-btn active" data-view="homeView" onclick="showView('homeView')">🏠 Dashboard</button>
+  <button class="nav-btn" data-view="servicesView" onclick="showView('servicesView')">🧰 Online Services</button>
+  <button class="nav-btn" data-view="coursesView" onclick="showView('coursesView')">🎓 Courses</button>
+  <button class="nav-btn" data-view="cvView" onclick="showView('cvView')">📄 CV &amp; Resume</button>
+  <button class="nav-btn" data-view="contactView" onclick="showView('contactView')">💬 Contact</button>
+</aside>
+
+<main>
+<section class="view active" id="homeView">
+  <div class="page-heading">
+    <h1>Nexa Business Hub</h1>
+    <p>Your digital services, learning resources and career tools in one place.</p>
+  </div>
+  <div class="hero">
+    <h2>Build. Learn. Move Forward.</h2>
+    <p>Explore online services, improve your skills and create a professional CV using our built-in CV Builder.</p>
+    <button class="btn" onclick="showView('cvView')">Create Your CV →</button>
+  </div>
+  <div class="cards">
+    <article class="card"><div class="card-icon">📄</div><h3>CV &amp; Resume Builder</h3><p>Create a modern blue CV with a photo and live preview.</p><button onclick="showView('cvView')">Open CV Builder →</button></article>
+    <article class="card"><div class="card-icon">🖨️</div><h3>Printing &amp; Composing</h3><p>Document typing, formatting and printing assistance.</p><button onclick="contactService('Printing and Composing')">Ask about service →</button></article>
+    <article class="card"><div class="card-icon">🎓</div><h3>Courses</h3><p>Explore basic computer and digital skills courses.</p><button onclick="showView('coursesView')">Explore courses →</button></article>
+  </div>
+</section>
+
+<section class="view" id="servicesView">
+  <div class="page-heading"><h1>Online Services</h1><p>Choose a service to ask about availability and requirements.</p></div>
+  <div class="cards" id="serviceCards"></div>
+</section>
+
+<section class="view" id="coursesView">
+  <div class="page-heading"><h1>Courses</h1><p>Explore beginner-friendly computer and digital skills.</p></div>
+  <div class="cards" id="courseCards"></div>
+</section>
+
+<section class="view" id="cvView">
+  <div class="page-heading">
+    <h1>CV &amp; Resume Builder</h1>
+    <p>Enter your details below. Your professional CV preview updates automatically.</p>
+  </div>
+
+  <div class="cv-workspace">
+  <form class="form-panel no-print" id="cvForm" onsubmit="return false">
+    <h2>CV Information</h2>
+
+    <div class="form-section">Personal Information</div>
+    <div class="field"><label for="cvName">Full Name *</label><input id="cvName" value="YOUR NAME" required></div>
+    <div class="field"><label for="cvTitle">Professional Title</label><input id="cvTitle" value="PROFESSIONAL TITLE"></div>
+    <div class="field"><label for="cvFather">Father's Name</label><input id="cvFather" placeholder="Father's full name"></div>
+    <div class="field"><label for="cvDob">Date of Birth</label><input id="cvDob" type="date"></div>
+    <div class="field"><label for="cvPhone">Phone Number</label><input id="cvPhone" placeholder="+92 300 0000000"></div>
+    <div class="field"><label for="cvEmail">Email Address</label><input id="cvEmail" type="email" placeholder="name@email.com"></div>
+    <div class="field"><label for="cvAddress">City / Address</label><input id="cvAddress" placeholder="City, Country"></div>
+    <div class="field"><label for="cvPhoto">Profile Photo</label><input id="cvPhoto" type="file" accept="image/*"></div>
+
+    <div class="form-section">Professional Profile</div>
+    <div class="field"><label for="cvSummary">Professional Summary</label><textarea id="cvSummary">Motivated and responsible professional eager to contribute skills, learn continuously, and support a productive team.</textarea></div>
+
+    <div class="form-section">Education Details</div>
+    <p style="font-size:12px;color:#68788d">Add each qualification separately. Percentage is calculated automatically when valid marks are entered.</p>
+    <div id="educationFields"></div>
+    <button type="button" class="btn" onclick="addEducation()">+ Add Education</button>
+
+    <div class="form-section">Work Experience</div>
+    <div id="experienceFields"></div>
+    <button type="button" class="btn" onclick="addExperience()">+ Add Experience</button>
+
+    <div class="form-section">Skills &amp; Languages</div>
+    <div class="field"><label for="cvSkills">Skills (one per line)</label><textarea id="cvSkills">Best Communication Skills
+Microsoft Office Skills
+Teamwork Skills</textarea></div>
+    <div class="field"><label for="cvLanguages">Languages</label><input id="cvLanguages" placeholder="English, Urdu, Pashto"></div>
+
+    <div class="form-section">Certifications &amp; References</div>
+    <div class="field"><label for="cvReferences">Additional Details</label><textarea id="cvReferences">References available upon request.</textarea></div>
+
+    <div class="actions">
+      <button type="button" class="save" onclick="printCV()">Save / Print PDF</button>
+      <button type="button" class="save" onclick="downloadText()">Download Text</button>
+      <button type="button" class="clear" onclick="clearCV()">Clear Form</button>
+    </div>
+    <p style="font-size:12px;color:#68788d;line-height:1.6">To save a PDF, choose “Save as PDF” in the browser's print window. Your CV is generated locally; no AI API is used.</p>
+  </form>
+
+  <div>
+    <div class="preview-label">LIVE PREVIEW · MODERN BLUE · A4</div>
+    <article class="cv-paper" id="cvPaper">
+      <aside class="cv-sidebar">
+        <img id="previewPhoto" class="cv-photo" alt="Profile photo"
+        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='230'%3E%3Crect width='200' height='230' fill='%23dceaff'/%3E%3Ccircle cx='100' cy='75' r='40' fill='%239ab7dc'/%3E%3Cpath d='M20 220 Q25 125 100 125 Q175 125 180 220' fill='%239ab7dc'/%3E%3C/svg%3E">
+
+        <div class="side-title">CONTACT</div>
+        <div class="cv-contact" id="prevPhone">☎ Phone</div>
+        <div class="cv-contact" id="prevEmail">✉ Email</div>
+        <div class="cv-contact" id="prevAddress">⌖ City, Country</div>
+
+        <div class="side-title">SKILLS</div>
+        <div class="side-text" id="prevSkills">• Best Communication Skills
+• Microsoft Office Skills
+• Teamwork Skills</div>
+
+        <div class="side-title">LANGUAGES</div>
+        <div class="side-text" id="prevLanguages">English, Urdu</div>
+      </aside>
+
+      <div class="cv-content">
+        <h1 class="cv-name" id="prevName">YOUR NAME</h1>
+        <div class="cv-title" id="prevTitle">PROFESSIONAL TITLE</div>
+        <div class="cv-body" id="prevPersonal"></div>
+
+        <section class="cv-section"><h3>PROFESSIONAL PROFILE</h3><div class="cv-body" id="prevSummary"></div></section>
+        <section class="cv-section"><h3>EDUCATION</h3><div class="cv-body" id="prevEducation">Add your education details.</div></section>
+        <section class="cv-section"><h3>WORK EXPERIENCE</h3><div class="cv-body" id="prevExperience">Add your work experience.</div></section>
+        <section class="cv-section"><h3>CERTIFICATIONS &amp; REFERENCES</h3><div class="cv-body" id="prevReferences"></div></section>
+      </div>
+    </article>
+  </div>
+  </div>
+</section>
+
+<section class="view" id="contactView">
+  <div class="page-heading"><h1>Contact Us</h1><p>Contact Nexa Business Hub for service details and support.</p></div>
+  <div class="card"><div class="card-icon">💬</div><h2>WhatsApp Support</h2><p>Message us for information about available services.</p><a class="btn" href="https://wa.me/923342709019" target="_blank" rel="noopener">0334-2709019</a></div>
+</section>
+
+<footer>© <span id="year"></span> Nexa Business Hub</footer>
+</main>
+</div>
 
 <script>
-/* Har skill ke shuru mein bullet lagane ka function */
+const services = [
+  ["🖨️","Printing & Scanning","Print, scan and prepare documents."],
+  ["⌨️","Composing & Typing","Document typing and formatting."],
+  ["📝","Online Applications","Assistance with online forms."],
+  ["🎓","Admission Applications","Education admission form assistance."],
+  ["💼","Job Applications","Prepare job application documents."],
+  ["📑","Certificates & Forms","Document preparation assistance."],
+  ["📊","Data Entry","Basic spreadsheet and data entry."],
+  ["📃","Letters & Applications","Professional letter preparation."],
+  ["🗂️","PDF Tools","PDF document preparation."],
+  ["📧","Email Assistance","Email and attachment assistance."],
+  ["🎨","Poster Design","Promotional poster design."],
+  ["🔰","Logo Design","Basic branding and logo design."]
+];
+
+const courses = [
+  ["⌨️","Computer Basics","Learn essential computer operations."],
+  ["📝","MS Word","Create and format professional documents."],
+  ["📊","MS Excel","Learn spreadsheets and formulas."],
+  ["📽️","PowerPoint","Create clear presentations."],
+  ["🌐","Internet Basics","Learn safe internet use."],
+  ["📧","Email Skills","Write and manage emails."],
+  ["🎨","Graphic Design Basics","Learn basic design principles."],
+  ["📄","CV Writing","Prepare a professional resume."],
+  ["⌨️","Typing Practice","Improve typing accuracy."],
+  ["📂","PDF Tools","Organize digital documents."],
+  ["💻","Digital Skills","Build everyday digital skills."],
+  ["🔐","Online Safety","Learn about privacy and passwords."]
+];
+
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, char => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[char]));
+}
+
+function card(item, action, buttonText) {
+  return `<article class="card">
+    <div class="card-icon">${item[0]}</div>
+    <h3>${escapeHTML(item[1])}</h3>
+    <p>${escapeHTML(item[2])}</p>
+    <button onclick="${action}">${buttonText}</button>
+  </article>`;
+}
+
+document.getElementById("serviceCards").innerHTML = services.map(item =>
+  card(item, `contactService('${item[1].replace(/'/g,"\\'")}')`, "Ask about service →")
+).join("");
+
+document.getElementById("courseCards").innerHTML = courses.map(item =>
+  card(item, `contactCourse('${item[1].replace(/'/g,"\\'")}')`, "Course details →")
+).join("");
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function showView(id) {
+  document.querySelectorAll(".view").forEach(view => view.classList.toggle("active", view.id === id));
+  document.querySelectorAll(".nav-btn").forEach(button => button.classList.toggle("active", button.dataset.view === id));
+  document.body.classList.toggle("cv-mode", id === "cvView");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function contactService(name) {
+  const message = encodeURIComponent("Hello Nexa Business Hub, I want to ask about " + name + ".");
+  window.open("https://wa.me/923342709019?text=" + message,"_blank","noopener");
+}
+
+function contactCourse(name) {
+  const message = encodeURIComponent("Hello Nexa Business Hub, please share details about " + name + ".");
+  window.open("https://wa.me/923342709019?text=" + message,"_blank","noopener");
+}
+
+/* Live CV text fields */
+const textBindings = {
+  cvName:"prevName",
+  cvTitle:"prevTitle",
+  cvSummary:"prevSummary",
+  cvLanguages:"prevLanguages",
+  cvReferences:"prevReferences"
+};
+
+Object.entries(textBindings).forEach(([inputId,previewId]) => {
+  const input = document.getElementById(inputId);
+  input.addEventListener("input", () => {
+    document.getElementById(previewId).textContent = input.value.trim() || "";
+  });
+});
+
+/* Skills: add a bullet to each line automatically */
 function formatSkills(value) {
-  return value
-    .split("\n")
+  return value.split("\n")
     .map(skill => skill.trim().replace(/^[•\-–\s]+/, "").trim())
     .filter(Boolean)
     .map(skill => "• " + skill)
     .join("\n");
 }
 
-/* Apne existing CV code mein skills preview update karne ke liye */
 function updateSkillsPreview() {
-  const input = document.getElementById("cvSkills");
-  const preview = document.getElementById("prevSkills");
+  document.getElementById("prevSkills").textContent =
+    formatSkills(document.getElementById("cvSkills").value);
+}
 
-  if (input && preview) {
-    preview.textContent = formatSkills(input.value);
+document.getElementById("cvSkills").addEventListener("input", updateSkillsPreview);
+updateSkillsPreview();
+
+const contactBindings = [
+  ["cvPhone","prevPhone","☎ ","☎ Phone"],
+  ["cvEmail","prevEmail","✉ ","✉ Email"],
+  ["cvAddress","prevAddress","⌖ ","⌖ City, Country"]
+];
+
+contactBindings.forEach(([inputId,previewId,icon,placeholder]) => {
+  document.getElementById(inputId).addEventListener("input",function() {
+    document.getElementById(previewId).textContent =
+      this.value.trim() ? icon + this.value.trim() : placeholder;
+  });
+});
+
+["cvFather","cvDob"].forEach(id => {
+  document.getElementById(id).addEventListener("input",updatePersonalPreview);
+});
+
+function updatePersonalPreview() {
+  const father = document.getElementById("cvFather").value.trim();
+  const dob = document.getElementById("cvDob").value;
+  const parts = [];
+  if (father) parts.push("Father's Name: " + father);
+  if (dob) parts.push("Date of Birth: " + dob);
+  document.getElementById("prevPersonal").textContent = parts.join("\n");
+}
+
+/* Dynamic education records */
+let educationCount = 0;
+
+function addEducation(data = {}) {
+  const id = ++educationCount;
+  const item = document.createElement("div");
+  item.className = "education-record";
+  item.dataset.id = id;
+
+  item.innerHTML = `
+    <h3>Education Record ${id}</h3>
+    <div class="field"><label>Qualification</label>
+      <select class="edu-qualification">
+        ${["Matric","Intermediate / FA / FSc","BA / BSc / Associate Degree","BS / Master's","DIT / Diploma","Other"].map(q =>
+          `<option ${q === (data.qualification || "Matric") ? "selected" : ""}>${q}</option>`).join("")}
+      </select>
+    </div>
+    <div class="field"><label>Institution Name</label>
+      <input class="edu-institution" placeholder="School / College / University" value="${escapeHTML(data.institution || "")}">
+    </div>
+    <div class="field"><label>Board / University</label>
+      <input class="edu-board" placeholder="e.g. BISE Bannu" value="${escapeHTML(data.board || "")}">
+    </div>
+    <div class="field"><label>Obtained Marks</label>
+      <input class="edu-obtained" type="number" min="0" step="any" placeholder="Obtained marks" value="${escapeHTML(data.obtained || "")}">
+    </div>
+    <div class="field"><label>Total Marks</label>
+      <input class="edu-total" type="number" min="0" step="any" placeholder="Total marks" value="${escapeHTML(data.total || "")}">
+    </div>
+    <div class="field"><label>Passing Year</label>
+      <input class="edu-year" type="number" min="1900" max="2100" placeholder="e.g. 2025" value="${escapeHTML(data.year || "")}">
+    </div>
+    <div class="field"><label>Grade / Division</label>
+      <input class="edu-grade" placeholder="e.g. A Grade / 1st Division" value="${escapeHTML(data.grade || "")}">
+    </div>
+    <p class="record-percent">Percentage: —</p>
+    <button type="button" class="remove-btn" onclick="removeEducation(${id})">Remove Education</button>
+  `;
+
+  document.getElementById("educationFields").appendChild(item);
+  item.querySelectorAll("input,select").forEach(el => el.addEventListener("input",updateEducationPreview));
+  updateEducationPreview();
+}
+
+function removeEducation(id) {
+  const record = document.querySelector(`.education-record[data-id="${id}"]`);
+  if (record) {
+    record.remove();
+    updateEducationPreview();
   }
 }
 
-const skillsInput = document.getElementById("cvSkills");
-if (skillsInput) {
-  skillsInput.addEventListener("input", updateSkillsPreview);
-  updateSkillsPreview();
-}
-</script>
+function updateEducationPreview() {
+  const records = [...document.querySelectorAll(".education-record")];
+  const output = document.getElementById("prevEducation");
 
+  const lines = records.map(record => {
+    const get = selector => record.querySelector(selector).value.trim();
+    const qualification = get(".edu-qualification");
+    const institution = get(".edu-institution");
+    const board = get(".edu-board");
+    const obtainedText = get(".edu-obtained");
+    const totalText = get(".edu-total");
+    const year = get(".edu-year");
+    const grade = get(".edu-grade");
+
+    const obtained = Number(obtainedText);
+    const total = Number(totalText);
+    const validMarks = obtainedText !== "" && totalText !== "" &&
+      Number.isFinite(obtained) && Number.isFinite(total) &&
+      obtained >= 0 && total > 0 && obtained <= total;
+
+    const percentage = validMarks ? (obtained / total * 100).toFixed(2) + "%" : "";
+
+    record.querySelector(".record-percent").textContent = "Percentage: " + (percentage || "—");
+
+    const details = [
+      institution,
+      board,
+      obtainedText !== "" && totalText !== "" ? `Marks: ${obtainedText} / ${totalText}` : "",
+      percentage ? `Percentage: ${percentage}` : "",
+      grade ? `Grade / Division: ${grade}` : "",
+      year ? `Passing Year: ${year}` : ""
+    ].filter(Boolean);
+
+    return qualification + (details.length ? "\n" + details.join("\n") : "");
+  });
+
+  output.textContent = lines.length ? lines.join("\n\n") : "Add your education details.";
+}
+
+/* Dynamic experience records */
+let experienceCount = 0;
+
+function addExperience(data = {}) {
+  const id = ++experienceCount;
+  const item = document.createElement("div");
+  item.className = "experience-record";
+  item.dataset.id = id;
+
+  item.innerHTML = `
+    <h3>Experience Record ${id}</h3>
+    <div class="field"><label>Job Title</label><input class="exp-title" placeholder="e.g. Office Assistant" value="${escapeHTML(data.title || "")}"></div>
+    <div class="field"><label>Company / Organization</label><input class="exp-company" placeholder="Company name" value="${escapeHTML(data.company || "")}"></div>
+    <div class="field"><label>City</label><input class="exp-city" placeholder="City" value="${escapeHTML(data.city || "")}"></div>
+    <div class="field"><label>Start Date</label><input class="exp-start" type="month" value="${escapeHTML(data.start || "")}"></div>
+    <div class="field"><label>End Date</label><input class="exp-end" type="month" value="${escapeHTML(data.end || "")}"></div>
+    <div class="field"><label><input type="checkbox" class="exp-current" ${data.current ? "checked" : ""}> Currently working here</label></div>
+    <div class="field"><label>Responsibilities & Achievements</label><textarea class="exp-details" placeholder="Describe your duties and achievements">${escapeHTML(data.details || "")}</textarea></div>
+    <button type="button" class="remove-btn" onclick="removeExperience(${id})">Remove Experience</button>
+  `;
+
+  document.getElementById("experienceFields").appendChild(item);
+  item.querySelectorAll("input,textarea").forEach(el => el.addEventListener("input",updateExperiencePreview));
+  item.querySelector(".exp-current").addEventListener("change",() => {
+    const end = item.querySelector(".exp-end");
+    end.disabled = item.querySelector(".exp-current").checked;
+    updateExperiencePreview();
+  });
+  item.querySelector(".exp-end").disabled = item.querySelector(".exp-current").checked;
+  updateExperiencePreview();
+}
+
+function removeExperience(id) {
+  const record = document.querySelector(`.experience-record[data-id="${id}"]`);
+  if (record) {
+    record.remove();
+    updateExperiencePreview();
+  }
+}
+
+function updateExperiencePreview() {
+  const records = [...document.querySelectorAll(".experience-record")];
+  const output = document.getElementById("prevExperience");
+
+  const lines = records.map(record => {
+    const get = selector => record.querySelector(selector).value.trim();
+    const title = get(".exp-title");
+    const company = get(".exp-company");
+    const city = get(".exp-city");
+    const start = get(".exp-start");
+    const end = get(".exp-end");
+    const current = record.querySelector(".exp-current").checked;
+    const details = get(".exp-details");
+
+    const heading = [title,company].filter(Boolean).join(" — ") || "Work Experience";
+    const dates = [start,end || (current ? "Present" : "")].filter(Boolean).join(" to ");
+    return [heading,city,dates,details].filter(Boolean).join("\n");
+  });
+
+  output.textContent = lines.length ? lines.join("\n\n") : "Add your work experience.";
+}
+
+/* Photo upload */
+document.getElementById("cvPhoto").addEventListener("change",function() {
+  const file = this.files && this.files[0];
+  if (!file) return;
+  if (!file.type.startsWith("image/")) {
+    alert("Please select a valid image.");
+    this.value = "";
+    return;
+  }
+  const reader = new FileReader();
+  reader.onload = event => document.getElementById("previewPhoto").src = event.target.result;
+  reader.readAsDataURL(file);
+});
+
+/* Print CV */
+function printCV() {
+  showView("cvView");
+  setTimeout(() => window.print(),300);
+}
+
+/* Download text version */
+function downloadText() {
+  const fields = [
+    ["Full Name","cvName"],
+    ["Professional Title","cvTitle"],
+    ["Father's Name","cvFather"],
+    ["Date of Birth","cvDob"],
+    ["Phone","cvPhone"],
+    ["Email","cvEmail"],
+    ["Address","cvAddress"],
+    ["Professional Profile","cvSummary"],
+    ["Skills","cvSkills"],
+    ["Languages","cvLanguages"],
+    ["Certifications & References","cvReferences"]
+  ];
+
+  let content = fields.map(([label,id]) => {
+    const value = document.getElementById(id).value;
+    return label.toUpperCase() + "\n" +
+      (id === "cvSkills" ? formatSkills(value) : value);
+  }).join("\n\n");
+
+  content += "\n\nEDUCATION\n" + document.getElementById("prevEducation").textContent;
+  content += "\n\nWORK EXPERIENCE\n" + document.getElementById("prevExperience").textContent;
+
+  const blob = new Blob([content],{type:"text/plain;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  const name = document.getElementById("cvName").value.trim().replace(/[^a-z0-9]+/gi,"_") || "resume";
+  link.href = url;
+  link.download = name + ".txt";
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url),1000);
+}
+
+/* Clear form */
+function clearCV() {
+  if (!confirm("Clear all CV information?")) return;
+
+  document.getElementById("cvForm").reset();
+  document.getElementById("educationFields").innerHTML = "";
+  document.getElementById("experienceFields").innerHTML = "";
+  educationCount = 0;
+  experienceCount = 0;
+
+  Object.entries(textBindings).forEach(([inputId,previewId]) => {
+    document.getElementById(previewId).textContent =
+      document.getElementById(inputId).value;
+  });
+
+  updateSkillsPreview();
+
+  contactBindings.forEach(([inputId,previewId,icon,placeholder]) => {
+    const value = document.getElementById(inputId).value.trim();
+    document.getElementById(previewId).textContent = value ? icon + value : placeholder;
+  });
+
+  updatePersonalPreview();
+  updateEducationPreview();
+  updateExperiencePreview();
+
+  document.getElementById("previewPhoto").src =
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='230'%3E%3Crect width='200' height='230' fill='%23dceaff'/%3E%3Ccircle cx='100' cy='75' r='40' fill='%239ab7dc'/%3E%3Cpath d='M20 220 Q25 125 100 125 Q175 125 180 220' fill='%239ab7dc'/%3E%3C/svg%3E";
+
+  addEducation({qualification:"Matric"});
+}
+
+addEducation({qualification:"Matric"});
+addExperience();
+</script>
 </body>
 </html>
