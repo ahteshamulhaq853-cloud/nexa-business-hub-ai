@@ -2,617 +2,413 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b1220">
-  <title>Nexa Business Hub AI</title>
-  <meta name="description" content="Nexa Business Hub AI - your AI-powered business workspace.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg: #0b1220;
-      --panel: #111c2e;
-      --panel2: #16243a;
-      --line: #263650;
-      --text: #f3f7ff;
-      --muted: #9eacc3;
-      --accent: #48d6c5;
-      --blue: #6395ff;
-      --danger: #ff8585;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1220">
+<title>Nexa Business Hub AI | All-in-One Services</title>
+<meta name="description" content="AI business services, CV maker, applications, translation, letters, content creation and more.">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: radial-gradient(ellipse at 80% 0%, #16344c 0, transparent 38%), var(--bg);
-      color: var(--text);
-      font-family: Inter, "Segoe UI", Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    button, input, textarea, select { font: inherit; }
-    button { cursor: pointer; }
-    .container { width: min(1100px, calc(100% - 36px)); margin: auto; }
-    header { border-bottom: 1px solid var(--line); background: rgba(11,18,32,.92); }
-    .nav {
-      min-height: 76px; display: flex; justify-content: space-between;
-      align-items: center; gap: 16px; flex-wrap: wrap; padding: 12px 0;
-    }
-    .brand { display: flex; align-items: center; gap: 12px; font-size: 19px; font-weight: 800; }
-    .brand-icon {
-      display: grid; place-items: center; width: 43px; height: 43px;
-      border-radius: 13px; color: #071b27;
-      background: linear-gradient(135deg, var(--accent), var(--blue)); font-weight: 900;
-    }
-    .brand small { display: block; color: var(--muted); font-size: 10px; letter-spacing: 2px; }
-    .nav-actions, .actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
-    .btn {
-      display: inline-flex; justify-content: center; align-items: center; gap: 8px;
-      padding: 11px 17px; border: 1px solid var(--line); border-radius: 11px;
-      background: var(--panel2); color: var(--text); font-weight: 700; transition: .2s;
-    }
-    .btn:hover { transform: translateY(-1px); filter: brightness(1.1); }
-    .btn-primary {
-      background: linear-gradient(110deg, var(--accent), #73e6b5);
-      border-color: transparent; color: #071b27;
-    }
-    .btn-outline { background: transparent; }
-    .btn:disabled { opacity: .6; cursor: wait; transform: none; }
-    .full { width: 100%; }
-    .hidden { display: none !important; }
-    .hero { padding: 64px 0 35px; text-align: center; }
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 8px; color: var(--accent);
-      background: #48d6c514; border: 1px solid #48d6c533;
-      padding: 7px 13px; border-radius: 999px; font-size: 12px; font-weight: 800;
-      letter-spacing: 1px; text-transform: uppercase;
-    }
-    h1 { max-width: 780px; margin: 20px auto 14px; font-size: clamp(34px, 6vw, 61px); line-height: 1.12; letter-spacing: -2px; }
-    .gradient-text {
-      background: linear-gradient(90deg, var(--accent), #8eafff);
-      color: transparent; background-clip: text; -webkit-background-clip: text;
-    }
-    .hero p { max-width: 650px; margin: auto; color: var(--muted); font-size: 17px; }
-    .status { margin: 18px auto 0; max-width: 760px; font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
-    .layout {
-      display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
-      gap: 22px; padding: 20px 0 55px; align-items: start;
-    }
-    .panel {
-      min-width: 0; background: linear-gradient(155deg, #142137, #0f1929);
-      border: 1px solid var(--line); border-radius: 20px; padding: 25px;
-      box-shadow: 0 18px 60px #00000016;
-    }
-    .panel h2 { margin: 0 0 6px; font-size: 22px; }
-    .sub { margin: 0 0 22px; color: var(--muted); font-size: 14px; }
-    .field { margin-bottom: 17px; }
-    label { display: block; margin-bottom: 7px; font-size: 13px; font-weight: 700; color: #dce7f8; }
-    input, textarea, select {
-      width: 100%; min-width: 0; color: var(--text); background: #0a1322;
-      border: 1px solid #2a3b55; border-radius: 11px; padding: 13px 14px; outline: none;
-    }
-    input:focus, textarea:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px #48d6c51a; }
-    textarea { resize: vertical; min-height: 160px; }
-    input::placeholder, textarea::placeholder { color: #6e809a; }
-    .auth-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; background: #0a1322; padding: 5px; border-radius: 12px; margin-bottom: 20px; }
-    .auth-tab { border: 0; background: transparent; color: var(--muted); padding: 10px; border-radius: 9px; font-weight: 700; }
-    .auth-tab.active { background: var(--panel2); color: var(--text); }
-    .muted { color: var(--muted); font-size: 13px; }
-    .link-button { color: var(--accent); background: none; border: 0; padding: 4px 0; text-decoration: underline; }
-    .message {
-      margin: 14px 0; padding: 12px 13px; border-radius: 10px; font-size: 13px;
-      overflow-wrap: anywhere; white-space: pre-wrap;
-    }
-    .message:empty { display: none; }
-    .message.info { background: #6395ff17; border: 1px solid #6395ff55; }
-    .message.success { background: #48d6c515; border: 1px solid #48d6c555; }
-    .message.error { background: #ff85851a; border: 1px solid #ff858555; color: #ffb3b3; }
-    .check-row { display: flex; gap: 9px; align-items: flex-start; margin: 14px 0; }
-    .check-row input { width: auto; margin-top: 5px; }
-    .check-row label { margin: 0; color: var(--muted); font-weight: 400; }
-    .user-chip { color: var(--accent); font-size: 12px; overflow-wrap: anywhere; margin-bottom: 12px; }
-    .feature-list { display: grid; gap: 13px; margin-top: 22px; }
-    .feature { display: flex; gap: 12px; padding: 14px; border-radius: 12px; background: #ffffff05; border: 1px solid #ffffff0d; }
-    .feature-icon {
-      flex: 0 0 34px; width: 34px; height: 34px; display: grid; place-items: center;
-      background: #48d6c516; border-radius: 10px; color: var(--accent);
-    }
-    .feature strong { display: block; font-size: 14px; }
-    .feature span { color: var(--muted); font-size: 12px; }
-    .output {
-      margin-top: 18px; border: 1px solid var(--line); background: #091321;
-      border-radius: 13px; padding: 17px; min-height: 100px; overflow-wrap: anywhere;
-      white-space: pre-wrap; font-size: 14px;
-    }
-    .output:empty::before { content: "Your AI-generated content will appear here."; color: #6e809a; }
-    .divider { height: 1px; background: var(--line); margin: 22px 0; }
-    footer { border-top: 1px solid var(--line); padding: 25px 0; text-align: center; color: var(--muted); font-size: 12px; }
-    @media (max-width: 760px) {
-      .layout { grid-template-columns: 1fr; }
-      .hero { padding-top: 42px; }
-      .panel { padding: 20px; }
-      h1 { letter-spacing: -1px; }
-      .nav { align-items: flex-start; }
-    }
-    @media (max-width: 420px) {
-      .container { width: calc(100% - 22px); }
-      .brand { font-size: 16px; }
-      .nav-actions { width: 100%; }
-      .nav-actions .btn { flex: 1; }
-      .panel { padding: 16px; border-radius: 15px; }
-      .hero p { font-size: 15px; }
-    }
-  </style>
+<style>
+:root{--bg:#0b1220;--panel:#111d30;--panel2:#17263b;--line:#2a3a52;--text:#f2f6ff;--muted:#9caec5;--accent:#49dfc5;--blue:#7199ff;--red:#ff8585}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 85% 0%,#173b50 0,transparent 32%),var(--bg);color:var(--text);font:15px Inter,Arial,sans-serif;line-height:1.6}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+button:disabled{opacity:.55;cursor:wait}
+a{color:var(--accent)}
+.hidden{display:none!important}
+.wrap{width:min(1250px,calc(100% - 32px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:#0b1220ed;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{min-height:72px;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;padding:10px 0}
+.brand{display:flex;align-items:center;gap:11px;font-size:19px;font-weight:800}
+.logo{height:43px;width:43px;border-radius:13px;background:linear-gradient(135deg,var(--accent),var(--blue));color:#071c2a;display:grid;place-items:center;font-weight:900;font-size:23px}
+.brand small{display:block;font-size:10px;letter-spacing:2px;color:var(--muted)}
+.navright{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:10px 15px;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:7px}
+.btn:hover{filter:brightness(1.15)}
+.primary{background:linear-gradient(110deg,var(--accent),#80edb7);color:#071c2a;border-color:transparent}
+.outline{background:transparent}
+.hero{padding:44px 0 25px}
+.eyebrow{display:inline-block;color:var(--accent);background:#49dfc512;border:1px solid #49dfc533;border-radius:30px;padding:6px 12px;font-size:11px;font-weight:800;letter-spacing:1px}
+h1{font-size:clamp(31px,5vw,51px);line-height:1.15;letter-spacing:-1.5px;margin:17px 0 12px}
+.gradient{background:linear-gradient(90deg,var(--accent),#91aaff);background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:680px;margin:0}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:23px}
+.stat{border:1px solid var(--line);background:#ffffff06;border-radius:10px;padding:9px 13px;color:var(--muted);font-size:12px}
+.stat b{color:var(--text)}
+.appgrid{display:grid;grid-template-columns:225px minmax(0,1fr);gap:22px;padding:15px 0 50px;align-items:start}
+.sidebar,.panel{background:linear-gradient(145deg,#142137,#101929);border:1px solid var(--line);border-radius:17px}
+.sidebar{padding:16px;position:sticky;top:88px}
+.side-title{font-size:11px;color:var(--muted);font-weight:800;letter-spacing:1px;margin:8px 8px 12px}
+.sidebtn{display:flex;width:100%;text-align:left;gap:10px;align-items:center;border:0;border-radius:9px;padding:10px;background:transparent;color:#c5d2e5;margin:3px 0}
+.sidebtn:hover,.sidebtn.active{background:#49dfc518;color:var(--accent)}
+.content{min-width:0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin:3px 0 18px}
+h2{font-size:22px;margin:0}
+.muted{color:var(--muted);font-size:13px}
+.search{max-width:270px}
+input,textarea,select{width:100%;background:#091321;color:var(--text);border:1px solid #30415c;border-radius:10px;padding:12px;outline:none}
+input:focus,textarea:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px #49dfc51b}
+textarea{resize:vertical;min-height:115px}
+label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}
+.field{margin-bottom:16px}
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.service{background:linear-gradient(145deg,#16253a,#111b2b);border:1px solid var(--line);border-radius:14px;padding:17px;display:flex;flex-direction:column;min-height:190px;transition:.2s}
+.service:hover{transform:translateY(-3px);border-color:#49dfc57a}
+.sicon{height:43px;width:43px;border-radius:12px;background:#49dfc51b;display:grid;place-items:center;font-size:22px;margin-bottom:12px}
+.service h3{font-size:15px;margin:0 0 6px}
+.service p{font-size:12px;color:var(--muted);margin:0 0 15px;flex:1}
+.service .btn{width:100%;font-size:12px;padding:9px}
+.panel{padding:23px}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.badge{font-size:11px;border:1px solid #49dfc54a;color:var(--accent);border-radius:20px;padding:5px 9px}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.full{grid-column:1/-1}
+.result{white-space:pre-wrap;overflow-wrap:anywhere;background:#081321;border:1px solid var(--line);border-radius:12px;padding:17px;min-height:90px;font-size:14px}
+.result:empty:before{content:"Your generated result will appear here.";color:#6e809a}
+.message{padding:11px 13px;border-radius:10px;margin:12px 0;font-size:13px;overflow-wrap:anywhere;white-space:pre-wrap}
+.message:empty{display:none}
+.error{background:#ff85851a;border:1px solid #ff858555;color:#ffb5b5}
+.success{background:#49dfc516;border:1px solid #49dfc54a}
+.info{background:#7199ff15;border:1px solid #7199ff44}
+.authbox{max-width:480px;margin:35px auto}
+.tabs{display:grid;grid-template-columns:1fr 1fr;background:#091321;padding:4px;border-radius:10px;margin:17px 0}
+.tab{border:0;border-radius:8px;background:transparent;color:var(--muted);padding:9px;font-weight:700}
+.tab.active{background:var(--panel2);color:var(--text)}
+.textbtn{border:0;background:none;color:var(--accent);padding:4px;text-decoration:underline}
+.ur{font-family:"Noto Nastaliq Urdu",serif;line-height:2.1}
+footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;color:var(--muted);font-size:12px}
+@media(max-width:950px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}.appgrid{grid-template-columns:190px minmax(0,1fr)}}
+@media(max-width:650px){.wrap{width:calc(100% - 22px)}.appgrid{grid-template-columns:1fr}.sidebar{position:static;display:flex;gap:6px;overflow:auto;padding:8px}.side-title{display:none}.sidebtn{white-space:nowrap;width:auto;flex-shrink:0}.services{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.service{padding:12px;min-height:185px}.service h3{font-size:13px}.service p{font-size:11px}.panel{padding:16px}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.search{max-width:none;width:100%}.navright{width:100%}.navright .btn{flex:1}h1{letter-spacing:-.7px}}
+</style>
 </head>
 
 <body>
 <header>
-  <div class="container nav">
-    <div class="brand">
-      <div class="brand-icon">N</div>
-      <span>NEXA <small>BUSINESS HUB AI</small></span>
-    </div>
-    <div class="nav-actions">
-      <button class="btn btn-outline" id="navLogin" type="button">Login</button>
-      <button class="btn btn-primary" id="navRegister" type="button">Create Account</button>
-      <button class="btn btn-outline hidden" id="logoutBtn" type="button">Logout</button>
+  <div class="wrap nav">
+    <div class="brand"><div class="logo">N</div><div>NEXA<small>BUSINESS HUB AI</small></div></div>
+    <div class="navright">
+      <span id="accountLabel" class="muted">Guest mode</span>
+      <button class="btn outline" id="loginNav">Login</button>
+      <button class="btn primary" id="registerNav">Create Account</button>
+      <button class="btn outline hidden" id="logoutBtn">Logout</button>
     </div>
   </div>
 </header>
 
-<main class="container">
-  <section class="hero">
-    <div class="eyebrow">✦ AI-powered business workspace</div>
-    <h1>Work smarter with <span class="gradient-text">Nexa AI</span></h1>
-    <p>Create professional content, business ideas, applications, and useful writing with your AI-powered business assistant.</p>
-    <div class="status" id="topStatus" role="status" aria-live="polite">Connecting to your workspace...</div>
-  </section>
+<main class="wrap">
+<section class="hero">
+  <div class="eyebrow">✦ YOUR ALL-IN-ONE AI WORKSPACE</div>
+  <h1>Everything your business needs.<br><span class="gradient">Powered by AI.</span></h1>
+  <p>CVs, applications, official letters, translations, business content and more — create professional work from one dashboard.</p>
+  <div class="stats">
+    <div class="stat"><b id="serviceCount">24</b> services</div>
+    <div class="stat"><b>AI</b> content generation</div>
+    <div class="stat"><b>Urdu + English</b> support</div>
+  </div>
+</section>
 
-  <div class="layout">
-    <section class="panel" id="authPanel">
-      <div id="authForms">
-        <h2 id="authTitle">Welcome back</h2>
-        <p class="sub" id="authSubtitle">Log in to your Nexa account.</p>
+<section id="authSection" class="panel authbox hidden">
+  <h2 id="authTitle">Welcome to Nexa</h2>
+  <p class="muted" id="authSubtitle">Log in to your account or register.</p>
+  <div class="tabs">
+    <button class="tab active" id="loginTab">Login</button>
+    <button class="tab" id="registerTab">Register</button>
+  </div>
+  <form id="authForm">
+    <div class="field hidden" id="nameWrap"><label for="fullName">Full name</label><input id="fullName" maxlength="100" autocomplete="name"></div>
+    <div class="field"><label for="email">Email address</label><input id="email" type="email" required autocomplete="email"></div>
+    <div class="field"><label for="password">Password</label><input id="password" type="password" required minlength="8" maxlength="128" autocomplete="current-password"></div>
+    <div class="field hidden" id="confirmWrap"><label for="confirmPassword">Confirm password</label><input id="confirmPassword" type="password" minlength="8" maxlength="128"></div>
+    <label id="termsWrap" class="hidden"><input type="checkbox" id="terms" style="width:auto"> I agree to use this service responsibly.</label>
+    <button class="btn primary" style="width:100%" id="authSubmit">Login</button>
+  </form>
+  <div class="toolbar" style="margin:10px 0 0">
+    <button class="textbtn" id="forgotBtn">Forgot password?</button>
+    <button class="textbtn" id="closeAuth">Back to services</button>
+  </div>
+  <div id="authMsg" class="message"></div>
+  <div id="resetBox" class="hidden">
+    <div class="divider"></div><h3>Set a new password</h3>
+    <form id="resetForm">
+      <div class="field"><label for="newPassword">New password</label><input id="newPassword" type="password" required minlength="8"></div>
+      <div class="field"><label for="newPassword2">Confirm new password</label><input id="newPassword2" type="password" required minlength="8"></div>
+      <button class="btn primary">Update password</button>
+    </form>
+    <div id="resetMsg" class="message"></div>
+  </div>
+</section>
 
-        <div class="auth-tabs">
-          <button class="auth-tab active" type="button" id="loginTab">Login</button>
-          <button class="auth-tab" type="button" id="registerTab">Register</button>
-        </div>
+<div id="workspace" class="appgrid">
+  <aside class="sidebar">
+    <div class="side-title">WORKSPACE</div>
+    <button class="sidebtn active" data-view="dashboard">⌂ All Services</button>
+    <button class="sidebtn" data-view="generator">✦ AI Generator</button>
+    <button class="sidebtn" data-view="history">◷ Recent Results</button>
+  </aside>
 
-        <form id="authForm">
-          <div class="field hidden" id="nameField">
-            <label for="fullName">Full name</label>
-            <input id="fullName" type="text" autocomplete="name" maxlength="100" placeholder="Enter your full name">
-          </div>
-          <div class="field">
-            <label for="email">Email address</label>
-            <input id="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com">
-          </div>
-          <div class="field">
-            <label for="password">Password</label>
-            <input id="password" type="password" autocomplete="current-password" required minlength="8" maxlength="128" placeholder="At least 8 characters">
-          </div>
-          <div class="field hidden" id="confirmField">
-            <label for="confirmPassword">Confirm password</label>
-            <input id="confirmPassword" type="password" autocomplete="new-password" minlength="8" maxlength="128" placeholder="Enter password again">
-          </div>
-          <div class="check-row hidden" id="termsRow">
-            <input id="terms" type="checkbox">
-            <label for="terms">I agree to use this service responsibly and provide a valid email address.</label>
-          </div>
-          <button class="btn btn-primary full" type="submit" id="authSubmit">Login to account</button>
-        </form>
-
-        <div class="actions" style="justify-content:space-between;margin-top:12px">
-          <button class="link-button" id="forgotBtn" type="button">Forgot password?</button>
-          <button class="link-button hidden" id="backLoginBtn" type="button">Back to login</button>
-        </div>
-        <div id="authMessage" class="message" role="status" aria-live="polite"></div>
+  <div class="content">
+    <section id="dashboardView">
+      <div class="section-head">
+        <div><h2>Explore Services</h2><div class="muted">Choose a service to get started.</div></div>
+        <div class="search"><input id="searchServices" placeholder="Search services..."></div>
       </div>
-
-      <div id="resetPanel" class="hidden">
-        <h2>Set a new password</h2>
-        <p class="sub">Choose a new password for your account.</p>
-        <form id="resetForm">
-          <div class="field">
-            <label for="newPassword">New password</label>
-            <input id="newPassword" type="password" required minlength="8" maxlength="128" autocomplete="new-password">
-          </div>
-          <div class="field">
-            <label for="newPasswordConfirm">Confirm new password</label>
-            <input id="newPasswordConfirm" type="password" required minlength="8" maxlength="128" autocomplete="new-password">
-          </div>
-          <button class="btn btn-primary full" type="submit" id="resetSubmit">Update password</button>
-        </form>
-        <div id="resetMessage" class="message" role="status" aria-live="polite"></div>
-      </div>
-
-      <div id="signedInPanel" class="hidden">
-        <h2>You’re signed in</h2>
-        <p class="sub">Your Nexa account is connected.</p>
-        <div class="user-chip" id="userEmail"></div>
-        <p class="muted">You can now use the AI content generator.</p>
-        <button class="btn btn-primary full" type="button" id="startBtn">Open AI Generator</button>
-        <div id="signedMessage" class="message" role="status" aria-live="polite"></div>
-      </div>
+      <div class="services" id="servicesGrid"></div>
+      <div id="emptySearch" class="message info hidden">No services match your search.</div>
     </section>
 
-    <section class="panel">
-      <h2>Your business assistant</h2>
-      <p class="sub">Simple tools for everyday business and writing tasks.</p>
-      <div class="feature-list">
-        <div class="feature">
-          <div class="feature-icon">✦</div>
-          <div><strong>AI Content Generator</strong><span>Draft useful content from your instructions.</span></div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">文</div>
-          <div><strong>Multiple Languages</strong><span>Choose English, Urdu, or Roman Urdu.</span></div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">✓</div>
-          <div><strong>Account Access</strong><span>Email confirmation and password recovery.</span></div>
-        </div>
+    <section id="editorView" class="panel hidden">
+      <div class="toolbar">
+        <div><div class="badge" id="serviceCategory">AI SERVICE</div><h2 id="editorTitle" style="margin-top:9px">AI Generator</h2><p class="muted" id="editorDesc"></p></div>
+        <button class="btn outline" id="backBtn">← All services</button>
       </div>
-      <div class="divider"></div>
-      <p class="muted">Tip: Be specific about the purpose, audience, and style you want.</p>
+      <form id="serviceForm">
+        <div class="formgrid">
+          <div class="field"><label for="outputLanguage">Output language</label>
+            <select id="outputLanguage"><option>English</option><option>Urdu</option><option>Roman Urdu</option><option>Pashto</option></select>
+          </div>
+          <div class="field"><label for="tone">Writing style</label>
+            <select id="tone"><option>Professional</option><option>Simple</option><option>Formal and official</option><option>Friendly</option><option>Creative</option><option>Detailed</option></select>
+          </div>
+          <div class="field full"><label id="detailsLabel" for="details">Describe what you need</label>
+            <textarea id="details" required maxlength="12000" placeholder="Enter all relevant details here..."></textarea>
+          </div>
+          <div class="field full"><label for="extra">Additional instructions (optional)</label>
+            <input id="extra" maxlength="2000" placeholder="Names, formatting, length, special requirements...">
+          </div>
+        </div>
+        <button class="btn primary" id="generateBtn">✦ Generate Result</button>
+      </form>
+      <div id="generateMsg" class="message"></div>
+      <div class="toolbar" style="margin-top:24px"><h3 style="margin:0">Your Result</h3><div class="navright"><button class="btn" id="copyResult">Copy</button><button class="btn" id="downloadResult">Download .txt</button></div></div>
+      <div id="result" class="result" aria-live="polite"></div>
+    </section>
+
+    <section id="historyView" class="panel hidden">
+      <div class="toolbar"><div><h2>Recent Results</h2><p class="muted">Results from this browser session.</p></div><button class="btn outline" id="clearHistory">Clear history</button></div>
+      <div id="historyList" class="muted">Your generated results will appear here.</div>
     </section>
   </div>
-
-  <section class="panel hidden" id="generatorPanel" style="margin-bottom:45px">
-    <h2>AI Content Generator</h2>
-    <p class="sub">Write a prompt and choose your preferred response language.</p>
-    <form id="generateForm">
-      <div class="field">
-        <label for="language">Response language</label>
-        <select id="language">
-          <option value="English">English</option>
-          <option value="Urdu">اردو</option>
-          <option value="Roman Urdu">Roman Urdu</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="prompt">What would you like to create?</label>
-        <textarea id="prompt" required maxlength="12000" placeholder="Example: Write a professional business introduction for my online service center..."></textarea>
-      </div>
-      <button class="btn btn-primary" type="submit" id="generateBtn">✦ Generate Content</button>
-    </form>
-    <div id="generateMessage" class="message" role="status" aria-live="polite"></div>
-    <div class="output" id="output" aria-live="polite"></div>
-    <div class="actions" style="margin-top:12px">
-      <button class="btn" type="button" id="copyBtn">Copy result</button>
-      <button class="btn btn-outline" type="button" id="clearBtn">Clear</button>
-    </div>
-  </section>
+</div>
 </main>
 
-<footer>
-  <div class="container">© <span id="year"></span> Nexa Business Hub AI. Built for smarter work.</div>
-</footer>
+<footer><div class="wrap">© <span id="year"></span> Nexa Business Hub AI · Your everyday business assistant</div></footer>
 
 <script>
 "use strict";
 
-/* Supabase project credentials */
+/* Your Supabase project configuration */
 const SUPABASE_URL = "https://njfobttocvkjsrvlcjaj.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_EkEFOVho4ryOYcIOVAqMhQ_z9yoD9TB";
 
-const $ = (id) => document.getElementById(id);
-$("year").textContent = new Date().getFullYear();
+const services = [
+{id:"cv",icon:"📄",name:"CV / Resume Maker",cat:"Career",desc:"Create a professional CV or resume.",label:"Enter your personal details, education, skills and experience",hint:"Name, contact details, education, skills, work history and target job.",prompt:"Create a professional ATS-friendly CV/resume. Use only supplied facts. Organize it with a professional summary, education, experience, skills and relevant sections. Never invent qualifications, dates, contact information or work history. Mark missing information as [Add details]."},
+{id:"cover",icon:"✉️",name:"Cover Letter",cat:"Career",desc:"Write a tailored job cover letter.",label:"Enter job title, company and your qualifications",hint:"Job title, employer, experience, skills and job description.",prompt:"Write a tailored professional cover letter for the stated position. Use the provided facts, emphasize relevant strengths, and do not invent achievements or qualifications."},
+{id:"jobapp",icon:"💼",name:"Job Application",cat:"Career",desc:"Prepare a formal employment application.",label:"Enter applicant, job and organization details",hint:"Applicant name, position, department and relevant experience.",prompt:"Draft a formal job application based on the provided information. Use appropriate salutations, clear paragraphs, and a professional closing. Do not invent details."},
+{id:"bio",icon:"👤",name:"Professional Bio",cat:"Career",desc:"Create a polished personal introduction.",label:"Describe your background, skills and achievements",hint:"Your profession, experience, education, skills and purpose.",prompt:"Write a polished professional biography in a suitable length. Highlight only supplied facts and strengths. Do not fabricate awards or experience."},
+{id:"application",icon:"📝",name:"Official Application",cat:"Writing",desc:"Write an application to an official or institution.",label:"Who is the application addressed to and what is the purpose?",hint:"Recipient designation, subject, request, dates and supporting details.",prompt:"Draft a clear, respectful formal application with recipient, subject, salutation, body, request and closing. Follow conventional official letter formatting. Never invent laws, facts or references."},
+{id:"letter",icon:"📨",name:"Official Letter",cat:"Writing",desc:"Prepare formal office correspondence.",label:"Enter sender, recipient and letter purpose",hint:"Office names, reference number if any, subject and required action.",prompt:"Write a professional official letter with suitable heading, subject, formal body and closing. Use placeholders for missing reference numbers or dates. Do not invent authority or approvals."},
+{id:"leave",icon:"📅",name:"Leave Application",cat:"Writing",desc:"Create a school or office leave request.",label:"Enter name, institution, dates and reason",hint:"Applicant role, recipient, leave dates and reason.",prompt:"Write a polite formal leave application using the supplied dates and reason. Do not change dates or add unsupported personal details."},
+{id:"complaint",icon:"⚖️",name:"Complaint Letter",cat:"Writing",desc:"Draft a clear complaint or grievance.",label:"Explain the issue, dates and desired resolution",hint:"Recipient, what happened, relevant dates and requested remedy.",prompt:"Draft a factual, respectful complaint letter. Separate facts from allegations, clearly explain the issue and requested resolution, and do not invent evidence or legal claims."},
+{id:"email",icon:"📧",name:"Email Writer",cat:"Writing",desc:"Write professional emails and replies.",label:"Explain the email purpose and recipient",hint:"Recipient, purpose, key information and desired tone.",prompt:"Write an effective email with an appropriate subject, greeting, concise body and professional closing. Match the requested tone."},
+{id:"translate",icon:"🌐",name:"Translator",cat:"Language",desc:"Translate text between languages.",label:"Paste the text and mention the source language if known",hint:"Paste the complete text and specify the desired target language in Additional instructions.",prompt:"Translate the supplied text accurately into the selected output language. Preserve meaning, names, numbers, dates, tone and formatting. Do not summarize unless requested."},
+{id:"urdu",icon:"ا",name:"Urdu Writing",cat:"Language",desc:"Create or improve Urdu content.",label:"Enter the topic or text you want in Urdu",hint:"Topic, audience, required length and whether the style should be formal or simple.",prompt:"Produce natural, readable Urdu writing. Use Urdu script when Urdu is selected; use Roman Urdu only when requested. Keep names and facts accurate."},
+{id:"pashto",icon:"پ",name:"Pashto Writing",cat:"Language",desc:"Draft or improve Pashto text.",label:"Enter the topic or text you need in Pashto",hint:"Topic, audience, dialect preference if relevant and length.",prompt:"Write natural Pashto in the selected output language. Preserve the supplied facts and use clear, appropriate wording."},
+{id:"social",icon:"📱",name:"Social Media Posts",cat:"Marketing",desc:"Create posts for your business pages.",label:"Enter business name, platform and post topic",hint:"Platform, audience, offer, business name and desired call to action.",prompt:"Create engaging social media content for the stated platform. Include a strong opening, clear value proposition and suitable call to action. Suggest relevant hashtags where useful. Do not invent discounts or claims."},
+{id:"captions",icon:"📸",name:"Captions & Hashtags",cat:"Marketing",desc:"Create captions for posts and products.",label:"Describe the image, product or post",hint:"What is shown, target audience, platform and tone.",prompt:"Generate several distinct, relevant caption options and suitable hashtags. Do not claim to have seen an image unless its contents are described."},
+{id:"adcopy",icon:"📣",name:"Advertisement Copy",cat:"Marketing",desc:"Write promotional copy for a product or service.",label:"Describe your product, audience and offer",hint:"Product features, audience, location, price if relevant and contact method.",prompt:"Write persuasive but truthful advertising copy with a headline, benefits, call to action and optional short version. Never invent prices, guarantees or product capabilities."},
+{id:"business",icon:"🏢",name:"Business Plan",cat:"Business",desc:"Prepare a structured business plan draft.",label:"Describe the business idea and target market",hint:"Business type, location, customers, budget and goals.",prompt:"Prepare a structured business plan including concept, target customers, value proposition, operations, marketing and estimated cost categories. Clearly label assumptions; do not present invented figures as verified facts."},
+{id:"names",icon:"💡",name:"Business Name Ideas",cat:"Business",desc:"Find creative names for your business.",label:"Describe your business, audience and brand style",hint:"Industry, audience, preferred language and desired brand personality.",prompt:"Suggest a diverse list of memorable business names with brief explanations. Do not claim that a name, domain or trademark is available unless independently verified."},
+{id:"slogan",icon:"✨",name:"Slogan & Tagline",cat:"Marketing",desc:"Create memorable brand slogans.",label:"Enter your brand name and what it offers",hint:"Brand name, main benefit, audience and desired mood.",prompt:"Create multiple concise slogan and tagline options that fit the brand. Avoid unsupported claims and explain the style of each option briefly."},
+{id:"product",icon:"🛍️",name:"Product Description",cat:"Marketing",desc:"Write attractive product listings.",label:"Enter product name, features and intended customer",hint:"Features, specifications, materials, use cases and audience.",prompt:"Write a clear, appealing product description with a headline, features and customer benefits. Never invent specifications, certifications or performance claims."},
+{id:"proposal",icon:"📊",name:"Business Proposal",cat:"Business",desc:"Draft a professional service proposal.",label:"Describe the client, project, scope and objectives",hint:"Client, deliverables, timeline and budget if known.",prompt:"Draft a professional proposal with executive summary, objectives, scope, deliverables, timeline and next steps. Use placeholders for unknown costs and dates."},
+{id:"meeting",icon:"📋",name:"Meeting Minutes",cat:"Business",desc:"Organize notes into clear minutes.",label:"Paste meeting notes, decisions and action items",hint:"Meeting date, attendees, decisions, responsible people and deadlines.",prompt:"Convert the provided notes into organized meeting minutes with attendees, discussion points, decisions, action items and deadlines. Do not invent attendees or decisions."},
+{id:"summary",icon:"🧠",name:"Text Summarizer",cat:"Productivity",desc:"Summarize long text into key points.",label:"Paste the text you want summarized",hint:"Specify the desired length or format in Additional instructions.",prompt:"Summarize the provided text accurately. Preserve important details, names, dates and conclusions. Do not add facts that are absent from the source."},
+{id:"ideas",icon:"🚀",name:"Ideas & Brainstorming",cat:"Business",desc:"Generate ideas for projects and growth.",label:"Describe the challenge, project or goal",hint:"Your goal, constraints, audience and available resources.",prompt:"Generate practical, varied ideas for the stated goal. Explain the value and first steps for each, and distinguish assumptions from established facts."},
+{id:"proofread",icon:"✍️",name:"Proofreading & Editing",cat:"Productivity",desc:"Improve grammar, clarity and readability.",label:"Paste the text you want improved",hint:"Mention whether to preserve the original tone and formatting.",prompt:"Proofread and improve grammar, spelling, clarity and structure while preserving meaning and facts. Return the revised version first, then briefly list major improvements if useful."},
+{id:"invoice",icon:"🧾",name:"Invoice Text & Template",cat:"Business",desc:"Prepare invoice wording and line items.",label:"Enter seller, buyer, items, quantities and prices",hint:"Currency, invoice number, dates, quantities, prices and tax if applicable.",prompt:"Prepare a clean invoice template using supplied details. Calculate totals only when enough numeric information is provided. Leave missing fields as placeholders and do not invent tax rules."}
+];
 
-let supabaseClient = null;
-let authMode = "login";
-let currentSession = null;
+$("year").textContent=new Date().getFullYear();
+$("serviceCount").textContent=services.length;
 
-function setMessage(id, text, type = "info") {
-  const el = $(id);
-  el.textContent = text || "";
-  el.className = "message" + (text ? " " + type : "");
+let db=null, session=null, authMode="login", activeService=null, lastResult="", history=[];
+
+function el(id){return document.getElementById(id)}
+function msg(id,text,type="info"){el(id).textContent=text||"";el(id).className="message"+(text?" "+type:"")}
+function busy(button,on,text){button.disabled=on;if(on)button.dataset.oldText=button.textContent;button.textContent=on?text:(button.dataset.oldText||button.textContent)}
+function redirectUrl(){return location.origin+location.pathname}
+function showAuth(mode="login"){
+  authMode=mode;el("authSection").classList.remove("hidden");el("resetBox").classList.add("hidden");
+  el("authTitle").textContent=mode==="register"?"Create your Nexa account":"Welcome back";
+  el("authSubtitle").textContent=mode==="register"?"Register with your email address.":"Log in to your account.";
+  el("nameWrap").classList.toggle("hidden",mode!=="register");
+  el("confirmWrap").classList.toggle("hidden",mode!=="register");
+  el("termsWrap").classList.toggle("hidden",mode!=="register");
+  el("loginTab").classList.toggle("active",mode==="login");
+  el("registerTab").classList.toggle("active",mode==="register");
+  el("authSubmit").textContent=mode==="register"?"Create account":"Login";
+  msg("authMsg","");
+  el("authSection").scrollIntoView({behavior:"smooth",block:"start"});
 }
-
-function setBusy(button, busy, busyText, originalText) {
-  button.disabled = busy;
-  button.textContent = busy ? busyText : originalText;
+function showSession(s){
+  session=s;el("accountLabel").textContent=s.user.email||"Signed in";
+  el("loginNav").classList.add("hidden");el("registerNav").classList.add("hidden");el("logoutBtn").classList.remove("hidden");
+  el("authSection").classList.add("hidden");
 }
-
-function redirectUrl() {
-  return window.location.origin + window.location.pathname;
+function showGuest(){
+  session=null;el("accountLabel").textContent="Guest mode";
+  el("loginNav").classList.remove("hidden");el("registerNav").classList.remove("hidden");el("logoutBtn").classList.add("hidden");
 }
-
-function showAuth(mode = "login") {
-  authMode = mode;
-  $("authForms").classList.remove("hidden");
-  $("resetPanel").classList.add("hidden");
-  $("signedInPanel").classList.add("hidden");
-  $("generatorPanel").classList.add("hidden");
-  $("authPanel").classList.remove("hidden");
-  $("authTitle").textContent = mode === "register" ? "Create your account" : "Welcome back";
-  $("authSubtitle").textContent = mode === "register" ? "Register to start using Nexa AI." : "Log in to your Nexa account.";
-  $("nameField").classList.toggle("hidden", mode !== "register");
-  $("confirmField").classList.toggle("hidden", mode !== "register");
-  $("termsRow").classList.toggle("hidden", mode !== "register");
-  $("forgotBtn").classList.toggle("hidden", mode !== "login");
-  $("backLoginBtn").classList.add("hidden");
-  $("loginTab").classList.toggle("active", mode === "login");
-  $("registerTab").classList.toggle("active", mode === "register");
-  $("authSubmit").textContent = mode === "register" ? "Create account" : "Login to account";
-  setMessage("authMessage", "");
-  $("authPanel").scrollIntoView({ behavior: "smooth", block: "start" });
+function renderServices(filter=""){
+  const grid=el("servicesGrid");grid.innerHTML="";
+  const filtered=services.filter(s=>(s.name+" "+s.desc+" "+s.cat).toLowerCase().includes(filter.toLowerCase()));
+  filtered.forEach(s=>{
+    const card=document.createElement("article");card.className="service";
+    const icon=document.createElement("div");icon.className="sicon";icon.textContent=s.icon;
+    const title=document.createElement("h3");title.textContent=s.name;
+    const desc=document.createElement("p");desc.textContent=s.desc;
+    const btn=document.createElement("button");btn.className="btn";btn.textContent="Open service →";btn.addEventListener("click",()=>openService(s.id));
+    card.append(icon,title,desc,btn);grid.appendChild(card);
+  });
+  el("emptySearch").classList.toggle("hidden",filtered.length>0);
 }
-
-function showResetForm() {
-  $("authForms").classList.add("hidden");
-  $("signedInPanel").classList.add("hidden");
-  $("resetPanel").classList.remove("hidden");
-  $("authPanel").classList.remove("hidden");
-  $("generatorPanel").classList.add("hidden");
+function showView(view){
+  el("dashboardView").classList.toggle("hidden",view!=="dashboard");
+  el("editorView").classList.toggle("hidden",view!=="editor");
+  el("historyView").classList.toggle("hidden",view!=="history");
+  document.querySelectorAll(".sidebtn").forEach(b=>b.classList.toggle("active",b.dataset.view===view||(view==="editor"&&b.dataset.view==="dashboard")));
 }
-
-function showSignedIn(session) {
-  currentSession = session;
-  $("authForms").classList.add("hidden");
-  $("resetPanel").classList.add("hidden");
-  $("signedInPanel").classList.remove("hidden");
-  $("authPanel").classList.remove("hidden");
-  $("generatorPanel").classList.remove("hidden");
-  $("logoutBtn").classList.remove("hidden");
-  $("navLogin").classList.add("hidden");
-  $("navRegister").classList.add("hidden");
-  $("userEmail").textContent = session.user.email || "Signed-in user";
-  $("topStatus").textContent = "Signed in. Your AI workspace is ready.";
+function openService(id){
+  activeService=services.find(s=>s.id===id);if(!activeService)return;
+  el("editorTitle").textContent=activeService.icon+" "+activeService.name;
+  el("serviceCategory").textContent=activeService.cat.toUpperCase()+" SERVICE";
+  el("editorDesc").textContent=activeService.desc;
+  el("detailsLabel").textContent=activeService.label;
+  el("details").placeholder=activeService.hint;
+  el("details").value="";el("extra").value="";el("result").textContent="";
+  msg("generateMsg","");
+  showView("editor");window.scrollTo({top:0,behavior:"smooth"});
 }
+document.querySelectorAll(".sidebtn").forEach(b=>b.addEventListener("click",()=>{
+  if(b.dataset.view==="generator"){openService("summary");el("editorTitle").textContent="✦ AI Content Generator";el("serviceCategory").textContent="GENERAL AI";el("editorDesc").textContent="Describe any task and let AI help you." ;el("detailsLabel").textContent="What would you like the AI to do?";el("details").placeholder="Write a story, explain a topic, draft content, brainstorm ideas...";activeService={...services.find(s=>s.id==="summary"),id:"general",prompt:"Complete the user's requested task carefully and accurately. Follow the selected language and style. Do not invent facts."};return}
+  if(b.dataset.view==="history"){renderHistory();showView("history")}else showView("dashboard");
+}));
+el("searchServices").addEventListener("input",e=>renderServices(e.target.value));
+el("backBtn").addEventListener("click",()=>showView("dashboard"));
+el("loginNav").addEventListener("click",()=>showAuth("login"));
+el("registerNav").addEventListener("click",()=>showAuth("register"));
+el("closeAuth").addEventListener("click",()=>el("authSection").classList.add("hidden"));
+el("loginTab").addEventListener("click",()=>showAuth("login"));
+el("registerTab").addEventListener("click",()=>showAuth("register"));
 
-function showSignedOut() {
-  currentSession = null;
-  $("authForms").classList.remove("hidden");
-  $("resetPanel").classList.add("hidden");
-  $("signedInPanel").classList.add("hidden");
-  $("generatorPanel").classList.add("hidden");
-  $("logoutBtn").classList.add("hidden");
-  $("navLogin").classList.remove("hidden");
-  $("navRegister").classList.remove("hidden");
-  $("topStatus").textContent = "Log in or create an account to use your workspace.";
-}
-
-$("loginTab").addEventListener("click", () => showAuth("login"));
-$("registerTab").addEventListener("click", () => showAuth("register"));
-$("navLogin").addEventListener("click", () => showAuth("login"));
-$("navRegister").addEventListener("click", () => showAuth("register"));
-
-$("authForm").addEventListener("submit", async (event) => {
-  event.preventDefault();
-  if (!supabaseClient) {
-    setMessage("authMessage", "Supabase did not initialize. Check the Project URL, Publishable Key, and browser connection.", "error");
-    return;
-  }
-
-  const email = $("email").value.trim();
-  const password = $("password").value;
-  const button = $("authSubmit");
-  const originalText = authMode === "register" ? "Create account" : "Login to account";
-  setBusy(button, true, "Please wait...", originalText);
-  setMessage("authMessage", "");
-
-  try {
-    if (authMode === "register") {
-      const fullName = $("fullName").value.trim();
-      if (!fullName) throw new Error("Please enter your full name.");
-      if (password !== $("confirmPassword").value) throw new Error("Passwords do not match.");
-      if (!$("terms").checked) throw new Error("Please accept the terms to continue.");
-
-      const { data, error } = await supabaseClient.auth.signUp({
-        email,
-        password,
-        options: {
-          emailRedirectTo: redirectUrl(),
-          data: { full_name: fullName }
-        }
-      });
-      if (error) throw error;
-
-      if (data.session) {
-        showSignedIn(data.session);
-        setMessage("signedMessage", "Your account has been created.", "success");
-      } else {
-        setMessage("authMessage", "Registration received. Check your email and click the verification link before logging in.", "success");
-      }
-    } else {
-      const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
-      if (error) throw error;
-      if (!data.session) throw new Error("No active session was returned. Verify your email and try again.");
-      showSignedIn(data.session);
+el("authForm").addEventListener("submit",async e=>{
+  e.preventDefault();if(!db){msg("authMsg","Supabase could not initialize. Check your project URL and publishable key.","error");return}
+  const email=el("email").value.trim(),password=el("password").value,button=el("authSubmit");
+  busy(button,true,"Please wait...");
+  try{
+    if(authMode==="register"){
+      if(!el("fullName").value.trim())throw Error("Enter your full name.");
+      if(password!==el("confirmPassword").value)throw Error("Passwords do not match.");
+      if(!el("terms").checked)throw Error("Please accept the terms.");
+      const {data,error}=await db.auth.signUp({email,password,options:{emailRedirectTo:redirectUrl(),data:{full_name:el("fullName").value.trim()}}});
+      if(error)throw error;
+      if(data.session){showSession(data.session);msg("authMsg","Account created successfully.","success")}
+      else msg("authMsg","Registration submitted. Check your email and verify your account before logging in.","success");
+    }else{
+      const {data,error}=await db.auth.signInWithPassword({email,password});
+      if(error)throw error;
+      showSession(data.session);
     }
-  } catch (error) {
-    setMessage("authMessage", error.message || "Authentication failed.", "error");
-  } finally {
-    setBusy(button, false, "", originalText);
-  }
+  }catch(error){msg("authMsg",error.message||"Authentication failed.","error")}
+  finally{busy(button,false,"")}
+});
+el("forgotBtn").addEventListener("click",async()=>{
+  if(!db)return msg("authMsg","Supabase is not configured.","error");
+  const email=el("email").value.trim();if(!email)return msg("authMsg","Enter your email address first.","info");
+  try{const {error}=await db.auth.resetPasswordForEmail(email,{redirectTo:redirectUrl()+"?reset-password"});if(error)throw error;msg("authMsg","If an account exists for this email, a password reset link will be sent.","success")}
+  catch(e){msg("authMsg",e.message,"error")}
+});
+el("resetForm").addEventListener("submit",async e=>{
+  e.preventDefault();if(el("newPassword").value!==el("newPassword2").value)return msg("resetMsg","Passwords do not match.","error");
+  try{const {error}=await db.auth.updateUser({password:el("newPassword").value});if(error)throw error;msg("resetMsg","Password updated. Please log in again.","success");await db.auth.signOut();showGuest();showAuth("login")}
+  catch(e){msg("resetMsg",e.message,"error")}
+});
+el("logoutBtn").addEventListener("click",async()=>{
+  if(db){const {error}=await db.auth.signOut();if(error)return alert(error.message)}
+  showGuest();showAuth("login");
 });
 
-$("forgotBtn").addEventListener("click", async () => {
-  if (!supabaseClient) {
-    setMessage("authMessage", "Supabase is not configured. Check the project credentials.", "error");
-    return;
-  }
-  const email = $("email").value.trim();
-  if (!email) {
-    setMessage("authMessage", "Enter your email address first, then click Forgot password.", "info");
-    $("email").focus();
-    return;
-  }
-
-  try {
-    const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
-      redirectTo: redirectUrl() + "?reset-password"
-    });
-    if (error) throw error;
-    setMessage("authMessage", "If an account exists for this email, a password reset link will be sent. Check your inbox.", "success");
-  } catch (error) {
-    setMessage("authMessage", error.message || "Could not send the reset email.", "error");
-  }
+el("serviceForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  if(!activeService)return;
+  const details=el("details").value.trim();if(!details)return msg("generateMsg","Enter the details first.","error");
+  const button=el("generateBtn");busy(button,true,"Generating...");
+  msg("generateMsg","Preparing your result...");el("result").textContent="";
+  const language=el("outputLanguage").value,tone=el("tone").value,extra=el("extra").value.trim();
+  const fullPrompt=[
+    "SERVICE: "+activeService.name,
+    "TASK: "+activeService.prompt,
+    "OUTPUT LANGUAGE: "+language,
+    "WRITING STYLE: "+tone,
+    "USER DETAILS:\n"+details,
+    extra?"ADDITIONAL INSTRUCTIONS:\n"+extra:"",
+    "Follow the requested service and language. Do not invent personal information, qualifications, dates, prices, citations, or official approvals. Use placeholders for missing essential facts. Return the finished content in a clean, copy-ready format."
+  ].filter(Boolean).join("\n\n");
+  try{
+    const response=await fetch("/api/generate",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({prompt:fullPrompt,language})});
+    const raw=await response.text();let data;try{data=JSON.parse(raw)}catch{data={text:raw}}
+    if(!response.ok)throw Error(data.error||data.message||"Generation failed ("+response.status+").");
+    const output=data.text??data.response??data.result??data.output;
+    if(typeof output!=="string"||!output.trim())throw Error("The AI returned an empty result. Check the Worker response format.");
+    lastResult=output;el("result").textContent=output;msg("generateMsg","Your result is ready.","success");
+    history.unshift({name:activeService.name,result:output,time:new Date().toLocaleString()});history=history.slice(0,20);
+  }catch(error){msg("generateMsg",error.message||"Could not generate the result.","error")}
+  finally{busy(button,false,"")}
 });
-
-$("resetForm").addEventListener("submit", async (event) => {
-  event.preventDefault();
-  if (!supabaseClient) return;
-  const password = $("newPassword").value;
-  if (password !== $("newPasswordConfirm").value) {
-    setMessage("resetMessage", "Passwords do not match.", "error");
-    return;
-  }
-
-  const button = $("resetSubmit");
-  setBusy(button, true, "Updating...", "Update password");
-  try {
-    const { error } = await supabaseClient.auth.updateUser({ password });
-    if (error) throw error;
-    setMessage("resetMessage", "Password updated successfully. You can now log in with your new password.", "success");
-    await supabaseClient.auth.signOut();
-    showAuth("login");
-    setMessage("authMessage", "Your password has been changed. Please log in.", "success");
-  } catch (error) {
-    setMessage("resetMessage", error.message || "Could not update password.", "error");
-  } finally {
-    setBusy(button, false, "", "Update password");
-  }
+el("copyResult").addEventListener("click",async()=>{
+  if(!lastResult)return msg("generateMsg","Generate a result first.","info");
+  try{await navigator.clipboard.writeText(lastResult);msg("generateMsg","Result copied.","success")}
+  catch{msg("generateMsg","Clipboard unavailable. Select the result text and copy it manually.","error")}
 });
-
-$("logoutBtn").addEventListener("click", async () => {
-  if (!supabaseClient) return;
-  const { error } = await supabaseClient.auth.signOut();
-  if (error) {
-    $("topStatus").textContent = "Could not log out: " + error.message;
-    return;
-  }
-  showSignedOut();
-  showAuth("login");
+el("downloadResult").addEventListener("click",()=>{
+  if(!lastResult)return msg("generateMsg","Generate a result first.","info");
+  const blob=new Blob([lastResult],{type:"text/plain;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");
+  a.href=url;a.download=(activeService?.id||"nexa-result")+".txt";a.click();URL.revokeObjectURL(url);
 });
-
-$("startBtn").addEventListener("click", () => {
-  $("generatorPanel").classList.remove("hidden");
-  $("generatorPanel").scrollIntoView({ behavior: "smooth", block: "start" });
-});
-
-$("generateForm").addEventListener("submit", async (event) => {
-  event.preventDefault();
-  if (!currentSession) {
-    setMessage("generateMessage", "Please log in first.", "error");
-    return;
-  }
-
-  const prompt = $("prompt").value.trim();
-  const language = $("language").value;
-  if (!prompt) {
-    setMessage("generateMessage", "Please enter a prompt.", "error");
-    return;
-  }
-
-  const button = $("generateBtn");
-  setBusy(button, true, "Generating...", "✦ Generate Content");
-  setMessage("generateMessage", "Your request is being processed.");
-  $("output").textContent = "";
-
-  try {
-    const response = await fetch("/api/generate", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt, language })
-    });
-
-    const raw = await response.text();
-    let result;
-    try { result = JSON.parse(raw); }
-    catch { result = { text: raw }; }
-
-    if (!response.ok) {
-      throw new Error(result.error || result.message || "AI request failed (" + response.status + ").");
-    }
-
-    const content = result.text ?? result.response ?? result.result ?? result.output;
-    $("output").textContent = typeof content === "string" ? content : JSON.stringify(result, null, 2);
-    setMessage("generateMessage", "Content generated successfully.", "success");
-  } catch (error) {
-    setMessage("generateMessage", error.message || "Something went wrong while generating content.", "error");
-  } finally {
-    setBusy(button, false, "", "✦ Generate Content");
-  }
-});
-
-$("copyBtn").addEventListener("click", async () => {
-  const content = $("output").textContent.trim();
-  if (!content) {
-    setMessage("generateMessage", "There is no result to copy yet.", "info");
-    return;
-  }
-  try {
-    await navigator.clipboard.writeText(content);
-    setMessage("generateMessage", "Result copied to clipboard.", "success");
-  } catch {
-    setMessage("generateMessage", "Copy is not available in this browser. Select and copy the text manually.", "error");
-  }
-});
-
-$("clearBtn").addEventListener("click", () => {
-  $("prompt").value = "";
-  $("output").textContent = "";
-  setMessage("generateMessage", "");
-});
-
-async function initialize() {
-  if (!window.supabase || !window.supabase.createClient) {
-    $("topStatus").textContent = "Supabase library did not load. Check your internet connection and reload.";
-    setMessage("authMessage", "Could not load Supabase. Check your connection or content blockers.", "error");
-    showSignedOut();
-    return;
-  }
-
-  try {
-    supabaseClient = window.supabase.createClient(
-      SUPABASE_URL,
-      SUPABASE_PUBLISHABLE_KEY,
-      {
-        auth: {
-          persistSession: true,
-          autoRefreshToken: true,
-          detectSessionInUrl: true
-        }
-      }
-    );
-
-    supabaseClient.auth.onAuthStateChange((event, session) => {
-      if (event === "PASSWORD_RECOVERY") {
-        showResetForm();
-      } else if (session) {
-        showSignedIn(session);
-      } else {
-        showSignedOut();
-      }
-    });
-
-    const { data, error } = await supabaseClient.auth.getSession();
-    if (error) throw error;
-
-    const params = new URLSearchParams(window.location.search);
-    if (params.has("reset-password") || window.location.hash.includes("type=recovery")) {
-      showResetForm();
-    } else if (data.session) {
-      showSignedIn(data.session);
-    } else {
-      showSignedOut();
-    }
-  } catch (error) {
-    $("topStatus").textContent = "Could not connect to Supabase.";
-    setMessage("authMessage", error.message || "Supabase initialization failed.", "error");
-  }
+function renderHistory(){
+  const box=el("historyList");box.innerHTML="";
+  if(!history.length){box.textContent="No results in this browser session yet.";return}
+  history.forEach((item,i)=>{
+    const card=document.createElement("div");card.className="service";card.style.marginBottom="12px";card.style.minHeight="auto";
+    const title=document.createElement("h3");title.textContent=item.name;
+    const time=document.createElement("p");time.textContent=item.time;
+    const preview=document.createElement("p");preview.textContent=item.result.slice(0,230)+(item.result.length>230?"…":"");
+    const btn=document.createElement("button");btn.className="btn";btn.textContent="View result";btn.onclick=()=>{lastResult=item.result;el("result").textContent=item.result;openService(services.find(s=>s.name===item.name)?.id||"summary");el("result").textContent=item.result};
+    card.append(title,time,preview,btn);box.append(card);
+  });
 }
+el("clearHistory").addEventListener("click",()=>{history=[];renderHistory()});
 
-initialize();
+async function init(){
+  renderServices();
+  if(!window.supabase||!window.supabase.createClient){showGuest();msg("authMsg","Supabase library did not load. Check your internet connection.","error");return}
+  try{
+    db=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
+    db.auth.onAuthStateChange((event,s)=>{
+      if(s)showSession(s);else showGuest();
+      if(event==="PASSWORD_RECOVERY"){el("authSection").classList.remove("hidden");el("resetBox").classList.remove("hidden")}
+    });
+    const {data,error}=await db.auth.getSession();if(error)throw error;
+    const params=new URLSearchParams(location.search);
+    if(params.has("reset-password")||location.hash.includes("type=recovery")){
+      el("authSection").classList.remove("hidden");el("resetBox").classList.remove("hidden");
+    }else if(data.session)showSession(data.session);else showGuest();
+  }catch(error){showGuest();msg("authMsg",error.message||"Could not connect to Supabase.","error")}
+}
+init();
 </script>
 </body>
 </html>
