@@ -1,1291 +1,695 @@
 
 <!DOCTYPE html>
-<html lang="ur" dir="ltr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080d1b">
 <title>Nexa Business Hub</title>
-<meta name="description" content="Nexa Business Hub - Digital Services and Online Learning">
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
 <style>
-/* ===============================
-   LOCAL URDU FONT FILES
-   =============================== */
-@font-face {
-  font-family: "Al Majeed Quranic Font";
-  src: url("./fonts/AlMajeedQuranic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Jameel Noori Nastaleeq";
-  src: url("./fonts/JameelNooriNastaleeq.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
-  --bg:#080d1b;
-  --panel:#101a2e;
-  --panel2:#14213a;
-  --line:#263650;
-  --text:#eef4ff;
-  --muted:#9aabc5;
-  --primary:#7c5cff;
-  --cyan:#35d9d0;
-  --green:#25d366;
-  --radius:17px;
+  --navy: #102a56;
+  --blue: #1769d2;
+  --light: #eaf3ff;
+  --bg: #f4f7fb;
+  --border: #dce5f0;
 }
-
-* {box-sizing:border-box}
-
+* { box-sizing: border-box; }
 body {
-  margin:0;
-  background:radial-gradient(ellipse at top,#17284a 0,#080d1b 55%);
-  color:var(--text);
-  font-family:Arial,sans-serif;
-  min-height:100vh;
-  line-height:1.6;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #26364a;
+  background: var(--bg);
 }
-
-[lang="ur"],
-.rtl,
-.urdu,
-.urdu-text {
-  font-family:
-    "Al Majeed Quranic Font",
-    "Jameel Noori Nastaleeq",
-    serif !important;
-  line-height:2;
-}
-
-button,input,textarea,select {font:inherit}
-button {cursor:pointer}
-.hidden {display:none!important}
-.muted {color:var(--muted)}
-.small {font-size:12px}
-
-.container {
-  max-width:1400px;
-  margin:auto;
-  padding:20px;
-}
-
+button, input, textarea { font: inherit; }
+button { cursor: pointer; }
 .topbar {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
-  flex-wrap:wrap;
-  padding:15px 20px;
-  border:1px solid var(--line);
-  border-radius:20px;
-  background:#0d1527ef;
-  margin-bottom:22px;
+  background: white;
+  padding: 16px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
 }
-
-.brand {
-  display:flex;
-  gap:12px;
-  align-items:center;
-}
-
-.brand-logo {
-  width:45px;
-  height:45px;
-  border-radius:14px;
-  display:grid;
-  place-items:center;
-  font-size:21px;
-  font-weight:bold;
-  background:linear-gradient(135deg,var(--primary),var(--cyan));
-  color:#fff;
-}
-
-h1,h2,h3,p {margin-top:0}
-h1 {font-size:clamp(23px,4vw,36px);margin-bottom:5px}
-h2 {font-size:25px}
-h3 {font-size:17px}
-.brand p {margin:0}
-
-.actions {
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-}
-
+.brand { font-size: 21px; font-weight: 800; color: var(--navy); }
 .btn {
-  border:1px solid var(--line);
-  border-radius:11px;
-  padding:10px 15px;
-  color:var(--text);
-  background:var(--panel2);
-  font-weight:600;
+  padding: 11px 15px;
+  background: var(--blue);
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
 }
-
-.btn:hover {filter:brightness(1.15)}
-.btn.primary {
-  background:linear-gradient(135deg,#7357ff,#4e79f7);
-  border:0;
-}
-.btn.cyan {background:var(--cyan);color:#06141a;border:0}
-.btn:disabled {opacity:.55;cursor:not-allowed}
-
-.hero {
-  padding:30px;
-  border:1px solid var(--line);
-  border-radius:24px;
-  background:linear-gradient(120deg,#191d42,#102b40);
-  margin-bottom:22px;
-}
-
-.hero p {max-width:700px;color:#c4d2ec}
-
-.hero-tag {
-  display:inline-block;
-  border:1px solid #514a9c;
-  background:#292650;
-  color:#cfc6ff;
-  border-radius:20px;
-  padding:5px 12px;
-  font-size:12px;
-  margin-bottom:12px;
-}
-
-.stats {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:12px;
-  margin-top:22px;
-}
-
-.stat {
-  padding:15px;
-  background:#0c1529aa;
-  border:1px solid #364568;
-  border-radius:14px;
-}
-
-.stat strong {display:block;font-size:25px}
-.stat span {font-size:12px;color:var(--muted)}
-
 .layout {
-  display:grid;
-  grid-template-columns:235px minmax(0,1fr);
-  gap:20px;
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  min-height: calc(100vh - 65px);
 }
-
 .sidebar {
-  align-self:start;
-  position:sticky;
-  top:15px;
-  padding:12px;
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:18px;
+  background: var(--navy);
+  padding: 20px 12px;
 }
-
 .nav-btn {
-  display:block;
-  width:100%;
-  text-align:left;
-  color:var(--muted);
-  background:transparent;
-  border:0;
-  border-radius:11px;
-  padding:12px;
-  margin:2px 0;
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 6px;
+  border: 0;
+  border-radius: 8px;
+  text-align: left;
+  color: white;
+  background: transparent;
 }
-
-.nav-btn:hover,.nav-btn.active {
-  background:#27234b;
-  color:#fff;
+.nav-btn:hover, .nav-btn.active { background: #24518b; }
+main { padding: 26px; min-width: 0; }
+.view { display: none; }
+.view.active { display: block; }
+h1, h2, h3 { color: var(--navy); }
+.page-heading { margin-bottom: 22px; }
+.page-heading p { color: #68788d; line-height: 1.6; }
+.hero {
+  padding: 30px;
+  background: linear-gradient(120deg, #102a56, #1769d2);
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 22px;
 }
-
-.main {min-width:0}
-.section {margin-bottom:26px;scroll-margin-top:20px}
-
-.section-head {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-bottom:15px;
+.hero h2 { color: white; font-size: 30px; }
+.hero p { line-height: 1.7; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
 }
-
-.section-head h2 {margin:0}
-.section-head p {margin:4px 0 0;color:var(--muted);font-size:13px}
-
-.search {
-  width:min(100%,330px);
-  background:var(--panel);
-  color:var(--text);
-  border:1px solid var(--line);
-  border-radius:12px;
-  padding:11px 13px;
-  outline:none;
+.card, .form-panel {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
 }
-
-.search:focus,.field:focus {border-color:var(--primary)}
-
-.service-grid,.course-grid {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:13px;
+.card p { color: #68788d; line-height: 1.5; }
+.card-icon {
+  background: var(--light);
+  padding: 12px;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 23px;
 }
-
-.item-card {
-  background:linear-gradient(145deg,#111d33,#0d1628);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  padding:17px;
-  min-width:0;
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  transition:transform .2s,border-color .2s;
+.card button {
+  border: 0;
+  background: transparent;
+  color: var(--blue);
+  font-weight: bold;
+  padding: 0;
 }
-
-.item-card:hover {
-  transform:translateY(-2px);
-  border-color:#6556b8;
+.cv-workspace {
+  display: grid;
+  grid-template-columns: minmax(300px, 420px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
 }
-
-.item-icon {font-size:27px}
-.item-card h3 {margin:0}
-.item-card p {font-size:13px;color:var(--muted);margin:0;flex:1}
-.item-card .btn {margin-top:6px}
-
-.pill {
-  display:inline-block;
-  font-size:11px;
-  border:1px solid #314361;
-  padding:3px 8px;
-  border-radius:20px;
-  color:#a9dcd9;
-  width:max-content;
+.form-panel { padding: 20px; }
+.form-section {
+  color: var(--blue);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+  margin: 22px 0 14px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-
-.course-meta {
-  display:flex;
-  gap:7px;
-  flex-wrap:wrap;
+.field { margin-bottom: 13px; }
+.field label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 6px;
 }
-
-.panel {
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:20px;
-  margin-bottom:18px;
+.field input, .field textarea {
+  width: 100%;
+  border: 1px solid #cdd8e7;
+  border-radius: 7px;
+  padding: 10px;
+  background: white;
 }
-
-.progress-track {
-  height:7px;
-  background:#27334a;
-  border-radius:20px;
-  overflow:hidden;
+.field textarea { min-height: 85px; resize: vertical; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.actions button {
+  border: 0;
+  border-radius: 7px;
+  padding: 11px;
+  font-weight: bold;
 }
-
-.progress-bar {
-  height:100%;
-  background:linear-gradient(90deg,var(--primary),var(--cyan));
-  width:0;
+.actions .save { background: var(--blue); color: white; }
+.actions .clear { background: #fff0f0; color: #a82929; }
+.preview-label { margin-bottom: 10px; color: #68788d; }
+.cv-paper {
+  background: white;
+  display: grid;
+  grid-template-columns: 32% 68%;
+  min-height: 800px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 25px #142e5015;
 }
-
-.lesson-list {
-  display:grid;
-  gap:9px;
-  margin-top:16px;
+.cv-sidebar {
+  background: #123c75;
+  color: white;
+  padding: 24px 17px;
+  overflow-wrap: anywhere;
 }
-
-.lesson {
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:12px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  background:#0b1426;
+.cv-photo {
+  width: 100%;
+  max-width: 140px;
+  height: 145px;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  background: #dceaff;
+  border: 3px solid white;
+  border-radius: 4px;
 }
-
-.lesson input {
-  accent-color:var(--primary);
-  width:17px;
-  height:17px;
+.side-title {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border-bottom: 1px solid #ffffff77;
+  padding-bottom: 7px;
+  margin: 20px 0 10px;
 }
-
-.lesson span {flex:1;font-size:14px}
-.lesson.done {border-color:#286c5c}
-.lesson.done span {color:#9ce6cb}
-
-.empty {
-  grid-column:1/-1;
-  text-align:center;
-  color:var(--muted);
-  padding:25px;
+.side-text {
+  font-size: 11px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
-
-.notice {
-  padding:12px 14px;
-  border:1px solid var(--line);
-  background:#0b1426;
-  border-radius:11px;
-  font-size:13px;
-  margin:10px 0;
+.cv-contact {
+  font-size: 11px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  margin: 6px 0;
 }
-
-.notice.error {border-color:#8c414a;color:#ffb5b5}
-.notice.success {border-color:#226c58;color:#a8f2d4}
-
-footer {
-  text-align:center;
-  padding:28px 10px;
-  color:var(--muted);
-  font-size:12px;
+.cv-content {
+  padding: 30px 25px;
+  overflow-wrap: anywhere;
 }
-
-.auth-overlay {
-  position:fixed;
-  inset:0;
-  background:#030713ef;
-  z-index:50;
-  display:grid;
-  place-items:center;
-  padding:18px;
-  overflow:auto;
+.cv-name {
+  margin: 0 0 8px;
+  font-size: 28px;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
-
-.auth-card {
-  width:min(100%,440px);
-  padding:25px;
-  background:#101a2e;
-  border:1px solid var(--line);
-  border-radius:22px;
+.cv-title {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
-
-.auth-tabs {display:flex;gap:8px;margin:18px 0}
-.auth-tabs .btn {flex:1}
-
-.field-wrap {
-  display:flex;
-  flex-direction:column;
-  gap:7px;
-  min-width:0;
+.cv-section { margin-top: 22px; }
+.cv-section h3 {
+  color: white;
+  background: var(--blue);
+  padding: 9px;
+  margin: 0 0 10px;
+  font-size: 12px;
+  letter-spacing: .5px;
 }
-
-.field {
-  width:100%;
-  padding:12px;
-  background:#0a1324;
-  color:var(--text);
-  border:1px solid var(--line);
-  border-radius:11px;
-  outline:none;
+.cv-body {
+  font-size: 12px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
-
-label {font-size:13px;color:#d5e0f4}
-
-.toast {
-  position:fixed;
-  bottom:90px;
-  right:20px;
-  z-index:1000;
-  max-width:min(90vw,400px);
-  background:#172640;
-  border:1px solid #45587a;
-  padding:13px 17px;
-  border-radius:12px;
-  box-shadow:0 10px 35px #0008;
+footer { text-align: center; padding: 25px; color: #68788d; font-size: 12px; }
+@media(max-width:1050px) {
+  .cv-workspace { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-
-.rtl {direction:rtl;text-align:right}
-.rtl .nav-btn {text-align:right}
-
-/* WHATSAPP FLOATING BUTTON */
-.whatsapp-float {
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  z-index:999;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:12px 17px;
-  border-radius:50px;
-  background:#25d366;
-  color:#073b20;
-  font-family:Arial,sans-serif;
-  font-size:14px;
-  font-weight:700;
-  text-decoration:none;
-  box-shadow:0 6px 24px #0005;
-  transition:transform .2s,box-shadow .2s;
+@media(max-width:700px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { display: flex; overflow-x: auto; gap: 5px; padding: 10px; }
+  .nav-btn { white-space: nowrap; width: auto; }
+  main { padding: 14px; }
+  .cards { grid-template-columns: 1fr; }
+  .cv-paper { grid-template-columns: 34% 66%; min-height: 600px; }
+  .cv-sidebar { padding: 13px 9px; }
+  .cv-content { padding: 18px 12px; }
+  .cv-name { font-size: 21px; }
+  .cv-photo { height: 105px; }
 }
-
-.whatsapp-float:hover {
-  transform:translateY(-3px);
-  box-shadow:0 9px 28px #0006;
-}
-
-.whatsapp-icon {
-  display:grid;
-  place-items:center;
-  width:28px;
-  height:28px;
-  border:2px solid #073b20;
-  border-radius:50%;
-  font-size:20px;
-}
-
-@media(max-width:1000px) {
-  .service-grid,.course-grid {
-    grid-template-columns:repeat(2,minmax(0,1fr));
+@media print {
+  @page { size: A4; margin: 0; }
+  body { background: white; }
+  .topbar, .sidebar, .page-heading, .form-panel,
+  .preview-label, footer, .no-print { display: none !important; }
+  .layout { display: block; min-height: 0; }
+  main { padding: 0; }
+  .view { display: none !important; }
+  #cvView { display: block !important; }
+  .cv-workspace { display: block; }
+  .cv-paper {
+    display: grid;
+    grid-template-columns: 32% 68%;
+    width: 100%;
+    min-height: 0;
+    border: 0;
+    box-shadow: none;
   }
-  .layout {grid-template-columns:1fr}
-  .sidebar {
-    position:static;
-    display:flex;
-    overflow:auto;
-    gap:5px;
-  }
-  .nav-btn {white-space:nowrap;width:auto}
-}
-
-@media(max-width:600px) {
-  .container {padding:11px}
-  .hero {padding:20px}
-  .stats {grid-template-columns:1fr 1fr}
-  .stats .stat:last-child {grid-column:1/-1}
-  .service-grid,.course-grid {grid-template-columns:1fr}
-  .panel {padding:14px}
-  .section-head {align-items:stretch}
-  .search {width:100%}
-  .topbar {padding:12px}
-  .whatsapp-float {
-    right:12px;
-    bottom:12px;
-    padding:10px 13px;
-    font-size:12px;
+  .cv-sidebar, .cv-section h3 {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 }
 </style>
 </head>
-
 <body>
-<div class="container">
 
 <header class="topbar">
-  <div class="brand">
-    <div class="brand-logo">N</div>
-    <div>
-      <h1>Nexa Business Hub</h1>
-      <p class="muted small">Digital Services · Online Learning</p>
-    </div>
-  </div>
-
-  <div class="actions">
-    <button class="btn" id="languageBtn">اردو / English</button>
-    <button class="btn" id="loginTopBtn">Login</button>
-    <button class="btn primary hidden" id="logoutBtn">Logout</button>
-  </div>
+  <div class="brand">🔷 Nexa Business Hub</div>
+  <a class="btn" href="https://wa.me/923342709019"
+     target="_blank" rel="noopener">WhatsApp: 0334-2709019</a>
 </header>
-
-<section class="hero">
-  <span class="hero-tag">YOUR DIGITAL WORKSPACE</span>
-  <h1 id="heroTitle" lang="ur">آپ کا ڈیجیٹل سروسز پلیٹ فارم</h1>
-  <p id="heroDesc" lang="ur">
-    دفتری کام، آن لائن درخواستوں، دستاویزات اور نئے ہنر سیکھنے کے لیے اپنی مطلوبہ سروس منتخب کریں۔
-  </p>
-
-  <div class="actions">
-    <button class="btn primary" onclick="showSection('servicesSection')">Explore Services</button>
-    <button class="btn cyan" onclick="showSection('coursesSection')">Explore Courses</button>
-  </div>
-
-  <div class="stats">
-    <div class="stat">
-      <strong id="serviceCount">28</strong>
-      <span>Digital Services</span>
-    </div>
-    <div class="stat">
-      <strong id="courseCount">12</strong>
-      <span>Learning Courses</span>
-    </div>
-    <div class="stat">
-      <strong>24/7</strong>
-      <span>Easy Access</span>
-    </div>
-  </div>
-</section>
 
 <div class="layout">
   <aside class="sidebar">
-    <button class="nav-btn active" data-section="servicesSection">✦ Digital Services</button>
-    <button class="nav-btn" data-section="coursesSection">▣ Courses</button>
-    <button class="nav-btn" data-section="learningSection">▶ My Learning</button>
-    <button class="nav-btn" data-section="accountSection">♙ My Account</button>
+    <button class="nav-btn active" data-view="homeView"
+      onclick="showView('homeView')">🏠 Dashboard</button>
+    <button class="nav-btn" data-view="servicesView"
+      onclick="showView('servicesView')">🧰 Online Services</button>
+    <button class="nav-btn" data-view="coursesView"
+      onclick="showView('coursesView')">🎓 Courses</button>
+    <button class="nav-btn" data-view="cvView"
+      onclick="showView('cvView')">📄 CV &amp; Resume</button>
+    <button class="nav-btn" data-view="contactView"
+      onclick="showView('contactView')">💬 Contact</button>
   </aside>
 
-  <main class="main">
+  <main>
+    <!-- DASHBOARD -->
+    <section class="view active" id="homeView">
+      <div class="page-heading">
+        <h1>Nexa Business Hub</h1>
+        <p>Your digital services, learning resources and career tools in one place.</p>
+      </div>
+      <div class="hero">
+        <h2>Build. Learn. Move Forward.</h2>
+        <p>Explore online services, improve your skills and create a professional CV using our built-in CV Builder.</p>
+        <button class="btn" onclick="showView('cvView')">Create Your CV →</button>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">📄</div>
+          <h3>CV &amp; Resume Builder</h3>
+          <p>Create a modern blue CV with a photo and live preview.</p>
+          <button onclick="showView('cvView')">Open CV Builder →</button>
+        </article>
+        <article class="card">
+          <div class="card-icon">🖨️</div>
+          <h3>Printing &amp; Composing</h3>
+          <p>Document typing, formatting and printing assistance.</p>
+          <button onclick="contactService('Printing and Composing')">Ask about service →</button>
+        </article>
+        <article class="card">
+          <div class="card-icon">🎓</div>
+          <h3>Courses</h3>
+          <p>Explore basic computer and digital skills courses.</p>
+          <button onclick="showView('coursesView')">Explore courses →</button>
+        </article>
+      </div>
+    </section>
 
-    <section class="section" id="servicesSection">
-      <div class="section-head">
+    <!-- SERVICES -->
+    <section class="view" id="servicesView">
+      <div class="page-heading">
+        <h1>Online Services</h1>
+        <p>Choose a service to ask about availability and requirements.</p>
+      </div>
+      <div class="cards" id="serviceCards"></div>
+    </section>
+
+    <!-- COURSES -->
+    <section class="view" id="coursesView">
+      <div class="page-heading">
+        <h1>Courses</h1>
+        <p>Explore beginner-friendly computer and digital skills.</p>
+      </div>
+      <div class="cards" id="courseCards"></div>
+    </section>
+
+    <!-- CV & RESUME: BUILDER IS INSIDE THIS SECTION -->
+    <section class="view" id="cvView">
+      <div class="page-heading">
+        <h1>CV &amp; Resume Builder</h1>
+        <p>Enter your details below. The professional English CV preview updates automatically.</p>
+      </div>
+
+      <div class="cv-workspace">
+        <form class="form-panel no-print" id="cvForm" onsubmit="return false">
+          <h2>CV Information</h2>
+
+          <div class="form-section">Personal Information</div>
+          <div class="field">
+            <label for="cvName">Full Name *</label>
+            <input id="cvName" value="YOUR NAME" required>
+          </div>
+          <div class="field">
+            <label for="cvTitle">Professional Title</label>
+            <input id="cvTitle" value="PROFESSIONAL TITLE">
+          </div>
+          <div class="field">
+            <label for="cvPhone">Phone Number</label>
+            <input id="cvPhone" placeholder="+92 300 0000000">
+          </div>
+          <div class="field">
+            <label for="cvEmail">Email Address</label>
+            <input id="cvEmail" type="email" placeholder="name@email.com">
+          </div>
+          <div class="field">
+            <label for="cvAddress">City / Address</label>
+            <input id="cvAddress" placeholder="City, Country">
+          </div>
+          <div class="field">
+            <label for="cvPhoto">Profile Photo</label>
+            <input id="cvPhoto" type="file" accept="image/*">
+          </div>
+
+          <div class="form-section">Professional Profile</div>
+          <div class="field">
+            <label for="cvSummary">Professional Summary</label>
+            <textarea id="cvSummary">Motivated and responsible professional eager to contribute skills, learn continuously, and support a productive team.</textarea>
+          </div>
+
+          <div class="form-section">Education</div>
+          <div class="field">
+            <label for="cvEducation">Education Details</label>
+            <textarea id="cvEducation" placeholder="Qualification — Institution — Year">Your qualification — Institution name — Year</textarea>
+          </div>
+
+          <div class="form-section">Work Experience</div>
+          <div class="field">
+            <label for="cvExperience">Experience &amp; Responsibilities</label>
+            <textarea id="cvExperience" placeholder="Job title — Company — Dates">Job Title — Company — Dates
+• Describe your key responsibilities and achievements.</textarea>
+          </div>
+
+          <div class="form-section">Skills</div>
+          <div class="field">
+            <label for="cvSkills">Skills (one per line)</label>
+            <textarea id="cvSkills">Communication
+Microsoft Office
+Teamwork</textarea>
+          </div>
+
+          <div class="field">
+            <label for="cvLanguages">Languages</label>
+            <input id="cvLanguages" placeholder="English, Urdu, Pashto">
+          </div>
+
+          <div class="form-section">Certifications &amp; References</div>
+          <div class="field">
+            <label for="cvReferences">Additional Details</label>
+            <textarea id="cvReferences">References available upon request.</textarea>
+          </div>
+
+          <div class="actions">
+            <button type="button" class="save" onclick="printCV()">Save / Print PDF</button>
+            <button type="button" class="save" onclick="downloadText()">Download Text</button>
+            <button type="button" class="clear" onclick="clearCV()">Clear Form</button>
+          </div>
+          <p style="font-size:12px;color:#68788d;line-height:1.6">
+            To save a PDF, choose “Save as PDF” in the browser's print window.
+            Your CV is generated locally; no AI API is used.
+          </p>
+        </form>
+
+        <!-- LIVE CV PREVIEW -->
         <div>
-          <h2>Digital Services</h2>
-          <p lang="ur">اپنی ضرورت کی سروس منتخب کریں۔</p>
+          <div class="preview-label">LIVE PREVIEW · MODERN BLUE · A4</div>
+          <article class="cv-paper" id="cvPaper">
+            <aside class="cv-sidebar">
+              <img id="previewPhoto" class="cv-photo" alt="Profile photo"
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='230'%3E%3Crect width='200' height='230' fill='%23dceaff'/%3E%3Ccircle cx='100' cy='75' r='40' fill='%239ab7dc'/%3E%3Cpath d='M20 220 Q25 125 100 125 Q175 125 180 220' fill='%239ab7dc'/%3E%3C/svg%3E">
+
+              <div class="side-title">CONTACT</div>
+              <div class="cv-contact" id="prevPhone">☎ Phone</div>
+              <div class="cv-contact" id="prevEmail">✉ Email</div>
+              <div class="cv-contact" id="prevAddress">⌖ City, Country</div>
+
+              <div class="side-title">SKILLS</div>
+              <div class="side-text" id="prevSkills">Communication
+Microsoft Office
+Teamwork</div>
+
+              <div class="side-title">LANGUAGES</div>
+              <div class="side-text" id="prevLanguages">English, Urdu</div>
+            </aside>
+
+            <div class="cv-content">
+              <h1 class="cv-name" id="prevName">YOUR NAME</h1>
+              <div class="cv-title" id="prevTitle">PROFESSIONAL TITLE</div>
+
+              <section class="cv-section">
+                <h3>PROFESSIONAL PROFILE</h3>
+                <div class="cv-body" id="prevSummary">Motivated and responsible professional eager to contribute skills, learn continuously, and support a productive team.</div>
+              </section>
+
+              <section class="cv-section">
+                <h3>EDUCATION</h3>
+                <div class="cv-body" id="prevEducation">Your qualification — Institution name — Year</div>
+              </section>
+
+              <section class="cv-section">
+                <h3>WORK EXPERIENCE</h3>
+                <div class="cv-body" id="prevExperience">Job Title — Company — Dates
+• Describe your key responsibilities and achievements.</div>
+              </section>
+
+              <section class="cv-section">
+                <h3>CERTIFICATIONS &amp; REFERENCES</h3>
+                <div class="cv-body" id="prevReferences">References available upon request.</div>
+              </section>
+            </div>
+          </article>
         </div>
-        <input class="search" id="serviceSearch" placeholder="Search services..." aria-label="Search services">
-      </div>
-      <div class="service-grid" id="serviceGrid"></div>
-    </section>
-
-    <section class="section" id="coursesSection">
-      <div class="section-head">
-        <div>
-          <h2>Online Learning Courses</h2>
-          <p lang="ur">نئے ہنر سیکھیں اور اپنی پیش رفت دیکھیں۔</p>
-        </div>
-        <input class="search" id="courseSearch" placeholder="Search courses..." aria-label="Search courses">
-      </div>
-      <div class="course-grid" id="courseGrid"></div>
-    </section>
-
-    <section class="section" id="learningSection">
-      <div class="section-head">
-        <div>
-          <h2>My Learning</h2>
-          <p lang="ur">اپنے کورسز اور مکمل کیے گئے لیسنز دیکھیں۔</p>
-        </div>
-      </div>
-      <div id="learningList" class="course-grid"></div>
-    </section>
-
-    <section class="section" id="accountSection">
-      <div class="section-head">
-        <div>
-          <h2>My Account</h2>
-          <p lang="ur">اپنی لاگ اِن معلومات دیکھیں۔</p>
-        </div>
-      </div>
-      <div class="panel" id="accountPanel">
-        <p class="muted" lang="ur">اکاؤنٹ کی معلومات کے لیے لاگ اِن کریں۔</p>
-        <button class="btn primary" onclick="openAuth('login')">Login / Register</button>
       </div>
     </section>
 
-    <section class="section hidden" id="courseDetailSection">
-      <div class="panel">
-        <button class="btn" id="backToCoursesBtn">← Back to Courses</button>
-        <div id="courseDetailContent" style="margin-top:18px"></div>
+    <!-- CONTACT -->
+    <section class="view" id="contactView">
+      <div class="page-heading">
+        <h1>Contact Us</h1>
+        <p>Contact Nexa Business Hub for service details and support.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💬</div>
+        <h2>WhatsApp Support</h2>
+        <p>Message us for information about available services.</p>
+        <a class="btn" href="https://wa.me/923342709019" target="_blank" rel="noopener">0334-2709019</a>
       </div>
     </section>
 
+    <footer>© <span id="year"></span> Nexa Business Hub</footer>
   </main>
 </div>
 
-<footer>
-  © <span id="year"></span> Nexa Business Hub · Learn, Create, Grow
-  <p lang="ur">رابطہ برائے معلومات: 0334-2709019</p>
-</footer>
-</div>
-
-<!-- Authentication -->
-<div class="auth-overlay hidden" id="authOverlay">
-  <div class="auth-card">
-    <div class="section-head">
-      <div>
-        <h2 id="authHeading">Welcome Back</h2>
-        <p class="muted small">Sign in to your Nexa account</p>
-      </div>
-      <button class="btn" id="closeAuthBtn" aria-label="Close">✕</button>
-    </div>
-
-    <div class="auth-tabs">
-      <button class="btn primary" id="showLoginBtn">Login</button>
-      <button class="btn" id="showRegisterBtn">Register</button>
-    </div>
-
-    <form id="authForm">
-      <div class="field-wrap hidden" id="authNameWrap" style="margin-bottom:12px">
-        <label for="authName">Full name</label>
-        <input class="field" id="authName" autocomplete="name" maxlength="100" placeholder="Your name">
-      </div>
-
-      <div class="field-wrap" style="margin-bottom:12px">
-        <label for="authEmail">Email address</label>
-        <input class="field" id="authEmail" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com">
-      </div>
-
-      <div class="field-wrap" id="authPasswordWrap" style="margin-bottom:12px">
-        <label for="authPassword">Password</label>
-        <input class="field" id="authPassword" type="password" autocomplete="current-password" minlength="6" required placeholder="At least 6 characters">
-      </div>
-
-      <button class="btn primary" type="submit" id="authSubmitBtn" style="width:100%">Login</button>
-      <button class="btn" type="button" id="forgotPasswordBtn" style="width:100%;margin-top:8px">Forgot password?</button>
-      <div id="authNotice" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-
-<div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
-
-<!-- WhatsApp Contact -->
-<a
-  class="whatsapp-float"
-  href="https://wa.me/923342709019"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Contact Nexa Business Hub on WhatsApp"
->
-  <span class="whatsapp-icon">✆</span>
-  <span>WhatsApp: 0334-2709019</span>
-</a>
-
 <script>
-"use strict";
-
-/* SUPABASE AUTHENTICATION CONFIGURATION */
-const SUPABASE_URL = "https://njfobttocvkjsrvlcjaj.supabase.co";
-const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_EkEFOVho4ryOYcIOVAqMhQ_z9yoD9TB";
-
-let supabaseClient = null;
-
-if (window.supabase) {
-  supabaseClient = window.supabase.createClient(
-    SUPABASE_URL,
-    SUPABASE_PUBLISHABLE_KEY
-  );
-}
-
-/* No AI generator or /api/generate endpoint is used. */
-
 const services = [
-{id:"logo",icon:"🎨",name:"Logo Design",ur:"لوگو ڈیزائن",desc:"لوگو کے آئیڈیاز، برانڈنگ اور ڈیزائن بریف۔"},
-{id:"poster",icon:"🖼️",name:"Poster & Banner Design",ur:"پوسٹر اور بینر",desc:"اشتہارات اور کاروباری بینرز کی ڈیزائننگ۔"},
-{id:"card",icon:"💳",name:"Visiting Card",ur:"وزٹنگ کارڈ",desc:"پروفیشنل بزنس کارڈ کی تیاری۔"},
-{id:"letterhead",icon:"📄",name:"Letterhead & Envelope",ur:"لیٹر ہیڈ اور لفافہ",desc:"آفیشل لیٹر ہیڈ اور لفافے کی تیاری۔"},
-{id:"invitation",icon:"💌",name:"Invitation & Greeting Cards",ur:"دعوت نامے اور کارڈز",desc:"تقریبات کے دعوت نامے اور مبارک باد کے کارڈز۔"},
-{id:"social",icon:"📱",name:"Social Media Posts",ur:"سوشل میڈیا پوسٹس",desc:"سوشل میڈیا کے لیے پوسٹس اور ڈیزائن۔"},
-{id:"typing",icon:"⌨️",name:"Urdu & English Typing",ur:"اردو اور انگلش ٹائپنگ",desc:"اردو اور انگلش ٹائپنگ اور فارمیٹنگ۔"},
-{id:"official",icon:"🏛️",name:"Applications & Official Letters",ur:"درخواستیں اور سرکاری خطوط",desc:"رسمی درخواستوں اور دفتری خطوط کی تیاری۔"},
-{id:"cv",icon:"📑",name:"CV & Resume",ur:"سی وی اور ریزیومے",desc:"پروفیشنل CV اور ریزیومے کی فارمیٹنگ۔"},
-{id:"forms",icon:"📝",name:"Form Filling Guide",ur:"فارم بھرنے میں مدد",desc:"فارم کے خانے سمجھنے اور معلومات ترتیب دینے میں مدد۔"},
-{id:"pdf",icon:"📕",name:"PDF Creation & Editing",ur:"پی ڈی ایف",desc:"PDF دستاویزات کی ترتیب اور فارمیٹنگ۔"},
-{id:"scan",icon:"🖨️",name:"Scanning & Printing",ur:"اسکیننگ اور پرنٹنگ",desc:"دستاویزات کی اسکیننگ اور پرنٹنگ۔"},
-{id:"jobs",icon:"💼",name:"Online Job Applications",ur:"آن لائن جاب درخواستیں",desc:"نوکری کے فارم اور دستاویزات میں مدد۔"},
-{id:"admission",icon:"🎓",name:"Admission Forms",ur:"داخلہ فارم",desc:"تعلیمی اداروں کے داخلہ فارم کی تیاری۔"},
-{id:"registration",icon:"🗂️",name:"Online Registration",ur:"آن لائن رجسٹریشن",desc:"آن لائن رجسٹریشن کے مراحل میں رہنمائی۔"},
-{id:"exam",icon:"📚",name:"Examination Forms",ur:"امتحانی فارم",desc:"امتحانی فارم اور متعلقہ معلومات کی ترتیب۔"},
-{id:"appointment",icon:"📅",name:"Online Appointments",ur:"آن لائن اپائنٹمنٹ",desc:"اپائنٹمنٹ کی درخواست اور ضروری تیاری۔"},
-{id:"otherapps",icon:"🌐",name:"Other Online Applications",ur:"دیگر آن لائن درخواستیں",desc:"مختلف آن لائن درخواستوں میں رہنمائی۔"},
-{id:"passport",icon:"📸",name:"Passport Size Photo Guide",ur:"پاسپورٹ سائز تصویر",desc:"پاسپورٹ سائز تصویر کی تیاری۔"},
-{id:"enhance",icon:"✨",name:"Photo Enhancement",ur:"تصویر بہتر بنانا",desc:"تصویر کی روشنی اور وضاحت بہتر کرنا۔"},
-{id:"background",icon:"🌄",name:"Photo Background Change",ur:"تصویر کا بیک گراؤنڈ",desc:"تصویر کے پس منظر کی تبدیلی۔"},
-{id:"resize",icon:"📐",name:"Photo Crop & Resize",ur:"تصویر کراپ اور ری سائز",desc:"تصویر کو مطلوبہ سائز میں ترتیب دینا۔"},
-{id:"collage",icon:"🧩",name:"Photo Collage",ur:"تصاویر کا کولاج",desc:"متعدد تصاویر کو ایک ڈیزائن میں ترتیب دینا۔"},
-{id:"data",icon:"📊",name:"Data Entry",ur:"ڈیٹا انٹری",desc:"ریکارڈز اور ڈیٹا منظم انداز میں درج کرنا۔"},
-{id:"office",icon:"🧮",name:"Excel & Word Work",ur:"ایکسل اور ورڈ",desc:"Word دستاویزات اور Excel شیٹس کی تیاری۔"},
-{id:"presentation",icon:"📽️",name:"Presentations",ur:"پریزنٹیشنز",desc:"پروفیشنل پریزنٹیشنز کی ترتیب۔"},
-{id:"page",icon:"📣",name:"Social Media Page Design",ur:"سوشل میڈیا پیج",desc:"سوشل میڈیا پیج کی بنیادی سیٹنگ اور ڈیزائن۔"},
-{id:"custom",icon:"⚙️",name:"Custom Digital Work",ur:"دیگر ڈیجیٹل کام",desc:"حسبِ ضرورت دوسرے ڈیجیٹل کام۔"}
+  ["🖨️","Printing & Scanning","Print, scan and prepare documents."],
+  ["⌨️","Composing & Typing","Document typing and formatting."],
+  ["📝","Online Applications","Assistance with online forms."],
+  ["🎓","Admission Applications","Education admission form assistance."],
+  ["💼","Job Applications","Prepare job application documents."],
+  ["📑","Certificates & Forms","Document preparation assistance."],
+  ["📊","Data Entry","Basic spreadsheet and data entry."],
+  ["📃","Letters & Applications","Professional letter preparation."],
+  ["🗂️","PDF Tools","PDF document preparation."],
+  ["📧","Email Assistance","Email and attachment assistance."],
+  ["🎨","Poster Design","Promotional poster design."],
+  ["🔰","Logo Design","Basic branding and logo design."]
 ];
 
 const courses = [
-{id:"computer",icon:"💻",name:"Computer Basics",ur:"کمپیوٹر کی بنیادی تعلیم",level:"Beginner",duration:"4 weeks",desc:"کمپیوٹر استعمال کرنے کی بنیادی مہارتیں۔",lessons:[
-["کمپیوٹر کا تعارف","کمپیوٹر، ہارڈویئر اور سافٹ ویئر کی بنیادی سمجھ۔"],
-["Keyboard and Mouse","کی بورڈ، ماؤس اور عام شارٹ کٹس۔"],
-["Files and Folders","فائلیں محفوظ کرنا اور فولڈرز منظم کرنا۔"],
-["Windows Basics","ڈیسک ٹاپ، سیٹنگز اور عام کام۔"],
-["Internet Safety","محفوظ براؤزنگ اور فراڈ سے بچاؤ۔"],
-["Practice Project","اپنی فائلیں منظم کرکے ایک سادہ پروجیکٹ بنائیں۔"]
-]},
-{id:"msoffice",icon:"📊",name:"MS Office",ur:"ایم ایس آفس",level:"Beginner",duration:"6 weeks",desc:"Word، Excel اور PowerPoint کا تعارف۔",lessons:[
-["MS Word Basics","دستاویز، فونٹ، پیراگراف اور صفحہ سیٹ اپ۔"],
-["Word Formatting","ہیڈنگز، ٹیبلز، تصاویر اور پرنٹ سیٹنگز۔"],
-["Excel Basics","ورک بک، سیل، قطاریں اور کالم۔"],
-["Excel Formulas","SUM، AVERAGE اور بنیادی فارمولے۔"],
-["PowerPoint Basics","سلائیڈز اور پریزنٹیشن ڈیزائن۔"],
-["Office Practice Project","ایک خط، شیٹ اور پریزنٹیشن بنائیں۔"]
-]},
-{id:"typing",icon:"⌨️",name:"Urdu & English Typing",ur:"اردو اور انگلش ٹائپنگ",level:"Beginner",duration:"4 weeks",desc:"ٹائپنگ کی رفتار، درستگی اور فارمیٹنگ۔",lessons:[
-["Keyboard Familiarity","کی بورڈ کی ترتیب اور ہاتھوں کی درست پوزیشن۔"],
-["English Typing Practice","انگلش ٹائپنگ کی مشق۔"],
-["Urdu Keyboard Basics","اردو کی بورڈ اور عام حروف۔"],
-["Urdu Text Formatting","اردو متن اور فونٹ کی فارمیٹنگ۔"],
-["Accuracy Practice","غلطیوں کی شناخت اور درستگی۔"],
-["Typing Project","اردو اور انگلش میں ایک صفحہ بنائیں۔"]
-]},
-{id:"graphic",icon:"🎨",name:"Graphic Designing",ur:"گرافک ڈیزائننگ",level:"Beginner",duration:"6 weeks",desc:"رنگ، ٹائپوگرافی، پوسٹر اور لوگو ڈیزائن۔",lessons:[
-["Design Principles","توازن، کنٹراسٹ اور ترتیب۔"],
-["Color and Typography","رنگ اور فونٹ کا انتخاب۔"],
-["Social Media Post","سوشل میڈیا پوسٹ کا لے آؤٹ۔"],
-["Poster Design","پوسٹر اور متن کی ترتیب۔"],
-["Logo Concepts","لوگو کی اقسام اور بنیادی اصول۔"],
-["Portfolio Project","تین نمونے بنا کر پورٹ فولیو تیار کریں۔"]
-]},
-{id:"web",icon:"🌐",name:"Web Development",ur:"ویب ڈویلپمنٹ",level:"Beginner",duration:"8 weeks",desc:"HTML، CSS اور JavaScript کا تعارف۔",lessons:[
-["How Websites Work","براؤزر اور ویب پیج کا تعارف۔"],
-["HTML Structure","ہیڈنگز، پیراگراف، لنکس اور تصاویر۔"],
-["HTML Forms","ان پٹ، بٹن اور فارم۔"],
-["CSS Styling","رنگ، فاصلے اور لے آؤٹ۔"],
-["Responsive Design","موبائل کے لیے ڈیزائن۔"],
-["JavaScript Basics","متغیرات، فنکشنز اور ایونٹس۔"],
-["DOM Interaction","بٹن کلک اور صفحے کا مواد بدلنا۔"],
-["Website Project","ایک سادہ ویب سائٹ بنائیں۔"]
-]},
-{id:"ai",icon:"🤖",name:"AI & Prompt Engineering",ur:"اے آئی اور پرامپٹ انجینئرنگ",level:"Beginner",duration:"3 weeks",desc:"AI ٹیکنالوجی اور ہدایات لکھنے کا تعارف۔",lessons:[
-["AI Fundamentals","AI کی صلاحیتیں اور محدودیتیں۔"],
-["Writing Prompts","مقصد، سیاق و سباق اور فارمیٹ۔"],
-["Better Instructions","واضح ہدایات اور مثالوں کا استعمال۔"],
-["AI for Documents","دستاویزات کے کام میں AI کا تعارف۔"],
-["Fact Checking","نتائج کی تصدیق اور غلطیوں کی شناخت۔"],
-["Prompt Project","مفید پرامپٹس کا مجموعہ تیار کریں۔"]
-]},
-{id:"freelancing",icon:"💼",name:"Freelancing",ur:"فری لانسنگ",level:"Beginner",duration:"4 weeks",desc:"مہارت، پورٹ فولیو اور کلائنٹ کمیونیکیشن۔",lessons:[
-["Freelancing Basics","فری لانسنگ کے مواقع اور ذمہ داریاں۔"],
-["Choose a Skill","اپنی دلچسپی کے مطابق مہارت منتخب کریں۔"],
-["Portfolio Building","نمونے اور پروجیکٹس منظم کریں۔"],
-["Client Communication","کلائنٹ کی ضروریات سمجھیں۔"],
-["Pricing and Scope","کام، ڈیڈ لائن اور قیمت واضح کریں۔"],
-["Freelance Project Plan","ایک فرضی پروجیکٹ کی منصوبہ بندی۔"]
-]},
-{id:"digitalmarketing",icon:"📣",name:"Digital Marketing",ur:"ڈیجیٹل مارکیٹنگ",level:"Beginner",duration:"5 weeks",desc:"سوشل میڈیا اور بنیادی مارکیٹنگ۔",lessons:[
-["Marketing Fundamentals","آڈینس، مقصد اور برانڈ۔"],
-["Content Planning","مواد کا کیلنڈر اور موضوعات۔"],
-["Social Media Basics","پلیٹ فارمز اور پوسٹ کی اقسام۔"],
-["Copywriting","مؤثر مارکیٹنگ تحریر۔"],
-["Analytics Basics","ریچ اور انگیجمنٹ کا مطلب۔"],
-["Campaign Project","ایک مختصر مارکیٹنگ مہم بنائیں۔"]
-]},
-{id:"video",icon:"🎬",name:"Video Editing",ur:"ویڈیو ایڈیٹنگ",level:"Beginner",duration:"4 weeks",desc:"کلپس، ٹرانزیشن، آڈیو اور ٹائٹلز۔",lessons:[
-["Editing Fundamentals","ٹائم لائن اور کلپس۔"],
-["Cut and Trim","کلپس کاٹنا اور غیر ضروری حصے ہٹانا۔"],
-["Titles and Captions","ٹائٹلز اور سب ٹائٹلز لگانا۔"],
-["Audio Basics","آواز کی سطح اور بیک گراؤنڈ آڈیو۔"],
-["Export Settings","ویڈیو فارمیٹ اور ریزولوشن۔"],
-["Short Video Project","ایک مختصر ویڈیو تیار کریں۔"]
-]},
-{id:"business",icon:"🏢",name:"Business Planning",ur:"بزنس پلاننگ",level:"Beginner",duration:"3 weeks",desc:"کاروباری آئیڈیا سے بنیادی پلان تک۔",lessons:[
-["Business Idea","مسئلہ، حل اور کسٹمر کی شناخت۔"],
-["Market Research","مارکیٹ کا بنیادی جائزہ۔"],
-["Costs and Pricing","اخراجات اور قیمت کی منصوبہ بندی۔"],
-["Promotion Plan","مارکیٹنگ کے بنیادی طریقے۔"],
-["Customer Service","کسٹمر کی ضرورت اور فیڈبیک۔"],
-["Business Plan Project","مختصر کاروباری پلان بنائیں۔"]
-]},
-{id:"cyber",icon:"🔐",name:"Cyber Safety",ur:"آن لائن حفاظت",level:"Beginner",duration:"2 weeks",desc:"پاس ورڈ، پرائیویسی اور فراڈ سے بچاؤ۔",lessons:[
-["Online Threats","عام آن لائن خطرات کی شناخت۔"],
-["Strong Passwords","منفرد اور مضبوط پاس ورڈ۔"],
-["Phishing Awareness","مشکوک پیغامات کی شناخت۔"],
-["Account Security","دو مرحلہ تصدیق اور ریکوری۔"],
-["Privacy Settings","ایپس کی اجازتیں اور پرائیویسی۔"],
-["Safety Checklist","آن لائن حفاظت کی فہرست بنائیں۔"]
-]},
-{id:"english",icon:"🗣️",name:"English Communication",ur:"انگلش کمیونیکیشن",level:"Beginner",duration:"5 weeks",desc:"روزمرہ انگلش اور پروفیشنل تحریر۔",lessons:[
-["Everyday Vocabulary","عام الفاظ اور ان کے استعمال۔"],
-["Simple Sentences","سادہ جملے اور بنیادی گرامر۔"],
-["Reading Practice","مختصر پیراگراف سمجھنا۔"],
-["Email Writing","پروفیشنل ای میل کی ساخت۔"],
-["Conversation Practice","روزمرہ گفتگو کے مفید جملے۔"],
-["Writing Project","مختصر تعارف اور رسمی ای میل لکھیں۔"]
-]}
+  ["⌨️","Computer Basics","Learn essential computer operations."],
+  ["📝","MS Word","Create and format professional documents."],
+  ["📊","MS Excel","Learn spreadsheets and formulas."],
+  ["📽️","PowerPoint","Create clear presentations."],
+  ["🌐","Internet Basics","Learn safe internet use."],
+  ["📧","Email Skills","Write and manage emails."],
+  ["🎨","Graphic Design Basics","Learn basic design principles."],
+  ["📄","CV Writing","Prepare a professional resume."],
+  ["⌨️","Typing Practice","Improve typing accuracy."],
+  ["📂","PDF Tools","Organize digital documents."],
+  ["💻","Digital Skills","Build everyday digital skills."],
+  ["🔐","Online Safety","Learn about privacy and passwords."]
 ];
 
-const state = {
-  user:null,
-  authMode:"login",
-  isUrdu:false,
-  currentCourse:null,
-  toastTimer:null
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, char => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;",
+    '"':"&quot;", "'":"&#39;"
+  }[char]));
+}
+
+function card(item, action, buttonText) {
+  return `<article class="card">
+    <div class="card-icon">${item[0]}</div>
+    <h3>${escapeHTML(item[1])}</h3>
+    <p>${escapeHTML(item[2])}</p>
+    <button onclick="${action}">${buttonText}</button>
+  </article>`;
+}
+
+document.getElementById("serviceCards").innerHTML = services.map(item =>
+  card(item, `contactService('${item[1].replace(/'/g,"\\'")}')`, "Ask about service →")
+).join("");
+
+document.getElementById("courseCards").innerHTML = courses.map(item =>
+  card(item, `contactCourse('${item[1].replace(/'/g,"\\'")}')`, "Course details →")
+).join("");
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function showView(id) {
+  document.querySelectorAll(".view").forEach(view => {
+    view.classList.toggle("active", view.id === id);
+  });
+  document.querySelectorAll(".nav-btn").forEach(button => {
+    button.classList.toggle("active", button.dataset.view === id);
+  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function contactService(name) {
+  const message = encodeURIComponent("Hello Nexa Business Hub, I want to ask about " + name + ".");
+  window.open("https://wa.me/923342709019?text=" + message, "_blank", "noopener");
+}
+
+function contactCourse(name) {
+  const message = encodeURIComponent("Hello Nexa Business Hub, please share details about " + name + ".");
+  window.open("https://wa.me/923342709019?text=" + message, "_blank", "noopener");
+}
+
+/* Live CV preview */
+const bindings = {
+  cvName: "prevName",
+  cvTitle: "prevTitle",
+  cvSummary: "prevSummary",
+  cvEducation: "prevEducation",
+  cvExperience: "prevExperience",
+  cvSkills: "prevSkills",
+  cvLanguages: "prevLanguages",
+  cvReferences: "prevReferences"
 };
 
-const $ = id => document.getElementById(id);
+const fallback = {
+  cvName: "YOUR NAME",
+  cvTitle: "PROFESSIONAL TITLE",
+  cvSummary: "Add your professional summary.",
+  cvEducation: "Add your education details.",
+  cvExperience: "Add your work experience.",
+  cvSkills: "Add your skills.",
+  cvLanguages: "Add your languages.",
+  cvReferences: "Add certifications or references."
+};
 
-function escapeHTML(value) {
-  return String(value ?? "").replace(/[&<>"']/g,c => ({
-    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
-  }[c]));
-}
-
-function notify(message) {
-  const toast = $("toast");
-  toast.textContent = message;
-  toast.classList.remove("hidden");
-  clearTimeout(state.toastTimer);
-  state.toastTimer = setTimeout(() => toast.classList.add("hidden"),3500);
-}
-
-function showNotice(targetId,message,type="") {
-  const target = $(targetId);
-  target.innerHTML = "";
-  if (!message) return;
-  const box = document.createElement("div");
-  box.className = "notice " + type;
-  box.textContent = message;
-  target.appendChild(box);
-}
-
-function showSection(sectionId) {
-  const section = $(sectionId);
-  if (!section) return;
-  section.scrollIntoView({behavior:"smooth",block:"start"});
-
-  document.querySelectorAll(".nav-btn").forEach(btn => {
-    btn.classList.toggle("active",btn.dataset.section === sectionId);
+Object.entries(bindings).forEach(([inputId, previewId]) => {
+  const input = document.getElementById(inputId);
+  input.addEventListener("input", () => {
+    document.getElementById(previewId).textContent =
+      input.value.trim() || fallback[inputId];
   });
-}
-
-document.querySelectorAll(".nav-btn").forEach(btn => {
-  btn.addEventListener("click",() => showSection(btn.dataset.section));
 });
 
-/* DIGITAL SERVICES */
-function renderServices(filter="") {
-  const grid = $("serviceGrid");
-  const q = filter.toLowerCase().trim();
+const contactBindings = [
+  ["cvPhone", "prevPhone", "☎ ", "☎ Phone"],
+  ["cvEmail", "prevEmail", "✉ ", "✉ Email"],
+  ["cvAddress", "prevAddress", "⌖ ", "⌖ City, Country"]
+];
 
-  const list = services.filter(s =>
-    [s.name,s.ur,s.desc].join(" ").toLowerCase().includes(q)
-  );
+contactBindings.forEach(([inputId, previewId, icon, placeholder]) => {
+  document.getElementById(inputId).addEventListener("input", function() {
+    document.getElementById(previewId).textContent =
+      this.value.trim() ? icon + this.value.trim() : placeholder;
+  });
+});
 
-  grid.innerHTML = "";
+/* Profile photo upload */
+document.getElementById("cvPhoto").addEventListener("change", function() {
+  const file = this.files && this.files[0];
+  if (!file) return;
 
-  if (!list.length) {
-    grid.innerHTML = '<div class="empty">No matching services found.</div>';
+  if (!file.type.startsWith("image/")) {
+    alert("Please select a valid image.");
+    this.value = "";
     return;
   }
 
-  list.forEach(s => {
-    const card = document.createElement("article");
-    card.className = "item-card";
-    card.innerHTML = `
-      <div class="item-icon">${s.icon}</div>
-      <h3>${escapeHTML(s.name)}</h3>
-      <span class="pill" lang="ur">${escapeHTML(s.ur)}</span>
-      <p lang="ur">${escapeHTML(s.desc)}</p>
-      <button class="btn" type="button">WhatsApp for Service</button>`;
-
-    card.querySelector("button").addEventListener("click",() => {
-      const message = encodeURIComponent(
-        "Assalam-o-Alaikum, mujhe " + s.name + " (" + s.ur + ") ki service chahiye."
-      );
-      window.open("https://wa.me/923342709019?text=" + message,"_blank","noopener,noreferrer");
-    });
-
-    grid.appendChild(card);
-  });
-}
-
-/* COURSES */
-function renderCourses(filter="") {
-  const grid = $("courseGrid");
-  const q = filter.toLowerCase().trim();
-
-  const list = courses.filter(c =>
-    [c.name,c.ur,c.desc,c.level].join(" ").toLowerCase().includes(q)
-  );
-
-  grid.innerHTML = "";
-
-  if (!list.length) {
-    grid.innerHTML = '<div class="empty">No matching courses found.</div>';
-    return;
-  }
-
-  list.forEach(c => {
-    const card = document.createElement("article");
-    card.className = "item-card";
-    card.innerHTML = `
-      <div class="item-icon">${c.icon}</div>
-      <h3>${escapeHTML(c.name)}</h3>
-      <span class="pill" lang="ur">${escapeHTML(c.ur)}</span>
-      <p lang="ur">${escapeHTML(c.desc)}</p>
-      <div class="course-meta">
-        <span class="pill">${escapeHTML(c.level)}</span>
-        <span class="pill">${escapeHTML(c.duration)}</span>
-        <span class="pill">${c.lessons.length} Lessons</span>
-      </div>
-      <button class="btn primary" type="button">Start Learning →</button>`;
-
-    card.querySelector("button").addEventListener("click",() => openCourse(c.id));
-    grid.appendChild(card);
-  });
-}
-
-/* COURSE PROGRESS */
-function localProgressKey() {
-  return state.user ? "nexa-progress:" + state.user.id : null;
-}
-
-function getProgress() {
-  const key = localProgressKey();
-  if (!key) return {};
-
-  try {
-    return JSON.parse(localStorage.getItem(key) || "{}");
-  } catch {
-    return {};
-  }
-}
-
-function saveProgress(progress) {
-  const key = localProgressKey();
-
-  if (!key) {
-    notify("پیش رفت محفوظ کرنے کے لیے پہلے Login کریں۔");
-    return false;
-  }
-
-  try {
-    localStorage.setItem(key,JSON.stringify(progress));
-    return true;
-  } catch {
-    notify("Progress محفوظ نہیں ہو سکی۔");
-    return false;
-  }
-}
-
-function openCourse(courseId) {
-  const course = courses.find(c => c.id === courseId);
-  if (!course) return;
-
-  state.currentCourse = courseId;
-  $("courseDetailSection").classList.remove("hidden");
-
-  const progress = getProgress();
-  const completed = new Set(progress[courseId] || []);
-  const doneCount = completed.size;
-  const percent = Math.round(doneCount / course.lessons.length * 100);
-
-  $("courseDetailContent").innerHTML = `
-    <div style="font-size:42px">${course.icon}</div>
-    <h2>${escapeHTML(course.name)}</h2>
-    <p class="muted" lang="ur">${escapeHTML(course.ur)} · ${escapeHTML(course.level)} · ${escapeHTML(course.duration)}</p>
-    <p lang="ur">${escapeHTML(course.desc)}</p>
-    <div class="section-head">
-      <strong>Course Progress</strong>
-      <span>${doneCount}/${course.lessons.length} Lessons · ${percent}%</span>
-    </div>
-    <div class="progress-track"><div class="progress-bar" style="width:${percent}%"></div></div>
-    <div class="notice" lang="ur">ہر سبق مکمل ہونے پر اس کے سامنے موجود چیک باکس منتخب کریں۔</div>
-    <div class="lesson-list" id="lessonList"></div>
-    <div class="actions" style="margin-top:15px">
-      <button class="btn primary" id="continueLessonBtn">Continue Learning</button>
-      <button class="btn" id="resetProgressBtn">Reset Progress</button>
-    </div>`;
-
-  const lessonList = $("lessonList");
-
-  course.lessons.forEach((lesson,index) => {
-    const row = document.createElement("label");
-    row.className = "lesson" + (completed.has(index) ? " done" : "");
-
-    row.innerHTML = `
-      <input type="checkbox" ${completed.has(index) ? "checked" : ""}>
-      <span>
-        <strong>${index+1}. ${escapeHTML(lesson[0])}</strong>
-        <br><small class="muted" lang="ur">${escapeHTML(lesson[1])}</small>
-      </span>`;
-
-    row.querySelector("input").addEventListener("change",event => {
-      if (!state.user) {
-        event.target.checked = completed.has(index);
-        openAuth("login");
-        notify("اپنی پیش رفت محفوظ کرنے کے لیے Login کریں۔");
-        return;
-      }
-
-      if (event.target.checked) completed.add(index);
-      else completed.delete(index);
-
-      const latest = getProgress();
-      latest[courseId] = [...completed];
-
-      if (saveProgress(latest)) openCourse(courseId);
-    });
-
-    lessonList.appendChild(row);
-  });
-
-  $("continueLessonBtn").addEventListener("click",() => {
-    const rows = [...document.querySelectorAll("#lessonList .lesson")];
-    const next = rows.find(row => !row.querySelector("input").checked);
-
-    if (next) {
-      next.scrollIntoView({behavior:"smooth",block:"center"});
-      next.querySelector("input").focus();
-    } else {
-      notify("مبارک ہو! آپ نے اس کورس کے تمام لیسنز مکمل کر لیے ہیں۔");
-    }
-  });
-
-  $("resetProgressBtn").addEventListener("click",() => {
-    if (!state.user) return openAuth("login");
-    if (!confirm("کیا آپ اس کورس کی محفوظ شدہ پیش رفت ختم کرنا چاہتے ہیں؟")) return;
-
-    const latest = getProgress();
-    delete latest[courseId];
-    saveProgress(latest);
-    openCourse(courseId);
-  });
-
-  showSection("courseDetailSection");
-}
-
-$("backToCoursesBtn").addEventListener("click",() => {
-  $("courseDetailSection").classList.add("hidden");
-  showSection("coursesSection");
+  const reader = new FileReader();
+  reader.onload = event => {
+    document.getElementById("previewPhoto").src = event.target.result;
+  };
+  reader.readAsDataURL(file);
 });
 
-function renderMyLearning() {
-  const grid = $("learningList");
-  grid.innerHTML = "";
+/* Print or save as PDF */
+function printCV() {
+  showView("cvView");
+  setTimeout(() => window.print(), 150);
+}
 
-  if (!state.user) {
-    grid.innerHTML = '<div class="empty" lang="ur">اپنے کورسز کی پیش رفت محفوظ کرنے کے لیے Login کریں۔</div>';
-    return;
-  }
+/* Download text version */
+function downloadText() {
+  const ids = [
+    ["Full Name","cvName"],
+    ["Professional Title","cvTitle"],
+    ["Phone","cvPhone"],
+    ["Email","cvEmail"],
+    ["Address","cvAddress"],
+    ["Professional Profile","cvSummary"],
+    ["Education","cvEducation"],
+    ["Work Experience","cvExperience"],
+    ["Skills","cvSkills"],
+    ["Languages","cvLanguages"],
+    ["Certifications & References","cvReferences"]
+  ];
 
-  const progress = getProgress();
-  const started = courses.filter(c => (progress[c.id] || []).length > 0);
+  const text = ids.map(([label,id]) =>
+    label.toUpperCase() + "\n" + document.getElementById(id).value
+  ).join("\n\n");
 
-  if (!started.length) {
-    grid.innerHTML = '<div class="empty" lang="ur">آپ نے ابھی کسی کورس کی پیش رفت شروع نہیں کی۔</div>';
-    return;
-  }
+  const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  const name = document.getElementById("cvName").value.trim()
+    .replace(/[^a-z0-9]+/gi, "_") || "resume";
 
-  started.forEach(c => {
-    const count = (progress[c.id] || []).length;
-    const percent = Math.round(count / c.lessons.length * 100);
+  link.href = url;
+  link.download = name + ".txt";
+  link.click();
+  URL.revokeObjectURL(url);
+}
 
-    const card = document.createElement("article");
-    card.className = "item-card";
-    card.innerHTML = `
-      <div class="item-icon">${c.icon}</div>
-      <h3>${escapeHTML(c.name)}</h3>
-      <p>${count}/${c.lessons.length} lessons completed · ${percent}%</p>
-      <div class="progress-track"><div class="progress-bar" style="width:${percent}%"></div></div>
-      <button class="btn" type="button">Continue Course</button>`;
+/* Clear CV fields */
+function clearCV() {
+  if (!confirm("Clear all CV information?")) return;
 
-    card.querySelector("button").addEventListener("click",() => openCourse(c.id));
-    grid.appendChild(card);
+  document.getElementById("cvForm").reset();
+
+  Object.entries(bindings).forEach(([inputId, previewId]) => {
+    document.getElementById(previewId).textContent =
+      document.getElementById(inputId).value || fallback[inputId];
   });
-}
 
-/* ACCOUNT */
-function updateAccountUI() {
-  $("loginTopBtn").classList.toggle("hidden",!!state.user);
-  $("logoutBtn").classList.toggle("hidden",!state.user);
-
-  const panel = $("accountPanel");
-  panel.innerHTML = "";
-
-  if (!state.user) {
-    const p = document.createElement("p");
-    p.className = "muted";
-    p.lang = "ur";
-    p.textContent = "اکاؤنٹ کی معلومات دیکھنے کے لیے لاگ اِن کریں۔";
-    panel.appendChild(p);
-
-    const b = document.createElement("button");
-    b.className = "btn primary";
-    b.textContent = "Login / Register";
-    b.addEventListener("click",() => openAuth("login"));
-    panel.appendChild(b);
-  } else {
-    const email = document.createElement("p");
-    email.innerHTML = "<strong>Email:</strong> ";
-    const value = document.createElement("span");
-    value.textContent = state.user.email || "";
-    email.appendChild(value);
-    panel.appendChild(email);
-
-    const tip = document.createElement("div");
-    tip.className = "notice";
-    tip.lang = "ur";
-    tip.textContent = "کورس کی پیش رفت اس براؤزر میں محفوظ ہوتی ہے۔";
-    panel.appendChild(tip);
-  }
-
-  renderMyLearning();
-}
-
-/* AUTHENTICATION */
-function openAuth(mode="login") {
-  if (!supabaseClient) {
-    notify("Supabase configuration یا CDN دستیاب نہیں۔");
-    return;
-  }
-
-  setAuthMode(mode);
-  $("authOverlay").classList.remove("hidden");
-}
-
-function closeAuth() {
-  $("authOverlay").classList.add("hidden");
-  showNotice("authNotice","");
-}
-
-function setAuthMode(mode) {
-  state.authMode = mode;
-  const register = mode === "register";
-
-  $("authHeading").textContent =
-    register ? "Create Your Account" :
-    mode === "reset" ? "Reset Password" : "Welcome Back";
-
-  $("authNameWrap").classList.toggle("hidden",!register);
-  $("authPasswordWrap").classList.toggle("hidden",mode === "reset");
-  $("authPassword").required = mode !== "reset";
-
-  $("authSubmitBtn").textContent =
-    register ? "Register" :
-    mode === "reset" ? "Send Reset Email" : "Login";
-
-  $("forgotPasswordBtn").classList.toggle("hidden",register || mode === "reset");
-  $("showLoginBtn").classList.toggle("primary",!register);
-  $("showRegisterBtn").classList.toggle("primary",register);
-
-  showNotice("authNotice","");
-}
-
-$("loginTopBtn").addEventListener("click",() => openAuth("login"));
-
-$("logoutBtn").addEventListener("click",async () => {
-  if (!supabaseClient) return;
-
-  const {error} = await supabaseClient.auth.signOut();
-  if (error) return notify(error.message);
-
-  state.user = null;
-  updateAccountUI();
-  closeAuth();
-  notify("آپ Logout ہو گئے ہیں۔");
-});
-
-$("closeAuthBtn").addEventListener("click",closeAuth);
-$("showLoginBtn").addEventListener("click",() => setAuthMode("login"));
-$("showRegisterBtn").addEventListener("click",() => setAuthMode("register"));
-$("forgotPasswordBtn").addEventListener("click",() => setAuthMode("reset"));
-
-$("authOverlay").addEventListener("click",e => {
-  if (e.target === $("authOverlay")) closeAuth();
-});
-
-$("authForm").addEventListener("submit",async event => {
-  event.preventDefault();
-
-  if (!supabaseClient) {
-    return showNotice("authNotice","Supabase is not configured.","error");
-  }
-
-  const email = $("authEmail").value.trim();
-  const password = $("authPassword").value;
-  const name = $("authName").value.trim();
-  const btn = $("authSubmitBtn");
-
-  btn.disabled = true;
-  showNotice("authNotice","Please wait...");
-
-  try {
-    let result;
-
-    if (state.authMode === "register") {
-      result = await supabaseClient.auth.signUp({
-        email,
-        password,
-        options:{data:{full_name:name}}
-      });
-
-      if (!result.error && !result.data.session) {
-        showNotice("authNotice","Registration submitted. Check your email for confirmation if required.","success");
-        return;
-      }
-    } else if (state.authMode === "reset") {
-      result = await supabaseClient.auth.resetPasswordForEmail(email,{
-        redirectTo:location.origin + location.pathname
-      });
-
-      if (!result.error) {
-        showNotice("authNotice","If the account exists, a password reset email will be sent.","success");
-        return;
-      }
-    } else {
-      result = await supabaseClient.auth.signInWithPassword({email,password});
-    }
-
-    if (result.error) throw result.error;
-
-    state.user = result.data.user || null;
-    updateAccountUI();
-    closeAuth();
-    notify("Authentication successful.");
-  } catch (error) {
-    showNotice("authNotice",error.message || "Authentication failed.","error");
-  } finally {
-    btn.disabled = false;
-  }
-});
-
-/* SEARCH */
-$("serviceSearch").addEventListener("input",e => renderServices(e.target.value));
-$("courseSearch").addEventListener("input",e => renderCourses(e.target.value));
-
-/* LANGUAGE SWITCH */
-$("languageBtn").addEventListener("click",() => {
-  state.isUrdu = !state.isUrdu;
-
-  document.documentElement.lang = state.isUrdu ? "ur" : "en";
-  document.documentElement.dir = state.isUrdu ? "rtl" : "ltr";
-  document.body.classList.toggle("rtl",state.isUrdu);
-
-  $("heroTitle").textContent = state.isUrdu
-    ? "آپ کا ڈیجیٹل سروسز پلیٹ فارم"
-    : "Your Digital Services Platform";
-
-  $("heroDesc").textContent = state.isUrdu
-    ? "دفتری کام، آن لائن درخواستوں، دستاویزات اور نئے ہنر سیکھنے کے لیے اپنی مطلوبہ سروس منتخب کریں۔"
-    : "Explore digital services, document support and online learning courses in one place.";
-});
-
-/* STARTUP */
-$("year").textContent = new Date().getFullYear();
-$("courseCount").textContent = courses.length;
-$("serviceCount").textContent = services.length;
-
-async function initializeApp() {
-  renderServices();
-  renderCourses();
-  updateAccountUI();
-
-  if (!supabaseClient) {
-    $("loginTopBtn").title = "Check Supabase configuration and network connection";
-    return;
-  }
-
-  const {data,error} = await supabaseClient.auth.getSession();
-
-  if (!error) {
-    state.user = data.session?.user || null;
-    updateAccountUI();
-  }
-
-  supabaseClient.auth.onAuthStateChange((_event,session) => {
-    state.user = session?.user || null;
-    updateAccountUI();
+  contactBindings.forEach(([inputId, previewId, icon, placeholder]) => {
+    const value = document.getElementById(inputId).value.trim();
+    document.getElementById(previewId).textContent =
+      value ? icon + value : placeholder;
   });
-}
 
-initializeApp();
+  document.getElementById("previewPhoto").src =
+    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='230'%3E%3Crect width='200' height='230' fill='%23dceaff'/%3E%3Ccircle cx='100' cy='75' r='40' fill='%239ab7dc'/%3E%3Cpath d='M20 220 Q25 125 100 125 Q175 125 180 220' fill='%239ab7dc'/%3E%3C/svg%3E";
+}
 </script>
 </body>
 </html>
