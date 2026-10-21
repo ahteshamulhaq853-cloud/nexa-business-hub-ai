@@ -1,414 +1,994 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0b1220">
-<title>Nexa Business Hub AI | All-in-One Services</title>
-<meta name="description" content="AI business services, CV maker, applications, translation, letters, content creation and more.">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
-
-<style>
-:root{--bg:#0b1220;--panel:#111d30;--panel2:#17263b;--line:#2a3a52;--text:#f2f6ff;--muted:#9caec5;--accent:#49dfc5;--blue:#7199ff;--red:#ff8585}
-*{box-sizing:border-box}
-body{margin:0;background:radial-gradient(ellipse at 85% 0%,#173b50 0,transparent 32%),var(--bg);color:var(--text);font:15px Inter,Arial,sans-serif;line-height:1.6}
-button,input,textarea,select{font:inherit}
-button{cursor:pointer}
-button:disabled{opacity:.55;cursor:wait}
-a{color:var(--accent)}
-.hidden{display:none!important}
-.wrap{width:min(1250px,calc(100% - 32px));margin:auto}
-header{position:sticky;top:0;z-index:10;background:#0b1220ed;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.nav{min-height:72px;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;padding:10px 0}
-.brand{display:flex;align-items:center;gap:11px;font-size:19px;font-weight:800}
-.logo{height:43px;width:43px;border-radius:13px;background:linear-gradient(135deg,var(--accent),var(--blue));color:#071c2a;display:grid;place-items:center;font-weight:900;font-size:23px}
-.brand small{display:block;font-size:10px;letter-spacing:2px;color:var(--muted)}
-.navright{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
-.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:10px 15px;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:7px}
-.btn:hover{filter:brightness(1.15)}
-.primary{background:linear-gradient(110deg,var(--accent),#80edb7);color:#071c2a;border-color:transparent}
-.outline{background:transparent}
-.hero{padding:44px 0 25px}
-.eyebrow{display:inline-block;color:var(--accent);background:#49dfc512;border:1px solid #49dfc533;border-radius:30px;padding:6px 12px;font-size:11px;font-weight:800;letter-spacing:1px}
-h1{font-size:clamp(31px,5vw,51px);line-height:1.15;letter-spacing:-1.5px;margin:17px 0 12px}
-.gradient{background:linear-gradient(90deg,var(--accent),#91aaff);background-clip:text;color:transparent}
-.hero p{color:var(--muted);max-width:680px;margin:0}
-.stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:23px}
-.stat{border:1px solid var(--line);background:#ffffff06;border-radius:10px;padding:9px 13px;color:var(--muted);font-size:12px}
-.stat b{color:var(--text)}
-.appgrid{display:grid;grid-template-columns:225px minmax(0,1fr);gap:22px;padding:15px 0 50px;align-items:start}
-.sidebar,.panel{background:linear-gradient(145deg,#142137,#101929);border:1px solid var(--line);border-radius:17px}
-.sidebar{padding:16px;position:sticky;top:88px}
-.side-title{font-size:11px;color:var(--muted);font-weight:800;letter-spacing:1px;margin:8px 8px 12px}
-.sidebtn{display:flex;width:100%;text-align:left;gap:10px;align-items:center;border:0;border-radius:9px;padding:10px;background:transparent;color:#c5d2e5;margin:3px 0}
-.sidebtn:hover,.sidebtn.active{background:#49dfc518;color:var(--accent)}
-.content{min-width:0}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin:3px 0 18px}
-h2{font-size:22px;margin:0}
-.muted{color:var(--muted);font-size:13px}
-.search{max-width:270px}
-input,textarea,select{width:100%;background:#091321;color:var(--text);border:1px solid #30415c;border-radius:10px;padding:12px;outline:none}
-input:focus,textarea:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px #49dfc51b}
-textarea{resize:vertical;min-height:115px}
-label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}
-.field{margin-bottom:16px}
-.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
-.service{background:linear-gradient(145deg,#16253a,#111b2b);border:1px solid var(--line);border-radius:14px;padding:17px;display:flex;flex-direction:column;min-height:190px;transition:.2s}
-.service:hover{transform:translateY(-3px);border-color:#49dfc57a}
-.sicon{height:43px;width:43px;border-radius:12px;background:#49dfc51b;display:grid;place-items:center;font-size:22px;margin-bottom:12px}
-.service h3{font-size:15px;margin:0 0 6px}
-.service p{font-size:12px;color:var(--muted);margin:0 0 15px;flex:1}
-.service .btn{width:100%;font-size:12px;padding:9px}
-.panel{padding:23px}
-.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
-.badge{font-size:11px;border:1px solid #49dfc54a;color:var(--accent);border-radius:20px;padding:5px 9px}
-.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
-.full{grid-column:1/-1}
-.result{white-space:pre-wrap;overflow-wrap:anywhere;background:#081321;border:1px solid var(--line);border-radius:12px;padding:17px;min-height:90px;font-size:14px}
-.result:empty:before{content:"Your generated result will appear here.";color:#6e809a}
-.message{padding:11px 13px;border-radius:10px;margin:12px 0;font-size:13px;overflow-wrap:anywhere;white-space:pre-wrap}
-.message:empty{display:none}
-.error{background:#ff85851a;border:1px solid #ff858555;color:#ffb5b5}
-.success{background:#49dfc516;border:1px solid #49dfc54a}
-.info{background:#7199ff15;border:1px solid #7199ff44}
-.authbox{max-width:480px;margin:35px auto}
-.tabs{display:grid;grid-template-columns:1fr 1fr;background:#091321;padding:4px;border-radius:10px;margin:17px 0}
-.tab{border:0;border-radius:8px;background:transparent;color:var(--muted);padding:9px;font-weight:700}
-.tab.active{background:var(--panel2);color:var(--text)}
-.textbtn{border:0;background:none;color:var(--accent);padding:4px;text-decoration:underline}
-.ur{font-family:"Noto Nastaliq Urdu",serif;line-height:2.1}
-footer{border-top:1px solid var(--line);padding:24px 0;text-align:center;color:var(--muted);font-size:12px}
-@media(max-width:950px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}.appgrid{grid-template-columns:190px minmax(0,1fr)}}
-@media(max-width:650px){.wrap{width:calc(100% - 22px)}.appgrid{grid-template-columns:1fr}.sidebar{position:static;display:flex;gap:6px;overflow:auto;padding:8px}.side-title{display:none}.sidebtn{white-space:nowrap;width:auto;flex-shrink:0}.services{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.service{padding:12px;min-height:185px}.service h3{font-size:13px}.service p{font-size:11px}.panel{padding:16px}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.search{max-width:none;width:100%}.navright{width:100%}.navright .btn{flex:1}h1{letter-spacing:-.7px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d1b">
+  <title>Nexa Business Hub AI</title>
+  <meta name="description" content="AI tools, digital services and online learning courses in one place.">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <style>
+    :root {
+      --bg:#080d1b; --panel:#101a2e; --panel2:#14213a;
+      --line:#263650; --text:#eef4ff; --muted:#9aabc5;
+      --primary:#7c5cff; --cyan:#35d9d0; --green:#36d399;
+      --danger:#ff7777; --radius:17px;
+    }
+    * {box-sizing:border-box}
+    body {
+      margin:0; background:radial-gradient(ellipse at top,#17284a 0,#080d1b 55%);
+      color:var(--text); font-family:Arial,"Noto Sans",sans-serif;
+      min-height:100vh; line-height:1.55;
+    }
+    button,input,textarea,select {font:inherit}
+    button {cursor:pointer}
+    .hidden {display:none!important}
+    .muted {color:var(--muted)}
+    .small {font-size:12px}
+    .container {max-width:1400px;margin:auto;padding:20px}
+    .topbar {
+      display:flex;justify-content:space-between;align-items:center;
+      gap:15px;flex-wrap:wrap;padding:15px 20px;
+      border:1px solid var(--line);border-radius:20px;
+      background:#0d1527eF;margin-bottom:22px;
+    }
+    .brand {display:flex;gap:12px;align-items:center}
+    .brand-logo {
+      width:45px;height:45px;border-radius:14px;display:grid;place-items:center;
+      font-size:21px;font-weight:bold;background:linear-gradient(135deg,var(--primary),var(--cyan));
+      color:#fff;box-shadow:0 5px 25px #7c5cff35;
+    }
+    h1,h2,h3,p {margin-top:0}
+    h1 {font-size:clamp(23px,4vw,36px);margin-bottom:5px}
+    h2 {font-size:25px}
+    h3 {font-size:17px}
+    .brand p {margin:0}
+    .actions {display:flex;gap:8px;flex-wrap:wrap}
+    .btn {
+      border:1px solid var(--line);border-radius:11px;padding:10px 15px;
+      color:var(--text);background:var(--panel2);font-weight:600;
+    }
+    .btn:hover {filter:brightness(1.15)}
+    .btn.primary {background:linear-gradient(135deg,#7357ff,#4e79f7);border:0}
+    .btn.cyan {background:var(--cyan);color:#06141a;border:0}
+    .btn.danger {color:#ffaaaa}
+    .btn:disabled {opacity:.55;cursor:not-allowed}
+    .hero {
+      padding:30px;border:1px solid var(--line);border-radius:24px;
+      background:linear-gradient(120deg,#191d42,#102b40);
+      margin-bottom:22px;position:relative;overflow:hidden;
+    }
+    .hero p {max-width:700px;color:#c4d2ec}
+    .hero-tag {
+      display:inline-block;border:1px solid #514a9c;background:#292650;
+      color:#cfc6ff;border-radius:20px;padding:5px 12px;font-size:12px;margin-bottom:12px;
+    }
+    .stats {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}
+    .stat {padding:15px;background:#0c1529aa;border:1px solid #364568;border-radius:14px}
+    .stat strong {display:block;font-size:25px}
+    .stat span {font-size:12px;color:var(--muted)}
+    .layout {display:grid;grid-template-columns:235px minmax(0,1fr);gap:20px}
+    .sidebar {
+      align-self:start;position:sticky;top:15px;padding:12px;
+      background:var(--panel);border:1px solid var(--line);border-radius:18px;
+    }
+    .nav-btn {
+      display:block;width:100%;text-align:left;color:var(--muted);
+      background:transparent;border:0;border-radius:11px;padding:12px;margin:2px 0;
+    }
+    .nav-btn:hover,.nav-btn.active {background:#27234b;color:#fff}
+    .main {min-width:0}
+    .section {margin-bottom:26px;scroll-margin-top:20px}
+    .section-head {
+      display:flex;justify-content:space-between;align-items:center;
+      gap:12px;flex-wrap:wrap;margin-bottom:15px;
+    }
+    .section-head h2 {margin:0}
+    .section-head p {margin:4px 0 0;color:var(--muted);font-size:13px}
+    .search {
+      width:min(100%,330px);background:var(--panel);color:var(--text);
+      border:1px solid var(--line);border-radius:12px;padding:11px 13px;outline:none;
+    }
+    .search:focus,.field:focus {border-color:var(--primary)}
+    .service-grid,.course-grid {
+      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;
+    }
+    .item-card {
+      background:linear-gradient(145deg,#111d33,#0d1628);
+      border:1px solid var(--line);border-radius:var(--radius);
+      padding:17px;min-width:0;display:flex;flex-direction:column;gap:8px;
+      transition:transform .2s,border-color .2s;
+    }
+    .item-card:hover {transform:translateY(-2px);border-color:#6556b8}
+    .item-icon {font-size:27px}
+    .item-card h3 {margin:0}
+    .item-card p {font-size:13px;color:var(--muted);margin:0;flex:1}
+    .item-card .btn {margin-top:6px}
+    .pill {
+      display:inline-block;font-size:11px;border:1px solid #314361;
+      padding:3px 8px;border-radius:20px;color:#a9dcd9;width:max-content;
+    }
+    .course-meta {display:flex;gap:7px;flex-wrap:wrap}
+    .panel {
+      background:var(--panel);border:1px solid var(--line);
+      border-radius:18px;padding:20px;margin-bottom:18px;
+    }
+    .form-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .field-wrap {display:flex;flex-direction:column;gap:7px}
+    .field-wrap.full {grid-column:1/-1}
+    label {font-size:13px;color:#d5e0f4}
+    .field {
+      width:100%;padding:12px;background:#0a1324;color:var(--text);
+      border:1px solid var(--line);border-radius:11px;outline:none;
+    }
+    textarea.field {resize:vertical;min-height:125px}
+    select.field option {background:#101a2e}
+    .form-actions {display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
+    .result {
+      white-space:pre-wrap;overflow-wrap:anywhere;background:#091222;
+      border:1px solid var(--line);padding:18px;border-radius:14px;
+      min-height:100px;font-size:14px;line-height:1.85;
+    }
+    .notice {
+      padding:12px 14px;border:1px solid var(--line);
+      background:#0b1426;border-radius:11px;font-size:13px;margin:10px 0;
+    }
+    .notice.error {border-color:#8c414a;color:#ffb5b5}
+    .notice.success {border-color:#226c58;color:#a8f2d4}
+    .progress-track {height:7px;background:#27334a;border-radius:20px;overflow:hidden}
+    .progress-bar {height:100%;background:linear-gradient(90deg,var(--primary),var(--cyan));width:0}
+    .lesson-list {display:grid;gap:9px;margin-top:16px}
+    .lesson {
+      display:flex;align-items:center;gap:10px;padding:12px;
+      border:1px solid var(--line);border-radius:12px;background:#0b1426;
+    }
+    .lesson input {accent-color:var(--primary);width:17px;height:17px}
+    .lesson span {flex:1;font-size:14px}
+    .lesson.done {border-color:#286c5c}
+    .lesson.done span {color:#9ce6cb}
+    .empty {grid-column:1/-1;text-align:center;color:var(--muted);padding:25px}
+    footer {text-align:center;padding:28px 10px;color:var(--muted);font-size:12px}
+    .auth-overlay {
+      position:fixed;inset:0;background:#030713eF;z-index:50;
+      display:grid;place-items:center;padding:18px;overflow:auto;
+    }
+    .auth-card {
+      width:min(100%,440px);padding:25px;background:#101a2e;
+      border:1px solid var(--line);border-radius:22px;
+    }
+    .auth-tabs {display:flex;gap:8px;margin:18px 0}
+    .auth-tabs .btn {flex:1}
+    .toast {
+      position:fixed;bottom:20px;right:20px;z-index:100;
+      max-width:min(90vw,400px);background:#172640;border:1px solid #45587a;
+      padding:13px 17px;border-radius:12px;box-shadow:0 10px 35px #0008;
+    }
+    .rtl {direction:rtl;text-align:right}
+    .rtl .nav-btn {text-align:right}
+    @media(max-width:1000px) {
+      .service-grid,.course-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+      .layout {grid-template-columns:1fr}
+      .sidebar {position:static;display:flex;overflow:auto;gap:5px}
+      .nav-btn {white-space:nowrap;width:auto}
+    }
+    @media(max-width:600px) {
+      .container {padding:11px}
+      .hero {padding:20px}
+      .stats {grid-template-columns:1fr 1fr}
+      .stats .stat:last-child {grid-column:1/-1}
+      .service-grid,.course-grid,.form-grid {grid-template-columns:1fr}
+      .field-wrap.full {grid-column:auto}
+      .panel {padding:14px}
+      .section-head {align-items:stretch}
+      .search {width:100%}
+      .topbar {padding:12px}
+    }
+  </style>
 </head>
-
 <body>
-<header>
-  <div class="wrap nav">
-    <div class="brand"><div class="logo">N</div><div>NEXA<small>BUSINESS HUB AI</small></div></div>
-    <div class="navright">
-      <span id="accountLabel" class="muted">Guest mode</span>
-      <button class="btn outline" id="loginNav">Login</button>
-      <button class="btn primary" id="registerNav">Create Account</button>
-      <button class="btn outline hidden" id="logoutBtn">Logout</button>
+<div class="container">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-logo">N</div>
+      <div>
+        <h1>Nexa Business Hub AI</h1>
+        <p class="muted small">AI Tools · Digital Services · Online Learning</p>
+      </div>
     </div>
-  </div>
-</header>
+    <div class="actions">
+      <button class="btn" id="languageBtn">اردو / English</button>
+      <button class="btn" id="loginTopBtn">Login</button>
+      <button class="btn primary hidden" id="logoutBtn">Logout</button>
+    </div>
+  </header>
 
-<main class="wrap">
-<section class="hero">
-  <div class="eyebrow">✦ YOUR ALL-IN-ONE AI WORKSPACE</div>
-  <h1>Everything your business needs.<br><span class="gradient">Powered by AI.</span></h1>
-  <p>CVs, applications, official letters, translations, business content and more — create professional work from one dashboard.</p>
-  <div class="stats">
-    <div class="stat"><b id="serviceCount">24</b> services</div>
-    <div class="stat"><b>AI</b> content generation</div>
-    <div class="stat"><b>Urdu + English</b> support</div>
-  </div>
-</section>
+  <section class="hero">
+    <span class="hero-tag">YOUR DIGITAL WORKSPACE</span>
+    <h1 id="heroTitle">آپ کا AI اور ڈیجیٹل سروسز پلیٹ فارم</h1>
+    <p id="heroDesc">پروفیشنل ڈاکومنٹس تیار کریں، کاروباری آئیڈیاز حاصل کریں اور نئے ہنر سیکھیں۔ تمام اہم ٹولز ایک ہی جگہ۔</p>
+    <div class="actions">
+      <button class="btn primary" onclick="showSection('servicesSection')">Explore Services</button>
+      <button class="btn cyan" onclick="showSection('coursesSection')">Explore Courses</button>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>28</strong><span>Digital Services</span></div>
+      <div class="stat"><strong id="courseCount">12</strong><span>Learning Courses</span></div>
+      <div class="stat"><strong>AI</strong><span>Content Assistant</span></div>
+    </div>
+  </section>
 
-<section id="authSection" class="panel authbox hidden">
-  <h2 id="authTitle">Welcome to Nexa</h2>
-  <p class="muted" id="authSubtitle">Log in to your account or register.</p>
-  <div class="tabs">
-    <button class="tab active" id="loginTab">Login</button>
-    <button class="tab" id="registerTab">Register</button>
-  </div>
-  <form id="authForm">
-    <div class="field hidden" id="nameWrap"><label for="fullName">Full name</label><input id="fullName" maxlength="100" autocomplete="name"></div>
-    <div class="field"><label for="email">Email address</label><input id="email" type="email" required autocomplete="email"></div>
-    <div class="field"><label for="password">Password</label><input id="password" type="password" required minlength="8" maxlength="128" autocomplete="current-password"></div>
-    <div class="field hidden" id="confirmWrap"><label for="confirmPassword">Confirm password</label><input id="confirmPassword" type="password" minlength="8" maxlength="128"></div>
-    <label id="termsWrap" class="hidden"><input type="checkbox" id="terms" style="width:auto"> I agree to use this service responsibly.</label>
-    <button class="btn primary" style="width:100%" id="authSubmit">Login</button>
-  </form>
-  <div class="toolbar" style="margin:10px 0 0">
-    <button class="textbtn" id="forgotBtn">Forgot password?</button>
-    <button class="textbtn" id="closeAuth">Back to services</button>
-  </div>
-  <div id="authMsg" class="message"></div>
-  <div id="resetBox" class="hidden">
-    <div class="divider"></div><h3>Set a new password</h3>
-    <form id="resetForm">
-      <div class="field"><label for="newPassword">New password</label><input id="newPassword" type="password" required minlength="8"></div>
-      <div class="field"><label for="newPassword2">Confirm new password</label><input id="newPassword2" type="password" required minlength="8"></div>
-      <button class="btn primary">Update password</button>
-    </form>
-    <div id="resetMsg" class="message"></div>
-  </div>
-</section>
+  <div class="layout">
+    <aside class="sidebar">
+      <button class="nav-btn active" data-section="servicesSection">✦ AI Services</button>
+      <button class="nav-btn" data-section="coursesSection">▣ Courses</button>
+      <button class="nav-btn" data-section="generatorSection">✎ AI Generator</button>
+      <button class="nav-btn" data-section="learningSection">▶ My Learning</button>
+      <button class="nav-btn" data-section="accountSection">♙ My Account</button>
+    </aside>
 
-<div id="workspace" class="appgrid">
-  <aside class="sidebar">
-    <div class="side-title">WORKSPACE</div>
-    <button class="sidebtn active" data-view="dashboard">⌂ All Services</button>
-    <button class="sidebtn" data-view="generator">✦ AI Generator</button>
-    <button class="sidebtn" data-view="history">◷ Recent Results</button>
-  </aside>
-
-  <div class="content">
-    <section id="dashboardView">
-      <div class="section-head">
-        <div><h2>Explore Services</h2><div class="muted">Choose a service to get started.</div></div>
-        <div class="search"><input id="searchServices" placeholder="Search services..."></div>
-      </div>
-      <div class="services" id="servicesGrid"></div>
-      <div id="emptySearch" class="message info hidden">No services match your search.</div>
-    </section>
-
-    <section id="editorView" class="panel hidden">
-      <div class="toolbar">
-        <div><div class="badge" id="serviceCategory">AI SERVICE</div><h2 id="editorTitle" style="margin-top:9px">AI Generator</h2><p class="muted" id="editorDesc"></p></div>
-        <button class="btn outline" id="backBtn">← All services</button>
-      </div>
-      <form id="serviceForm">
-        <div class="formgrid">
-          <div class="field"><label for="outputLanguage">Output language</label>
-            <select id="outputLanguage"><option>English</option><option>Urdu</option><option>Roman Urdu</option><option>Pashto</option></select>
-          </div>
-          <div class="field"><label for="tone">Writing style</label>
-            <select id="tone"><option>Professional</option><option>Simple</option><option>Formal and official</option><option>Friendly</option><option>Creative</option><option>Detailed</option></select>
-          </div>
-          <div class="field full"><label id="detailsLabel" for="details">Describe what you need</label>
-            <textarea id="details" required maxlength="12000" placeholder="Enter all relevant details here..."></textarea>
-          </div>
-          <div class="field full"><label for="extra">Additional instructions (optional)</label>
-            <input id="extra" maxlength="2000" placeholder="Names, formatting, length, special requirements...">
-          </div>
+    <main class="main">
+      <section class="section" id="servicesSection">
+        <div class="section-head">
+          <div><h2>AI & Digital Services</h2><p>اپنی ضرورت کی سروس منتخب کریں۔</p></div>
+          <input class="search" id="serviceSearch" placeholder="Search services..." aria-label="Search services">
         </div>
-        <button class="btn primary" id="generateBtn">✦ Generate Result</button>
-      </form>
-      <div id="generateMsg" class="message"></div>
-      <div class="toolbar" style="margin-top:24px"><h3 style="margin:0">Your Result</h3><div class="navright"><button class="btn" id="copyResult">Copy</button><button class="btn" id="downloadResult">Download .txt</button></div></div>
-      <div id="result" class="result" aria-live="polite"></div>
-    </section>
+        <div class="service-grid" id="serviceGrid"></div>
+      </section>
 
-    <section id="historyView" class="panel hidden">
-      <div class="toolbar"><div><h2>Recent Results</h2><p class="muted">Results from this browser session.</p></div><button class="btn outline" id="clearHistory">Clear history</button></div>
-      <div id="historyList" class="muted">Your generated results will appear here.</div>
-    </section>
+      <section class="section" id="coursesSection">
+        <div class="section-head">
+          <div><h2>Online Learning Courses</h2><p>نئے ہنر سیکھیں، لیسنز مکمل کریں اور اپنی پیش رفت دیکھیں۔</p></div>
+          <input class="search" id="courseSearch" placeholder="Search courses..." aria-label="Search courses">
+        </div>
+        <div class="course-grid" id="courseGrid"></div>
+      </section>
+
+      <section class="section" id="generatorSection">
+        <div class="section-head">
+          <div><h2 id="generatorTitle">AI Content Generator</h2><p>اپنی تفصیلات درج کریں اور AI سے مواد تیار کروائیں۔</p></div>
+        </div>
+        <div class="panel">
+          <form id="generatorForm">
+            <div class="form-grid">
+              <div class="field-wrap">
+                <label for="serviceType">Service</label>
+                <select class="field" id="serviceType"></select>
+              </div>
+              <div class="field-wrap">
+                <label for="outputLanguage">Output language</label>
+                <select class="field" id="outputLanguage">
+                  <option value="Urdu">اردو</option>
+                  <option value="English">English</option>
+                  <option value="Roman Urdu">Roman Urdu</option>
+                  <option value="Pashto">Pashto</option>
+                </select>
+              </div>
+              <div class="field-wrap full">
+                <label for="userDetails">اپنی ضروری تفصیلات لکھیں</label>
+                <textarea class="field" id="userDetails" required maxlength="12000" placeholder="مثلاً: نام، تعلیم، تجربہ، مقصد، کاروبار کی تفصیل یا خط لکھنے کی وجہ..."></textarea>
+              </div>
+              <div class="field-wrap full">
+                <label for="extraInstructions">اضافی ہدایات (اختیاری)</label>
+                <input class="field" id="extraInstructions" maxlength="2000" placeholder="مثلاً: مختصر، رسمی، پروفیشنل یا تفصیلی">
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn primary" type="submit" id="generateBtn">✦ Generate with AI</button>
+              <button class="btn" type="button" id="clearGeneratorBtn">Clear</button>
+            </div>
+            <div id="generatorNotice" aria-live="polite"></div>
+          </form>
+        </div>
+        <div class="panel">
+          <div class="section-head">
+            <h3>Generated Result</h3>
+            <div class="actions">
+              <button class="btn" id="copyResultBtn">Copy</button>
+              <button class="btn" id="downloadResultBtn">Download TXT</button>
+            </div>
+          </div>
+          <div class="result" id="resultBox">آپ کا تیار کردہ مواد یہاں ظاہر ہوگا۔</div>
+        </div>
+      </section>
+
+      <section class="section" id="learningSection">
+        <div class="section-head">
+          <div><h2>My Learning</h2><p>اپنے کورسز اور مکمل کیے گئے لیسنز دیکھیں۔</p></div>
+        </div>
+        <div id="learningList" class="course-grid"></div>
+      </section>
+
+      <section class="section" id="accountSection">
+        <div class="section-head"><div><h2>My Account</h2><p>اپنی لاگ اِن معلومات دیکھیں۔</p></div></div>
+        <div class="panel" id="accountPanel">
+          <p class="muted">اکاؤنٹ کی معلومات دیکھنے کے لیے لاگ اِن کریں۔</p>
+          <button class="btn primary" onclick="openAuth('login')">Login / Register</button>
+        </div>
+      </section>
+
+      <section class="section hidden" id="courseDetailSection">
+        <div class="panel">
+          <button class="btn" id="backToCoursesBtn">← Back to Courses</button>
+          <div id="courseDetailContent" style="margin-top:18px"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer>© <span id="year"></span> Nexa Business Hub AI · Learn, Create, Grow</footer>
+</div>
+
+<!-- Authentication -->
+<div class="auth-overlay hidden" id="authOverlay">
+  <div class="auth-card">
+    <div class="section-head">
+      <div><h2 id="authHeading">Welcome Back</h2><p class="muted small">Sign in to your Nexa account</p></div>
+      <button class="btn" id="closeAuthBtn" aria-label="Close">✕</button>
+    </div>
+    <div class="auth-tabs">
+      <button class="btn primary" id="showLoginBtn">Login</button>
+      <button class="btn" id="showRegisterBtn">Register</button>
+    </div>
+    <form id="authForm">
+      <div class="field-wrap" id="authNameWrap" style="margin-bottom:12px">
+        <label for="authName">Full name</label>
+        <input class="field" id="authName" autocomplete="name" maxlength="100" placeholder="Your name">
+      </div>
+      <div class="field-wrap" style="margin-bottom:12px">
+        <label for="authEmail">Email address</label>
+        <input class="field" id="authEmail" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com">
+      </div>
+      <div class="field-wrap" id="authPasswordWrap" style="margin-bottom:12px">
+        <label for="authPassword">Password</label>
+        <input class="field" id="authPassword" type="password" autocomplete="current-password" minlength="6" required placeholder="At least 6 characters">
+      </div>
+      <button class="btn primary" type="submit" id="authSubmitBtn" style="width:100%">Login</button>
+      <button class="btn" type="button" id="forgotPasswordBtn" style="width:100%;margin-top:8px">Forgot password?</button>
+      <div id="authNotice" aria-live="polite"></div>
+    </form>
+    <p class="muted small">Use your own email address. Registration may require email confirmation.</p>
   </div>
 </div>
-</main>
 
-<footer><div class="wrap">© <span id="year"></span> Nexa Business Hub AI · Your everyday business assistant</div></footer>
+<div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 "use strict";
 
-/* Your Supabase project configuration */
+/* -------------------------------------------------------
+   SUPABASE CONFIGURATION
+   The publishable/anon key is intended for browser use.
+   Protect user data with correct Supabase RLS policies.
+-------------------------------------------------------- */
 const SUPABASE_URL = "https://njfobttocvkjsrvlcjaj.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_EkEFOVho4ryOYcIOVAqMhQ_z9yoD9TB";
 
+let supabaseClient = null;
+if (window.supabase && SUPABASE_URL.startsWith("https://") &&
+    SUPABASE_PUBLISHABLE_KEY.startsWith("sb_publishable_")) {
+  supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+  );
+}
+
+/* Your existing Cloudflare Worker endpoint */
+const API_URL = "/api/generate";
+
 const services = [
-{id:"cv",icon:"📄",name:"CV / Resume Maker",cat:"Career",desc:"Create a professional CV or resume.",label:"Enter your personal details, education, skills and experience",hint:"Name, contact details, education, skills, work history and target job.",prompt:"Create a professional ATS-friendly CV/resume. Use only supplied facts. Organize it with a professional summary, education, experience, skills and relevant sections. Never invent qualifications, dates, contact information or work history. Mark missing information as [Add details]."},
-{id:"cover",icon:"✉️",name:"Cover Letter",cat:"Career",desc:"Write a tailored job cover letter.",label:"Enter job title, company and your qualifications",hint:"Job title, employer, experience, skills and job description.",prompt:"Write a tailored professional cover letter for the stated position. Use the provided facts, emphasize relevant strengths, and do not invent achievements or qualifications."},
-{id:"jobapp",icon:"💼",name:"Job Application",cat:"Career",desc:"Prepare a formal employment application.",label:"Enter applicant, job and organization details",hint:"Applicant name, position, department and relevant experience.",prompt:"Draft a formal job application based on the provided information. Use appropriate salutations, clear paragraphs, and a professional closing. Do not invent details."},
-{id:"bio",icon:"👤",name:"Professional Bio",cat:"Career",desc:"Create a polished personal introduction.",label:"Describe your background, skills and achievements",hint:"Your profession, experience, education, skills and purpose.",prompt:"Write a polished professional biography in a suitable length. Highlight only supplied facts and strengths. Do not fabricate awards or experience."},
-{id:"application",icon:"📝",name:"Official Application",cat:"Writing",desc:"Write an application to an official or institution.",label:"Who is the application addressed to and what is the purpose?",hint:"Recipient designation, subject, request, dates and supporting details.",prompt:"Draft a clear, respectful formal application with recipient, subject, salutation, body, request and closing. Follow conventional official letter formatting. Never invent laws, facts or references."},
-{id:"letter",icon:"📨",name:"Official Letter",cat:"Writing",desc:"Prepare formal office correspondence.",label:"Enter sender, recipient and letter purpose",hint:"Office names, reference number if any, subject and required action.",prompt:"Write a professional official letter with suitable heading, subject, formal body and closing. Use placeholders for missing reference numbers or dates. Do not invent authority or approvals."},
-{id:"leave",icon:"📅",name:"Leave Application",cat:"Writing",desc:"Create a school or office leave request.",label:"Enter name, institution, dates and reason",hint:"Applicant role, recipient, leave dates and reason.",prompt:"Write a polite formal leave application using the supplied dates and reason. Do not change dates or add unsupported personal details."},
-{id:"complaint",icon:"⚖️",name:"Complaint Letter",cat:"Writing",desc:"Draft a clear complaint or grievance.",label:"Explain the issue, dates and desired resolution",hint:"Recipient, what happened, relevant dates and requested remedy.",prompt:"Draft a factual, respectful complaint letter. Separate facts from allegations, clearly explain the issue and requested resolution, and do not invent evidence or legal claims."},
-{id:"email",icon:"📧",name:"Email Writer",cat:"Writing",desc:"Write professional emails and replies.",label:"Explain the email purpose and recipient",hint:"Recipient, purpose, key information and desired tone.",prompt:"Write an effective email with an appropriate subject, greeting, concise body and professional closing. Match the requested tone."},
-{id:"translate",icon:"🌐",name:"Translator",cat:"Language",desc:"Translate text between languages.",label:"Paste the text and mention the source language if known",hint:"Paste the complete text and specify the desired target language in Additional instructions.",prompt:"Translate the supplied text accurately into the selected output language. Preserve meaning, names, numbers, dates, tone and formatting. Do not summarize unless requested."},
-{id:"urdu",icon:"ا",name:"Urdu Writing",cat:"Language",desc:"Create or improve Urdu content.",label:"Enter the topic or text you want in Urdu",hint:"Topic, audience, required length and whether the style should be formal or simple.",prompt:"Produce natural, readable Urdu writing. Use Urdu script when Urdu is selected; use Roman Urdu only when requested. Keep names and facts accurate."},
-{id:"pashto",icon:"پ",name:"Pashto Writing",cat:"Language",desc:"Draft or improve Pashto text.",label:"Enter the topic or text you need in Pashto",hint:"Topic, audience, dialect preference if relevant and length.",prompt:"Write natural Pashto in the selected output language. Preserve the supplied facts and use clear, appropriate wording."},
-{id:"social",icon:"📱",name:"Social Media Posts",cat:"Marketing",desc:"Create posts for your business pages.",label:"Enter business name, platform and post topic",hint:"Platform, audience, offer, business name and desired call to action.",prompt:"Create engaging social media content for the stated platform. Include a strong opening, clear value proposition and suitable call to action. Suggest relevant hashtags where useful. Do not invent discounts or claims."},
-{id:"captions",icon:"📸",name:"Captions & Hashtags",cat:"Marketing",desc:"Create captions for posts and products.",label:"Describe the image, product or post",hint:"What is shown, target audience, platform and tone.",prompt:"Generate several distinct, relevant caption options and suitable hashtags. Do not claim to have seen an image unless its contents are described."},
-{id:"adcopy",icon:"📣",name:"Advertisement Copy",cat:"Marketing",desc:"Write promotional copy for a product or service.",label:"Describe your product, audience and offer",hint:"Product features, audience, location, price if relevant and contact method.",prompt:"Write persuasive but truthful advertising copy with a headline, benefits, call to action and optional short version. Never invent prices, guarantees or product capabilities."},
-{id:"business",icon:"🏢",name:"Business Plan",cat:"Business",desc:"Prepare a structured business plan draft.",label:"Describe the business idea and target market",hint:"Business type, location, customers, budget and goals.",prompt:"Prepare a structured business plan including concept, target customers, value proposition, operations, marketing and estimated cost categories. Clearly label assumptions; do not present invented figures as verified facts."},
-{id:"names",icon:"💡",name:"Business Name Ideas",cat:"Business",desc:"Find creative names for your business.",label:"Describe your business, audience and brand style",hint:"Industry, audience, preferred language and desired brand personality.",prompt:"Suggest a diverse list of memorable business names with brief explanations. Do not claim that a name, domain or trademark is available unless independently verified."},
-{id:"slogan",icon:"✨",name:"Slogan & Tagline",cat:"Marketing",desc:"Create memorable brand slogans.",label:"Enter your brand name and what it offers",hint:"Brand name, main benefit, audience and desired mood.",prompt:"Create multiple concise slogan and tagline options that fit the brand. Avoid unsupported claims and explain the style of each option briefly."},
-{id:"product",icon:"🛍️",name:"Product Description",cat:"Marketing",desc:"Write attractive product listings.",label:"Enter product name, features and intended customer",hint:"Features, specifications, materials, use cases and audience.",prompt:"Write a clear, appealing product description with a headline, features and customer benefits. Never invent specifications, certifications or performance claims."},
-{id:"proposal",icon:"📊",name:"Business Proposal",cat:"Business",desc:"Draft a professional service proposal.",label:"Describe the client, project, scope and objectives",hint:"Client, deliverables, timeline and budget if known.",prompt:"Draft a professional proposal with executive summary, objectives, scope, deliverables, timeline and next steps. Use placeholders for unknown costs and dates."},
-{id:"meeting",icon:"📋",name:"Meeting Minutes",cat:"Business",desc:"Organize notes into clear minutes.",label:"Paste meeting notes, decisions and action items",hint:"Meeting date, attendees, decisions, responsible people and deadlines.",prompt:"Convert the provided notes into organized meeting minutes with attendees, discussion points, decisions, action items and deadlines. Do not invent attendees or decisions."},
-{id:"summary",icon:"🧠",name:"Text Summarizer",cat:"Productivity",desc:"Summarize long text into key points.",label:"Paste the text you want summarized",hint:"Specify the desired length or format in Additional instructions.",prompt:"Summarize the provided text accurately. Preserve important details, names, dates and conclusions. Do not add facts that are absent from the source."},
-{id:"ideas",icon:"🚀",name:"Ideas & Brainstorming",cat:"Business",desc:"Generate ideas for projects and growth.",label:"Describe the challenge, project or goal",hint:"Your goal, constraints, audience and available resources.",prompt:"Generate practical, varied ideas for the stated goal. Explain the value and first steps for each, and distinguish assumptions from established facts."},
-{id:"proofread",icon:"✍️",name:"Proofreading & Editing",cat:"Productivity",desc:"Improve grammar, clarity and readability.",label:"Paste the text you want improved",hint:"Mention whether to preserve the original tone and formatting.",prompt:"Proofread and improve grammar, spelling, clarity and structure while preserving meaning and facts. Return the revised version first, then briefly list major improvements if useful."},
-{id:"invoice",icon:"🧾",name:"Invoice Text & Template",cat:"Business",desc:"Prepare invoice wording and line items.",label:"Enter seller, buyer, items, quantities and prices",hint:"Currency, invoice number, dates, quantities, prices and tax if applicable.",prompt:"Prepare a clean invoice template using supplied details. Calculate totals only when enough numeric information is provided. Leave missing fields as placeholders and do not invent tax rules."}
+  {id:"logo",icon:"🎨",name:"Logo Design",ur:"لوگو ڈیزائن",desc:"لوگو کے آئیڈیاز اور ڈیزائن بریف تیار کریں۔",prompt:"Create a professional logo design brief and image-generation prompt."},
+  {id:"poster",icon:"🖼️",name:"Poster & Banner Design",ur:"پوسٹر اور بینر",desc:"اشتہارات کے لیے پروفیشنل مواد تیار کریں۔",prompt:"Create a professional poster or banner concept with layout and text."},
+  {id:"card",icon:"💳",name:"Visiting Card",ur:"وزٹنگ کارڈ",desc:"بزنس کارڈ کے لیے خوبصورت متن اور ترتیب۔",prompt:"Prepare professional business card content and layout."},
+  {id:"letterhead",icon:"📄",name:"Letterhead & Envelope",ur:"لیٹر ہیڈ اور لفافہ",desc:"آفیشل لیٹر ہیڈ کے لیے مواد۔",prompt:"Prepare a professional letterhead and envelope layout specification."},
+  {id:"invitation",icon:"💌",name:"Invitation & Greeting Cards",ur:"دعوت نامے اور کارڈز",desc:"تقریبات کے لیے دعوتی پیغامات۔",prompt:"Write attractive invitation or greeting card wording."},
+  {id:"social",icon:"📱",name:"Social Media Posts",ur:"سوشل میڈیا پوسٹس",desc:"فیس بک اور دیگر پلیٹ فارمز کی پوسٹس۔",prompt:"Create engaging social media post copy with a clear call to action."},
+  {id:"typing",icon:"⌨️",name:"Urdu & English Typing",ur:"اردو اور انگلش ٹائپنگ",desc:"متن کی ترتیب اور زبان کی اصلاح۔",prompt:"Organize and proofread the supplied Urdu or English text. Preserve its intended meaning."},
+  {id:"official",icon:"🏛️",name:"Applications & Official Letters",ur:"درخواستیں اور سرکاری خطوط",desc:"رسمی درخواست اور دفتری خط۔",prompt:"Write a formal application or official letter using the supplied facts."},
+  {id:"cv",icon:"📑",name:"CV & Resume",ur:"سی وی اور ریزیومے",desc:"پروفیشنل CV اور ریزیومے کا مسودہ۔",prompt:"Create a professional ATS-friendly resume. Do not invent qualifications or work experience."},
+  {id:"forms",icon:"📝",name:"Form Filling Guide",ur:"فارم بھرنے میں مدد",desc:"فارم کے خانوں کو سمجھنے میں مدد۔",prompt:"Explain how to complete the described form using only the information provided."},
+  {id:"pdf",icon:"📕",name:"PDF Creation & Editing",ur:"پی ڈی ایف کا مواد",desc:"PDF دستاویز کے لیے منظم متن۔",prompt:"Organize the supplied content into a clean document structure suitable for exporting to PDF."},
+  {id:"scan",icon:"🖨️",name:"Scanning & Printing",ur:"اسکیننگ اور پرنٹنگ",desc:"اسکیننگ اور پرنٹنگ کے لیے چیک لسٹ۔",prompt:"Provide a practical scanning and printing checklist for the described document."},
+  {id:"jobs",icon:"💼",name:"Online Job Applications",ur:"آن لائن جاب درخواستیں",desc:"نوکری کے لیے درخواست اور کور لیٹر۔",prompt:"Prepare a job application and tailored cover letter using the provided details."},
+  {id:"admission",icon:"🎓",name:"Admission Forms",ur:"داخلہ فارم",desc:"داخلے کے لیے ضروری معلومات کی فہرست۔",prompt:"Create an admission application checklist based on the supplied institution and requirements."},
+  {id:"registration",icon:"🗂️",name:"Online Registration",ur:"آن لائن رجسٹریشن",desc:"رجسٹریشن کے مراحل کی رہنمائی۔",prompt:"Explain the registration steps for the service described. Do not claim to submit it."},
+  {id:"exam",icon:"📚",name:"Examination Forms",ur:"امتحانی فارم",desc:"امتحانی فارم کی تیاری میں مدد۔",prompt:"Create a checklist for filling the described examination form accurately."},
+  {id:"appointment",icon:"📅",name:"Online Appointments",ur:"آن لائن اپائنٹمنٹ",desc:"اپائنٹمنٹ کے لیے پیغام اور تیاری۔",prompt:"Draft an appointment request and preparation checklist."},
+  {id:"otherapps",icon:"🌐",name:"Other Online Applications",ur:"دیگر آن لائن درخواستیں",desc:"آن لائن درخواست کے لیے متن۔",prompt:"Help draft the described online application using only supplied facts."},
+  {id:"passport",icon:"📸",name:"Passport Size Photo Guide",ur:"پاسپورٹ سائز تصویر",desc:"تصویر کے سائز اور تیاری کی ہدایات۔",prompt:"Provide a checklist for preparing a passport-size photo. Explain that exact requirements vary by authority."},
+  {id:"enhance",icon:"✨",name:"Photo Enhancement Guide",ur:"تصویر بہتر بنانا",desc:"تصویر بہتر کرنے کے لیے ایڈیٹنگ ہدایات۔",prompt:"Provide a careful photo-enhancement editing brief that preserves the subject's identity."},
+  {id:"background",icon:"🌄",name:"Photo Background Change",ur:"تصویر کا بیک گراؤنڈ",desc:"بیک گراؤنڈ ایڈیٹنگ کے لیے ہدایات۔",prompt:"Write a clear image-editing prompt for changing the background while preserving the person."},
+  {id:"resize",icon:"📐",name:"Photo Crop & Resize",ur:"تصویر کراپ اور ری سائز",desc:"تصویر کے سائز کے لیے رہنمائی۔",prompt:"Explain crop and resize requirements based on the user's intended platform or document."},
+  {id:"collage",icon:"🧩",name:"Photo Collage",ur:"تصاویر کا کولاج",desc:"کولاج کی ترتیب اور ڈیزائن آئیڈیاز۔",prompt:"Create a professional photo-collage layout brief using the supplied requirements."},
+  {id:"data",icon:"📊",name:"Data Entry",ur:"ڈیٹا انٹری",desc:"ریکارڈز کے لیے منظم فارمیٹ۔",prompt:"Design a clear data-entry table structure and data validation checklist."},
+  {id:"office",icon:"🧮",name:"Excel & Word Work",ur:"ایکسل اور ورڈ",desc:"دفتری ڈاکومنٹس اور اسپریڈشیٹس۔",prompt:"Provide a step-by-step Microsoft Word or Excel solution for the described task."},
+  {id:"presentation",icon:"📽️",name:"Presentations",ur:"پریزنٹیشنز",desc:"سلائیڈز اور پریزنٹیشن کا مواد۔",prompt:"Create a structured presentation outline with slide titles and concise bullet points."},
+  {id:"page",icon:"📣",name:"Social Media Page Design",ur:"سوشل میڈیا پیج",desc:"پیج بایو، تعارف اور مواد۔",prompt:"Create a social media page setup brief, bio, category suggestions and content plan."},
+  {id:"custom",icon:"⚙️",name:"Custom Digital Work",ur:"دیگر ڈیجیٹل کام",desc:"اپنی ضرورت کے مطابق خصوصی مدد۔",prompt:"Help plan the requested digital task and produce a useful draft or step-by-step guide."}
 ];
 
-$("year").textContent=new Date().getFullYear();
-$("serviceCount").textContent=services.length;
+/* Courses include a learning outline.
+   Lessons are instructional outlines, not claims of accredited certification. */
+const courses = [
+  {id:"computer",icon:"💻",name:"Computer Basics",ur:"کمپیوٹر کی بنیادی تعلیم",level:"Beginner",duration:"4 weeks",desc:"کمپیوٹر استعمال کرنے کی بنیادی مہارتیں۔",lessons:[
+    ["کمپیوٹر کا تعارف","کمپیوٹر، ہارڈویئر اور سافٹ ویئر کی بنیادی سمجھ۔"],
+    ["Keyboard and Mouse","کی بورڈ، ماؤس اور عام شارٹ کٹس۔"],
+    ["Files and Folders","فائلیں بنانا، محفوظ کرنا اور فولڈرز منظم کرنا۔"],
+    ["Windows Basics","ڈیسک ٹاپ، سیٹنگز اور عام کام۔"],
+    ["Internet Safety","محفوظ براؤزنگ، مضبوط پاس ورڈ اور فراڈ سے بچاؤ۔"],
+    ["Practice Project","اپنی فائلیں منظم کرکے ایک سادہ پروجیکٹ تیار کریں۔"]
+  ]},
+  {id:"msoffice",icon:"📊",name:"MS Office",ur:"ایم ایس آفس",level:"Beginner",duration:"6 weeks",desc:"Word، Excel اور PowerPoint کا تعارف۔",lessons:[
+    ["MS Word Basics","دستاویز بنانا، فونٹ، پیراگراف اور صفحہ سیٹ اپ۔"],
+    ["Word Formatting","ہیڈنگز، ٹیبلز، تصاویر اور پرنٹ سیٹنگز۔"],
+    ["Excel Basics","ورک بک، سیل، قطاریں، کالم اور ڈیٹا۔"],
+    ["Excel Formulas","SUM، AVERAGE اور بنیادی فارمولے۔"],
+    ["PowerPoint Basics","سلائیڈز، لے آؤٹ اور پریزنٹیشن ڈیزائن۔"],
+    ["Office Practice Project","ایک خط، ایک شیٹ اور مختصر پریزنٹیشن بنائیں۔"]
+  ]},
+  {id:"typing",icon:"⌨️",name:"Urdu & English Typing",ur:"اردو اور انگلش ٹائپنگ",level:"Beginner",duration:"4 weeks",desc:"ٹائپنگ کی رفتار، درستگی اور فارمیٹنگ۔",lessons:[
+    ["Keyboard Familiarity","کی بورڈ کی ترتیب اور درست ہاتھوں کی پوزیشن۔"],
+    ["English Typing Practice","انگلش ٹائپنگ اور درستگی کی مشق۔"],
+    ["Urdu Keyboard Basics","اردو کی بورڈ اور عام حروف۔"],
+    ["Urdu Text Formatting","پیراگراف، دائیں سے بائیں متن اور فونٹس۔"],
+    ["Accuracy Practice","غلطیوں کی شناخت اور درستگی بہتر کرنا۔"],
+    ["Typing Project","اردو اور انگلش میں ایک صفحہ تیار کریں۔"]
+  ]},
+  {id:"graphic",icon:"🎨",name:"Graphic Designing",ur:"گرافک ڈیزائننگ",level:"Beginner",duration:"6 weeks",desc:"رنگ، ٹائپوگرافی، پوسٹر اور لوگو ڈیزائن۔",lessons:[
+    ["Design Principles","توازن، کنٹراسٹ، الائنمنٹ اور ترتیب۔"],
+    ["Color and Typography","رنگوں کا انتخاب اور فونٹ کی جوڑی۔"],
+    ["Social Media Post","سوشل میڈیا پوسٹ کا لے آؤٹ بنانا۔"],
+    ["Poster Design","پوسٹر کی ساخت اور متن کی ترجیح۔"],
+    ["Logo Concepts","لوگو کی اقسام اور بنیادی ڈیزائن اصول۔"],
+    ["Portfolio Project","تین نمونے بنا کر اپنا پورٹ فولیو تیار کریں۔"]
+  ]},
+  {id:"web",icon:"🌐",name:"Web Development",ur:"ویب ڈویلپمنٹ",level:"Beginner",duration:"8 weeks",desc:"HTML، CSS اور JavaScript کا بنیادی تعارف۔",lessons:[
+    ["How Websites Work","براؤزر، ویب پیج اور ویب سرور کا تعارف۔"],
+    ["HTML Structure","ہیڈنگز، پیراگراف، لنکس اور تصاویر۔"],
+    ["HTML Forms","ان پٹ، بٹن اور فارم کی بنیادی ساخت۔"],
+    ["CSS Styling","رنگ، فاصلے، فونٹس اور لے آؤٹ۔"],
+    ["Responsive Design","موبائل اور ڈیسک ٹاپ کے لیے ڈیزائن۔"],
+    ["JavaScript Basics","متغیرات، فنکشنز اور ایونٹس کا تعارف۔"],
+    ["DOM Interaction","بٹن کلک اور صفحے کے مواد کو بدلنا۔"],
+    ["Website Project","ایک سادہ ریسپانسیو ویب سائٹ بنائیں۔"]
+  ]},
+  {id:"ai",icon:"🤖",name:"AI & Prompt Engineering",ur:"اے آئی اور پرامپٹ انجینئرنگ",level:"Beginner",duration:"3 weeks",desc:"AI سے بہتر نتائج حاصل کرنے کے طریقے۔",lessons:[
+    ["AI Fundamentals","AI کی صلاحیتیں اور محدودیتیں۔"],
+    ["Writing Prompts","مقصد، سیاق و سباق اور مطلوبہ فارمیٹ۔"],
+    ["Better Instructions","مثالوں اور واضح ہدایات کا استعمال۔"],
+    ["AI for Documents","خطوط، CV اور خلاصے تیار کرنا۔"],
+    ["Fact Checking","AI کے نتائج کی تصدیق اور غلطیوں کی شناخت۔"],
+    ["Prompt Project","مختلف کاموں کے لیے مفید پرامپٹس کا مجموعہ بنائیں۔"]
+  ]},
+  {id:"freelancing",icon:"💼",name:"Freelancing",ur:"فری لانسنگ",level:"Beginner",duration:"4 weeks",desc:"مہارت، پورٹ فولیو اور کلائنٹ کمیونیکیشن۔",lessons:[
+    ["Freelancing Basics","فری لانسنگ کے مواقع اور ذمہ داریاں۔"],
+    ["Choose a Skill","اپنی دلچسپی کے مطابق ایک مہارت منتخب کرنا۔"],
+    ["Portfolio Building","نمونے اور پروجیکٹس منظم کرنا۔"],
+    ["Client Communication","ضروریات سمجھنا اور واضح سوالات پوچھنا۔"],
+    ["Pricing and Scope","کام کی حدود، ڈیڈ لائن اور قیمت کی وضاحت۔"],
+    ["Freelance Project Plan","ایک فرضی پروجیکٹ کی مکمل منصوبہ بندی۔"]
+  ]},
+  {id:"digitalmarketing",icon:"📣",name:"Digital Marketing",ur:"ڈیجیٹل مارکیٹنگ",level:"Beginner",duration:"5 weeks",desc:"سوشل میڈیا، مواد اور بنیادی مارکیٹنگ۔",lessons:[
+    ["Marketing Fundamentals","آڈینس، مقصد اور برانڈ کا تعارف۔"],
+    ["Content Planning","مواد کا کیلنڈر اور موضوعات۔"],
+    ["Social Media Basics","پلیٹ فارمز اور پوسٹ کی اقسام۔"],
+    ["Copywriting","واضح اور مؤثر مارکیٹنگ تحریر۔"],
+    ["Analytics Basics","ریچ، انگیجمنٹ اور کلکس کا مطلب۔"],
+    ["Campaign Project","ایک مختصر سوشل میڈیا مہم تیار کریں۔"]
+  ]},
+  {id:"video",icon:"🎬",name:"Video Editing",ur:"ویڈیو ایڈیٹنگ",level:"Beginner",duration:"4 weeks",desc:"کلپس، ٹرانزیشن، آڈیو اور ٹائٹلز۔",lessons:[
+    ["Editing Fundamentals","ٹائم لائن، کلپس اور پروجیکٹ سیٹنگز۔"],
+    ["Cut and Trim","کلپس کاٹنا اور غیر ضروری حصے ہٹانا۔"],
+    ["Titles and Captions","ٹائٹلز اور سب ٹائٹلز لگانا۔"],
+    ["Audio Basics","آواز کی سطح اور بیک گراؤنڈ آڈیو۔"],
+    ["Export Settings","ویڈیو فارمیٹ اور ریزولوشن۔"],
+    ["Short Video Project","ایک مختصر معلوماتی ویڈیو تیار کریں۔"]
+  ]},
+  {id:"business",icon:"🏢",name:"Business Planning",ur:"بزنس پلاننگ",level:"Beginner",duration:"3 weeks",desc:"کاروباری آئیڈیا سے بنیادی پلان تک۔",lessons:[
+    ["Business Idea","مسئلہ، حل اور کسٹمر کی شناخت۔"],
+    ["Market Research","مارکیٹ اور مقابلے کا بنیادی جائزہ۔"],
+    ["Costs and Pricing","اخراجات، قیمت اور آمدنی کی منصوبہ بندی۔"],
+    ["Promotion Plan","مارکیٹنگ کے بنیادی طریقے۔"],
+    ["Customer Service","کسٹمر کی ضرورت اور فیڈبیک۔"],
+    ["Business Plan Project","ایک مختصر کاروباری پلان تیار کریں۔"]
+  ]},
+  {id:"cyber",icon:"🔐",name:"Cyber Safety",ur:"آن لائن حفاظت",level:"Beginner",duration:"2 weeks",desc:"پاس ورڈ، پرائیویسی اور آن لائن فراڈ سے بچاؤ۔",lessons:[
+    ["Online Threats","عام آن لائن خطرات کو پہچاننا۔"],
+    ["Strong Passwords","منفرد پاس ورڈ اور پاس ورڈ مینیجرز۔"],
+    ["Phishing Awareness","مشکوک پیغامات اور لنکس کی شناخت۔"],
+    ["Account Security","دو مرحلہ تصدیق اور ریکوری کے طریقے۔"],
+    ["Privacy Settings","ایپس کی اجازتیں اور پرائیویسی۔"],
+    ["Safety Checklist","اپنے اکاؤنٹس کے لیے حفاظت کی فہرست بنائیں۔"]
+  ]},
+  {id:"english",icon:"🗣️",name:"English Communication",ur:"انگلش کمیونیکیشن",level:"Beginner",duration:"5 weeks",desc:"روزمرہ انگلش اور پروفیشنل تحریر۔",lessons:[
+    ["Everyday Vocabulary","عام الفاظ اور ان کے استعمال۔"],
+    ["Simple Sentences","سادہ جملے اور بنیادی گرامر۔"],
+    ["Reading Practice","مختصر پیراگراف سمجھنا۔"],
+    ["Email Writing","پروفیشنل ای میل کی ساخت۔"],
+    ["Conversation Practice","روزمرہ گفتگو کے مفید جملے۔"],
+    ["Writing Project","ایک مختصر تعارف اور رسمی ای میل لکھیں۔"]
+  ]}
+];
 
-let db=null, session=null, authMode="login", activeService=null, lastResult="", history=[];
+const state = {
+  user:null, authMode:"login", isUrdu:false, currentCourse:null,
+  result:"", currentService:"cv", toastTimer:null, loading:false
+};
 
-function el(id){return document.getElementById(id)}
-function msg(id,text,type="info"){el(id).textContent=text||"";el(id).className="message"+(text?" "+type:"")}
-function busy(button,on,text){button.disabled=on;if(on)button.dataset.oldText=button.textContent;button.textContent=on?text:(button.dataset.oldText||button.textContent)}
-function redirectUrl(){return location.origin+location.pathname}
-function showAuth(mode="login"){
-  authMode=mode;el("authSection").classList.remove("hidden");el("resetBox").classList.add("hidden");
-  el("authTitle").textContent=mode==="register"?"Create your Nexa account":"Welcome back";
-  el("authSubtitle").textContent=mode==="register"?"Register with your email address.":"Log in to your account.";
-  el("nameWrap").classList.toggle("hidden",mode!=="register");
-  el("confirmWrap").classList.toggle("hidden",mode!=="register");
-  el("termsWrap").classList.toggle("hidden",mode!=="register");
-  el("loginTab").classList.toggle("active",mode==="login");
-  el("registerTab").classList.toggle("active",mode==="register");
-  el("authSubmit").textContent=mode==="register"?"Create account":"Login";
-  msg("authMsg","");
-  el("authSection").scrollIntoView({behavior:"smooth",block:"start"});
-}
-function showSession(s){
-  session=s;el("accountLabel").textContent=s.user.email||"Signed in";
-  el("loginNav").classList.add("hidden");el("registerNav").classList.add("hidden");el("logoutBtn").classList.remove("hidden");
-  el("authSection").classList.add("hidden");
-}
-function showGuest(){
-  session=null;el("accountLabel").textContent="Guest mode";
-  el("loginNav").classList.remove("hidden");el("registerNav").classList.remove("hidden");el("logoutBtn").classList.add("hidden");
-}
-function renderServices(filter=""){
-  const grid=el("servicesGrid");grid.innerHTML="";
-  const filtered=services.filter(s=>(s.name+" "+s.desc+" "+s.cat).toLowerCase().includes(filter.toLowerCase()));
-  filtered.forEach(s=>{
-    const card=document.createElement("article");card.className="service";
-    const icon=document.createElement("div");icon.className="sicon";icon.textContent=s.icon;
-    const title=document.createElement("h3");title.textContent=s.name;
-    const desc=document.createElement("p");desc.textContent=s.desc;
-    const btn=document.createElement("button");btn.className="btn";btn.textContent="Open service →";btn.addEventListener("click",()=>openService(s.id));
-    card.append(icon,title,desc,btn);grid.appendChild(card);
-  });
-  el("emptySearch").classList.toggle("hidden",filtered.length>0);
-}
-function showView(view){
-  el("dashboardView").classList.toggle("hidden",view!=="dashboard");
-  el("editorView").classList.toggle("hidden",view!=="editor");
-  el("historyView").classList.toggle("hidden",view!=="history");
-  document.querySelectorAll(".sidebtn").forEach(b=>b.classList.toggle("active",b.dataset.view===view||(view==="editor"&&b.dataset.view==="dashboard")));
-}
-function openService(id){
-  activeService=services.find(s=>s.id===id);if(!activeService)return;
-  el("editorTitle").textContent=activeService.icon+" "+activeService.name;
-  el("serviceCategory").textContent=activeService.cat.toUpperCase()+" SERVICE";
-  el("editorDesc").textContent=activeService.desc;
-  el("detailsLabel").textContent=activeService.label;
-  el("details").placeholder=activeService.hint;
-  el("details").value="";el("extra").value="";el("result").textContent="";
-  msg("generateMsg","");
-  showView("editor");window.scrollTo({top:0,behavior:"smooth"});
-}
-document.querySelectorAll(".sidebtn").forEach(b=>b.addEventListener("click",()=>{
-  if(b.dataset.view==="generator"){openService("summary");el("editorTitle").textContent="✦ AI Content Generator";el("serviceCategory").textContent="GENERAL AI";el("editorDesc").textContent="Describe any task and let AI help you." ;el("detailsLabel").textContent="What would you like the AI to do?";el("details").placeholder="Write a story, explain a topic, draft content, brainstorm ideas...";activeService={...services.find(s=>s.id==="summary"),id:"general",prompt:"Complete the user's requested task carefully and accurately. Follow the selected language and style. Do not invent facts."};return}
-  if(b.dataset.view==="history"){renderHistory();showView("history")}else showView("dashboard");
-}));
-el("searchServices").addEventListener("input",e=>renderServices(e.target.value));
-el("backBtn").addEventListener("click",()=>showView("dashboard"));
-el("loginNav").addEventListener("click",()=>showAuth("login"));
-el("registerNav").addEventListener("click",()=>showAuth("register"));
-el("closeAuth").addEventListener("click",()=>el("authSection").classList.add("hidden"));
-el("loginTab").addEventListener("click",()=>showAuth("login"));
-el("registerTab").addEventListener("click",()=>showAuth("register"));
+const $ = id => document.getElementById(id);
+const escapeHTML = value => String(value ?? "").replace(/[&<>"']/g, c => ({
+  "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+}[c]));
 
-el("authForm").addEventListener("submit",async e=>{
-  e.preventDefault();if(!db){msg("authMsg","Supabase could not initialize. Check your project URL and publishable key.","error");return}
-  const email=el("email").value.trim(),password=el("password").value,button=el("authSubmit");
-  busy(button,true,"Please wait...");
-  try{
-    if(authMode==="register"){
-      if(!el("fullName").value.trim())throw Error("Enter your full name.");
-      if(password!==el("confirmPassword").value)throw Error("Passwords do not match.");
-      if(!el("terms").checked)throw Error("Please accept the terms.");
-      const {data,error}=await db.auth.signUp({email,password,options:{emailRedirectTo:redirectUrl(),data:{full_name:el("fullName").value.trim()}}});
-      if(error)throw error;
-      if(data.session){showSession(data.session);msg("authMsg","Account created successfully.","success")}
-      else msg("authMsg","Registration submitted. Check your email and verify your account before logging in.","success");
-    }else{
-      const {data,error}=await db.auth.signInWithPassword({email,password});
-      if(error)throw error;
-      showSession(data.session);
-    }
-  }catch(error){msg("authMsg",error.message||"Authentication failed.","error")}
-  finally{busy(button,false,"")}
-});
-el("forgotBtn").addEventListener("click",async()=>{
-  if(!db)return msg("authMsg","Supabase is not configured.","error");
-  const email=el("email").value.trim();if(!email)return msg("authMsg","Enter your email address first.","info");
-  try{const {error}=await db.auth.resetPasswordForEmail(email,{redirectTo:redirectUrl()+"?reset-password"});if(error)throw error;msg("authMsg","If an account exists for this email, a password reset link will be sent.","success")}
-  catch(e){msg("authMsg",e.message,"error")}
-});
-el("resetForm").addEventListener("submit",async e=>{
-  e.preventDefault();if(el("newPassword").value!==el("newPassword2").value)return msg("resetMsg","Passwords do not match.","error");
-  try{const {error}=await db.auth.updateUser({password:el("newPassword").value});if(error)throw error;msg("resetMsg","Password updated. Please log in again.","success");await db.auth.signOut();showGuest();showAuth("login")}
-  catch(e){msg("resetMsg",e.message,"error")}
-});
-el("logoutBtn").addEventListener("click",async()=>{
-  if(db){const {error}=await db.auth.signOut();if(error)return alert(error.message)}
-  showGuest();showAuth("login");
-});
-
-el("serviceForm").addEventListener("submit",async e=>{
-  e.preventDefault();
-  if(!activeService)return;
-  const details=el("details").value.trim();if(!details)return msg("generateMsg","Enter the details first.","error");
-  const button=el("generateBtn");busy(button,true,"Generating...");
-  msg("generateMsg","Preparing your result...");el("result").textContent="";
-  const language=el("outputLanguage").value,tone=el("tone").value,extra=el("extra").value.trim();
-  const fullPrompt=[
-    "SERVICE: "+activeService.name,
-    "TASK: "+activeService.prompt,
-    "OUTPUT LANGUAGE: "+language,
-    "WRITING STYLE: "+tone,
-    "USER DETAILS:\n"+details,
-    extra?"ADDITIONAL INSTRUCTIONS:\n"+extra:"",
-    "Follow the requested service and language. Do not invent personal information, qualifications, dates, prices, citations, or official approvals. Use placeholders for missing essential facts. Return the finished content in a clean, copy-ready format."
-  ].filter(Boolean).join("\n\n");
-  try{
-    const response=await fetch("/api/generate",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({prompt:fullPrompt,language})});
-    const raw=await response.text();let data;try{data=JSON.parse(raw)}catch{data={text:raw}}
-    if(!response.ok)throw Error(data.error||data.message||"Generation failed ("+response.status+").");
-    const output=data.text??data.response??data.result??data.output;
-    if(typeof output!=="string"||!output.trim())throw Error("The AI returned an empty result. Check the Worker response format.");
-    lastResult=output;el("result").textContent=output;msg("generateMsg","Your result is ready.","success");
-    history.unshift({name:activeService.name,result:output,time:new Date().toLocaleString()});history=history.slice(0,20);
-  }catch(error){msg("generateMsg",error.message||"Could not generate the result.","error")}
-  finally{busy(button,false,"")}
-});
-el("copyResult").addEventListener("click",async()=>{
-  if(!lastResult)return msg("generateMsg","Generate a result first.","info");
-  try{await navigator.clipboard.writeText(lastResult);msg("generateMsg","Result copied.","success")}
-  catch{msg("generateMsg","Clipboard unavailable. Select the result text and copy it manually.","error")}
-});
-el("downloadResult").addEventListener("click",()=>{
-  if(!lastResult)return msg("generateMsg","Generate a result first.","info");
-  const blob=new Blob([lastResult],{type:"text/plain;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");
-  a.href=url;a.download=(activeService?.id||"nexa-result")+".txt";a.click();URL.revokeObjectURL(url);
-});
-function renderHistory(){
-  const box=el("historyList");box.innerHTML="";
-  if(!history.length){box.textContent="No results in this browser session yet.";return}
-  history.forEach((item,i)=>{
-    const card=document.createElement("div");card.className="service";card.style.marginBottom="12px";card.style.minHeight="auto";
-    const title=document.createElement("h3");title.textContent=item.name;
-    const time=document.createElement("p");time.textContent=item.time;
-    const preview=document.createElement("p");preview.textContent=item.result.slice(0,230)+(item.result.length>230?"…":"");
-    const btn=document.createElement("button");btn.className="btn";btn.textContent="View result";btn.onclick=()=>{lastResult=item.result;el("result").textContent=item.result;openService(services.find(s=>s.name===item.name)?.id||"summary");el("result").textContent=item.result};
-    card.append(title,time,preview,btn);box.append(card);
+function notify(message) {
+  const toast = $("toast");
+  toast.textContent = message;
+  toast.classList.remove("hidden");
+  clearTimeout(state.toastTimer);
+  state.toastTimer = setTimeout(() => toast.classList.add("hidden"), 3500);
+}
+function showNotice(targetId, message, type="") {
+  const target = $(targetId);
+  target.innerHTML = "";
+  if (!message) return;
+  const box = document.createElement("div");
+  box.className = "notice " + type;
+  box.textContent = message;
+  target.appendChild(box);
+}
+function showSection(sectionId) {
+  const section = $(sectionId);
+  if (!section) return;
+  section.scrollIntoView({behavior:"smooth",block:"start"});
+  document.querySelectorAll(".nav-btn").forEach(btn => {
+    btn.classList.toggle("active",btn.dataset.section === sectionId);
   });
 }
-el("clearHistory").addEventListener("click",()=>{history=[];renderHistory()});
+document.querySelectorAll(".nav-btn").forEach(btn => {
+  btn.addEventListener("click", () => showSection(btn.dataset.section));
+});
 
-async function init(){
-  renderServices();
-  if(!window.supabase||!window.supabase.createClient){showGuest();msg("authMsg","Supabase library did not load. Check your internet connection.","error");return}
-  try{
-    db=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
-    db.auth.onAuthStateChange((event,s)=>{
-      if(s)showSession(s);else showGuest();
-      if(event==="PASSWORD_RECOVERY"){el("authSection").classList.remove("hidden");el("resetBox").classList.remove("hidden")}
+function renderServices(filter="") {
+  const grid = $("serviceGrid");
+  const q = filter.toLowerCase().trim();
+  const list = services.filter(s =>
+    [s.name,s.ur,s.desc].join(" ").toLowerCase().includes(q)
+  );
+  grid.innerHTML = "";
+  if (!list.length) {
+    grid.innerHTML = '<div class="empty">No matching services found.</div>';
+    return;
+  }
+  list.forEach(s => {
+    const card = document.createElement("article");
+    card.className = "item-card";
+    card.innerHTML = `
+      <div class="item-icon">${s.icon}</div>
+      <h3>${escapeHTML(s.name)}</h3>
+      <span class="pill">${escapeHTML(s.ur)}</span>
+      <p>${escapeHTML(s.desc)}</p>
+      <button class="btn" type="button">Use Service →</button>`;
+    card.querySelector("button").addEventListener("click", () => {
+      $("serviceType").value = s.id;
+      selectService(s.id);
+      showSection("generatorSection");
+      $("userDetails").focus();
     });
-    const {data,error}=await db.auth.getSession();if(error)throw error;
-    const params=new URLSearchParams(location.search);
-    if(params.has("reset-password")||location.hash.includes("type=recovery")){
-      el("authSection").classList.remove("hidden");el("resetBox").classList.remove("hidden");
-    }else if(data.session)showSession(data.session);else showGuest();
-  }catch(error){showGuest();msg("authMsg",error.message||"Could not connect to Supabase.","error")}
+    grid.appendChild(card);
+  });
 }
-init();
+function renderServiceOptions() {
+  $("serviceType").innerHTML = services.map(s =>
+    `<option value="${escapeHTML(s.id)}">${escapeHTML(s.name)} — ${escapeHTML(s.ur)}</option>`
+  ).join("");
+  $("serviceType").value = state.currentService;
+}
+function selectService(id) {
+  const s = services.find(item => item.id === id);
+  if (!s) return;
+  state.currentService = id;
+  $("serviceType").value = id;
+  $("generatorTitle").textContent = s.name;
+}
+
+function renderCourses(filter="") {
+  const grid = $("courseGrid");
+  const q = filter.toLowerCase().trim();
+  const list = courses.filter(c =>
+    [c.name,c.ur,c.desc,c.level].join(" ").toLowerCase().includes(q)
+  );
+  grid.innerHTML = "";
+  if (!list.length) {
+    grid.innerHTML = '<div class="empty">No matching courses found.</div>';
+    return;
+  }
+  list.forEach(c => {
+    const card = document.createElement("article");
+    card.className = "item-card";
+    card.innerHTML = `
+      <div class="item-icon">${c.icon}</div>
+      <h3>${escapeHTML(c.name)}</h3>
+      <span class="pill">${escapeHTML(c.ur)}</span>
+      <p>${escapeHTML(c.desc)}</p>
+      <div class="course-meta">
+        <span class="pill">${escapeHTML(c.level)}</span>
+        <span class="pill">${escapeHTML(c.duration)}</span>
+        <span class="pill">${c.lessons.length} Lessons</span>
+      </div>
+      <button class="btn primary" type="button">Start Learning →</button>`;
+    card.querySelector("button").addEventListener("click", () => openCourse(c.id));
+    grid.appendChild(card);
+  });
+}
+
+function localProgressKey() {
+  return state.user ? "nexa-progress:" + state.user.id : null;
+}
+function getProgress() {
+  const key = localProgressKey();
+  if (!key) return {};
+  try { return JSON.parse(localStorage.getItem(key) || "{}"); }
+  catch { return {}; }
+}
+function saveProgress(progress) {
+  const key = localProgressKey();
+  if (!key) {
+    notify("پیش رفت محفوظ کرنے کے لیے پہلے Login کریں۔");
+    return false;
+  }
+  try {
+    localStorage.setItem(key,JSON.stringify(progress));
+    return true;
+  } catch {
+    notify("Progress محفوظ نہیں ہو سکی۔");
+    return false;
+  }
+}
+function openCourse(courseId) {
+  const course = courses.find(c => c.id === courseId);
+  if (!course) return;
+  state.currentCourse = courseId;
+  $("courseDetailSection").classList.remove("hidden");
+  const progress = getProgress();
+  const completed = new Set(progress[courseId] || []);
+  const doneCount = completed.size;
+  const percent = Math.round(doneCount / course.lessons.length * 100);
+  const content = $("courseDetailContent");
+  content.innerHTML = `
+    <div style="font-size:42px">${course.icon}</div>
+    <h2>${escapeHTML(course.name)}</h2>
+    <p class="muted">${escapeHTML(course.ur)} · ${escapeHTML(course.level)} · ${escapeHTML(course.duration)}</p>
+    <p>${escapeHTML(course.desc)}</p>
+    <div class="section-head"><strong>Course Progress</strong><span>${doneCount}/${course.lessons.length} Lessons · ${percent}%</span></div>
+    <div class="progress-track"><div class="progress-bar" style="width:${percent}%"></div></div>
+    <div class="notice">یہ تعلیمی کورس کا مطالعہ کرنے کے لیے سبق وار خاکہ ہے۔ ہر سبق کا مواد نیچے دستیاب ہے۔</div>
+    <div class="lesson-list" id="lessonList"></div>
+    <div class="form-actions">
+      <button class="btn primary" id="continueLessonBtn">Continue Learning</button>
+      <button class="btn" id="resetProgressBtn">Reset Progress</button>
+    </div>`;
+  const lessonList = $("lessonList");
+  course.lessons.forEach((lesson,index) => {
+    const row = document.createElement("label");
+    row.className = "lesson" + (completed.has(index) ? " done" : "");
+    row.innerHTML = `
+      <input type="checkbox" ${completed.has(index) ? "checked" : ""}>
+      <span><strong>${index+1}. ${escapeHTML(lesson[0])}</strong><br><small class="muted">${escapeHTML(lesson[1])}</small></span>`;
+    row.querySelector("input").addEventListener("change", event => {
+      if (!state.user) {
+        event.target.checked = completed.has(index);
+        openAuth("login");
+        notify("اپنی پیش رفت محفوظ کرنے کے لیے Login کریں۔");
+        return;
+      }
+      if (event.target.checked) completed.add(index);
+      else completed.delete(index);
+      const latest = getProgress();
+      latest[courseId] = [...completed];
+      if (saveProgress(latest)) openCourse(courseId);
+    });
+    lessonList.appendChild(row);
+  });
+  $("continueLessonBtn").addEventListener("click", () => {
+    const rows = [...document.querySelectorAll("#lessonList .lesson")];
+    const next = rows.find(row => !row.querySelector("input").checked);
+    if (next) {
+      next.scrollIntoView({behavior:"smooth",block:"center"});
+      next.querySelector("input").focus();
+    } else notify("مبارک ہو! آپ نے اس کورس کے تمام لیسنز مکمل کر لیے ہیں۔");
+  });
+  $("resetProgressBtn").addEventListener("click", () => {
+    if (!state.user) return openAuth("login");
+    if (!confirm("کیا آپ اس کورس کی محفوظ شدہ پیش رفت ختم کرنا چاہتے ہیں؟")) return;
+    const latest = getProgress();
+    delete latest[courseId];
+    saveProgress(latest);
+    openCourse(courseId);
+  });
+  showSection("courseDetailSection");
+}
+$("backToCoursesBtn").addEventListener("click", () => {
+  $("courseDetailSection").classList.add("hidden");
+  showSection("coursesSection");
+});
+
+function renderMyLearning() {
+  const grid = $("learningList");
+  grid.innerHTML = "";
+  const progress = getProgress();
+  const started = courses.filter(c => (progress[c.id] || []).length > 0);
+  if (!state.user) {
+    grid.innerHTML = '<div class="empty">اپنے کورسز کی پیش رفت محفوظ کرنے کے لیے Login کریں۔</div>';
+    return;
+  }
+  if (!started.length) {
+    grid.innerHTML = '<div class="empty">آپ نے ابھی کسی کورس کی پیش رفت شروع نہیں کی۔ Courses سیکشن سے ایک کورس منتخب کریں۔</div>';
+    return;
+  }
+  started.forEach(c => {
+    const count = (progress[c.id] || []).length;
+    const percent = Math.round(count/c.lessons.length*100);
+    const card = document.createElement("article");
+    card.className = "item-card";
+    card.innerHTML = `
+      <div class="item-icon">${c.icon}</div>
+      <h3>${escapeHTML(c.name)}</h3>
+      <p>${count}/${c.lessons.length} lessons completed · ${percent}%</p>
+      <div class="progress-track"><div class="progress-bar" style="width:${percent}%"></div></div>
+      <button class="btn" type="button">Continue Course</button>`;
+    card.querySelector("button").addEventListener("click", () => openCourse(c.id));
+    grid.appendChild(card);
+  });
+}
+
+function updateAccountUI() {
+  $("loginTopBtn").classList.toggle("hidden",!!state.user);
+  $("logoutBtn").classList.toggle("hidden",!state.user);
+  const panel = $("accountPanel");
+  panel.innerHTML = "";
+  if (!state.user) {
+    const p = document.createElement("p");
+    p.className = "muted";
+    p.textContent = "اکاؤنٹ کی معلومات دیکھنے کے لیے لاگ اِن کریں۔";
+    panel.appendChild(p);
+    const b = document.createElement("button");
+    b.className = "btn primary";
+    b.textContent = "Login / Register";
+    b.addEventListener("click", () => openAuth("login"));
+    panel.appendChild(b);
+  } else {
+    const email = document.createElement("p");
+    email.innerHTML = "<strong>Email:</strong> ";
+    const value = document.createElement("span");
+    value.textContent = state.user.email || "";
+    email.appendChild(value);
+    panel.appendChild(email);
+    const uid = document.createElement("p");
+    uid.className = "muted small";
+    uid.textContent = "Account ID: " + state.user.id;
+    panel.appendChild(uid);
+    const tip = document.createElement("div");
+    tip.className = "notice";
+    tip.textContent = "آپ کے کورسز کی پیش رفت اس براؤزر میں مقامی طور پر محفوظ ہوتی ہے۔ اسے دوسرے آلات پر ہم آہنگ کرنے کے لیے database integration درکار ہوگی۔";
+    panel.appendChild(tip);
+  }
+  renderMyLearning();
+}
+
+function openAuth(mode="login") {
+  if (!supabaseClient) {
+    notify("Supabase configuration یا CDN دستیاب نہیں۔");
+    return;
+  }
+  setAuthMode(mode);
+  $("authOverlay").classList.remove("hidden");
+}
+function closeAuth() {
+  $("authOverlay").classList.add("hidden");
+  showNotice("authNotice","");
+}
+function setAuthMode(mode) {
+  state.authMode = mode;
+  const register = mode === "register";
+  $("authHeading").textContent = register ? "Create Your Account" :
+    mode === "reset" ? "Reset Password" : "Welcome Back";
+  $("authNameWrap").classList.toggle("hidden",!register);
+  $("authPasswordWrap").classList.toggle("hidden",mode === "reset");
+  $("authSubmitBtn").textContent = register ? "Register" :
+    mode === "reset" ? "Send Reset Email" : "Login";
+  $("forgotPasswordBtn").classList.toggle("hidden",register || mode === "reset");
+  $("showLoginBtn").classList.toggle("primary",!register);
+  $("showRegisterBtn").classList.toggle("primary",register);
+  showNotice("authNotice","");
+}
+$("loginTopBtn").addEventListener("click",() => openAuth("login"));
+$("logoutBtn").addEventListener("click",async () => {
+  if (!supabaseClient) return;
+  const {error} = await supabaseClient.auth.signOut();
+  if (error) return notify(error.message);
+  state.user = null;
+  updateAccountUI();
+  closeAuth();
+  notify("آپ Logout ہو گئے ہیں۔");
+});
+$("closeAuthBtn").addEventListener("click",closeAuth);
+$("showLoginBtn").addEventListener("click",() => setAuthMode("login"));
+$("showRegisterBtn").addEventListener("click",() => setAuthMode("register"));
+$("forgotPasswordBtn").addEventListener("click",() => setAuthMode("reset"));
+$("authOverlay").addEventListener("click",e => {
+  if (e.target === $("authOverlay")) closeAuth();
+});
+
+$("authForm").addEventListener("submit",async event => {
+  event.preventDefault();
+  if (!supabaseClient) return showNotice("authNotice","Supabase is not configured.","error");
+  const email = $("authEmail").value.trim();
+  const password = $("authPassword").value;
+  const name = $("authName").value.trim();
+  const btn = $("authSubmitBtn");
+  btn.disabled = true;
+  showNotice("authNotice","Please wait...");
+  try {
+    let result;
+    if (state.authMode === "register") {
+      result = await supabaseClient.auth.signUp({
+        email,password,options:{data:{full_name:name}}
+      });
+      if (!result.error && !result.data.session) {
+        showNotice("authNotice","Registration submitted. Check your email for confirmation if required.","success");
+        return;
+      }
+    } else if (state.authMode === "reset") {
+      result = await supabaseClient.auth.resetPasswordForEmail(email,{
+        redirectTo:location.origin + location.pathname
+      });
+      if (!result.error) {
+        showNotice("authNotice","If the account exists, a password reset email will be sent.","success");
+        return;
+      }
+    } else {
+      result = await supabaseClient.auth.signInWithPassword({email,password});
+    }
+    if (result.error) throw result.error;
+    state.user = result.data.user || null;
+    updateAccountUI();
+    closeAuth();
+    notify(state.authMode === "register" ? "Account created." : "Login successful.");
+  } catch (error) {
+    showNotice("authNotice",error.message || "Authentication failed.","error");
+  } finally {
+    btn.disabled = false;
+  }
+});
+
+/* AI generation: Worker should return JSON containing {result:"..."}
+   or {response:"..."} or {text:"..."}.
+*/
+$("serviceType").addEventListener("change",e => selectService(e.target.value));
+$("generatorForm").addEventListener("submit",async event => {
+  event.preventDefault();
+  if (state.loading) return;
+  const service = services.find(s => s.id === $("serviceType").value);
+  const details = $("userDetails").value.trim();
+  const extra = $("extraInstructions").value.trim();
+  const language = $("outputLanguage").value;
+  if (!service || !details) return;
+  if (details.length > 12000 || extra.length > 2000) {
+    return showNotice("generatorNotice","براہ کرم متن کی حد کے اندر رہیں۔","error");
+  }
+  const prompt = [
+    "You are the writing assistant for Nexa Business Hub AI.",
+    "Service: " + service.name + ".",
+    "Task: " + service.prompt,
+    "Output language: " + language + ".",
+    "User details:\n" + details,
+    extra ? "Additional instructions:\n" + extra : "",
+    "Be useful, clear, professional, and accurate. Do not invent personal facts, credentials, dates, prices, official approvals, or legal requirements. Use placeholders where facts are missing. Return only the requested content, with headings where useful."
+  ].filter(Boolean).join("\n\n");
+  const btn = $("generateBtn");
+  state.loading = true;
+  btn.disabled = true;
+  btn.textContent = "Generating...";
+  showNotice("generatorNotice","AI مواد تیار کر رہا ہے، براہ کرم انتظار کریں۔");
+  try {
+    const response = await fetch(API_URL,{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({prompt,language})
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      throw new Error(data.error || data.message || "AI request failed ("+response.status+").");
+    }
+    const output = data.result ?? data.response ?? data.text ??
+      data.output ?? data.content;
+    if (typeof output !== "string" || !output.trim()) {
+      throw new Error("Worker returned no text. Check /api/generate response format.");
+    }
+    state.result = output.trim();
+    $("resultBox").textContent = state.result;
+    showNotice("generatorNotice","مواد کامیابی سے تیار ہو گیا۔","success");
+  } catch (error) {
+    showNotice("generatorNotice",
+      (error.message || "Generation failed.") +
+      " اگر مسئلہ برقرار رہے تو Worker کے /api/generate endpoint کو چیک کریں۔","error");
+  } finally {
+    state.loading = false;
+    btn.disabled = false;
+    btn.textContent = "✦ Generate with AI";
+  }
+});
+
+$("clearGeneratorBtn").addEventListener("click",() => {
+  $("userDetails").value = "";
+  $("extraInstructions").value = "";
+  $("resultBox").textContent = "آپ کا تیار کردہ مواد یہاں ظاہر ہوگا۔";
+  state.result = "";
+  showNotice("generatorNotice","");
+});
+$("copyResultBtn").addEventListener("click",async () => {
+  if (!state.result) return notify("پہلے AI سے مواد تیار کریں۔");
+  try {
+    await navigator.clipboard.writeText(state.result);
+    notify("مواد Copy ہو گیا۔");
+  } catch {
+    const area = document.createElement("textarea");
+    area.value = state.result;
+    document.body.appendChild(area);
+    area.select();
+    const ok = document.execCommand("copy");
+    area.remove();
+    notify(ok ? "مواد Copy ہو گیا۔" : "Copy نہیں ہوا؛ متن منتخب کرکے کاپی کریں۔");
+  }
+});
+$("downloadResultBtn").addEventListener("click",() => {
+  if (!state.result) return notify("پہلے AI سے مواد تیار کریں۔");
+  const blob = new Blob(["\uFEFF",state.result],{type:"text/plain;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "nexa-ai-result.txt";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url),1000);
+});
+$("serviceSearch").addEventListener("input",e => renderServices(e.target.value));
+$("courseSearch").addEventListener("input",e => renderCourses(e.target.value));
+$("languageBtn").addEventListener("click",() => {
+  state.isUrdu = !state.isUrdu;
+  document.documentElement.lang = state.isUrdu ? "ur" : "en";
+  document.documentElement.dir = state.isUrdu ? "rtl" : "ltr";
+  document.body.classList.toggle("rtl",state.isUrdu);
+  $("heroTitle").textContent = state.isUrdu ?
+    "آپ کا AI اور ڈیجیٹل سروسز پلیٹ فارم" :
+    "Your AI & Digital Services Platform";
+  $("heroDesc").textContent = state.isUrdu ?
+    "پروفیشنل ڈاکومنٹس تیار کریں، کاروباری آئیڈیاز حاصل کریں اور نئے ہنر سیکھیں۔" :
+    "Create professional documents, explore business ideas and learn new skills.";
+});
+$("year").textContent = new Date().getFullYear();
+$("courseCount").textContent = courses.length;
+
+async function initializeApp() {
+  renderServices();
+  renderServiceOptions();
+  renderCourses();
+  updateAccountUI();
+  if (!supabaseClient) {
+    $("loginTopBtn").title = "Check Supabase configuration and network connection";
+    return;
+  }
+  const {data,error} = await supabaseClient.auth.getSession();
+  if (!error) {
+    state.user = data.session?.user || null;
+    updateAccountUI();
+  }
+  supabaseClient.auth.onAuthStateChange((_event,session) => {
+    state.user = session?.user || null;
+    updateAccountUI();
+  });
+}
+initializeApp();
 </script>
 </body>
 </html>
