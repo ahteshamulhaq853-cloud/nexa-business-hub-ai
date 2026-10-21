@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1224">
+  <title>Nexa Business Hub AI</title>
+  <style>
+    :root {
+      --bg:#080e1d; --panel:#111c32; --gold:#f6c65b;
+      --text:#f5f7ff; --muted:#aab5cb; --border:#293650;
+    }
+    * { box-sizing:border-box }
+    body {
+      margin:0; font-family:Arial,"Noto Nastaliq Urdu",sans-serif;
+      background:var(--bg); color:var(--text); line-height:1.7;
+    }
+    header {
+      padding:18px 5%; display:flex; justify-content:space-between;
+      align-items:center; gap:12px; border-bottom:1px solid var(--border);
+      background:#0b1428; position:sticky; top:0; z-index:2;
+    }
+    .brand { font-size:20px; font-weight:800 }
+    .brand span { color:var(--gold) }
+    button,input,textarea,select { font:inherit }
+    button {
+      border:0; border-radius:10px; padding:11px 15px; cursor:pointer;
+      font-weight:700; background:var(--gold); color:#151515;
+    }
+    button.secondary { background:#202d46;color:white;border:1px solid var(--border) }
+    main { max-width:1100px; margin:auto; padding:26px 16px 60px }
+    .hero {
+      padding:35px 22px; border:1px solid #3c3c43; border-radius:22px;
+      background:linear-gradient(135deg,#152746,#111529 65%,#35291b);
+      text-align:center;
+    }
+    .hero h1 { font-size:clamp(27px,6vw,44px); line-height:1.3;margin:0 0 12px }
+    .hero h1 span { color:var(--gold) }
+    .hero p { color:var(--muted);max-width:680px;margin:0 auto 22px }
+    .search { width:100%;margin:24px 0 15px;padding:14px 16px;
+      background:var(--panel);border:1px solid var(--border);color:white;border-radius:12px }
+    .grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px }
+    .card { background:var(--panel);border:1px solid var(--border);
+      border-radius:15px;padding:18px;display:flex;flex-direction:column;align-items:flex-start }
+    .card .emoji { font-size:28px }
+    .card h3 { margin:8px 0 5px;font-size:18px }
+    .card p { color:var(--muted);margin:0 0 14px;flex:1;font-size:14px }
+    .card button { width:100% }
+    .section-title { margin:28px 0 12px }
+    .notice { margin:18px 0;background:#16243a;padding:14px;border-radius:12px;color:#c9d6ea }
+    footer { border-top:1px solid var(--border);padding:24px 16px;text-align:center;color:var(--muted) }
+    dialog { width:min(600px,94vw);max-height:90vh;overflow:auto;
+      background:var(--panel);color:var(--text);border:1px solid var(--border);
+      border-radius:18px;padding:22px }
+    dialog::backdrop { background:#000b }
+    label { display:block;margin:12px 0 5px;font-weight:700 }
+    textarea,select { width:100%;padding:12px;border-radius:10px;
+      border:1px solid var(--border);background:#0b1428;color:white }
+    textarea { min-height:120px;resize:vertical }
+    #result { white-space:pre-wrap;background:#0b1428;padding:14px;border-radius:10px;
+      margin-top:15px;overflow-wrap:anywhere }
+    .actions { display:flex;flex-wrap:wrap;gap:9px;margin-top:12px }
+    .hidden { display:none }
+    @media(max-width:500px) {
+      header { padding:12px }
+      .brand { font-size:17px }
+      .hero { padding:28px 15px }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="brand">NEXA <span>BUSINESS HUB AI</span></div>
+  <button class="secondary" id="langBtn">اردو / English</button>
+</header>
+
+<main>
+  <section class="hero">
+    <h1 id="heroTitle">آپ کے کاروبار کا <span>ذہین ساتھی</span></h1>
+    <p id="heroDesc">AI کی مدد سے کاروباری تحریریں، درخواستیں، CV، سوشل میڈیا پوسٹس اور روزمرہ کام آسان بنائیں۔</p>
+    <button id="startBtn">AI اسسٹنٹ شروع کریں ✨</button>
+  </section>
+
+  <div class="notice" id="notice">اپنی ضرورت کی سروس منتخب کریں، تفصیل لکھیں اور AI سے جواب حاصل کریں۔</div>
+  <input class="search" id="search" placeholder="🔎 سروس تلاش کریں..." aria-label="سروس تلاش کریں">
+  <h2 class="section-title" id="servicesTitle">ہماری سروسز</h2>
+  <section class="grid" id="services"></section>
+</main>
+
+<footer>
+  <div>Nexa Business Hub AI</div>
+  <p>کاروباری خدمات اور AI معاونت</p>
+  <button class="secondary" id="whatsappBtn">WhatsApp پر رابطہ</button>
+</footer>
+
+<dialog id="assistant">
+  <h2 id="modalTitle">Nexa AI اسسٹنٹ</h2>
+  <p id="selectedService">اپنی ضرورت بتائیں۔</p>
+  <label for="language" id="languageLabel">جواب کی زبان</label>
+  <select id="language">
+    <option value="Urdu">اردو</option>
+    <option value="English">English</option>
+    <option value="Roman Urdu">Roman Urdu</option>
+  </select>
+  <label for="tone" id="toneLabel">جواب کا انداز</label>
+  <select id="tone">
+    <option value="professional">Professional / پیشہ ورانہ</option>
+    <option value="simple">Simple / آسان</option>
+    <option value="detailed">Detailed / تفصیلی</option>
+  </select>
+  <label for="details" id="detailsLabel">اپنی تفصیل لکھیں</label>
+  <textarea id="details" placeholder="یہاں اپنی درخواست یا ضرورت لکھیں..."></textarea>
+  <div class="actions">
+    <button id="generateBtn">AI جواب بنائیں</button>
+    <button class="secondary" id="closeBtn">بند کریں</button>
+  </div>
+  <p id="status" role="status"></p>
+  <div id="result" class="hidden"></div>
+  <div class="actions">
+    <button class="secondary" id="copyBtn">جواب کاپی کریں</button>
+    <button class="secondary" id="printBtn">Print / PDF</button>
+  </div>
+</dialog>
+
+<script>
+const services = [
+  ["📝","درخواست لکھیں","سرکاری اور عام درخواستیں تیار کریں۔"],
+  ["📄","CV / Resume","پیشہ ورانہ CV اور تعارف تیار کریں۔"],
+  ["💼","Business Plan","کاروباری منصوبہ اور آئیڈیاز۔"],
+  ["📱","Social Media Post","سوشل میڈیا کے لیے پوسٹس اور کیپشن۔"],
+  ["✉️","Email Writing","پیشہ ورانہ ای میل لکھیں۔"],
+  ["📢","Advertisement","اشتہارات اور تشہیری متن بنائیں۔"],
+  ["🌐","Online Application","آن لائن فارم کے لیے متن میں مدد۔"],
+  ["📚","Translation","متن کا ترجمہ اور آسان وضاحت۔"],
+  ["📊","Business Report","کاروباری رپورٹ اور خلاصہ۔"],
+  ["🎓","Study Assistant","تعلیمی موضوعات سمجھنے میں مدد۔"],
+  ["💡","Business Ideas","نئے کاروباری آئیڈیاز حاصل کریں۔"],
+  ["🤝","Customer Reply","کسٹمر کے پیغام کا مناسب جواب۔"],
+  ["🛍️","Product Description","پروڈکٹ کی تفصیل اور خصوصیات۔"],
+  ["📃","Letter Writing","خطوط اور رسمی مراسلات۔"],
+  ["🎯","Marketing Plan","مارکیٹنگ کی منصوبہ بندی۔"],
+  ["🧾","Quotation","قیمت نامہ اور کوٹیشن کا مسودہ۔"],
+  ["📅","Work Plan","روزانہ اور ہفتہ وار ورک پلان۔"],
+  ["🔍","Research Summary","تحقیق کا خلاصہ اور اہم نکات۔"],
+  ["🎤","Speech Writing","تقریر اور پریزنٹیشن کا متن۔"],
+  ["📖","Story Writing","کہانی اور تخلیقی تحریر۔"],
+  ["🛒","Sales Message","سیلز اور پروموشن کے پیغامات۔"],
+  ["📋","Meeting Notes","میٹنگ کے نوٹس اور ایکشن پوائنٹس۔"],
+  ["👔","Job Application","نوکری کے لیے درخواست۔"],
+  ["🧠","AI Assistant","اپنے سوال کا AI سے جواب حاصل کریں۔"],
+  ["📰","Content Writing","مضامین اور ویب سائٹ کا متن۔"],
+  ["📣","Brand Slogan","برانڈ کے لیے نعرے اور ٹیگ لائن۔"],
+  ["📦","Invoice Text","انوائس کے لیے متن کی تیاری۔"],
+  ["⭐","Professional Bio","پیشہ ورانہ تعارف اور بائیو۔"]
+];
+let chosen = services[23][1];
+let english = false;
+const $ = id => document.getElementById(id);
+
+function renderServices(filter="") {
+  $("services").innerHTML = "";
+  services.filter(s => s.join(" ").toLowerCase().includes(filter.toLowerCase()))
+  .forEach(s => {
+    const card = document.createElement("article");
+    card.className = "card";
+    const icon = document.createElement("div");
+    icon.className = "emoji"; icon.textContent = s[0];
+    const title = document.createElement("h3"); title.textContent = s[1];
+    const desc = document.createElement("p"); desc.textContent = s[2];
+    const btn = document.createElement("button"); btn.textContent = "یہ سروس استعمال کریں";
+    btn.addEventListener("click", () => openAssistant(s[1]));
+    card.append(icon,title,desc,btn);
+    $("services").append(card);
+  });
+}
+function openAssistant(service) {
+  chosen = service;
+  $("selectedService").textContent = "منتخب سروس: " + service;
+  $("result").classList.add("hidden");
+  $("status").textContent = "";
+  $("assistant").showModal();
+}
+$("search").addEventListener("input", e => renderServices(e.target.value));
+$("startBtn").addEventListener("click", () => openAssistant("AI Assistant"));
+$("closeBtn").addEventListener("click", () => $("assistant").close());
+$("langBtn").addEventListener("click", () => {
+  english = !english;
+  $("heroTitle").innerHTML = english
+    ? 'Your Business <span>Smart Partner</span>'
+    : 'آپ کے کاروبار کا <span>ذہین ساتھی</span>';
+  $("heroDesc").textContent = english
+    ? "Create business writing, applications, CVs and social media content with AI."
+    : "AI کی مدد سے کاروباری تحریریں، درخواستیں، CV، سوشل میڈیا پوسٹس اور روزمرہ کام آسان بنائیں۔";
+  $("servicesTitle").textContent = english ? "Our Services" : "ہماری سروسز";
+  $("search").placeholder = english ? "🔎 Search services..." : "🔎 سروس تلاش کریں...";
+  $("startBtn").textContent = english ? "Start AI Assistant ✨" : "AI اسسٹنٹ شروع کریں ✨";
+});
+$("generateBtn").addEventListener("click", async () => {
+  const details = $("details").value.trim();
+  if (!details) {
+    $("status").textContent = "براہ کرم پہلے اپنی ضرورت لکھیں۔";
+    return;
+  }
+  $("generateBtn").disabled = true;
+  $("status").textContent = "AI جواب تیار کر رہا ہے...";
+  $("result").classList.add("hidden");
+  try {
+    const response = await fetch("/api/generate", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({
+        service: chosen,
+        language: $("language").value,
+        tone: $("tone").value,
+        details
+      })
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error || "درخواست مکمل نہیں ہو سکی۔");
+    $("result").textContent = data.text || "کوئی جواب موصول نہیں ہوا۔";
+    $("result").classList.remove("hidden");
+    $("status").textContent = "جواب تیار ہے۔";
+  } catch (err) {
+    $("status").textContent = "AI سے رابطہ نہیں ہو سکا: " + err.message +
+      "۔ ہوسٹنگ اور API Key کی سیٹنگ چیک کریں۔";
+  } finally {
+    $("generateBtn").disabled = false;
+  }
+});
+$("copyBtn").addEventListener("click", async () => {
+  const text = $("result").textContent;
+  if (!text || $("result").classList.contains("hidden")) return;
+  try {
+    await navigator.clipboard.writeText(text);
+    $("status").textContent = "جواب کاپی ہو گیا۔";
+  } catch {
+    $("status").textContent = "جواب منتخب کرکے کاپی کریں۔";
+  }
+});
+$("printBtn").addEventListener("click", () => {
+  const text = $("result").textContent;
+  if (!text || $("result").classList.contains("hidden")) {
+    window.print(); return;
+  }
+  const w = window.open("", "_blank");
+  if (!w) { window.print(); return; }
+  const pre = w.document.createElement("pre");
+  pre.style.cssText = "white-space:pre-wrap;font:16px Arial;padding:24px";
+  pre.textContent = text;
+  w.document.body.appendChild(pre);
+  w.document.title = "Nexa AI Response";
+  w.print();
+});
+$("whatsappBtn").addEventListener("click", () => {
+  window.open("https://wa.me/923342709019?text=" +
+    encodeURIComponent("Assalam-o-Alaikum, mujhe Nexa Business Hub ki service chahiye."),
+    "_blank", "noopener");
+});
+renderServices();
+</script>
+</body>
+</html>
