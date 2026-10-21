@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0b1220">
   <title>Nexa Business Hub AI</title>
-  <meta name="description" content="Create professional business content with Nexa Business Hub AI.">
+  <meta name="description" content="Nexa Business Hub AI - your AI-powered business workspace.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -26,324 +26,113 @@
     }
 
     * { box-sizing: border-box; }
-
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      background:
-        radial-gradient(ellipse at 80% 0%, #16344c 0, transparent 38%),
-        var(--bg);
+      background: radial-gradient(ellipse at 80% 0%, #16344c 0, transparent 38%), var(--bg);
       color: var(--text);
       font-family: Inter, "Segoe UI", Arial, sans-serif;
       font-size: 16px;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
-
-    button, input, textarea, select {
-      font: inherit;
-    }
-
+    button, input, textarea, select { font: inherit; }
     button { cursor: pointer; }
-
-    .container {
-      width: min(1100px, calc(100% - 36px));
-      margin: auto;
-    }
-
-    header {
-      border-bottom: 1px solid var(--line);
-      background: rgba(11,18,32,.9);
-    }
-
+    .container { width: min(1100px, calc(100% - 36px)); margin: auto; }
+    header { border-bottom: 1px solid var(--line); background: rgba(11,18,32,.92); }
     .nav {
-      min-height: 76px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      padding: 12px 0;
+      min-height: 76px; display: flex; justify-content: space-between;
+      align-items: center; gap: 16px; flex-wrap: wrap; padding: 12px 0;
     }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 19px;
-      font-weight: 800;
-      letter-spacing: -.5px;
-    }
-
+    .brand { display: flex; align-items: center; gap: 12px; font-size: 19px; font-weight: 800; }
     .brand-icon {
-      display: grid;
-      place-items: center;
-      width: 43px;
-      height: 43px;
-      border-radius: 13px;
-      color: #071b27;
-      background: linear-gradient(135deg, var(--accent), var(--blue));
-      font-weight: 900;
+      display: grid; place-items: center; width: 43px; height: 43px;
+      border-radius: 13px; color: #071b27;
+      background: linear-gradient(135deg, var(--accent), var(--blue)); font-weight: 900;
     }
-
-    .brand span small {
-      display: block;
-      color: var(--muted);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 2px;
-    }
-
-    .nav-actions, .actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
+    .brand small { display: block; color: var(--muted); font-size: 10px; letter-spacing: 2px; }
+    .nav-actions, .actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
     .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      padding: 11px 17px;
-      border: 1px solid var(--line);
-      border-radius: 11px;
-      background: var(--panel2);
-      color: var(--text);
-      font-weight: 700;
-      text-decoration: none;
-      transition: .2s;
+      display: inline-flex; justify-content: center; align-items: center; gap: 8px;
+      padding: 11px 17px; border: 1px solid var(--line); border-radius: 11px;
+      background: var(--panel2); color: var(--text); font-weight: 700; transition: .2s;
     }
-
-    .btn:hover { transform: translateY(-1px); filter: brightness(1.12); }
-
+    .btn:hover { transform: translateY(-1px); filter: brightness(1.1); }
     .btn-primary {
       background: linear-gradient(110deg, var(--accent), #73e6b5);
-      border-color: transparent;
-      color: #071b27;
+      border-color: transparent; color: #071b27;
     }
-
     .btn-outline { background: transparent; }
-    .btn-danger { color: var(--danger); }
     .btn:disabled { opacity: .6; cursor: wait; transform: none; }
-
-    .hero {
-      padding: 64px 0 35px;
-      text-align: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--accent);
-      background: #48d6c514;
-      border: 1px solid #48d6c533;
-      padding: 7px 13px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      max-width: 780px;
-      margin: 20px auto 14px;
-      font-size: clamp(34px, 6vw, 61px);
-      line-height: 1.12;
-      letter-spacing: -2px;
-    }
-
-    .gradient-text {
-      background: linear-gradient(90deg, var(--accent), #8eafff);
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-    }
-
-    .hero p {
-      max-width: 650px;
-      margin: 0 auto;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .status {
-      margin: 18px auto 0;
-      max-width: 760px;
-      font-size: 13px;
-      color: var(--muted);
-      overflow-wrap: anywhere;
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
-      gap: 22px;
-      padding: 20px 0 55px;
-      align-items: start;
-    }
-
-    .panel {
-      min-width: 0;
-      background: linear-gradient(155deg, #142137, #0f1929);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 25px;
-      box-shadow: 0 18px 60px #00000016;
-    }
-
-    .panel h2 { margin: 0 0 6px; font-size: 22px; }
-    .sub { margin: 0 0 22px; color: var(--muted); font-size: 14px; }
-
-    .field { margin-bottom: 17px; }
-
-    label {
-      display: block;
-      margin-bottom: 7px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #dce7f8;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      min-width: 0;
-      color: var(--text);
-      background: #0a1322;
-      border: 1px solid #2a3b55;
-      border-radius: 11px;
-      padding: 13px 14px;
-      outline: none;
-      transition: border-color .2s, box-shadow .2s;
-    }
-
-    input:focus, textarea:focus, select:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px #48d6c51a;
-    }
-
-    textarea { resize: vertical; min-height: 160px; }
-    input::placeholder, textarea::placeholder { color: #6e809a; }
-
     .full { width: 100%; }
     .hidden { display: none !important; }
-
-    .auth-tabs {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 7px;
-      background: #0a1322;
-      padding: 5px;
-      border-radius: 12px;
-      margin-bottom: 20px;
+    .hero { padding: 64px 0 35px; text-align: center; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; color: var(--accent);
+      background: #48d6c514; border: 1px solid #48d6c533;
+      padding: 7px 13px; border-radius: 999px; font-size: 12px; font-weight: 800;
+      letter-spacing: 1px; text-transform: uppercase;
     }
-
-    .auth-tab {
-      border: 0;
-      background: transparent;
-      color: var(--muted);
-      padding: 10px;
-      border-radius: 9px;
-      font-weight: 700;
+    h1 { max-width: 780px; margin: 20px auto 14px; font-size: clamp(34px, 6vw, 61px); line-height: 1.12; letter-spacing: -2px; }
+    .gradient-text {
+      background: linear-gradient(90deg, var(--accent), #8eafff);
+      color: transparent; background-clip: text; -webkit-background-clip: text;
     }
-
+    .hero p { max-width: 650px; margin: auto; color: var(--muted); font-size: 17px; }
+    .status { margin: 18px auto 0; max-width: 760px; font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
+    .layout {
+      display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
+      gap: 22px; padding: 20px 0 55px; align-items: start;
+    }
+    .panel {
+      min-width: 0; background: linear-gradient(155deg, #142137, #0f1929);
+      border: 1px solid var(--line); border-radius: 20px; padding: 25px;
+      box-shadow: 0 18px 60px #00000016;
+    }
+    .panel h2 { margin: 0 0 6px; font-size: 22px; }
+    .sub { margin: 0 0 22px; color: var(--muted); font-size: 14px; }
+    .field { margin-bottom: 17px; }
+    label { display: block; margin-bottom: 7px; font-size: 13px; font-weight: 700; color: #dce7f8; }
+    input, textarea, select {
+      width: 100%; min-width: 0; color: var(--text); background: #0a1322;
+      border: 1px solid #2a3b55; border-radius: 11px; padding: 13px 14px; outline: none;
+    }
+    input:focus, textarea:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px #48d6c51a; }
+    textarea { resize: vertical; min-height: 160px; }
+    input::placeholder, textarea::placeholder { color: #6e809a; }
+    .auth-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; background: #0a1322; padding: 5px; border-radius: 12px; margin-bottom: 20px; }
+    .auth-tab { border: 0; background: transparent; color: var(--muted); padding: 10px; border-radius: 9px; font-weight: 700; }
     .auth-tab.active { background: var(--panel2); color: var(--text); }
-
     .muted { color: var(--muted); font-size: 13px; }
-    .link-button {
-      color: var(--accent);
-      background: none;
-      border: 0;
-      padding: 4px 0;
-      text-decoration: underline;
-    }
-
+    .link-button { color: var(--accent); background: none; border: 0; padding: 4px 0; text-decoration: underline; }
     .message {
-      margin: 14px 0;
-      padding: 12px 13px;
-      border-radius: 10px;
-      font-size: 13px;
-      overflow-wrap: anywhere;
-      white-space: pre-wrap;
+      margin: 14px 0; padding: 12px 13px; border-radius: 10px; font-size: 13px;
+      overflow-wrap: anywhere; white-space: pre-wrap;
     }
-
     .message:empty { display: none; }
     .message.info { background: #6395ff17; border: 1px solid #6395ff55; }
     .message.success { background: #48d6c515; border: 1px solid #48d6c555; }
     .message.error { background: #ff85851a; border: 1px solid #ff858555; color: #ffb3b3; }
-
-    .check-row {
-      display: flex;
-      gap: 9px;
-      align-items: flex-start;
-      margin: 14px 0;
-    }
-
+    .check-row { display: flex; gap: 9px; align-items: flex-start; margin: 14px 0; }
     .check-row input { width: auto; margin-top: 5px; }
     .check-row label { margin: 0; color: var(--muted); font-weight: 400; }
-
-    .user-chip {
-      color: var(--accent);
-      font-size: 12px;
-      overflow-wrap: anywhere;
-      margin-bottom: 12px;
-    }
-
+    .user-chip { color: var(--accent); font-size: 12px; overflow-wrap: anywhere; margin-bottom: 12px; }
     .feature-list { display: grid; gap: 13px; margin-top: 22px; }
-
-    .feature {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 14px;
-      border-radius: 12px;
-      background: #ffffff05;
-      border: 1px solid #ffffff0d;
-    }
-
+    .feature { display: flex; gap: 12px; padding: 14px; border-radius: 12px; background: #ffffff05; border: 1px solid #ffffff0d; }
     .feature-icon {
-      flex: 0 0 34px;
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      background: #48d6c516;
-      border-radius: 10px;
-      color: var(--accent);
+      flex: 0 0 34px; width: 34px; height: 34px; display: grid; place-items: center;
+      background: #48d6c516; border-radius: 10px; color: var(--accent);
     }
-
     .feature strong { display: block; font-size: 14px; }
     .feature span { color: var(--muted); font-size: 12px; }
-
     .output {
-      margin-top: 18px;
-      border: 1px solid var(--line);
-      background: #091321;
-      border-radius: 13px;
-      padding: 17px;
-      min-height: 100px;
-      overflow-wrap: anywhere;
-      white-space: pre-wrap;
-      font-size: 14px;
+      margin-top: 18px; border: 1px solid var(--line); background: #091321;
+      border-radius: 13px; padding: 17px; min-height: 100px; overflow-wrap: anywhere;
+      white-space: pre-wrap; font-size: 14px;
     }
-
-    .output:empty::before {
-      content: "Your AI-generated content will appear here.";
-      color: #6e809a;
-    }
-
+    .output:empty::before { content: "Your AI-generated content will appear here."; color: #6e809a; }
     .divider { height: 1px; background: var(--line); margin: 22px 0; }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 25px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
+    footer { border-top: 1px solid var(--line); padding: 25px 0; text-align: center; color: var(--muted); font-size: 12px; }
     @media (max-width: 760px) {
       .layout { grid-template-columns: 1fr; }
       .hero { padding-top: 42px; }
@@ -351,7 +140,6 @@
       h1 { letter-spacing: -1px; }
       .nav { align-items: flex-start; }
     }
-
     @media (max-width: 420px) {
       .container { width: calc(100% - 22px); }
       .brand { font-size: 16px; }
@@ -383,7 +171,7 @@
     <div class="eyebrow">✦ AI-powered business workspace</div>
     <h1>Work smarter with <span class="gradient-text">Nexa AI</span></h1>
     <p>Create professional content, business ideas, applications, and useful writing with your AI-powered business assistant.</p>
-    <div class="status" id="topStatus" role="status" aria-live="polite">Connect your account to get started.</div>
+    <div class="status" id="topStatus" role="status" aria-live="polite">Connecting to your workspace...</div>
   </section>
 
   <div class="layout">
@@ -402,35 +190,29 @@
             <label for="fullName">Full name</label>
             <input id="fullName" type="text" autocomplete="name" maxlength="100" placeholder="Enter your full name">
           </div>
-
           <div class="field">
             <label for="email">Email address</label>
             <input id="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com">
           </div>
-
           <div class="field">
             <label for="password">Password</label>
             <input id="password" type="password" autocomplete="current-password" required minlength="8" maxlength="128" placeholder="At least 8 characters">
           </div>
-
           <div class="field hidden" id="confirmField">
             <label for="confirmPassword">Confirm password</label>
             <input id="confirmPassword" type="password" autocomplete="new-password" minlength="8" maxlength="128" placeholder="Enter password again">
           </div>
-
           <div class="check-row hidden" id="termsRow">
             <input id="terms" type="checkbox">
             <label for="terms">I agree to use this service responsibly and provide a valid email address.</label>
           </div>
-
           <button class="btn btn-primary full" type="submit" id="authSubmit">Login to account</button>
         </form>
 
         <div class="actions" style="justify-content:space-between;margin-top:12px">
           <button class="link-button" id="forgotBtn" type="button">Forgot password?</button>
-          <button class="link-button" id="backLoginBtn" type="button">Back to login</button>
+          <button class="link-button hidden" id="backLoginBtn" type="button">Back to login</button>
         </div>
-
         <div id="authMessage" class="message" role="status" aria-live="polite"></div>
       </div>
 
@@ -464,7 +246,6 @@
     <section class="panel">
       <h2>Your business assistant</h2>
       <p class="sub">Simple tools for everyday business and writing tasks.</p>
-
       <div class="feature-list">
         <div class="feature">
           <div class="feature-icon">✦</div>
@@ -479,7 +260,6 @@
           <div><strong>Account Access</strong><span>Email confirmation and password recovery.</span></div>
         </div>
       </div>
-
       <div class="divider"></div>
       <p class="muted">Tip: Be specific about the purpose, audience, and style you want.</p>
     </section>
@@ -488,7 +268,6 @@
   <section class="panel hidden" id="generatorPanel" style="margin-bottom:45px">
     <h2>AI Content Generator</h2>
     <p class="sub">Write a prompt and choose your preferred response language.</p>
-
     <form id="generateForm">
       <div class="field">
         <label for="language">Response language</label>
@@ -504,7 +283,6 @@
       </div>
       <button class="btn btn-primary" type="submit" id="generateBtn">✦ Generate Content</button>
     </form>
-
     <div id="generateMessage" class="message" role="status" aria-live="polite"></div>
     <div class="output" id="output" aria-live="polite"></div>
     <div class="actions" style="margin-top:12px">
@@ -521,21 +299,16 @@
 <script>
 "use strict";
 
-/*
-  Replace only these two placeholders with values from your Supabase project.
-  Use the Project URL and Publishable Key, never a service_role/secret key.
-*/
-const SUPABASE_URL = "PASTE_SUPABASE_PROJECT_URL";
-const SUPABASE_PUBLISHABLE_KEY = "PASTE_SUPABASE_PUBLISHABLE_KEY";
+/* Supabase project credentials */
+const SUPABASE_URL = "https://njfobttocvkjsrvlcjaj.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_EkEFOVho4ryOYcIOVAqMhQ_z9yoD9TB";
 
 const $ = (id) => document.getElementById(id);
-
 $("year").textContent = new Date().getFullYear();
 
 let supabaseClient = null;
 let authMode = "login";
 let currentSession = null;
-let resetMode = false;
 
 function setMessage(id, text, type = "info") {
   const el = $(id);
@@ -548,29 +321,19 @@ function setBusy(button, busy, busyText, originalText) {
   button.textContent = busy ? busyText : originalText;
 }
 
-function configured() {
-  return SUPABASE_URL.startsWith("https://") &&
-    !SUPABASE_URL.includes("https://njfobttocvkjsrvlcjaj.supabase.co") &&
-    SUPABASE_PUBLISHABLE_KEY &&
-    !SUPABASE_PUBLISHABLE_KEY.includes("sb_publishable_EkEFOVho4ryOYcIOVAqMhQ_z9yoD9TB");
-}
-
 function redirectUrl() {
   return window.location.origin + window.location.pathname;
 }
 
 function showAuth(mode = "login") {
   authMode = mode;
-  resetMode = false;
   $("authForms").classList.remove("hidden");
   $("resetPanel").classList.add("hidden");
   $("signedInPanel").classList.add("hidden");
   $("generatorPanel").classList.add("hidden");
   $("authPanel").classList.remove("hidden");
   $("authTitle").textContent = mode === "register" ? "Create your account" : "Welcome back";
-  $("authSubtitle").textContent = mode === "register"
-    ? "Register to start using Nexa AI."
-    : "Log in to your Nexa account.";
+  $("authSubtitle").textContent = mode === "register" ? "Register to start using Nexa AI." : "Log in to your Nexa account.";
   $("nameField").classList.toggle("hidden", mode !== "register");
   $("confirmField").classList.toggle("hidden", mode !== "register");
   $("termsRow").classList.toggle("hidden", mode !== "register");
@@ -584,13 +347,11 @@ function showAuth(mode = "login") {
 }
 
 function showResetForm() {
-  resetMode = true;
   $("authForms").classList.add("hidden");
   $("signedInPanel").classList.add("hidden");
   $("resetPanel").classList.remove("hidden");
   $("authPanel").classList.remove("hidden");
   $("generatorPanel").classList.add("hidden");
-  setMessage("resetMessage", "Enter your new password.");
 }
 
 function showSignedIn(session) {
@@ -619,34 +380,23 @@ function showSignedOut() {
   $("topStatus").textContent = "Log in or create an account to use your workspace.";
 }
 
-async function getCurrentSession() {
-  if (!supabaseClient) return;
-  const { data, error } = await supabaseClient.auth.getSession();
-  if (error) throw error;
-  if (data.session) {
-    showSignedIn(data.session);
-  } else {
-    showSignedOut();
-  }
-}
-
 $("loginTab").addEventListener("click", () => showAuth("login"));
 $("registerTab").addEventListener("click", () => showAuth("register"));
 $("navLogin").addEventListener("click", () => showAuth("login"));
 $("navRegister").addEventListener("click", () => showAuth("register"));
-$("backLoginBtn").addEventListener("click", () => showAuth("login"));
 
 $("authForm").addEventListener("submit", async (event) => {
   event.preventDefault();
   if (!supabaseClient) {
-    setMessage("authMessage", "Supabase is not configured. Add your Project URL and Publishable Key in this file.", "error");
+    setMessage("authMessage", "Supabase did not initialize. Check the Project URL, Publishable Key, and browser connection.", "error");
     return;
   }
 
   const email = $("email").value.trim();
   const password = $("password").value;
   const button = $("authSubmit");
-  setBusy(button, true, "Please wait...", authMode === "register" ? "Create account" : "Login to account");
+  const originalText = authMode === "register" ? "Create account" : "Login to account";
+  setBusy(button, true, "Please wait...", originalText);
   setMessage("authMessage", "");
 
   try {
@@ -675,19 +425,19 @@ $("authForm").addEventListener("submit", async (event) => {
     } else {
       const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
       if (error) throw error;
-      if (!data.session) throw new Error("No active session was returned. Please verify your email.");
+      if (!data.session) throw new Error("No active session was returned. Verify your email and try again.");
       showSignedIn(data.session);
     }
   } catch (error) {
     setMessage("authMessage", error.message || "Authentication failed.", "error");
   } finally {
-    setBusy(button, false, "", authMode === "register" ? "Create account" : "Login to account");
+    setBusy(button, false, "", originalText);
   }
 });
 
 $("forgotBtn").addEventListener("click", async () => {
   if (!supabaseClient) {
-    setMessage("authMessage", "Please configure Supabase first.", "error");
+    setMessage("authMessage", "Supabase is not configured. Check the project credentials.", "error");
     return;
   }
   const email = $("email").value.trim();
@@ -699,7 +449,7 @@ $("forgotBtn").addEventListener("click", async () => {
 
   try {
     const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
-      redirectTo: redirectUrl()
+      redirectTo: redirectUrl() + "?reset-password"
     });
     if (error) throw error;
     setMessage("authMessage", "If an account exists for this email, a password reset link will be sent. Check your inbox.", "success");
@@ -711,7 +461,6 @@ $("forgotBtn").addEventListener("click", async () => {
 $("resetForm").addEventListener("submit", async (event) => {
   event.preventDefault();
   if (!supabaseClient) return;
-
   const password = $("newPassword").value;
   if (password !== $("newPasswordConfirm").value) {
     setMessage("resetMessage", "Passwords do not match.", "error");
@@ -720,12 +469,10 @@ $("resetForm").addEventListener("submit", async (event) => {
 
   const button = $("resetSubmit");
   setBusy(button, true, "Updating...", "Update password");
-
   try {
     const { error } = await supabaseClient.auth.updateUser({ password });
     if (error) throw error;
     setMessage("resetMessage", "Password updated successfully. You can now log in with your new password.", "success");
-    $("resetForm").reset();
     await supabaseClient.auth.signOut();
     showAuth("login");
     setMessage("authMessage", "Your password has been changed. Please log in.", "success");
@@ -754,7 +501,6 @@ $("startBtn").addEventListener("click", () => {
 
 $("generateForm").addEventListener("submit", async (event) => {
   event.preventDefault();
-
   if (!currentSession) {
     setMessage("generateMessage", "Please log in first.", "error");
     return;
@@ -773,10 +519,6 @@ $("generateForm").addEventListener("submit", async (event) => {
   $("output").textContent = "";
 
   try {
-    /*
-      Keeps the existing Worker endpoint.
-      If your worker requires a different JSON shape, match this body to worker.js.
-    */
     const response = await fetch("/api/generate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -793,12 +535,7 @@ $("generateForm").addEventListener("submit", async (event) => {
     }
 
     const content = result.text ?? result.response ?? result.result ?? result.output;
-    if (typeof content === "string" && content.length) {
-      $("output").textContent = content;
-    } else {
-      $("output").textContent = JSON.stringify(result, null, 2);
-    }
-
+    $("output").textContent = typeof content === "string" ? content : JSON.stringify(result, null, 2);
     setMessage("generateMessage", "Content generated successfully.", "success");
   } catch (error) {
     setMessage("generateMessage", error.message || "Something went wrong while generating content.", "error");
@@ -817,7 +554,7 @@ $("copyBtn").addEventListener("click", async () => {
     await navigator.clipboard.writeText(content);
     setMessage("generateMessage", "Result copied to clipboard.", "success");
   } catch {
-    setMessage("generateMessage", "Copy is not available in this browser. Select the text and copy it manually.", "error");
+    setMessage("generateMessage", "Copy is not available in this browser. Select and copy the text manually.", "error");
   }
 });
 
@@ -828,15 +565,10 @@ $("clearBtn").addEventListener("click", () => {
 });
 
 async function initialize() {
-  if (!configured()) {
-    $("topStatus").textContent = "Setup required: add your Supabase Project URL and Publishable Key in index.html.";
-    setMessage("authMessage", "Supabase credentials have not been added yet.", "info");
-    showSignedOut();
-    return;
-  }
-
   if (!window.supabase || !window.supabase.createClient) {
     $("topStatus").textContent = "Supabase library did not load. Check your internet connection and reload.";
+    setMessage("authMessage", "Could not load Supabase. Check your connection or content blockers.", "error");
+    showSignedOut();
     return;
   }
 
