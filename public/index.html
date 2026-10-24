@@ -5,152 +5,784 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nexa Business Hub - CV Builder</title>
+
 <style>
+:root{
+  --navy:#102a56;
+  --blue:#1769d2;
+  --light:#eaf3ff;
+  --white:#ffffff;
+  --green:#138a52;
+  --red:#c0392b;
+  --text:#203047;
+}
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#edf3fb;color:#17243b}
-header{background:#102a56;color:white;padding:22px 15px;text-align:center}
-header h1{margin:0 0 8px}
-header p{margin:0;color:#d8e7ff}
-.container{max-width:950px;margin:22px auto;padding:15px}
-.card{background:white;padding:22px;border-radius:14px;margin-bottom:18px;box-shadow:0 4px 18px #102a5610}
-h2{color:#1769d2;margin-top:0}
-label{display:block;font-weight:bold;margin:13px 0 6px}
-input,textarea,select{width:100%;padding:12px;border:1px solid #ccd7e6;border-radius:7px;font:inherit}
-textarea{min-height:80px;resize:vertical}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-button{border:0;border-radius:8px;padding:13px 18px;font-weight:bold;cursor:pointer;margin:7px 5px 0 0}
-.primary{background:#1769d2;color:white}
-.secondary{background:#e5efff;color:#102a56}
-.pay{background:#087c55;color:white}
-.small{font-size:13px;color:#63718a;line-height:1.6}
-.payment{background:#f2f7ff;padding:14px;border-radius:9px;margin:12px 0}
-#preview{background:white;padding:28px;border:1px solid #cbd5e1;min-height:300px;overflow-wrap:anywhere}
-#preview h1{color:#102a56;margin-bottom:5px}
-#preview h3{color:#1769d2;border-bottom:1px solid #ccd7e6;padding-bottom:5px}
-.status{padding:12px;background:#fff4d9;border-radius:8px;margin-top:12px}
-@media(max-width:600px){.grid{grid-template-columns:1fr}.container{padding:10px}.card{padding:15px}}
-@media print{
- body{background:white}
- header,.form-area,.payment-area,.actions,.no-print{display:none!important}
- .container{margin:0;padding:0;max-width:none}
- .card{box-shadow:none;border:0;padding:0}
- #preview{border:0;padding:0}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f2f6fc;
+  color:var(--text);
+}
+header{
+  background:linear-gradient(135deg,#102a56,#1769d2);
+  color:white;
+  padding:22px 16px;
+  text-align:center;
+}
+header h1{margin:0 0 8px;font-size:27px}
+header p{margin:0;font-size:14px}
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+  background:white;
+  padding:12px;
+  box-shadow:0 2px 8px #0001;
+}
+button,.navbtn{
+  border:0;
+  border-radius:8px;
+  padding:11px 15px;
+  background:var(--blue);
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+button:hover{opacity:.9}
+button:disabled{opacity:.5;cursor:not-allowed}
+.secondary{background:var(--navy)}
+.green{background:var(--green)}
+.red{background:var(--red)}
+.gray{background:#64748b}
+main{
+  max-width:1000px;
+  margin:20px auto;
+  padding:0 13px 35px;
+}
+.card{
+  background:white;
+  border-radius:14px;
+  padding:20px;
+  margin-bottom:18px;
+  box-shadow:0 4px 18px #102a5610;
+}
+h2{color:var(--navy);margin-top:0}
+h3{color:var(--navy)}
+label{
+  display:block;
+  font-weight:bold;
+  margin:12px 0 6px;
+}
+input,textarea,select{
+  width:100%;
+  padding:12px;
+  border:1px solid #cbd5e1;
+  border-radius:8px;
+  font-size:15px;
+  background:white;
+}
+textarea{min-height:85px;resize:vertical}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.full{grid-column:1/-1}
+.notice{
+  background:var(--light);
+  border-left:4px solid var(--blue);
+  padding:12px;
+  border-radius:6px;
+  line-height:1.6;
+}
+.status{
+  display:inline-block;
+  padding:5px 9px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+  background:#e5e7eb;
+}
+.pending{background:#fff0c2;color:#795500}
+.approved{background:#d9fbe8;color:#08683c}
+.rejected{background:#ffe0e0;color:#9b1c1c}
+.order{
+  border:1px solid #dbe3ef;
+  padding:14px;
+  border-radius:10px;
+  margin:12px 0;
+  overflow-wrap:anywhere;
+}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.small{font-size:13px;color:#526176;line-height:1.6}
+.hidden{display:none!important}
+footer{text-align:center;padding:22px;color:#64748b}
+#message{margin-bottom:14px}
+.cv-preview{
+  border:1px solid #dbe3ef;
+  padding:18px;
+  background:white;
+  border-radius:8px;
+  line-height:1.6;
+  overflow-wrap:anywhere;
+}
+.cv-preview h2{border-bottom:2px solid var(--blue);padding-bottom:8px}
+@media(max-width:600px){
+  .grid{grid-template-columns:1fr}
+  .full{grid-column:auto}
+  .card{padding:15px}
+  header h1{font-size:23px}
 }
 </style>
 </head>
+
 <body>
+
 <header>
-<h1>Nexa Business Hub</h1>
-<p>Professional CV Builder</p>
+  <h1>Nexa Business Hub</h1>
+  <p>Your Digital Services, Learning and Creative Solutions</p>
+  <p style="margin-top:10px">Professional CV Builder</p>
 </header>
 
-<div class="container">
-<section class="card form-area">
-<h2>1. Enter Your Details</h2>
-<form id="cvForm">
-<div class="grid">
-<div><label>Full Name *</label><input id="name" required placeholder="Your full name"></div>
-<div><label>Job Title</label><input id="job" placeholder="e.g. Office Assistant"></div>
-<div><label>Phone Number</label><input id="phone" placeholder="03XXXXXXXXX"></div>
-<div><label>Email Address</label><input id="email" type="email" placeholder="you@example.com"></div>
-</div>
-<label>Address</label><input id="address">
-<label>Professional Summary</label><textarea id="summary" placeholder="Write a short introduction"></textarea>
-<label>Education</label><textarea id="education" placeholder="Degree, institution, year"></textarea>
-<label>Work Experience</label><textarea id="experience" placeholder="Job title, workplace, responsibilities"></textarea>
-<label>Skills</label><textarea id="skills" placeholder="Computer skills, communication, etc."></textarea>
-<label>Languages</label><input id="languages" placeholder="English, Urdu, Pashto">
-<label>References</label><textarea id="references" placeholder="Optional"></textarea>
-<button class="primary" type="submit">Generate CV Preview</button>
-</form>
+<nav>
+  <button onclick="showSection('account')">Account</button>
+  <button onclick="showSection('builder')">CV Builder</button>
+  <button onclick="showSection('payment')">CV Payment</button>
+  <button onclick="showSection('orders')">My Requests</button>
+  <button id="adminNav" class="secondary hidden"
+    onclick="showSection('admin')">Admin Panel</button>
+  <button id="logoutBtn" class="gray hidden"
+    onclick="logout()">Logout</button>
+</nav>
+
+<main>
+<div id="message"></div>
+
+<!-- ACCOUNT -->
+<section id="account" class="card">
+  <h2>Login / Create Account</h2>
+  <p class="small">CV payment request submit karne ke liye account mein login karein.</p>
+
+  <form id="authForm">
+    <label>Email Address</label>
+    <input id="email" type="email" required autocomplete="email"
+      placeholder="Enter your email">
+
+    <label>Password</label>
+    <input id="password" type="password" required minlength="6"
+      autocomplete="current-password" placeholder="Minimum 6 characters">
+
+    <div class="actions">
+      <button type="submit">Login</button>
+      <button type="button" class="secondary" onclick="signup()">Create Account</button>
+    </div>
+  </form>
+  <p id="accountStatus" class="small">Not logged in.</p>
 </section>
 
-<section class="card">
-<h2>2. CV Preview</h2>
-<div id="preview">
-<h1>Your Name</h1>
-<p>Fill in your details and select Generate CV Preview.</p>
-</div>
-<div class="actions">
-<button class="secondary" onclick="window.print()">Print / Save as PDF</button>
-</div>
-<p class="small">This initial version allows printing. Secure payment-based PDF locking requires server-side verification.</p>
+<!-- CV BUILDER -->
+<section id="builder" class="card hidden">
+  <h2>Professional CV Builder</h2>
+  <p class="notice">Apni details fill karein. CV isi browser mein temporarily save hogi.</p>
+
+  <form id="cvForm">
+    <div class="grid">
+      <div>
+        <label>Full Name *</label>
+        <input id="cvName" required placeholder="Full name">
+      </div>
+      <div>
+        <label>Phone Number</label>
+        <input id="cvPhone" placeholder="03XXXXXXXXX">
+      </div>
+      <div>
+        <label>Email</label>
+        <input id="cvEmail" type="email" placeholder="Email address">
+      </div>
+      <div>
+        <label>Post / Job Title</label>
+        <input id="cvJob" placeholder="e.g. Office Assistant">
+      </div>
+      <div class="full">
+        <label>Address</label>
+        <input id="cvAddress" placeholder="Your address">
+      </div>
+      <div class="full">
+        <label>Professional Profile</label>
+        <textarea id="cvProfile" placeholder="Short professional introduction"></textarea>
+      </div>
+      <div class="full">
+        <label>Education</label>
+        <textarea id="cvEducation" placeholder="Degree, institute and year"></textarea>
+      </div>
+      <div class="full">
+        <label>Work Experience</label>
+        <textarea id="cvExperience" placeholder="Experience or fresh candidate"></textarea>
+      </div>
+      <div class="full">
+        <label>Skills</label>
+        <textarea id="cvSkills" placeholder="Computer, communication, typing etc."></textarea>
+      </div>
+      <div class="full">
+        <label>Languages</label>
+        <input id="cvLanguages" placeholder="Urdu, English, Pashto">
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="submit">Save CV Details</button>
+      <button type="button" class="secondary" onclick="previewCV()">Preview CV</button>
+    </div>
+  </form>
+
+  <div id="cvPreview" class="cv-preview hidden" style="margin-top:18px"></div>
+  <p class="small">Note: Details are saved in this device's browser. Clearing browser data can remove them.</p>
 </section>
 
-<section class="card payment-area">
-<h2>3. CV Fee: Rs. 100</h2>
-<p>Pay the fee using one of the following methods.</p>
-<div class="payment">
-<strong>Easypaisa</strong><br>
-Number: 03428943769<br>
-Account Name: GULAP BIBI
-<button class="secondary" onclick="copyText('03428943769')">Copy Number</button>
-</div>
-<div class="payment">
-<strong>JazzCash</strong><br>
-Number: 03469799347<br>
-Account Name: EHTISHAMUL HAQ
-<button class="secondary" onclick="copyText('03469799347')">Copy Number</button>
-</div>
-<label>Payment Method</label>
-<select id="method">
-<option>Easypaisa</option>
-<option>JazzCash</option>
-</select>
-<label>Transaction ID</label>
-<input id="transaction" placeholder="Enter transaction ID">
-<label>Payment Screenshot (optional)</label>
-<input id="screenshot" type="file" accept="image/*">
-<button class="pay" onclick="submitPayment()">Submit Payment Details</button>
-<div id="status" class="status">
-Payment has not been submitted yet.
-</div>
-<p class="small">Demo only: this page does not send payment details to an administrator or verify transactions.</p>
-</section>
-</div>
+<!-- PAYMENT -->
+<section id="payment" class="card hidden">
+  <h2>CV Payment — Rs. 100</h2>
 
+  <p class="notice">
+    1. Rs. 100 payment karein.<br>
+    2. Sahi transaction ID enter karein.<br>
+    3. Admin payment check karega.<br>
+    4. Approval ke baad CV PDF print/save option milega.
+  </p>
+
+  <div class="grid">
+    <div class="order">
+      <h3>Easypaisa</h3>
+      <p><b>Number:</b> 03428943769</p>
+      <p><b>Account Name:</b> GULAP BIBI</p>
+      <button type="button" onclick="copyText('03428943769')">Copy Number</button>
+    </div>
+    <div class="order">
+      <h3>JazzCash</h3>
+      <p><b>Number:</b> 03469799347</p>
+      <p><b>Account Name:</b> EHTISHAMUL HAQ</p>
+      <button type="button" onclick="copyText('03469799347')">Copy Number</button>
+    </div>
+  </div>
+
+  <form id="paymentForm">
+    <label>Your Full Name *</label>
+    <input id="customerName" required placeholder="Name used for your CV">
+
+    <label>Payment Method *</label>
+    <select id="paymentMethod" required>
+      <option value="">Select payment method</option>
+      <option value="Easypaisa">Easypaisa</option>
+      <option value="JazzCash">JazzCash</option>
+    </select>
+
+    <label>Transaction ID *</label>
+    <input id="transactionId" required maxlength="120"
+      placeholder="Enter transaction ID">
+
+    <p class="small">Payment submit karne se approval automatic nahi milega. Admin transaction verify karega.</p>
+    <button type="submit">Submit Payment Request</button>
+  </form>
+</section>
+
+<!-- CUSTOMER ORDERS -->
+<section id="orders" class="card hidden">
+  <h2>My Payment Requests</h2>
+  <button type="button" onclick="loadOrders()">Refresh Requests</button>
+  <div id="myOrders"></div>
+  <hr>
+  <h3>CV PDF</h3>
+  <p id="pdfStatus" class="small">Login karein aur apni request check karein.</p>
+  <button id="pdfBtn" class="green hidden" onclick="downloadCV()">
+    Print / Save CV as PDF
+  </button>
+  <p class="small">PDF button tabhi available hoga jab database mein aapki request approved ho.</p>
+</section>
+
+<!-- ADMIN -->
+<section id="admin" class="card hidden">
+  <h2>Admin Panel</h2>
+  <p class="notice">Har payment ko Easypaisa/JazzCash record se manually verify karein. Sirf phir approve karein.</p>
+  <button type="button" onclick="loadAdminOrders()">Refresh All Requests</button>
+  <div id="adminOrders"></div>
+</section>
+
+<footer>
+  Nexa Business Hub © 2026
+</footer>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const $ = id => document.getElementById(id);
+/* SUPABASE CONFIG */
+const SUPABASE_URL = "https://njfobttocvkjsrvlcjaj.supabase.co";
+const SUPABASE_KEY = "sb_publishable_EkEFOVho4ryOYcIOVAqMhQ_z9yoD9TB";
 
-$('cvForm').addEventListener('submit', function(e){
- e.preventDefault();
- const val = id => $(id).value.trim();
- const section = (title,text) => text ?
- `<h3>${title}</h3><p>${escapeHTML(text).replace(/\n/g,'<br>')}</p>` : '';
- $('preview').innerHTML = `
- <h1>${escapeHTML(val('name'))}</h1>
- <h3>${escapeHTML(val('job'))}</h3>
- <p>${escapeHTML([val('phone'),val('email'),val('address')].filter(Boolean).join(' | '))}</p>
- ${section('Professional Summary',val('summary'))}
- ${section('Education',val('education'))}
- ${section('Work Experience',val('experience'))}
- ${section('Skills',val('skills'))}
- ${section('Languages',val('languages'))}
- ${section('References',val('references'))}`;
+const db = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+
+let currentUser = null;
+let isAdmin = false;
+
+/* GENERAL HELPERS */
+function message(text, type="info") {
+  const el = document.getElementById("message");
+  el.textContent = text;
+  el.className = "notice";
+  el.style.borderLeftColor =
+    type === "error" ? "#c0392b" :
+    type === "success" ? "#138a52" : "#1769d2";
+  el.classList.remove("hidden");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, char => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
+  })[char]);
+}
+
+function showSection(id) {
+  if (["builder","payment","orders","admin"].includes(id) && !currentUser) {
+    message("Pehle login karein.", "error");
+    id = "account";
+  }
+
+  if (id === "admin" && !isAdmin) {
+    message("Admin access nahi hai.", "error");
+    return;
+  }
+
+  document.querySelectorAll("main section").forEach(section => {
+    section.classList.add("hidden");
+  });
+
+  document.getElementById(id).classList.remove("hidden");
+
+  if (id === "orders") loadOrders();
+  if (id === "admin") loadAdminOrders();
+}
+
+async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    message("Number copy ho gaya.", "success");
+  } catch {
+    message("Number manually copy karein: " + text);
+  }
+}
+
+/* ACCOUNT */
+document.getElementById("authForm").addEventListener("submit", async e => {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+
+  const {data,error} = await db.auth.signInWithPassword({
+    email,password
+  });
+
+  if (error) {
+    message("Login error: " + error.message, "error");
+    return;
+  }
+
+  await refreshUser();
+  message("Login successful.", "success");
+  showSection("builder");
 });
 
-function escapeHTML(s){
- return s.replace(/[&<>"']/g,c=>({
- '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
- }[c]));
+async function signup() {
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+
+  if (!email || password.length < 6) {
+    message("Email enter karein aur password kam az kam 6 characters ka ho.", "error");
+    return;
+  }
+
+  const {data,error} = await db.auth.signUp({email,password});
+
+  if (error) {
+    message("Registration error: " + error.message, "error");
+    return;
+  }
+
+  if (data.session) {
+    await refreshUser();
+    message("Account ban gaya aur login ho gaye.", "success");
+    showSection("builder");
+  } else {
+    message("Account request ho gayi. Email confirmation required ho sakti hai. Apni email check karein.", "success");
+  }
 }
-function copyText(text){
- if(navigator.clipboard && window.isSecureContext){
-  navigator.clipboard.writeText(text).then(()=>alert('Number copied.'));
- }else{
-  prompt('Copy this number:',text);
- }
+
+async function logout() {
+  const {error} = await db.auth.signOut();
+
+  if (error) {
+    message("Logout error: " + error.message, "error");
+    return;
+  }
+
+  currentUser = null;
+  isAdmin = false;
+  updateAccountUI();
+  showSection("account");
+  message("Logout ho gaye.", "success");
 }
-function submitPayment(){
- const id=$('transaction').value.trim();
- if(!id){
-  alert('Please enter your transaction ID.');
-  return;
- }
- $('status').textContent=
- 'Demo submission only. Transaction ID: '+id+
- '. No administrator has received or verified this payment. Contact the website administrator to confirm payment.';
+
+function updateAccountUI() {
+  document.getElementById("accountStatus").textContent =
+    currentUser ? "Logged in: " + currentUser.email : "Not logged in.";
+
+  document.getElementById("logoutBtn").classList.toggle("hidden", !currentUser);
+  document.getElementById("adminNav").classList.toggle("hidden", !isAdmin);
 }
+
+async function refreshUser() {
+  const {data,error} = await db.auth.getUser();
+
+  currentUser = (!error && data.user) ? data.user : null;
+  isAdmin = false;
+
+  if (currentUser) {
+    const {data:adminResult,error:adminError} =
+      await db.rpc("is_app_admin");
+
+    if (!adminError) isAdmin = adminResult === true;
+  }
+
+  updateAccountUI();
+}
+
+db.auth.onAuthStateChange(() => {
+  setTimeout(() => refreshUser(), 0);
+});
+
+/* CV DATA: saved in this browser */
+const cvFields = [
+  ["cvName","name"],["cvPhone","phone"],["cvEmail","email"],
+  ["cvJob","job"],["cvAddress","address"],["cvProfile","profile"],
+  ["cvEducation","education"],["cvExperience","experience"],
+  ["cvSkills","skills"],["cvLanguages","languages"]
+];
+
+function getCV() {
+  const cv = {};
+  cvFields.forEach(([id,key]) => {
+    cv[key] = document.getElementById(id).value.trim();
+  });
+  return cv;
+}
+
+function saveCV() {
+  if (!currentUser) {
+    message("CV save karne ke liye login karein.", "error");
+    return false;
+  }
+
+  const cv = getCV();
+
+  if (!cv.name) {
+    message("CV ke liye full name zaroori hai.", "error");
+    return false;
+  }
+
+  try {
+    localStorage.setItem("nexa_cv_" + currentUser.id, JSON.stringify(cv));
+    return true;
+  } catch {
+    message("CV browser mein save nahi ho saki.", "error");
+    return false;
+  }
+}
+
+function loadCV() {
+  if (!currentUser) return;
+
+  try {
+    const raw = localStorage.getItem("nexa_cv_" + currentUser.id);
+    if (!raw) return;
+
+    const cv = JSON.parse(raw);
+
+    cvFields.forEach(([id,key]) => {
+      document.getElementById(id).value = cv[key] || "";
+    });
+  } catch {
+    message("Saved CV details read nahi ho sakin.", "error");
+  }
+}
+
+document.getElementById("cvForm").addEventListener("submit", e => {
+  e.preventDefault();
+  if (saveCV()) message("CV details save ho gayi.", "success");
+});
+
+function previewCV() {
+  if (!saveCV()) return;
+
+  const cv = getCV();
+  const line = value => escapeHTML(value).replace(/\n/g,"<br>");
+
+  document.getElementById("cvPreview").innerHTML = `
+    <h2>${line(cv.name)}</h2>
+    <p><b>${line(cv.job)}</b></p>
+    <p>${line(cv.phone)} | ${line(cv.email)}</p>
+    <p>${line(cv.address)}</p>
+    <h3>Professional Profile</h3><p>${line(cv.profile)}</p>
+    <h3>Education</h3><p>${line(cv.education)}</p>
+    <h3>Work Experience</h3><p>${line(cv.experience)}</p>
+    <h3>Skills</h3><p>${line(cv.skills)}</p>
+    <h3>Languages</h3><p>${line(cv.languages)}</p>
+  `;
+
+  document.getElementById("cvPreview").classList.remove("hidden");
+}
+
+/* PAYMENT REQUEST */
+document.getElementById("paymentForm").addEventListener("submit", async e => {
+  e.preventDefault();
+
+  if (!currentUser) {
+    message("Payment request se pehle login karein.", "error");
+    return;
+  }
+
+  if (!saveCV()) return;
+
+  const customer_name = document.getElementById("customerName").value.trim();
+  const payment_method = document.getElementById("paymentMethod").value;
+  const transaction_id = document.getElementById("transactionId").value.trim();
+
+  if (!customer_name || !payment_method || !transaction_id) {
+    message("Tamam payment details fill karein.", "error");
+    return;
+  }
+
+  const button = e.submitter;
+  button.disabled = true;
+
+  const {error} = await db.from("cv_orders").insert({
+    user_id: currentUser.id,
+    customer_name,
+    payment_method,
+    transaction_id,
+    amount:100,
+    status:"pending"
+  });
+
+  button.disabled = false;
+
+  if (error) {
+    message("Request submit nahi hui: " + error.message, "error");
+    return;
+  }
+
+  document.getElementById("transactionId").value = "";
+  message("Payment request submit ho gayi. Admin verification ka intezar karein.", "success");
+  showSection("orders");
+});
+
+/* CUSTOMER ORDER LIST */
+async function loadOrders() {
+  if (!currentUser) return;
+
+  const target = document.getElementById("myOrders");
+  target.textContent = "Loading...";
+
+  const {data,error} = await db
+    .from("cv_orders")
+    .select("id,customer_name,payment_method,transaction_id,amount,status,created_at")
+    .eq("user_id",currentUser.id)
+    .order("created_at",{ascending:false});
+
+  if (error) {
+    target.textContent = "Requests load nahi huin: " + error.message;
+    return;
+  }
+
+  if (!data.length) {
+    target.textContent = "Abhi koi payment request nahi hai.";
+  } else {
+    target.innerHTML = data.map(order => `
+      <div class="order">
+        <b>${escapeHTML(order.customer_name)}</b>
+        <p>Method: ${escapeHTML(order.payment_method)}</p>
+        <p>Transaction ID: ${escapeHTML(order.transaction_id)}</p>
+        <p>Amount: Rs. ${order.amount}</p>
+        <p>Status: <span class="status ${escapeHTML(order.status)}">${escapeHTML(order.status.toUpperCase())}</span></p>
+        <p class="small">${escapeHTML(new Date(order.created_at).toLocaleString())}</p>
+      </div>
+    `).join("");
+  }
+
+  const hasApproval = data.some(order => order.status === "approved");
+  document.getElementById("pdfBtn").classList.toggle("hidden",!hasApproval);
+  document.getElementById("pdfStatus").textContent = hasApproval
+    ? "Database mein approved request mili hai. Apni CV details check karke PDF save karein."
+    : "PDF download ke liye payment approval ka intezar karein.";
+}
+
+/* ADMIN ORDER LIST */
+async function loadAdminOrders() {
+  if (!currentUser || !isAdmin) {
+    message("Admin access required.", "error");
+    return;
+  }
+
+  const target = document.getElementById("adminOrders");
+  target.textContent = "Loading requests...";
+
+  const {data,error} = await db
+    .from("cv_orders")
+    .select("id,user_id,customer_name,payment_method,transaction_id,amount,status,created_at")
+    .order("created_at",{ascending:false});
+
+  if (error) {
+    target.textContent = "Orders load nahi huin: " + error.message;
+    return;
+  }
+
+  if (!data.length) {
+    target.textContent = "Abhi koi payment request nahi.";
+    return;
+  }
+
+  target.innerHTML = data.map(order => `
+    <div class="order">
+      <h3>${escapeHTML(order.customer_name)}</h3>
+      <p><b>Payment:</b> ${escapeHTML(order.payment_method)} — Rs. ${order.amount}</p>
+      <p><b>Transaction ID:</b> ${escapeHTML(order.transaction_id)}</p>
+      <p><b>Customer UID:</b> ${escapeHTML(order.user_id)}</p>
+      <p><b>Order ID:</b> ${escapeHTML(order.id)}</p>
+      <p>Status: <span class="status ${escapeHTML(order.status)}">${escapeHTML(order.status.toUpperCase())}</span></p>
+      <p class="small">${escapeHTML(new Date(order.created_at).toLocaleString())}</p>
+      ${order.status === "pending" ? `
+        <div class="actions">
+          <button class="green" onclick="setOrderStatus('${order.id}','approved')">Approve</button>
+          <button class="red" onclick="setOrderStatus('${order.id}','rejected')">Reject</button>
+        </div>
+      ` : ""}
+    </div>
+  `).join("");
+}
+
+async function setOrderStatus(orderId,status) {
+  if (!currentUser || !isAdmin) {
+    message("Admin access required.", "error");
+    return;
+  }
+
+  const confirmText = status === "approved"
+    ? "Kya aapne payment asal mein verify kar li hai? Approve karein?"
+    : "Kya aap is payment request ko reject karna chahte hain?";
+
+  if (!confirm(confirmText)) return;
+
+  const {error} = await db
+    .from("cv_orders")
+    .update({status})
+    .eq("id",orderId)
+    .eq("status","pending");
+
+  if (error) {
+    message("Status update nahi hua: " + error.message, "error");
+    return;
+  }
+
+  message("Request status update ho gaya.", "success");
+  await loadAdminOrders();
+}
+
+/* PRINT CV AS PDF */
+async function downloadCV() {
+  if (!currentUser) {
+    message("Pehle login karein.", "error");
+    return;
+  }
+
+  // Check the database rather than relying only on browser state.
+  const {data,error} = await db
+    .from("cv_orders")
+    .select("id")
+    .eq("user_id",currentUser.id)
+    .eq("status","approved")
+    .limit(1);
+
+  if (error || !data || !data.length) {
+    message("Approved payment request nahi mili. PDF available nahi hai.", "error");
+    return;
+  }
+
+  let cv;
+  try {
+    cv = JSON.parse(localStorage.getItem("nexa_cv_" + currentUser.id) || "null");
+  } catch {
+    cv = null;
+  }
+
+  if (!cv || !cv.name) {
+    message("CV details nahi milin. CV Builder mein details dobara fill karein.", "error");
+    showSection("builder");
+    return;
+  }
+
+  const win = window.open("", "_blank");
+
+  if (!win) {
+    message("Browser ne print window block kar di. Is website ke liye pop-ups allow karein.", "error");
+    return;
+  }
+
+  const safe = value => escapeHTML(value).replace(/\n/g,"<br>");
+
+  win.document.write(`<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Professional CV</title>
+<style>
+@page{size:A4;margin:14mm}
+*{box-sizing:border-box}
+body{font-family:Arial,sans-serif;color:#203047;font-size:10pt;line-height:1.4;margin:0}
+h1{font-size:22pt;color:#102a56;margin:0 0 5px}
+h2{font-size:12pt;color:#1769d2;border-bottom:1px solid #1769d2;padding-bottom:3px;margin:14px 0 6px}
+p{margin:3px 0;overflow-wrap:anywhere}
+.contact{font-size:9pt;color:#526176}
+@media print{body{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+</style></head><body>
+<h1>${safe(cv.name)}</h1>
+<p><b>${safe(cv.job)}</b></p>
+<p class="contact">${safe(cv.phone)} | ${safe(cv.email)}</p>
+<p class="contact">${safe(cv.address)}</p>
+<h2>PROFESSIONAL PROFILE</h2><p>${safe(cv.profile)}</p>
+<h2>EDUCATION</h2><p>${safe(cv.education)}</p>
+<h2>WORK EXPERIENCE</h2><p>${safe(cv.experience)}</p>
+<h2>SKILLS</h2><p>${safe(cv.skills)}</p>
+<h2>LANGUAGES</h2><p>${safe(cv.languages)}</p>
+<script>window.onload=()=>window.print();<\/script>
+</body></html>`);
+  win.document.close();
+}
+
+/* STARTUP */
+async function init() {
+  const {data} = await db.auth.getSession();
+  currentUser = data.session ? data.session.user : null;
+  await refreshUser();
+  loadCV();
+  updateAccountUI();
+}
+
+init();
 </script>
 </body>
 </html>
