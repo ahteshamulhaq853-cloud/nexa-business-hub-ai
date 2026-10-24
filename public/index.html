@@ -4,1000 +4,153 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexa Business Hub</title>
-
+<title>Nexa Business Hub - CV Builder</title>
 <style>
-:root{
-  --navy:#102a56;
-  --blue:#1769d2;
-  --light:#eaf3ff;
-  --white:#ffffff;
-  --text:#1e293b;
-  --muted:#64748b;
-  --border:#dbe5f1;
-}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  color:var(--text);
-  background:#f4f7fc;
-}
-header{
-  background:linear-gradient(120deg,#102a56,#1769d2);
-  color:white;
-  padding:24px 5%;
-}
-.header-row{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-  flex-wrap:wrap;
-}
-.logo{font-size:27px;font-weight:800}
-.logo span{color:#9ed1ff}
-header p{margin:7px 0 0;color:#dceaff}
-.whatsapp{
-  background:#20c56a;
-  color:white;
-  text-decoration:none;
-  padding:12px 17px;
-  border-radius:9px;
-  font-weight:bold;
-}
-nav{
-  display:flex;
-  flex-wrap:wrap;
-  gap:7px;
-  padding:12px 5%;
-  background:white;
-  box-shadow:0 3px 12px #0000000c;
-  position:sticky;
-  top:0;
-  z-index:10;
-}
-nav a{
-  color:var(--navy);
-  text-decoration:none;
-  font-weight:bold;
-  padding:10px 13px;
-  border-radius:7px;
-  font-size:14px;
-}
-nav a:hover{background:var(--light)}
-main{max-width:1200px;margin:auto;padding:25px 18px}
-.hero{
-  background:linear-gradient(120deg,#102a56,#1769d2);
-  color:white;
-  border-radius:18px;
-  padding:35px;
-  margin-bottom:25px;
-}
-.hero h1{font-size:clamp(27px,4vw,43px);margin:0 0 12px}
-.hero p{line-height:1.7;max-width:700px;color:#e3efff}
-.btn{
-  border:0;
-  border-radius:8px;
-  padding:12px 16px;
-  font-weight:bold;
-  cursor:pointer;
-  display:inline-block;
-  text-decoration:none;
-  background:var(--blue);
-  color:white;
-  margin:4px 3px 4px 0;
-}
-.btn:hover{filter:brightness(.93)}
-.btn-light{background:white;color:var(--navy)}
-.btn-green{background:#16a765;color:white}
-.btn-dark{background:var(--navy);color:white}
-.section{
-  background:white;
-  padding:23px;
-  margin:22px 0;
-  border-radius:15px;
-  border:1px solid var(--border);
-  box-shadow:0 5px 18px #102a5608;
-}
-.section h2{color:var(--navy);margin-top:0}
-.section-intro{color:var(--muted);line-height:1.7}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px;
-}
-.card{
-  border:1px solid var(--border);
-  padding:19px;
-  border-radius:12px;
-  background:#fff;
-}
-.card .emoji{font-size:29px}
-.card h3{margin:10px 0;color:var(--navy)}
-.card p{color:var(--muted);line-height:1.6;font-size:14px}
+body{margin:0;font-family:Arial,sans-serif;background:#edf3fb;color:#17243b}
+header{background:#102a56;color:white;padding:22px 15px;text-align:center}
+header h1{margin:0 0 8px}
+header p{margin:0;color:#d8e7ff}
+.container{max-width:950px;margin:22px auto;padding:15px}
+.card{background:white;padding:22px;border-radius:14px;margin-bottom:18px;box-shadow:0 4px 18px #102a5610}
+h2{color:#1769d2;margin-top:0}
 label{display:block;font-weight:bold;margin:13px 0 6px}
-input,textarea,select{
-  width:100%;
-  padding:12px;
-  border:1px solid #cbd5e1;
-  border-radius:8px;
-  font:inherit;
-  background:white;
-}
-textarea{min-height:100px;resize:vertical}
-.two-col{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:15px;
-}
-.small{font-size:13px;color:var(--muted);line-height:1.6}
-.result{
-  border:1px dashed #94a3b8;
-  padding:16px;
-  border-radius:10px;
-  margin-top:15px;
-  background:#f8fbff;
-  overflow-wrap:anywhere;
-}
-.service-list{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:10px;
-}
-.service-item{
-  background:#f4f8ff;
-  border:1px solid var(--border);
-  padding:13px;
-  border-radius:8px;
-}
-#videoCanvas{
-  width:100%;
-  max-height:520px;
-  aspect-ratio:16/9;
-  background:#07142c;
-  border-radius:12px;
-  display:block;
-  margin-top:15px;
-}
-.status{font-weight:bold;color:var(--navy);margin:10px 0}
-footer{
-  background:#102a56;
-  color:white;
-  text-align:center;
-  padding:28px 15px;
-  line-height:1.8;
-}
-footer a{color:#b8ddff}
-.hidden{display:none}
-@media(max-width:600px){
-  header{padding:20px 16px}
-  nav{padding:9px;gap:3px}
-  nav a{padding:9px;font-size:12px}
-  main{padding:15px 10px}
-  .hero{padding:24px 19px}
-  .section{padding:17px}
-  .logo{font-size:23px}
+input,textarea,select{width:100%;padding:12px;border:1px solid #ccd7e6;border-radius:7px;font:inherit}
+textarea{min-height:80px;resize:vertical}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+button{border:0;border-radius:8px;padding:13px 18px;font-weight:bold;cursor:pointer;margin:7px 5px 0 0}
+.primary{background:#1769d2;color:white}
+.secondary{background:#e5efff;color:#102a56}
+.pay{background:#087c55;color:white}
+.small{font-size:13px;color:#63718a;line-height:1.6}
+.payment{background:#f2f7ff;padding:14px;border-radius:9px;margin:12px 0}
+#preview{background:white;padding:28px;border:1px solid #cbd5e1;min-height:300px;overflow-wrap:anywhere}
+#preview h1{color:#102a56;margin-bottom:5px}
+#preview h3{color:#1769d2;border-bottom:1px solid #ccd7e6;padding-bottom:5px}
+.status{padding:12px;background:#fff4d9;border-radius:8px;margin-top:12px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.container{padding:10px}.card{padding:15px}}
+@media print{
+ body{background:white}
+ header,.form-area,.payment-area,.actions,.no-print{display:none!important}
+ .container{margin:0;padding:0;max-width:none}
+ .card{box-shadow:none;border:0;padding:0}
+ #preview{border:0;padding:0}
 }
 </style>
 </head>
-
 <body>
-
 <header>
-  <div class="header-row">
-    <div>
-      <div class="logo">🔷 Nexa <span>Business Hub</span></div>
-      <p>Your Digital Services, Learning and Creative Solutions</p>
-    </div>
-    <a class="whatsapp"
-       href="https://wa.me/923342709019"
-       target="_blank">WhatsApp: 0334-2709019</a>
-  </div>
+<h1>Nexa Business Hub</h1>
+<p>Professional CV Builder</p>
 </header>
 
-<nav>
-  <a href="#dashboard">🏠 Dashboard</a>
-  <a href="#services">🧰 Online Services</a>
-  <a href="#courses">🎓 Courses</a>
-  <a href="#cv">📄 CV Builder</a>
-  <a href="#video">🎬 AI Video Generation</a>
-  <a href="#contact">📞 Contact</a>
-</nav>
-
-<main>
-
-<!-- DASHBOARD -->
-<section class="hero" id="dashboard">
-  <h1>Welcome to Nexa Business Hub</h1>
-  <p>
-    Your one-stop platform for online applications, CV preparation,
-    digital skills, creative video projects and professional services.
-  </p>
-  <a class="btn btn-light" href="#services">Explore Services</a>
-  <a class="btn btn-green" href="https://wa.me/923342709019"
-     target="_blank">Contact on WhatsApp</a>
+<div class="container">
+<section class="card form-area">
+<h2>1. Enter Your Details</h2>
+<form id="cvForm">
+<div class="grid">
+<div><label>Full Name *</label><input id="name" required placeholder="Your full name"></div>
+<div><label>Job Title</label><input id="job" placeholder="e.g. Office Assistant"></div>
+<div><label>Phone Number</label><input id="phone" placeholder="03XXXXXXXXX"></div>
+<div><label>Email Address</label><input id="email" type="email" placeholder="you@example.com"></div>
+</div>
+<label>Address</label><input id="address">
+<label>Professional Summary</label><textarea id="summary" placeholder="Write a short introduction"></textarea>
+<label>Education</label><textarea id="education" placeholder="Degree, institution, year"></textarea>
+<label>Work Experience</label><textarea id="experience" placeholder="Job title, workplace, responsibilities"></textarea>
+<label>Skills</label><textarea id="skills" placeholder="Computer skills, communication, etc."></textarea>
+<label>Languages</label><input id="languages" placeholder="English, Urdu, Pashto">
+<label>References</label><textarea id="references" placeholder="Optional"></textarea>
+<button class="primary" type="submit">Generate CV Preview</button>
+</form>
 </section>
 
-<section class="section">
-  <h2>Our Main Features</h2>
-  <div class="grid">
-    <div class="card">
-      <div class="emoji">📝</div>
-      <h3>Online Applications</h3>
-      <p>Get help preparing online forms and applications.</p>
-      <a class="btn" href="#services">Explore</a>
-    </div>
-    <div class="card">
-      <div class="emoji">📄</div>
-      <h3>CV & Resume</h3>
-      <p>Create and print a professional CV using your details.</p>
-      <a class="btn" href="#cv">Create CV</a>
-    </div>
-    <div class="card">
-      <div class="emoji">🎬</div>
-      <h3>Video Creator</h3>
-      <p>Create animated videos from your text and export them.</p>
-      <a class="btn" href="#video">Create Video</a>
-    </div>
-    <div class="card">
-      <div class="emoji">🎓</div>
-      <h3>Digital Courses</h3>
-      <p>Explore useful computer and online business skills.</p>
-      <a class="btn" href="#courses">View Courses</a>
-    </div>
-  </div>
+<section class="card">
+<h2>2. CV Preview</h2>
+<div id="preview">
+<h1>Your Name</h1>
+<p>Fill in your details and select Generate CV Preview.</p>
+</div>
+<div class="actions">
+<button class="secondary" onclick="window.print()">Print / Save as PDF</button>
+</div>
+<p class="small">This initial version allows printing. Secure payment-based PDF locking requires server-side verification.</p>
 </section>
 
-<!-- ONLINE SERVICES -->
-<section class="section" id="services">
-  <h2>🧰 Online Services</h2>
-  <p class="section-intro">
-    Select a service to send your request through WhatsApp.
-    Availability and requirements depend on the service.
-  </p>
-
-  <div class="service-list">
-    <div class="service-item">📄 CV & Resume Making</div>
-    <div class="service-item">🖨️ Printing & Scanning</div>
-    <div class="service-item">⌨️ English / Urdu Composing</div>
-    <div class="service-item">🎓 Admission Applications</div>
-    <div class="service-item">💼 Job Applications</div>
-    <div class="service-item">🪪 Document Formatting</div>
-    <div class="service-item">📋 Form Filling Assistance</div>
-    <div class="service-item">📑 Letters & Applications</div>
-    <div class="service-item">🎨 Poster & Logo Design</div>
-    <div class="service-item">📸 Photo Editing</div>
-    <div class="service-item">📁 PDF Formatting</div>
-    <div class="service-item">💻 Computer Assistance</div>
-    <div class="service-item">📊 Data Entry</div>
-    <div class="service-item">🌐 Online Registration Help</div>
-    <div class="service-item">📃 Certificates Formatting</div>
-    <div class="service-item">🎬 Video Editing</div>
-    <div class="service-item">📝 Urdu Typing</div>
-    <div class="service-item">📚 Assignments Formatting</div>
-    <div class="service-item">📬 Email Drafting</div>
-    <div class="service-item">🖼️ ID / Passport Photo Layout</div>
-    <div class="service-item">📄 Official Document Layout</div>
-    <div class="service-item">📱 Social Media Posts</div>
-    <div class="service-item">📈 Business Promotional Design</div>
-    <div class="service-item">🧾 Invoice & Bill Layout</div>
-    <div class="service-item">🗂️ Document Conversion</div>
-    <div class="service-item">🔤 Font & Text Formatting</div>
-    <div class="service-item">📽️ Presentation Design</div>
-    <div class="service-item">🤖 AI Content Assistance</div>
-  </div>
-
-  <div style="margin-top:20px">
-    <label for="serviceChoice">Choose your service</label>
-    <select id="serviceChoice">
-      <option>CV & Resume Making</option>
-      <option>Printing & Scanning</option>
-      <option>Composing</option>
-      <option>Online Application Assistance</option>
-      <option>Poster & Logo Design</option>
-      <option>Video Editing</option>
-      <option>Other Service</option>
-    </select>
-    <label for="serviceDetails">Your requirements</label>
-    <textarea id="serviceDetails"
-      placeholder="Write your requirements here..."></textarea>
-    <button class="btn btn-green" onclick="sendServiceRequest()">
-      Send Request on WhatsApp
-    </button>
-  </div>
+<section class="card payment-area">
+<h2>3. CV Fee: Rs. 100</h2>
+<p>Pay the fee using one of the following methods.</p>
+<div class="payment">
+<strong>Easypaisa</strong><br>
+Number: 03428943769<br>
+Account Name: GULAP BIBI
+<button class="secondary" onclick="copyText('03428943769')">Copy Number</button>
+</div>
+<div class="payment">
+<strong>JazzCash</strong><br>
+Number: 03469799347<br>
+Account Name: EHTISHAMUL HAQ
+<button class="secondary" onclick="copyText('03469799347')">Copy Number</button>
+</div>
+<label>Payment Method</label>
+<select id="method">
+<option>Easypaisa</option>
+<option>JazzCash</option>
+</select>
+<label>Transaction ID</label>
+<input id="transaction" placeholder="Enter transaction ID">
+<label>Payment Screenshot (optional)</label>
+<input id="screenshot" type="file" accept="image/*">
+<button class="pay" onclick="submitPayment()">Submit Payment Details</button>
+<div id="status" class="status">
+Payment has not been submitted yet.
+</div>
+<p class="small">Demo only: this page does not send payment details to an administrator or verify transactions.</p>
 </section>
-
-<!-- COURSES -->
-<section class="section" id="courses">
-  <h2>🎓 Digital Skills & Courses</h2>
-  <p class="section-intro">
-    Explore these learning topics. Course content can be added as you
-    develop your training program.
-  </p>
-  <div class="grid">
-    <div class="card"><h3>💻 Basic Computer</h3><p>Computer fundamentals, files, folders and everyday use.</p></div>
-    <div class="card"><h3>⌨️ MS Word</h3><p>Documents, letters, formatting and page layouts.</p></div>
-    <div class="card"><h3>📊 MS Excel</h3><p>Spreadsheets, formulas and basic data management.</p></div>
-    <div class="card"><h3>📽️ PowerPoint</h3><p>Presentations, slides and visual storytelling.</p></div>
-    <div class="card"><h3>🌐 Web Development</h3><p>Learn HTML, CSS and JavaScript fundamentals.</p></div>
-    <div class="card"><h3>🎨 Graphic Design</h3><p>Learn layouts, posters, logos and visual design basics.</p></div>
-    <div class="card"><h3>🎬 Video Editing</h3><p>Understand video timelines, text, images and exports.</p></div>
-    <div class="card"><h3>🤖 AI Tools</h3><p>Learn how to use AI tools responsibly for creative work.</p></div>
-    <div class="card"><h3>📄 CV Design</h3><p>Build clear and professional resumes.</p></div>
-    <div class="card"><h3>🛒 Freelancing Basics</h3><p>Understand online work, portfolios and client communication.</p></div>
-    <div class="card"><h3>📱 Social Media Design</h3><p>Prepare content layouts for digital platforms.</p></div>
-    <div class="card"><h3>🔐 Internet Safety</h3><p>Learn about strong passwords, privacy and scams.</p></div>
-  </div>
-</section>
-
-<!-- CV BUILDER -->
-<section class="section" id="cv">
-  <h2>📄 Professional CV Builder</h2>
-  <p class="section-intro">
-    Enter your information and create a print-ready CV.
-    Your information stays in this browser page.
-  </p>
-
-  <div class="two-col">
-    <div>
-      <label for="cvName">Full Name</label>
-      <input id="cvName" placeholder="Enter full name">
-
-      <label for="cvPhone">Phone Number</label>
-      <input id="cvPhone" placeholder="03XXXXXXXXX">
-
-      <label for="cvEmail">Email Address</label>
-      <input id="cvEmail" placeholder="example@email.com">
-
-      <label for="cvAddress">Address</label>
-      <input id="cvAddress" placeholder="City, Pakistan">
-
-      <label for="cvObjective">Professional Profile</label>
-      <textarea id="cvObjective"
-        placeholder="Write a short professional introduction"></textarea>
-    </div>
-    <div>
-      <label for="cvEducation">Education</label>
-      <textarea id="cvEducation"
-        placeholder="Degree, institute and year"></textarea>
-
-      <label for="cvExperience">Experience</label>
-      <textarea id="cvExperience"
-        placeholder="Work experience, if any"></textarea>
-
-      <label for="cvSkills">Skills</label>
-      <textarea id="cvSkills"
-        placeholder="Computer skills, communication, etc."></textarea>
-
-      <label for="cvLanguages">Languages</label>
-      <input id="cvLanguages" placeholder="Urdu, English, Pashto">
-    </div>
-  </div>
-
-  <button class="btn" onclick="generateCV()">Generate CV</button>
-  <button class="btn btn-dark" onclick="printCV()">Print / Save as PDF</button>
-  <div id="cvOutput" class="result hidden"></div>
-</section>
-
-<!-- VIDEO GENERATION -->
-<section class="section" id="video">
-  <h2>🎬 AI Video Generation & Video Maker</h2>
-  <p class="section-intro">
-    Create a moving text-and-visual video from your prompt, preview it,
-    and export it as a WebM video where supported.
-    This offline tool creates animated scenes; it does not generate
-    genuine AI footage or AI voice.
-  </p>
-
-  <div class="two-col">
-    <div>
-      <label for="videoPrompt">Video Prompt / Story</label>
-      <textarea id="videoPrompt">A beautiful sunrise over green mountains, birds flying across the sky, peaceful nature and a hopeful new beginning.</textarea>
-
-      <label for="videoTitle">Video Title</label>
-      <input id="videoTitle" value="My Creative Video">
-
-      <label for="videoStyle">Visual Style</label>
-      <select id="videoStyle">
-        <option value="nature">Nature & Sunrise</option>
-        <option value="space">Space & Stars</option>
-        <option value="business">Business & Technology</option>
-        <option value="ocean">Ocean & Waves</option>
-        <option value="sunset">Sunset & Mountains</option>
-      </select>
-
-      <label for="videoDuration">Duration</label>
-      <select id="videoDuration">
-        <option value="10">10 seconds</option>
-        <option value="15">15 seconds</option>
-        <option value="20">20 seconds</option>
-        <option value="30">30 seconds</option>
-      </select>
-
-      <label for="videoFormat">Aspect Ratio</label>
-      <select id="videoFormat">
-        <option value="landscape">Landscape (16:9)</option>
-        <option value="portrait">Portrait (9:16)</option>
-        <option value="square">Square (1:1)</option>
-      </select>
-
-      <button class="btn" id="previewBtn" onclick="startPreview()">
-        ▶ Preview Animation
-      </button>
-      <button class="btn btn-green" id="recordBtn" onclick="exportVideo()">
-        ⬇ Generate & Download Video
-      </button>
-      <button class="btn btn-dark" onclick="stopVideo()">Stop</button>
-
-      <p class="small">
-        Keep this tab open during export. Your browser must support
-        Canvas capture and MediaRecorder. The downloaded video is an
-        animated composition based on your prompt, not real AI-generated
-        camera footage.
-      </p>
-      <div id="videoStatus" class="status" role="status">
-        Ready to create your video.
-      </div>
-    </div>
-
-    <div>
-      <h3>Live Video Preview</h3>
-      <canvas id="videoCanvas" width="1280" height="720"></canvas>
-      <p class="small">
-        Tip: write a clear story, scene, or message in the prompt box.
-        Your text will be displayed over an animated background.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section" id="contact">
-  <h2>📞 Contact Nexa Business Hub</h2>
-  <p class="section-intro">
-    For service requests, information and assistance, contact us directly.
-  </p>
-  <div class="grid">
-    <div class="card">
-      <h3>📱 WhatsApp</h3>
-      <p>0334-2709019</p>
-      <a class="btn btn-green" href="https://wa.me/923342709019"
-         target="_blank">Message Us</a>
-    </div>
-    <div class="card">
-      <h3>🧰 Services</h3>
-      <p>Ask about CVs, composing, printing and online services.</p>
-      <a class="btn" href="#services">View Services</a>
-    </div>
-    <div class="card">
-      <h3>🎬 Video Maker</h3>
-      <p>Try the built-in animated video creation tool.</p>
-      <a class="btn" href="#video">Create Video</a>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <strong>🔷 Nexa Business Hub</strong><br>
-  Digital Services • Courses • CV Builder • Video Creator<br>
-  WhatsApp: 0334-2709019<br>
-  <span class="small" style="color:#dceaff">
-    © <span id="year"></span> Nexa Business Hub. All rights reserved.
-  </span>
-</footer>
+</div>
 
 <script>
-"use strict";
+const $ = id => document.getElementById(id);
 
-const WHATSAPP_NUMBER = "923342709019";
+$('cvForm').addEventListener('submit', function(e){
+ e.preventDefault();
+ const val = id => $(id).value.trim();
+ const section = (title,text) => text ?
+ `<h3>${title}</h3><p>${escapeHTML(text).replace(/\n/g,'<br>')}</p>` : '';
+ $('preview').innerHTML = `
+ <h1>${escapeHTML(val('name'))}</h1>
+ <h3>${escapeHTML(val('job'))}</h3>
+ <p>${escapeHTML([val('phone'),val('email'),val('address')].filter(Boolean).join(' | '))}</p>
+ ${section('Professional Summary',val('summary'))}
+ ${section('Education',val('education'))}
+ ${section('Work Experience',val('experience'))}
+ ${section('Skills',val('skills'))}
+ ${section('Languages',val('languages'))}
+ ${section('References',val('references'))}`;
+});
 
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-
-/* ONLINE SERVICE REQUEST */
-function sendServiceRequest(){
-  const service = document.getElementById("serviceChoice").value;
-  const details = document.getElementById("serviceDetails").value.trim();
-
-  const message =
-    "Assalam-o-Alaikum Nexa Business Hub.%0A" +
-    "Service: " + encodeURIComponent(service) + "%0A" +
-    "Requirements: " + encodeURIComponent(details);
-
-  window.open(
-    "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + message,
-    "_blank"
-  );
+function escapeHTML(s){
+ return s.replace(/[&<>"']/g,c=>({
+ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+ }[c]));
 }
-
-/* CV BUILDER */
-function escapeHTML(value){
-  return String(value).replace(/[&<>"']/g, function(ch){
-    return {
-      "&":"&amp;",
-      "<":"&lt;",
-      ">":"&gt;",
-      '"':"&quot;",
-      "'":"&#39;"
-    }[ch];
-  });
+function copyText(text){
+ if(navigator.clipboard && window.isSecureContext){
+  navigator.clipboard.writeText(text).then(()=>alert('Number copied.'));
+ }else{
+  prompt('Copy this number:',text);
+ }
 }
-
-function multiline(value){
-  return escapeHTML(value.trim()).replace(/\n/g,"<br>");
+function submitPayment(){
+ const id=$('transaction').value.trim();
+ if(!id){
+  alert('Please enter your transaction ID.');
+  return;
+ }
+ $('status').textContent=
+ 'Demo submission only. Transaction ID: '+id+
+ '. No administrator has received or verified this payment. Contact the website administrator to confirm payment.';
 }
-
-function generateCV(){
-  const name = document.getElementById("cvName").value.trim();
-  if(!name){
-    alert("Please enter your full name first.");
-    return;
-  }
-
-  const phone = document.getElementById("cvPhone").value;
-  const email = document.getElementById("cvEmail").value;
-  const address = document.getElementById("cvAddress").value;
-  const objective = document.getElementById("cvObjective").value;
-  const education = document.getElementById("cvEducation").value;
-  const experience = document.getElementById("cvExperience").value;
-  const skills = document.getElementById("cvSkills").value;
-  const languages = document.getElementById("cvLanguages").value;
-
-  const output = document.getElementById("cvOutput");
-  output.innerHTML = `
-    <div id="printableCV" style="background:white;color:#172b4d;padding:24px">
-      <h1 style="margin-bottom:5px;color:#102a56">${escapeHTML(name)}</h1>
-      <p>${escapeHTML(phone)} ${email ? " | " + escapeHTML(email) : ""}</p>
-      <p>${escapeHTML(address)}</p>
-      <hr>
-      <h3>PROFESSIONAL PROFILE</h3>
-      <p>${multiline(objective) || "Add a professional profile."}</p>
-      <h3>EDUCATION</h3>
-      <p>${multiline(education) || "Add your education details."}</p>
-      <h3>EXPERIENCE</h3>
-      <p>${multiline(experience) || "No experience details provided."}</p>
-      <h3>SKILLS</h3>
-      <p>${multiline(skills) || "Add your skills."}</p>
-      <h3>LANGUAGES</h3>
-      <p>${multiline(languages) || "Add your languages."}</p>
-    </div>`;
-
-  output.classList.remove("hidden");
-  output.scrollIntoView({behavior:"smooth",block:"start"});
-}
-
-function printCV(){
-  const cv = document.getElementById("printableCV");
-  if(!cv){
-    alert("Please generate your CV first.");
-    return;
-  }
-
-  const printWindow = window.open("","_blank");
-  if(!printWindow){
-    alert("Please allow pop-ups to print or save your CV as PDF.");
-    return;
-  }
-
-  printWindow.document.open();
-  printWindow.document.write(`
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>Professional CV</title>
-      <meta charset="UTF-8">
-      <style>
-        body{font-family:Arial,sans-serif;margin:25px;color:#172b4d}
-        h1{color:#102a56}
-        h3{color:#1769d2;border-bottom:1px solid #ddd;padding-bottom:5px}
-        p{line-height:1.6;overflow-wrap:anywhere}
-        @page{size:A4;margin:15mm}
-      </style>
-    </head>
-    <body>${cv.innerHTML}</body>
-    </html>`);
-  printWindow.document.close();
-  printWindow.focus();
-  printWindow.onload = function(){
-    printWindow.print();
-  };
-}
-
-/* ANIMATED VIDEO MAKER */
-const canvas = document.getElementById("videoCanvas");
-const ctx = canvas.getContext("2d");
-const statusEl = document.getElementById("videoStatus");
-
-let animationId = null;
-let animationStart = 0;
-let isAnimating = false;
-let recorder = null;
-let recordedChunks = [];
-
-const palettes = {
-  nature: ["#071b39","#1769a5","#f9b95b"],
-  space: ["#05051e","#39276f","#b7a7ff"],
-  business: ["#06172e","#1769d2","#5ee7ff"],
-  ocean: ["#03294b","#087eaa","#72e5ff"],
-  sunset: ["#3d174e","#db634f","#ffc56e"]
-};
-
-function setCanvasSize(){
-  const format = document.getElementById("videoFormat").value;
-
-  if(format === "portrait"){
-    canvas.width = 720;
-    canvas.height = 1280;
-  }else if(format === "square"){
-    canvas.width = 900;
-    canvas.height = 900;
-  }else{
-    canvas.width = 1280;
-    canvas.height = 720;
-  }
-
-  drawScene(0,0);
-}
-
-function getPromptLines(text,maxWidth,font){
-  ctx.font = font;
-  const words = text.split(/\s+/);
-  const lines = [];
-  let line = "";
-
-  for(const word of words){
-    const test = line ? line + " " + word : word;
-    if(ctx.measureText(test).width > maxWidth && line){
-      lines.push(line);
-      line = word;
-    }else{
-      line = test;
-    }
-  }
-
-  if(line) lines.push(line);
-  return lines;
-}
-
-function drawScene(elapsed,progress){
-  const w = canvas.width;
-  const h = canvas.height;
-  const style = document.getElementById("videoStyle").value;
-  const title = document.getElementById("videoTitle").value.trim()
-    || "My Creative Video";
-  const prompt = document.getElementById("videoPrompt").value.trim()
-    || "Welcome to my creative video";
-
-  const colors = palettes[style] || palettes.nature;
-
-  const gradient = ctx.createLinearGradient(0,0,w,h);
-  gradient.addColorStop(0,colors[0]);
-  gradient.addColorStop(.55,colors[1]);
-  gradient.addColorStop(1,colors[2]);
-
-  ctx.fillStyle = gradient;
-  ctx.fillRect(0,0,w,h);
-
-  // Subtle moving light
-  const lightX = w * (.5 + .22 * Math.sin(elapsed * .0006));
-  const lightY = h * (.35 + .12 * Math.cos(elapsed * .0005));
-  const glow = ctx.createRadialGradient(
-    lightX,lightY,10,lightX,lightY,w*.65
-  );
-  glow.addColorStop(0,"rgba(255,255,255,0.22)");
-  glow.addColorStop(1,"rgba(255,255,255,0)");
-  ctx.fillStyle = glow;
-  ctx.fillRect(0,0,w,h);
-
-  // Floating decorative circles
-  for(let i=0;i<30;i++){
-    const x = (i*137 + elapsed*.025) % w;
-    const y = (i*83 + Math.sin(elapsed*.001+i)*35) % h;
-    const radius = 2 + (i%4);
-    ctx.beginPath();
-    ctx.arc(x,y,radius,0,Math.PI*2);
-    ctx.fillStyle = "rgba(255,255,255,"+(0.08+(i%3)*.05)+")";
-    ctx.fill();
-  }
-
-  // Theme-specific visual silhouettes
-  if(style === "space"){
-    for(let i=0;i<95;i++){
-      const x=(i*191+31)%w;
-      const y=(i*113+17)%h;
-      ctx.fillStyle="rgba(255,255,255,"+(0.3+(i%5)*.12)+")";
-      ctx.fillRect(x,y,2+(i%2),2+(i%2));
-    }
-    ctx.beginPath();
-    ctx.arc(w*.78,h*.24,Math.min(w,h)*.09,0,Math.PI*2);
-    ctx.fillStyle="#d9d6ff";
-    ctx.fill();
-    ctx.beginPath();
-    ctx.arc(w*.75,h*.21,Math.min(w,h)*.09,0,Math.PI*2);
-    ctx.fillStyle=colors[0];
-    ctx.fill();
-  }
-
-  if(style === "nature" || style === "sunset"){
-    ctx.fillStyle="rgba(255,218,139,.85)";
-    ctx.beginPath();
-    ctx.arc(w*.78,h*.27,Math.min(w,h)*.075,0,Math.PI*2);
-    ctx.fill();
-
-    ctx.fillStyle="rgba(4,35,50,.42)";
-    ctx.beginPath();
-    ctx.moveTo(0,h*.78);
-    ctx.lineTo(w*.22,h*.40);
-    ctx.lineTo(w*.44,h*.78);
-    ctx.lineTo(w*.65,h*.48);
-    ctx.lineTo(w,h*.80);
-    ctx.lineTo(w,h);
-    ctx.lineTo(0,h);
-    ctx.closePath();
-    ctx.fill();
-  }
-
-  if(style === "ocean"){
-    for(let layer=0;layer<4;layer++){
-      const base=h*(.60+layer*.10);
-      ctx.beginPath();
-      ctx.moveTo(0,h);
-      for(let x=0;x<=w;x+=12){
-        const y=base+
-          Math.sin(x*.012+elapsed*.0015+layer)*h*.018;
-        ctx.lineTo(x,y);
-      }
-      ctx.lineTo(w,h);
-      ctx.closePath();
-      ctx.fillStyle="rgba(0,30,75,"+(.25+layer*.10)+")";
-      ctx.fill();
-    }
-  }
-
-  if(style === "business"){
-    const gap=Math.max(40,w/16);
-    ctx.strokeStyle="rgba(255,255,255,.09)";
-    ctx.lineWidth=1;
-    for(let x=0;x<w;x+=gap){
-      ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,h);ctx.stroke();
-    }
-    for(let y=0;y<h;y+=gap){
-      ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke();
-    }
-    ctx.strokeStyle="rgba(255,255,255,.4)";
-    ctx.lineWidth=4;
-    ctx.strokeRect(w*.65,h*.2,w*.19,h*.24);
-    ctx.beginPath();
-    ctx.moveTo(w*.67,h*.39);
-    ctx.lineTo(w*.72,h*.32);
-    ctx.lineTo(w*.76,h*.35);
-    ctx.lineTo(w*.82,h*.25);
-    ctx.stroke();
-  }
-
-  // Dark overlay for readable text
-  const overlay=ctx.createLinearGradient(0,h*.28,0,h);
-  overlay.addColorStop(0,"rgba(0,0,0,0)");
-  overlay.addColorStop(1,"rgba(0,0,0,.58)");
-  ctx.fillStyle=overlay;
-  ctx.fillRect(0,0,w,h);
-
-  const isPortrait=h>w;
-  const titleSize=Math.max(28,Math.min(w*.052,h*.09));
-  const bodySize=Math.max(20,Math.min(w*.027,h*.043));
-  const maxTextWidth=w*.82;
-
-  ctx.textAlign="center";
-  ctx.textBaseline="middle";
-  ctx.shadowColor="rgba(0,0,0,.45)";
-  ctx.shadowBlur=12;
-
-  const titleY=isPortrait?h*.34:h*.39;
-  ctx.font="bold "+titleSize+"px Arial";
-  ctx.fillStyle="#ffffff";
-
-  const titleLines=getPromptLines(title,maxTextWidth,
-    "bold "+titleSize+"px Arial");
-  titleLines.slice(0,3).forEach((line,index)=>{
-    ctx.fillText(line,w/2,titleY+index*titleSize*1.2,maxTextWidth);
-  });
-
-  const promptY=titleY+Math.min(titleLines.length,3)*titleSize*1.45;
-  ctx.font=bodySize+"px Arial";
-  ctx.fillStyle="#eef6ff";
-
-  const promptLines=getPromptLines(prompt,maxTextWidth,
-    bodySize+"px Arial");
-  promptLines.slice(0,isPortrait?7:4).forEach((line,index)=>{
-    ctx.fillText(line,w/2,promptY+index*bodySize*1.5,maxTextWidth);
-  });
-
-  ctx.shadowBlur=0;
-  ctx.font="bold "+Math.max(16,w*.018)+"px Arial";
-  ctx.fillStyle="rgba(255,255,255,.8)";
-  ctx.fillText("NEXA BUSINESS HUB",w/2,h*.94,w*.8);
-
-  // Progress line
-  ctx.fillStyle="rgba(255,255,255,.25)";
-  ctx.fillRect(0,h-6,w,6);
-  ctx.fillStyle="#ffffff";
-  ctx.fillRect(0,h-6,w*Math.max(0,Math.min(1,progress)),6);
-}
-
-function animateFrame(timestamp){
-  if(!isAnimating)return;
-
-  const duration=Number(
-    document.getElementById("videoDuration").value
-  )*1000;
-
-  if(!animationStart) animationStart=timestamp;
-
-  const elapsed=timestamp-animationStart;
-  const progress=Math.min(1,elapsed/duration);
-
-  drawScene(elapsed,progress);
-
-  if(progress>=1){
-    isAnimating=false;
-    animationId=null;
-    statusEl.textContent="Preview finished. You can export the video now.";
-    return;
-  }
-
-  animationId=requestAnimationFrame(animateFrame);
-}
-
-function startPreview(){
-  stopAnimationOnly();
-  setCanvasSize();
-  animationStart=0;
-  isAnimating=true;
-  statusEl.textContent="Playing video preview...";
-  animationId=requestAnimationFrame(animateFrame);
-}
-
-function stopAnimationOnly(){
-  isAnimating=false;
-  if(animationId!==null){
-    cancelAnimationFrame(animationId);
-    animationId=null;
-  }
-}
-
-function stopVideo(){
-  stopAnimationOnly();
-
-  if(recorder && recorder.state==="recording"){
-    recorder.stop();
-  }
-
-  drawScene(0,0);
-  statusEl.textContent="Stopped.";
-}
-
-function exportVideo(){
-  if(!canvas.captureStream || !window.MediaRecorder){
-    statusEl.textContent=
-      "Video export is not supported by this browser. Try an updated Chrome or Edge.";
-    return;
-  }
-
-  if(recorder && recorder.state==="recording"){
-    statusEl.textContent="Video export is already in progress.";
-    return;
-  }
-
-  stopAnimationOnly();
-  setCanvasSize();
-
-  recordedChunks=[];
-  const duration=Number(
-    document.getElementById("videoDuration").value
-  )*1000;
-
-  const stream=canvas.captureStream(30);
-  let options={};
-
-  if(MediaRecorder.isTypeSupported("video/webm;codecs=vp9")){
-    options.mimeType="video/webm;codecs=vp9";
-  }else if(MediaRecorder.isTypeSupported("video/webm;codecs=vp8")){
-    options.mimeType="video/webm;codecs=vp8";
-  }else if(MediaRecorder.isTypeSupported("video/webm")){
-    options.mimeType="video/webm";
-  }
-
-  try{
-    recorder=new MediaRecorder(stream,options);
-  }catch(error){
-    stream.getTracks().forEach(track=>track.stop());
-    statusEl.textContent="Could not start recording in this browser.";
-    return;
-  }
-
-  recorder.ondataavailable=function(event){
-    if(event.data && event.data.size>0){
-      recordedChunks.push(event.data);
-    }
-  };
-
-  recorder.onerror=function(){
-    statusEl.textContent="Recording error. Please try again.";
-    stream.getTracks().forEach(track=>track.stop());
-  };
-
-  recorder.onstop=function(){
-    stream.getTracks().forEach(track=>track.stop());
-
-    if(recordedChunks.length===0){
-      statusEl.textContent="No video data recorded. Please try again.";
-      return;
-    }
-
-    const blob=new Blob(recordedChunks,{
-      type:recorder.mimeType || "video/webm"
-    });
-
-    const url=URL.createObjectURL(blob);
-    const link=document.createElement("a");
-    link.href=url;
-    link.download="nexa-business-hub-video.webm";
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-
-    statusEl.textContent=
-      "Video created and downloaded. Open the downloaded WebM file to play it.";
-
-    setTimeout(()=>URL.revokeObjectURL(url),60000);
-  };
-
-  recorder.start(250);
-  animationStart=0;
-  isAnimating=true;
-
-  function recordFrame(timestamp){
-    if(!isAnimating)return;
-
-    if(!animationStart)animationStart=timestamp;
-    const elapsed=timestamp-animationStart;
-    const progress=Math.min(1,elapsed/duration);
-
-    drawScene(elapsed,progress);
-
-    statusEl.textContent=
-      "Creating video: "+Math.round(progress*100)+"%";
-
-    if(progress>=1){
-      isAnimating=false;
-      animationId=null;
-      if(recorder && recorder.state==="recording"){
-        recorder.stop();
-      }
-      return;
-    }
-
-    animationId=requestAnimationFrame(recordFrame);
-  }
-
-  animationId=requestAnimationFrame(recordFrame);
-}
-
-/* Update preview format when the user changes aspect ratio */
-document.getElementById("videoFormat").addEventListener(
-  "change",function(){
-    setCanvasSize();
-  }
-);
-
-/* Initial preview image */
-setCanvasSize();
-drawScene(0,0);
 </script>
-
 </body>
 </html>
