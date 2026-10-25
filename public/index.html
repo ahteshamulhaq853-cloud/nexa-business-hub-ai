@@ -4,183 +4,277 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexa CV Studio</title>
+<meta name="theme-color" content="#090d18">
+<title>Nexa CV Studio | Dark Tech Neon</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
-:root{--navy:#102a56;--blue:#1769d2;--light:#eaf3ff;--gold:#d8a83e}
+:root{
+ --bg:#080c15;--panel:#0e1727;--panel2:#132238;
+ --line:#294256;--cyan:#65f3dc;--text:#eff8ff;
+ --muted:#9db2c7;--red:#ff91a2;--green:#83ffd0;
+}
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f2f6fc;color:#1e293b}
-header{background:linear-gradient(120deg,var(--navy),var(--blue));color:white;padding:20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.brand{font-size:23px;font-weight:bold}
-.brand small{display:block;font-size:12px;font-weight:normal}
-main{max-width:1100px;margin:22px auto;padding:0 14px}
+body{
+ margin:0;background:radial-gradient(ellipse at top,#142a3d,#080c15 60%);
+ color:var(--text);font-family:Arial,sans-serif;min-height:100vh
+}
+button,input,select,textarea{font:inherit}
+button{
+ border:1px solid transparent;border-radius:9px;padding:11px 14px;
+ background:var(--cyan);color:#06131b;font-weight:bold;cursor:pointer;margin:3px
+}
+button:disabled{opacity:.45;cursor:not-allowed}
+button.secondary{background:#19283c;color:white;border-color:#304a60}
+button.ghost{background:transparent;color:var(--cyan);border-color:#315563}
+button.danger{background:#421b28;color:#ffc1cc;border-color:#783447}
+header{
+ position:sticky;top:0;z-index:5;background:#080e19f5;
+ border-bottom:1px solid #294256;padding:15px;
+ display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap
+}
+.brand{font-size:20px;font-weight:900;letter-spacing:1px}
+.brand small{display:block;color:var(--cyan);font-size:10px;letter-spacing:2px;margin-top:4px}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav button{font-size:12px;padding:9px}
+main{max-width:1180px;margin:25px auto;padding:0 15px}
 .page{display:none}.page.active{display:block}
-.card{background:white;border:1px solid #dbe5f1;border-radius:14px;padding:20px;margin-bottom:18px;box-shadow:0 5px 18px #102a5610}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:15px}
-h1,h2,h3{color:var(--navy)}
-input,select,textarea{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:8px;font:inherit}
-label{display:block;font-weight:bold;font-size:13px;margin-bottom:5px}
+.hero{
+ background:linear-gradient(130deg,#12263a,#0b1421);
+ border:1px solid #315764;border-radius:18px;padding:26px;margin-bottom:17px;
+ box-shadow:0 12px 30px #0004
+}
+.eyebrow{font-size:11px;color:var(--cyan);font-weight:bold;letter-spacing:2px}
+.hero h1{font-size:clamp(29px,5vw,46px);margin:12px 0;color:white;line-height:1.1}
+.neon{color:var(--cyan);text-shadow:0 0 18px #65f3dc30}
+.hero p,.muted{color:var(--muted);line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{
+ background:linear-gradient(145deg,#111e2e,#0c1421);
+ border:1px solid var(--line);border-radius:15px;padding:19px;margin-bottom:16px;
+ box-shadow:0 8px 25px #0003;min-width:0
+}
+h1,h2,h3{color:#f2fbff}
+h1{font-size:26px}h2{font-size:21px}h3{font-size:15px}
 .field{margin-bottom:13px}
-button{padding:11px 15px;border:0;border-radius:8px;background:var(--blue);color:white;font-weight:bold;cursor:pointer;margin:3px}
-.secondary{background:#e5edf8;color:var(--navy)}
-nav{display:flex;flex-wrap:wrap}
-.message{padding:10px;border-radius:8px;margin:10px 0;background:#eaf3ff;display:none;overflow-wrap:anywhere}
-.message.show{display:block}.error{background:#fee2e2;color:#991b1b}.success{background:#dcfce7;color:#166534}
-.cv-layout{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.paper{display:grid;grid-template-columns:34% 66%;background:white;border:1px solid #ccc;min-height:560px}
-.side{background:var(--navy);color:white;padding:16px;overflow-wrap:anywhere}
-.side h3{color:var(--gold);font-size:12px;border-bottom:1px solid #ffffff55;padding-bottom:5px}
-.side p,.cvsection div{font-size:11px;white-space:pre-wrap;overflow-wrap:anywhere}
-.content{padding:18px;overflow-wrap:anywhere}
-.content h1{font-size:22px;margin:0}
-.content h3{font-size:12px;background:var(--light);padding:7px}
-.photo{width:85px;height:100px;object-fit:cover;display:block;margin:auto;border-radius:6px}
-.actions{display:flex;flex-wrap:wrap;gap:6px}
-table{border-collapse:collapse;width:100%;font-size:12px}
-td,th{padding:8px;border-bottom:1px solid #ddd;text-align:left;overflow-wrap:anywhere}
-th{background:var(--light)}
-footer{text-align:center;padding:20px;color:#64748b;font-size:12px}
-@media(max-width:700px){.cv-layout{grid-template-columns:1fr}.brand{font-size:20px}}
+label{display:block;font-size:12px;font-weight:bold;color:#c8d9e8;margin-bottom:6px}
+input,select,textarea{
+ width:100%;padding:12px;background:#080f1b;color:white;
+ border:1px solid #30475d;border-radius:9px;outline:none
+}
+input:focus,select:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 2px #65f3dc16}
+textarea{min-height:85px;resize:vertical}
+.actions{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.message{display:none;padding:11px;border-radius:9px;margin:12px 0;overflow-wrap:anywhere;font-size:13px}
+.message.show{display:block;background:#142b40;color:#d8faff;border:1px solid #31576a}
+.message.error{background:#391925;color:#ffc2cc;border-color:#783447}
+.message.success{background:#102e28;color:#9bffd6;border-color:#286b57}
+.pill{display:inline-block;border:1px solid #315764;border-radius:20px;padding:7px 10px;color:var(--cyan);font-size:11px}
+.stat{background:#111e2e;border:1px solid var(--line);border-radius:13px;padding:17px}
+.stat strong{display:block;color:var(--cyan);font-size:25px;margin-bottom:5px}
+.stat span,.small-note{font-size:12px;color:var(--muted);line-height:1.5}
+.cv-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px;align-items:start}
+.paper{
+ display:grid;grid-template-columns:34% 66%;width:100%;min-height:690px;
+ background:white;color:#192638;overflow:hidden;border-radius:4px
+}
+.side{background:#102a43;color:white;padding:17px;overflow-wrap:anywhere}
+.side h3{color:#65f3dc;font-size:10px;letter-spacing:1px;border-bottom:1px solid #ffffff40;padding-bottom:6px;margin-top:21px}
+.side p{font-size:10px;line-height:1.45;white-space:pre-wrap;overflow-wrap:anywhere}
+.photo{width:85px;height:100px;object-fit:cover;display:block;margin:auto;border:2px solid #65f3dc;border-radius:8px}
+.content{padding:20px;min-width:0;overflow-wrap:anywhere;color:#253449}
+.content h1{font-size:23px;color:#102a43;margin:0 0 7px;overflow-wrap:anywhere}
+.cv-title{font-size:11px;color:#087e91;font-weight:bold;letter-spacing:1px}
+.personal{font-size:9px;color:#536477;line-height:1.5}
+.cvsection{margin-top:17px}
+.cvsection h3{font-size:10px;letter-spacing:1px;color:#123d53;border-bottom:1px solid #bad8df;padding-bottom:6px}
+.cvsection div{font-size:10px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+.preview-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:9px}
+table{width:100%;border-collapse:collapse;min-width:520px;font-size:12px}
+td,th{padding:9px;border-bottom:1px solid #294256;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+th{background:#15263b;color:var(--cyan)}
+.status{display:inline-block;border-radius:20px;padding:4px 8px;font-size:11px;font-weight:bold}
+.status.approved{background:#12382e;color:#8dffd0}
+.status.pending{background:#3b2c16;color:#ffdc8d}
+.status.rejected{background:#3a1824;color:#ffb5c0}
+.copyline{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;background:#091320;border:1px solid var(--line);padding:12px;border-radius:9px}
+footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
+@media(max-width:760px){
+ header{position:relative}
+ nav{width:100%}nav button{flex:1}
+ .grid,.grid.three,.cv-layout{grid-template-columns:1fr}
+ .hero{padding:21px}
+}
+@media(max-width:420px){
+ main{padding:0 9px;margin-top:15px}
+ .card{padding:14px}
+ .paper{grid-template-columns:32% 68%}
+ .side{padding:9px}.content{padding:12px 10px}
+ .content h1{font-size:18px}.photo{width:63px;height:78px}
+}
 @page{size:A4;margin:5mm}
 @media print{
- body{background:white}
- header,footer,.no-print,#editor{display:none!important}
- main{margin:0;padding:0}
+ html,body{background:white!important;margin:0!important;padding:0!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ header,footer,.no-print,#editor,.preview-head{display:none!important}
+ main{width:200mm!important;max-width:none!important;margin:0!important;padding:0!important}
  .page{display:none!important}
  #builderPage.active{display:block!important}
- .paper{width:200mm;min-height:0;border:0;box-shadow:none;break-inside:avoid}
- .side{padding:10px}.content{padding:12px}
- .side p,.cvsection div{font-size:9px;line-height:1.2}
- .content h1{font-size:17px}
+ #builderPage>.hero{display:none!important}
+ .cv-layout{display:block!important}
+ .paper{display:grid!important;width:200mm!important;min-height:0!important;border:0!important;border-radius:0!important;break-inside:avoid;page-break-inside:avoid}
+ .side{padding:8mm 5mm!important;background:#102a43!important}
+ .content{padding:8mm 7mm!important}
+ .photo{width:25mm;height:30mm}
+ .side h3,.cvsection h3{font-size:8pt!important}
+ .side p,.cvsection div{font-size:8pt!important;line-height:1.25!important}
+ .content h1{font-size:18pt!important}
+ .cvsection{margin-top:4mm!important}
 }
 </style>
 </head>
 <body>
 <header>
- <div class="brand">🔷 Nexa CV Studio
- <small>Professional CV Builder</small></div>
+ <div class="brand">⚡ NEXA CV STUDIO<small>DARK TECH · RESUME BUILDER</small></div>
  <nav id="mainNav" style="display:none">
-  <button onclick="showPage('builderPage')">CV Builder</button>
-  <button onclick="showPage('paymentPage')">Payment</button>
-  <button id="adminButton" style="display:none" onclick="showPage('adminPage')">Admin</button>
+  <button class="ghost" onclick="showPage('dashboardPage')">Dashboard</button>
+  <button class="ghost" onclick="showPage('builderPage')">CV Builder</button>
+  <button class="ghost" onclick="showPage('paymentPage')">Payment</button>
+  <button class="ghost" id="adminButton" style="display:none" onclick="showPage('adminPage')">Admin</button>
   <button class="secondary" onclick="logout()">Logout</button>
  </nav>
 </header>
-
 <main>
-<!-- REGISTRATION PAGE -->
+
 <section id="accountPage" class="page active">
+ <div class="hero">
+  <span class="eyebrow">NEXT-GEN RESUME PLATFORM</span>
+  <h1>Build Your Future.<br><span class="neon">One CV at a Time.</span></h1>
+  <p>Create your professional resume with a modern experience. Register or log in to get started.</p>
+  <span class="pill">SECURE ACCOUNT · PROFESSIONAL CV · A4 EXPORT</span>
+ </div>
  <div class="grid">
   <div class="card">
-   <h1>Create Account</h1>
-   <p>Register to create your professional CV.</p>
+   <span class="eyebrow">NEW ACCOUNT</span><h2>Create Account</h2>
    <div id="regMsg" class="message"></div>
    <form id="registerForm">
-    <div class="field"><label>Full Name</label><input id="regName" required></div>
-    <div class="field"><label>Phone Number</label><input id="regPhone" type="tel" required></div>
-    <div class="field"><label>Gender</label>
-     <select id="regGender" required>
-      <option value="">Select Gender</option><option>Male</option><option>Female</option><option>Other</option><option>Prefer not to say</option>
-     </select>
-    </div>
-    <div class="field"><label>Email</label><input id="regEmail" type="email" required></div>
-    <div class="field"><label>Password</label><input id="regPassword" type="password" minlength="6" required></div>
-    <button type="submit" style="width:100%">Register</button>
+    <div class="field"><label for="regName">Full Name</label><input id="regName" autocomplete="name" required></div>
+    <div class="field"><label for="regPhone">Phone Number</label><input id="regPhone" type="tel" autocomplete="tel" required></div>
+    <div class="field"><label for="regGender">Gender</label><select id="regGender" required><option value="">Select Gender</option><option>Male</option><option>Female</option><option>Other</option><option>Prefer not to say</option></select></div>
+    <div class="field"><label for="regEmail">Email</label><input id="regEmail" type="email" autocomplete="email" required></div>
+    <div class="field"><label for="regPassword">Password</label><input id="regPassword" type="password" minlength="6" autocomplete="new-password" required></div>
+    <button type="submit" style="width:100%">Create My Account ↗</button>
    </form>
   </div>
   <div class="card">
-   <h2>Already Registered?</h2>
+   <span class="eyebrow">WELCOME BACK</span><h2>Login</h2>
    <div id="loginMsg" class="message"></div>
    <form id="loginForm">
-    <div class="field"><label>Email</label><input id="loginEmail" type="email" required></div>
-    <div class="field"><label>Password</label><input id="loginPassword" type="password" required></div>
-    <button type="submit" style="width:100%">Login</button>
+    <div class="field"><label for="loginEmail">Email</label><input id="loginEmail" type="email" autocomplete="email" required></div>
+    <div class="field"><label for="loginPassword">Password</label><input id="loginPassword" type="password" autocomplete="current-password" required></div>
+    <button type="submit" style="width:100%">Login to Nexa →</button>
    </form>
+   <p class="muted">Your workspace keeps your CV details and payment requests together.</p>
   </div>
  </div>
 </section>
 
-<!-- CV BUILDER -->
+<section id="dashboardPage" class="page">
+ <div class="hero">
+  <span class="eyebrow">YOUR WORKSPACE</span>
+  <h1>Welcome back,<br><span class="neon" id="dashboardName">CV Creator.</span></h1>
+  <p>Manage your resume, save your details and check PDF access.</p>
+  <div class="actions"><button onclick="showPage('builderPage')">Open CV Builder →</button><button class="secondary" onclick="showPage('paymentPage')">Payment & Access</button></div>
+ </div>
+ <div class="grid three">
+  <div class="stat"><strong>01</strong><span>CV workspace</span></div>
+  <div class="stat"><strong>A4</strong><span>Print-ready resume</span></div>
+  <div class="stat"><strong id="pdfStatusText">Locked</strong><span>PDF export access</span></div>
+ </div>
+ <div class="grid" style="margin-top:16px">
+  <div class="card"><h3 class="neon">▤ CV Builder</h3><p class="muted">Create and edit your professional resume.</p><button onclick="showPage('builderPage')">Edit My CV</button></div>
+  <div class="card"><h3 class="neon">◈ Payment Requests</h3><p class="muted">Submit a Rs. 100 payment reference and track approval.</p><button class="secondary" onclick="showPage('paymentPage')">View Payments</button></div>
+ </div>
+</section>
+
 <section id="builderPage" class="page">
- <div class="card no-print">
-  <h1>Professional CV Builder</h1>
-  <p id="welcome">Welcome to Nexa CV Studio.</p>
-  <div id="accessMsg" class="message show">PDF download ke liye Rs. 100 payment aur admin approval zaroori hai.</div>
+ <div class="hero no-print">
+  <span class="eyebrow">RESUME WORKSPACE / 01</span><h1>Professional <span class="neon">CV Builder.</span></h1>
+  <p>Fill in your details. Your CV preview updates as you type.</p>
+  <div id="accessMsg" class="message show">PDF export requires a Rs. 100 payment request and admin approval.</div>
   <div class="actions">
    <button onclick="saveCV()">Save CV</button>
-   <button onclick="showPage('paymentPage')">Payment / PDF Access</button>
+   <button class="secondary" onclick="showPage('paymentPage')">Payment / PDF Access</button>
    <button onclick="printCV()" id="pdfBtn" disabled>Download / Print PDF 🔒</button>
   </div>
  </div>
  <div class="cv-layout">
   <form id="editor" class="card" onsubmit="return false">
-   <h2>Enter Your Details</h2>
-   <div class="field"><label>Full Name</label><input id="cvName" oninput="preview()" required></div>
-   <div class="field"><label>Professional Title</label><input id="cvTitle" oninput="preview()" placeholder="Computer Operator"></div>
-   <div class="field"><label>Father's Name</label><input id="cvFather" oninput="preview()"></div>
-   <div class="field"><label>Date of Birth</label><input id="cvDob" type="date" oninput="preview()"></div>
-   <div class="field"><label>Phone</label><input id="cvPhone" oninput="preview()"></div>
-   <div class="field"><label>Email</label><input id="cvEmail" oninput="preview()"></div>
-   <div class="field"><label>Address</label><input id="cvAddress" oninput="preview()"></div>
-   <div class="field"><label>Profile Photo</label><input id="cvPhoto" type="file" accept="image/*"></div>
-   <div class="field"><label>Professional Profile</label><textarea id="cvSummary" oninput="preview()"></textarea></div>
-   <div class="field"><label>Education</label><textarea id="cvEducation" oninput="preview()" placeholder="Degree, Institution, Year"></textarea></div>
-   <div class="field"><label>Experience</label><textarea id="cvExperience" oninput="preview()" placeholder="Job title, company, duties"></textarea></div>
-   <div class="field"><label>Skills</label><textarea id="cvSkills" oninput="preview()"></textarea></div>
-   <div class="field"><label>Languages</label><textarea id="cvLanguages" oninput="preview()"></textarea></div>
-   <div class="field"><label>Certificates / References</label><textarea id="cvReferences" oninput="preview()"></textarea></div>
-   <button type="button" onclick="saveCV()">Save CV Details</button>
+   <span class="eyebrow">YOUR INFORMATION</span><h2>Build Your CV</h2>
+   <div class="field"><label for="cvName">Full Name *</label><input id="cvName" oninput="preview()" required></div>
+   <div class="field"><label for="cvTitle">Professional Title</label><input id="cvTitle" oninput="preview()" placeholder="Computer Operator"></div>
+   <div class="field"><label for="cvFather">Father's Name</label><input id="cvFather" oninput="preview()"></div>
+   <div class="field"><label for="cvDob">Date of Birth</label><input id="cvDob" type="date" oninput="preview()"></div>
+   <div class="field"><label for="cvPhone">Phone</label><input id="cvPhone" oninput="preview()"></div>
+   <div class="field"><label for="cvEmail">Email</label><input id="cvEmail" type="email" oninput="preview()"></div>
+   <div class="field"><label for="cvAddress">Address</label><input id="cvAddress" oninput="preview()"></div>
+   <div class="field"><label for="cvPhoto">Profile Photo</label><input id="cvPhoto" type="file" accept="image/*"><p class="small-note">Image should be smaller than 2 MB.</p></div>
+   <div class="field"><label for="cvSummary">Professional Profile</label><textarea id="cvSummary" oninput="preview()"></textarea></div>
+   <div class="field"><label for="cvEducation">Education</label><textarea id="cvEducation" oninput="preview()" placeholder="Degree, Institution, Year"></textarea></div>
+   <div class="field"><label for="cvExperience">Experience</label><textarea id="cvExperience" oninput="preview()" placeholder="Job title, company, duties"></textarea></div>
+   <div class="field"><label for="cvSkills">Skills</label><textarea id="cvSkills" oninput="preview()"></textarea></div>
+   <div class="field"><label for="cvLanguages">Languages</label><textarea id="cvLanguages" oninput="preview()"></textarea></div>
+   <div class="field"><label for="cvReferences">Certificates / References</label><textarea id="cvReferences" oninput="preview()"></textarea></div>
+   <button type="button" onclick="saveCV()" style="width:100%">Save CV Details</button>
   </form>
-  <div class="paper" id="cvPaper">
-   <aside class="side">
-    <img id="photoPreview" class="photo" alt="Profile photo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='120'%3E%3Crect width='100' height='120' fill='%23dbeafe'/%3E%3Ccircle cx='50' cy='40' r='22' fill='%2393b4dc'/%3E%3Cpath d='M5 120 Q8 70 50 70 Q92 70 95 120' fill='%2393b4dc'/%3E%3C/svg%3E">
-    <h3>CONTACT</h3><p id="pPhone">Phone</p><p id="pEmail">Email</p><p id="pAddress">Address</p>
-    <h3>SKILLS</h3><p id="pSkills">Your skills</p>
-    <h3>LANGUAGES</h3><p id="pLanguages">Your languages</p>
-   </aside>
-   <div class="content">
-    <h1 id="pName">YOUR NAME</h1><div id="pTitle" style="color:#1769d2;font-weight:bold">PROFESSIONAL TITLE</div>
-    <p id="pPersonal" style="font-size:10px"></p>
-    <section class="cvsection"><h3>PROFILE</h3><div id="pSummary"></div></section>
-    <section class="cvsection"><h3>EDUCATION</h3><div id="pEducation"></div></section>
-    <section class="cvsection"><h3>EXPERIENCE</h3><div id="pExperience"></div></section>
-    <section class="cvsection"><h3>CERTIFICATES / REFERENCES</h3><div id="pReferences"></div></section>
+  <div>
+   <div class="preview-head no-print"><span class="pill">LIVE PREVIEW · A4</span><button class="ghost" onclick="preview()">Refresh</button></div>
+   <div class="paper" id="cvPaper">
+    <aside class="side">
+     <img id="photoPreview" class="photo" alt="Profile photo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='120'%3E%3Crect width='100' height='120' fill='%23dbeafe'/%3E%3Ccircle cx='50' cy='40' r='22' fill='%2393b4dc'/%3E%3Cpath d='M5 120 Q8 70 50 70 Q92 70 95 120' fill='%2393b4dc'/%3E%3C/svg%3E">
+     <h3>CONTACT</h3><p id="pPhone">Phone</p><p id="pEmail">Email</p><p id="pAddress">Address</p>
+     <h3>SKILLS</h3><p id="pSkills">Your skills</p>
+     <h3>LANGUAGES</h3><p id="pLanguages">Your languages</p>
+    </aside>
+    <div class="content">
+     <h1 id="pName">YOUR NAME</h1><div id="pTitle" class="cv-title">PROFESSIONAL TITLE</div>
+     <p id="pPersonal" class="personal"></p>
+     <section class="cvsection"><h3>PROFILE</h3><div id="pSummary"></div></section>
+     <section class="cvsection"><h3>EDUCATION</h3><div id="pEducation">Add education details.</div></section>
+     <section class="cvsection"><h3>EXPERIENCE</h3><div id="pExperience">Add work experience.</div></section>
+     <section class="cvsection"><h3>CERTIFICATES / REFERENCES</h3><div id="pReferences"></div></section>
+    </div>
    </div>
   </div>
  </div>
 </section>
 
-<!-- PAYMENT -->
 <section id="paymentPage" class="page">
+ <div class="hero"><span class="eyebrow">PDF ACCESS / 02</span><h1>Payment & <span class="neon">Access.</span></h1><p>Pay Rs. 100, submit your transaction reference, and wait for admin approval before PDF export is enabled.</p><span class="pill">FEE: RS. 100</span></div>
+ <div class="grid">
+  <div class="card"><h3>Easypaisa</h3><p class="muted">Account name: <b>GULAP BIBI</b></p><div class="copyline"><b>0342-8974369</b><button onclick="copyNumber('0342-8974369')">Copy</button></div></div>
+  <div class="card"><h3>JazzCash</h3><p class="muted">Account name: <b>EHTISHAMUL HAQ</b></p><div class="copyline"><b>0346-9799347</b><button onclick="copyNumber('0346-9799347')">Copy</button></div></div>
+ </div>
  <div class="card">
-  <h1>Payment &amp; PDF Access</h1>
-  <p>PDF access ke liye Rs. 100 pay karein aur transaction ID submit karein.</p>
-  <div class="grid">
-   <div class="card"><h3>Easypaisa</h3><p>Number: <b>0342-8974369</b></p><p>Name: <b>GULAP BIBI</b></p><button onclick="copyNumber('0342-8974369')">Copy Number</button></div>
-   <div class="card"><h3>JazzCash</h3><p>Number: <b>0346-9799347</b></p><p>Name: <b>EHTISHAMUL HAQ</b></p><button onclick="copyNumber('0346-9799347')">Copy Number</button></div>
-  </div>
-  <p>WhatsApp Support: <b>0346-9799347</b></p>
+  <h2>Submit Payment Request</h2><p class="small-note">WhatsApp support: 0346-9799347. Never share your password or OTP.</p>
   <div id="payMsg" class="message"></div>
   <form id="paymentForm">
-   <div class="field"><label>Payment Method</label><select id="payMethod"><option>Easypaisa</option><option>JazzCash</option></select></div>
-   <div class="field"><label>Transaction / Reference ID</label><input id="transactionId" required></div>
-   <div class="field"><label>Note (optional)</label><textarea id="paymentNote"></textarea></div>
-   <button type="submit">Submit Payment Request</button>
+   <div class="field"><label for="payMethod">Payment Method</label><select id="payMethod"><option>Easypaisa</option><option>JazzCash</option></select></div>
+   <div class="field"><label for="transactionId">Transaction / Reference ID</label><input id="transactionId" required></div>
+   <div class="field"><label for="paymentNote">Note (optional)</label><textarea id="paymentNote"></textarea></div>
+   <button type="submit">Submit Payment Request →</button>
   </form>
  </div>
- <div class="card"><h2>My Requests</h2><button class="secondary" onclick="loadMyOrders()">Refresh</button><div id="myOrders" style="overflow-x:auto;margin-top:12px"></div></div>
+ <div class="card"><div class="preview-head"><h2>My Requests</h2><button class="secondary" onclick="loadMyOrders()">Refresh</button></div><div id="myOrders" class="table-wrap">Please login to view requests.</div></div>
 </section>
 
-<!-- ADMIN -->
 <section id="adminPage" class="page">
- <div class="card">
-  <h1>Admin Panel</h1><p>Only an authorised admin can approve or reject payment requests.</p>
-  <div id="adminMsg" class="message"></div><button onclick="loadAdminOrders()">Refresh Orders</button>
-  <div id="adminOrders" style="overflow-x:auto;margin-top:12px"></div>
- </div>
+ <div class="hero"><span class="eyebrow">RESTRICTED AREA / 03</span><h1>Admin <span class="neon">Control Panel.</span></h1><p>Only authorised admins can review payment requests.</p></div>
+ <div class="card"><div id="adminMsg" class="message"></div><div class="preview-head"><h2>Payment Requests</h2><button onclick="loadAdminOrders()">Refresh Orders</button></div><div id="adminOrders" class="table-wrap">Loading...</div></div>
 </section>
+
 </main>
-<footer>Nexa CV Studio · Professional CV Builder</footer>
+<footer>NEXA CV STUDIO · DARK TECH NEON · PROFESSIONAL CV BUILDER</footer>
 
 <script>
 const SUPABASE_URL="https://njfobttocvkjsrvlcjaj.supabase.co";
@@ -201,7 +295,8 @@ function setUI(){
  $("mainNav").style.display=currentUser?"flex":"none";
  if(currentUser){
   const m=currentUser.user_metadata||{};
-  $("welcome").textContent="Welcome, "+(m.full_name||currentUser.email)+". Build your CV below.";
+  const name=m.full_name||currentUser.email||"CV Creator";
+  $("dashboardName").textContent=name;
   $("cvName").value=$("cvName").value||m.full_name||"";
   $("cvPhone").value=$("cvPhone").value||m.phone||"";
   $("cvEmail").value=$("cvEmail").value||currentUser.email||"";
@@ -209,31 +304,44 @@ function setUI(){
 }
 async function register(e){
  e.preventDefault();clearMsg("regMsg");
- const name=$("regName").value.trim(),phone=$("regPhone").value.trim(),gender=$("regGender").value,email=$("regEmail").value.trim(),password=$("regPassword").value;
+ const name=$("regName").value.trim(),phone=$("regPhone").value.trim();
+ const gender=$("regGender").value,email=$("regEmail").value.trim(),password=$("regPassword").value;
  if(password.length<6){msg("regMsg","Password must be at least 6 characters.","error");return}
  const {data,error}=await db.auth.signUp({email,password,options:{data:{full_name:name,phone,gender}}});
  if(error){msg("regMsg",error.message,"error");return}
  if(data.session&&data.user){
-  currentUser=data.user;setUI();await checkAdmin();await checkApproval();showPage("builderPage");
+  currentUser=data.user;setUI();await checkAdmin();await checkApproval();await loadCV();showPage("dashboardPage");
   msg("regMsg","Registration successful!","success");
  }else{
-  msg("regMsg","Registration submit ho gayi. Email confirmation required ho to email confirm karke login karein.","success");
+  msg("regMsg","Registration submitted. If email confirmation is enabled, confirm your email and then log in.","success");
  }
 }
 async function login(e){
  e.preventDefault();clearMsg("loginMsg");
  const {data,error}=await db.auth.signInWithPassword({email:$("loginEmail").value.trim(),password:$("loginPassword").value});
  if(error){msg("loginMsg",error.message,"error");return}
- currentUser=data.user;setUI();await checkAdmin();await checkApproval();await loadCV();showPage("builderPage");
+ currentUser=data.user;setUI();await checkAdmin();await checkApproval();await loadCV();showPage("dashboardPage");
  msg("loginMsg","Login successful!","success");
 }
-async function logout(){await db.auth.signOut();currentUser=null;approvedForPDF=false;setUI();showPage("accountPage")}
+async function logout(){
+ await db.auth.signOut();currentUser=null;approvedForPDF=false;setUI();
+ $("pdfBtn").disabled=true;$("adminButton").style.display="none";showPage("accountPage");
+}
 $("registerForm").addEventListener("submit",register);
 $("loginForm").addEventListener("submit",login);
 
 const cvIds=["cvName","cvTitle","cvFather","cvDob","cvPhone","cvEmail","cvAddress","cvSummary","cvEducation","cvExperience","cvSkills","cvLanguages","cvReferences"];
-function cvData(){const d={};cvIds.forEach(id=>d[id]=$(id).value);return d}
-function applyCV(d){if(!d)return;cvIds.forEach(id=>{if(typeof d[id]==="string")$(id).value=d[id]});preview()}
+function cvData(){
+ const d={};cvIds.forEach(id=>d[id]=$(id).value);d.photoData=photoData||"";return d;
+}
+function applyCV(d){
+ if(!d)return;
+ cvIds.forEach(id=>{if(typeof d[id]==="string")$(id).value=d[id]});
+ if(typeof d.photoData==="string"&&d.photoData.startsWith("data:image/")){
+  photoData=d.photoData;$("photoPreview").src=photoData;
+ }
+ preview();
+}
 function preview(){
  const v=id=>$(id).value.trim();
  $("pName").textContent=v("cvName")||"YOUR NAME";
@@ -241,7 +349,10 @@ function preview(){
  $("pPhone").textContent=v("cvPhone")||"Phone";
  $("pEmail").textContent=v("cvEmail")||"Email";
  $("pAddress").textContent=v("cvAddress")||"Address";
- $("pPersonal").textContent=[v("cvFather")?"Father's Name: "+v("cvFather"):"",v("cvDob")?"Date of Birth: "+v("cvDob):""].filter(Boolean).join(" | ");
+ $("pPersonal").textContent=[
+  v("cvFather")?"Father's Name: "+v("cvFather"):"",
+  v("cvDob")?"Date of Birth: "+v("cvDob"):""
+ ].filter(Boolean).join(" | ");
  $("pSummary").textContent=v("cvSummary");
  $("pEducation").textContent=v("cvEducation")||"Add education details.";
  $("pExperience").textContent=v("cvExperience")||"Add work experience.";
@@ -250,91 +361,112 @@ function preview(){
  $("pReferences").textContent=v("cvReferences");
 }
 $("cvPhoto").addEventListener("change",e=>{
- const file=e.target.files[0];if(!file)return;
+ const file=e.target.files&&e.target.files[0];if(!file)return;
  if(!file.type.startsWith("image/")){alert("Please select an image.");return}
- const reader=new FileReader();reader.onload=()=>{photoData=reader.result;$("photoPreview").src=photoData};reader.readAsDataURL(file);
+ if(file.size>2*1024*1024){alert("Choose an image smaller than 2 MB.");e.target.value="";return}
+ const reader=new FileReader();
+ reader.onload=()=>{photoData=reader.result;$("photoPreview").src=photoData};
+ reader.readAsDataURL(file);
 });
 async function saveCV(){
- if(!currentUser){showPage("accountPage");return}
+ if(!currentUser){showPage("accountPage");msg("loginMsg","Please login to save your CV.","error");return}
  const cv_data=cvData();
  const {error}=await db.from("cv_profiles").upsert({user_id:currentUser.id,cv_data,updated_at:new Date().toISOString()},{onConflict:"user_id"});
- if(error){localStorage.setItem("nexa_cv_"+currentUser.id,JSON.stringify(cv_data));alert("CV browser mein save ho gaya. Database issue: "+error.message)}
- else alert("CV details save ho gayi!");
+ try{localStorage.setItem("nexa_cv_"+currentUser.id,JSON.stringify(cv_data))}catch(e){}
+ if(error)alert("CV saved in this browser, but database save failed: "+error.message);
+ else alert("CV details saved successfully!");
  preview();
 }
 async function loadCV(){
  if(!currentUser)return;
  const {data,error}=await db.from("cv_profiles").select("cv_data").eq("user_id",currentUser.id).maybeSingle();
- if(!error&&data?.cv_data){applyCV(data.cv_data);return}
- const local=localStorage.getItem("nexa_cv_"+currentUser.id);
- if(local){try{applyCV(JSON.parse(local))}catch(e){}}
+ if(!error&&data&&data.cv_data){applyCV(data.cv_data);return}
+ try{const local=localStorage.getItem("nexa_cv_"+currentUser.id);if(local)applyCV(JSON.parse(local))}catch(e){}
 }
 function printCV(){
- if(!approvedForPDF){showPage("paymentPage");alert("PDF export ke liye Rs. 100 payment approval zaroori hai.");return}
- window.print();
+ if(!approvedForPDF){showPage("paymentPage");alert("PDF export requires Rs. 100 payment approval.");return}
+ preview();window.print();
 }
-function copyNumber(n){if(navigator.clipboard?.writeText)navigator.clipboard.writeText(n).then(()=>alert("Copied: "+n)).catch(()=>prompt("Copy this number:",n));else prompt("Copy this number:",n)}
-function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-function badge(s){s=String(s||"pending").toLowerCase();return `<span style="font-weight:bold;color:${s==="approved"?"green":s==="rejected"?"#b91c1c":"#92400e"}">${esc(s)}</span>`}
+function copyNumber(n){
+ if(navigator.clipboard&&navigator.clipboard.writeText){
+  navigator.clipboard.writeText(n).then(()=>alert("Copied: "+n)).catch(()=>prompt("Copy this number:",n));
+ }else prompt("Copy this number:",n);
+}
+function esc(s){
+ return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+function statusBadge(s){
+ s=String(s||"pending").toLowerCase();
+ const cls=["approved","rejected","pending"].includes(s)?s:"pending";
+ return `<span class="status ${cls}">${esc(s)}</span>`;
+}
 async function checkApproval(){
- if(!currentUser)return;
+ if(!currentUser){approvedForPDF=false;return}
  const {data,error}=await db.from("cv_orders").select("id").eq("user_id",currentUser.id).eq("status","approved").limit(1);
- approvedForPDF=!error&&!!data?.length;$("pdfBtn").disabled=!approvedForPDF;$("pdfBtn").textContent=approvedForPDF?"Download / Print PDF":"Download / Print PDF 🔒";
+ approvedForPDF=!error&&!!(data&&data.length);
+ $("pdfBtn").disabled=!approvedForPDF;
+ $("pdfBtn").textContent=approvedForPDF?"Download / Print PDF ✓":"Download / Print PDF 🔒";
+ $("pdfStatusText").textContent=approvedForPDF?"Unlocked":"Locked";
+ $("accessMsg").textContent=approvedForPDF?"Your PDF access is approved. You can print or save your CV as PDF.":"PDF export requires a Rs. 100 payment request and admin approval.";
 }
 $("paymentForm").addEventListener("submit",async e=>{
  e.preventDefault();clearMsg("payMsg");
  if(!currentUser){msg("payMsg","Please login first.","error");showPage("accountPage");return}
- const {error}=await db.from("cv_orders").insert({user_id:currentUser.id,amount:100,payment_method:$("payMethod").value,transaction_id:$("transactionId").value.trim(),status:"pending",notes:$("paymentNote").value.trim()});
+ const transactionId=$("transactionId").value.trim();
+ if(!transactionId){msg("payMsg","Enter your transaction/reference ID.","error");return}
+ const {error}=await db.from("cv_orders").insert({
+  user_id:currentUser.id,amount:100,payment_method:$("payMethod").value,
+  transaction_id:transactionId,status:"pending",notes:$("paymentNote").value.trim()
+ });
  if(error){msg("payMsg","Request failed: "+error.message,"error");return}
- msg("payMsg","Payment request submitted. Wait for admin approval.","success");$("paymentForm").reset();await loadMyOrders();
+ msg("payMsg","Payment request submitted. Please wait for admin approval.","success");
+ $("paymentForm").reset();await loadMyOrders();await checkApproval();
 });
 async function loadMyOrders(){
- if(!currentUser){$("myOrders").textContent="Please login first.";return}
+ if(!currentUser){$("myOrders").textContent="Please login to view requests.";return}
  const {data,error}=await db.from("cv_orders").select("amount,payment_method,transaction_id,status,created_at").eq("user_id",currentUser.id).order("created_at",{ascending:false});
  if(error){$("myOrders").textContent=error.message;return}
- if(!data?.length){$("myOrders").textContent="No requests yet.";return}
- $("myOrders").innerHTML=`<table><tr><th>Amount</th><th>Method</th><th>Transaction ID</th><th>Status</th><th>Date</th></tr>${data.map(o=>`<tr><td>Rs. ${esc(o.amount)}</td><td>${esc(o.payment_method)}</td><td>${esc(o.transaction_id)}</td><td>${badge(o.status)}</td><td>${esc(o.created_at?new Date(o.created_at).toLocaleDateString():"")}</td></tr>`).join("")}</table>`;
+ if(!data||!data.length){$("myOrders").textContent="No payment requests yet.";return}
+ $("myOrders").innerHTML=`<table><thead><tr><th>Amount</th><th>Method</th><th>Transaction ID</th><th>Status</th><th>Date</th></tr></thead><tbody>${data.map(o=>`<tr><td>Rs. ${esc(o.amount)}</td><td>${esc(o.payment_method)}</td><td>${esc(o.transaction_id)}</td><td>${statusBadge(o.status)}</td><td>${esc(o.created_at?new Date(o.created_at).toLocaleDateString():"")}</td></tr>`).join("")}</tbody></table>`;
  await checkApproval();
 }
 async function checkAdmin(){
- if(!currentUser)return;
+ if(!currentUser){$("adminButton").style.display="none";return}
  const {data,error}=await db.rpc("is_app_admin");
  $("adminButton").style.display=!error&&data===true?"inline-block":"none";
 }
 async function loadAdminOrders(){
- if(!currentUser){$("adminOrders").textContent="Login as admin.";return}
- const {data:isAdmin,error:ae}=await db.rpc("is_app_admin");
- if(ae||isAdmin!==true){$("adminOrders").textContent="Admin access required.";return}
+ if(!currentUser){$("adminOrders").textContent="Please login as an authorised admin.";return}
+ const {data:isAdmin,error:adminError}=await db.rpc("is_app_admin");
+ if(adminError||isAdmin!==true){$("adminOrders").textContent="Admin access required.";return}
  const {data,error}=await db.from("cv_orders").select("id,user_id,amount,payment_method,transaction_id,status,notes,created_at").order("created_at",{ascending:false});
  if(error){$("adminOrders").textContent=error.message;return}
- if(!data?.length){$("adminOrders").textContent="No payment requests.";return}
- $("adminOrders").innerHTML=`<table><tr><th>User</th><th>Amount</th><th>Method</th><th>Transaction</th><th>Status</th><th>Action</th></tr>${data.map(o=>`<tr><td>${esc(o.user_id)}</td><td>${esc(o.amount)}</td><td>${esc(o.payment_method)}</td><td>${esc(o.transaction_id)}<br>${esc(o.notes||"")}</td><td>${badge(o.status)}</td><td><button onclick="setStatus('${esc(o.id)}','approved')">Approve</button><button class="danger" onclick="setStatus('${esc(o.id)}','rejected')">Reject</button></td></tr>`).join("")}</table>`;
+ if(!data||!data.length){$("adminOrders").textContent="No payment requests.";return}
+ $("adminOrders").innerHTML=`<table><thead><tr><th>User ID</th><th>Amount</th><th>Method</th><th>Transaction / Note</th><th>Status</th><th>Action</th></tr></thead><tbody>${data.map(o=>`<tr><td>${esc(o.user_id)}</td><td>Rs. ${esc(o.amount)}</td><td>${esc(o.payment_method)}</td><td>${esc(o.transaction_id)}<br>${esc(o.notes||"")}</td><td>${statusBadge(o.status)}</td><td><button onclick="setStatus('${esc(o.id)}','approved')">Approve</button><button class="danger" onclick="setStatus('${esc(o.id)}','rejected')">Reject</button></td></tr>`).join("")}</tbody></table>`;
 }
 async function setStatus(id,status){
- const {data:isAdmin,error:ae}=await db.rpc("is_app_admin");
- if(ae||isAdmin!==true){msg("adminMsg","Admin permission required.","error");return}
- if(!confirm("Set request to "+status+"?"))return;
+ const {data:isAdmin,error:adminError}=await db.rpc("is_app_admin");
+ if(adminError||isAdmin!==true){msg("adminMsg","Admin permission required.","error");return}
+ if(!confirm("Set this request to "+status+"?"))return;
  const {error}=await db.from("cv_orders").update({status}).eq("id",id);
  if(error){msg("adminMsg",error.message,"error");return}
- msg("adminMsg","Request updated.","success");await loadAdminOrders();await checkApproval();
+ msg("adminMsg","Request updated successfully.","success");
+ await loadAdminOrders();await checkApproval();
 }
-db.auth.onAuthStateChange(async(_event,session)=>{
- currentUser=session?.user||null;setUI();
- if(currentUser){await checkAdmin();await checkApproval()}
+db.auth.onAuthStateChange((_event,session)=>{
+ currentUser=session&&session.user?session.user:null;setUI();
+ if(!currentUser){approvedForPDF=false;$("adminButton").style.display="none"}
 });
 async function init(){
- const {data}=await db.auth.getSession();
- currentUser=data.session?.user||null;
- setUI();
- if(currentUser){await loadCV();await checkApproval();await checkAdmin();showPage("builderPage")}
- else{showPage("accountPage")}
+ const {data,error}=await db.auth.getSession();
+ if(error)console.warn("Session lookup:",error.message);
+ currentUser=data&&data.session?data.session.user:null;setUI();
+ if(currentUser){
+  await loadCV();await checkApproval();await checkAdmin();showPage("dashboardPage");
+ }else showPage("accountPage");
  preview();
 }
 init();
 </script>
 </body>
-</html>'''
-path = Path("/mnt/data/nexa_cv_studio_complete.html")
-path.write_text(html, encoding="utf-8")
-print(f"Created complete HTML file: {path}")
-print(f"Characters: {len(html):,}")
+</html>
