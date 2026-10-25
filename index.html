@@ -125,16 +125,22 @@ th{background:#15263b;color:var(--cyan)}
 
 footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
 
-/* Borderless three-line menu at the header's top-right corner */
-#settingsLauncher{display:none;position:absolute;top:14px;right:14px;z-index:1002;width:44px;height:44px;padding:0;margin:0;border:0;border-radius:0;background:transparent;color:#f3dca6;font-size:30px;line-height:1;box-shadow:none;align-items:center;justify-content:center}
-#settingsLauncher:hover{border:0;box-shadow:none;transform:translateY(-2px)}
-#settingsLauncher:focus-visible{outline:2px solid #f3dca6;outline-offset:3px}
+/* Right-side half-screen navigation drawer */
+#settingsLauncher{display:none;position:fixed;top:14px;right:18px;z-index:1102;width:44px;height:44px;padding:0;margin:0;border:0;border-radius:10px;background:transparent;color:#b58b45;font-size:30px;line-height:1;box-shadow:none;align-items:center;justify-content:center}
+#settingsLauncher:hover{border:0;box-shadow:none;transform:translateY(-1px);background:#b58b4512}
+#settingsLauncher:focus-visible{outline:2px solid #b58b45;outline-offset:3px}
+#menuBackdrop{display:none;position:fixed;inset:0;z-index:1098;background:rgba(12,20,34,.48);backdrop-filter:blur(2px)}
+#menuBackdrop.open{display:block}
 #mainNav.menu-hidden{display:none!important}
-#mainNav.menu-open{display:grid!important}
-header{position:sticky}
-@media(max-width:760px){header{padding-right:68px}main{margin-top:25px}}
-@media(max-width:420px){#settingsLauncher{top:10px;right:10px;width:40px;height:40px;font-size:21px}header{padding-right:60px}main{margin-top:15px}}
-
+#mainNav.menu-open{display:flex!important;position:fixed!important;top:0!important;right:0!important;bottom:0!important;left:auto!important;width:50vw!important;max-width:420px!important;min-width:260px!important;height:100vh!important;z-index:1100!important;overflow-y:auto!important;flex-direction:column!important;align-items:stretch!important;gap:12px!important;padding:82px 20px 24px!important;margin:0!important;border-left:1px solid #b58b4566!important;border-radius:0!important;background:linear-gradient(160deg,#fff 0%,#f7f4ed 100%)!important;box-shadow:-18px 0 55px #17233825!important}
+#mainNav.menu-open:before{content:"MENU";position:absolute;top:27px;left:22px;color:#14243d;font-size:13px;font-weight:900;letter-spacing:3px}
+#mainNav.menu-open button{display:block!important;flex:0 0 auto!important;width:100%!important;min-height:48px!important;text-align:left!important;padding:14px 15px!important;margin:0!important;border:1px solid #e0d4bd!important;border-radius:12px!important;background:#fff!important;color:#172338!important;box-shadow:0 5px 15px #1723380a!important;font-size:14px!important;line-height:1.25!important}
+#mainNav.menu-open button:hover{background:#fbf6eb!important;border-color:#b58b45!important;color:#8b642b!important}
+#mainNav.menu-open button[style*="display:none"]{display:none!important}
+#mainNav.menu-open button[onclick*="openPasswordOption"]{border-color:#b58b4570!important;background:#fffaf0!important;color:#7a5726!important;font-weight:800!important}
+@media(max-width:760px){header{padding-right:68px}main{margin-top:25px}#mainNav.menu-open{width:50vw!important;min-width:245px!important;padding-left:14px!important;padding-right:14px!important}}
+@media(max-width:420px){#settingsLauncher{top:10px;right:10px;width:40px;height:40px;font-size:25px}header{padding-right:60px}main{margin-top:15px}#mainNav.menu-open{width:50vw!important;min-width:225px!important;padding:74px 11px 18px!important}#mainNav.menu-open:before{left:13px;font-size:12px}#mainNav.menu-open button{font-size:12px!important;padding:12px 9px!important;min-height:44px!important}}
+ 
 /* Floating customer support assistant — matched to Nexa's dark navy and cyan UI */
 #supportLauncher{position:fixed;right:20px;bottom:20px;z-index:1000;border:1px solid #65f3dc;border-radius:12px;padding:12px 15px;background:linear-gradient(135deg,#65f3dc,#28b9d4);color:#06131b;box-shadow:0 8px 24px #0007,0 0 18px #65f3dc20;font-weight:900;font-size:13px;transition:transform .18s ease,box-shadow .18s ease}
 #supportLauncher:hover{transform:translateY(-2px);box-shadow:0 10px 28px #0008,0 0 22px #65f3dc35}
