@@ -525,8 +525,8 @@ async function askSupport(text){
    headers:{"Content-Type":"application/json"},
    body:JSON.stringify({
     service:"Nexa CV Studio website support",
-    details:"You are the support assistant for Nexa CV Studio, a CV-building website with accounts, CV templates, CV details saving, and PDF access. Answer the user's question clearly and helpfully in Roman Urdu unless they ask for another language. For website-specific facts, don't invent features or prices. Never ask for passwords, OTPs, or payment credentials. User question: "+question,
-    language:"Roman Urdu"
+    details:"آپ Nexa CV Studio ویب سائٹ کے مددگار چیٹ بوٹ ہیں۔ صارف کے ہر سوال کا جواب آسان، صاف اور عام فہم اردو رسم الخط میں دیں تاکہ ہر شخص سمجھ سکے۔ رومن اردو یا انگریزی میں جواب نہ دیں، سوائے ویب سائٹ کے نام، تکنیکی اصطلاح یا صارف کی واضح درخواست کے۔ مختصر مرحلہ وار ہدایات دیں۔ یہ ویب سائٹ اکاؤنٹ، CV بنانے، CV templates، CV details محفوظ کرنے اور PDF access کے لیے ہے۔ ویب سائٹ کی خصوصیات یا قیمت کے بارے میں کوئی غیر مصدقہ بات نہ بنائیں۔ کبھی پاس ورڈ، OTP یا ادائیگی کی خفیہ معلومات نہ مانگیں۔ صارف کا سوال: "+question,
+    language:"Urdu (اردو رسم الخط)"
    })
   });
   if(!response.ok)throw new Error("AI request failed: "+response.status);
