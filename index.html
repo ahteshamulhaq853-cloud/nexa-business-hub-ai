@@ -18,7 +18,7 @@ button:disabled{opacity:.45;cursor:not-allowed}
 .option-search{width:100%;padding:9px 11px;margin:5px 0 7px;border:1px solid #315563;border-radius:8px;background:#091321;color:var(--text);outline-color:var(--cyan)}
 .option-search::placeholder{color:var(--muted)}
 #dashboardName{display:inline-block;font-size:clamp(16px,2.5vw,24px);letter-spacing:1px;text-transform:uppercase;line-height:1.25}
-.welcome-notice{display:none;position:fixed;z-index:9999;top:18px;left:50%;transform:translateX(-50%);width:min(92vw,420px);padding:18px;border:1px solid var(--cyan);border-radius:16px;background:#0b1728;color:var(--text);box-shadow:0 16px 50px rgba(0,0,0,.55);text-align:center}.welcome-notice.show{display:block;animation:welcomePop .28s ease-out}.welcome-message{font-size:14px;font-weight:900;letter-spacing:.7px;text-transform:uppercase;line-height:1.5;margin-bottom:13px}.welcome-confirm{min-width:110px;padding:9px 20px;border-radius:9px;background:var(--cyan);color:#06131b;font-weight:900}@keyframes welcomePop{from{opacity:0;transform:translate(-50%,-8px)}to{opacity:1;transform:translate(-50%,0)}}
+.welcome-notice{display:none;position:fixed;z-index:9999;top:50%;left:50%;transform:translate(-50%,-50%);width:min(90vw,460px);padding:30px 24px;border:1px solid var(--cyan);border-radius:20px;background:linear-gradient(145deg,#13283d,#091321);color:var(--text);box-shadow:0 22px 75px rgba(0,0,0,.72),0 0 28px #65f3dc20;text-align:center}.welcome-notice.show{display:block;animation:welcomePop .3s ease-out}.welcome-message{font-size:clamp(21px,5vw,29px);font-weight:900;letter-spacing:.6px;line-height:1.25;margin:0 0 14px;color:var(--cyan);text-shadow:0 0 18px #65f3dc25}.welcome-subtitle{font-size:14px;line-height:1.7;color:#c5d7e7;margin:0 0 22px}.welcome-confirm{min-width:145px;padding:11px 20px;border-radius:10px;background:var(--cyan);color:#06131b;font-weight:900}@keyframes welcomePop{from{opacity:0;transform:translate(-50%,-47%)}to{opacity:1;transform:translate(-50%,-50%)}}
 button.secondary{background:#19283c;color:white;border-color:#304a60}
 button.ghost{background:transparent;color:var(--cyan);border-color:#315563}
 button.danger{background:#421b28;color:#ffc1cc;border-color:#783447}
@@ -188,7 +188,7 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
  </div>
 </section>
 <section id="dashboardPage" class="page">
- <div id="welcomeNotice" class="welcome-notice" role="dialog" aria-modal="true" aria-live="polite"><div id="welcomeMessage" class="welcome-message"></div><button type="button" class="welcome-confirm" onclick="dismissWelcome()">OK, CONTINUE</button></div>
+ <div id="welcomeNotice" class="welcome-notice" role="dialog" aria-modal="true" aria-live="polite"><div id="welcomeMessage" class="welcome-message">YOU ARE WELCOME TO THE NEXA WORLD</div><p class="welcome-subtitle">Your journey to a smarter, more professional future starts here. Create your CV, explore your potential, and let your next opportunity begin with NEXA.</p><button type="button" class="welcome-confirm" onclick="dismissWelcome()">OK, CONTINUE</button></div>
  <div class="hero">
   <span class="eyebrow">YOUR WORKSPACE</span>
   <h1>Welcome back,<br><span class="neon" id="dashboardName">CV Creator.</span></h1>
@@ -430,9 +430,6 @@ function showPage(id){
  if(id==="adminPage")loadAdminOrders();
 }
 function showWelcome(mode){
- const m=currentUser?.user_metadata||{};
- const username=m.username||m.full_name||(currentUser?.email?currentUser.email.split("@")[0]:"USER");
- $("welcomeMessage").textContent=(mode==="register"?"WELCOME TO NEXA CV STUDIO, ":"WELCOME BACK, ")+String(username).toUpperCase()+"!";
  $("welcomeNotice").classList.add("show");
 }
 function dismissWelcome(){
