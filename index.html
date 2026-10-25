@@ -413,6 +413,57 @@ hr{border-color:#39352c}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
+
+
+/* Login / registration page — Midnight Black + Champagne Gold */
+#accountPage{max-width:1080px;margin:0 auto}
+#accountPage>.hero{
+ background:radial-gradient(ellipse at 88% 12%,#4a3a1e45,transparent 42%),linear-gradient(125deg,#111216 0%,#1b1a1d 65%,#282116 100%);
+ border:1px solid #dfc58b55;border-radius:24px;padding:clamp(25px,4vw,42px);
+ box-shadow:0 20px 55px #0008,inset 0 1px #fff0;
+}
+#accountPage>.hero .pill{
+ display:inline-flex;max-width:100%;white-space:normal;line-height:1.7;
+ padding:8px 13px;border:1px solid #dfc58b52;background:#dfc58b0d;
+ color:#e5cd98;border-radius:999px
+}
+#accountPage>.grid{
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch
+}
+#accountPage>.grid>.card{
+ margin:0;padding:clamp(20px,3vw,30px);border-radius:20px;
+ background:linear-gradient(145deg,#1a1b20 0%,#111216 100%);
+ border:1px solid #dfc58b45;box-shadow:0 16px 40px #0006,inset 0 1px #ffffff08;
+}
+#accountPage>.grid>.card:first-child{border-top:2px solid #dfc58b}
+#accountPage>.grid>.card:last-child{border-top:2px solid #9d824e}
+#accountPage .eyebrow{color:#dfc58b;letter-spacing:2px}
+#accountPage h2{color:#f6ecd9;font-size:clamp(23px,3vw,29px);margin:10px 0 20px}
+#accountPage label{display:block;color:#e1d6c1;font-weight:600;margin-bottom:7px}
+#accountPage input,#accountPage select,#accountPage textarea{
+ width:100%;min-height:46px;background:#0b0c0f;color:#f7f0e4;
+ border:1px solid #49443a;border-radius:11px;padding:12px 14px
+}
+#accountPage input:focus,#accountPage select:focus,#accountPage textarea:focus{
+ border-color:#dfc58b;box-shadow:0 0 0 3px #dfc58b1c;outline:none
+}
+#accountPage input::placeholder{color:#817b70}
+#accountPage form button[type="submit"]{
+ min-height:48px;margin:8px 0 0;border:1px solid #e8d5a5;border-radius:11px;
+ background:linear-gradient(135deg,#ead7a8,#b99450);color:#17130c;
+ font-size:14px;font-weight:800;letter-spacing:.25px;box-shadow:0 8px 22px #dfc58b1b
+}
+#accountPage form button[type="submit"]:hover{filter:brightness(1.06);transform:translateY(-1px)}
+#accountPage .muted{color:#b7b0a3;font-size:13px;line-height:1.7}
+#accountPage .message.show{background:#22251f;color:#e7dfc9;border-color:#655637}
+#accountPage .message.error{background:#321c21;color:#ffdce0;border-color:#75414a}
+#accountPage .message.success{background:#1d2b22;color:#d6f1df;border-color:#41644e}
+@media(max-width:700px){
+ #accountPage>.hero{padding:23px 19px;border-radius:19px}
+ #accountPage>.grid{grid-template-columns:minmax(0,1fr);gap:15px}
+ #accountPage>.grid>.card{padding:20px;border-radius:16px}
+}
+
 </style>
 </head>
 <body>
