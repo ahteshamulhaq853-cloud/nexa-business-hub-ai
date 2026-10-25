@@ -952,6 +952,12 @@ function showWelcome(mode){
 function dismissWelcome(){
  $("welcomeNotice").classList.remove("show");
 }
+function closeMainMenu(){
+ const nav=$("mainNav"),button=$("settingsLauncher");
+ nav.classList.remove("menu-open");
+ nav.classList.add("menu-hidden");
+ button.setAttribute("aria-expanded","false");
+}
 function toggleMainMenu(){
  const nav=$("mainNav"),button=$("settingsLauncher");
  const open=!nav.classList.contains("menu-open");
@@ -959,6 +965,15 @@ function toggleMainMenu(){
  nav.classList.toggle("menu-hidden",!open);
  button.setAttribute("aria-expanded",String(open));
 }
+document.addEventListener("click",function(e){
+ const nav=$("mainNav"),button=$("settingsLauncher");
+ if(!nav||!button||!nav.classList.contains("menu-open"))return;
+ if(nav.contains(e.target)){
+  if(e.target.closest("button"))closeMainMenu();
+ }else if(!button.contains(e.target)){
+  closeMainMenu();
+ }
+});
 function setUI(){
  $("mainNav").classList.remove("menu-open");
  $("mainNav").classList.add("menu-hidden");
