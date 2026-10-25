@@ -36,8 +36,11 @@ button.secondary{background:#19283c;color:white;border-color:#304a60}
 button.ghost{background:transparent;color:var(--cyan);border-color:#315563}
 button.danger{background:#421b28;color:#ffc1cc;border-color:#783447}
 header{position:sticky;top:0;z-index:5;background:#080e19f5;border-bottom:1px solid #294256;padding:15px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.brand{font-size:20px;font-weight:900;letter-spacing:1px}
+.brand{font-size:20px;font-weight:900;letter-spacing:1px;text-align:center;width:100%}
 .brand small{display:block;color:var(--cyan);font-size:10px;letter-spacing:2px;margin-top:4px}
+header .brand{position:absolute;left:50%;transform:translateX(-50%);width:max-content;max-width:calc(100% - 110px)}
+header .brand small{text-align:center}
+@media(max-width:420px){header .brand{font-size:16px;max-width:calc(100% - 90px)}header .brand small{font-size:8px;letter-spacing:1.4px}}
 nav{display:flex;gap:4px;flex-wrap:wrap}
 nav button{font-size:12px;padding:9px}
 main{max-width:1180px;margin:25px auto;padding:0 15px}
