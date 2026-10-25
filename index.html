@@ -125,10 +125,12 @@ th{background:#15263b;color:var(--cyan)}
 
 footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
 
-/* Borderless Settings shortcut at the header's top-right corner */
-#settingsLauncher{display:none;position:absolute;top:14px;right:14px;z-index:1002;width:44px;height:44px;padding:0;margin:0;border:0;border-radius:0;background:transparent;color:#f3dca6;font-size:23px;line-height:1;box-shadow:none}
+/* Borderless three-line menu at the header's top-right corner */
+#settingsLauncher{display:none;position:absolute;top:14px;right:14px;z-index:1002;width:44px;height:44px;padding:0;margin:0;border:0;border-radius:0;background:transparent;color:#f3dca6;font-size:30px;line-height:1;box-shadow:none;align-items:center;justify-content:center}
 #settingsLauncher:hover{border:0;box-shadow:none;transform:translateY(-2px)}
 #settingsLauncher:focus-visible{outline:2px solid #f3dca6;outline-offset:3px}
+#mainNav.menu-hidden{display:none!important}
+#mainNav.menu-open{display:grid!important}
 header{position:sticky}
 @media(max-width:760px){header{padding-right:68px}main{margin-top:25px}}
 @media(max-width:420px){#settingsLauncher{top:10px;right:10px;width:40px;height:40px;font-size:21px}header{padding-right:60px}main{margin-top:15px}}
@@ -557,7 +559,7 @@ header{padding:16px clamp(16px,4vw,46px)!important;background:rgba(9,10,13,.96)!
 </style>
 </head>
 <body>
-<button id="settingsLauncher" type="button" aria-label="Open Settings" title="Settings" onclick="showPage('settingsPage')">⚙️</button>
+<button id="settingsLauncher" type="button" aria-label="Open menu" title="Menu" aria-expanded="false" onclick="toggleMainMenu()">☰</button>
 <header>
  <div class="brand">⚡ NEXA CV STUDIO<small>DARK TECH · RESUME BUILDER</small></div>
  <nav id="mainNav" style="display:none">
@@ -933,9 +935,18 @@ function showWelcome(mode){
 function dismissWelcome(){
  $("welcomeNotice").classList.remove("show");
 }
+function toggleMainMenu(){
+ const nav=$("mainNav"),button=$("settingsLauncher");
+ const open=!nav.classList.contains("menu-open");
+ nav.classList.toggle("menu-open",open);
+ nav.classList.toggle("menu-hidden",!open);
+ button.setAttribute("aria-expanded",String(open));
+}
 function setUI(){
- $("mainNav").style.display=currentUser?"grid":"none";
+ $("mainNav").classList.remove("menu-open");
+ $("mainNav").classList.add("menu-hidden");
  $("settingsLauncher").style.display=currentUser?"flex":"none";
+ $("settingsLauncher").setAttribute("aria-expanded","false");
  if(currentUser){
   const m=currentUser.user_metadata||{};
   const name=m.username||m.full_name||(currentUser.email?currentUser.email.split("@")[0]:"CV Creator");
