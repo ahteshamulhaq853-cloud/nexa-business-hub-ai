@@ -178,8 +178,8 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
  <div class="brand">⚡ NEXA CV STUDIO<small>DARK TECH · RESUME BUILDER</small></div>
  <nav id="mainNav" style="display:none">
   <button class="ghost" onclick="showPage('dashboardPage')">Dashboard</button>
-  <button class="ghost" onclick="showPage('builderPage')">CV Builder</button>
-  <button class="ghost" onclick="showPage('europassPage')">Europass CV</button>
+  <button class="ghost" onclick="showPage('cvSectionPage')">CV</button>
+  <button class="ghost" onclick="showPage('servicesPage')">Services</button>
   <button class="ghost" onclick="showPage('paymentPage')">Payment</button>
   <button class="ghost" id="adminButton" style="display:none" onclick="showPage('adminPage')">Admin</button>
   <button class="secondary" onclick="logout()">Logout</button>
@@ -231,10 +231,23 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
   <div class="stat"><strong>A4</strong><span>Print-ready resume</span></div>
   <div class="stat"><strong id="pdfStatusText">ACCESS PENDING</strong><span>PDF export status</span></div>
  </div>
- <div class="grid" style="margin-top:16px">
-  <div class="card"><h3 class="neon">▤ CV Builder</h3><p class="muted">Create and edit your professional resume.</p><button onclick="showPage('builderPage')">Edit My CV</button></div>
-  <div class="card"><h3 class="neon">◈ Payment Requests</h3><p class="muted">Submit a Rs. 100 payment reference and track approval.</p><p class="pill" style="color:#65f3dc;border-color:#65f3dc">40% DISCOUNT · FOR 15 DAYS</p><button class="secondary" onclick="showPage('paymentPage')">View Payments</button></div>
+ <div class="grid two" style="margin-top:16px">
+  <div class="card"><h3 class="neon">▤ CV Section</h3><p class="muted">Open Normal CV Builder or Europass CV Builder from one place.</p><button onclick="showPage('cvSectionPage')">Open CV Section →</button></div>
+  <div class="card"><h3 class="neon">⚙ Services Section</h3><p class="muted">A dedicated place for services. We will add services one by one later.</p><button class="secondary" onclick="showPage('servicesPage')">Open Services →</button></div>
  </div>
+</section>
+<section id="cvSectionPage" class="page">
+ <div class="hero"><span class="eyebrow">CV WORKSPACE</span><h1>Your <span class="neon">CV Section.</span></h1><p>Choose the CV builder you want to use.</p></div>
+ <div class="grid two">
+  <div class="card"><span class="eyebrow">OPTION 01</span><h2 class="neon">Normal CV</h2><p class="muted">Create and edit your professional CV using the existing CV templates and tools.</p><button onclick="showPage('builderPage')">Open Normal CV →</button></div>
+  <div class="card"><span class="eyebrow">OPTION 02</span><h2 class="neon">Europass CV</h2><p class="muted">Create a Europass-inspired CV with its separate form, templates and preview.</p><button onclick="showPage('europassPage')">Open Europass CV →</button></div>
+ </div>
+ <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
+</section>
+<section id="servicesPage" class="page">
+ <div class="hero"><span class="eyebrow">SERVICES WORKSPACE</span><h1>Our <span class="neon">Services.</span></h1><p>This section is ready. Services will be added one by one later.</p></div>
+ <div class="card"><h2 class="neon">Services Coming Soon</h2><p class="muted">No services have been added yet. We can add them here one at a time when you are ready.</p></div>
+ <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
 </section>
 <section id="builderPage" class="page">
  <div class="hero no-print">
