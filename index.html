@@ -327,7 +327,17 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
     <label for="cvSkills" style="margin-top:12px">Added Skills (you can edit these)</label>
     <textarea id="cvSkills" oninput="preview()" placeholder="Your skills will appear here."></textarea>
    </div>
-   <div class="field"><label for="cvLanguages">Languages</label><textarea id="cvLanguages" oninput="preview()"></textarea></div>
+   <div class="field">
+    <label>Languages</label>
+    <div class="form-grid">
+     <div class="field"><label for="languageOption">Select Language</label><select id="languageOption"><option value="">-- Select language --</option><option>Urdu</option><option>English</option><option>Pashto</option><option>Punjabi</option><option>Saraiki</option><option>Sindhi</option><option>Balochi</option><option>Hindko</option><option>Kashmiri</option><option>Arabic</option><option>Persian (Farsi)</option><option>Chinese (Mandarin)</option><option>French</option><option>German</option><option>Spanish</option><option>Italian</option><option>Turkish</option><option>Russian</option><option>Japanese</option><option>Korean</option><option>Hindi</option><option>Bengali</option><option>Other / Not Listed</option></select></div>
+     <div class="field"><label for="languageLevel">Proficiency</label><select id="languageLevel"><option value="">-- Select level --</option><option>Basic</option><option>Conversational</option><option>Intermediate</option><option>Fluent</option><option>Native</option></select></div>
+     <div class="field"><label for="customLanguage">Or Add Your Own Language</label><input id="customLanguage" placeholder="Type another language"></div>
+    </div>
+    <button type="button" class="secondary" onclick="addLanguageRecord()">+ Add Language</button>
+    <label for="cvLanguages" style="margin-top:12px">Added Languages (you can edit these)</label>
+    <textarea id="cvLanguages" oninput="preview()" placeholder="Your languages will appear here."></textarea>
+   </div>
    <div class="field"><label for="cvReferences">Certificates / References</label><textarea id="cvReferences" oninput="preview()"></textarea></div>
    <button type="button" onclick="saveCV()" style="width:100%">Save CV Details</button>
   </form>
@@ -571,6 +581,20 @@ function addSkillRecord(){
  field.value+=(field.value.trim()?"\\n":"")+entry;
  preview();
  $("skillOption").value="";$("skillLevel").value="";$("customSkill").value="";
+}
+function addLanguageRecord(){
+ const chosen=$("languageOption").value;
+ const custom=$("customLanguage").value.trim();
+ const language=custom||chosen;
+ const level=$("languageLevel").value;
+ if(!language){alert("Please choose a language or type your own language.");return}
+ const entry=language+(level?" ("+level+")":"");
+ const field=$("cvLanguages");
+ const existing=field.value.split("\\n").map(x=>x.trim().toLowerCase());
+ if(existing.includes(entry.toLowerCase())){alert("This language is already added.");return}
+ field.value+=(field.value.trim()?"\\n":"")+entry;
+ preview();
+ $("languageOption").value="";$("languageLevel").value="";$("customLanguage").value="";
 }
 function addExperienceRecord(){
  const role=$("expRole").value;
