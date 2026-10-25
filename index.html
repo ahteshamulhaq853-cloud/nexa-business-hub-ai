@@ -122,14 +122,6 @@ th{background:#15263b;color:var(--cyan)}
 #cvPaper.template-marketing{--cv-accent:#ea580c;--cv-sidebar:#fff7ed;--cv-heading:#9a3412;--cv-side-text:#7c2d12;--cv-side-heading:#ea580c}
 #cvPaper.template-academic{--cv-accent:#4338ca;--cv-sidebar:#eef2ff;--cv-heading:#312e81;--cv-side-text:#312e81;--cv-side-heading:#4338ca}
 #cvPaper.template-charcoal{--cv-accent:#0f766e;--cv-sidebar:#292524;--cv-heading:#1c1917;--cv-side-text:#fafaf9;--cv-side-heading:#5eead4}
-#cvPaper.template-europass{--cv-accent:#155eef;--cv-sidebar:#edf4ff;--cv-heading:#123b7a;--cv-side-text:#243b5a;--cv-side-heading:#155eef;grid-template-columns:30% 70%;border:1px solid #d7e3f5;border-radius:0;min-height:700px}
-#cvPaper.template-europass .side{background:#edf4ff;border-right:2px solid #155eef;padding:15px}
-#cvPaper.template-europass .content{padding:20px 22px}
-#cvPaper.template-europass .content h1{font-size:22px;color:#123b7a;border-bottom:2px solid #155eef;padding-bottom:9px}
-#cvPaper.template-europass .cv-title{color:#155eef;letter-spacing:.5px}
-#cvPaper.template-europass .side h3,#cvPaper.template-europass .cvsection h3{color:#155eef;letter-spacing:.6px}
-#cvPaper.template-europass .cvsection h3{border-bottom:1px solid #b7cbed}
-#cvPaper.template-europass .photo{border-radius:2px;border:2px solid #155eef}
 
 footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
 
@@ -267,7 +259,6 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
    <button type="button" class="template-option" data-template="marketing" onclick="applyTemplate('marketing')"><div class="template-swatch"><div class="sw-side" style="background:#fff7ed"></div><div class="sw-main"><i style="width:80%;background:#ea580c"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:55%"></i></div></div>Marketing &amp; Sales<small>Energetic orange highlights</small></button>
    <button type="button" class="template-option" data-template="academic" onclick="applyTemplate('academic')"><div class="template-swatch"><div class="sw-side" style="background:#eef2ff"></div><div class="sw-main"><i style="width:80%;background:#4338ca"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:55%"></i></div></div>Academic &amp; Teaching<small>For educators and graduates</small></button>
    <button type="button" class="template-option" data-template="charcoal" onclick="applyTemplate('charcoal')"><div class="template-swatch"><div class="sw-side" style="background:#292524"></div><div class="sw-main"><i style="width:80%;background:#0f766e"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:55%"></i></div></div>Charcoal Premium<small>Dark, elegant professional look</small></button>
-    <button type="button" class="template-option" data-template="europass" onclick="applyTemplate('europass')"><div class="template-swatch" style="border:1px solid #d7e3f5"><div class="sw-side" style="background:#edf4ff;border-right:2px solid #155eef"></div><div class="sw-main"><i style="width:80%;background:#155eef"></i><i style="width:65%;background:#b7cbed"></i><i style="width:90%;background:#d8e3f3"></i><i style="width:55%;background:#d8e3f3"></i></div></div>Europass CV<small>European-style structured CV layout</small></button>
   </div>
  </div>
  <div class="cv-layout">
@@ -796,11 +787,11 @@ function applyCV(d){
  preview();
 }
 function applyTemplate(template,saveChoice=true){
- const allowed=["classic","navy-gold","minimal","sidebar","executive","graduate","advocate","creative","ats","medical","it","elegant","marketing","academic","charcoal","europass"];
+ const allowed=["classic","navy-gold","minimal","sidebar","executive","graduate","advocate","creative","ats","medical","it","elegant","marketing","academic","charcoal"];
  if(!allowed.includes(template))template="classic";
  currentTemplate=template;
  const paper=$("cvPaper");
- paper.classList.remove("template-classic","template-navy-gold","template-minimal","template-sidebar","template-executive","template-graduate","template-advocate","template-creative","template-ats","template-medical","template-it","template-elegant","template-marketing","template-academic","template-charcoal","template-europass");
+ paper.classList.remove("template-classic","template-navy-gold","template-minimal","template-sidebar","template-executive","template-graduate","template-advocate","template-creative","template-ats","template-medical","template-it","template-elegant","template-marketing","template-academic","template-charcoal");
  paper.classList.add("template-"+template);
  document.querySelectorAll(".template-option").forEach(btn=>btn.classList.toggle("active",btn.dataset.template===template));
  if(saveChoice){try{localStorage.setItem("nexa_cv_template",template)}catch(e){}}
