@@ -18,6 +18,7 @@ button:disabled{opacity:.45;cursor:not-allowed}
 .option-search{width:100%;padding:9px 11px;margin:5px 0 7px;border:1px solid #315563;border-radius:8px;background:#091321;color:var(--text);outline-color:var(--cyan)}
 .option-search::placeholder{color:var(--muted)}
 #dashboardName{display:inline-block;font-size:clamp(16px,2.5vw,24px);letter-spacing:1px;text-transform:uppercase;line-height:1.25}
+.welcome-notice{display:none;margin:0 0 14px;padding:12px 16px;border:1px solid var(--cyan);border-radius:12px;background:linear-gradient(110deg,rgba(0,229,255,.12),rgba(124,77,255,.10));color:var(--text);font-size:13px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}.welcome-notice.show{display:block;animation:welcomePop .35s ease-out}@keyframes welcomePop{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
 button.secondary{background:#19283c;color:white;border-color:#304a60}
 button.ghost{background:transparent;color:var(--cyan);border-color:#315563}
 button.danger{background:#421b28;color:#ffc1cc;border-color:#783447}
@@ -187,6 +188,7 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
  </div>
 </section>
 <section id="dashboardPage" class="page">
+ <div id="welcomeNotice" class="welcome-notice" role="status" aria-live="polite"></div>
  <div class="hero">
   <span class="eyebrow">YOUR WORKSPACE</span>
   <h1>Welcome back,<br><span class="neon" id="dashboardName">CV Creator.</span></h1>
@@ -427,6 +429,15 @@ function showPage(id){
  if(id==="paymentPage")loadMyOrders();
  if(id==="adminPage")loadAdminOrders();
 }
+function showWelcome(mode){
+ const m=currentUser?.user_metadata||{};
+ const username=m.username||m.full_name||(currentUser?.email?currentUser.email.split("@")[0]:"USER");
+ const notice=$("welcomeNotice");
+ notice.textContent=(mode==="register"?"WELCOME TO NEXA CV STUDIO, ":"WELCOME BACK, ")+String(username).toUpperCase()+"!";
+ notice.classList.remove("show");
+ notice.style.display="block";
+ requestAnimationFrame(()=>notice.classList.add("show"));
+}
 function setUI(){
  $("mainNav").style.display=currentUser?"flex":"none";
  if(currentUser){
@@ -445,14 +456,14 @@ async function register(e){
  const {data,error}=await db.auth.signUp({email,password,options:{data:{full_name:name,phone,gender}}});
  if(error){msg("regMsg",error.message,"error");return}
  if(data.session&&data.user){
-  currentUser=data.user;setUI();await checkAdmin();await checkApproval();await loadCV();showPage("dashboardPage");msg("regMsg","Registration successful!","success");
+  currentUser=data.user;setUI();await checkAdmin();await checkApproval();await loadCV();showPage("dashboardPage");showWelcome("register");msg("regMsg","Registration successful!","success");
  }else{msg("regMsg","Registration submitted. If email confirmation is enabled, confirm your email and then log in.","success")}
 }
 async function login(e){
  e.preventDefault();clearMsg("loginMsg");
  const {data,error}=await db.auth.signInWithPassword({email:$("loginEmail").value.trim(),password:$("loginPassword").value});
  if(error){msg("loginMsg",error.message,"error");return}
- currentUser=data.user;setUI();await checkAdmin();await checkApproval();await loadCV();showPage("dashboardPage");msg("loginMsg","Login successful!","success");
+ currentUser=data.user;setUI();await checkAdmin();await checkApproval();await loadCV();showPage("dashboardPage");showWelcome("login");msg("loginMsg","Login successful!","success");
 }
 async function logout(){
  await db.auth.signOut();currentUser=null;approvedForPDF=false;setUI();$("pdfBtn").disabled=true;$("adminButton").style.display="none";showPage("accountPage");
