@@ -16,6 +16,19 @@ button{border:1px solid transparent;border-radius:9px;padding:11px 14px;backgrou
 button:disabled{opacity:.45;cursor:not-allowed}
 .education-entry{margin:0 0 8px;line-height:1.35}.education-entry>strong{display:block;font-weight:800}.education-entry>div{margin-top:2px}.education-entry>div>div{margin-top:1px}.side #pSkills>div{margin:0 0 3px}
 .option-search{width:100%;padding:9px 11px;margin:5px 0 7px;border:1px solid #315563;border-radius:8px;background:#091321;color:var(--text);outline-color:var(--cyan)}
+.search-select-wrap{position:relative;width:100%}
+.search-select-wrap>select.native-search-select{position:absolute!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important;left:0;bottom:0}
+.search-select-trigger{width:100%;display:flex;justify-content:space-between;align-items:center;text-align:left;gap:10px;padding:11px 12px;border:1px solid #315563;border-radius:8px;background:#091321;color:var(--text);cursor:pointer;font:inherit;min-height:42px}
+.search-select-trigger:after{content:"⌄";color:var(--cyan)}
+.search-select-menu{position:absolute;z-index:1000;top:calc(100% + 4px);left:0;right:0;padding:8px;background:#0c1828;border:1px solid #315563;border-radius:10px;box-shadow:0 14px 35px #0008;max-height:260px;display:none}
+.search-select-wrap.open .search-select-menu{display:block}
+.search-select-menu input{width:100%;padding:10px;border:1px solid #315563;border-radius:7px;background:#07111f;color:#fff;outline-color:var(--cyan);margin-bottom:6px}
+.search-select-options{overflow:auto;max-height:190px}
+.search-select-option{display:block;width:100%;padding:9px 10px;border:0;border-radius:6px;background:transparent;color:#eaf3ff;text-align:left;cursor:pointer;font:inherit}
+.search-select-option:hover,.search-select-option:focus{background:#1769d2}
+.search-select-option[aria-selected="true"]{color:#65f3dc}
+.search-select-empty{padding:10px;color:#a9b9ce;font-size:12px}
+
 .option-search::placeholder{color:var(--muted)}
 #dashboardName{display:inline-block;font-size:clamp(16px,2.5vw,24px);letter-spacing:1px;text-transform:uppercase;line-height:1.25}
 .welcome-notice{display:none;position:fixed;z-index:9999;top:50%;left:50%;transform:translate(-50%,-50%);width:min(90vw,460px);padding:30px 24px;border:1px solid var(--cyan);border-radius:20px;background:linear-gradient(145deg,#13283d,#091321);color:var(--text);box-shadow:0 22px 75px rgba(0,0,0,.72),0 0 28px #65f3dc20;text-align:center}.welcome-notice.show{display:block;animation:welcomePop .3s ease-out}.welcome-message{font-size:clamp(21px,5vw,29px);font-weight:900;letter-spacing:.6px;line-height:1.25;margin:0 0 14px;color:var(--cyan);text-shadow:0 0 18px #65f3dc25}.welcome-subtitle{font-size:14px;line-height:1.7;color:#c5d7e7;margin:0 0 22px}.welcome-confirm{min-width:145px;padding:11px 20px;border-radius:10px;background:var(--cyan);color:#06131b;font-weight:900}@keyframes welcomePop{from{opacity:0;transform:translate(-50%,-47%)}to{opacity:1;transform:translate(-50%,-50%)}}
@@ -553,13 +566,60 @@ function addEducationOption(qualification){
 function searchSelectOptions(selectId,query){
  const select=$(selectId);if(!select)return;
  const q=(query||"").trim().toLocaleLowerCase();
+ const wrap=select.closest(".search-select-wrap");
+ if(wrap){renderSearchSelectOptions(select,wrap,q);return}
  Array.from(select.options).forEach(option=>{
   option.hidden=!!q&&!option.textContent.toLocaleLowerCase().includes(q)&&option.value!=="";
  });
 }
 function refreshSelectSearch(selectId){
+ const select=$(selectId);if(!select)return;
+ const wrap=select.closest(".search-select-wrap");
+ if(wrap){renderSearchSelectOptions(select,wrap,(wrap.querySelector(".search-select-menu input")?.value||"").toLocaleLowerCase());updateSearchSelectLabel(select,wrap);return}
  const search=document.querySelector('[data-search-for="'+selectId+'"]');
  if(search)searchSelectOptions(selectId,search.value);
+}
+function updateSearchSelectLabel(select,wrap){
+ const trigger=wrap.querySelector(".search-select-trigger");
+ const option=select.options[select.selectedIndex];
+ trigger.textContent=option?option.textContent:"Select an option";
+ trigger.title=trigger.textContent;
+}
+function renderSearchSelectOptions(select,wrap,query=""){
+ const list=wrap.querySelector(".search-select-options");list.innerHTML="";
+ const options=Array.from(select.options).filter(o=>!o.disabled&&(!query||o.textContent.toLocaleLowerCase().includes(query)||o.value===""));
+ if(!options.length){list.innerHTML='<div class="search-select-empty">No matching options found</div>';return}
+ options.forEach(option=>{
+  const btn=document.createElement("button");btn.type="button";btn.className="search-select-option";btn.textContent=option.textContent;btn.setAttribute("aria-selected",String(option.value===select.value));
+  btn.addEventListener("click",()=>{
+   select.value=option.value;select.dispatchEvent(new Event("change",{bubbles:true}));
+   updateSearchSelectLabel(select,wrap);wrap.classList.remove("open");
+   const input=wrap.querySelector(".search-select-menu input");input.value="";renderSearchSelectOptions(select,wrap,"");
+  });
+  list.appendChild(btn);
+ });
+}
+function initSearchableSelects(){
+ document.querySelectorAll("select[id]").forEach(select=>{
+  if(!document.querySelector('[data-search-for="'+select.id+'"]')||select.closest(".search-select-wrap"))return;
+  const oldSearch=document.querySelector('[data-search-for="'+select.id+'"]');
+  const wrap=document.createElement("div");wrap.className="search-select-wrap";
+  select.parentNode.insertBefore(wrap,select);wrap.appendChild(select);select.classList.add("native-search-select");
+  const trigger=document.createElement("button");trigger.type="button";trigger.className="search-select-trigger";trigger.setAttribute("aria-haspopup","listbox");trigger.setAttribute("aria-expanded","false");
+  const menu=document.createElement("div");menu.className="search-select-menu";
+  const input=document.createElement("input");input.type="search";input.placeholder="Search options...";input.setAttribute("aria-label","Search "+(select.labels?.[0]?.textContent||"options"));input.autocomplete="off";
+  const list=document.createElement("div");list.className="search-select-options";list.setAttribute("role","listbox");menu.append(input,list);wrap.append(trigger,menu);
+  oldSearch.remove();
+  trigger.addEventListener("click",()=>{
+   document.querySelectorAll(".search-select-wrap.open").forEach(w=>{if(w!==wrap){w.classList.remove("open");w.querySelector(".search-select-trigger").setAttribute("aria-expanded","false")}});
+   const opening=!wrap.classList.contains("open");wrap.classList.toggle("open",opening);trigger.setAttribute("aria-expanded",String(opening));
+   if(opening){renderSearchSelectOptions(select,wrap,"");input.value="";input.focus()}
+  });
+  input.addEventListener("input",()=>renderSearchSelectOptions(select,wrap,input.value.trim().toLocaleLowerCase()));
+  select.addEventListener("change",()=>{updateSearchSelectLabel(select,wrap);renderSearchSelectOptions(select,wrap,input.value.trim().toLocaleLowerCase())});
+  updateSearchSelectLabel(select,wrap);renderSearchSelectOptions(select,wrap,"");
+ });
+ document.addEventListener("click",e=>{document.querySelectorAll(".search-select-wrap.open").forEach(w=>{if(!w.contains(e.target)){w.classList.remove("open");w.querySelector(".search-select-trigger").setAttribute("aria-expanded","false")}})});
 }
 function updateInstituteOptions(){
  const province=$("eduProvince").value,type=$("eduInstituteType").value,select=$("eduInstitute");
@@ -876,6 +936,8 @@ $("supportForm").addEventListener("submit",e=>{
  const question=input.value.trim();
  if(question)askSupport(question);
 });
+
+initSearchableSelects();
 
 async function init(){
  const {data,error}=await db.auth.getSession();
