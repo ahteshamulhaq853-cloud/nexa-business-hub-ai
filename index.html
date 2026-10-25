@@ -304,6 +304,115 @@ input::placeholder,textarea::placeholder{color:#8993a3}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
+
+
+/* Nexa CV Studio — Midnight Black + Champagne Gold luxury theme */
+:root{
+ --bg:#090a0d;--panel:#141519;--panel2:#1b1c21;--line:#39352c;
+ --cyan:#dfc58b;--gold:#dfc58b;--text:#f5f0e6;--muted:#b7b0a3;
+ --green:#86c9a5;--red:#f19aa2;
+ color-scheme:dark;
+}
+html{scroll-behavior:smooth;background:#090a0d}
+body{
+ background:radial-gradient(ellipse at 50% -18%,#29251d 0%,#111216 42%,#090a0d 76%);
+ background-attachment:fixed;color:#f5f0e6;
+ font-family:Inter,"Segoe UI",Arial,sans-serif;letter-spacing:.08px
+}
+header{
+ position:sticky;top:0;z-index:5;padding:15px clamp(14px,3vw,36px);
+ background:rgba(12,13,16,.93);backdrop-filter:blur(18px);
+ -webkit-backdrop-filter:blur(18px);border-bottom:1px solid #dfc58b35;
+ box-shadow:0 8px 28px #0005
+}
+.brand{font-size:clamp(17px,2.2vw,22px);font-weight:900;letter-spacing:1.5px;color:#f5e5bd;background:none;-webkit-text-fill-color:currentColor}
+.brand small{color:#dfc58b;font-size:9px;letter-spacing:2.5px}
+nav{gap:6px;align-items:center}
+nav button{font-size:12px;padding:10px 14px;border-radius:999px}
+button{
+ border:1px solid #dfc58b;border-radius:10px;padding:12px 17px;
+ background:linear-gradient(135deg,#ead7a8,#b99450);color:#17140e;
+ font-weight:800;box-shadow:0 6px 18px #dfc58b18;
+ transition:transform .18s,box-shadow .18s,filter .18s
+}
+button:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 10px 24px #dfc58b25;filter:brightness(1.05)}
+button:active:not(:disabled){transform:translateY(0)}
+button.secondary{background:#202126;color:#f4ead4;border-color:#4b463a;box-shadow:none}
+button.ghost{background:transparent;color:#e2d8c5;border-color:transparent;box-shadow:none}
+button.ghost:hover{background:#25231e;border-color:#514631;color:#f3dba6}
+button.danger{background:#351b20;color:#ffdce0;border-color:#75414a;box-shadow:none}
+main{max-width:1240px;margin:clamp(18px,3vw,34px) auto;padding:0 clamp(12px,2.5vw,26px)}
+.page{display:none}.page.active{display:block}
+.hero{
+ position:relative;isolation:isolate;overflow:hidden;
+ background:linear-gradient(125deg,#17181d 0%,#202027 58%,#2c261b 100%);
+ border:1px solid #dfc58b4a;border-radius:22px;
+ padding:clamp(24px,4vw,44px);margin-bottom:20px;
+ box-shadow:0 18px 48px #0006,inset 0 1px #ffffff0a
+}
+.hero:before{content:"";position:absolute;z-index:-1;width:310px;height:310px;right:-100px;top:-160px;border:1px solid #dfc58b66;border-radius:50%;box-shadow:0 0 0 25px #dfc58b0b,0 0 0 55px #dfc58b08;pointer-events:none}
+.hero:after{content:"";position:absolute;z-index:-1;right:8%;bottom:20px;width:160px;height:2px;background:linear-gradient(90deg,transparent,#dfc58b,transparent);transform:rotate(-35deg);pointer-events:none}
+.eyebrow{display:inline-block;color:#dfc58b;font-size:10px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase}
+.hero h1{font-size:clamp(30px,5vw,52px);letter-spacing:-1.2px;line-height:1.08;margin:16px 0;color:#fff9ed;text-wrap:balance}
+.neon{color:#e7cd94;text-shadow:0 0 24px #dfc58b1a}
+.hero p,.muted{color:#bcb6aa;line-height:1.75}
+.grid{gap:18px}
+.card{
+ position:relative;background:linear-gradient(145deg,rgba(25,26,31,.98),rgba(17,18,22,.98));
+ border:1px solid #dfc58b24;border-radius:17px;
+ padding:clamp(17px,2.5vw,25px);margin-bottom:17px;
+ box-shadow:0 12px 32px #0004,inset 0 1px #ffffff06;
+ transition:transform .2s,border-color .2s,box-shadow .2s
+}
+.card:hover{border-color:#dfc58b69;box-shadow:0 16px 36px #0005,0 0 0 1px #dfc58b0a}
+h1,h2,h3{color:#f4eee2}
+h2{font-size:clamp(19px,2.5vw,23px)}
+.field{margin-bottom:16px}
+label{font-size:12px;letter-spacing:.15px;color:#ded4c0}
+input,select,textarea{
+ background:#0e0f13;color:#f5f0e6;border:1px solid #46423a;
+ border-radius:10px;padding:12px 13px;transition:border-color .18s,box-shadow .18s
+}
+input:focus,select:focus,textarea:focus{border-color:#dfc58b;box-shadow:0 0 0 3px #dfc58b1a;outline:none}
+input::placeholder,textarea::placeholder{color:#888276}
+input:disabled,select:disabled,textarea:disabled{opacity:.65}
+.actions{gap:8px}
+.pill{border-color:#dfc58b70;color:#e7cd94;background:#dfc58b10;letter-spacing:.3px}
+.stat{background:linear-gradient(145deg,#202127,#141519);border:1px solid #dfc58b2c;border-radius:15px;padding:21px;box-shadow:0 8px 24px #0003}
+.stat strong{font-size:clamp(22px,3vw,29px);color:#dfc58b}
+.stat span,.small-note{color:#b7b0a3}
+.message.show{background:#202b26;color:#d6f1df;border-color:#41644e}
+.message.error{background:#321c21;color:#ffdce0;border-color:#75414a}
+.message.success{background:#1d2b22;color:#d6f1df;border-color:#41644e}
+.template-option{border:1px solid #403d35;border-radius:13px;background:linear-gradient(145deg,#222329,#17181d);color:#f1e8d8;box-shadow:none}
+.template-option.active,.template-option:hover{border-color:#dfc58b;box-shadow:0 0 0 2px #dfc58b18}
+.template-swatch{border-radius:8px;overflow:hidden}
+.option-search,.search-select-trigger{background:#101115;color:#f5f0e6;border-color:#46423a}
+.search-select-menu{background:#17181d;color:#f5f0e6;border-color:#46423a;box-shadow:0 14px 35px #0009}
+.search-select-menu input{background:#101115;color:#f5f0e6;border-color:#46423a}
+.search-select-option{color:#eee4d2}
+.search-select-option:hover,.search-select-option:focus{background:#30291d;color:#fff1ce}
+.search-select-option[aria-selected="true"]{color:#dfc58b}
+.eu-step-progress{background:#191a1f;border:1px solid #dfc58b35;border-radius:13px;box-shadow:0 8px 22px #0003;color:#dfc58b}
+.eu-step-progress>div{background:#35332d}
+.eu-step-progress i{background:linear-gradient(90deg,#b99450,#f0dba9)}
+.eu-template-card{border-color:#dfc58b40}
+#supportPanel{background:#17181d!important;color:#f5f0e6;border:1px solid #dfc58b70;box-shadow:0 22px 70px #000b}
+#supportPanel input,#supportPanel textarea{background:#0e0f13;color:#f5f0e6}
+a{color:#e5ca91}
+hr{border-color:#39352c}
+@media(max-width:700px){
+ header{align-items:flex-start;padding:13px 12px}
+ nav{width:100%;gap:5px}
+ nav button{flex:1 1 auto;padding:9px 10px;font-size:11px}
+ main{margin:16px auto;padding:0 12px}
+ .hero{border-radius:18px;padding:22px 18px}
+ .grid,.grid.three{grid-template-columns:minmax(0,1fr)}
+ .card{border-radius:15px;padding:17px}
+ .actions button{flex:1 1 auto}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
 </style>
 </head>
 <body>
