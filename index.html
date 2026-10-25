@@ -14,6 +14,8 @@ body{margin:0;background:radial-gradient(ellipse at top,#142a3d,#080c15 60%);col
 button,input,select,textarea{font:inherit}
 button{border:1px solid transparent;border-radius:9px;padding:11px 14px;background:var(--cyan);color:#06131b;font-weight:bold;cursor:pointer;margin:3px}
 button:disabled{opacity:.45;cursor:not-allowed}
+.option-search{width:100%;padding:9px 11px;margin:5px 0 7px;border:1px solid #315563;border-radius:8px;background:#091321;color:var(--text);outline-color:var(--cyan)}
+.option-search::placeholder{color:var(--muted)}
 button.secondary{background:#19283c;color:white;border-color:#304a60}
 button.ghost{background:transparent;color:var(--cyan);border-color:#315563}
 button.danger{background:#421b28;color:#ffc1cc;border-color:#783447}
@@ -233,7 +235,7 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
    <div class="field"><label for="cvSummary">Professional Profile</label><textarea id="cvSummary" oninput="preview()"></textarea></div>
    <div class="field">
     <label for="educationLevel">Select Qualification</label>
-    <select id="educationLevel">
+    <input type="search" class="option-search" data-search-for="educationLevel" placeholder="Search options..." aria-label="Search options" oninput="searchSelectOptions('educationLevel', this.value)" autocomplete="off"><select id="educationLevel">
      <option value="">-- Choose qualification --</option>
      <option value="Primary School">Primary School</option>
      <option value="Middle School">Middle School</option>
@@ -261,19 +263,19 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
     </select>
     <p class="small-note">Apni qualification, institute type aur province select karein. List mein naam na mile to "Other / Not Listed" choose karke naam khud likh dein.</p>
     <label for="eduProvince">Province / Region</label>
-    <select id="eduProvince" onchange="updateInstituteOptions()">
+    <input type="search" class="option-search" data-search-for="eduProvince" placeholder="Search options..." aria-label="Search options" oninput="searchSelectOptions('eduProvince', this.value)" autocomplete="off"><select id="eduProvince" onchange="updateInstituteOptions()">
      <option value="">-- Select province / region --</option>
      <option>Punjab</option><option>Sindh</option><option>Khyber Pakhtunkhwa</option><option>Balochistan</option>
      <option>Islamabad Capital Territory</option><option>Azad Jammu & Kashmir</option><option>Gilgit-Baltistan</option>
      <option>Other / Overseas</option>
     </select>
     <label for="eduInstituteType" style="margin-top:10px">Institute Type</label>
-    <select id="eduInstituteType" onchange="updateInstituteOptions()">
+    <input type="search" class="option-search" data-search-for="eduInstituteType" placeholder="Search options..." aria-label="Search options" oninput="searchSelectOptions('eduInstituteType', this.value)" autocomplete="off"><select id="eduInstituteType" onchange="updateInstituteOptions()">
      <option value="">-- Select type --</option><option value="School">School</option><option value="College">College</option>
      <option value="University">University</option><option value="Board">Examination Board</option><option value="Technical Institute">Technical / Vocational Institute</option><option value="Other">Other Institute</option>
     </select>
     <label for="eduInstitute" style="margin-top:10px">School / College / University / Board Name</label>
-    <select id="eduInstitute" onchange="toggleOtherInstitute()"><option value="">-- First select province and type --</option></select>
+    <input type="search" class="option-search" data-search-for="eduInstitute" placeholder="Search options..." aria-label="Search options" oninput="searchSelectOptions('eduInstitute', this.value)" autocomplete="off"><select id="eduInstitute" onchange="toggleOtherInstitute()"><option value="">-- First select province and type --</option></select>
     <input id="eduInstituteOther" style="display:none;margin-top:8px" placeholder="Type your institute / board name">
     <label for="eduSubject" style="margin-top:10px">Group / Subject / Degree (optional)</label>
     <input id="eduSubject" placeholder="e.g. Pre-Medical, Computer Science, DIT">
@@ -288,17 +290,17 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
    <div class="field">
     <label>Work Experience — Select Options</label>
     <label for="expRole">Job Title / Role</label>
-    <select id="expRole">
+    <input type="search" class="option-search" data-search-for="expRole" placeholder="Search options..." aria-label="Search options" oninput="searchSelectOptions('expRole', this.value)" autocomplete="off"><select id="expRole">
      <option value="">-- Select job title --</option>
      <option>Computer Operator</option><option>Data Entry Operator</option><option>Office Assistant</option><option>Office Manager</option><option>Receptionist / Front Desk Officer</option><option>Clerk</option><option>Accountant</option><option>Teacher</option><option>Lecturer</option><option>School Principal</option><option>Lawyer / Advocate</option><option>Legal Assistant</option><option>Customer Service Representative</option><option>Sales Representative</option><option>Marketing Officer</option><option>Graphic Designer</option><option>Video Editor</option><option>Web Developer</option><option>IT Support Technician</option><option>Mobile Repair Technician</option><option>Electrician</option><option>Technician</option><option>Driver</option><option>Security Guard</option><option>Healthcare Worker</option><option>Lab Technician</option><option>Pharmacy Assistant</option><option>Account / Admin Assistant</option><option>Freelancer</option><option>Intern / Trainee</option><option>Self-Employed / Business Owner</option><option>Other</option>
     </select>
     <label for="expIndustry" style="margin-top:10px">Industry / Department</label>
-    <select id="expIndustry">
+    <input type="search" class="option-search" data-search-for="expIndustry" placeholder="Search options..." aria-label="Search options" oninput="searchSelectOptions('expIndustry', this.value)" autocomplete="off"><select id="expIndustry">
      <option value="">-- Select industry --</option><option>Administration / Office</option><option>Education</option><option>Information Technology</option><option>Legal / Law</option><option>Healthcare</option><option>Accounting / Finance</option><option>Sales / Marketing</option><option>Graphic Design / Media</option><option>Construction / Engineering</option><option>Retail / Customer Service</option><option>Government</option><option>NGO / Development</option><option>Transport / Logistics</option><option>Manufacturing</option><option>Freelancing</option><option>Self-Employed / Business</option><option>Other</option>
     </select>
     <div class="grid" style="gap:8px;margin-top:10px">
-     <div class="field"><label for="expType">Employment Type</label><select id="expType"><option value="">-- Select type --</option><option>Full-Time</option><option>Part-Time</option><option>Contract</option><option>Temporary</option><option>Internship</option><option>Apprenticeship</option><option>Freelance</option><option>Self-Employed</option><option>Volunteer</option></select></div>
-     <div class="field"><label for="expProvince">Province / Region</label><select id="expProvince"><option value="">-- Select region --</option><option>Punjab</option><option>Sindh</option><option>Khyber Pakhtunkhwa</option><option>Balochistan</option><option>Islamabad Capital Territory</option><option>Azad Jammu & Kashmir</option><option>Gilgit-Baltistan</option><option>Other / Overseas</option></select></div>
+     <div class="field"><label for="expType">Employment Type</label><input type="search" class="option-search" data-search-for="expType" placeholder="Search options..." aria-label="Search options" oninput="searchSelectOptions('expType', this.value)" autocomplete="off"><select id="expType"><option value="">-- Select type --</option><option>Full-Time</option><option>Part-Time</option><option>Contract</option><option>Temporary</option><option>Internship</option><option>Apprenticeship</option><option>Freelance</option><option>Self-Employed</option><option>Volunteer</option></select></div>
+     <div class="field"><label for="expProvince">Province / Region</label><input type="search" class="option-search" data-search-for="expProvince" placeholder="Search options..." aria-label="Search options" oninput="searchSelectOptions('expProvince', this.value)" autocomplete="off"><select id="expProvince"><option value="">-- Select region --</option><option>Punjab</option><option>Sindh</option><option>Khyber Pakhtunkhwa</option><option>Balochistan</option><option>Islamabad Capital Territory</option><option>Azad Jammu & Kashmir</option><option>Gilgit-Baltistan</option><option>Other / Overseas</option></select></div>
     </div>
     <div class="field"><label for="expCompany">Company / Organization</label><input id="expCompany" placeholder="e.g. Company, school, office or own business"></div>
     <div class="grid" style="gap:8px">
@@ -314,13 +316,13 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
    <div class="field">
     <label>Skills — Select Options</label>
     <label for="skillCategory">Skill Category</label>
-    <select id="skillCategory" onchange="updateSkillOptions()">
+    <input type="search" class="option-search" data-search-for="skillCategory" placeholder="Search options..." aria-label="Search options" oninput="searchSelectOptions('skillCategory', this.value)" autocomplete="off"><select id="skillCategory" onchange="updateSkillOptions()">
      <option value="">-- Select category --</option><option>Computer / Office</option><option>IT / Web Development</option><option>Graphic Design / Media</option><option>Administration / Data Entry</option><option>Accounting / Finance</option><option>Teaching / Education</option><option>Legal / Advocacy</option><option>Healthcare</option><option>Sales / Marketing</option><option>Communication / Customer Service</option><option>Technical / Trades</option><option>Business / Freelancing</option><option>General Professional</option>
     </select>
     <label for="skillOption" style="margin-top:10px">Choose Skill</label>
-    <select id="skillOption"><option value="">-- Select a category first --</option></select>
+    <input type="search" class="option-search" data-search-for="skillOption" placeholder="Search options..." aria-label="Search options" oninput="searchSelectOptions('skillOption', this.value)" autocomplete="off"><select id="skillOption"><option value="">-- Select a category first --</option></select>
     <div class="grid" style="gap:8px;margin-top:10px">
-     <div class="field"><label for="skillLevel">Proficiency</label><select id="skillLevel"><option value="">-- Optional --</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option><option>Expert</option></select></div>
+     <div class="field"><label for="skillLevel">Proficiency</label><input type="search" class="option-search" data-search-for="skillLevel" placeholder="Search options..." aria-label="Search options" oninput="searchSelectOptions('skillLevel', this.value)" autocomplete="off"><select id="skillLevel"><option value="">-- Optional --</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option><option>Expert</option></select></div>
      <div class="field"><label for="customSkill">Or Add Your Own Skill</label><input id="customSkill" placeholder="Type a skill not listed"></div>
     </div>
     <button type="button" class="secondary" onclick="addSkillRecord()">+ Add Skill</button>
@@ -330,8 +332,8 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
    <div class="field">
     <label>Languages</label>
     <div class="form-grid">
-     <div class="field"><label for="languageOption">Select Language</label><select id="languageOption"><option value="">-- Select language --</option><option>Urdu</option><option>English</option><option>Pashto</option><option>Punjabi</option><option>Saraiki</option><option>Sindhi</option><option>Balochi</option><option>Hindko</option><option>Kashmiri</option><option>Arabic</option><option>Persian (Farsi)</option><option>Chinese (Mandarin)</option><option>French</option><option>German</option><option>Spanish</option><option>Italian</option><option>Turkish</option><option>Russian</option><option>Japanese</option><option>Korean</option><option>Hindi</option><option>Bengali</option><option>Other / Not Listed</option></select></div>
-     <div class="field"><label for="languageLevel">Proficiency</label><select id="languageLevel"><option value="">-- Select level --</option><option>Basic</option><option>Conversational</option><option>Intermediate</option><option>Fluent</option><option>Native</option></select></div>
+     <div class="field"><label for="languageOption">Select Language</label><input type="search" class="option-search" data-search-for="languageOption" placeholder="Search options..." aria-label="Search options" oninput="searchSelectOptions('languageOption', this.value)" autocomplete="off"><select id="languageOption"><option value="">-- Select language --</option><option>Urdu</option><option>English</option><option>Pashto</option><option>Punjabi</option><option>Saraiki</option><option>Sindhi</option><option>Balochi</option><option>Hindko</option><option>Kashmiri</option><option>Arabic</option><option>Persian (Farsi)</option><option>Chinese (Mandarin)</option><option>French</option><option>German</option><option>Spanish</option><option>Italian</option><option>Turkish</option><option>Russian</option><option>Japanese</option><option>Korean</option><option>Hindi</option><option>Bengali</option><option>Other / Not Listed</option></select></div>
+     <div class="field"><label for="languageLevel">Proficiency</label><input type="search" class="option-search" data-search-for="languageLevel" placeholder="Search options..." aria-label="Search options" oninput="searchSelectOptions('languageLevel', this.value)" autocomplete="off"><select id="languageLevel"><option value="">-- Select level --</option><option>Basic</option><option>Conversational</option><option>Intermediate</option><option>Fluent</option><option>Native</option></select></div>
      <div class="field"><label for="customLanguage">Or Add Your Own Language</label><input id="customLanguage" placeholder="Type another language"></div>
     </div>
     <button type="button" class="secondary" onclick="addLanguageRecord()">+ Add Language</button>
@@ -516,6 +518,17 @@ function addEducationOption(qualification){
  else if(!field.value.split("\\n").some(line=>line.trim().startsWith(qualification+" —")))field.value+="\\n"+qualification+" — ";
  preview();
 }
+function searchSelectOptions(selectId,query){
+ const select=$(selectId);if(!select)return;
+ const q=(query||"").trim().toLocaleLowerCase();
+ Array.from(select.options).forEach(option=>{
+  option.hidden=!!q&&!option.textContent.toLocaleLowerCase().includes(q)&&option.value!=="";
+ });
+}
+function refreshSelectSearch(selectId){
+ const search=document.querySelector('[data-search-for="'+selectId+'"]');
+ if(search)searchSelectOptions(selectId,search.value);
+}
 function updateInstituteOptions(){
  const province=$("eduProvince").value,type=$("eduInstituteType").value,select=$("eduInstitute");
  const matches=pakistanInstitutes.filter(x=>(!province||x.p===province)&&(!type||x.t===type));
@@ -524,6 +537,7 @@ function updateInstituteOptions(){
   const option=document.createElement("option");option.value=item.n;option.textContent=item.n;select.appendChild(option);
  });
  const other=document.createElement("option");other.value="__OTHER__";other.textContent="Other / Not Listed — type name manually";select.appendChild(other);
+ refreshSelectSearch("eduInstitute");
  $("eduInstituteOther").style.display="none";
 }
 function toggleOtherInstitute(){
@@ -567,6 +581,7 @@ function updateSkillOptions(){
  const category=$("skillCategory").value,select=$("skillOption");
  select.innerHTML='<option value="">-- Select skill --</option>';
  (skillOptions[category]||[]).forEach(skill=>{const option=document.createElement("option");option.value=skill;option.textContent=skill;select.appendChild(option)});
+ refreshSelectSearch("skillOption");
 }
 function addSkillRecord(){
  const chosen=$("skillOption").value;
