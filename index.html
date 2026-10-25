@@ -285,7 +285,32 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
     <label for="cvEducation" style="margin-top:12px">Added Education Records (you can edit these)</label>
     <textarea id="cvEducation" oninput="preview()" placeholder="Your education records will appear here."></textarea>
    </div>
-   <div class="field"><label for="cvExperience">Experience</label><textarea id="cvExperience" oninput="preview()" placeholder="Job title, company, duties"></textarea></div>
+   <div class="field">
+    <label>Work Experience — Select Options</label>
+    <label for="expRole">Job Title / Role</label>
+    <select id="expRole">
+     <option value="">-- Select job title --</option>
+     <option>Computer Operator</option><option>Data Entry Operator</option><option>Office Assistant</option><option>Office Manager</option><option>Receptionist / Front Desk Officer</option><option>Clerk</option><option>Accountant</option><option>Teacher</option><option>Lecturer</option><option>School Principal</option><option>Lawyer / Advocate</option><option>Legal Assistant</option><option>Customer Service Representative</option><option>Sales Representative</option><option>Marketing Officer</option><option>Graphic Designer</option><option>Video Editor</option><option>Web Developer</option><option>IT Support Technician</option><option>Mobile Repair Technician</option><option>Electrician</option><option>Technician</option><option>Driver</option><option>Security Guard</option><option>Healthcare Worker</option><option>Lab Technician</option><option>Pharmacy Assistant</option><option>Account / Admin Assistant</option><option>Freelancer</option><option>Intern / Trainee</option><option>Self-Employed / Business Owner</option><option>Other</option>
+    </select>
+    <label for="expIndustry" style="margin-top:10px">Industry / Department</label>
+    <select id="expIndustry">
+     <option value="">-- Select industry --</option><option>Administration / Office</option><option>Education</option><option>Information Technology</option><option>Legal / Law</option><option>Healthcare</option><option>Accounting / Finance</option><option>Sales / Marketing</option><option>Graphic Design / Media</option><option>Construction / Engineering</option><option>Retail / Customer Service</option><option>Government</option><option>NGO / Development</option><option>Transport / Logistics</option><option>Manufacturing</option><option>Freelancing</option><option>Self-Employed / Business</option><option>Other</option>
+    </select>
+    <div class="grid" style="gap:8px;margin-top:10px">
+     <div class="field"><label for="expType">Employment Type</label><select id="expType"><option value="">-- Select type --</option><option>Full-Time</option><option>Part-Time</option><option>Contract</option><option>Temporary</option><option>Internship</option><option>Apprenticeship</option><option>Freelance</option><option>Self-Employed</option><option>Volunteer</option></select></div>
+     <div class="field"><label for="expProvince">Province / Region</label><select id="expProvince"><option value="">-- Select region --</option><option>Punjab</option><option>Sindh</option><option>Khyber Pakhtunkhwa</option><option>Balochistan</option><option>Islamabad Capital Territory</option><option>Azad Jammu & Kashmir</option><option>Gilgit-Baltistan</option><option>Other / Overseas</option></select></div>
+    </div>
+    <div class="field"><label for="expCompany">Company / Organization</label><input id="expCompany" placeholder="e.g. Company, school, office or own business"></div>
+    <div class="grid" style="gap:8px">
+     <div class="field"><label for="expStart">Start Year</label><input id="expStart" inputmode="numeric" maxlength="4" placeholder="e.g. 2022"></div>
+     <div class="field"><label for="expEnd">End Year / Present</label><input id="expEnd" placeholder="e.g. 2025 or Present"></div>
+    </div>
+    <div class="field"><label for="expLocation">City / Location</label><input id="expLocation" placeholder="e.g. Bannu, KPK"></div>
+    <div class="field"><label for="expDuties">Main Duties / Achievements</label><textarea id="expDuties" placeholder="Write your main duties and achievements"></textarea></div>
+    <button type="button" class="secondary" onclick="addExperienceRecord()">+ Add Experience Record</button>
+    <label for="cvExperience" style="margin-top:12px">Added Experience Records (you can edit these)</label>
+    <textarea id="cvExperience" oninput="preview()" placeholder="Your work experience records will appear here."></textarea>
+   </div>
    <div class="field"><label for="cvSkills">Skills</label><textarea id="cvSkills" oninput="preview()"></textarea></div>
    <div class="field"><label for="cvLanguages">Languages</label><textarea id="cvLanguages" oninput="preview()"></textarea></div>
    <div class="field"><label for="cvReferences">Certificates / References</label><textarea id="cvReferences" oninput="preview()"></textarea></div>
@@ -498,6 +523,25 @@ function addEducationRecord(){
  $("educationLevel").value="";$("eduSubject").value="";$("eduYear").value="";$("eduResult").value="";
 }
 
+function addExperienceRecord(){
+ const role=$("expRole").value;
+ const industry=$("expIndustry").value;
+ const type=$("expType").value;
+ const province=$("expProvince").value;
+ const company=$("expCompany").value.trim();
+ const start=$("expStart").value.trim();
+ const end=$("expEnd").value.trim();
+ const location=$("expLocation").value.trim();
+ const duties=$("expDuties").value.trim();
+ if(!role&&!company){alert("Please select a job title or enter a company/organization.");return}
+ const parts=[role,company,industry,type,[start,end].filter(Boolean).join("–"),location,province,duties].filter(Boolean);
+ const line=parts.join(" — ");
+ const field=$("cvExperience");
+ field.value+=(field.value.trim()?"\\n":"")+line;
+ preview();
+ $("expRole").value="";$("expIndustry").value="";$("expType").value="";$("expProvince").value="";
+ $("expCompany").value="";$("expStart").value="";$("expEnd").value="";$("expLocation").value="";$("expDuties").value="";
+}
 const cvIds=["cvName","cvTitle","cvFather","cvDob","cvPhone","cvEmail","cvAddress","cvSummary","cvEducation","cvExperience","cvSkills","cvLanguages","cvReferences"];
 function cvData(){const d={};cvIds.forEach(id=>d[id]=$(id).value);d.photoData=photoData||"";d.template=currentTemplate;return d}
 function applyCV(d){
