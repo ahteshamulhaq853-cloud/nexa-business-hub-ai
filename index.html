@@ -630,8 +630,16 @@ function addExperienceRecord(){
  const location=$("expLocation").value.trim();
  const duties=$("expDuties").value.trim();
  if(!role&&!company){alert("Please select a job title or enter a company/organization.");return}
- const parts=[role,company,industry,type,[start,end].filter(Boolean).join("–"),location,province,duties].filter(Boolean);
- const line=parts.join(" — ");
+ const parts=[];
+ if(role) parts.push("Worked as a "+role);
+ if(company) parts.push("at "+company);
+ if(industry) parts.push("in the "+industry+" sector");
+ if(type) parts.push("on a "+type.toLowerCase()+" basis");
+ if(start||end) parts.push("from "+(start||"an unspecified start date")+" to "+(end||"Present"));
+ if(location||province) parts.push("based in "+[location,province].filter(Boolean).join(", "));
+ if(!company&&industry==="Business"&&type==="Self-Employed") parts.push("as a self-employed professional");
+ if(duties) parts.push("where the main duties and achievements included: "+duties);
+ const line=parts.join(" ")+(parts.length?".":"");
  const field=$("cvExperience");
  field.value+=(field.value.trim()?"\\n":"")+line;
  preview();
