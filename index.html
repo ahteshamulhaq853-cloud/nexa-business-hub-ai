@@ -259,9 +259,31 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
      <option value="PhD">PhD</option>
      <option value="Other">Other</option>
     </select>
-    <p class="small-note">Qualification select karein; phir neeche institution aur year ki details likhein. Multiple qualifications bhi select kar sakte hain.</p>
-    <label for="cvEducation">Education Details</label>
-    <textarea id="cvEducation" oninput="preview()" placeholder="Example: Matric — School Name — 2020"></textarea>
+    <p class="small-note">Apni qualification, institute type aur province select karein. List mein naam na mile to "Other / Not Listed" choose karke naam khud likh dein.</p>
+    <label for="eduProvince">Province / Region</label>
+    <select id="eduProvince" onchange="updateInstituteOptions()">
+     <option value="">-- Select province / region --</option>
+     <option>Punjab</option><option>Sindh</option><option>Khyber Pakhtunkhwa</option><option>Balochistan</option>
+     <option>Islamabad Capital Territory</option><option>Azad Jammu & Kashmir</option><option>Gilgit-Baltistan</option>
+     <option>Other / Overseas</option>
+    </select>
+    <label for="eduInstituteType" style="margin-top:10px">Institute Type</label>
+    <select id="eduInstituteType" onchange="updateInstituteOptions()">
+     <option value="">-- Select type --</option><option value="School">School</option><option value="College">College</option>
+     <option value="University">University</option><option value="Board">Examination Board</option><option value="Technical Institute">Technical / Vocational Institute</option><option value="Other">Other Institute</option>
+    </select>
+    <label for="eduInstitute" style="margin-top:10px">School / College / University / Board Name</label>
+    <select id="eduInstitute" onchange="toggleOtherInstitute()"><option value="">-- First select province and type --</option></select>
+    <input id="eduInstituteOther" style="display:none;margin-top:8px" placeholder="Type your institute / board name">
+    <label for="eduSubject" style="margin-top:10px">Group / Subject / Degree (optional)</label>
+    <input id="eduSubject" placeholder="e.g. Pre-Medical, Computer Science, DIT">
+    <div class="grid" style="gap:8px;margin-top:10px">
+     <div class="field"><label for="eduYear">Passing Year</label><input id="eduYear" inputmode="numeric" maxlength="4" placeholder="e.g. 2024"></div>
+     <div class="field"><label for="eduResult">Marks / CGPA / Grade (optional)</label><input id="eduResult" placeholder="e.g. 850/1100 or 3.5 CGPA"></div>
+    </div>
+    <button type="button" class="secondary" onclick="addEducationRecord()">+ Add Education Record</button>
+    <label for="cvEducation" style="margin-top:12px">Added Education Records (you can edit these)</label>
+    <textarea id="cvEducation" oninput="preview()" placeholder="Your education records will appear here."></textarea>
    </div>
    <div class="field"><label for="cvExperience">Experience</label><textarea id="cvExperience" oninput="preview()" placeholder="Job title, company, duties"></textarea></div>
    <div class="field"><label for="cvSkills">Skills</label><textarea id="cvSkills" oninput="preview()"></textarea></div>
@@ -381,23 +403,99 @@ $("registerForm").addEventListener("submit",register);
 $("loginForm").addEventListener("submit",login);
 
 
+const pakistanInstitutes = [
+ {p:"Punjab",t:"Board",n:"Board of Intermediate and Secondary Education, Lahore"},
+ {p:"Punjab",t:"Board",n:"BISE Rawalpindi"},{p:"Punjab",t:"Board",n:"BISE Faisalabad"},{p:"Punjab",t:"Board",n:"BISE Multan"},
+ {p:"Punjab",t:"Board",n:"BISE Gujranwala"},{p:"Punjab",t:"Board",n:"BISE Sargodha"},{p:"Punjab",t:"Board",n:"BISE Bahawalpur"},
+ {p:"Punjab",t:"Board",n:"BISE Dera Ghazi Khan"},{p:"Punjab",t:"Board",n:"BISE Sahiwal"},
+ {p:"Punjab",t:"University",n:"University of the Punjab"},{p:"Punjab",t:"University",n:"University of Education, Lahore"},
+ {p:"Punjab",t:"University",n:"University of Engineering and Technology, Lahore"},{p:"Punjab",t:"University",n:"Government College University Lahore"},
+ {p:"Punjab",t:"University",n:"Lahore College for Women University"},{p:"Punjab",t:"University",n:"University of Lahore"},
+ {p:"Punjab",t:"University",n:"COMSATS University Islamabad — Lahore Campus"},{p:"Punjab",t:"University",n:"University of Sargodha"},
+ {p:"Punjab",t:"University",n:"Bahauddin Zakariya University, Multan"},{p:"Punjab",t:"University",n:"Islamia University of Bahawalpur"},
+ {p:"Punjab",t:"University",n:"University of Gujrat"},{p:"Punjab",t:"University",n:"PMAS-Arid Agriculture University, Rawalpindi"},
+ {p:"Punjab",t:"College",n:"Government College University Lahore (Intermediate / College)"},{p:"Punjab",t:"College",n:"Government Graduate College"},
+ {p:"Punjab",t:"Technical Institute",n:"TEVTA Punjab Institute"},{p:"Punjab",t:"School",n:"Government High / Higher Secondary School"},
+ {p:"Sindh",t:"Board",n:"Board of Secondary Education Karachi"},{p:"Sindh",t:"Board",n:"Board of Intermediate Education Karachi"},
+ {p:"Sindh",t:"Board",n:"BISE Hyderabad"},{p:"Sindh",t:"Board",n:"BISE Sukkur"},{p:"Sindh",t:"Board",n:"BISE Larkana"},
+ {p:"Sindh",t:"Board",n:"BISE Mirpurkhas"},{p:"Sindh",t:"University",n:"University of Karachi"},{p:"Sindh",t:"University",n:"NED University of Engineering and Technology"},
+ {p:"Sindh",t:"University",n:"Dow University of Health Sciences"},{p:"Sindh",t:"University",n:"Mehran University of Engineering and Technology"},
+ {p:"Sindh",t:"University",n:"University of Sindh, Jamshoro"},{p:"Sindh",t:"University",n:"Shah Abdul Latif University"},
+ {p:"Sindh",t:"University",n:"Sukkur IBA University"},{p:"Sindh",t:"University",n:"IBA Karachi"},
+ {p:"Sindh",t:"College",n:"Government College / Degree College"},{p:"Sindh",t:"Technical Institute",n:"STEVTA Institute"},
+ {p:"Sindh",t:"School",n:"Government High / Higher Secondary School"},
+ {p:"Khyber Pakhtunkhwa",t:"Board",n:"BISE Peshawar"},{p:"Khyber Pakhtunkhwa",t:"Board",n:"BISE Mardan"},
+ {p:"Khyber Pakhtunkhwa",t:"Board",n:"BISE Swat"},{p:"Khyber Pakhtunkhwa",t:"Board",n:"BISE Abbottabad"},
+ {p:"Khyber Pakhtunkhwa",t:"Board",n:"BISE Bannu"},{p:"Khyber Pakhtunkhwa",t:"Board",n:"BISE Kohat"},
+ {p:"Khyber Pakhtunkhwa",t:"Board",n:"BISE Malakand"},{p:"Khyber Pakhtunkhwa",t:"Board",n:"BISE Dera Ismail Khan"},
+ {p:"Khyber Pakhtunkhwa",t:"University",n:"University of Peshawar"},{p:"Khyber Pakhtunkhwa",t:"University",n:"University of Engineering and Technology, Peshawar"},
+ {p:"Khyber Pakhtunkhwa",t:"University",n:"Islamia College University, Peshawar"},{p:"Khyber Pakhtunkhwa",t:"University",n:"Khyber Medical University"},
+ {p:"Khyber Pakhtunkhwa",t:"University",n:"University of Science and Technology, Bannu"},{p:"Khyber Pakhtunkhwa",t:"University",n:"University of Lakki Marwat"},
+ {p:"Khyber Pakhtunkhwa",t:"University",n:"Kohat University of Science and Technology"},{p:"Khyber Pakhtunkhwa",t:"University",n:"Gomal University, Dera Ismail Khan"},
+ {p:"Khyber Pakhtunkhwa",t:"University",n:"Abdul Wali Khan University Mardan"},{p:"Khyber Pakhtunkhwa",t:"University",n:"University of Malakand"},
+ {p:"Khyber Pakhtunkhwa",t:"University",n:"Hazara University"},{p:"Khyber Pakhtunkhwa",t:"College",n:"Govt. Post Graduate College Bannu"},
+ {p:"Khyber Pakhtunkhwa",t:"College",n:"Government Degree College"},{p:"Khyber Pakhtunkhwa",t:"Technical Institute",n:"Government College of Technology / KP-TEVTA"},
+ {p:"Khyber Pakhtunkhwa",t:"School",n:"Government High / Higher Secondary School"},
+ {p:"Balochistan",t:"Board",n:"BISE Quetta"},{p:"Balochistan",t:"Board",n:"Balochistan Board of Intermediate and Secondary Education"},
+ {p:"Balochistan",t:"University",n:"University of Balochistan"},{p:"Balochistan",t:"University",n:"BUITEMS"},
+ {p:"Balochistan",t:"University",n:"Bolan University of Medical and Health Sciences"},{p:"Balochistan",t:"University",n:"Sardar Bahadur Khan Women's University"},
+ {p:"Balochistan",t:"College",n:"Government Degree College"},{p:"Balochistan",t:"Technical Institute",n:"B-TEVTA Institute"},
+ {p:"Balochistan",t:"School",n:"Government High / Higher Secondary School"},
+ {p:"Islamabad Capital Territory",t:"Board",n:"Federal Board of Intermediate and Secondary Education (FBISE)"},
+ {p:"Islamabad Capital Territory",t:"University",n:"Quaid-i-Azam University"},{p:"Islamabad Capital Territory",t:"University",n:"International Islamic University Islamabad"},
+ {p:"Islamabad Capital Territory",t:"University",n:"National University of Sciences and Technology (NUST)"},{p:"Islamabad Capital Territory",t:"University",n:"COMSATS University Islamabad"},
+ {p:"Islamabad Capital Territory",t:"University",n:"Air University"},{p:"Islamabad Capital Territory",t:"University",n:"Bahria University"},
+ {p:"Islamabad Capital Territory",t:"University",n:"Allama Iqbal Open University"},{p:"Islamabad Capital Territory",t:"University",n:"Virtual University of Pakistan"},
+ {p:"Islamabad Capital Territory",t:"College",n:"Federal Government College"},{p:"Islamabad Capital Territory",t:"Technical Institute",n:"NAVTTC / Technical Institute"},
+ {p:"Islamabad Capital Territory",t:"School",n:"Federal Government School"},
+ {p:"Azad Jammu & Kashmir",t:"Board",n:"BISE Mirpur, AJK"},{p:"Azad Jammu & Kashmir",t:"University",n:"University of Azad Jammu and Kashmir"},
+ {p:"Azad Jammu & Kashmir",t:"University",n:"Mirpur University of Science and Technology"},{p:"Azad Jammu & Kashmir",t:"University",n:"University of Poonch Rawalakot"},
+ {p:"Azad Jammu & Kashmir",t:"College",n:"Government Degree College"},{p:"Azad Jammu & Kashmir",t:"School",n:"Government High / Higher Secondary School"},
+ {p:"Gilgit-Baltistan",t:"Board",n:"Board of Elementary Examination Gilgit-Baltistan"},{p:"Gilgit-Baltistan",t:"University",n:"Karakoram International University"},
+ {p:"Gilgit-Baltistan",t:"College",n:"Government Degree College"},{p:"Gilgit-Baltistan",t:"School",n:"Government High / Higher Secondary School"},
+ {p:"Other / Overseas",t:"Board",n:"Other Pakistani / International Examination Board"},
+ {p:"Other / Overseas",t:"University",n:"Other Pakistani / International University"},
+ {p:"Other / Overseas",t:"College",n:"Other College"},{p:"Other / Overseas",t:"School",n:"Other School"},
+ {p:"Other / Overseas",t:"Technical Institute",n:"Other Technical / Vocational Institute"}
+];
 function addEducationOption(qualification){
  if(!qualification)return;
  const field=$("cvEducation");
- if(qualification==="Other"){
-  field.value=field.value ? field.value+"\\n" : "";
-  field.focus();
-  $("educationLevel").value="";
-  preview();
-  return;
- }
- const existing=field.value.split("\\n").map(line=>line.trim());
- if(!existing.some(line=>line===qualification || line.startsWith(qualification+" —") || line.startsWith(qualification+" -"))){
-  field.value+=(field.value.trim()?"\\n":"")+qualification+" — Institution — Year";
- }
- $("educationLevel").value="";
+ if(qualification==="Other"){ $("eduSubject").focus(); return; }
+ if(!field.value.trim())field.value=qualification+" — ";
+ else if(!field.value.split("\\n").some(line=>line.trim().startsWith(qualification+" —")))field.value+="\\n"+qualification+" — ";
  preview();
- field.focus();
+}
+function updateInstituteOptions(){
+ const province=$("eduProvince").value,type=$("eduInstituteType").value,select=$("eduInstitute");
+ const matches=pakistanInstitutes.filter(x=>(!province||x.p===province)&&(!type||x.t===type));
+ select.innerHTML='<option value="">-- Select institute --</option>';
+ matches.sort((a,b)=>a.n.localeCompare(b.n)).forEach(item=>{
+  const option=document.createElement("option");option.value=item.n;option.textContent=item.n;select.appendChild(option);
+ });
+ const other=document.createElement("option");other.value="__OTHER__";other.textContent="Other / Not Listed — type name manually";select.appendChild(other);
+ $("eduInstituteOther").style.display="none";
+}
+function toggleOtherInstitute(){
+ $("eduInstituteOther").style.display=$("eduInstitute").value==="__OTHER__"?"block":"none";
+}
+function addEducationRecord(){
+ const qualification=$("educationLevel").value;
+ const province=$("eduProvince").value;
+ const type=$("eduInstituteType").value;
+ const chosen=$("eduInstitute").value;
+ const institute=chosen==="__OTHER__"?$("eduInstituteOther").value.trim():chosen;
+ const subject=$("eduSubject").value.trim();
+ const year=$("eduYear").value.trim();
+ const result=$("eduResult").value.trim();
+ if(!qualification){alert("Please select a qualification first.");return}
+ if(!institute){alert("Please select an institute, or choose Other / Not Listed and type its name.");return}
+ const parts=[qualification,institute,province,subject,year?"Year: "+year:"",result?"Result: "+result:""].filter(Boolean);
+ const line=parts.join(" — ");
+ const field=$("cvEducation");
+ field.value+=(field.value.trim()?"\\n":"")+line;
+ preview();
+ $("educationLevel").value="";$("eduSubject").value="";$("eduYear").value="";$("eduResult").value="";
 }
 
 const cvIds=["cvName","cvTitle","cvFather","cvDob","cvPhone","cvEmail","cvAddress","cvSummary","cvEducation","cvExperience","cvSkills","cvLanguages","cvReferences"];
