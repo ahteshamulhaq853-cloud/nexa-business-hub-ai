@@ -125,9 +125,9 @@ th{background:#15263b;color:var(--cyan)}
 
 footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
 
-/* Settings shortcut at the header's top-right corner */
-#settingsLauncher{display:none;position:absolute;top:14px;right:14px;z-index:1002;width:44px;height:44px;padding:0;margin:0;border:1px solid #dfc58b;border-radius:50%;background:linear-gradient(145deg,#24201a,#111112);color:#f3dca6;font-size:23px;line-height:1;box-shadow:0 6px 20px #0009,0 0 15px #dfc58b20}
-#settingsLauncher:hover{border-color:#f3dca6;box-shadow:0 8px 24px #000b,0 0 18px #dfc58b45;transform:translateY(-2px)}
+/* Borderless Settings shortcut at the header's top-right corner */
+#settingsLauncher{display:none;position:absolute;top:14px;right:14px;z-index:1002;width:44px;height:44px;padding:0;margin:0;border:0;border-radius:0;background:transparent;color:#f3dca6;font-size:23px;line-height:1;box-shadow:none}
+#settingsLauncher:hover{border:0;box-shadow:none;transform:translateY(-2px)}
 #settingsLauncher:focus-visible{outline:2px solid #f3dca6;outline-offset:3px}
 header{position:sticky}
 @media(max-width:760px){header{padding-right:68px}main{margin-top:25px}}
