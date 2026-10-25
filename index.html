@@ -231,7 +231,38 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
    <div class="field"><label for="cvAddress">Address</label><input id="cvAddress" oninput="preview()"></div>
    <div class="field"><label for="cvPhoto">Profile Photo</label><input id="cvPhoto" type="file" accept="image/*"><p class="small-note">Image should be smaller than 2 MB.</p></div>
    <div class="field"><label for="cvSummary">Professional Profile</label><textarea id="cvSummary" oninput="preview()"></textarea></div>
-   <div class="field"><label for="cvEducation">Education</label><textarea id="cvEducation" oninput="preview()" placeholder="Degree, Institution, Year"></textarea></div>
+   <div class="field">
+    <label for="educationLevel">Select Qualification</label>
+    <select id="educationLevel" onchange="addEducationOption(this.value)">
+     <option value="">-- Choose qualification --</option>
+     <option value="Primary School">Primary School</option>
+     <option value="Middle School">Middle School</option>
+     <option value="Matric (SSC)">Matric (SSC)</option>
+     <option value="Intermediate (FA)">Intermediate (FA)</option>
+     <option value="Intermediate (FSc)">Intermediate (FSc)</option>
+     <option value="ICS">ICS</option>
+     <option value="I.Com">I.Com</option>
+     <option value="DAE">DAE</option>
+     <option value="DIT">DIT</option>
+     <option value="BA">BA</option>
+     <option value="BSc">BSc</option>
+     <option value="B.Com">B.Com</option>
+     <option value="BBA">BBA</option>
+     <option value="BS">BS</option>
+     <option value="LLB">LLB</option>
+     <option value="MA">MA</option>
+     <option value="MSc">MSc</option>
+     <option value="MBA">MBA</option>
+     <option value="M.Com">M.Com</option>
+     <option value="MS">MS</option>
+     <option value="MPhil">MPhil</option>
+     <option value="PhD">PhD</option>
+     <option value="Other">Other</option>
+    </select>
+    <p class="small-note">Qualification select karein; phir neeche institution aur year ki details likhein. Multiple qualifications bhi select kar sakte hain.</p>
+    <label for="cvEducation">Education Details</label>
+    <textarea id="cvEducation" oninput="preview()" placeholder="Example: Matric — School Name — 2020"></textarea>
+   </div>
    <div class="field"><label for="cvExperience">Experience</label><textarea id="cvExperience" oninput="preview()" placeholder="Job title, company, duties"></textarea></div>
    <div class="field"><label for="cvSkills">Skills</label><textarea id="cvSkills" oninput="preview()"></textarea></div>
    <div class="field"><label for="cvLanguages">Languages</label><textarea id="cvLanguages" oninput="preview()"></textarea></div>
@@ -348,6 +379,26 @@ async function logout(){
 }
 $("registerForm").addEventListener("submit",register);
 $("loginForm").addEventListener("submit",login);
+
+
+function addEducationOption(qualification){
+ if(!qualification)return;
+ const field=$("cvEducation");
+ if(qualification==="Other"){
+  field.value=field.value ? field.value+"\\n" : "";
+  field.focus();
+  $("educationLevel").value="";
+  preview();
+  return;
+ }
+ const existing=field.value.split("\\n").map(line=>line.trim());
+ if(!existing.some(line=>line===qualification || line.startsWith(qualification+" —") || line.startsWith(qualification+" -"))){
+  field.value+=(field.value.trim()?"\\n":"")+qualification+" — Institution — Year";
+ }
+ $("educationLevel").value="";
+ preview();
+ field.focus();
+}
 
 const cvIds=["cvName","cvTitle","cvFather","cvDob","cvPhone","cvEmail","cvAddress","cvSummary","cvEducation","cvExperience","cvSkills","cvLanguages","cvReferences"];
 function cvData(){const d={};cvIds.forEach(id=>d[id]=$(id).value);d.photoData=photoData||"";d.template=currentTemplate;return d}
