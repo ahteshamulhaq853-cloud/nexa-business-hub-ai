@@ -95,6 +95,27 @@ th{background:#15263b;color:var(--cyan)}
 #cvPaper.template-advocate{--cv-accent:#7a263a;--cv-sidebar:#30202a;--cv-heading:#30202a;--cv-side-text:#fff;--cv-side-heading:#e9b7c1}
 #cvPaper.template-advocate .photo{border-color:#d4a7af}
 footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
+
+/* Floating customer support assistant */
+#supportLauncher{position:fixed;right:20px;bottom:20px;z-index:1000;border:0;border-radius:999px;padding:15px 18px;background:linear-gradient(135deg,#65f3dc,#28b9d4);color:#06131b;box-shadow:0 8px 28px #0008;font-weight:900}
+#supportPanel{display:none;position:fixed;right:20px;bottom:82px;width:min(365px,calc(100vw - 24px));height:min(520px,calc(100vh - 115px));z-index:1001;background:#0e1727;border:1px solid #3d7180;border-radius:18px;box-shadow:0 18px 55px #000b;overflow:hidden;flex-direction:column}
+#supportPanel.open{display:flex}
+.support-head{padding:14px;background:linear-gradient(120deg,#123147,#102039);border-bottom:1px solid #294256;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.support-head strong{display:block;color:#65f3dc;font-size:14px}
+.support-head small{color:#b4c8d8;font-size:11px}
+#supportClose{background:transparent;color:white;border:1px solid #456174;padding:5px 9px}
+#supportMessages{padding:13px;overflow:auto;flex:1;display:flex;flex-direction:column;gap:9px}
+.support-bubble{max-width:91%;padding:10px 12px;border-radius:12px;font-size:13px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+.support-bubble.bot{align-self:flex-start;background:#172b40;border:1px solid #2d4a61;color:#eef8ff;border-bottom-left-radius:4px}
+.support-bubble.user{align-self:flex-end;background:#65f3dc;color:#06131b;border-bottom-right-radius:4px}
+.support-quick{display:flex;gap:6px;flex-wrap:wrap;padding:0 12px 10px}
+.support-quick button{font-size:11px;padding:7px 9px;margin:0;background:#14283b;color:#bffbf2;border:1px solid #315764}
+.support-input-row{display:flex;gap:7px;padding:10px;border-top:1px solid #294256;background:#0a1220}
+#supportInput{min-width:0;padding:10px;font-size:13px}
+#supportSend{margin:0;padding:9px 12px}
+.support-footnote{font-size:10px;color:#8fa8bd;padding:0 12px 10px;background:#0a1220}
+@media(max-width:420px){#supportLauncher{right:12px;bottom:12px}#supportPanel{right:12px;bottom:72px;width:calc(100vw - 24px);height:min(500px,calc(100vh - 95px))}}
+
 @media(max-width:760px){header{position:relative}nav{width:100%}nav button{flex:1}.grid,.grid.three,.cv-layout{grid-template-columns:1fr}.hero{padding:21px}}
 @media(max-width:420px){main{padding:0 9px;margin-top:15px}.card{padding:14px}.paper{grid-template-columns:32% 68%}.side{padding:9px}.content{padding:12px 10px}.content h1{font-size:18px}.photo{width:63px;height:78px}.template-grid{grid-template-columns:1fr 1fr}}
 @page{size:A4;margin:5mm}
@@ -258,6 +279,28 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
 </section>
 </main>
 <footer>NEXA CV STUDIO · DARK TECH NEON · 7 PROFESSIONAL CV TEMPLATES</footer>
+<button id="supportLauncher" type="button" aria-label="Open customer support chat" onclick="toggleSupport(true)">✦ Ask Nexa Support</button>
+<section id="supportPanel" role="dialog" aria-label="Nexa customer support chat" aria-modal="false">
+ <div class="support-head">
+  <div><strong>✦ Nexa AI Support</strong><small>CV Builder · Templates · PDF Access</small></div>
+  <button id="supportClose" type="button" aria-label="Close support chat" onclick="toggleSupport(false)">✕</button>
+ </div>
+ <div id="supportMessages" aria-live="polite">
+  <div class="support-bubble bot">Assalam-o-Alaikum! Welcome to Nexa CV Studio. 👋\nMain aapki CV, templates, account aur PDF payment access mein help kar sakta hoon. Password ya OTP kabhi share na karein.</div>
+ </div>
+ <div class="support-quick">
+  <button type="button" onclick="askSupport('How do I create a CV?')">Create CV</button>
+  <button type="button" onclick="askSupport('Tell me about CV templates')">CV Templates</button>
+  <button type="button" onclick="askSupport('How does PDF payment work?')">PDF / Payment</button>
+  <button type="button" onclick="askSupport('I cannot log in')">Login Help</button>
+  <button type="button" onclick="openSupportWhatsApp()">WhatsApp Support</button>
+ </div>
+ <form id="supportForm" class="support-input-row">
+  <input id="supportInput" type="text" maxlength="500" placeholder="Apna sawal likhein..." aria-label="Type your support question" required>
+  <button id="supportSend" type="submit">Send</button>
+ </form>
+ <div class="support-footnote">Instant website help · Personal help ke liye WhatsApp use karein.</div>
+</section>
 <script>
 const SUPABASE_URL="https://njfobttocvkjsrvlcjaj.supabase.co";
 const SUPABASE_KEY="sb_publishable_EkEFOVho4ryOYcIOVAqMhQ_z9yoD9TB";
@@ -432,6 +475,61 @@ db.auth.onAuthStateChange((_event,session)=>{
  currentUser=session&&session.user?session.user:null;setUI();
  if(!currentUser){approvedForPDF=false;$("adminButton").style.display="none";$("pdfBtn").disabled=true}
 });
+
+function toggleSupport(open){
+ const panel=$("supportPanel");
+ if(!panel)return;
+ panel.classList.toggle("open",!!open);
+ if(open)setTimeout(()=> $("supportInput")?.focus(),50);
+}
+function addSupportMessage(text,who){
+ const box=$("supportMessages");
+ const bubble=document.createElement("div");
+ bubble.className="support-bubble "+(who==="user"?"user":"bot");
+ bubble.textContent=text;
+ box.appendChild(bubble);
+ box.scrollTop=box.scrollHeight;
+}
+function supportReply(raw){
+ const q=String(raw||"").toLowerCase();
+ if(/whatsapp|human|person|agent|contact|support number/.test(q))
+  return "Aap personal help ke liye WhatsApp par rabta kar sakte hain. Neeche WhatsApp Support button dabayein. Apna password ya OTP share na karein.";
+ if(/template|design|style|format/.test(q))
+  return "CV Builder mein login karein, phir CV Builder khol kar Design Collection mein se 7 templates mein koi select karein: Classic, Navy & Gold, Minimalist, Modern Sidebar, Executive, Fresh Graduate ya Advocate / Legal.";
+ if(/pdf|download|print|payment|pay|easypaisa|jazzcash|100|transaction/.test(q))
+  return "PDF export ke liye website par Payment / PDF Access kholein. Fee Rs. 100 hai. Easypaisa ya JazzCash se payment karke transaction/reference ID submit karein. Admin approval ke baad Download / Print PDF button unlock hota hai. Payment karne se pehle details page par dobara check karein.";
+ if(/login|log in|sign in|password|account|register|registration|email/.test(q))
+  return "Naya account banane ke liye Create Account form fill karein. Pehle se account hai to Login use karein. Email confirmation on ho to email confirm karke login karein. Password ya OTP kisi ke saath share na karein.";
+ if(/create cv|make cv|build cv|cv builder|resume|education|experience|profile/.test(q))
+  return "CV banane ke liye login karein, Dashboard se Open CV Builder dabayein, apna naam aur details fill karein. Preview live update hota hai. Save CV Details se save karein. Photo optional hai aur 2 MB se chhoti honi chahiye.";
+ if(/save|saved|data|details/.test(q))
+  return "CV Builder mein Save CV Details dabayein. Website database mein save karne ki koshish karegi aur browser mein local backup bhi rakhti hai. Shared/public device par apna account logout karna na bhoolen.";
+ if(/hello|hi|salam|assalam|aoa/.test(q))
+  return "Wa-Alaikum-Assalam! 😊 Main Nexa CV Studio ke account, CV Builder, templates aur PDF access ke baare mein guide kar sakta hoon. Apna sawal likhein ya neeche quick options use karein.";
+ if(/course|service|logo|poster|video|business hub/.test(q))
+  return "Is waqt aapki connected website Nexa CV Studio hai, jahan account, CV Builder, 7 templates aur PDF access available hain. Agar aap doosri Nexa Business Hub services ke baare mein pooch rahe hain to WhatsApp Support button se rabta karein.";
+ return "Main Nexa CV Studio ke CV Builder, templates, account/login aur Rs. 100 PDF access mein help kar sakta hoon. Apna sawal thora detail se likhein ya WhatsApp Support dabayein.";
+}
+function askSupport(text){
+ const question=String(text||"").trim();
+ if(!question)return;
+ toggleSupport(true);
+ addSupportMessage(question,"user");
+ $("supportInput").value="";
+ // Local FAQ assistant: works without exposing a private AI API key.
+ window.setTimeout(()=>addSupportMessage(supportReply(question),"bot"),180);
+}
+function openSupportWhatsApp(){
+ const message=encodeURIComponent("Assalam-o-Alaikum, mujhe Nexa CV Studio website ke baare mein help chahiye.");
+ window.open("https://wa.me/923469799347?text="+message,"_blank","noopener,noreferrer");
+}
+$("supportForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const input=$("supportInput");
+ const question=input.value.trim();
+ if(question)askSupport(question);
+});
+
 async function init(){
  const {data,error}=await db.auth.getSession();
  if(error)console.warn("Session lookup:",error.message);
