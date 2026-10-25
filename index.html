@@ -525,8 +525,8 @@ async function askSupport(text){
    headers:{"Content-Type":"application/json"},
    body:JSON.stringify({
     service:"Nexa CV Studio website support",
-    details:"آپ Nexa CV Studio ویب سائٹ کے مددگار چیٹ بوٹ ہیں۔ صارف کے ہر سوال کا جواب آسان، صاف اور عام فہم اردو رسم الخط میں دیں تاکہ ہر شخص سمجھ سکے۔ رومن اردو یا انگریزی میں جواب نہ دیں، سوائے ویب سائٹ کے نام، تکنیکی اصطلاح یا صارف کی واضح درخواست کے۔ مختصر مرحلہ وار ہدایات دیں۔ یہ ویب سائٹ اکاؤنٹ، CV بنانے، CV templates، CV details محفوظ کرنے اور PDF access کے لیے ہے۔ ویب سائٹ کی خصوصیات یا قیمت کے بارے میں کوئی غیر مصدقہ بات نہ بنائیں۔ کبھی پاس ورڈ، OTP یا ادائیگی کی خفیہ معلومات نہ مانگیں۔ صارف کا سوال: "+question,
-    language:"Urdu (اردو رسم الخط)"
+    details:"Aap Nexa CV Studio website ke helpful chatbot hain. Har sawal ka jawab asaan, saaf aur aam feham Roman Urdu mein dein, taake har shakhs samajh sake. Urdu script mein jawab na dein, jab tak user khud na kahe. Mukhtasar aur zaroorat par step-by-step hidayat dein. Website accounts, CV banana, CV templates, CV details save karna aur PDF access ke liye hai. Website ke features ya prices ke bare mein ghair-musaddaqa baat na banayein. Password, OTP ya payment ki secret information kabhi na maangein. User ka sawal: "+question,
+    language:"Roman Urdu"
    })
   });
   if(!response.ok)throw new Error("AI request failed: "+response.status);
