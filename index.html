@@ -468,11 +468,6 @@ hr{border-color:#39352c}
   <p>Manage your resume, save your details and check PDF access.</p>
   <div class="actions"><button onclick="showPage('builderPage')">Open CV Builder →</button><button class="secondary" onclick="showPage('paymentPage')">Payment & Access</button></div>
  </div>
- <div class="grid three">
-  <div class="stat"><strong>PRO</strong><span>Beautiful &amp; Professional Designs</span></div>
-  <div class="stat"><strong>A4</strong><span>Print-ready resume</span></div>
-  <div class="stat"><strong id="pdfStatusText">ACCESS PENDING</strong><span>PDF export status</span></div>
- </div>
  <div class="grid two" style="margin-top:16px">
   <div class="card"><h3 class="neon">▤ CV Section</h3><p class="muted">Open Normal CV Builder or Europass CV Builder from one place.</p><button onclick="showPage('cvSectionPage')">Open CV Section →</button></div>
   <div class="card"><h3 class="neon">⚙ Services Section</h3><p class="muted">A dedicated place for services. We will add services one by one later.</p><button class="secondary" onclick="showPage('servicesPage')">Open Services →</button></div>
@@ -1126,7 +1121,7 @@ async function checkApproval(){
  approvedForPDF=!error&&!!(data&&data.length);
  $("pdfBtn").disabled=!approvedForPDF;
  $("pdfBtn").textContent=approvedForPDF?"Download / Print PDF ✓":"Download / Print PDF 🔒";
- $("pdfStatusText").textContent=approvedForPDF?"ACCESS GRANTED":"ACCESS PENDING";
+ const pdfStatus=$("pdfStatusText");if(pdfStatus)pdfStatus.textContent=approvedForPDF?"ACCESS GRANTED":"ACCESS PENDING";
  $("accessMsg").textContent=approvedForPDF?"Your PDF access is approved. You can print or save your CV as PDF.":"PDF export requires a Rs. 100 payment request and admin approval.";
 }
 
