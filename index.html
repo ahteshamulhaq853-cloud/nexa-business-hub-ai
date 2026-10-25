@@ -510,14 +510,34 @@ function supportReply(raw){
   return "Is waqt aapki connected website Nexa CV Studio hai, jahan account, CV Builder, 7 templates aur PDF access available hain. Agar aap doosri Nexa Business Hub services ke baare mein pooch rahe hain to WhatsApp Support button se rabta karein.";
  return "Main Nexa CV Studio ke CV Builder, templates, account/login aur Rs. 100 PDF access mein help kar sakta hoon. Apna sawal thora detail se likhein ya WhatsApp Support dabayein.";
 }
-function askSupport(text){
+async function askSupport(text){
  const question=String(text||"").trim();
  if(!question)return;
  toggleSupport(true);
  addSupportMessage(question,"user");
  $("supportInput").value="";
- // Local FAQ assistant: works without exposing a private AI API key.
- window.setTimeout(()=>addSupportMessage(supportReply(question),"bot"),180);
+ addSupportMessage("Soch raha hoon...","bot");
+ const messages=$("supportMessages");
+ const waiting=messages.lastElementChild;
+ try{
+  const response=await fetch("https://nexa-business-hub-ai.ahteshamulhaq853.workers.dev/api/generate",{
+   method:"POST",
+   headers:{"Content-Type":"application/json"},
+   body:JSON.stringify({
+    service:"Nexa CV Studio website support",
+    details:"You are the support assistant for Nexa CV Studio, a CV-building website with accounts, CV templates, CV details saving, and PDF access. Answer the user's question clearly and helpfully in Roman Urdu unless they ask for another language. For website-specific facts, don't invent features or prices. Never ask for passwords, OTPs, or payment credentials. User question: "+question,
+    language:"Roman Urdu"
+   })
+  });
+  if(!response.ok)throw new Error("AI request failed: "+response.status);
+  const data=await response.json();
+  const answer=String(data.text||"").trim();
+  if(!answer)throw new Error("Empty AI response");
+  waiting.textContent=answer;
+ }catch(error){
+  console.warn("AI support unavailable; using local FAQ:",error);
+  waiting.textContent=supportReply(question)+"\n\n(AI abhi connect nahi ho saka, is liye local help use hui.)";
+ }
 }
 function openSupportWhatsApp(){
  const message=encodeURIComponent("Assalam-o-Alaikum, mujhe Nexa CV Studio website ke baare mein help chahiye.");
