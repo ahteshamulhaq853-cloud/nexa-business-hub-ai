@@ -312,8 +312,7 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
     <label for="eduInstitute" style="margin-top:10px">School / College / University / Board Name</label>
     <input type="search" class="option-search" data-search-for="eduInstitute" placeholder="Search options..." aria-label="Search options" oninput="searchSelectOptions('eduInstitute', this.value)" autocomplete="off"><select id="eduInstitute" onchange="toggleOtherInstitute()"><option value="">-- First select province and type --</option></select>
     <input id="eduInstituteOther" style="display:none;margin-top:8px" placeholder="Type your institute / board name">
-    <label for="eduMarks" style="margin-top:10px">Marks / Percentage / CGPA</label>
-    <input id="eduMarks" placeholder="e.g. 850/1100, 78%, or 3.5 CGPA">
+    <div class="grid" style="gap:8px;margin-top:10px"><div class="field"><label for="eduMarks">Marks Obtained</label><input id="eduMarks" placeholder="e.g. 891"></div><div class="field"><label for="eduTotalMarks">Total Marks</label><input id="eduTotalMarks" placeholder="e.g. 1100"></div></div>
     <label for="eduBoard" style="margin-top:10px">Board / University / Organization</label>
     <input id="eduBoard" placeholder="e.g. BISE Bannu, UST Bannu, or institute name">
     <label for="eduSubject" style="margin-top:10px">Group / Subject / Degree (optional)</label>
@@ -649,12 +648,13 @@ function addEducationRecord(){
  const board=$("eduBoard").value.trim();
  if(!qualification){alert("Please select a qualification first.");return}
  if(!institute){alert("Please select an institute, or choose Other / Not Listed and type its name.");return}
- const parts=[qualification,institute,province,subject,year?"Year: "+year:"",marks?"Marks: "+marks:"",board?"Board / University / Organization: "+board:"",result?"Result: "+result:""].filter(Boolean);
+ const totalMarks=$("eduTotalMarks").value.trim();
+ const parts=[qualification,institute,province,subject,year?"Year: "+year:"",marks?"Marks Obtained: "+marks:"",totalMarks?"Total Marks: "+totalMarks:"",board?"Board / University / Organization: "+board:"",result?"Result: "+result:""].filter(Boolean);
  const line=parts.join(" — ");
  const field=$("cvEducation");
  field.value+=(field.value.trim()?"\\n":"")+line;
  preview();
- $("educationLevel").value="";$("eduSubject").value="";$("eduYear").value="";$("eduResult").value="";$("eduMarks").value="";$("eduBoard").value="";
+ $("educationLevel").value="";$("eduSubject").value="";$("eduYear").value="";$("eduResult").value="";$("eduMarks").value="";$("eduTotalMarks").value="";$("eduBoard").value="";
 }
 
 const skillOptions={
@@ -760,7 +760,7 @@ function preview(){
  $("pPersonal").textContent=[v("cvFather")?"Father's Name: "+v("cvFather"):"",v("cvDob")?"Date of Birth: "+v("cvDob"):""].filter(Boolean).join(" | ");
  $("pSummary").textContent=v("cvSummary");
  const escapeHTML=s=>String(s).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
- $("pEducation").innerHTML=v("cvEducation")?v("cvEducation").split("\\n").map(line=>{const parts=line.split(" — ").filter(Boolean);const degree=parts.shift()||"";const meta=parts.filter(part=>/^(Year:|Marks:|Board \/ University \/ Organization:|Result:)/i.test(part));const details=parts.filter(part=>!meta.includes(part));return "<div class=\"education-entry\"><strong>"+escapeHTML(degree)+"</strong>"+(details.length?"<div class=\"education-details\">"+details.map(escapeHTML).join(" · ")+"</div>":"")+(meta.length?"<div class=\"education-meta\">"+meta.map(part=>escapeHTML(part.replace("Board / University / Organization:","Board:"))).join(" · ")+"</div>":"")+"</div>"}).join(""):"Add education details.";
+ $("pEducation").innerHTML=v("cvEducation")?v("cvEducation").split("\\n").map(line=>{const parts=line.split(" — ").filter(Boolean);const degree=parts.shift()||"";const meta=parts.filter(part=>/^(Year:|Marks:|Marks Obtained:|Total Marks:|Board \/ University \/ Organization:|Result:)/i.test(part));const details=parts.filter(part=>!meta.includes(part));return "<div class=\"education-entry\"><strong>"+escapeHTML(degree)+"</strong>"+(details.length?"<div class=\"education-details\">"+details.map(escapeHTML).join(" · ")+"</div>":"")+(meta.length?"<div class=\"education-meta\">"+meta.map(part=>escapeHTML(part.replace("Board / University / Organization:","Board:"))).join(" · ")+"</div>":"")+"</div>"}).join(""):"Add education details.";
  $("pExperience").textContent=v("cvExperience")||"Add work experience.";
  $("pSkills").innerHTML=v("cvSkills")?v("cvSkills").split("\\n").filter(Boolean).map(skill=>"<div>"+escapeHTML(skill.replace(/^•\\s*/,""))+"</div>").join(""):"Add your skills";
  $("pLanguages").textContent=v("cvLanguages")||"Add your languages";$("pReferences").textContent=v("cvReferences");
