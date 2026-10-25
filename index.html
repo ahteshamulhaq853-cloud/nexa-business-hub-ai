@@ -311,7 +311,22 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
     <label for="cvExperience" style="margin-top:12px">Added Experience Records (you can edit these)</label>
     <textarea id="cvExperience" oninput="preview()" placeholder="Your work experience records will appear here."></textarea>
    </div>
-   <div class="field"><label for="cvSkills">Skills</label><textarea id="cvSkills" oninput="preview()"></textarea></div>
+   <div class="field">
+    <label>Skills — Select Options</label>
+    <label for="skillCategory">Skill Category</label>
+    <select id="skillCategory" onchange="updateSkillOptions()">
+     <option value="">-- Select category --</option><option>Computer / Office</option><option>IT / Web Development</option><option>Graphic Design / Media</option><option>Administration / Data Entry</option><option>Accounting / Finance</option><option>Teaching / Education</option><option>Legal / Advocacy</option><option>Healthcare</option><option>Sales / Marketing</option><option>Communication / Customer Service</option><option>Technical / Trades</option><option>Business / Freelancing</option><option>General Professional</option>
+    </select>
+    <label for="skillOption" style="margin-top:10px">Choose Skill</label>
+    <select id="skillOption"><option value="">-- Select a category first --</option></select>
+    <div class="grid" style="gap:8px;margin-top:10px">
+     <div class="field"><label for="skillLevel">Proficiency</label><select id="skillLevel"><option value="">-- Optional --</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option><option>Expert</option></select></div>
+     <div class="field"><label for="customSkill">Or Add Your Own Skill</label><input id="customSkill" placeholder="Type a skill not listed"></div>
+    </div>
+    <button type="button" class="secondary" onclick="addSkillRecord()">+ Add Skill</button>
+    <label for="cvSkills" style="margin-top:12px">Added Skills (you can edit these)</label>
+    <textarea id="cvSkills" oninput="preview()" placeholder="Your skills will appear here."></textarea>
+   </div>
    <div class="field"><label for="cvLanguages">Languages</label><textarea id="cvLanguages" oninput="preview()"></textarea></div>
    <div class="field"><label for="cvReferences">Certificates / References</label><textarea id="cvReferences" oninput="preview()"></textarea></div>
    <button type="button" onclick="saveCV()" style="width:100%">Save CV Details</button>
@@ -523,6 +538,40 @@ function addEducationRecord(){
  $("educationLevel").value="";$("eduSubject").value="";$("eduYear").value="";$("eduResult").value="";
 }
 
+const skillOptions={
+ "Computer / Office":["MS Word","MS Excel","Microsoft PowerPoint","Microsoft Office","Typing (English)","Typing (Urdu)","Internet & Email","File Management","Printing & Scanning","PDF Editing","Data Entry","Computer Fundamentals"],
+ "IT / Web Development":["HTML","CSS","JavaScript","Python","Web Development","WordPress","IT Support","Troubleshooting","Networking Basics","Database Management","Cybersecurity Fundamentals","Software Installation"],
+ "Graphic Design / Media":["Adobe Photoshop","Adobe Illustrator","Canva","Logo Design","Poster & Banner Design","Social Media Design","Photo Editing","Video Editing","Video Production","Content Creation","Photography","UI / UX Design"],
+ "Administration / Data Entry":["Data Entry","Record Keeping","Filing & Documentation","Office Administration","Calendar Management","Report Preparation","Form Filling","Document Formatting","Customer Records Management","Inventory Records"],
+ "Accounting / Finance":["Bookkeeping","Accounting","Financial Reporting","Microsoft Excel","Invoicing","Payroll Processing","Budgeting","QuickBooks","Cash Handling","Bank Reconciliation"],
+ "Teaching / Education":["Lesson Planning","Classroom Management","Student Assessment","Curriculum Planning","Educational Technology","Communication with Parents","Subject Teaching","Training & Mentoring","Research"],
+ "Legal / Advocacy":["Legal Research","Legal Drafting","Case Preparation","Court Procedures","Client Consultation","Document Review","Contract Drafting","Case File Management","Legal Writing"],
+ "Healthcare":["Patient Care","First Aid","Medical Records","Patient Communication","Laboratory Procedures","Health & Safety","Appointment Scheduling","Team Coordination"],
+ "Sales / Marketing":["Sales","Digital Marketing","Social Media Marketing","SEO Basics","Lead Generation","Market Research","Customer Relationship Management","Product Promotion","Email Marketing","Brand Awareness"],
+ "Communication / Customer Service":["Communication","Customer Service","Active Listening","Problem Solving","Complaint Handling","Telephone Etiquette","Teamwork","Conflict Resolution","Professional Writing","Time Management"],
+ "Technical / Trades":["Electrical Maintenance","Mechanical Repair","Equipment Maintenance","Computer Hardware Repair","Mobile Phone Repair","Wiring","Safety Procedures","Quality Control","Machine Operation","Driving"],
+ "Business / Freelancing":["Freelancing","Client Management","Project Management","Business Development","Online Research","Proposal Writing","E-commerce","Negotiation","Entrepreneurship","Task Planning"],
+ "General Professional":["Leadership","Teamwork","Critical Thinking","Adaptability","Attention to Detail","Organization","Decision Making","Multitasking","Time Management","Professional Ethics"]
+};
+function updateSkillOptions(){
+ const category=$("skillCategory").value,select=$("skillOption");
+ select.innerHTML='<option value="">-- Select skill --</option>';
+ (skillOptions[category]||[]).forEach(skill=>{const option=document.createElement("option");option.value=skill;option.textContent=skill;select.appendChild(option)});
+}
+function addSkillRecord(){
+ const chosen=$("skillOption").value;
+ const custom=$("customSkill").value.trim();
+ const skill=custom||chosen;
+ const level=$("skillLevel").value;
+ if(!skill){alert("Please choose a skill or type your own skill.");return}
+ const entry=skill+(level?" ("+level+")":"");
+ const field=$("cvSkills");
+ const existing=field.value.split("\\n").map(x=>x.trim().toLowerCase());
+ if(existing.includes(entry.toLowerCase())){alert("This skill is already added.");return}
+ field.value+=(field.value.trim()?"\\n":"")+entry;
+ preview();
+ $("skillOption").value="";$("skillLevel").value="";$("customSkill").value="";
+}
 function addExperienceRecord(){
  const role=$("expRole").value;
  const industry=$("expIndustry").value;
