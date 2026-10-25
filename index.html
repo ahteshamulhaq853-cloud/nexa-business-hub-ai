@@ -887,7 +887,7 @@ function dismissWelcome(){
  $("welcomeNotice").classList.remove("show");
 }
 function setUI(){
- $("mainNav").style.display=currentUser?"flex":"none";
+ $("mainNav").style.display=currentUser?"grid":"none";
  if(currentUser){
   const m=currentUser.user_metadata||{};
   const name=m.username||m.full_name||(currentUser.email?currentUser.email.split("@")[0]:"CV Creator");
