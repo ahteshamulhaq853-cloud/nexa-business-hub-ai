@@ -198,7 +198,7 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
  <div class="grid three">
   <div class="stat"><strong>PRO</strong><span>Beautiful &amp; Professional Designs</span></div>
   <div class="stat"><strong>A4</strong><span>Print-ready resume</span></div>
-  <div class="stat"><strong id="pdfStatusText">Locked</strong><span>PDF export access</span></div>
+  <div class="stat"><strong id="pdfStatusText">ACCESS PENDING</strong><span>PDF export status</span></div>
  </div>
  <div class="grid" style="margin-top:16px">
   <div class="card"><h3 class="neon">▤ CV Builder</h3><p class="muted">Create and edit your professional resume.</p><button onclick="showPage('builderPage')">Edit My CV</button></div>
@@ -717,12 +717,12 @@ function copyNumber(n){
 function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 function statusBadge(s){s=String(s||"pending").toLowerCase();const cls=["approved","rejected","pending"].includes(s)?s:"pending";return `<span class="status ${cls}">${esc(s)}</span>`}
 async function checkApproval(){
- if(!currentUser){approvedForPDF=false;$("pdfBtn").disabled=true;$("pdfStatusText").textContent="Locked";return}
+ if(!currentUser){approvedForPDF=false;$("pdfBtn").disabled=true;$("pdfStatusText").textContent="ACCESS PENDING";return}
  const {data,error}=await db.from("cv_orders").select("id").eq("user_id",currentUser.id).eq("status","approved").limit(1);
  approvedForPDF=!error&&!!(data&&data.length);
  $("pdfBtn").disabled=!approvedForPDF;
  $("pdfBtn").textContent=approvedForPDF?"Download / Print PDF ✓":"Download / Print PDF 🔒";
- $("pdfStatusText").textContent=approvedForPDF?"Unlocked":"Locked";
+ $("pdfStatusText").textContent=approvedForPDF?"ACCESS GRANTED":"ACCESS PENDING";
  $("accessMsg").textContent=approvedForPDF?"Your PDF access is approved. You can print or save your CV as PDF.":"PDF export requires a Rs. 100 payment request and admin approval.";
 }
 
