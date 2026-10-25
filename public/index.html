@@ -18,51 +18,29 @@
   --border:#dce3ec;
 }
 *{box-sizing:border-box}
-body{
-  margin:0;font-family:Arial,Helvetica,sans-serif;
-  background:var(--bg);color:var(--text);line-height:1.5
-}
-body.dark{
-  --bg:#111827;--card:#1f2937;--text:#f3f4f6;
-  --muted:#bdc5d1;--border:#374151
-}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+body.dark{--bg:#111827;--card:#1f2937;--text:#f3f4f6;--muted:#bdc5d1;--border:#374151}
 header{background:var(--primary-dark);color:white;padding:16px}
-.header-inner{
-  max-width:1200px;margin:auto;display:flex;flex-wrap:wrap;
-  gap:12px;align-items:center;justify-content:space-between
-}
+.header-inner{max-width:1200px;margin:auto;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
 .brand{font-size:24px;font-weight:800}
 .brand span{color:#73b4ff}
 header p{margin:4px 0 0;color:#dbeafe;font-size:13px}
-.header-actions{display:flex;gap:8px;align-items:center}
-.settings-top{
-  background:#fff;color:#102a56;border:1px solid #dbeafe;
-  padding:10px 14px;border-radius:9px;font-weight:700;
-  cursor:pointer;font-size:13px
-}
+.header-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.settings-top{background:#fff;color:#102a56;border:1px solid #dbeafe;padding:10px 14px;border-radius:9px;font-weight:700;cursor:pointer;font-size:13px}
 .settings-top:hover{background:#dbeafe}
-nav{
-  background:var(--card);border-bottom:1px solid var(--border);
-  padding:10px;display:flex;justify-content:center;flex-wrap:wrap;gap:7px
-}
-button,.nav-btn{
-  border:0;border-radius:8px;padding:10px 14px;
-  font-weight:700;font-size:13px;cursor:pointer
-}
+nav{background:var(--card);border-bottom:1px solid var(--border);padding:10px;display:flex;justify-content:center;flex-wrap:wrap;gap:7px}
+button,.nav-btn{border:0;border-radius:8px;padding:10px 14px;font-weight:700;font-size:13px;cursor:pointer}
 .nav-btn{color:var(--text);background:transparent}
 .nav-btn:hover{background:var(--bg)}
 button.primary{color:#fff;background:var(--primary)}
 button.secondary{color:var(--text);background:var(--bg);border:1px solid var(--border)}
 button.danger{background:#b42318;color:#fff}
 button.success{background:#16803c;color:#fff}
+button:disabled{opacity:.6;cursor:not-allowed}
 main{max-width:1200px;margin:22px auto;padding:0 14px 40px}
 .page{display:none}
 .page.active{display:block}
-.card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:14px;padding:20px;margin-bottom:18px;
-  box-shadow:0 4px 15px rgba(16,42,86,.04)
-}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:18px;box-shadow:0 4px 15px rgba(16,42,86,.04)}
 h2{margin-top:0;font-size:22px;line-height:1.25}
 h3{font-size:16px}
 .muted{color:var(--muted);font-size:13px}
@@ -70,47 +48,28 @@ h3{font-size:16px}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
 .field{margin-bottom:13px;min-width:0}
 label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}
-input,textarea,select{
-  width:100%;border:1px solid var(--border);background:var(--card);
-  color:var(--text);padding:11px;border-radius:8px;font:inherit;font-size:14px
-}
+input,textarea,select{width:100%;border:1px solid var(--border);background:var(--card);color:var(--text);padding:11px;border-radius:8px;font:inherit;font-size:14px}
 textarea{min-height:90px;resize:vertical}
 input[type=color]{height:43px;padding:4px}
 .row-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .template-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.template-option{
-  border:2px solid var(--border);background:var(--card);border-radius:10px;
-  padding:13px;cursor:pointer;text-align:left;color:var(--text)
-}
+.template-option{border:2px solid var(--border);background:var(--card);border-radius:10px;padding:13px;cursor:pointer;text-align:left;color:var(--text)}
 .template-option.selected{border-color:var(--primary);box-shadow:0 0 0 2px #1769d220}
 .template-option strong{display:block}
 .template-option span{display:block;font-size:12px;color:var(--muted);margin-top:5px}
 .status{padding:12px;border-radius:8px;background:var(--bg);margin:10px 0;overflow-wrap:anywhere}
 .request-item{border:1px solid var(--border);padding:13px;border-radius:10px;margin:10px 0;overflow-wrap:anywhere}
 .request-item p{margin:5px 0}
-.settings-logout{
-  border-top:1px solid var(--border);
-  margin-top:24px;padding-top:20px
-}
+.settings-logout{border-top:1px solid var(--border);margin-top:24px;padding-top:20px}
 .settings-logout button{width:100%;max-width:320px}
-.support{
-  position:fixed;bottom:16px;right:16px;z-index:10;
-  background:#16803c;color:white;padding:13px 17px;
-  border-radius:30px;text-decoration:none;box-shadow:0 5px 18px #0002;
-  font-size:13px;font-weight:700
-}
+.support{position:fixed;bottom:16px;right:16px;z-index:10;background:#16803c;color:white;padding:13px 17px;border-radius:30px;text-decoration:none;box-shadow:0 5px 18px #0002;font-size:13px;font-weight:700}
+.payment-box{border:1px dashed var(--primary);border-radius:10px;padding:14px;background:var(--bg);overflow-wrap:anywhere}
+.payment-box p{margin:6px 0}
 
 /* CV PAPER */
-#cvPaper{
-  background:white;color:#222;width:100%;max-width:794px;min-height:1123px;
-  margin:15px auto;padding:42px;box-shadow:0 5px 25px #0001;
-  font-family:Arial,Helvetica,sans-serif;font-size:12px;overflow-wrap:anywhere
-}
+#cvPaper{background:white;color:#222;width:100%;max-width:794px;min-height:1123px;margin:15px auto;padding:42px;box-shadow:0 5px 25px #0001;font-family:Arial,Helvetica,sans-serif;font-size:12px;overflow-wrap:anywhere}
 #cvPaper h1{font-size:27px;margin:0 0 5px}
-#cvPaper h2{
-  font-size:14px;margin:18px 0 7px;padding-bottom:5px;
-  border-bottom:1px solid #ddd;text-transform:uppercase;letter-spacing:.8px
-}
+#cvPaper h2{font-size:14px;margin:18px 0 7px;padding-bottom:5px;border-bottom:1px solid #ddd;text-transform:uppercase;letter-spacing:.8px}
 #cvPaper p{margin:4px 0}
 #cvPaper ul{padding-left:19px;margin:5px 0}
 #cvPaper li{margin-bottom:3px}
@@ -119,7 +78,7 @@ input[type=color]{height:43px;padding:4px}
 .cv-columns{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .cv-muted{color:#555}
 .cv-heading{color:var(--primary)}
-.cv-section{break-inside:avoid}
+.cv-section{break-inside:avoid;page-break-inside:avoid}
 #cvPaper.template-blue .cv-top{border-bottom:4px solid #1769d2;padding-bottom:16px}
 #cvPaper.template-blue h2{color:#1769d2;border-bottom-color:#c9def7}
 #cvPaper.template-gold .cv-top{border-left:5px solid #a98235;padding:3px 0 12px 15px}
@@ -132,9 +91,7 @@ input[type=color]{height:43px;padding:4px}
 #cvPaper.template-corporate{padding:0}
 #cvPaper.template-corporate .cv-top{background:#102a56;color:white;padding:32px}
 #cvPaper.template-corporate .cv-contact{color:#e5edff}
-#cvPaper.template-corporate .cv-body{
-  display:grid;grid-template-columns:32% 68%;min-height:900px
-}
+#cvPaper.template-corporate .cv-body{display:grid;grid-template-columns:32% 68%;min-height:900px}
 #cvPaper.template-corporate .cv-sidebar{background:#edf3fb;padding:22px 17px}
 #cvPaper.template-corporate .cv-main{padding:18px 24px}
 #cvPaper.template-corporate .cv-sidebar h2{color:#102a56;font-size:12px}
@@ -165,8 +122,7 @@ footer{text-align:center;padding:20px;font-size:12px;color:var(--muted)}
   body.printing #cvPaper p,body.printing #cvPaper li{line-height:1.35!important}
   body.printing #cvPaper.template-corporate{padding:0!important}
   body.printing #cvPaper.template-corporate .cv-top{padding:10mm!important}
-  body.printing #cvPaper.template-corporate .cv-sidebar,
-  body.printing #cvPaper.template-corporate .cv-main{padding:8mm!important}
+  body.printing #cvPaper.template-corporate .cv-sidebar,body.printing #cvPaper.template-corporate .cv-main{padding:8mm!important}
   body.printing #cvPaper *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
 </style>
@@ -181,7 +137,7 @@ footer{text-align:center;padding:20px;font-size:12px;color:var(--muted)}
     </div>
     <div class="header-actions">
       <div id="headerStatus" class="small">Guest Mode</div>
-      <button class="settings-top" onclick="showPage('settingsPage')" aria-label="Open Settings">⚙ Settings</button>
+      <button class="settings-top" onclick="showPage('settingsPage')">⚙ Settings</button>
     </div>
   </div>
 </header>
@@ -247,7 +203,7 @@ footer{text-align:center;padding:20px;font-size:12px;color:var(--muted)}
     <div class="field"><label for="certificates">Certificates / Additional Information</label><textarea id="certificates" placeholder="Certificates, courses or achievements"></textarea></div>
     <div class="row-actions">
       <button class="primary" onclick="previewCV()">Preview CV</button>
-      <button class="success" onclick="downloadCV()">Save as PDF</button>
+      <button class="success" onclick="downloadCV()">Save as PDF — Rs. 100</button>
       <button class="secondary" onclick="saveCV()">Save Details</button>
       <button class="secondary" onclick="clearCV()">Clear Form</button>
     </div>
@@ -257,14 +213,14 @@ footer{text-align:center;padding:20px;font-size:12px;color:var(--muted)}
   <div class="card" id="previewCard">
     <div class="no-print"><h2>Live CV Preview</h2><p class="muted">Review your details before saving your CV as PDF.</p></div>
     <div id="cvPaper" class="template-blue"></div>
-    <div class="row-actions no-print"><button class="primary" onclick="downloadCV()">Save as PDF</button></div>
+    <div class="row-actions no-print"><button class="primary" onclick="downloadCV()">Save as PDF — Rs. 100</button></div>
   </div>
 </section>
 
 <section id="accountPage" class="page">
   <div class="card">
     <h2>Account</h2>
-    <p class="muted">Register or log in to submit requests and see your request history.</p>
+    <p class="muted">Register or log in to submit payment requests and see your request history.</p>
     <div class="grid">
       <div class="field"><label for="authEmail">Email</label><input id="authEmail" type="email" placeholder="you@example.com"></div>
       <div class="field"><label for="authPassword">Password</label><input id="authPassword" type="password" placeholder="At least 6 characters"></div>
@@ -277,25 +233,25 @@ footer{text-align:center;padding:20px;font-size:12px;color:var(--muted)}
   </div>
 
   <div class="card">
-    <h2>Submit CV Service Request</h2>
-    <p class="muted">Submit a request after logging in. Payment verification is handled separately.</p>
-    <div class="field"><label for="paymentMethod">Payment Method</label><select id="paymentMethod"><option value="Easypaisa">Easypaisa</option><option value="JazzCash">JazzCash</option></select></div>
-    <div class="field"><label for="paymentReference">Transaction ID / Reference</label><input id="paymentReference" placeholder="Enter transaction reference"></div>
-    <div class="status">
+    <h2>Submit CV PDF Payment Request</h2>
+    <p class="muted">Pay Rs. 100 using one of the methods below. Admin must verify your transaction before PDF saving is unlocked.</p>
+    <div class="payment-box">
       <strong>Service Fee: Rs. 100</strong>
-      <p>Easypaisa: 0342-8974369 — GULAP BIBI</p>
-      <p>JazzCash: 0346-9799347 — EHTISHAMUL HAQ</p>
-      <p class="muted">Confirm account details before sending any payment.</p>
+      <p><strong>Easypaisa:</strong> 0342-8974369 — GULAP BIBI</p>
+      <p><strong>JazzCash:</strong> 0346-9799347 — EHTISHAMUL HAQ</p>
+      <p class="muted">Verify the recipient and account details before making payment.</p>
     </div>
-    <button class="primary" onclick="submitRequest()">Submit Request</button>
-    <div id="requestMessage" class="muted"></div>
+    <div class="field" style="margin-top:14px"><label for="paymentMethod">Payment Method</label><select id="paymentMethod"><option value="Easypaisa">Easypaisa</option><option value="JazzCash">JazzCash</option></select></div>
+    <div class="field"><label for="paymentReference">Transaction ID / Reference</label><input id="paymentReference" placeholder="Enter the transaction ID"></div>
+    <button class="primary" onclick="submitRequest()">Submit Payment Request</button>
+    <div id="requestMessage" class="status">Log in before submitting a request.</div>
   </div>
 </section>
 
 <section id="requestsPage" class="page">
   <div class="card">
     <h2>My Requests</h2>
-    <p class="muted">Database security policies must enforce that users can access only their own requests.</p>
+    <p class="muted">Your payment request status will appear here.</p>
     <button class="primary" onclick="loadMyRequests()">Refresh Requests</button>
     <div id="myRequests" class="status">Log in to see your requests.</div>
   </div>
@@ -357,7 +313,7 @@ footer{text-align:center;padding:20px;font-size:12px;color:var(--muted)}
 <section id="adminPage" class="page">
   <div class="card">
     <h2>Admin Panel</h2>
-    <p class="muted">Admin permissions must be verified by the database. Hiding this page in the browser alone is not security.</p>
+    <p class="muted">Only an account authorized in the database can approve or reject requests.</p>
     <div id="adminStatus" class="status">Checking admin access...</div>
     <button class="primary" onclick="loadAdminRequests()">Refresh Requests</button>
     <div id="adminRequests"></div>
@@ -382,21 +338,23 @@ const cvFields=["fullName","jobTitle","phone","email","address","website","summa
 function showPage(id){
   document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
   const page=document.getElementById(id);
-  if(page) page.classList.add("active");
-  if(id==="requestsPage") loadMyRequests();
-  if(id==="adminPage") checkAdmin();
+  if(page)page.classList.add("active");
+  if(id==="requestsPage")loadMyRequests();
+  if(id==="adminPage")checkAdmin();
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
 function escapeHTML(value){
   return String(value??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
 }
+
 function getCVData(){
   const data={};
   cvFields.forEach(id=>data[id]=document.getElementById(id).value.trim());
   data.template=currentTemplate;
   return data;
 }
+
 function setCVData(data){
   if(!data)return;
   cvFields.forEach(id=>{
@@ -405,7 +363,10 @@ function setCVData(data){
   if(data.template)selectTemplate(data.template,false);
   previewCV();
 }
-function localCVKey(){return currentUser?"nexa_cv_"+currentUser.id:"nexa_cv_guest"}
+
+function localCVKey(){
+  return currentUser?"nexa_cv_"+currentUser.id:"nexa_cv_guest";
+}
 
 function saveCV(showMessage=true){
   try{
@@ -415,6 +376,7 @@ function saveCV(showMessage=true){
     document.getElementById("saveMessage").textContent="Unable to save details on this device.";
   }
 }
+
 function loadCV(){
   try{
     const saved=localStorage.getItem(localCVKey());
@@ -425,12 +387,15 @@ function loadCV(){
     }
   }catch(e){previewCV()}
 }
+
 function clearCV(){
   if(!confirm("Clear all CV fields?"))return;
   cvFields.forEach(id=>document.getElementById(id).value="");
-  saveCV(false);previewCV();
+  saveCV(false);
+  previewCV();
   document.getElementById("saveMessage").textContent="Form cleared.";
 }
+
 function selectTemplate(template,doPreview=true){
   if(!["blue","gold","ats","corporate"].includes(template))template="blue";
   currentTemplate=template;
@@ -439,12 +404,17 @@ function selectTemplate(template,doPreview=true){
   if(doPreview)previewCV();
   if(document.getElementById("autoSave").checked)saveCV(false);
 }
+
 function linesToHTML(text){
   const lines=String(text||"").split(/\n/).map(s=>s.trim()).filter(Boolean);
   if(!lines.length)return "<p class='cv-muted'>Not provided</p>";
   return "<ul>"+lines.map(line=>"<li>"+escapeHTML(line)+"</li>").join("")+"</ul>";
 }
-function section(title,content){return "<section class='cv-section'><h2>"+title+"</h2>"+content+"</section>"}
+
+function section(title,content){
+  return "<section class='cv-section'><h2>"+title+"</h2>"+content+"</section>";
+}
+
 function previewCV(){
   const d=getCVData(),paper=document.getElementById("cvPaper");
   paper.className="template-"+currentTemplate;
@@ -452,17 +422,27 @@ function previewCV(){
   const title=escapeHTML(d.jobTitle||"Professional Title");
   const contact=[d.phone,d.email,d.address,d.website].filter(Boolean).map(escapeHTML).join(" &nbsp; | &nbsp; ");
   const profile=escapeHTML(d.summary||"Professional profile not provided.").replace(/\n/g,"<br>");
-  const education=linesToHTML(d.education),experience=linesToHTML(d.experience);
-  const skills=linesToHTML(d.skills),languages=linesToHTML(d.languages),certificates=linesToHTML(d.certificates);
+  const education=linesToHTML(d.education);
+  const experience=linesToHTML(d.experience);
+  const skills=linesToHTML(d.skills);
+  const languages=linesToHTML(d.languages);
+  const certificates=linesToHTML(d.certificates);
   const header=`<div class="cv-top"><h1>${name}</h1><p class="cv-heading"><strong>${title}</strong></p><p class="cv-contact">${contact||"Phone | Email | Address"}</p></div>`;
+
   if(currentTemplate==="corporate"){
     paper.innerHTML=header+`<div class="cv-body"><aside class="cv-sidebar">
       ${section("Contact","<p>"+(contact||"Not provided")+"</p>")}
-      ${section("Skills",skills)}${section("Languages",languages)}${section("Additional",certificates)}
-      </aside><div class="cv-main">${section("Professional Profile","<p class='cv-profile'>"+profile+"</p>")}
-      ${section("Work Experience",experience)}${section("Education",education)}</div></div>`;
+      ${section("Skills",skills)}
+      ${section("Languages",languages)}
+      ${section("Additional",certificates)}
+      </aside><div class="cv-main">
+      ${section("Professional Profile","<p class='cv-profile'>"+profile+"</p>")}
+      ${section("Work Experience",experience)}
+      ${section("Education",education)}
+      </div></div>`;
   }else{
-    let body=section("Professional Profile","<p class='cv-profile'>"+profile+"</p>")+section("Work Experience",experience)+section("Education",education);
+    let body=section("Professional Profile","<p class='cv-profile'>"+profile+"</p>")+
+      section("Work Experience",experience)+section("Education",education);
     if(currentTemplate==="ats"){
       body+=section("Skills",skills)+section("Languages",languages)+section("Certificates & Additional Information",certificates);
     }else{
@@ -470,13 +450,47 @@ function previewCV(){
     }
     paper.innerHTML=header+`<div class="cv-content">${body}</div>`;
   }
+
   paper.style.fontSize=(localStorage.getItem("nexa_font_size")||"12")+"px";
   if(document.getElementById("autoSave").checked)saveCV(false);
 }
-function downloadCV(){
+
+/* PAYMENT APPROVAL GATE */
+async function downloadCV(){
+  if(!currentUser){
+    alert("Please log in or create an account first.");
+    showPage("accountPage");
+    return;
+  }
+
+  const {data:orders,error}=await db
+    .from("cv_orders")
+    .select("id,status,amount")
+    .eq("user_id",currentUser.id)
+    .eq("status","approved")
+    .eq("amount",100)
+    .order("created_at",{ascending:false})
+    .limit(1);
+
+  if(error){
+    alert("Could not check payment approval: "+error.message);
+    return;
+  }
+
+  if(!orders || orders.length===0){
+    alert("PDF saving is locked. Submit your Rs. 100 payment request and wait for admin approval.");
+    showPage("accountPage");
+    return;
+  }
+
   previewCV();
   document.body.classList.add("printing");
-  const cleanup=()=>{document.body.classList.remove("printing");window.removeEventListener("afterprint",cleanup)};
+
+  const cleanup=()=>{
+    document.body.classList.remove("printing");
+    window.removeEventListener("afterprint",cleanup);
+  };
+
   window.addEventListener("afterprint",cleanup);
   window.print();
   setTimeout(cleanup,2000);
@@ -491,12 +505,14 @@ function loadSettings(){
   document.getElementById("autoSave").checked=localStorage.getItem("nexa_auto_save")!=="false";
   applySettings(false);
 }
+
 function applySettings(showMessage=true){
   const theme=document.getElementById("themeMode").value;
   const accent=document.getElementById("accentColor").value;
   const template=document.getElementById("defaultTemplate").value;
   const fontSize=document.getElementById("fontSize").value;
   const autoSave=document.getElementById("autoSave").checked;
+
   document.body.classList.toggle("dark",theme==="dark");
   document.documentElement.style.setProperty("--primary",accent);
   localStorage.setItem("nexa_theme",theme);
@@ -505,36 +521,66 @@ function applySettings(showMessage=true){
   localStorage.setItem("nexa_font_size",fontSize);
   localStorage.setItem("nexa_auto_save",String(autoSave));
   previewCV();
+
   if(showMessage)document.getElementById("settingsMessage").textContent="Settings saved on this device.";
 }
 
-/* AUTH */
+/* AUTHENTICATION */
 async function login(){
   const email=document.getElementById("authEmail").value.trim();
   const password=document.getElementById("authPassword").value;
-  if(!email||!password){document.getElementById("accountMessage").textContent="Enter your email and password.";return}
+
+  if(!email||!password){
+    document.getElementById("accountMessage").textContent="Enter your email and password.";
+    return;
+  }
+
   const {data,error}=await db.auth.signInWithPassword({email,password});
-  if(error){document.getElementById("accountMessage").textContent=error.message;return}
+  if(error){
+    document.getElementById("accountMessage").textContent=error.message;
+    return;
+  }
+
   currentUser=data.user;
-  await updateAuthUI();loadCV();
+  await updateAuthUI();
+  loadCV();
   document.getElementById("accountMessage").textContent="Login successful.";
 }
+
 async function register(){
   const email=document.getElementById("authEmail").value.trim();
   const password=document.getElementById("authPassword").value;
-  if(!email||password.length<6){document.getElementById("accountMessage").textContent="Enter an email and a password with at least 6 characters.";return}
+
+  if(!email||password.length<6){
+    document.getElementById("accountMessage").textContent="Enter an email and a password with at least 6 characters.";
+    return;
+  }
+
   const {data,error}=await db.auth.signUp({email,password});
-  if(error){document.getElementById("accountMessage").textContent=error.message;return}
-  currentUser=data.user||null;
-  await updateAuthUI();
-  document.getElementById("accountMessage").textContent=data.session?"Registration successful.":"Check your email to confirm your account, then log in.";
+  if(error){
+    document.getElementById("accountMessage").textContent=error.message;
+    return;
+  }
+
+  if(data.session){
+    currentUser=data.user;
+    await updateAuthUI();
+    document.getElementById("accountMessage").textContent="Registration successful.";
+  }else{
+    document.getElementById("accountMessage").textContent="Check your email to confirm your account, then log in.";
+  }
 }
+
 async function logout(){
   const {error}=await db.auth.signOut();
-  if(error){alert(error.message);return}
-  currentUser=null;isAdmin=false;
-  await updateAuthUI();loadCV();showPage("builderPage");
+  if(error){alert(error.message);return;}
+  currentUser=null;
+  isAdmin=false;
+  await updateAuthUI();
+  loadCV();
+  showPage("builderPage");
 }
+
 async function updateAuthUI(){
   const {data}=await db.auth.getUser();
   currentUser=data?.user||null;
@@ -543,74 +589,161 @@ async function updateAuthUI(){
   await checkAdmin();
 }
 
-/* CUSTOMER REQUESTS */
+/* CUSTOMER PAYMENT REQUESTS */
 async function submitRequest(){
   const message=document.getElementById("requestMessage");
-  if(!currentUser){message.textContent="Please log in before submitting a request.";showPage("accountPage");return}
+
+  if(!currentUser){
+    message.textContent="Please log in before submitting a payment request.";
+    showPage("accountPage");
+    return;
+  }
+
   const method=document.getElementById("paymentMethod").value;
   const reference=document.getElementById("paymentReference").value.trim();
-  if(!reference){message.textContent="Please enter your transaction reference.";return}
+
+  if(!reference){
+    message.textContent="Please enter your transaction ID.";
+    return;
+  }
+
   message.textContent="Submitting request...";
+
   const {error}=await db.from("cv_orders").insert({
-    user_id:currentUser.id,email:currentUser.email,payment_method:method,
-    transaction_reference:reference,amount:100,status:"pending"
+    user_id:currentUser.id,
+    customer_name:document.getElementById("fullName").value.trim()||currentUser.email,
+    payment_method:method,
+    transaction_id:reference,
+    amount:100,
+    status:"pending"
   });
-  if(error){message.textContent="Could not submit request. Check the cv_orders table and its RLS policies. "+error.message;return}
-  message.textContent="Request submitted successfully.";
+
+  if(error){
+    message.textContent="Could not submit request: "+error.message;
+    return;
+  }
+
+  message.textContent="Request submitted. Your PDF will unlock after admin approval.";
   document.getElementById("paymentReference").value="";
-  loadMyRequests();
+  await loadMyRequests();
 }
+
 async function loadMyRequests(){
   const container=document.getElementById("myRequests");
-  if(!currentUser){container.textContent="Please log in to view your requests.";return}
+
+  if(!currentUser){
+    container.textContent="Please log in to view your requests.";
+    return;
+  }
+
   container.textContent="Loading...";
-  const {data,error}=await db.from("cv_orders").select("id,created_at,amount,status,payment_method,transaction_reference").eq("user_id",currentUser.id).order("created_at",{ascending:false});
-  if(error){container.textContent="Unable to load requests: "+error.message;return}
-  if(!data?.length){container.textContent="You have not submitted any requests yet.";return}
+
+  const {data,error}=await db.from("cv_orders")
+    .select("id,created_at,amount,status,payment_method,transaction_id")
+    .eq("user_id",currentUser.id)
+    .order("created_at",{ascending:false});
+
+  if(error){
+    container.textContent="Unable to load requests: "+error.message;
+    return;
+  }
+
+  if(!data?.length){
+    container.textContent="You have not submitted any requests yet.";
+    return;
+  }
+
   container.innerHTML=data.map(o=>`<div class="request-item">
     <strong>Request #${escapeHTML(o.id)}</strong>
     <p>Status: <strong>${escapeHTML(o.status||"pending")}</strong></p>
     <p>Amount: Rs. ${escapeHTML(o.amount??100)}</p>
     <p>Method: ${escapeHTML(o.payment_method||"Not specified")}</p>
-    <p>Submitted: ${escapeHTML(o.created_at||"")}</p></div>`).join("");
+    <p>Transaction ID: ${escapeHTML(o.transaction_id||"")}</p>
+    <p>Submitted: ${escapeHTML(o.created_at||"")}</p>
+  </div>`).join("");
 }
 
 /* ADMIN */
 async function checkAdmin(){
   const status=document.getElementById("adminStatus");
-  if(!currentUser){isAdmin=false;status.textContent="Log in with an authorized administrator account.";return}
+
+  if(!currentUser){
+    isAdmin=false;
+    status.textContent="Log in with an authorized administrator account.";
+    return;
+  }
+
   const {data,error}=await db.rpc("is_app_admin");
-  if(error){isAdmin=false;status.textContent="Admin verification failed. Configure is_app_admin() in the database. "+error.message;return}
+
+  if(error){
+    isAdmin=false;
+    status.textContent="Admin verification failed: "+error.message;
+    return;
+  }
+
   isAdmin=data===true;
   status.textContent=isAdmin?"Admin access verified.":"Access denied. This account is not an administrator.";
+
   if(!isAdmin)document.getElementById("adminRequests").innerHTML="";
 }
+
 async function loadAdminRequests(){
   const container=document.getElementById("adminRequests");
   await checkAdmin();
-  if(!currentUser||!isAdmin){container.textContent="Administrator access required.";return}
+
+  if(!currentUser||!isAdmin){
+    container.textContent="Administrator access required.";
+    return;
+  }
+
   container.textContent="Loading requests...";
-  const {data,error}=await db.from("cv_orders").select("*").order("created_at",{ascending:false});
-  if(error){container.textContent="Could not load requests: "+error.message;return}
-  if(!data?.length){container.textContent="No requests found.";return}
+
+  const {data,error}=await db.from("cv_orders")
+    .select("*")
+    .order("created_at",{ascending:false});
+
+  if(error){
+    container.textContent="Could not load requests: "+error.message;
+    return;
+  }
+
+  if(!data?.length){
+    container.textContent="No requests found.";
+    return;
+  }
+
   container.innerHTML=data.map(o=>`<div class="request-item">
     <strong>Request #${escapeHTML(o.id)}</strong>
-    <p>User: ${escapeHTML(o.email||o.user_id||"")}</p>
+    <p>Customer: ${escapeHTML(o.customer_name||o.user_id||"")}</p>
+    <p>User ID: ${escapeHTML(o.user_id||"")}</p>
     <p>Payment: ${escapeHTML(o.payment_method||"")}</p>
-    <p>Reference: ${escapeHTML(o.transaction_reference||"")}</p>
+    <p>Transaction ID: ${escapeHTML(o.transaction_id||"")}</p>
     <p>Amount: Rs. ${escapeHTML(o.amount??100)}</p>
-    <p>Status: ${escapeHTML(o.status||"pending")}</p>
+    <p>Status: <strong>${escapeHTML(o.status||"pending")}</strong></p>
     <div class="row-actions">
       <button class="success" onclick="setOrderStatus('${escapeHTML(o.id)}','approved')">Approve</button>
       <button class="danger" onclick="setOrderStatus('${escapeHTML(o.id)}','rejected')">Reject</button>
-    </div></div>`).join("");
+    </div>
+  </div>`).join("");
 }
+
 async function setOrderStatus(id,status){
-  if(!currentUser||!isAdmin){alert("Administrator access required.");return}
+  if(!currentUser||!isAdmin){
+    alert("Administrator access required.");
+    return;
+  }
+
   if(!confirm("Change this request status to "+status+"?"))return;
+
   const {error}=await db.from("cv_orders").update({status}).eq("id",id);
-  if(error){alert("Could not update request: "+error.message);return}
-  alert("Request updated.");loadAdminRequests();
+
+  if(error){
+    alert("Could not update request: "+error.message);
+    return;
+  }
+
+  alert("Request updated.");
+  await loadAdminRequests();
 }
 
 /* STARTUP */
@@ -620,21 +753,23 @@ document.querySelectorAll("#builderPage input,#builderPage textarea").forEach(fi
     if(document.getElementById("autoSave").checked)saveCV(false);
   });
 });
-document.getElementById("education").addEventListener("input",previewCV);
-document.getElementById("experience").addEventListener("input",previewCV);
-document.getElementById("skills").addEventListener("input",previewCV);
-document.getElementById("languages").addEventListener("input",previewCV);
-document.getElementById("certificates").addEventListener("input",previewCV);
 
 (async function init(){
   loadSettings();
+
   const {data}=await db.auth.getSession();
   currentUser=data?.session?.user||null;
+
   await updateAuthUI();
-  loadCV();previewCV();
+  loadCV();
+  previewCV();
+
   db.auth.onAuthStateChange((_event,session)=>{
     currentUser=session?.user||null;
-    setTimeout(async()=>{await updateAuthUI();loadCV()},0);
+    setTimeout(async()=>{
+      await updateAuthUI();
+      loadCV();
+    },0);
   });
 })();
 </script>
