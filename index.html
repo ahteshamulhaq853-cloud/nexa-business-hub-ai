@@ -692,7 +692,7 @@ function applyTemplate(template,saveChoice=true){
 }
 function preview(){
  const v=id=>$(id).value.trim();
- $("pName").textContent=v("cvName")||"YOUR NAME";$("pTitle").textContent=v("cvTitle")||"PROFESSIONAL TITLE";
+ $("pName").textContent=(v("cvName")||"YOUR NAME").toLocaleUpperCase();$("pTitle").textContent=v("cvTitle")||"PROFESSIONAL TITLE";
  $("pPhone").textContent=v("cvPhone")||"Phone";$("pEmail").textContent=v("cvEmail")||"Email";$("pAddress").textContent=v("cvAddress")||"Address";
  $("pPersonal").textContent=[v("cvFather")?"Father's Name: "+v("cvFather"):"",v("cvDob")?"Date of Birth: "+v("cvDob"):""].filter(Boolean).join(" | ");
  $("pSummary").textContent=v("cvSummary");
