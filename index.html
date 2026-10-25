@@ -14,6 +14,7 @@ body{margin:0;background:radial-gradient(ellipse at top,#142a3d,#080c15 60%);col
 button,input,select,textarea{font:inherit}
 button{border:1px solid transparent;border-radius:9px;padding:11px 14px;background:var(--cyan);color:#06131b;font-weight:bold;cursor:pointer;margin:3px}
 button:disabled{opacity:.45;cursor:not-allowed}
+.education-entry{margin:0 0 8px;line-height:1.35}.education-entry>strong{display:block;font-weight:800}.education-entry>div{margin-top:2px}.education-entry>div>div{margin-top:1px}.side #pSkills>div{margin:0 0 3px}
 .option-search{width:100%;padding:9px 11px;margin:5px 0 7px;border:1px solid #315563;border-radius:8px;background:#091321;color:var(--text);outline-color:var(--cyan)}
 .option-search::placeholder{color:var(--muted)}
 button.secondary{background:#19283c;color:white;border-color:#304a60}
@@ -277,6 +278,10 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
     <label for="eduInstitute" style="margin-top:10px">School / College / University / Board Name</label>
     <input type="search" class="option-search" data-search-for="eduInstitute" placeholder="Search options..." aria-label="Search options" oninput="searchSelectOptions('eduInstitute', this.value)" autocomplete="off"><select id="eduInstitute" onchange="toggleOtherInstitute()"><option value="">-- First select province and type --</option></select>
     <input id="eduInstituteOther" style="display:none;margin-top:8px" placeholder="Type your institute / board name">
+    <label for="eduMarks" style="margin-top:10px">Marks / Percentage / CGPA</label>
+    <input id="eduMarks" placeholder="e.g. 850/1100, 78%, or 3.5 CGPA">
+    <label for="eduBoard" style="margin-top:10px">Board / University / Organization</label>
+    <input id="eduBoard" placeholder="e.g. BISE Bannu, UST Bannu, or institute name">
     <label for="eduSubject" style="margin-top:10px">Group / Subject / Degree (optional)</label>
     <input id="eduSubject" placeholder="e.g. Pre-Medical, Computer Science, DIT">
     <div class="grid" style="gap:8px;margin-top:10px">
@@ -552,14 +557,16 @@ function addEducationRecord(){
  const subject=$("eduSubject").value.trim();
  const year=$("eduYear").value.trim();
  const result=$("eduResult").value.trim();
+ const marks=$("eduMarks").value.trim();
+ const board=$("eduBoard").value.trim();
  if(!qualification){alert("Please select a qualification first.");return}
  if(!institute){alert("Please select an institute, or choose Other / Not Listed and type its name.");return}
- const parts=[qualification,institute,province,subject,year?"Year: "+year:"",result?"Result: "+result:""].filter(Boolean);
+ const parts=[qualification,institute,province,subject,year?"Year: "+year:"",marks?"Marks: "+marks:"",board?"Board / University / Organization: "+board:"",result?"Result: "+result:""].filter(Boolean);
  const line=parts.join(" — ");
  const field=$("cvEducation");
  field.value+=(field.value.trim()?"\\n":"")+line;
  preview();
- $("educationLevel").value="";$("eduSubject").value="";$("eduYear").value="";$("eduResult").value="";
+ $("educationLevel").value="";$("eduSubject").value="";$("eduYear").value="";$("eduResult").value="";$("eduMarks").value="";$("eduBoard").value="";
 }
 
 const skillOptions={
@@ -589,10 +596,11 @@ function addSkillRecord(){
  const skill=custom||chosen;
  const level=$("skillLevel").value;
  if(!skill){alert("Please choose a skill or type your own skill.");return}
- const entry=skill+(level?" ("+level+")":"");
+ const entry="• "+skill+(level?" ("+level+")":"");
  const field=$("cvSkills");
- const existing=field.value.split("\\n").map(x=>x.trim().toLowerCase());
- if(existing.includes(entry.toLowerCase())){alert("This skill is already added.");return}
+ const normalized=entry.replace(/^•\\s*/,"").trim().toLowerCase();
+ const existing=field.value.split("\\n").map(x=>x.replace(/^•\\s*/,"").trim().toLowerCase());
+ if(existing.includes(normalized)){alert("This skill is already added.");return}
  field.value+=(field.value.trim()?"\\n":"")+entry;
  preview();
  $("skillOption").value="";$("skillLevel").value="";$("customSkill").value="";
@@ -654,8 +662,11 @@ function preview(){
  $("pName").textContent=v("cvName")||"YOUR NAME";$("pTitle").textContent=v("cvTitle")||"PROFESSIONAL TITLE";
  $("pPhone").textContent=v("cvPhone")||"Phone";$("pEmail").textContent=v("cvEmail")||"Email";$("pAddress").textContent=v("cvAddress")||"Address";
  $("pPersonal").textContent=[v("cvFather")?"Father's Name: "+v("cvFather"):"",v("cvDob")?"Date of Birth: "+v("cvDob"):""].filter(Boolean).join(" | ");
- $("pSummary").textContent=v("cvSummary");$("pEducation").textContent=v("cvEducation")||"Add education details.";
- $("pExperience").textContent=v("cvExperience")||"Add work experience.";$("pSkills").textContent=v("cvSkills")||"Add your skills";
+ $("pSummary").textContent=v("cvSummary");
+ const escapeHTML=s=>String(s).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+ $("pEducation").innerHTML=v("cvEducation")?v("cvEducation").split("\\n").map(line=>{const parts=line.split(" — ");const degree=parts.shift()||"";return "<div class=\"education-entry\"><strong>"+escapeHTML(degree)+"</strong>"+(parts.length?"<div>"+parts.map(part=>"<div>"+escapeHTML(part)+"</div>").join("")+"</div>":"")+"</div>"}).join(""):"Add education details.";
+ $("pExperience").textContent=v("cvExperience")||"Add work experience.";
+ $("pSkills").innerHTML=v("cvSkills")?v("cvSkills").split("\\n").filter(Boolean).map(skill=>"<div>"+escapeHTML(skill.replace(/^•\\s*/,""))+"</div>").join(""):"Add your skills";
  $("pLanguages").textContent=v("cvLanguages")||"Add your languages";$("pReferences").textContent=v("cvReferences");
 }
 $("cvPhoto").addEventListener("change",e=>{
