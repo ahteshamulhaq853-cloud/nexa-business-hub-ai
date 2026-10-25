@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -143,7 +142,7 @@ footer{text-align:center;padding:20px;font-size:12px;color:var(--muted)}
 </header>
 
 <nav class="no-print">
-  <button class="nav-btn" onclick="showPage('builderPage')">CV Builder</button>
+  <button class="nav-btn" onclick="showPage('builderPage')">Dashboard / CV Builder</button>
   <button class="nav-btn" onclick="showPage('accountPage')">Login / Register</button>
   <button class="nav-btn" onclick="showPage('requestsPage')">My Requests</button>
   <button class="nav-btn" onclick="showPage('adminPage')">Admin Panel</button>
@@ -151,6 +150,12 @@ footer{text-align:center;padding:20px;font-size:12px;color:var(--muted)}
 
 <main>
 <section id="builderPage" class="page active">
+  <div class="card no-print">
+    <h2>Welcome to Nexa CV Studio</h2>
+    <p class="muted">Build a professional CV, choose a template, preview your details and save your CV as PDF.</p>
+    <button class="primary" onclick="showPage('builderPage')">Open CV Dashboard</button>
+  </div>
+
   <div class="card no-print">
     <h2>Build Your Professional CV</h2>
     <p class="muted">Enter your details, choose a template, preview your CV and save it as PDF.</p>
@@ -219,16 +224,45 @@ footer{text-align:center;padding:20px;font-size:12px;color:var(--muted)}
 
 <section id="accountPage" class="page">
   <div class="card">
-    <h2>Account</h2>
-    <p class="muted">Register or log in to submit payment requests and see your request history.</p>
-    <div class="grid">
-      <div class="field"><label for="authEmail">Email</label><input id="authEmail" type="email" placeholder="you@example.com"></div>
-      <div class="field"><label for="authPassword">Password</label><input id="authPassword" type="password" placeholder="At least 6 characters"></div>
+    <h2>Login / Create Account</h2>
+    <p class="muted">Create your account with your name, phone number, gender, email and password.</p>
+
+    <div class="field">
+      <label for="registerName">Full Name</label>
+      <input id="registerName" type="text" placeholder="Enter your full name" autocomplete="name">
     </div>
+
+    <div class="field">
+      <label for="registerPhone">Phone Number</label>
+      <input id="registerPhone" type="tel" placeholder="e.g. 03XX-XXXXXXX" autocomplete="tel">
+    </div>
+
+    <div class="field">
+      <label for="registerGender">Gender</label>
+      <select id="registerGender">
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+        <option value="Prefer not to say">Prefer not to say</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="authEmail">Email Address</label>
+      <input id="authEmail" type="email" placeholder="you@example.com" autocomplete="email">
+    </div>
+
+    <div class="field">
+      <label for="authPassword">Password</label>
+      <input id="authPassword" type="password" placeholder="At least 6 characters" autocomplete="new-password">
+    </div>
+
     <div class="row-actions">
       <button class="primary" onclick="login()">Login</button>
-      <button class="secondary" onclick="register()">Create Account</button>
+      <button class="success" id="createAccountBtn" onclick="register()">Create Account</button>
     </div>
+
     <div id="accountMessage" class="status">You are not logged in.</div>
   </div>
 
@@ -241,8 +275,17 @@ footer{text-align:center;padding:20px;font-size:12px;color:var(--muted)}
       <p><strong>JazzCash:</strong> 0346-9799347 — EHTISHAMUL HAQ</p>
       <p class="muted">Verify the recipient and account details before making payment.</p>
     </div>
-    <div class="field" style="margin-top:14px"><label for="paymentMethod">Payment Method</label><select id="paymentMethod"><option value="Easypaisa">Easypaisa</option><option value="JazzCash">JazzCash</option></select></div>
-    <div class="field"><label for="paymentReference">Transaction ID / Reference</label><input id="paymentReference" placeholder="Enter the transaction ID"></div>
+    <div class="field" style="margin-top:14px">
+      <label for="paymentMethod">Payment Method</label>
+      <select id="paymentMethod">
+        <option value="Easypaisa">Easypaisa</option>
+        <option value="JazzCash">JazzCash</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="paymentReference">Transaction ID / Reference</label>
+      <input id="paymentReference" placeholder="Enter the transaction ID">
+    </div>
     <button class="primary" onclick="submitRequest()">Submit Payment Request</button>
     <div id="requestMessage" class="status">Log in before submitting a request.</div>
   </div>
@@ -262,7 +305,10 @@ footer{text-align:center;padding:20px;font-size:12px;color:var(--muted)}
     <h2>Display Settings</h2>
     <div class="field">
       <label for="themeMode">Appearance</label>
-      <select id="themeMode" onchange="applySettings()"><option value="light">Light Mode</option><option value="dark">Dark Mode</option></select>
+      <select id="themeMode" onchange="applySettings()">
+        <option value="light">Light Mode</option>
+        <option value="dark">Dark Mode</option>
+      </select>
     </div>
     <div class="field">
       <label for="accentColor">Accent Color</label>
@@ -286,7 +332,9 @@ footer{text-align:center;padding:20px;font-size:12px;color:var(--muted)}
     <div class="field">
       <label for="fontSize">Preview Font Size</label>
       <select id="fontSize" onchange="applySettings()">
-        <option value="11">Compact</option><option value="12">Standard</option><option value="13">Large</option>
+        <option value="11">Compact</option>
+        <option value="12">Standard</option>
+        <option value="13">Large</option>
       </select>
     </div>
     <div class="field">
@@ -300,7 +348,9 @@ footer{text-align:center;padding:20px;font-size:12px;color:var(--muted)}
   <div class="card">
     <h2>Customer Support</h2>
     <p>WhatsApp Support: 0346-9799347</p>
-    <a href="https://wa.me/923469799347" target="_blank" rel="noopener"><button class="success">Contact Support on WhatsApp</button></a>
+    <a href="https://wa.me/923469799347" target="_blank" rel="noopener">
+      <button class="success">Contact Support on WhatsApp</button>
+    </a>
   </div>
 
   <div class="card settings-logout">
@@ -333,33 +383,50 @@ let currentUser=null;
 let isAdmin=false;
 let currentTemplate="blue";
 
-const cvFields=["fullName","jobTitle","phone","email","address","website","summary","education","experience","skills","languages","certificates"];
+const cvFields=[
+  "fullName","jobTitle","phone","email","address","website",
+  "summary","education","experience","skills","languages","certificates"
+];
 
 function showPage(id){
   document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
   const page=document.getElementById(id);
   if(page)page.classList.add("active");
+
   if(id==="requestsPage")loadMyRequests();
   if(id==="adminPage")checkAdmin();
+
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
 function escapeHTML(value){
-  return String(value??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+  return String(value??"").replace(/[&<>"']/g,ch=>({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
+  }[ch]));
 }
 
 function getCVData(){
   const data={};
-  cvFields.forEach(id=>data[id]=document.getElementById(id).value.trim());
+  cvFields.forEach(id=>{
+    data[id]=document.getElementById(id).value.trim();
+  });
   data.template=currentTemplate;
   return data;
 }
 
 function setCVData(data){
   if(!data)return;
+
   cvFields.forEach(id=>{
-    if(data[id]!==undefined)document.getElementById(id).value=data[id];
+    if(data[id]!==undefined){
+      document.getElementById(id).value=data[id];
+    }
   });
+
   if(data.template)selectTemplate(data.template,false);
   previewCV();
 }
@@ -371,44 +438,76 @@ function localCVKey(){
 function saveCV(showMessage=true){
   try{
     localStorage.setItem(localCVKey(),JSON.stringify(getCVData()));
-    if(showMessage)document.getElementById("saveMessage").textContent="CV details saved on this device.";
+
+    if(showMessage){
+      document.getElementById("saveMessage").textContent=
+        "CV details saved on this device.";
+    }
   }catch(e){
-    document.getElementById("saveMessage").textContent="Unable to save details on this device.";
+    document.getElementById("saveMessage").textContent=
+      "Unable to save details on this device.";
   }
 }
 
 function loadCV(){
   try{
     const saved=localStorage.getItem(localCVKey());
-    if(saved)setCVData(JSON.parse(saved));
-    else{
+
+    if(saved){
+      setCVData(JSON.parse(saved));
+    }else{
       selectTemplate(localStorage.getItem("nexa_default_template")||"blue",false);
       previewCV();
     }
-  }catch(e){previewCV()}
+  }catch(e){
+    previewCV();
+  }
 }
 
 function clearCV(){
   if(!confirm("Clear all CV fields?"))return;
-  cvFields.forEach(id=>document.getElementById(id).value="");
+
+  cvFields.forEach(id=>{
+    document.getElementById(id).value="";
+  });
+
   saveCV(false);
   previewCV();
   document.getElementById("saveMessage").textContent="Form cleared.";
 }
 
 function selectTemplate(template,doPreview=true){
-  if(!["blue","gold","ats","corporate"].includes(template))template="blue";
+  if(!["blue","gold","ats","corporate"].includes(template)){
+    template="blue";
+  }
+
   currentTemplate=template;
   document.getElementById("template").value=template;
-  document.querySelectorAll(".template-option").forEach(btn=>btn.classList.toggle("selected",btn.dataset.template===template));
+
+  document.querySelectorAll(".template-option").forEach(btn=>{
+    btn.classList.toggle("selected",btn.dataset.template===template);
+  });
+
   if(doPreview)previewCV();
-  if(document.getElementById("autoSave").checked)saveCV(false);
+
+  if(document.getElementById("autoSave").checked){
+    saveCV(false);
+  }
 }
 
 function linesToHTML(text){
-  const lines=String(text||"").split(/\n/).map(s=>s.trim()).filter(Boolean);
-  if(!lines.length)return "<p class='cv-muted'>Not provided</p>";
-  return "<ul>"+lines.map(line=>"<li>"+escapeHTML(line)+"</li>").join("")+"</ul>";
+  const lines=String(text||"")
+    .split(/\n/)
+    .map(s=>s.trim())
+    .filter(Boolean);
+
+  if(!lines.length){
+    return "<p class='cv-muted'>Not provided</p>";
+  }
+
+  return "<ul>"+lines.map(line=>
+    "<li>"+escapeHTML(line)+"</li>"
+  ).join("")+"</ul>";
 }
 
 function section(title,content){
@@ -416,43 +515,80 @@ function section(title,content){
 }
 
 function previewCV(){
-  const d=getCVData(),paper=document.getElementById("cvPaper");
+  const d=getCVData();
+  const paper=document.getElementById("cvPaper");
+
   paper.className="template-"+currentTemplate;
+
   const name=escapeHTML(d.fullName||"Your Name");
   const title=escapeHTML(d.jobTitle||"Professional Title");
-  const contact=[d.phone,d.email,d.address,d.website].filter(Boolean).map(escapeHTML).join(" &nbsp; | &nbsp; ");
-  const profile=escapeHTML(d.summary||"Professional profile not provided.").replace(/\n/g,"<br>");
+
+  const contact=[d.phone,d.email,d.address,d.website]
+    .filter(Boolean)
+    .map(escapeHTML)
+    .join(" &nbsp; | &nbsp; ");
+
+  const profile=escapeHTML(
+    d.summary||"Professional profile not provided."
+  ).replace(/\n/g,"<br>");
+
   const education=linesToHTML(d.education);
   const experience=linesToHTML(d.experience);
   const skills=linesToHTML(d.skills);
   const languages=linesToHTML(d.languages);
   const certificates=linesToHTML(d.certificates);
-  const header=`<div class="cv-top"><h1>${name}</h1><p class="cv-heading"><strong>${title}</strong></p><p class="cv-contact">${contact||"Phone | Email | Address"}</p></div>`;
+
+  const header=`<div class="cv-top">
+    <h1>${name}</h1>
+    <p class="cv-heading"><strong>${title}</strong></p>
+    <p class="cv-contact">${contact||"Phone | Email | Address"}</p>
+  </div>`;
 
   if(currentTemplate==="corporate"){
-    paper.innerHTML=header+`<div class="cv-body"><aside class="cv-sidebar">
-      ${section("Contact","<p>"+(contact||"Not provided")+"</p>")}
-      ${section("Skills",skills)}
-      ${section("Languages",languages)}
-      ${section("Additional",certificates)}
-      </aside><div class="cv-main">
-      ${section("Professional Profile","<p class='cv-profile'>"+profile+"</p>")}
-      ${section("Work Experience",experience)}
-      ${section("Education",education)}
-      </div></div>`;
+    paper.innerHTML=header+`<div class="cv-body">
+      <aside class="cv-sidebar">
+        ${section("Contact","<p>"+(contact||"Not provided")+"</p>")}
+        ${section("Skills",skills)}
+        ${section("Languages",languages)}
+        ${section("Additional",certificates)}
+      </aside>
+      <div class="cv-main">
+        ${section("Professional Profile","<p class='cv-profile'>"+profile+"</p>")}
+        ${section("Work Experience",experience)}
+        ${section("Education",education)}
+      </div>
+    </div>`;
   }else{
-    let body=section("Professional Profile","<p class='cv-profile'>"+profile+"</p>")+
-      section("Work Experience",experience)+section("Education",education);
+    let body=
+      section("Professional Profile","<p class='cv-profile'>"+profile+"</p>")+
+      section("Work Experience",experience)+
+      section("Education",education);
+
     if(currentTemplate==="ats"){
-      body+=section("Skills",skills)+section("Languages",languages)+section("Certificates & Additional Information",certificates);
+      body+=section("Skills",skills)+
+        section("Languages",languages)+
+        section("Certificates & Additional Information",certificates);
     }else{
-      body+=`<div class="cv-columns"><div>${section("Skills",skills)}${section("Languages",languages)}</div><div>${section("Certificates & Additional Information",certificates)}</div></div>`;
+      body+=`<div class="cv-columns">
+        <div>
+          ${section("Skills",skills)}
+          ${section("Languages",languages)}
+        </div>
+        <div>
+          ${section("Certificates & Additional Information",certificates)}
+        </div>
+      </div>`;
     }
+
     paper.innerHTML=header+`<div class="cv-content">${body}</div>`;
   }
 
-  paper.style.fontSize=(localStorage.getItem("nexa_font_size")||"12")+"px";
-  if(document.getElementById("autoSave").checked)saveCV(false);
+  paper.style.fontSize=
+    (localStorage.getItem("nexa_font_size")||"12")+"px";
+
+  if(document.getElementById("autoSave").checked){
+    saveCV(false);
+  }
 }
 
 /* PAYMENT APPROVAL GATE */
@@ -477,7 +613,7 @@ async function downloadCV(){
     return;
   }
 
-  if(!orders || orders.length===0){
+  if(!orders||orders.length===0){
     alert("PDF saving is locked. Submit your Rs. 100 payment request and wait for admin approval.");
     showPage("accountPage");
     return;
@@ -498,11 +634,21 @@ async function downloadCV(){
 
 /* SETTINGS */
 function loadSettings(){
-  document.getElementById("themeMode").value=localStorage.getItem("nexa_theme")||"light";
-  document.getElementById("accentColor").value=localStorage.getItem("nexa_accent")||"#1769d2";
-  document.getElementById("defaultTemplate").value=localStorage.getItem("nexa_default_template")||"blue";
-  document.getElementById("fontSize").value=localStorage.getItem("nexa_font_size")||"12";
-  document.getElementById("autoSave").checked=localStorage.getItem("nexa_auto_save")!=="false";
+  document.getElementById("themeMode").value=
+    localStorage.getItem("nexa_theme")||"light";
+
+  document.getElementById("accentColor").value=
+    localStorage.getItem("nexa_accent")||"#1769d2";
+
+  document.getElementById("defaultTemplate").value=
+    localStorage.getItem("nexa_default_template")||"blue";
+
+  document.getElementById("fontSize").value=
+    localStorage.getItem("nexa_font_size")||"12";
+
+  document.getElementById("autoSave").checked=
+    localStorage.getItem("nexa_auto_save")!=="false";
+
   applySettings(false);
 }
 
@@ -515,77 +661,168 @@ function applySettings(showMessage=true){
 
   document.body.classList.toggle("dark",theme==="dark");
   document.documentElement.style.setProperty("--primary",accent);
+
   localStorage.setItem("nexa_theme",theme);
   localStorage.setItem("nexa_accent",accent);
   localStorage.setItem("nexa_default_template",template);
   localStorage.setItem("nexa_font_size",fontSize);
   localStorage.setItem("nexa_auto_save",String(autoSave));
+
   previewCV();
 
-  if(showMessage)document.getElementById("settingsMessage").textContent="Settings saved on this device.";
+  if(showMessage){
+    document.getElementById("settingsMessage").textContent=
+      "Settings saved on this device.";
+  }
 }
 
-/* AUTHENTICATION */
+/* LOGIN */
 async function login(){
   const email=document.getElementById("authEmail").value.trim();
   const password=document.getElementById("authPassword").value;
+  const message=document.getElementById("accountMessage");
 
   if(!email||!password){
-    document.getElementById("accountMessage").textContent="Enter your email and password.";
+    message.textContent="Enter your email and password.";
     return;
   }
 
-  const {data,error}=await db.auth.signInWithPassword({email,password});
+  message.textContent="Logging in...";
+
+  const {data,error}=await db.auth.signInWithPassword({
+    email,
+    password
+  });
+
   if(error){
-    document.getElementById("accountMessage").textContent=error.message;
+    message.textContent=error.message;
     return;
   }
 
   currentUser=data.user;
+
   await updateAuthUI();
   loadCV();
-  document.getElementById("accountMessage").textContent="Login successful.";
+
+  message.textContent="Login successful. Welcome to your dashboard!";
+  showPage("builderPage");
 }
 
+/* CREATE ACCOUNT WITH NAME, PHONE AND GENDER */
 async function register(){
+  const name=document.getElementById("registerName").value.trim();
+  const phone=document.getElementById("registerPhone").value.trim();
+  const gender=document.getElementById("registerGender").value;
   const email=document.getElementById("authEmail").value.trim();
   const password=document.getElementById("authPassword").value;
+  const message=document.getElementById("accountMessage");
+  const button=document.getElementById("createAccountBtn");
 
-  if(!email||password.length<6){
-    document.getElementById("accountMessage").textContent="Enter an email and a password with at least 6 characters.";
+  if(!name||!phone||!gender||!email||!password){
+    message.textContent=
+      "Please fill in your name, phone number, gender, email and password.";
     return;
   }
 
-  const {data,error}=await db.auth.signUp({email,password});
-  if(error){
-    document.getElementById("accountMessage").textContent=error.message;
+  if(password.length<6){
+    message.textContent="Password must contain at least 6 characters.";
     return;
   }
 
-  if(data.session){
-    currentUser=data.user;
-    await updateAuthUI();
-    document.getElementById("accountMessage").textContent="Registration successful.";
-  }else{
-    document.getElementById("accountMessage").textContent="Check your email to confirm your account, then log in.";
+  button.disabled=true;
+  button.textContent="Creating Account...";
+  message.textContent="Please wait, creating your account...";
+
+  try{
+    const {data,error}=await db.auth.signUp({
+      email:email,
+      password:password,
+      options:{
+        data:{
+          full_name:name,
+          phone:phone,
+          gender:gender
+        }
+      }
+    });
+
+    if(error){
+      message.textContent=error.message;
+      return;
+    }
+
+    if(data.session&&data.user){
+      currentUser=data.user;
+
+      await updateAuthUI();
+      loadCV();
+
+      message.textContent="Account created successfully. Welcome, "+name+"!";
+      showPage("builderPage");
+    }else{
+      message.textContent=
+        "Account created! Please confirm your email if requested, then log in. Opening your dashboard...";
+
+      showPage("builderPage");
+    }
+  }catch(error){
+    message.textContent="Something went wrong: "+error.message;
+  }finally{
+    button.disabled=false;
+    button.textContent="Create Account";
   }
 }
 
+/* LOGOUT */
 async function logout(){
   const {error}=await db.auth.signOut();
-  if(error){alert(error.message);return;}
+
+  if(error){
+    alert(error.message);
+    return;
+  }
+
   currentUser=null;
   isAdmin=false;
+
   await updateAuthUI();
   loadCV();
   showPage("builderPage");
 }
 
+/* UPDATE HEADER AND ACCOUNT STATUS */
 async function updateAuthUI(){
   const {data}=await db.auth.getUser();
   currentUser=data?.user||null;
-  document.getElementById("headerStatus").textContent=currentUser?"Logged in: "+currentUser.email:"Guest Mode";
-  document.getElementById("accountMessage").textContent=currentUser?"Logged in as "+currentUser.email:"You are not logged in.";
+
+  const header=document.getElementById("headerStatus");
+  const message=document.getElementById("accountMessage");
+
+  if(currentUser){
+    const metadata=currentUser.user_metadata||{};
+    const displayName=metadata.full_name||currentUser.email;
+
+    header.textContent="Welcome, "+displayName;
+    message.textContent="Logged in as "+displayName;
+
+    /* Fill saved profile information when available */
+    if(metadata.full_name){
+      document.getElementById("registerName").value=metadata.full_name;
+    }
+    if(metadata.phone){
+      document.getElementById("registerPhone").value=metadata.phone;
+    }
+    if(metadata.gender){
+      document.getElementById("registerGender").value=metadata.gender;
+    }
+    if(currentUser.email){
+      document.getElementById("authEmail").value=currentUser.email;
+    }
+  }else{
+    header.textContent="Guest Mode";
+    message.textContent="You are not logged in.";
+  }
+
   await checkAdmin();
 }
 
@@ -611,7 +848,10 @@ async function submitRequest(){
 
   const {error}=await db.from("cv_orders").insert({
     user_id:currentUser.id,
-    customer_name:document.getElementById("fullName").value.trim()||currentUser.email,
+    customer_name:
+      document.getElementById("registerName").value.trim()||
+      currentUser.user_metadata?.full_name||
+      currentUser.email,
     payment_method:method,
     transaction_id:reference,
     amount:100,
@@ -623,11 +863,14 @@ async function submitRequest(){
     return;
   }
 
-  message.textContent="Request submitted. Your PDF will unlock after admin approval.";
+  message.textContent=
+    "Request submitted. Your PDF will unlock after admin approval.";
+
   document.getElementById("paymentReference").value="";
   await loadMyRequests();
 }
 
+/* MY REQUESTS */
 async function loadMyRequests(){
   const container=document.getElementById("myRequests");
 
@@ -663,7 +906,7 @@ async function loadMyRequests(){
   </div>`).join("");
 }
 
-/* ADMIN */
+/* ADMIN ACCESS */
 async function checkAdmin(){
   const status=document.getElementById("adminStatus");
 
@@ -682,13 +925,20 @@ async function checkAdmin(){
   }
 
   isAdmin=data===true;
-  status.textContent=isAdmin?"Admin access verified.":"Access denied. This account is not an administrator.";
 
-  if(!isAdmin)document.getElementById("adminRequests").innerHTML="";
+  status.textContent=isAdmin
+    ?"Admin access verified."
+    :"Access denied. This account is not an administrator.";
+
+  if(!isAdmin){
+    document.getElementById("adminRequests").innerHTML="";
+  }
 }
 
+/* ADMIN REQUEST LIST */
 async function loadAdminRequests(){
   const container=document.getElementById("adminRequests");
+
   await checkAdmin();
 
   if(!currentUser||!isAdmin){
@@ -727,15 +977,20 @@ async function loadAdminRequests(){
   </div>`).join("");
 }
 
+/* APPROVE OR REJECT REQUEST */
 async function setOrderStatus(id,status){
   if(!currentUser||!isAdmin){
     alert("Administrator access required.");
     return;
   }
 
-  if(!confirm("Change this request status to "+status+"?"))return;
+  if(!confirm("Change this request status to "+status+"?")){
+    return;
+  }
 
-  const {error}=await db.from("cv_orders").update({status}).eq("id",id);
+  const {error}=await db.from("cv_orders")
+    .update({status})
+    .eq("id",id);
 
   if(error){
     alert("Could not update request: "+error.message);
@@ -746,14 +1001,18 @@ async function setOrderStatus(id,status){
   await loadAdminRequests();
 }
 
-/* STARTUP */
+/* AUTO UPDATE CV PREVIEW */
 document.querySelectorAll("#builderPage input,#builderPage textarea").forEach(field=>{
   field.addEventListener("input",()=>{
     previewCV();
-    if(document.getElementById("autoSave").checked)saveCV(false);
+
+    if(document.getElementById("autoSave").checked){
+      saveCV(false);
+    }
   });
 });
 
+/* STARTUP */
 (async function init(){
   loadSettings();
 
@@ -766,6 +1025,7 @@ document.querySelectorAll("#builderPage input,#builderPage textarea").forEach(fi
 
   db.auth.onAuthStateChange((_event,session)=>{
     currentUser=session?.user||null;
+
     setTimeout(async()=>{
       await updateAuthUI();
       loadCV();
