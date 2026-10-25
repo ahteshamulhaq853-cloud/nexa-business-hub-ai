@@ -70,6 +70,7 @@ textarea{min-height:85px;resize:vertical}
 .cv-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px;align-items:start}
 .paper{display:grid;grid-template-columns:34% 66%;width:100%;min-height:690px;background:white;color:#192638;overflow:hidden;border-radius:4px;--cv-accent:#087e91;--cv-sidebar:#102a43;--cv-heading:#102a43;--cv-side-text:white;--cv-side-heading:#65f3dc}
 .cv-credit{grid-column:1/-1;text-align:center;padding:3px 6px 4px;font-size:5.5px;letter-spacing:.2px;color:#8b95a2;background:#fff;border-top:1px solid #f0f2f5}.cv-credit strong{color:#1769d2;font-weight:700;letter-spacing:.3px}
+.education-entry{margin:0 0 7px!important;padding:0!important;line-height:1.25!important;overflow-wrap:anywhere}.education-entry>strong{display:block;margin:0 0 2px;font-size:inherit}.education-details,.education-meta{font-size:inherit;line-height:1.25!important;margin:0;overflow-wrap:anywhere}.education-meta{color:#4b596b;font-size:.94em}
 .side{background:var(--cv-sidebar);color:var(--cv-side-text);padding:17px;overflow-wrap:anywhere}
 .side h3{color:var(--cv-side-heading);font-size:10px;letter-spacing:1px;border-bottom:1px solid #ffffff40;padding-bottom:6px;margin-top:21px}
 .side p{font-size:10px;line-height:1.45;white-space:pre-wrap;overflow-wrap:anywhere}
@@ -759,7 +760,7 @@ function preview(){
  $("pPersonal").textContent=[v("cvFather")?"Father's Name: "+v("cvFather"):"",v("cvDob")?"Date of Birth: "+v("cvDob"):""].filter(Boolean).join(" | ");
  $("pSummary").textContent=v("cvSummary");
  const escapeHTML=s=>String(s).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
- $("pEducation").innerHTML=v("cvEducation")?v("cvEducation").split("\\n").map(line=>{const parts=line.split(" — ");const degree=parts.shift()||"";return "<div class=\"education-entry\"><strong>"+escapeHTML(degree)+"</strong>"+(parts.length?"<div>"+parts.map(part=>"<div>• "+escapeHTML(part)+"</div>").join("")+"</div>":"")+"</div>"}).join(""):"Add education details.";
+ $("pEducation").innerHTML=v("cvEducation")?v("cvEducation").split("\\n").map(line=>{const parts=line.split(" — ").filter(Boolean);const degree=parts.shift()||"";const meta=parts.filter(part=>/^(Year:|Marks:|Board \/ University \/ Organization:|Result:)/i.test(part));const details=parts.filter(part=>!meta.includes(part));return "<div class=\"education-entry\"><strong>"+escapeHTML(degree)+"</strong>"+(details.length?"<div class=\"education-details\">"+details.map(escapeHTML).join(" · ")+"</div>":"")+(meta.length?"<div class=\"education-meta\">"+meta.map(part=>escapeHTML(part.replace("Board / University / Organization:","Board:"))).join(" · ")+"</div>":"")+"</div>"}).join(""):"Add education details.";
  $("pExperience").textContent=v("cvExperience")||"Add work experience.";
  $("pSkills").innerHTML=v("cvSkills")?v("cvSkills").split("\\n").filter(Boolean).map(skill=>"<div>"+escapeHTML(skill.replace(/^•\\s*/,""))+"</div>").join(""):"Add your skills";
  $("pLanguages").textContent=v("cvLanguages")||"Add your languages";$("pReferences").textContent=v("cvReferences");
