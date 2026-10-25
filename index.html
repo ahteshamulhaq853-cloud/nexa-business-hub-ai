@@ -17,6 +17,7 @@ button:disabled{opacity:.45;cursor:not-allowed}
 .education-entry{margin:0 0 8px;line-height:1.35}.education-entry>strong{display:block;font-weight:800}.education-entry>div{margin-top:2px}.education-entry>div>div{margin-top:1px}.side #pSkills>div{margin:0 0 3px}
 .option-search{width:100%;padding:9px 11px;margin:5px 0 7px;border:1px solid #315563;border-radius:8px;background:#091321;color:var(--text);outline-color:var(--cyan)}
 .option-search::placeholder{color:var(--muted)}
+#dashboardName{display:inline-block;font-size:clamp(16px,2.5vw,24px);letter-spacing:1px;text-transform:uppercase;line-height:1.25}
 button.secondary{background:#19283c;color:white;border-color:#304a60}
 button.ghost{background:transparent;color:var(--cyan);border-color:#315563}
 button.danger{background:#421b28;color:#ffc1cc;border-color:#783447}
@@ -430,8 +431,8 @@ function setUI(){
  $("mainNav").style.display=currentUser?"flex":"none";
  if(currentUser){
   const m=currentUser.user_metadata||{};
-  const name=m.full_name||currentUser.email||"CV Creator";
-  $("dashboardName").textContent=name;
+  const name=m.username||m.full_name||(currentUser.email?currentUser.email.split("@")[0]:"CV Creator");
+  $("dashboardName").textContent=String(name).toUpperCase();
   $("cvName").value=$("cvName").value||m.full_name||"";
   $("cvPhone").value=$("cvPhone").value||m.phone||"";
   $("cvEmail").value=$("cvEmail").value||currentUser.email||"";
