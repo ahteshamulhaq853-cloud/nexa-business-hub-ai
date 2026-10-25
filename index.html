@@ -538,9 +538,10 @@ header{padding:16px clamp(16px,4vw,46px)!important;background:rgba(9,10,13,.96)!
 #mainNav button:nth-child(1){grid-column:1/-1;grid-row:1;margin-bottom:0!important}
 #mainNav button:nth-child(2){grid-column:1;grid-row:2}
 #mainNav button:nth-child(3){grid-column:2;grid-row:2}
-#mainNav button:nth-child(4){grid-column:1;grid-row:4}
-#mainNav button:nth-child(5){grid-column:2;grid-row:4}
+#mainNav button:nth-child(4){grid-column:1;grid-row:5}
+#mainNav button:nth-child(5){grid-column:2;grid-row:5}
 #mainNav button:nth-child(6){grid-column:1/-1;grid-row:3;margin-top:0!important}
+#mainNav button:nth-child(7){grid-column:1/-1;grid-row:4}
 @media(min-width:761px){
  header{align-items:center}
  #mainNav{min-width:300px;max-width:390px}
@@ -558,6 +559,7 @@ header{padding:16px clamp(16px,4vw,46px)!important;background:rgba(9,10,13,.96)!
   <button class="ghost" id="adminButton" style="display:none" onclick="showPage('adminPage')">Admin</button>
   <button class="secondary" onclick="logout()">Logout</button>
   <button class="ghost" onclick="showPage('paymentPage')">Our Payment</button>
+  <button class="ghost" onclick="showPage('settingsPage')">Settings</button>
  </nav>
 </header>
 <main>
@@ -854,6 +856,25 @@ header{padding:16px clamp(16px,4vw,46px)!important;background:rgba(9,10,13,.96)!
  </div>
  <div class="card"><div class="preview-head"><h2>My Requests</h2><button class="secondary" onclick="loadMyOrders()">Refresh</button></div><div id="myOrders" class="table-wrap">Please login to view requests.</div></div>
 </section>
+<section id="settingsPage" class="page">
+ <div class="hero"><span class="eyebrow">ACCOUNT PREFERENCES</span><h1>Account <span class="neon">Settings.</span></h1><p>Manage your password and account security.</p></div>
+ <div class="grid">
+  <div class="card"><h2>Change Password</h2><p class="muted">Enter a new password for your current account.</p><div id="changePasswordMsg" class="message"></div>
+   <form id="changePasswordForm">
+    <div class="field"><label for="newPassword">New Password</label><input id="newPassword" type="password" minlength="6" autocomplete="new-password" required></div>
+    <div class="field"><label for="confirmNewPassword">Confirm New Password</label><input id="confirmNewPassword" type="password" minlength="6" autocomplete="new-password" required></div>
+    <button type="submit">Update Password</button>
+   </form>
+  </div>
+  <div class="card"><h2>Forgot Password</h2><p class="muted">We will send a password reset link to your email address.</p><div id="forgotPasswordMsg" class="message"></div>
+   <form id="forgotPasswordForm">
+    <div class="field"><label for="resetEmail">Account Email</label><input id="resetEmail" type="email" autocomplete="email" required></div>
+    <button type="submit">Send Reset Link</button>
+   </form>
+  </div>
+ </div>
+ <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
+</section>
 <section id="adminPage" class="page">
  <div class="hero"><span class="eyebrow">RESTRICTED AREA / 03</span><h1>Admin <span class="neon">Control Panel.</span></h1><p>Only authorised admins can review payment requests.</p></div>
  <div class="card"><div id="adminMsg" class="message"></div><div class="preview-head"><h2>Payment Requests</h2><button onclick="loadAdminOrders()">Refresh Orders</button></div><div id="adminOrders" class="table-wrap">Loading...</div></div>
@@ -942,6 +963,26 @@ function showAuthForm(type){
  loginCard.style.display=type==="login"?"block":"none";
  clearMsg("regMsg");clearMsg("loginMsg");
 }
+async function changeAccountPassword(e){
+ e.preventDefault();clearMsg("changePasswordMsg");
+ const password=$("newPassword").value,confirm=$("confirmNewPassword").value;
+ if(password.length<6){msg("changePasswordMsg","Password must be at least 6 characters.","error");return}
+ if(password!==confirm){msg("changePasswordMsg","Passwords do not match.","error");return}
+ if(!currentUser){msg("changePasswordMsg","Please log in first.","error");return}
+ const {error}=await db.auth.updateUser({password});
+ if(error){msg("changePasswordMsg",error.message,"error");return}
+ $("changePasswordForm").reset();msg("changePasswordMsg","Password updated successfully.","success");
+}
+async function sendPasswordReset(e){
+ e.preventDefault();clearMsg("forgotPasswordMsg");
+ const email=$("resetEmail").value.trim();
+ const {error}=await db.auth.resetPasswordForEmail(email,{redirectTo:window.location.href.split("#")[0]});
+ if(error){msg("forgotPasswordMsg",error.message,"error");return}
+ msg("forgotPasswordMsg","If an account exists for this email, a password reset link has been sent. Check your inbox and spam folder.","success");
+}
+$("changePasswordForm").addEventListener("submit",changeAccountPassword);
+$("forgotPasswordForm").addEventListener("submit",sendPasswordReset);
+
 $("registerForm").addEventListener("submit",register);
 $("loginForm").addEventListener("submit",login);
 
