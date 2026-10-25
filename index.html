@@ -422,7 +422,7 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
 <div class="field"><label for="euPhone">Phone</label><input id="euPhone" oninput="previewEuropass()"></div>
 <div class="field"><label for="euAddress">Address / City / Country</label><input id="euAddress" oninput="previewEuropass()"></div>
 <div class="field"><label for="euDob">Date of birth (optional)</label><input id="euDob" oninput="previewEuropass()"></div>
-<div class="field"><label for="euNationality">Nationality (optional)</label><input id="euNationality" oninput="previewEuropass()"></div>
+<div class="field"><label for="euNationality">Nationality (optional)</label><select id="euNationality" onchange="previewEuropass()"><option value="">Select nationality</option><option>Pakistani</option><option>Afghan</option><option>Bangladeshi</option><option>Indian</option><option>Nepalese</option><option>Sri Lankan</option><option>Saudi</option><option>Emirati</option><option>British</option><option>American</option><option>Canadian</option><option>Australian</option><option>German</option><option>French</option><option>Turkish</option><option>Other</option></select></div>
 <div class="field"><label for="euWebsite">Website / LinkedIn (optional)</label><input id="euWebsite" oninput="previewEuropass()"></div>
 <div class="actions eu-step-actions"><button type="button" class="secondary" onclick="euNextStep(-1)">← Previous</button><button type="button" onclick="euNextStep(1)">Next: Profile & Experience →</button></div></div>
 <div class="eu-step-panel" data-eu-step="1"><h2>2. Profile & Experience</h2><h3>Professional Profile</h3><div class="field"><label for="euProfile">About me / professional summary</label><textarea id="euProfile" oninput="previewEuropass()"></textarea></div>
