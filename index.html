@@ -458,6 +458,9 @@ hr{border-color:#39352c}
 #accountPage .message.show{background:#22251f;color:#e7dfc9;border-color:#655637}
 #accountPage .message.error{background:#321c21;color:#ffdce0;border-color:#75414a}
 #accountPage .message.success{background:#1d2b22;color:#d6f1df;border-color:#41644e}
+#accountPage .auth-switch{margin:18px 0 0;text-align:center}
+#accountPage .auth-link{display:inline;padding:0;margin:0 0 0 4px;border:0;background:transparent;color:#e8d5a5;text-decoration:underline;font-weight:800;box-shadow:none;min-height:0}
+#accountPage .auth-link:hover{color:#fff0c2;transform:none}
 @media(max-width:700px){
  #accountPage>.hero{padding:23px 19px;border-radius:19px}
  #accountPage>.grid{grid-template-columns:minmax(0,1fr);gap:15px}
@@ -486,8 +489,8 @@ hr{border-color:#39352c}
   <p>Create your professional resume with a modern experience. Register or log in to get started.</p>
   <span class="pill">SECURE ACCOUNT · BEAUTIFUL & PROFESSIONAL DESIGNS · A4 EXPORT</span>
  </div>
- <div class="grid">
-  <div class="card">
+ <div class="grid" id="authFormsGrid">
+  <div class="card" id="registerCard">
    <span class="eyebrow">NEW ACCOUNT</span><h2>Create Account</h2>
    <div id="regMsg" class="message"></div>
    <form id="registerForm">
@@ -498,8 +501,9 @@ hr{border-color:#39352c}
     <div class="field"><label for="regPassword">Password</label><input id="regPassword" type="password" minlength="6" autocomplete="new-password" required></div>
     <button type="submit" style="width:100%">Create My Account ↗</button>
    </form>
+   <p class="muted auth-switch">Already have an account? <button type="button" class="auth-link" onclick="showAuthForm('login')">Login</button></p>
   </div>
-  <div class="card">
+  <div class="card" id="loginCard" style="display:none">
    <span class="eyebrow">WELCOME BACK</span><h2>Login</h2>
    <div id="loginMsg" class="message"></div>
    <form id="loginForm">
@@ -508,6 +512,7 @@ hr{border-color:#39352c}
     <button type="submit" style="width:100%">Login to Nexa →</button>
    </form>
    <p class="muted">Your workspace keeps your CV details and payment requests together.</p>
+   <p class="muted auth-switch">Don't have an account? <button type="button" class="auth-link" onclick="showAuthForm('register')">Register</button></p>
   </div>
  </div>
 </section>
@@ -850,6 +855,13 @@ async function login(e){
 }
 async function logout(){
  await db.auth.signOut();currentUser=null;approvedForPDF=false;setUI();$("pdfBtn").disabled=true;$("adminButton").style.display="none";showPage("accountPage");
+}
+function showAuthForm(type){
+ const registerCard=$("registerCard"),loginCard=$("loginCard");
+ if(!registerCard||!loginCard)return;
+ registerCard.style.display=type==="register"?"block":"none";
+ loginCard.style.display=type==="login"?"block":"none";
+ clearMsg("regMsg");clearMsg("loginMsg");
 }
 $("registerForm").addEventListener("submit",register);
 $("loginForm").addEventListener("submit",login);
