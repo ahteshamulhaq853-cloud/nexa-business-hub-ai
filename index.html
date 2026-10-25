@@ -672,7 +672,7 @@ function preview(){
  $("pPersonal").textContent=[v("cvFather")?"Father's Name: "+v("cvFather"):"",v("cvDob")?"Date of Birth: "+v("cvDob"):""].filter(Boolean).join(" | ");
  $("pSummary").textContent=v("cvSummary");
  const escapeHTML=s=>String(s).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
- $("pEducation").innerHTML=v("cvEducation")?v("cvEducation").split("\\n").map(line=>{const parts=line.split(" — ");const degree=parts.shift()||"";return "<div class=\"education-entry\"><strong>"+escapeHTML(degree)+"</strong>"+(parts.length?"<div>"+parts.map(part=>"<div>"+escapeHTML(part)+"</div>").join("")+"</div>":"")+"</div>"}).join(""):"Add education details.";
+ $("pEducation").innerHTML=v("cvEducation")?v("cvEducation").split("\\n").map(line=>{const parts=line.split(" — ");const degree=parts.shift()||"";return "<div class=\"education-entry\"><strong>"+escapeHTML(degree)+"</strong>"+(parts.length?"<div>"+parts.map(part=>"<div>• "+escapeHTML(part)+"</div>").join("")+"</div>":"")+"</div>"}).join(""):"Add education details.";
  $("pExperience").textContent=v("cvExperience")||"Add work experience.";
  $("pSkills").innerHTML=v("cvSkills")?v("cvSkills").split("\\n").filter(Boolean).map(skill=>"<div>"+escapeHTML(skill.replace(/^•\\s*/,""))+"</div>").join(""):"Add your skills";
  $("pLanguages").textContent=v("cvLanguages")||"Add your languages";$("pReferences").textContent=v("cvReferences");
