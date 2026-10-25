@@ -155,6 +155,9 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
 
 @media(max-width:760px){header{position:relative}nav{width:100%}nav button{flex:1}.grid,.grid.three,.cv-layout{grid-template-columns:1fr}.hero{padding:21px}}
 @media(max-width:420px){main{padding:0 9px;margin-top:15px}.card{padding:14px}.paper{grid-template-columns:32% 68%}.side{padding:9px}.content{padding:12px 10px}.content h1{font-size:18px}.photo{width:63px;height:78px}.template-grid{grid-template-columns:1fr 1fr}}
+.europass-paper{background:#fff;color:#24364b;border:1px solid #d5dfeb;width:100%;min-height:690px;padding:24px 28px;font-family:Arial,sans-serif;overflow-wrap:anywhere}
+.europass-band{border-bottom:3px solid #155eef;padding-bottom:12px}.eu-kicker{font-size:10px;letter-spacing:2px;color:#155eef;font-weight:bold}.europass-band h1{font-size:25px;color:#123b7a;margin:7px 0}.eu-contact{padding:12px 0;border-bottom:1px solid #d8e2ef;font-size:10px;white-space:pre-wrap}.eu-section{margin-top:16px}.eu-section h2{font-size:11px;color:#155eef;border-bottom:1px solid #b9cdea;padding-bottom:5px}.eu-section p{font-size:10px;line-height:1.5;white-space:pre-wrap}.eu-foot{text-align:center;font-size:7px;color:#8493a7;margin-top:20px}
+@media print{body.print-europass header,body.print-europass footer,body.print-europass .no-print{display:none!important}body.print-europass .page{display:none!important}body.print-europass #europassPage.active{display:block!important}body.print-europass #europassPage .cv-layout{display:block!important}body.print-europass #europassForm{display:none!important}body.print-europass .preview-head{display:none!important}body.print-europass #europassPaper{width:200mm!important;border:0!important;padding:5mm 7mm!important}body.print-europass .eu-section{margin-top:4mm!important}}
 @page{size:A4;margin:5mm}
 @media print{
  html,body{background:white!important;margin:0!important;padding:0!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -181,6 +184,7 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
  <nav id="mainNav" style="display:none">
   <button class="ghost" onclick="showPage('dashboardPage')">Dashboard</button>
   <button class="ghost" onclick="showPage('builderPage')">CV Builder</button>
+  <button class="ghost" onclick="showPage('europassPage')">Europass CV</button>
   <button class="ghost" onclick="showPage('paymentPage')">Payment</button>
   <button class="ghost" id="adminButton" style="display:none" onclick="showPage('adminPage')">Admin</button>
   <button class="secondary" onclick="logout()">Logout</button>
@@ -411,6 +415,43 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
   </div>
  </div>
 </section>
+<section id="europassPage" class="page">
+<div class="hero no-print"><span class="eyebrow">EUROPASS WORKSPACE</span><h1>Europass <span class="neon">CV Builder.</span></h1><p>A separate CV builder with its own form and preview. Optional fields can be left blank.</p></div>
+<div class="actions no-print"><button class="secondary" onclick="showPage('builderPage')">Normal CV Builder</button><button class="ghost" onclick="showPage('paymentPage')">Payment / PDF Access</button></div>
+<div class="cv-layout"><form id="europassForm" class="card no-print" onsubmit="return false">
+<h2>Personal Information</h2>
+<div class="field"><label for="euName">Full name *</label><input id="euName" required oninput="previewEuropass()"></div>
+<div class="field"><label for="euJob">Job title / Target position</label><input id="euJob" oninput="previewEuropass()"></div>
+<div class="field"><label for="euEmail">Email</label><input id="euEmail" type="email" oninput="previewEuropass()"></div>
+<div class="field"><label for="euPhone">Phone</label><input id="euPhone" oninput="previewEuropass()"></div>
+<div class="field"><label for="euAddress">Address / City / Country</label><input id="euAddress" oninput="previewEuropass()"></div>
+<div class="field"><label for="euDob">Date of birth (optional)</label><input id="euDob" oninput="previewEuropass()"></div>
+<div class="field"><label for="euNationality">Nationality (optional)</label><input id="euNationality" oninput="previewEuropass()"></div>
+<div class="field"><label for="euWebsite">Website / LinkedIn (optional)</label><input id="euWebsite" oninput="previewEuropass()"></div>
+<h3>Profile</h3><div class="field"><label for="euProfile">About me</label><textarea id="euProfile" oninput="previewEuropass()"></textarea></div>
+<h3>Work Experience</h3><div class="field"><label for="euWork">One job per line: title — employer — dates — duties</label><textarea id="euWork" rows="4" oninput="previewEuropass()"></textarea></div>
+<h3>Education and Training</h3><div class="field"><label for="euEducation">One qualification per line: qualification — institute — year — result</label><textarea id="euEducation" rows="4" oninput="previewEuropass()"></textarea></div>
+<h3>Skills</h3><div class="field"><label for="euLanguages">Languages and proficiency</label><textarea id="euLanguages" oninput="previewEuropass()"></textarea></div>
+<div class="field"><label for="euDigital">Digital skills</label><textarea id="euDigital" oninput="previewEuropass()"></textarea></div>
+<div class="field"><label for="euOtherSkills">Other job-related skills</label><textarea id="euOtherSkills" oninput="previewEuropass()"></textarea></div>
+<h3>Additional Information</h3><div class="field"><label for="euCertificates">Certificates / Courses</label><textarea id="euCertificates" oninput="previewEuropass()"></textarea></div>
+<div class="field"><label for="euProjects">Projects / Publications</label><textarea id="euProjects" oninput="previewEuropass()"></textarea></div>
+<div class="field"><label for="euDriving">Driving licence</label><input id="euDriving" oninput="previewEuropass()"></div>
+<div class="field"><label for="euReferences">Additional information / References</label><textarea id="euReferences" oninput="previewEuropass()"></textarea></div>
+<div id="euMsg" class="message"></div><div class="actions"><button type="button" onclick="saveEuropass()">Save Europass CV</button><button type="button" class="secondary" onclick="clearEuropass()">Clear Form</button><button type="button" onclick="printEuropass()">Print / Save PDF</button></div><p class="small-note">PDF export uses the same payment approval as your normal CV.</p>
+</form><div><div class="preview-head"><span class="pill">EUROPASS LIVE PREVIEW · A4</span></div><article id="europassPaper" class="europass-paper">
+<div class="europass-band"><div><div class="eu-kicker">CURRICULUM VITAE</div><h1 id="euPName">YOUR FULL NAME</h1><div id="euPJob"></div></div></div><div id="euPContact" class="eu-contact"></div>
+<section class="eu-section" id="euProfileSec"><h2>ABOUT ME</h2><p id="euPProfile"></p></section>
+<section class="eu-section" id="euWorkSec"><h2>WORK EXPERIENCE</h2><p id="euPWork"></p></section>
+<section class="eu-section" id="euEduSec"><h2>EDUCATION AND TRAINING</h2><p id="euPEducation"></p></section>
+<section class="eu-section" id="euLangSec"><h2>LANGUAGE SKILLS</h2><p id="euPLanguages"></p></section>
+<section class="eu-section" id="euDigitalSec"><h2>DIGITAL SKILLS</h2><p id="euPDigital"></p></section>
+<section class="eu-section" id="euSkillsSec"><h2>OTHER SKILLS</h2><p id="euPOtherSkills"></p></section>
+<section class="eu-section" id="euCertSec"><h2>CERTIFICATES AND COURSES</h2><p id="euPCertificates"></p></section>
+<section class="eu-section" id="euProjectsSec"><h2>PROJECTS / PUBLICATIONS</h2><p id="euPProjects"></p></section>
+<section class="eu-section" id="euDrivingSec"><h2>DRIVING LICENCE</h2><p id="euPDriving"></p></section>
+<section class="eu-section" id="euRefsSec"><h2>ADDITIONAL INFORMATION</h2><p id="euPReferences"></p></section>
+<div class="eu-foot">Created with NEXA CV STUDIO · Europass-style layout</div></article></div></div></section>
 <section id="paymentPage" class="page">
  <div class="hero"><span class="eyebrow">PDF ACCESS / 02</span><h1>Payment & <span class="neon">Access.</span></h1><p>Pay Rs. 100, submit your transaction reference, and wait for admin approval before PDF export is enabled.</p><span class="pill">FEE: RS. 100</span> <span class="pill" style="color:#65f3dc;border-color:#65f3dc">40% DISCOUNT · FOR 15 DAYS</span></div>
  <div class="grid">
@@ -467,6 +508,7 @@ function clearMsg(id){$(id).textContent="";$(id).className="message"}
 function showPage(id){
  document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
  $(id).classList.add("active");window.scrollTo({top:0,behavior:"smooth"});
+ if(id==="europassPage")loadEuropass();
  if(id==="paymentPage")loadMyOrders();
  if(id==="adminPage")loadAdminOrders();
 }
@@ -795,6 +837,18 @@ async function loadCV(){
  if(!error&&data&&data.cv_data){applyCV(data.cv_data);return}
  try{const local=localStorage.getItem("nexa_cv_"+currentUser.id);if(local)applyCV(JSON.parse(local))}catch(e){}
 }
+const euIds=["euName","euJob","euEmail","euPhone","euAddress","euDob","euNationality","euWebsite","euProfile","euWork","euEducation","euLanguages","euDigital","euOtherSkills","euCertificates","euProjects","euDriving","euReferences"];
+function euVal(id){return ($(id).value||"").trim()}
+function previewEuropass(){
+ $("euPName").textContent=(euVal("euName")||"YOUR FULL NAME").toUpperCase();$("euPJob").textContent=euVal("euJob");
+ $("euPContact").textContent=[euVal("euEmail"),euVal("euPhone"),euVal("euAddress"),euVal("euDob")?"Date of birth: "+euVal("euDob"):"",euVal("euNationality")?"Nationality: "+euVal("euNationality"):"",euVal("euWebsite")].filter(Boolean).join(" | ");
+ const pairs=[["euProfile","euProfileSec","euPProfile"],["euWork","euWorkSec","euPWork"],["euEducation","euEduSec","euPEducation"],["euLanguages","euLangSec","euPLanguages"],["euDigital","euDigitalSec","euPDigital"],["euOtherSkills","euSkillsSec","euPOtherSkills"],["euCertificates","euCertSec","euPCertificates"],["euProjects","euProjectsSec","euPProjects"],["euDriving","euDrivingSec","euPDriving"],["euReferences","euRefsSec","euPReferences"]];
+ pairs.forEach(function(p){var val=euVal(p[0]);$(p[1]).style.display=val?"block":"none";$(p[2]).textContent=val});
+}
+function saveEuropass(){if(!currentUser){showPage("accountPage");msg("loginMsg","Please login first.","error");return}if(!euVal("euName")){msg("euMsg","Full name is required.","error");return}var d={};euIds.forEach(function(id){d[id]=euVal(id)});try{localStorage.setItem("nexa_europass_"+currentUser.id,JSON.stringify(d));msg("euMsg","Europass CV saved on this device.","success")}catch(e){msg("euMsg","Could not save this CV in browser storage.","error")}}
+function loadEuropass(){if(!currentUser)return;try{var raw=localStorage.getItem("nexa_europass_"+currentUser.id);if(raw){var d=JSON.parse(raw);euIds.forEach(function(id){if(typeof d[id]==="string")$(id).value=d[id]})}}catch(e){}previewEuropass()}
+function clearEuropass(){if(!confirm("Clear all Europass CV fields?"))return;euIds.forEach(function(id){$(id).value=""});try{if(currentUser)localStorage.removeItem("nexa_europass_"+currentUser.id)}catch(e){}previewEuropass();msg("euMsg","Form cleared.","info")}
+function printEuropass(){if(!currentUser){showPage("accountPage");return}if(!approvedForPDF){showPage("paymentPage");alert("PDF export requires Rs. 100 payment approval.");return}if(!euVal("euName")){msg("euMsg","Please enter your full name first.","error");return}previewEuropass();document.body.classList.add("print-europass");window.addEventListener("afterprint",function(){document.body.classList.remove("print-europass")},{once:true});window.print()}
 function printCV(){
  if(!approvedForPDF){showPage("paymentPage");alert("PDF export requires Rs. 100 payment approval.");return}
  preview();window.print();
