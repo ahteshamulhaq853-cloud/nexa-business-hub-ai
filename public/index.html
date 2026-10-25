@@ -6,7 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#090d18">
 <title>Nexa CV Studio | Dark Tech Neon</title>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <style>
 :root{
  --bg:#080c15;--panel:#0e1727;--panel2:#132238;
@@ -37,7 +39,8 @@ header{
 nav{display:flex;gap:4px;flex-wrap:wrap}
 nav button{font-size:12px;padding:9px}
 main{max-width:1180px;margin:25px auto;padding:0 15px}
-.page{display:none}.page.active{display:block}
+.page{display:none}
+.page.active{display:block}
 .hero{
  background:linear-gradient(130deg,#12263a,#0b1421);
  border:1px solid #315764;border-radius:18px;padding:26px;margin-bottom:17px;
@@ -55,7 +58,9 @@ main{max-width:1180px;margin:25px auto;padding:0 15px}
  box-shadow:0 8px 25px #0003;min-width:0
 }
 h1,h2,h3{color:#f2fbff}
-h1{font-size:26px}h2{font-size:21px}h3{font-size:15px}
+h1{font-size:26px}
+h2{font-size:21px}
+h3{font-size:15px}
 .field{margin-bottom:13px}
 label{display:block;font-size:12px;font-weight:bold;color:#c8d9e8;margin-bottom:6px}
 input,select,textarea{
@@ -73,21 +78,38 @@ textarea{min-height:85px;resize:vertical}
 .stat{background:#111e2e;border:1px solid var(--line);border-radius:13px;padding:17px}
 .stat strong{display:block;color:var(--cyan);font-size:25px;margin-bottom:5px}
 .stat span,.small-note{font-size:12px;color:var(--muted);line-height:1.5}
-.cv-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px;align-items:start}
+
+.cv-layout{
+ display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+ gap:16px;align-items:start
+}
 .paper{
  display:grid;grid-template-columns:34% 66%;width:100%;min-height:690px;
- background:white;color:#192638;overflow:hidden;border-radius:4px
+ background:white;color:#192638;overflow:hidden;border-radius:4px;
+ --cv-accent:#087e91;--cv-sidebar:#102a43;--cv-heading:#102a43;
+ --cv-side-text:white;--cv-side-heading:#65f3dc;
 }
-.side{background:#102a43;color:white;padding:17px;overflow-wrap:anywhere}
-.side h3{color:#65f3dc;font-size:10px;letter-spacing:1px;border-bottom:1px solid #ffffff40;padding-bottom:6px;margin-top:21px}
+.side{background:var(--cv-sidebar);color:var(--cv-side-text);padding:17px;overflow-wrap:anywhere}
+.side h3{
+ color:var(--cv-side-heading);font-size:10px;letter-spacing:1px;
+ border-bottom:1px solid #ffffff40;padding-bottom:6px;margin-top:21px
+}
 .side p{font-size:10px;line-height:1.45;white-space:pre-wrap;overflow-wrap:anywhere}
-.photo{width:85px;height:100px;object-fit:cover;display:block;margin:auto;border:2px solid #65f3dc;border-radius:8px}
+.photo{
+ width:85px;height:100px;object-fit:cover;display:block;margin:auto;
+ border:2px solid var(--cv-accent);border-radius:8px
+}
 .content{padding:20px;min-width:0;overflow-wrap:anywhere;color:#253449}
-.content h1{font-size:23px;color:#102a43;margin:0 0 7px;overflow-wrap:anywhere}
-.cv-title{font-size:11px;color:#087e91;font-weight:bold;letter-spacing:1px}
+.content h1{
+ font-size:23px;color:var(--cv-heading);margin:0 0 7px;overflow-wrap:anywhere
+}
+.cv-title{font-size:11px;color:var(--cv-accent);font-weight:bold;letter-spacing:1px}
 .personal{font-size:9px;color:#536477;line-height:1.5}
 .cvsection{margin-top:17px}
-.cvsection h3{font-size:10px;letter-spacing:1px;color:#123d53;border-bottom:1px solid #bad8df;padding-bottom:6px}
+.cvsection h3{
+ font-size:10px;letter-spacing:1px;color:var(--cv-heading);
+ border-bottom:1px solid var(--cv-accent);padding-bottom:6px
+}
 .cvsection div{font-size:10px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
 .preview-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px}
 .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:9px}
@@ -98,8 +120,39 @@ th{background:#15263b;color:var(--cyan)}
 .status.approved{background:#12382e;color:#8dffd0}
 .status.pending{background:#3b2c16;color:#ffdc8d}
 .status.rejected{background:#3a1824;color:#ffb5c0}
-.copyline{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;background:#091320;border:1px solid var(--line);padding:12px;border-radius:9px}
+.copyline{
+ display:flex;align-items:center;justify-content:space-between;gap:8px;
+ flex-wrap:wrap;background:#091320;border:1px solid var(--line);padding:12px;border-radius:9px
+}
+.template-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.template-option{
+ background:#0a1320;border:1px solid #30475d;border-radius:12px;
+ padding:12px;cursor:pointer;text-align:left;color:white;width:100%;margin:0
+}
+.template-option.active{border:2px solid var(--cyan);box-shadow:0 0 14px #65f3dc20}
+.template-swatch{height:70px;display:flex;border-radius:6px;overflow:hidden;margin-bottom:9px;background:white}
+.template-swatch .sw-side{width:34%;background:#102a43}
+.template-swatch .sw-main{flex:1;padding:8px}
+.template-swatch i{display:block;height:4px;background:#c6d3df;margin:6px 0;border-radius:3px}
+.template-option small{display:block;color:var(--muted);font-weight:normal;margin-top:4px}
+
+#cvPaper.template-classic{--cv-accent:#1769d2;--cv-sidebar:#eaf3ff;--cv-heading:#102a56;--cv-side-text:#17314d;--cv-side-heading:#1769d2}
+#cvPaper.template-classic .side{border-right:1px solid #d6e4f5}
+#cvPaper.template-navy-gold{--cv-accent:#b38b3b;--cv-sidebar:#102039;--cv-heading:#102039;--cv-side-text:#fff;--cv-side-heading:#e8c778}
+#cvPaper.template-navy-gold .photo{border-color:#e8c778}
+#cvPaper.template-minimal{--cv-accent:#555f6d;--cv-sidebar:#f1f3f5;--cv-heading:#202833;--cv-side-text:#303946;--cv-side-heading:#202833}
+#cvPaper.template-minimal .side{border-right:1px solid #d9dfe5}
+#cvPaper.template-minimal .photo{border-color:#aab4bf}
+#cvPaper.template-sidebar{--cv-accent:#087e91;--cv-sidebar:#102a43;--cv-heading:#102a43;--cv-side-text:#fff;--cv-side-heading:#65f3dc}
+#cvPaper.template-executive{--cv-accent:#475569;--cv-sidebar:#273449;--cv-heading:#1e293b;--cv-side-text:#fff;--cv-side-heading:#d6e1ee}
+#cvPaper.template-executive .content h1{border-bottom:2px solid #64748b;padding-bottom:8px}
+#cvPaper.template-graduate{--cv-accent:#087f8c;--cv-sidebar:#e4f7f6;--cv-heading:#07505a;--cv-side-text:#17434a;--cv-side-heading:#087f8c}
+#cvPaper.template-graduate .photo{border-color:#087f8c}
+#cvPaper.template-advocate{--cv-accent:#7a263a;--cv-sidebar:#30202a;--cv-heading:#30202a;--cv-side-text:#fff;--cv-side-heading:#e9b7c1}
+#cvPaper.template-advocate .photo{border-color:#d4a7af}
+
 footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
+
 @media(max-width:760px){
  header{position:relative}
  nav{width:100%}nav button{flex:1}
@@ -112,18 +165,26 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
  .paper{grid-template-columns:32% 68%}
  .side{padding:9px}.content{padding:12px 10px}
  .content h1{font-size:18px}.photo{width:63px;height:78px}
+ .template-grid{grid-template-columns:1fr 1fr}
 }
 @page{size:A4;margin:5mm}
 @media print{
- html,body{background:white!important;margin:0!important;padding:0!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ html,body{
+  background:white!important;margin:0!important;padding:0!important;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact
+ }
  header,footer,.no-print,#editor,.preview-head{display:none!important}
  main{width:200mm!important;max-width:none!important;margin:0!important;padding:0!important}
  .page{display:none!important}
  #builderPage.active{display:block!important}
  #builderPage>.hero{display:none!important}
  .cv-layout{display:block!important}
- .paper{display:grid!important;width:200mm!important;min-height:0!important;border:0!important;border-radius:0!important;break-inside:avoid;page-break-inside:avoid}
- .side{padding:8mm 5mm!important;background:#102a43!important}
+ .paper{
+  display:grid!important;width:200mm!important;min-height:0!important;
+  border:0!important;border-radius:0!important;
+  break-inside:avoid;page-break-inside:avoid
+ }
+ .side{padding:8mm 5mm!important}
  .content{padding:8mm 7mm!important}
  .photo{width:25mm;height:30mm}
  .side h3,.cvsection h3{font-size:8pt!important}
@@ -133,6 +194,7 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
 }
 </style>
 </head>
+
 <body>
 <header>
  <div class="brand">⚡ NEXA CV STUDIO<small>DARK TECH · RESUME BUILDER</small></div>
@@ -144,15 +206,16 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
   <button class="secondary" onclick="logout()">Logout</button>
  </nav>
 </header>
-<main>
 
+<main>
 <section id="accountPage" class="page active">
  <div class="hero">
   <span class="eyebrow">NEXT-GEN RESUME PLATFORM</span>
   <h1>Build Your Future.<br><span class="neon">One CV at a Time.</span></h1>
   <p>Create your professional resume with a modern experience. Register or log in to get started.</p>
-  <span class="pill">SECURE ACCOUNT · PROFESSIONAL CV · A4 EXPORT</span>
+  <span class="pill">SECURE ACCOUNT · 7 CV TEMPLATES · A4 EXPORT</span>
  </div>
+
  <div class="grid">
   <div class="card">
    <span class="eyebrow">NEW ACCOUNT</span><h2>Create Account</h2>
@@ -166,6 +229,7 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
     <button type="submit" style="width:100%">Create My Account ↗</button>
    </form>
   </div>
+
   <div class="card">
    <span class="eyebrow">WELCOME BACK</span><h2>Login</h2>
    <div id="loginMsg" class="message"></div>
@@ -184,10 +248,13 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
   <span class="eyebrow">YOUR WORKSPACE</span>
   <h1>Welcome back,<br><span class="neon" id="dashboardName">CV Creator.</span></h1>
   <p>Manage your resume, save your details and check PDF access.</p>
-  <div class="actions"><button onclick="showPage('builderPage')">Open CV Builder →</button><button class="secondary" onclick="showPage('paymentPage')">Payment & Access</button></div>
+  <div class="actions">
+   <button onclick="showPage('builderPage')">Open CV Builder →</button>
+   <button class="secondary" onclick="showPage('paymentPage')">Payment & Access</button>
+  </div>
  </div>
  <div class="grid three">
-  <div class="stat"><strong>01</strong><span>CV workspace</span></div>
+  <div class="stat"><strong>07</strong><span>CV templates</span></div>
   <div class="stat"><strong>A4</strong><span>Print-ready resume</span></div>
   <div class="stat"><strong id="pdfStatusText">Locked</strong><span>PDF export access</span></div>
  </div>
@@ -199,7 +266,8 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
 
 <section id="builderPage" class="page">
  <div class="hero no-print">
-  <span class="eyebrow">RESUME WORKSPACE / 01</span><h1>Professional <span class="neon">CV Builder.</span></h1>
+  <span class="eyebrow">RESUME WORKSPACE / 01</span>
+  <h1>Professional <span class="neon">CV Builder.</span></h1>
   <p>Fill in your details. Your CV preview updates as you type.</p>
   <div id="accessMsg" class="message show">PDF export requires a Rs. 100 payment request and admin approval.</div>
   <div class="actions">
@@ -208,6 +276,44 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
    <button onclick="printCV()" id="pdfBtn" disabled>Download / Print PDF 🔒</button>
   </div>
  </div>
+
+ <div class="card no-print">
+  <span class="eyebrow">DESIGN COLLECTION</span>
+  <h2>Choose Your CV Template</h2>
+  <p class="muted">Tap any design to apply it to your CV preview.</p>
+
+  <div class="template-grid">
+   <button type="button" class="template-option active" data-template="classic" onclick="applyTemplate('classic')">
+    <div class="template-swatch"><div class="sw-side" style="background:#eaf3ff"></div><div class="sw-main"><i style="width:80%;background:#1769d2"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:55%"></i></div></div>
+    Classic Professional<small>Clean blue and white</small>
+   </button>
+   <button type="button" class="template-option" data-template="navy-gold" onclick="applyTemplate('navy-gold')">
+    <div class="template-swatch"><div class="sw-side" style="background:#102039"></div><div class="sw-main"><i style="width:80%;background:#b38b3b"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:55%"></i></div></div>
+    Navy & Gold<small>Premium elegant style</small>
+   </button>
+   <button type="button" class="template-option" data-template="minimal" onclick="applyTemplate('minimal')">
+    <div class="template-swatch"><div class="sw-side" style="background:#f1f3f5"></div><div class="sw-main"><i style="width:80%;background:#555f6d"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:55%"></i></div></div>
+    Minimalist<small>Simple and readable</small>
+   </button>
+   <button type="button" class="template-option" data-template="sidebar" onclick="applyTemplate('sidebar')">
+    <div class="template-swatch"><div class="sw-side" style="background:#102a43"></div><div class="sw-main"><i style="width:80%;background:#087e91"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:55%"></i></div></div>
+    Modern Sidebar<small>Modern teal accents</small>
+   </button>
+   <button type="button" class="template-option" data-template="executive" onclick="applyTemplate('executive')">
+    <div class="template-swatch"><div class="sw-side" style="background:#273449"></div><div class="sw-main"><i style="width:80%;background:#475569"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:55%"></i></div></div>
+    Executive<small>Formal corporate style</small>
+   </button>
+   <button type="button" class="template-option" data-template="graduate" onclick="applyTemplate('graduate')">
+    <div class="template-swatch"><div class="sw-side" style="background:#e4f7f6"></div><div class="sw-main"><i style="width:80%;background:#087f8c"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:55%"></i></div></div>
+    Fresh Graduate<small>Ideal for new applicants</small>
+   </button>
+   <button type="button" class="template-option" data-template="advocate" onclick="applyTemplate('advocate')">
+    <div class="template-swatch"><div class="sw-side" style="background:#30202a"></div><div class="sw-main"><i style="width:80%;background:#7a263a"></i><i style="width:65%"></i><i style="width:90%"></i><i style="width:55%"></i></div></div>
+    Advocate / Legal<small>Professional legal style</small>
+   </button>
+  </div>
+ </div>
+
  <div class="cv-layout">
   <form id="editor" class="card" onsubmit="return false">
    <span class="eyebrow">YOUR INFORMATION</span><h2>Build Your CV</h2>
@@ -227,9 +333,10 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
    <div class="field"><label for="cvReferences">Certificates / References</label><textarea id="cvReferences" oninput="preview()"></textarea></div>
    <button type="button" onclick="saveCV()" style="width:100%">Save CV Details</button>
   </form>
+
   <div>
    <div class="preview-head no-print"><span class="pill">LIVE PREVIEW · A4</span><button class="ghost" onclick="preview()">Refresh</button></div>
-   <div class="paper" id="cvPaper">
+   <div class="paper template-classic" id="cvPaper">
     <aside class="side">
      <img id="photoPreview" class="photo" alt="Profile photo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='120'%3E%3Crect width='100' height='120' fill='%23dbeafe'/%3E%3Ccircle cx='50' cy='40' r='22' fill='%2393b4dc'/%3E%3Cpath d='M5 120 Q8 70 50 70 Q92 70 95 120' fill='%2393b4dc'/%3E%3C/svg%3E">
      <h3>CONTACT</h3><p id="pPhone">Phone</p><p id="pEmail">Email</p><p id="pAddress">Address</p>
@@ -237,7 +344,8 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
      <h3>LANGUAGES</h3><p id="pLanguages">Your languages</p>
     </aside>
     <div class="content">
-     <h1 id="pName">YOUR NAME</h1><div id="pTitle" class="cv-title">PROFESSIONAL TITLE</div>
+     <h1 id="pName">YOUR NAME</h1>
+     <div id="pTitle" class="cv-title">PROFESSIONAL TITLE</div>
      <p id="pPersonal" class="personal"></p>
      <section class="cvsection"><h3>PROFILE</h3><div id="pSummary"></div></section>
      <section class="cvsection"><h3>EDUCATION</h3><div id="pEducation">Add education details.</div></section>
@@ -250,13 +358,29 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
 </section>
 
 <section id="paymentPage" class="page">
- <div class="hero"><span class="eyebrow">PDF ACCESS / 02</span><h1>Payment & <span class="neon">Access.</span></h1><p>Pay Rs. 100, submit your transaction reference, and wait for admin approval before PDF export is enabled.</p><span class="pill">FEE: RS. 100</span></div>
- <div class="grid">
-  <div class="card"><h3>Easypaisa</h3><p class="muted">Account name: <b>GULAP BIBI</b></p><div class="copyline"><b>0342-8974369</b><button onclick="copyNumber('0342-8974369')">Copy</button></div></div>
-  <div class="card"><h3>JazzCash</h3><p class="muted">Account name: <b>EHTISHAMUL HAQ</b></p><div class="copyline"><b>0346-9799347</b><button onclick="copyNumber('0346-9799347')">Copy</button></div></div>
+ <div class="hero">
+  <span class="eyebrow">PDF ACCESS / 02</span>
+  <h1>Payment & <span class="neon">Access.</span></h1>
+  <p>Pay Rs. 100, submit your transaction reference, and wait for admin approval before PDF export is enabled.</p>
+  <span class="pill">FEE: RS. 100</span>
  </div>
+
+ <div class="grid">
+  <div class="card">
+   <h3>Easypaisa</h3>
+   <p class="muted">Account name: <b>EHTISHAMUL HAQ</b></p>
+   <div class="copyline"><b>03469799347</b><button onclick="copyNumber('03469799347')">Copy</button></div>
+  </div>
+  <div class="card">
+   <h3>JazzCash</h3>
+   <p class="muted">Account name: <b>EHTISHAMUL HAQ</b></p>
+   <div class="copyline"><b>0346-9799347</b><button onclick="copyNumber('0346-9799347')">Copy</button></div>
+  </div>
+ </div>
+
  <div class="card">
-  <h2>Submit Payment Request</h2><p class="small-note">WhatsApp support: 0346-9799347. Never share your password or OTP.</p>
+  <h2>Submit Payment Request</h2>
+  <p class="small-note">WhatsApp support: 0346-9799347. Never share your password or OTP.</p>
   <div id="payMsg" class="message"></div>
   <form id="paymentForm">
    <div class="field"><label for="payMethod">Payment Method</label><select id="payMethod"><option>Easypaisa</option><option>JazzCash</option></select></div>
@@ -265,32 +389,56 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
    <button type="submit">Submit Payment Request →</button>
   </form>
  </div>
- <div class="card"><div class="preview-head"><h2>My Requests</h2><button class="secondary" onclick="loadMyOrders()">Refresh</button></div><div id="myOrders" class="table-wrap">Please login to view requests.</div></div>
+ <div class="card">
+  <div class="preview-head"><h2>My Requests</h2><button class="secondary" onclick="loadMyOrders()">Refresh</button></div>
+  <div id="myOrders" class="table-wrap">Please login to view requests.</div>
+ </div>
 </section>
 
 <section id="adminPage" class="page">
- <div class="hero"><span class="eyebrow">RESTRICTED AREA / 03</span><h1>Admin <span class="neon">Control Panel.</span></h1><p>Only authorised admins can review payment requests.</p></div>
- <div class="card"><div id="adminMsg" class="message"></div><div class="preview-head"><h2>Payment Requests</h2><button onclick="loadAdminOrders()">Refresh Orders</button></div><div id="adminOrders" class="table-wrap">Loading...</div></div>
+ <div class="hero">
+  <span class="eyebrow">RESTRICTED AREA / 03</span>
+  <h1>Admin <span class="neon">Control Panel.</span></h1>
+  <p>Only authorised admins can review payment requests.</p>
+ </div>
+ <div class="card">
+  <div id="adminMsg" class="message"></div>
+  <div class="preview-head"><h2>Payment Requests</h2><button onclick="loadAdminOrders()">Refresh Orders</button></div>
+  <div id="adminOrders" class="table-wrap">Loading...</div>
+ </div>
 </section>
-
 </main>
-<footer>NEXA CV STUDIO · DARK TECH NEON · PROFESSIONAL CV BUILDER</footer>
+
+<footer>NEXA CV STUDIO · DARK TECH NEON · 7 PROFESSIONAL CV TEMPLATES</footer>
 
 <script>
 const SUPABASE_URL="https://njfobttocvkjsrvlcjaj.supabase.co";
 const SUPABASE_KEY="sb_publishable_EkEFOVho4ryOYcIOVAqMhQ_z9yoD9TB";
 const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
-let currentUser=null,approvedForPDF=false,photoData="";
+
+let currentUser=null;
+let approvedForPDF=false;
+let photoData="";
+let currentTemplate="classic";
 
 const $=id=>document.getElementById(id);
-function msg(id,text,type="info"){$(id).textContent=text;$(id).className="message show "+type}
-function clearMsg(id){$(id).textContent="";$(id).className="message"}
+
+function msg(id,text,type="info"){
+ $(id).textContent=text;
+ $(id).className="message show "+type;
+}
+function clearMsg(id){
+ $(id).textContent="";
+ $(id).className="message";
+}
 function showPage(id){
  document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
- $(id).classList.add("active");window.scrollTo({top:0,behavior:"smooth"});
+ $(id).classList.add("active");
+ window.scrollTo({top:0,behavior:"smooth"});
  if(id==="paymentPage")loadMyOrders();
  if(id==="adminPage")loadAdminOrders();
 }
+
 function setUI(){
  $("mainNav").style.display=currentUser?"flex":"none";
  if(currentUser){
@@ -302,57 +450,157 @@ function setUI(){
   $("cvEmail").value=$("cvEmail").value||currentUser.email||"";
  }
 }
+
 async function register(e){
- e.preventDefault();clearMsg("regMsg");
- const name=$("regName").value.trim(),phone=$("regPhone").value.trim();
- const gender=$("regGender").value,email=$("regEmail").value.trim(),password=$("regPassword").value;
- if(password.length<6){msg("regMsg","Password must be at least 6 characters.","error");return}
- const {data,error}=await db.auth.signUp({email,password,options:{data:{full_name:name,phone,gender}}});
- if(error){msg("regMsg",error.message,"error");return}
+ e.preventDefault();
+ clearMsg("regMsg");
+
+ const name=$("regName").value.trim();
+ const phone=$("regPhone").value.trim();
+ const gender=$("regGender").value;
+ const email=$("regEmail").value.trim();
+ const password=$("regPassword").value;
+
+ if(password.length<6){
+  msg("regMsg","Password must be at least 6 characters.","error");
+  return;
+ }
+
+ const {data,error}=await db.auth.signUp({
+  email,password,
+  options:{data:{full_name:name,phone,gender}}
+ });
+
+ if(error){
+  msg("regMsg",error.message,"error");
+  return;
+ }
+
  if(data.session&&data.user){
-  currentUser=data.user;setUI();await checkAdmin();await checkApproval();await loadCV();showPage("dashboardPage");
+  currentUser=data.user;
+  setUI();
+  await checkAdmin();
+  await checkApproval();
+  await loadCV();
+  showPage("dashboardPage");
   msg("regMsg","Registration successful!","success");
  }else{
   msg("regMsg","Registration submitted. If email confirmation is enabled, confirm your email and then log in.","success");
  }
 }
+
 async function login(e){
- e.preventDefault();clearMsg("loginMsg");
- const {data,error}=await db.auth.signInWithPassword({email:$("loginEmail").value.trim(),password:$("loginPassword").value});
- if(error){msg("loginMsg",error.message,"error");return}
- currentUser=data.user;setUI();await checkAdmin();await checkApproval();await loadCV();showPage("dashboardPage");
+ e.preventDefault();
+ clearMsg("loginMsg");
+
+ const {data,error}=await db.auth.signInWithPassword({
+  email:$("loginEmail").value.trim(),
+  password:$("loginPassword").value
+ });
+
+ if(error){
+  msg("loginMsg",error.message,"error");
+  return;
+ }
+
+ currentUser=data.user;
+ setUI();
+ await checkAdmin();
+ await checkApproval();
+ await loadCV();
+ showPage("dashboardPage");
  msg("loginMsg","Login successful!","success");
 }
+
 async function logout(){
- await db.auth.signOut();currentUser=null;approvedForPDF=false;setUI();
- $("pdfBtn").disabled=true;$("adminButton").style.display="none";showPage("accountPage");
+ await db.auth.signOut();
+ currentUser=null;
+ approvedForPDF=false;
+ setUI();
+ $("pdfBtn").disabled=true;
+ $("adminButton").style.display="none";
+ showPage("accountPage");
 }
+
 $("registerForm").addEventListener("submit",register);
 $("loginForm").addEventListener("submit",login);
 
-const cvIds=["cvName","cvTitle","cvFather","cvDob","cvPhone","cvEmail","cvAddress","cvSummary","cvEducation","cvExperience","cvSkills","cvLanguages","cvReferences"];
+const cvIds=[
+ "cvName","cvTitle","cvFather","cvDob","cvPhone","cvEmail",
+ "cvAddress","cvSummary","cvEducation","cvExperience",
+ "cvSkills","cvLanguages","cvReferences"
+];
+
 function cvData(){
- const d={};cvIds.forEach(id=>d[id]=$(id).value);d.photoData=photoData||"";return d;
+ const d={};
+ cvIds.forEach(id=>d[id]=$(id).value);
+ d.photoData=photoData||"";
+ d.template=currentTemplate;
+ return d;
 }
+
 function applyCV(d){
  if(!d)return;
- cvIds.forEach(id=>{if(typeof d[id]==="string")$(id).value=d[id]});
+
+ cvIds.forEach(id=>{
+  if(typeof d[id]==="string")$(id).value=d[id];
+ });
+
  if(typeof d.photoData==="string"&&d.photoData.startsWith("data:image/")){
-  photoData=d.photoData;$("photoPreview").src=photoData;
+  photoData=d.photoData;
+  $("photoPreview").src=photoData;
  }
+
+ if(typeof d.template==="string"){
+  applyTemplate(d.template,false);
+ }
+
  preview();
 }
+
+function applyTemplate(template,saveChoice=true){
+ const allowed=[
+  "classic","navy-gold","minimal","sidebar",
+  "executive","graduate","advocate"
+ ];
+
+ if(!allowed.includes(template))template="classic";
+
+ currentTemplate=template;
+
+ const paper=$("cvPaper");
+ paper.classList.remove(
+  "template-classic","template-navy-gold","template-minimal",
+  "template-sidebar","template-executive","template-graduate",
+  "template-advocate"
+ );
+ paper.classList.add("template-"+template);
+
+ document.querySelectorAll(".template-option").forEach(btn=>{
+  btn.classList.toggle("active",btn.dataset.template===template);
+ });
+
+ if(saveChoice){
+  try{
+   localStorage.setItem("nexa_cv_template",template);
+  }catch(e){}
+ }
+}
+
 function preview(){
  const v=id=>$(id).value.trim();
+
  $("pName").textContent=v("cvName")||"YOUR NAME";
  $("pTitle").textContent=v("cvTitle")||"PROFESSIONAL TITLE";
  $("pPhone").textContent=v("cvPhone")||"Phone";
  $("pEmail").textContent=v("cvEmail")||"Email";
  $("pAddress").textContent=v("cvAddress")||"Address";
+
  $("pPersonal").textContent=[
   v("cvFather")?"Father's Name: "+v("cvFather"):"",
   v("cvDob")?"Date of Birth: "+v("cvDob"):""
  ].filter(Boolean).join(" | ");
+
  $("pSummary").textContent=v("cvSummary");
  $("pEducation").textContent=v("cvEducation")||"Add education details.";
  $("pExperience").textContent=v("cvExperience")||"Add work experience.";
@@ -360,112 +608,330 @@ function preview(){
  $("pLanguages").textContent=v("cvLanguages")||"Add your languages";
  $("pReferences").textContent=v("cvReferences");
 }
+
 $("cvPhoto").addEventListener("change",e=>{
- const file=e.target.files&&e.target.files[0];if(!file)return;
- if(!file.type.startsWith("image/")){alert("Please select an image.");return}
- if(file.size>2*1024*1024){alert("Choose an image smaller than 2 MB.");e.target.value="";return}
+ const file=e.target.files&&e.target.files[0];
+ if(!file)return;
+
+ if(!file.type.startsWith("image/")){
+  alert("Please select an image.");
+  return;
+ }
+
+ if(file.size>2*1024*1024){
+  alert("Choose an image smaller than 2 MB.");
+  e.target.value="";
+  return;
+ }
+
  const reader=new FileReader();
- reader.onload=()=>{photoData=reader.result;$("photoPreview").src=photoData};
+ reader.onload=()=>{
+  photoData=reader.result;
+  $("photoPreview").src=photoData;
+ };
  reader.readAsDataURL(file);
 });
+
 async function saveCV(){
- if(!currentUser){showPage("accountPage");msg("loginMsg","Please login to save your CV.","error");return}
+ if(!currentUser){
+  showPage("accountPage");
+  msg("loginMsg","Please login to save your CV.","error");
+  return;
+ }
+
  const cv_data=cvData();
- const {error}=await db.from("cv_profiles").upsert({user_id:currentUser.id,cv_data,updated_at:new Date().toISOString()},{onConflict:"user_id"});
- try{localStorage.setItem("nexa_cv_"+currentUser.id,JSON.stringify(cv_data))}catch(e){}
- if(error)alert("CV saved in this browser, but database save failed: "+error.message);
- else alert("CV details saved successfully!");
+
+ try{
+  localStorage.setItem("nexa_cv_"+currentUser.id,JSON.stringify(cv_data));
+ }catch(e){}
+
+ const {error}=await db.from("cv_profiles").upsert({
+  user_id:currentUser.id,
+  cv_data,
+  updated_at:new Date().toISOString()
+ },{onConflict:"user_id"});
+
+ if(error){
+  alert("CV saved in this browser, but database save failed: "+error.message);
+ }else{
+  alert("CV details and selected template saved successfully!");
+ }
+
  preview();
 }
+
 async function loadCV(){
  if(!currentUser)return;
- const {data,error}=await db.from("cv_profiles").select("cv_data").eq("user_id",currentUser.id).maybeSingle();
- if(!error&&data&&data.cv_data){applyCV(data.cv_data);return}
- try{const local=localStorage.getItem("nexa_cv_"+currentUser.id);if(local)applyCV(JSON.parse(local))}catch(e){}
+
+ const {data,error}=await db.from("cv_profiles")
+  .select("cv_data")
+  .eq("user_id",currentUser.id)
+  .maybeSingle();
+
+ if(!error&&data&&data.cv_data){
+  applyCV(data.cv_data);
+  return;
+ }
+
+ try{
+  const local=localStorage.getItem("nexa_cv_"+currentUser.id);
+  if(local)applyCV(JSON.parse(local));
+ }catch(e){}
 }
+
 function printCV(){
- if(!approvedForPDF){showPage("paymentPage");alert("PDF export requires Rs. 100 payment approval.");return}
- preview();window.print();
+ if(!approvedForPDF){
+  showPage("paymentPage");
+  alert("PDF export requires Rs. 100 payment approval.");
+  return;
+ }
+
+ preview();
+ window.print();
 }
+
 function copyNumber(n){
  if(navigator.clipboard&&navigator.clipboard.writeText){
-  navigator.clipboard.writeText(n).then(()=>alert("Copied: "+n)).catch(()=>prompt("Copy this number:",n));
- }else prompt("Copy this number:",n);
+  navigator.clipboard.writeText(n)
+   .then(()=>alert("Copied: "+n))
+   .catch(()=>prompt("Copy this number:",n));
+ }else{
+  prompt("Copy this number:",n);
+ }
 }
+
 function esc(s){
- return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+ return String(s??"").replace(/[&<>"']/g,c=>({
+  "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+ }[c]));
 }
+
 function statusBadge(s){
  s=String(s||"pending").toLowerCase();
  const cls=["approved","rejected","pending"].includes(s)?s:"pending";
  return `<span class="status ${cls}">${esc(s)}</span>`;
 }
+
 async function checkApproval(){
- if(!currentUser){approvedForPDF=false;return}
- const {data,error}=await db.from("cv_orders").select("id").eq("user_id",currentUser.id).eq("status","approved").limit(1);
+ if(!currentUser){
+  approvedForPDF=false;
+  $("pdfBtn").disabled=true;
+  $("pdfStatusText").textContent="Locked";
+  return;
+ }
+
+ const {data,error}=await db.from("cv_orders")
+  .select("id")
+  .eq("user_id",currentUser.id)
+  .eq("status","approved")
+  .limit(1);
+
  approvedForPDF=!error&&!!(data&&data.length);
+
  $("pdfBtn").disabled=!approvedForPDF;
- $("pdfBtn").textContent=approvedForPDF?"Download / Print PDF ✓":"Download / Print PDF 🔒";
+ $("pdfBtn").textContent=approvedForPDF
+  ?"Download / Print PDF ✓"
+  :"Download / Print PDF 🔒";
+
  $("pdfStatusText").textContent=approvedForPDF?"Unlocked":"Locked";
- $("accessMsg").textContent=approvedForPDF?"Your PDF access is approved. You can print or save your CV as PDF.":"PDF export requires a Rs. 100 payment request and admin approval.";
+
+ $("accessMsg").textContent=approvedForPDF
+  ?"Your PDF access is approved. You can print or save your CV as PDF."
+  :"PDF export requires a Rs. 100 payment request and admin approval.";
 }
+
 $("paymentForm").addEventListener("submit",async e=>{
- e.preventDefault();clearMsg("payMsg");
- if(!currentUser){msg("payMsg","Please login first.","error");showPage("accountPage");return}
+ e.preventDefault();
+ clearMsg("payMsg");
+
+ if(!currentUser){
+  msg("payMsg","Please login first.","error");
+  showPage("accountPage");
+  return;
+ }
+
  const transactionId=$("transactionId").value.trim();
- if(!transactionId){msg("payMsg","Enter your transaction/reference ID.","error");return}
+
+ if(!transactionId){
+  msg("payMsg","Enter your transaction/reference ID.","error");
+  return;
+ }
+
  const {error}=await db.from("cv_orders").insert({
-  user_id:currentUser.id,amount:100,payment_method:$("payMethod").value,
-  transaction_id:transactionId,status:"pending",notes:$("paymentNote").value.trim()
+  user_id:currentUser.id,
+  amount:100,
+  payment_method:$("payMethod").value,
+  transaction_id:transactionId,
+  status:"pending",
+  notes:$("paymentNote").value.trim()
  });
- if(error){msg("payMsg","Request failed: "+error.message,"error");return}
+
+ if(error){
+  msg("payMsg","Request failed: "+error.message,"error");
+  return;
+ }
+
  msg("payMsg","Payment request submitted. Please wait for admin approval.","success");
- $("paymentForm").reset();await loadMyOrders();await checkApproval();
+ $("paymentForm").reset();
+
+ await loadMyOrders();
+ await checkApproval();
 });
+
 async function loadMyOrders(){
- if(!currentUser){$("myOrders").textContent="Please login to view requests.";return}
- const {data,error}=await db.from("cv_orders").select("amount,payment_method,transaction_id,status,created_at").eq("user_id",currentUser.id).order("created_at",{ascending:false});
- if(error){$("myOrders").textContent=error.message;return}
- if(!data||!data.length){$("myOrders").textContent="No payment requests yet.";return}
- $("myOrders").innerHTML=`<table><thead><tr><th>Amount</th><th>Method</th><th>Transaction ID</th><th>Status</th><th>Date</th></tr></thead><tbody>${data.map(o=>`<tr><td>Rs. ${esc(o.amount)}</td><td>${esc(o.payment_method)}</td><td>${esc(o.transaction_id)}</td><td>${statusBadge(o.status)}</td><td>${esc(o.created_at?new Date(o.created_at).toLocaleDateString():"")}</td></tr>`).join("")}</tbody></table>`;
+ if(!currentUser){
+  $("myOrders").textContent="Please login to view requests.";
+  return;
+ }
+
+ const {data,error}=await db.from("cv_orders")
+  .select("amount,payment_method,transaction_id,status,created_at")
+  .eq("user_id",currentUser.id)
+  .order("created_at",{ascending:false});
+
+ if(error){
+  $("myOrders").textContent=error.message;
+  return;
+ }
+
+ if(!data||!data.length){
+  $("myOrders").textContent="No payment requests yet.";
+  return;
+ }
+
+ $("myOrders").innerHTML=`
+  <table>
+   <thead><tr><th>Amount</th><th>Method</th><th>Transaction ID</th><th>Status</th><th>Date</th></tr></thead>
+   <tbody>${data.map(o=>`
+    <tr>
+     <td>Rs. ${esc(o.amount)}</td>
+     <td>${esc(o.payment_method)}</td>
+     <td>${esc(o.transaction_id)}</td>
+     <td>${statusBadge(o.status)}</td>
+     <td>${esc(o.created_at?new Date(o.created_at).toLocaleDateString():"")}</td>
+    </tr>
+   `).join("")}</tbody>
+  </table>`;
+
  await checkApproval();
 }
+
 async function checkAdmin(){
- if(!currentUser){$("adminButton").style.display="none";return}
+ if(!currentUser){
+  $("adminButton").style.display="none";
+  return;
+ }
+
  const {data,error}=await db.rpc("is_app_admin");
  $("adminButton").style.display=!error&&data===true?"inline-block":"none";
 }
+
 async function loadAdminOrders(){
- if(!currentUser){$("adminOrders").textContent="Please login as an authorised admin.";return}
+ if(!currentUser){
+  $("adminOrders").textContent="Please login as an authorised admin.";
+  return;
+ }
+
  const {data:isAdmin,error:adminError}=await db.rpc("is_app_admin");
- if(adminError||isAdmin!==true){$("adminOrders").textContent="Admin access required.";return}
- const {data,error}=await db.from("cv_orders").select("id,user_id,amount,payment_method,transaction_id,status,notes,created_at").order("created_at",{ascending:false});
- if(error){$("adminOrders").textContent=error.message;return}
- if(!data||!data.length){$("adminOrders").textContent="No payment requests.";return}
- $("adminOrders").innerHTML=`<table><thead><tr><th>User ID</th><th>Amount</th><th>Method</th><th>Transaction / Note</th><th>Status</th><th>Action</th></tr></thead><tbody>${data.map(o=>`<tr><td>${esc(o.user_id)}</td><td>Rs. ${esc(o.amount)}</td><td>${esc(o.payment_method)}</td><td>${esc(o.transaction_id)}<br>${esc(o.notes||"")}</td><td>${statusBadge(o.status)}</td><td><button onclick="setStatus('${esc(o.id)}','approved')">Approve</button><button class="danger" onclick="setStatus('${esc(o.id)}','rejected')">Reject</button></td></tr>`).join("")}</tbody></table>`;
+
+ if(adminError||isAdmin!==true){
+  $("adminOrders").textContent="Admin access required.";
+  return;
+ }
+
+ const {data,error}=await db.from("cv_orders")
+  .select("id,user_id,amount,payment_method,transaction_id,status,notes,created_at")
+  .order("created_at",{ascending:false});
+
+ if(error){
+  $("adminOrders").textContent=error.message;
+  return;
+ }
+
+ if(!data||!data.length){
+  $("adminOrders").textContent="No payment requests.";
+  return;
+ }
+
+ $("adminOrders").innerHTML=`
+  <table>
+   <thead><tr><th>User ID</th><th>Amount</th><th>Method</th><th>Transaction / Note</th><th>Status</th><th>Action</th></tr></thead>
+   <tbody>${data.map(o=>`
+    <tr>
+     <td>${esc(o.user_id)}</td>
+     <td>Rs. ${esc(o.amount)}</td>
+     <td>${esc(o.payment_method)}</td>
+     <td>${esc(o.transaction_id)}<br>${esc(o.notes||"")}</td>
+     <td>${statusBadge(o.status)}</td>
+     <td>
+      <button onclick="setStatus('${esc(o.id)}','approved')">Approve</button>
+      <button class="danger" onclick="setStatus('${esc(o.id)}','rejected')">Reject</button>
+     </td>
+    </tr>
+   `).join("")}</tbody>
+  </table>`;
 }
+
 async function setStatus(id,status){
  const {data:isAdmin,error:adminError}=await db.rpc("is_app_admin");
- if(adminError||isAdmin!==true){msg("adminMsg","Admin permission required.","error");return}
+
+ if(adminError||isAdmin!==true){
+  msg("adminMsg","Admin permission required.","error");
+  return;
+ }
+
  if(!confirm("Set this request to "+status+"?"))return;
+
  const {error}=await db.from("cv_orders").update({status}).eq("id",id);
- if(error){msg("adminMsg",error.message,"error");return}
+
+ if(error){
+  msg("adminMsg",error.message,"error");
+  return;
+ }
+
  msg("adminMsg","Request updated successfully.","success");
- await loadAdminOrders();await checkApproval();
+ await loadAdminOrders();
+ await checkApproval();
 }
+
 db.auth.onAuthStateChange((_event,session)=>{
- currentUser=session&&session.user?session.user:null;setUI();
- if(!currentUser){approvedForPDF=false;$("adminButton").style.display="none"}
+ currentUser=session&&session.user?session.user:null;
+ setUI();
+
+ if(!currentUser){
+  approvedForPDF=false;
+  $("adminButton").style.display="none";
+  $("pdfBtn").disabled=true;
+ }
 });
+
 async function init(){
  const {data,error}=await db.auth.getSession();
+
  if(error)console.warn("Session lookup:",error.message);
- currentUser=data&&data.session?data.session.user:null;setUI();
+
+ currentUser=data&&data.session?data.session.user:null;
+ setUI();
+
+ let savedTemplate="classic";
+ try{
+  savedTemplate=localStorage.getItem("nexa_cv_template")||"classic";
+ }catch(e){}
+
+ applyTemplate(savedTemplate,false);
+
  if(currentUser){
-  await loadCV();await checkApproval();await checkAdmin();showPage("dashboardPage");
- }else showPage("accountPage");
+  await loadCV();
+  await checkApproval();
+  await checkAdmin();
+  showPage("dashboardPage");
+ }else{
+  showPage("accountPage");
+ }
+
  preview();
 }
+
 init();
 </script>
 </body>
