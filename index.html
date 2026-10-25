@@ -125,13 +125,13 @@ th{background:#15263b;color:var(--cyan)}
 
 footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
 
-/* Floating corner Settings shortcut */
-#settingsLauncher{display:none;position:absolute;top:14px;right:14px;z-index:1002;width:44px;height:44px;padding:0;margin:0;border:1px solid #dfc58b;border-radius:50%;background:linear-gradient(145deg,#24201a,#111112);color:#f3dca6;font-size:23px;line-height:1;box-shadow:0 6px 20px #0009,0 0 15px #dfc58b20}
-#settingsLauncher:hover{border-color:#f3dca6;box-shadow:0 8px 24px #000b,0 0 18px #dfc58b45;transform:translateY(-2px)}
+/* Settings shortcut centered over the header divider */
+#settingsLauncher{display:none;position:absolute;top:100%;left:50%;transform:translate(-50%,-50%);z-index:1002;width:44px;height:44px;padding:0;margin:0;border:1px solid #dfc58b;border-radius:50%;background:linear-gradient(145deg,#24201a,#111112);color:#f3dca6;font-size:23px;line-height:1;box-shadow:0 6px 20px #0009,0 0 15px #dfc58b20}
+#settingsLauncher:hover{border-color:#f3dca6;box-shadow:0 8px 24px #000b,0 0 18px #dfc58b45;transform:translate(-50%,-50%) scale(1.04)}
 #settingsLauncher:focus-visible{outline:2px solid #f3dca6;outline-offset:3px}
 header{position:sticky}
-@media(max-width:760px){header{padding-right:68px}}
-@media(max-width:420px){#settingsLauncher{top:10px;right:10px;width:40px;height:40px;font-size:21px}header{padding-right:60px}}
+@media(max-width:760px){header{padding-right:15px}main{margin-top:38px}}
+@media(max-width:420px){#settingsLauncher{width:40px;height:40px;font-size:21px}header{padding-right:15px}main{margin-top:34px}}
 
 /* Floating customer support assistant — matched to Nexa's dark navy and cyan UI */
 #supportLauncher{position:fixed;right:20px;bottom:20px;z-index:1000;border:1px solid #65f3dc;border-radius:12px;padding:12px 15px;background:linear-gradient(135deg,#65f3dc,#28b9d4);color:#06131b;box-shadow:0 8px 24px #0007,0 0 18px #65f3dc20;font-weight:900;font-size:13px;transition:transform .18s ease,box-shadow .18s ease}
