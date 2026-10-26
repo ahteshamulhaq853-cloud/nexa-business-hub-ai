@@ -145,6 +145,17 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
 @media(max-width:760px){header{padding-right:68px}main{margin-top:25px}#mainNav.menu-open{width:50vw!important;min-width:245px!important;padding-left:14px!important;padding-right:14px!important}}
 @media(max-width:420px){#settingsLauncher{top:10px;left:10px;right:auto;width:40px;height:40px;font-size:25px}header{padding-right:60px}main{margin-top:15px}#mainNav.menu-open{width:50vw!important;min-width:225px!important;padding:74px 11px 18px!important}#mainNav.menu-open:before{left:13px;font-size:12px}#mainNav.menu-open button{font-size:12px!important;padding:12px 9px!important;min-height:44px!important}}
  
+
+/* Clean list-style Services menu (replaces service cards) */
+.service-list{display:flex;flex-direction:column;border-top:1px solid #294256}
+.service-row{display:flex;align-items:center;gap:15px;width:100%;margin:0;padding:18px 10px;border:0;border-bottom:1px solid #294256;border-radius:0;background:transparent;color:var(--text);text-align:left;box-shadow:none;transition:background .18s ease,padding .18s ease}
+.service-row:hover{background:linear-gradient(90deg,#65f3dc12,transparent);padding-left:16px}
+.service-number{display:flex;align-items:center;justify-content:center;flex:0 0 42px;height:42px;border:1px solid #315764;border-radius:10px;color:var(--cyan);font-size:13px;font-weight:900;background:#0b1725}
+.service-copy{display:flex;flex:1;min-width:0;flex-direction:column;gap:5px}
+.service-copy strong{font-size:15px;color:#eff8ff}
+.service-copy small{font-size:12px;line-height:1.45;color:var(--muted);font-weight:normal}
+.service-arrow{font-size:28px;line-height:1;color:var(--cyan);font-weight:400}
+
 /* Mobile-style bottom navigation */
 #bottomNav{display:none;position:fixed;left:0;right:0;bottom:0;z-index:1050;justify-content:space-around;align-items:center;gap:2px;padding:9px 5px calc(9px + env(safe-area-inset-bottom));background:rgba(13,15,20,.97);border-top:1px solid #252b35;box-shadow:0 -8px 24px #0007;backdrop-filter:blur(12px)}
 #bottomNav button{display:flex;flex:1;min-width:0;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:6px 2px;margin:0;border:0;border-radius:9px;background:transparent;color:#9aa5b1;font-size:11px;font-weight:700;line-height:1.15;white-space:nowrap}
@@ -700,14 +711,13 @@ button:not(:disabled):hover{box-shadow:0 5px 18px #65f3dc18}
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
 </section>
 <section id="servicesPage" class="page">
- <div class="hero"><span class="eyebrow">SERVICES WORKSPACE</span><h1>Our <span class="neon">Services.</span></h1><p>Available services will be added here one by one.</p></div>
- <div class="grid">
-  <div class="card">
-   <span class="eyebrow">SERVICE 01</span>
-   <h2 class="neon">Experience Certificate</h2>
-   <p class="muted">Create a professional experience certificate for work or employment records.</p>
-   <button onclick="alert('Experience Certificate service selected. Form and certificate design will be added next.')">Open Experience Certificate →</button>
-  </div>
+ <div class="hero"><span class="eyebrow">SERVICES WORKSPACE</span><h1>Our <span class="neon">Services.</span></h1><p>Select a service from the list below. More services will be added here one by one.</p></div>
+ <div class="service-list">
+  <button class="service-row" onclick="alert('Experience Certificate selected. The certificate form and design will be added next.')">
+   <span class="service-number">01</span>
+   <span class="service-copy"><strong>Experience Certificate</strong><small>Create a professional work experience certificate</small></span>
+   <span class="service-arrow" aria-hidden="true">›</span>
+  </button>
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
 </section>
