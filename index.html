@@ -1215,16 +1215,16 @@ input::placeholder,textarea::placeholder{
  <div class="hero voice-hero">
   <span class="eyebrow">NEXA AI STUDIO / VOICE</span>
   <h1>Voice <span class="neon">Studio.</span></h1>
-  <p>Convert Urdu or English text into speech using your browser's built-in voice engine. No ElevenLabs or paid voice API is used.</p>
-  <span class="pill">BROWSER VOICE ENGINE • NO API CREDITS</span>
+  <p>Urdu-only speech mode. The studio will select an Urdu voice from your device and will never switch to an English voice.</p>
+  <span class="pill">URDU (PAKISTAN) • NO PAID API</span>
  </div>
  <div class="grid voice-grid">
   <div class="card voice-card">
    <h2>🎙️ Create speech</h2>
    <p class="muted">Type or paste your script. Voice options depend on the voices available on your device.</p>
    <form id="voiceForm">
-    <div class="field"><label for="freeLanguage">Language</label><select id="freeLanguage"><option value="ur-PK">Urdu (Pakistan)</option><option value="en-US">English (US)</option><option value="en-GB">English (UK)</option></select></div>
-    <div class="field"><label for="freeVoice">Available voice</label><select id="freeVoice"><option value="">Default device voice</option></select><small class="muted">If Urdu is missing, install a compatible Urdu speech voice in your device settings, if supported.</small></div>
+    <input id="freeLanguage" type="hidden" value="ur-PK">
+    <div class="field"><label for="freeVoice">Urdu voice (Pakistan)</label><select id="freeVoice"><option value="">Detecting Urdu voices…</option></select><small class="muted">Only Urdu voices are listed. If no Urdu voice is installed, speech will stop instead of using an English voice.</small></div>
     <div class="field"><label for="voiceRate">Speaking speed</label><input id="voiceRate" type="range" min="0.6" max="1.4" step="0.1" value="1"><small class="muted">Move left for slower speech, right for faster speech.</small></div>
     <div class="field"><label for="voicePitch">Voice pitch</label><input id="voicePitch" type="range" min="0.7" max="1.4" step="0.1" value="1"><small class="muted">Changes pitch only; it does not clone or create a new person's voice.</small></div>
     <div class="field"><label for="voiceText">Your text</label><textarea id="voiceText" maxlength="2500" placeholder="یہاں اردو یا English متن لکھیں..." required style="min-height:180px"></textarea><div class="voice-counter"><span id="voiceCharCount">0</span> / 2,500 characters</div></div>
@@ -1241,7 +1241,7 @@ input::placeholder,textarea::placeholder{
   <div class="card voice-card voice-output">
    <h2>🎧 Voice player</h2>
    <div id="voiceEmpty" class="voice-empty"><div class="voice-wave">♫</div><strong>Your speech plays here</strong><span>Enter text and press Speak Text.</span></div>
-   <div class="voice-security-note"><strong>How this works</strong><span>This is Nexa's own website interface using the speech engine already built into your browser/device. It is free to use and does not need an ElevenLabs key or API credits. It requires no server voice-generation bill, but it cannot guarantee Urdu voices or export an MP3 file.</span></div>
+   <div class="voice-security-note"><strong>How this works</strong><span>Nexa is configured to use Urdu voices only and will not fall back to English. Pronunciation quality still depends on the Urdu voice installed in your browser/device; this browser engine cannot guarantee fully native Pakistani Urdu or export MP3 audio.</span></div>
   </div>
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('servicesPage')">← Back to Services</button><button class="secondary" onclick="showPage('dashboardPage')">Dashboard</button></div>
@@ -1902,14 +1902,20 @@ $("supportForm").addEventListener("submit",e=>{
 
 function refreshFreeVoices(){
  const sel=$("freeVoice");if(!sel||!("speechSynthesis" in window))return;
- const lang=$("freeLanguage")?.value||"ur-PK";
  const voices=window.speechSynthesis.getVoices();
- const matches=voices.filter(v=>v.lang.toLowerCase().startsWith(lang.slice(0,2).toLowerCase()));
+ const matches=voices.filter(v=>/^ur(-|$)/i.test(v.lang)).sort((a,b)=>{
+  const ap=/^ur-PK$/i.test(a.lang)?0:1,bp=/^ur-PK$/i.test(b.lang)?0:1;
+  return ap-bp || a.name.localeCompare(b.name);
+ });
  const previous=sel.value;
- sel.innerHTML='<option value="">Default device voice</option>';
+ sel.innerHTML="";
+ if(!matches.length){
+  const o=document.createElement("option");o.value="";o.textContent="No Urdu voice installed on this device";sel.appendChild(o);
+  return;
+ }
  matches.forEach(v=>{const o=document.createElement("option");o.value=v.name;o.textContent=v.name+" ("+v.lang+")";sel.appendChild(o);});
- if([...sel.options].some(o=>o.value===previous))sel.value=previous;
- if(lang.startsWith("ur")&&!matches.length){const o=document.createElement("option");o.value="";o.textContent="No Urdu voice detected on this device";sel.appendChild(o);}
+ if(matches.some(v=>v.name===previous))sel.value=previous;
+ else sel.value=matches[0].name;
 }
 function voiceMessage(text,type="info"){
  const el=$("voiceMsg");if(!el)return;
@@ -1933,10 +1939,12 @@ function clearVoiceText(){
 function speakFreeVoice(textValue){
  if(!("speechSynthesis" in window)||!("SpeechSynthesisUtterance" in window))throw new Error("This browser does not support speech synthesis. Please use an updated Chrome or Edge.");
  window.speechSynthesis.cancel();
- const lang=$("freeLanguage").value,utterance=new SpeechSynthesisUtterance(textValue),name=$("freeVoice").value;
- utterance.lang=lang;utterance.rate=Number($("voiceRate").value||1);utterance.pitch=Number($("voicePitch").value||1);
- const voice=window.speechSynthesis.getVoices().find(v=>v.name===name);if(voice)utterance.voice=voice;
- utterance.onstart=()=>voiceMessage("Speech is playing using your device's voice engine. No external voice API is used.","success");
+ const name=$("freeVoice").value,voices=window.speechSynthesis.getVoices();
+ const voice=voices.find(v=>v.name===name&&/^ur(-|$)/i.test(v.lang));
+ if(!voice)throw new Error("Is device par Urdu voice install nahi hai. English voice use nahi ki jayegi.");
+ const utterance=new SpeechSynthesisUtterance(textValue);
+ utterance.lang=voice.lang;utterance.voice=voice;utterance.rate=Number($("voiceRate").value||0.9);utterance.pitch=Number($("voicePitch").value||1);
+ utterance.onstart=()=>voiceMessage("Urdu voice chal rahi hai. Pronunciation device par installed Urdu voice par depend karti hai.","success");
  utterance.onerror=ev=>{voiceMessage("Speech failed ("+(ev.error||"unknown error")+"). Check the voices installed on your device.","error");const b=$("voiceGenerateBtn");if(b){b.disabled=false;b.textContent="▶ Speak Text";}};
  utterance.onend=()=>{const b=$("voiceGenerateBtn");if(b){b.disabled=false;b.textContent="▶ Speak Text";}voiceMessage("Speech finished.","success");};
  window.speechSynthesis.speak(utterance);
@@ -1947,13 +1955,13 @@ $("voiceForm").addEventListener("submit",e=>{
  if(!textValue){voiceMessage("Please enter the text you want to speak.","error");return;}
  if(textValue.length>2500){voiceMessage("Please keep the text under 2,500 characters.","error");return;}
  const voices=("speechSynthesis" in window)?window.speechSynthesis.getVoices():[];
- if($("freeLanguage").value.startsWith("ur")&&!voices.some(v=>v.lang.toLowerCase().startsWith("ur"))){
-  voiceMessage("No Urdu voice was detected on this device. Try English, or install an Urdu speech voice in your device settings if supported.","error");return;
+ if(!voices.some(v=>/^ur(-|$)/i.test(v.lang))){
+  voiceMessage("Is device par Urdu voice nahi mili. English voice se replace nahi karunga. Device/browser mein Urdu speech voice install karein.","error");return;
  }
  btn.disabled=true;btn.textContent="Speaking...";
  try{speakFreeVoice(textValue);}catch(err){btn.disabled=false;btn.textContent="▶ Speak Text";voiceMessage(err.message||"Could not start speech.","error");}
 });
-$("freeLanguage")?.addEventListener("change",refreshFreeVoices);
+
 if("speechSynthesis" in window)window.speechSynthesis.onvoiceschanged=refreshFreeVoices;
 refreshFreeVoices();
 
