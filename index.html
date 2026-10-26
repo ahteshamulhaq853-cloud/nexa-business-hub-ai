@@ -1936,23 +1936,38 @@ function escapeJobHTML(value){return String(value==null?"":value).replace(/[&<>"
 function jobDate(value){if(!value)return "Not specified";const d=new Date(value);return isNaN(d.getTime())?escapeJobHTML(value):d.toLocaleDateString();}
 async function loadNexaJobs(){
  const status=$("jobsStatus"),list=$("nexaJobsList");
- if(status)status.textContent="NEXA website ki vacancies search ho rahi hain…";
+ if(status)status.textContent="NEXA vacancies aur worldwide remote jobs load ho rahi hain…";
  if(list)list.innerHTML="";
  const keyword=(($("jobsKeyword")||{}).value||"").trim().toLowerCase();
  const location=(($("jobsLocation")||{}).value||"").trim().toLowerCase();
  const category=(($("jobsType")||{}).value||"").trim().toLowerCase();
  const query=(($("jobsSearchText")||{}).value||"").trim().toLowerCase();
+ let internalJobs=[],remoteJobs=[],warnings=[];
  try{
   const {data,error}=await db.from("job_listings").select("id,title,company,location,category,employment_type,description,requirements,application_deadline,created_at").eq("is_active",true).order("created_at",{ascending:false}).limit(100);
   if(error)throw error;
-  nexaJobsCache=(data||[]).filter(j=>{
+  internalJobs=(data||[]).filter(j=>{
    const hay=[j.title,j.company,j.location,j.category,j.employment_type,j.description,j.requirements].join(" ").toLowerCase();
-   return (!keyword||hay.includes(keyword))&&(!location||String(j.location||"").toLowerCase().includes(location)||(location==="pakistan"&&String(j.location||"").toLowerCase().includes("pakistan")))&&(!category||String(j.category||"").toLowerCase().includes(category))&&(!query||hay.includes(query));
+   return (!keyword||hay.includes(keyword))&&(!location||String(j.location||"").toLowerCase().includes(location))&&(!category||String(j.category||"").toLowerCase().includes(category))&&(!query||hay.includes(query));
   });
-  if(!nexaJobsCache.length){status.textContent=(data&&data.length)?"Aapki search se matching vacancy nahi mili. Filters change karke dobara try karein.":"Abhi NEXA par koi vacancy publish nahi hui. Jobs add hone ke baad yahin show hongi.";return;}
-  status.textContent=nexaJobsCache.length+" vacancy/vacancies NEXA par milin.";
-  list.innerHTML=nexaJobsCache.map(j=>'<article class="card"><span class="studio-kicker">'+escapeJobHTML(j.category||"Career Opportunity")+'</span><h3>'+escapeJobHTML(j.title)+'</h3><p><strong>'+escapeJobHTML(j.company||"Employer not specified")+'</strong></p><p class="muted">'+escapeJobHTML(j.location||"Location not specified")+(j.employment_type?" · "+escapeJobHTML(j.employment_type):"")+'</p><p>'+escapeJobHTML(j.description||"Job details ke liye employer se rabta karein.")+'</p>'+(j.requirements?'<p><strong>Requirements:</strong> '+escapeJobHTML(j.requirements)+'</p>':"")+'<p class="muted">Apply before: '+jobDate(j.application_deadline)+'</p><button type="button" data-job-id="'+escapeJobHTML(j.id)+'" onclick="openNexaJobApplication(this.dataset.jobId)">Apply on NEXA</button></article>').join("");
- }catch(error){console.error("NEXA jobs load error:",error);status.textContent="Jobs database abhi configure nahi hui ya connection error hai. Supabase mein job_listings table aur public read policy setup karni hogi.";}
+ }catch(error){console.error("NEXA jobs database error:",error);warnings.push("NEXA database vacancies load nahi ho sakin.");}
+ try{
+  const remoteUrl="https://remotive.com/api/remote-jobs?limit=50"+(query||keyword?"&search="+encodeURIComponent([keyword,query].filter(Boolean).join(" ")):"");
+  const response=await fetch(remoteUrl,{headers:{"Accept":"application/json"}});
+  if(!response.ok)throw new Error("Remote jobs source returned "+response.status);
+  const payload=await response.json();
+  remoteJobs=(payload.jobs||[]).filter(j=>{
+   const hay=[j.title,j.company_name,j.category,j.job_type,j.candidate_required_location,j.description].join(" ").toLowerCase();
+   const loc=String(j.candidate_required_location||"").toLowerCase();
+   return (!keyword||hay.includes(keyword))&&(!category||hay.includes(category))&&(!query||hay.includes(query))&&(!location||location==="remote"||location==="abroad"||location==="pakistan"||loc.includes(location));
+  });
+ }catch(error){console.warn("Remote jobs source unavailable:",error);warnings.push("Worldwide remote jobs source abhi connect nahi ho saka.");}
+ nexaJobsCache=internalJobs;
+ const internalCards=internalJobs.map(j=>'<article class="card"><span class="studio-kicker">'+escapeJobHTML(j.category||"Career Opportunity")+'</span><h3>'+escapeJobHTML(j.title)+'</h3><p><strong>'+escapeJobHTML(j.company||"Employer not specified")+'</strong></p><p class="muted">'+escapeJobHTML(j.location||"Location not specified")+(j.employment_type?" · "+escapeJobHTML(j.employment_type):"")+'</p><p>'+escapeJobHTML(j.description||"Job details ke liye employer se rabta karein.")+'</p>'+(j.requirements?'<p><strong>Requirements:</strong> '+escapeJobHTML(j.requirements)+'</p>':"")+'<p class="muted">Apply before: '+jobDate(j.application_deadline)+'</p><button type="button" data-job-id="'+escapeJobHTML(j.id)+'" onclick="openNexaJobApplication(this.dataset.jobId)">Apply on NEXA</button></article>').join("");
+ const remoteCards=remoteJobs.map(j=>'<article class="card"><span class="studio-kicker">WORLDWIDE REMOTE · '+escapeJobHTML(j.category||"Remote job")+'</span><h3>'+escapeJobHTML(j.title)+'</h3><p><strong>'+escapeJobHTML(j.company_name||"Company not specified")+'</strong></p><p class="muted">'+escapeJobHTML(j.candidate_required_location||"Remote / multiple locations")+(j.job_type?" · "+escapeJobHTML(j.job_type):"")+'</p><p>'+escapeJobHTML(String(j.description||"").replace(/<[^>]*>/g," ").replace(/\s+/g," ").slice(0,320))+'</p><p class="muted">Source: Remotive · Published '+jobDate(j.publication_date)+'</p><button type="button" onclick="window.open('+JSON.stringify(String(j.url||"https://remotive.com/"))+',\'_blank\',\'noopener,noreferrer\')">View details &amp; apply</button></article>').join("");
+ list.innerHTML=internalCards+remoteCards;
+ if(!internalCards&&!remoteCards)status.textContent="Is search mein koi job nahi mili. Filters change karke dobara try karein. "+warnings.join(" ");
+ else status.textContent=internalJobs.length+" NEXA job(s) · "+remoteJobs.length+" worldwide remote job(s). "+(warnings.length?warnings.join(" "):"Remote listings third-party source se aati hain; apply original employer portal par hota hai.");
 }
 function openNexaJobApplication(id){
  const job=nexaJobsCache.find(j=>String(j.id)===String(id));if(!job)return;
