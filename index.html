@@ -1214,69 +1214,34 @@ input::placeholder,textarea::placeholder{
 <section id="voiceGeneratorPage" class="page">
  <div class="hero voice-hero">
   <span class="eyebrow">NEXA AI STUDIO / VOICE</span>
-  <h1>AI Voice <span class="neon">Generator.</span></h1>
-  <p>Turn your script into natural AI speech, preview it, and save the generated audio as an MP3.</p>
-  <span class="pill">SECURE ELEVENLABS CONNECTION</span>
+  <h1>Voice <span class="neon">Studio.</span></h1>
+  <p>Convert Urdu or English text into speech using your browser's built-in voice engine. No ElevenLabs or paid voice API is used.</p>
+  <span class="pill">BROWSER VOICE ENGINE • NO API CREDITS</span>
  </div>
  <div class="grid voice-grid">
   <div class="card voice-card">
-   <h2>🎙️ Create your voice</h2>
-   <p class="muted">Write or paste your narration below. Maximum 2,500 characters per generation.</p>
+   <h2>🎙️ Create speech</h2>
+   <p class="muted">Type or paste your script. Voice options depend on the voices available on your device.</p>
    <form id="voiceForm">
-    <div class="field">
-     <label for="voiceMode">Generation mode</label>
-     <select id="voiceMode"><option value="free">Free Browser Voice — no API credits</option><option value="eleven">ElevenLabs AI Voice — MP3 download</option></select>
-     <small class="muted">Free mode uses voices installed on your device. Urdu support depends on your device. Browser mode plays speech but does not directly export MP3.</small>
-    </div>
-    <div class="field" id="freeLanguageField"><label for="freeLanguage">Language</label><select id="freeLanguage"><option value="ur-PK">Urdu (Pakistan)</option><option value="en-US">English (US)</option><option value="en-GB">English (UK)</option></select></div>
-    <div class="field" id="freeVoiceField"><label for="freeVoice">Available device voice</label><select id="freeVoice"><option value="">Default device voice</option></select><small class="muted">If Urdu is not listed, your device may not have an Urdu speech voice installed.</small></div>
-    <div class="field">
-     <label for="voiceText">Your text</label>
-     <textarea id="voiceText" maxlength="2500" placeholder="Type your Urdu or English script here..." required style="min-height:180px"></textarea>
-     <div class="voice-counter"><span id="voiceCharCount">0</span> / 2,500 characters</div>
-    </div>
-    <div class="field">
-     <label for="voiceModel">Voice model</label>
-     <select id="voiceModel">
-      <option value="eleven_multilingual_v2">Multilingual v2 — narration</option>
-      <option value="eleven_flash_v2_5">Flash v2.5 — faster generation</option>
-     </select>
-    </div>
-    <div class="field"><label for="voicePreset">Choose a voice</label><select id="voicePreset">
-<option value="JBFqnCBsd6RMkjVDRZzb">George — male narrator</option>
-<option value="21m00Tcm4TlvDq8ikWAM">Rachel — female narrator</option>
-<option value="AZnzlk1XvdvUeBnXmlld">Domi — female confident</option>
-<option value="EXAVITQu4vr4xnSDxMaL">Bella — female soft</option>
-<option value="ErXwobaYiN019PkySvjV">Antoni — male friendly</option>
-<option value="MF3mGyEYCl7XYWbV9V6O">Elli — female expressive</option>
-<option value="TxGEqnHWrfWFTfGW9XjX">Josh — male deep</option>
-<option value="VR6AewLTigWG4xSOukaG">Arnold — male strong</option>
-<option value="pNInz6obpgDQGcFmaJgB">Adam — male narration</option>
-<option value="custom">Custom voice ID</option></select><small class="muted">Voice availability depends on your ElevenLabs account.</small></div>
-<div class="field" id="customVoiceField" style="display:none"><label for="voiceId">Custom Voice ID</label><input id="voiceId" value="JBFqnCBsd6RMkjVDRZzb" maxlength="100" autocomplete="off" spellcheck="false"><small class="muted">Use a voice ID available in your account.</small></div>
+    <div class="field"><label for="freeLanguage">Language</label><select id="freeLanguage"><option value="ur-PK">Urdu (Pakistan)</option><option value="en-US">English (US)</option><option value="en-GB">English (UK)</option></select></div>
+    <div class="field"><label for="freeVoice">Available voice</label><select id="freeVoice"><option value="">Default device voice</option></select><small class="muted">If Urdu is missing, install a compatible Urdu speech voice in your device settings, if supported.</small></div>
+    <div class="field"><label for="voiceRate">Speaking speed</label><input id="voiceRate" type="range" min="0.6" max="1.4" step="0.1" value="1"><small class="muted">Move left for slower speech, right for faster speech.</small></div>
+    <div class="field"><label for="voicePitch">Voice pitch</label><input id="voicePitch" type="range" min="0.7" max="1.4" step="0.1" value="1"><small class="muted">Changes pitch only; it does not clone or create a new person's voice.</small></div>
+    <div class="field"><label for="voiceText">Your text</label><textarea id="voiceText" maxlength="2500" placeholder="یہاں اردو یا English متن لکھیں..." required style="min-height:180px"></textarea><div class="voice-counter"><span id="voiceCharCount">0</span> / 2,500 characters</div></div>
     <div class="actions">
-     <button id="voiceGenerateBtn" type="submit">Generate AI Voice</button>
+     <button id="voiceGenerateBtn" type="submit">▶ Speak Text</button>
+     <button class="secondary" type="button" id="voicePauseBtn" onclick="pauseVoice()">⏸ Pause</button>
+     <button class="secondary" type="button" id="voiceResumeBtn" onclick="resumeVoice()">▶ Resume</button>
+     <button class="secondary" type="button" onclick="stopVoice()">■ Stop</button>
      <button class="secondary" type="button" onclick="clearVoiceText()">Clear Text</button>
     </div>
     <div id="voiceMsg" class="message" role="status" aria-live="polite"></div>
    </form>
   </div>
   <div class="card voice-card voice-output">
-   <h2>🎧 Your generated audio</h2>
-   <p class="muted">When generation finishes, listen here or save the MP3 file to your device.</p>
-   <div id="voiceEmpty" class="voice-empty">
-    <div class="voice-wave">♫</div>
-    <strong>Your audio will appear here</strong>
-    <span>Enter text and press Generate AI Voice.</span>
-   </div>
-   <div id="voiceResult" style="display:none">
-    <audio id="voiceAudio" controls preload="metadata"></audio>
-    <div class="actions voice-download-actions">
-     <a id="voiceDownload" class="voice-download" href="#" download="nexa-ai-voice.mp3">⬇ Download MP3</a>
-     <button class="secondary" type="button" onclick="resetVoiceAudio()">Remove Audio</button>
-    </div>
-   </div>
-   <div class="voice-security-note"><strong>Privacy &amp; security</strong><span>Your ElevenLabs API key stays on the secure server. Avoid including passwords or sensitive personal information in your script.</span></div>
+   <h2>🎧 Voice player</h2>
+   <div id="voiceEmpty" class="voice-empty"><div class="voice-wave">♫</div><strong>Your speech plays here</strong><span>Enter text and press Speak Text.</span></div>
+   <div class="voice-security-note"><strong>How this works</strong><span>This is Nexa's own website interface using the speech engine already built into your browser/device. It is free to use and does not need an ElevenLabs key or API credits. It requires no server voice-generation bill, but it cannot guarantee Urdu voices or export an MP3 file.</span></div>
   </div>
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('servicesPage')">← Back to Services</button><button class="secondary" onclick="showPage('dashboardPage')">Dashboard</button></div>
@@ -1935,103 +1900,62 @@ $("supportForm").addEventListener("submit",e=>{
 });
 
 
-let voiceAudioUrl = null;
 function refreshFreeVoices(){
- const sel=$("freeVoice");if(!sel||!window.speechSynthesis)return;
- const lang=$("freeLanguage")?.value||"ur-PK",voices=window.speechSynthesis.getVoices(),matches=voices.filter(v=>v.lang.toLowerCase().startsWith(lang.slice(0,2).toLowerCase())),previous=sel.value;
+ const sel=$("freeVoice");if(!sel||!("speechSynthesis" in window))return;
+ const lang=$("freeLanguage")?.value||"ur-PK";
+ const voices=window.speechSynthesis.getVoices();
+ const matches=voices.filter(v=>v.lang.toLowerCase().startsWith(lang.slice(0,2).toLowerCase()));
+ const previous=sel.value;
  sel.innerHTML='<option value="">Default device voice</option>';
  matches.forEach(v=>{const o=document.createElement("option");o.value=v.name;o.textContent=v.name+" ("+v.lang+")";sel.appendChild(o);});
  if([...sel.options].some(o=>o.value===previous))sel.value=previous;
  if(lang.startsWith("ur")&&!matches.length){const o=document.createElement("option");o.value="";o.textContent="No Urdu voice detected on this device";sel.appendChild(o);}
 }
-function updateVoiceModeUI(){
- const free=$("voiceMode")?.value!=="eleven";
- ["freeLanguageField","freeVoiceField"].forEach(id=>{const el=$(id);if(el)el.style.display=free?"block":"none";});
- const model=$("voiceModel");if(model?.closest(".field"))model.closest(".field").style.display=free?"none":"block";
- const preset=$("voicePreset");if(preset?.closest(".field"))preset.closest(".field").style.display=free?"none":"block";
- const custom=$("customVoiceField");if(custom)custom.style.display=(!free&&$("voicePreset").value==="custom")?"block":"none";
- const pill=document.querySelector("#voiceGeneratorPage .pill");if(pill)pill.textContent=free?"FREE BROWSER VOICE • NO API CREDITS":"SECURE ELEVENLABS CONNECTION";
- const note=document.querySelector(".voice-security-note");if(note)note.innerHTML=free?"<strong>Free browser mode</strong><span>Speech runs through your device/browser. Voices and Urdu support depend on installed system voices. This mode cannot download an MP3.</span>":"<strong>Privacy &amp; security</strong><span>Your ElevenLabs API key stays on the secure server. Avoid including passwords or sensitive personal information in your script.</span>";
- refreshFreeVoices();
-}
-function speakFreeVoice(textValue){
- if(!("speechSynthesis" in window))throw new Error("This browser does not support speech synthesis. Try an updated Chrome or Edge.");
- window.speechSynthesis.cancel();
- const lang=$("freeLanguage").value,utterance=new SpeechSynthesisUtterance(textValue),name=$("freeVoice").value;
- utterance.lang=lang;utterance.rate=1;utterance.pitch=1;
- const voice=window.speechSynthesis.getVoices().find(v=>v.name===name);if(voice)utterance.voice=voice;
- utterance.onstart=()=>voiceMessage("Speaking with your device voice. No ElevenLabs credits are used.","success");
- utterance.onerror=ev=>{voiceMessage("Browser speech failed ("+(ev.error||"unknown error")+"). Check device voices and try again.","error");const b=$("voiceGenerateBtn");if(b){b.disabled=false;b.textContent="Generate Voice";}};
- utterance.onend=()=>{const b=$("voiceGenerateBtn");if(b){b.disabled=false;b.textContent="Generate Voice";}};
- window.speechSynthesis.speak(utterance);
-}
-function voiceMessage(text, type="info"){
+function voiceMessage(text,type="info"){
  const el=$("voiceMsg");if(!el)return;
  el.textContent=text;el.className="message show "+type;
 }
-function resetVoiceAudio(){
- const audio=$("voiceAudio"),download=$("voiceDownload");
- if(audio){audio.pause();audio.removeAttribute("src");audio.load();}
- if(voiceAudioUrl){URL.revokeObjectURL(voiceAudioUrl);voiceAudioUrl=null;}
- if(download)download.removeAttribute("href");
- $("voiceResult").style.display="none";$("voiceEmpty").style.display="flex";
+function stopVoice(){
+ if("speechSynthesis" in window)window.speechSynthesis.cancel();
+ const b=$("voiceGenerateBtn");if(b){b.disabled=false;b.textContent="▶ Speak Text";}
+ voiceMessage("Speech stopped.","info");
+}
+function pauseVoice(){
+ if("speechSynthesis" in window&&window.speechSynthesis.speaking){window.speechSynthesis.pause();voiceMessage("Speech paused.","info");}
+}
+function resumeVoice(){
+ if("speechSynthesis" in window&&window.speechSynthesis.paused){window.speechSynthesis.resume();voiceMessage("Speech resumed.","success");}
 }
 function clearVoiceText(){
- $("voiceText").value="";$("voiceCharCount").textContent="0";
+ stopVoice();$("voiceText").value="";$("voiceCharCount").textContent="0";
  $("voiceMsg").textContent="";$("voiceMsg").className="message";
 }
+function speakFreeVoice(textValue){
+ if(!("speechSynthesis" in window)||!("SpeechSynthesisUtterance" in window))throw new Error("This browser does not support speech synthesis. Please use an updated Chrome or Edge.");
+ window.speechSynthesis.cancel();
+ const lang=$("freeLanguage").value,utterance=new SpeechSynthesisUtterance(textValue),name=$("freeVoice").value;
+ utterance.lang=lang;utterance.rate=Number($("voiceRate").value||1);utterance.pitch=Number($("voicePitch").value||1);
+ const voice=window.speechSynthesis.getVoices().find(v=>v.name===name);if(voice)utterance.voice=voice;
+ utterance.onstart=()=>voiceMessage("Speech is playing using your device's voice engine. No external voice API is used.","success");
+ utterance.onerror=ev=>{voiceMessage("Speech failed ("+(ev.error||"unknown error")+"). Check the voices installed on your device.","error");const b=$("voiceGenerateBtn");if(b){b.disabled=false;b.textContent="▶ Speak Text";}};
+ utterance.onend=()=>{const b=$("voiceGenerateBtn");if(b){b.disabled=false;b.textContent="▶ Speak Text";}voiceMessage("Speech finished.","success");};
+ window.speechSynthesis.speak(utterance);
+}
 $("voiceText").addEventListener("input",()=>{$("voiceCharCount").textContent=String($("voiceText").value.length)});
-const vp=$("voicePreset");const cv=$("customVoiceField");if(vp&&cv){vp.addEventListener("change",()=>{const c=vp.value==="custom";cv.style.display=c?"block":"none";if(!c)$("voiceId").value=vp.value;});$("voiceId").value=vp.value;}
-$("voiceForm").addEventListener("submit",async e=>{
- e.preventDefault();
- const textValue=$("voiceText").value.trim();
- const mode=$("voiceMode")?.value||"free",btn=$("voiceGenerateBtn");
- if(!textValue){voiceMessage("Please enter the text you want to convert to speech.","error");return;}
- if(mode==="free"){
-  if(!("speechSynthesis" in window)){voiceMessage("This browser does not support free browser speech. Try an updated Chrome or Edge.","error");return;}
-  const available=window.speechSynthesis.getVoices();
-  if($("freeLanguage").value.startsWith("ur")&&!available.some(v=>v.lang.toLowerCase().startsWith("ur"))){voiceMessage("No Urdu voice is available on this device. Try English or install an Urdu speech voice in device settings if supported.","error");return;}
-  btn.disabled=true;btn.textContent="Speaking...";
-  try{speakFreeVoice(textValue);}catch(err){btn.disabled=false;btn.textContent="Generate Voice";voiceMessage(err.message||"Could not start speech.","error");}
-  return;
+$("voiceForm").addEventListener("submit",e=>{
+ e.preventDefault();const textValue=$("voiceText").value.trim(),btn=$("voiceGenerateBtn");
+ if(!textValue){voiceMessage("Please enter the text you want to speak.","error");return;}
+ if(textValue.length>2500){voiceMessage("Please keep the text under 2,500 characters.","error");return;}
+ const voices=("speechSynthesis" in window)?window.speechSynthesis.getVoices():[];
+ if($("freeLanguage").value.startsWith("ur")&&!voices.some(v=>v.lang.toLowerCase().startsWith("ur"))){
+  voiceMessage("No Urdu voice was detected on this device. Try English, or install an Urdu speech voice in your device settings if supported.","error");return;
  }
- const voiceId=$("voiceId").value.trim(),modelId=$("voiceModel").value;
- if(!currentUser){voiceMessage("Please sign in first to use ElevenLabs AI Voice Generator.","error");showPage("accountPage");return;}
- if(textValue.length>2500){voiceMessage("Please keep your text under 2,500 characters for ElevenLabs mode.","error");return;}
- btn.disabled=true;btn.textContent="Generating voice...";
- voiceMessage("Connecting securely and generating your audio. This may take a little while.","info");
- try{
-  const sessionResult=await db.auth.getSession();
-  const session=sessionResult.data&&sessionResult.data.session;
-  if(sessionResult.error||!session||!session.access_token)throw new Error("Your login session expired. Please sign in again.");
-  const response=await fetch(SUPABASE_URL+"/functions/v1/nexa-voice-generator",{
-   method:"POST",
-   headers:{"Content-Type":"application/json","apikey":SUPABASE_KEY,"Authorization":"Bearer "+session.access_token},
-   body:JSON.stringify({text:textValue,voiceId:voiceId,modelId:modelId})
-  });
-  if(!response.ok){
-   let message="Voice generation failed. Please try again.";
-   try{const data=await response.json();if(data&&data.error)message=data.error;}catch(err){}
-   throw new Error(message);
-  }
-  const blob=await response.blob();
-  if(!blob.size)throw new Error("The voice service returned an empty audio file.");
-  resetVoiceAudio();
-  voiceAudioUrl=URL.createObjectURL(new Blob([blob],{type:"audio/mpeg"}));
-  $("voiceAudio").src=voiceAudioUrl;
-  $("voiceDownload").href=voiceAudioUrl;
-  $("voiceResult").style.display="block";$("voiceEmpty").style.display="none";
-  voiceMessage("Your AI voice is ready. Play it or download the MP3 below.","success");
- }catch(error){
-  console.error("AI Voice Generator:",error);
-  voiceMessage(error&&error.message?error.message:"Could not generate audio. Please try again.","error");
- }finally{btn.disabled=false;btn.textContent="Generate Voice";}
+ btn.disabled=true;btn.textContent="Speaking...";
+ try{speakFreeVoice(textValue);}catch(err){btn.disabled=false;btn.textContent="▶ Speak Text";voiceMessage(err.message||"Could not start speech.","error");}
 });
-
-$("voiceMode")?.addEventListener("change",()=>{if(window.speechSynthesis)window.speechSynthesis.cancel();updateVoiceModeUI();});
 $("freeLanguage")?.addEventListener("change",refreshFreeVoices);
-if(window.speechSynthesis)window.speechSynthesis.onvoiceschanged=refreshFreeVoices;
-updateVoiceModeUI();
+if("speechSynthesis" in window)window.speechSynthesis.onvoiceschanged=refreshFreeVoices;
+refreshFreeVoices();
 
 initSearchableSelects();
 
