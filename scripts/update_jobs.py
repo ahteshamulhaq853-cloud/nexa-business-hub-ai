@@ -33,11 +33,11 @@ GENERIC = {
     "rawalpindi", "remote", "hr & recruiting", "web & e-commerce"
 }
 JOB_WORDS = re.compile(
-    r"\\b(job|vacanc|career|position|officer|director|manager|assistant|engineer|teacher|lecturer|intern|analyst|clerk|consultant|specialist|coordinator|supervisor|technician|professor|staff|driver|accountant|nurse|developer|designer|operator|inspector|scientist|secretary|executive|expert|administrator|account|finance|legal|procurement|statistician|monitoring|chairman|chief|lawyer|advisor|adviser|deputy|senior|junior|tax|technical|chemist|pharmacist|psychologist|social worker|economist|environmental|policy|sales|marketing|human resource|hr|data entry|support|lead|architect|hacker|representative|customer service|operations|implementation|creator|auditor|trainer|researcher|economist|doctor|medical|laboratory|security|planning|management)\\b", re.I
+    r"\b(job|vacanc|career|position|officer|director|manager|assistant|engineer|teacher|lecturer|intern|analyst|clerk|consultant|specialist|coordinator|supervisor|technician|professor|staff|driver|accountant|nurse|developer|designer|operator|inspector|scientist|secretary|executive|expert|administrator|account|finance|legal|procurement|statistician|monitoring|chairman|chief|lawyer|advisor|adviser|deputy|senior|junior|tax|technical|chemist|pharmacist|psychologist|social worker|economist|environmental|policy|sales|marketing|human resource|hr|data entry|support|lead|architect|hacker|representative|customer service|operations|implementation|creator|auditor|trainer|researcher|economist|doctor|medical|laboratory|security|planning|management)\b", re.I
 )
 
 def valid_title(label):
-    label = re.sub(r"\\s+", " ", str(label or "")).strip()
+    label = re.sub(r"\s+", " ", str(label or "")).strip()
     if not label or len(label) < 7 or len(label) > 180:
         return False
     if label.lower().strip(" -|:") in GENERIC:
@@ -86,21 +86,21 @@ def looks_like_job(url, text, source_url):
     p = urlparse(url)
     host = p.netloc.lower().removeprefix("www.")
     path = p.path.lower()
-    label = re.sub(r"\\s+", " ", text).strip()
+    label = re.sub(r"\s+", " ", text).strip()
     if not valid_title(label):
         return False
     if host == "njp.gov.pk":
-        return bool(re.fullmatch(r"/index\\.php/jobs/\\d+", path))
+        return bool(re.fullmatch(r"/index\.php/jobs/\d+", path))
     if host == "jobs.gov.pk":
         return (
             "/jobseeker/viewjobdetails/" in path
-            or bool(re.fullmatch(r"/(job|jobs|vacancy|vacancies)/\\d+/?", path))
+            or bool(re.fullmatch(r"/(job|jobs|vacancy|vacancies)/\d+/?", path))
             or bool(re.search(r"[?&](jobid|job_id|vacancyid|vacancy_id)=", url, re.I))
         )
     if host == "rozee.pk":
-        return "/job/" in path and bool(re.search(r"/(jid/)?[a-z0-9-]*\\d+[a-z0-9-]*$", path))
+        return "/job/" in path and bool(re.search(r"/(jid/)?[a-z0-9-]*\d+[a-z0-9-]*$", path))
     if host == "mustakbil.com":
-        return bool(re.fullmatch(r"/jobs/job/\\d+/?", path))
+        return bool(re.fullmatch(r"/jobs/job/\d+/?", path))
     if host == "auth.brightspyre.com":
         return bool(re.fullmatch(r"/jobs/[a-z0-9_-]+/?", path)) and path.rstrip("/") != "/jobs"
     return False
