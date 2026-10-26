@@ -22,7 +22,7 @@ seen = set()
 updated = datetime.now(timezone.utc).isoformat()
 
 def clean(value):
-    return re.sub(r"\\s+", " ", value or "").strip()
+    return re.sub(r"\s+", " ", value or "").strip()
 
 def looks_like_job(title):
     title = clean(title)
@@ -84,7 +84,7 @@ for source_type, source_name, page_url in SOURCES:
                 continue
 
             context = clean(best_container.get_text(" ", strip=True))
-            if re.search(r"\\bexpired\\b|position\\s+closed|applications?\\s+closed", context, re.I):
+            if re.search(r"\bexpired\b|position\s+closed|applications?\s+closed", context, re.I):
                 continue
             if re.search(r"overseas|saudi arabia|united arab emirates|qatar|kuwait|oman|riyadh|abroad", context, re.I):
                 continue
