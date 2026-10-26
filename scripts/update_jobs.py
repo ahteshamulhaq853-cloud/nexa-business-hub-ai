@@ -28,9 +28,23 @@ GENERIC = {
     "view all", "see all", "read more", "apply now", "apply", "search",
     "search jobs", "jobs", "latest jobs", "government jobs", "private jobs",
     "career", "careers", "about us", "contact us", "privacy policy",
-    "terms and conditions", "next", "previous", "more", "details"
+    "terms and conditions", "next", "previous", "more", "details",
+    "how to apply", "quick links", "lahore", "karachi", "islamabad",
+    "rawalpindi", "remote", "hr & recruiting", "web & e-commerce"
 }
-JOB_WORDS = re.compile(r"\b(job|vacanc|career|position|officer|director|manager|assistant|engineer|teacher|lecturer|intern|analyst|clerk|consultant|specialist|coordinator|supervisor|technician|professor|staff|driver|accountant|nurse|developer|designer|operator|inspector|scientist|secretary|officer|executive)\b", re.I)
+JOB_WORDS = re.compile(
+    r"\\b(job|vacanc|career|position|officer|director|manager|assistant|engineer|teacher|lecturer|intern|analyst|clerk|consultant|specialist|coordinator|supervisor|technician|professor|staff|driver|accountant|nurse|developer|designer|operator|inspector|scientist|secretary|executive|expert|administrator|account|finance|legal|procurement|statistician|monitoring|sales|marketing|human resource|hr|data entry|support|lead|architect|hacker|representative|customer service|operations|implementation|creator|auditor|trainer|researcher|economist|doctor|medical|laboratory|security|planning|management)\\b", re.I
+)
+
+def valid_title(label):
+    label = re.sub(r"\\s+", " ", str(label or "")).strip()
+    if not label or len(label) < 7 or len(label) > 180:
+        return False
+    if label.lower().strip(" -|:") in GENERIC:
+        return False
+    if not re.search(r"[A-Za-z]{3}", label) or not JOB_WORDS.search(label):
+        return False
+    return True
 
 class Links(HTMLParser):
     def __init__(self):
@@ -72,19 +86,23 @@ def looks_like_job(url, text, source_url):
     p = urlparse(url)
     host = p.netloc.lower().removeprefix("www.")
     path = p.path.lower()
-    label = re.sub(r"\s+", " ", text).strip()
-    if not label or len(label) < 7 or len(label) > 180 or label.lower() in GENERIC:
+    label = re.sub(r"\\s+", " ", text).strip()
+    if not valid_title(label):
         return False
     if host == "njp.gov.pk":
-        return bool(re.search(r"/jobs/\d+", path)) and not path.endswith("/live")
+        return bool(re.fullmatch(r"/index\\.php/jobs/\\d+", path))
     if host == "jobs.gov.pk":
-        return bool(re.search(r"/(job|jobs|vacancy|vacancies|jobdetail|job-details)/", path)) or bool(re.search(r"(jobid|job_id|vacancyid|vacancy_id)=", url, re.I))
+        return (
+            "/jobseeker/viewjobdetails/" in path
+            or bool(re.fullmatch(r"/(job|jobs|vacancy|vacancies)/\\d+/?", path))
+            or bool(re.search(r"[?&](jobid|job_id|vacancyid|vacancy_id)=", url, re.I))
+        )
     if host == "rozee.pk":
-        return bool(re.search(r"/(job|jobs)/", path) and (re.search(r"/\d+/?$", path) or "job" in label.lower() or JOB_WORDS.search(label)))
+        return "/job/" in path and bool(re.search(r"/(jid/)?[a-z0-9-]*\\d+[a-z0-9-]*$", path))
     if host == "mustakbil.com":
-        return "/jobs/" in path and (JOB_WORDS.search(label) or len(label.split()) >= 3)
+        return bool(re.fullmatch(r"/jobs/job/\\d+/?", path))
     if host == "auth.brightspyre.com":
-        return "/jobs/" in path and path.rstrip("/") != "/jobs" and (JOB_WORDS.search(label) or len(label.split()) >= 3)
+        return bool(re.fullmatch(r"/jobs/[a-z0-9_-]+/?", path)) and path.rstrip("/") != "/jobs"
     return False
 
 def fetch_source(source_url, source_name, category):
@@ -110,7 +128,7 @@ def fetch_source(source_url, source_name, category):
         seen.add(url)
         title = re.sub(r"\s+", " ", item.get("text", "")).strip() or item.get("title", "").strip()
         title = re.sub(r"\s*[-|:]\s*(view details|apply now|read more)$", "", title, flags=re.I).strip()
-        if len(title) < 5:
+        if not valid_title(title):
             continue
         found.append({
             "title": title[:180],
@@ -135,8 +153,13 @@ def main():
     # by shorter listing-page link text.
     by_url = {}
     for job in existing:
-        if isinstance(job, dict) and job.get("url"):
-            by_url[canonical(str(job["url"]))] = job
+        if not isinstance(job, dict) or not job.get("url"):
+            continue
+        job_url = canonical(str(job["url"]))
+        title = str(job.get("title", "")).strip()
+        # Remove previously imported navigation/category links as well.
+        if job_url and looks_like_job(job_url, title, str(job.get("source_url", ""))):
+            by_url[job_url] = job
 
     successes = 0
     newly_found = 0
