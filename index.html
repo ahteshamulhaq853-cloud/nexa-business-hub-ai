@@ -757,6 +757,28 @@ button:not(:disabled):hover{box-shadow:0 5px 18px #65f3dc18}
 #voiceGeneratorPage .voice-security-note strong{color:var(--cyan)}
 #voiceGeneratorPage .voice-card .muted{font-size:12px}
 @media(max-width:760px){#voiceGeneratorPage .voice-grid{grid-template-columns:minmax(0,1fr)}#voiceGeneratorPage .voice-card{padding:16px 0}}
+
+/* Desktop and mobile typography/layout fix for AI Voice Generator */
+#voiceGeneratorPage{width:100%;max-width:1180px;margin-left:auto;margin-right:auto;box-sizing:border-box}
+#voiceGeneratorPage *{box-sizing:border-box}
+#voiceGeneratorPage .voice-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:22px!important;align-items:stretch!important}
+#voiceGeneratorPage .voice-card{min-width:0;width:100%;font-family:Inter,"Segoe UI",Arial,sans-serif}
+#voiceGeneratorPage h1,#voiceGeneratorPage h2,#voiceGeneratorPage p,#voiceGeneratorPage label,#voiceGeneratorPage small,#voiceGeneratorPage button,#voiceGeneratorPage textarea,#voiceGeneratorPage input,#voiceGeneratorPage select{font-family:Inter,"Segoe UI",Arial,sans-serif}
+#voiceGeneratorPage .voice-hero h1{font-size:clamp(30px,4vw,48px);line-height:1.15}
+#voiceGeneratorPage .voice-card textarea,#voiceGeneratorPage .voice-card input,#voiceGeneratorPage .voice-card select{width:100%;max-width:100%;font-size:15px;line-height:1.5}
+#voiceGeneratorPage .voice-card .actions{display:flex;flex-wrap:wrap;gap:10px}
+#voiceGeneratorPage .voice-card button,#voiceGeneratorPage .voice-download{min-height:42px}
+#voiceGeneratorPage #voiceAudio{display:block;width:100%;max-width:100%}
+@media(min-width:761px){
+ #voiceGeneratorPage .voice-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ #voiceGeneratorPage .voice-card{padding:24px!important}
+ #voiceGeneratorPage .voice-card h2{font-size:23px}
+ #voiceGeneratorPage .voice-card p{line-height:1.65}
+}
+@media(max-width:760px){
+ #voiceGeneratorPage .voice-grid{grid-template-columns:minmax(0,1fr)!important}
+ #voiceGeneratorPage .voice-card{padding:16px!important}
+}
 </style>
 </head>
 <body>
