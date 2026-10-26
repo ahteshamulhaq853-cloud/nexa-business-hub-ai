@@ -1996,6 +1996,7 @@ function showPage(id){
  if(id==="paymentPage"&&$("paymentProduct")){$("paymentProduct").value="normal";$("paymentTitle").textContent="Payment & Access."; $("paymentDescription").textContent="Normal CV PDF access costs Rs. 100. Submit your transaction reference and wait for admin approval.";$("paymentAmount").textContent="Rs. 100"}
  document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
  $(id).classList.add("active");window.scrollTo({top:0,behavior:"smooth"});
+ if(id==="latestJobsPage")loadNexaJobs();
  if(id==="europassPage")loadEuropass();
  if(id==="paymentPage")loadMyOrders();
  if(id==="adminPage")loadAdminOrders();
