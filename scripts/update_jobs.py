@@ -19,7 +19,7 @@ FEED = ROOT / "data" / "jobs.json"
 SOURCES = [
     ("https://www.njp.gov.pk/index.php/jobs/live", "National Jobs Portal", "Government"),
     ("https://jobs.gov.pk/?pageid=602", "National Employment Exchange", "Government"),
-    ("https://www.rozee.pk/EN/jobs-in-pakistan/", "Rozee.pk", "Private"),
+    ("https://www.rozee.pk/job/jsearch/q/English/?fpn=0", "Rozee.pk", "Private"),
     ("https://www.mustakbil.com/", "Mustakbil", "Private"),
     ("https://auth.brightspyre.com/jobs", "BrightSpyre", "Private"),
 ]
@@ -98,9 +98,12 @@ def looks_like_job(url, text, source_url):
             or bool(re.search(r"[?&](jobid|job_id|vacancyid|vacancy_id)=", url, re.I))
         )
     if host == "rozee.pk":
-        # Rozee detail URLs vary; accept individual job pages with an ID.
+        # Never import a Rozee search/results page as an individual vacancy.
+        if path.startswith("/job/jsearch/") or path.startswith("/EN/search/"):
+            return False
+        # Rozee individual job URLs commonly end in jobs-<numeric ID>.
         return "/job/" in path and (
-            bool(re.search(r"\d{4,}", path))
+            bool(re.search(r"/jobs-\d{4,}(?:/|$)", path))
             or bool(re.search(r"[?&](jid|jobid|job_id|id)=\d+", url, re.I))
         )
     if host == "mustakbil.com":
@@ -146,6 +149,7 @@ def fetch_source(source_url, source_name, category):
             "source_url": source_url,
             "fetched_at": now_iso()
         })
+    print(f"{source_name}: parsed {len(parser.links)} links; {len(found)} valid individual listings.")
     return found
 
 def main():
