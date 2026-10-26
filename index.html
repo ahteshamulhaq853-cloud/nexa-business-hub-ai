@@ -145,6 +145,13 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
 @media(max-width:760px){header{padding-right:68px}main{margin-top:25px}#mainNav.menu-open{width:50vw!important;min-width:245px!important;padding-left:14px!important;padding-right:14px!important}}
 @media(max-width:420px){#settingsLauncher{top:10px;left:10px;right:auto;width:40px;height:40px;font-size:25px}header{padding-right:60px}main{margin-top:15px}#mainNav.menu-open{width:50vw!important;min-width:225px!important;padding:74px 11px 18px!important}#mainNav.menu-open:before{left:13px;font-size:12px}#mainNav.menu-open button{font-size:12px!important;padding:12px 9px!important;min-height:44px!important}}
  
+/* Mobile-style bottom navigation */
+#bottomNav{display:none;position:fixed;left:0;right:0;bottom:0;z-index:1050;justify-content:space-around;align-items:center;gap:2px;padding:9px 5px calc(9px + env(safe-area-inset-bottom));background:rgba(13,15,20,.97);border-top:1px solid #252b35;box-shadow:0 -8px 24px #0007;backdrop-filter:blur(12px)}
+#bottomNav button{display:flex;flex:1;min-width:0;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:6px 2px;margin:0;border:0;border-radius:9px;background:transparent;color:#9aa5b1;font-size:11px;font-weight:700;line-height:1.15;white-space:nowrap}
+#bottomNav button .bottom-icon{font-size:21px;line-height:1.1}
+#bottomNav button.active{color:#55a8ff}
+body.has-bottom-nav main{padding-bottom:100px}
+@media(max-width:760px){#bottomNav{padding-top:8px}#bottomNav button{font-size:10px}#bottomNav button .bottom-icon{font-size:22px}}
 /* Floating customer support assistant — matched to Nexa's dark navy and cyan UI */
 #supportLauncher{position:fixed;right:20px;bottom:20px;z-index:1000;border:1px solid #65f3dc;border-radius:12px;padding:12px 15px;background:linear-gradient(135deg,#65f3dc,#28b9d4);color:#06131b;box-shadow:0 8px 24px #0007,0 0 18px #65f3dc20;font-weight:900;font-size:13px;transition:transform .18s ease,box-shadow .18s ease}
 #supportLauncher:hover{transform:translateY(-2px);box-shadow:0 10px 28px #0008,0 0 22px #65f3dc35}
@@ -904,6 +911,12 @@ header{border-bottom:0!important;box-shadow:none!important}
  <div class="card"><div id="adminMsg" class="message"></div><div class="preview-head"><h2>Payment Requests</h2><button onclick="loadAdminOrders()">Refresh Orders</button></div><div id="adminOrders" class="table-wrap">Loading...</div></div>
 </section>
 </main>
+<nav id="bottomNav" aria-label="Main navigation">
+ <button type="button" onclick="bottomNavigate('dashboardPage',this)"><span class="bottom-icon">⌂</span><span>Dashboard</span></button>
+ <button type="button" onclick="bottomNavigate('cvSectionPage',this)"><span class="bottom-icon">▤</span><span>CV</span></button>
+ <button type="button" onclick="bottomNavigate('europassPage',this)"><span class="bottom-icon">▣</span><span>Europass CV</span></button>
+ <button type="button" onclick="bottomNavigate('settingsPage',this)"><span class="bottom-icon">♙</span><span>Profile</span></button>
+
 <footer>NEXA CV STUDIO · BEAUTIFUL &amp; PROFESSIONAL CV DESIGNS<br><strong style="display:inline-block;margin-top:8px;color:var(--cyan);letter-spacing:.5px">WEBSITE DESIGNED &amp; DEVELOPED BY NCC BANNU</strong></footer>
 <button id="supportLauncher" type="button" aria-label="Open customer support chat" onclick="toggleSupport(true)">✦ Ask Nexa Support</button>
 <section id="supportPanel" role="dialog" aria-label="Nexa customer support chat" aria-modal="false">
@@ -936,6 +949,10 @@ const $=id=>document.getElementById(id);
 
 function msg(id,text,type="info"){$(id).textContent=text;$(id).className="message show "+type}
 function clearMsg(id){$(id).textContent="";$(id).className="message"}
+function bottomNavigate(id,button){
+ showPage(id);
+ document.querySelectorAll('#bottomNav button').forEach(b=>b.classList.toggle('active',b===button));
+}
 function showPage(id){
  if(id==="paymentPage"&&$("paymentProduct")){$("paymentProduct").value="normal";$("paymentTitle").textContent="Payment & Access."; $("paymentDescription").textContent="Normal CV PDF access costs Rs. 100. Submit your transaction reference and wait for admin approval.";$("paymentAmount").textContent="Rs. 100"}
  document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
@@ -981,6 +998,8 @@ function setUI(){
  $("mainNav").classList.remove("menu-open");
  $("mainNav").classList.add("menu-hidden");
  $("settingsLauncher").style.display=currentUser?"flex":"none";
+ $("bottomNav").style.display=currentUser?"flex":"none";
+ document.body.classList.toggle("has-bottom-nav",!!currentUser);
  $("settingsLauncher").setAttribute("aria-expanded","false");
  if(currentUser){
   const m=currentUser.user_metadata||{};
