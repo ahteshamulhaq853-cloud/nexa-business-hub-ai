@@ -1842,32 +1842,47 @@ input:focus,select:focus,textarea:focus{outline:3px solid #36baff20!important;bo
  <div class="actions"><button class="secondary" onclick="showPage('servicesPage')">← Back to Services</button><button class="secondary" onclick="showPage('dashboardPage')">Dashboard</button></div>
 </section>
 <section id="latestJobsPage" class="page">
- <div class="studio-section-heading"><div><span class="studio-kicker">CAREER OPPORTUNITIES</span><h2>Latest Jobs</h2><p class="muted">Pakistan aur international job openings dhoondein. Search results job portals par khulenge.</p></div></div>
- <div class="card" style="max-width:900px">
-  <div class="field"><label for="jobsKeyword">Job title / skill / department</label><select id="jobsKeyword">
-   <option value="">All jobs / Any title</option>
-   <optgroup label="Office &amp; Computer"><option>Computer Operator</option><option>Data Entry Operator</option><option>Office Assistant</option><option>Office Clerk</option><option>Computer Technician</option><option>IT Support Technician</option><option>Accountant</option><option>Receptionist</option><option>Admin Assistant</option></optgroup>
-   <optgroup label="Education"><option>Teacher</option><option>Lecturer</option><option>Principal</option><option>Teaching Assistant</option><option>School Clerk</option></optgroup>
-   <optgroup label="Government &amp; Public Service"><option>Government Jobs</option><option>Police Jobs</option><option>Army Jobs</option><option>FPSC Jobs</option><option>KPPSC Jobs</option><option>Clerk BPS-11</option><option>Junior Clerk</option><option>Constable</option></optgroup>
-   <optgroup label="Business &amp; Customer Service"><option>Sales Representative</option><option>Customer Service Representative</option><option>Marketing Officer</option><option>Shop Assistant</option><option>Cashier</option><option>Manager</option></optgroup>
-   <optgroup label="Technical &amp; Skilled Work"><option>Electrician</option><option>Driver</option><option>Graphic Designer</option><option>Web Developer</option><option>Video Editor</option><option>Mobile Repair Technician</option><option>Lab Technician</option><option>Nurse</option></optgroup>
-   <optgroup label="Other Opportunities"><option>Internship</option><option>Fresh Graduate Jobs</option><option>Part-Time Jobs</option><option>Work From Home</option><option>Freelancer</option><option>Any Job</option></optgroup>
-  </select></div>
+ <div class="studio-section-heading"><div><span class="studio-kicker">NEXA CAREERS</span><h2>Latest Jobs</h2><p class="muted">Jobs dekhein, details parhein aur isi website par application submit karein.</p></div></div>
+ <div class="card" style="max-width:1000px">
   <div class="grid two">
-   <div class="field"><label for="jobsLocation">Location</label><select id="jobsLocation"><option value="Pakistan">All Pakistan</option><option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option><option value="Bannu">Bannu</option><option value="Peshawar">Peshawar</option><option value="Islamabad">Islamabad</option><option value="Rawalpindi">Rawalpindi</option><option value="Lahore">Lahore</option><option value="Karachi">Karachi</option><option value="Remote">Remote / Work from home</option><option value="Abroad">Abroad</option></select></div>
-   <div class="field"><label for="jobsType">Job category</label><select id="jobsType"><option value="">All categories</option><option value="government jobs">Government</option><option value="private jobs">Private</option><option value="teaching jobs">Teaching</option><option value="computer operator data entry jobs">Computer / Data Entry</option><option value="office assistant clerk jobs">Office / Clerk</option><option value="internships">Internships</option><option value="remote jobs">Remote</option></select></div>
+   <div class="field"><label for="jobsKeyword">Job title / skill / department</label><select id="jobsKeyword">
+    <option value="">All jobs / Any title</option>
+    <optgroup label="Office &amp; Computer"><option>Computer Operator</option><option>Data Entry Operator</option><option>Office Assistant</option><option>Office Clerk</option><option>Computer Technician</option><option>IT Support Technician</option><option>Accountant</option><option>Receptionist</option><option>Admin Assistant</option></optgroup>
+    <optgroup label="Education"><option>Teacher</option><option>Lecturer</option><option>Principal</option><option>Teaching Assistant</option><option>School Clerk</option></optgroup>
+    <optgroup label="Government &amp; Public Service"><option>Government Jobs</option><option>Police Jobs</option><option>Army Jobs</option><option>FPSC Jobs</option><option>KPPSC Jobs</option><option>Clerk BPS-11</option><option>Junior Clerk</option><option>Constable</option></optgroup>
+    <optgroup label="Business &amp; Customer Service"><option>Sales Representative</option><option>Customer Service Representative</option><option>Marketing Officer</option><option>Shop Assistant</option><option>Cashier</option><option>Manager</option></optgroup>
+    <optgroup label="Technical &amp; Skilled Work"><option>Electrician</option><option>Driver</option><option>Graphic Designer</option><option>Web Developer</option><option>Video Editor</option><option>Mobile Repair Technician</option><option>Lab Technician</option><option>Nurse</option></optgroup>
+    <optgroup label="Other Opportunities"><option>Internship</option><option>Fresh Graduate Jobs</option><option>Part-Time Jobs</option><option>Work From Home</option><option>Freelancer</option><option>Any Job</option></optgroup>
+   </select></div>
+   <div class="field"><label for="jobsLocation">Location</label><select id="jobsLocation"><option value="">All locations</option><option>Pakistan</option><option>Khyber Pakhtunkhwa</option><option>Bannu</option><option>Peshawar</option><option>Islamabad</option><option>Rawalpindi</option><option>Lahore</option><option>Karachi</option><option>Remote</option><option>Abroad</option></select></div>
   </div>
-  <button type="button" onclick="searchLatestJobs()">🔎 Search Latest Jobs</button>
-  <p class="muted" style="font-size:12px">Job title aur city select karne se zyada relevant results milenge.</p>
+  <div class="grid two">
+   <div class="field"><label for="jobsType">Job category</label><select id="jobsType"><option value="">All categories</option><option>Government</option><option>Private</option><option>Teaching</option><option>Computer / Data Entry</option><option>Office / Clerk</option><option>Internship</option><option>Remote</option></select></div>
+   <div class="field"><label for="jobsSearchText">Search by company or keyword</label><input id="jobsSearchText" type="search" placeholder="Company, skill, keyword..."></div>
+  </div>
+  <button type="button" onclick="loadNexaJobs()">🔎 Search Jobs on NEXA</button>
+  <p id="jobsStatus" class="muted" role="status">Website ke andar available vacancies load ho rahi hain…</p>
  </div>
- <div class="studio-section-heading" style="margin-top:26px"><div><span class="studio-kicker">QUICK ACCESS</span><h2>Popular Job Websites</h2></div></div>
- <div class="grid two">
-  <div class="card"><h3>National Job Portal</h3><p class="muted">Federal government jobs in Pakistan.</p><a href="https://njp.gov.pk/" target="_blank" rel="noopener noreferrer">Open NJP ↗</a></div>
-  <div class="card"><h3>FPSC</h3><p class="muted">Federal Public Service Commission vacancies and announcements.</p><a href="https://www.fpsc.gov.pk/" target="_blank" rel="noopener noreferrer">Open FPSC ↗</a></div>
-  <div class="card"><h3>KPPSC</h3><p class="muted">Khyber Pakhtunkhwa Public Service Commission jobs.</p><a href="https://www.kppsc.gov.pk/" target="_blank" rel="noopener noreferrer">Open KPPSC ↗</a></div>
-  <div class="card"><h3>Pakistan Railways</h3><p class="muted">Official recruitment notices and announcements.</p><a href="https://www.pakrail.gov.pk/" target="_blank" rel="noopener noreferrer">Open Pakistan Railways ↗</a></div>
-  <div class="card"><h3>Rozee.pk</h3><p class="muted">Private-sector jobs across Pakistan.</p><a href="https://www.rozee.pk/" target="_blank" rel="noopener noreferrer">Open Rozee.pk ↗</a></div>
-  <div class="card"><h3>BrightSpyre</h3><p class="muted">Jobs and development-sector opportunities.</p><a href="https://www.brightspyre.com/" target="_blank" rel="noopener noreferrer">Open BrightSpyre ↗</a></div>
+ <div id="nexaJobsList" class="grid two" style="margin-top:18px"></div>
+ <div id="jobApplyPanel" class="card" style="display:none;max-width:760px;margin-top:22px">
+  <h3 id="jobApplyHeading">Apply for this job</h3>
+  <p class="muted">Application isi website se submit hogi.</p>
+  <form id="nexaJobApplyForm" onsubmit="submitNexaJobApplication(event)">
+   <input type="hidden" id="applyJobId"><input type="hidden" id="applyJobTitle">
+   <div class="grid two">
+    <div class="field"><label for="applyFullName">Full name *</label><input id="applyFullName" required maxlength="120" autocomplete="name"></div>
+    <div class="field"><label for="applyEmail">Email address *</label><input id="applyEmail" type="email" required maxlength="180" autocomplete="email"></div>
+   </div>
+   <div class="grid two">
+    <div class="field"><label for="applyPhone">Mobile number *</label><input id="applyPhone" type="tel" required maxlength="30" autocomplete="tel"></div>
+    <div class="field"><label for="applyEducation">Education *</label><input id="applyEducation" required maxlength="180" placeholder="e.g. BA, FSc, Matric"></div>
+   </div>
+   <div class="field"><label for="applyCover">Short introduction / cover letter</label><textarea id="applyCover" rows="4" maxlength="3000" placeholder="Apni skills aur is job ke liye suitability likhein…"></textarea></div>
+   <div class="field"><label for="applyCVLink">CV link (optional)</label><input id="applyCVLink" type="url" maxlength="500" placeholder="https://..."><small class="muted">Apna CV Google Drive ya kisi accessible link par upload karke link paste kar sakte hain.</small></div>
+   <p id="jobApplyStatus" class="muted" role="status"></p>
+   <button type="submit" id="jobApplySubmit">Submit Application</button>
+   <button type="button" class="secondary" onclick="closeNexaJobApplication()">Cancel</button>
+  </form>
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('servicesPage')">← Back to Services</button><button class="secondary" onclick="showPage('dashboardPage')">Dashboard</button></div>
 </section>
@@ -1916,13 +1931,51 @@ function bottomNavigate(id,button){
  showPage(id);
  document.querySelectorAll('#bottomNav button').forEach(b=>b.classList.toggle('active',b===button));
 }
-function searchLatestJobs(){
- const keyword=(($("jobsKeyword")&&$("jobsKeyword").value)||"").trim();
- const location=(($("jobsLocation")&&$("jobsLocation").value)||"Pakistan").trim();
- const category=(($("jobsType")&&$("jobsType").value)||"").trim();
- const place=location==="Remote"?"remote work from home":location==="Abroad"?"jobs abroad":location;
- const terms=[keyword,category,place,"latest vacancies"].filter(Boolean).join(" ");
- window.open("https://www.google.com/search?q="+encodeURIComponent(terms)+"&ibp=htl;jobs","_blank","noopener,noreferrer");
+let nexaJobsCache=[];
+function escapeJobHTML(value){return String(value==null?"":value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));}
+function jobDate(value){if(!value)return "Not specified";const d=new Date(value);return isNaN(d.getTime())?escapeJobHTML(value):d.toLocaleDateString();}
+async function loadNexaJobs(){
+ const status=$("jobsStatus"),list=$("nexaJobsList");
+ if(status)status.textContent="NEXA website ki vacancies search ho rahi hain…";
+ if(list)list.innerHTML="";
+ const keyword=(($("jobsKeyword")||{}).value||"").trim().toLowerCase();
+ const location=(($("jobsLocation")||{}).value||"").trim().toLowerCase();
+ const category=(($("jobsType")||{}).value||"").trim().toLowerCase();
+ const query=(($("jobsSearchText")||{}).value||"").trim().toLowerCase();
+ try{
+  const {data,error}=await db.from("job_listings").select("id,title,company,location,category,employment_type,description,requirements,application_deadline,created_at").eq("is_active",true).order("created_at",{ascending:false}).limit(100);
+  if(error)throw error;
+  nexaJobsCache=(data||[]).filter(j=>{
+   const hay=[j.title,j.company,j.location,j.category,j.employment_type,j.description,j.requirements].join(" ").toLowerCase();
+   return (!keyword||hay.includes(keyword))&&(!location||String(j.location||"").toLowerCase().includes(location)||(location==="pakistan"&&String(j.location||"").toLowerCase().includes("pakistan")))&&(!category||String(j.category||"").toLowerCase().includes(category))&&(!query||hay.includes(query));
+  });
+  if(!nexaJobsCache.length){status.textContent=(data&&data.length)?"Aapki search se matching vacancy nahi mili. Filters change karke dobara try karein.":"Abhi NEXA par koi vacancy publish nahi hui. Jobs add hone ke baad yahin show hongi.";return;}
+  status.textContent=nexaJobsCache.length+" vacancy/vacancies NEXA par milin.";
+  list.innerHTML=nexaJobsCache.map(j=>'<article class="card"><span class="studio-kicker">'+escapeJobHTML(j.category||"Career Opportunity")+'</span><h3>'+escapeJobHTML(j.title)+'</h3><p><strong>'+escapeJobHTML(j.company||"Employer not specified")+'</strong></p><p class="muted">'+escapeJobHTML(j.location||"Location not specified")+(j.employment_type?" · "+escapeJobHTML(j.employment_type):"")+'</p><p>'+escapeJobHTML(j.description||"Job details ke liye employer se rabta karein.")+'</p>'+(j.requirements?'<p><strong>Requirements:</strong> '+escapeJobHTML(j.requirements)+'</p>':"")+'<p class="muted">Apply before: '+jobDate(j.application_deadline)+'</p><button type="button" onclick="openNexaJobApplication('+JSON.stringify(String(j.id))+')">Apply on NEXA</button></article>').join("");
+ }catch(error){console.error("NEXA jobs load error:",error);status.textContent="Jobs database abhi configure nahi hui ya connection error hai. Supabase mein job_listings table aur public read policy setup karni hogi.";}
+}
+function openNexaJobApplication(id){
+ const job=nexaJobsCache.find(j=>String(j.id)===String(id));if(!job)return;
+ $("applyJobId").value=String(job.id);$("applyJobTitle").value=job.title;$("jobApplyHeading").textContent="Apply: "+job.title;
+ $("jobApplyStatus").textContent="";$("jobApplyPanel").style.display="block";$("jobApplyPanel").scrollIntoView({behavior:"smooth",block:"start"});
+}
+function closeNexaJobApplication(){$("jobApplyPanel").style.display="none";}
+async function submitNexaJobApplication(event){
+ event.preventDefault();
+ const button=$("jobApplySubmit"),status=$("jobApplyStatus");
+ const jobId=$("applyJobId").value;
+ if(!jobId){status.textContent="Pehle job select karein.";return;}
+ button.disabled=true;status.textContent="Application submit ho rahi hai…";
+ try{
+  const payload={job_id:jobId,job_title:$("applyJobTitle").value,full_name:$("applyFullName").value.trim(),email:$("applyEmail").value.trim(),phone:$("applyPhone").value.trim(),education:$("applyEducation").value.trim(),cover_letter:$("applyCover").value.trim()||null,cv_link:$("applyCVLink").value.trim()||null};
+  const {error}=await db.from("job_applications").insert(payload);
+  if(error)throw error;
+  $("nexaJobApplyForm").reset();$("jobApplyPanel").style.display="none";
+  status.textContent="Shukriya! Aapki application NEXA par submit ho gayi.";
+  const statusEl=$("jobsStatus");if(statusEl)statusEl.textContent="Application successfully submit ho gayi.";
+  alert("Application successfully submit ho gayi!");
+ }catch(error){console.error("NEXA application submit error:",error);status.textContent="Application submit nahi hui. Supabase mein job_applications table aur insert policy configure karein. Details: "+(error.message||"connection error");}
+ finally{button.disabled=false;}
 }
 function showPage(id){
  if(id==="paymentPage"&&$("paymentProduct")){$("paymentProduct").value="normal";$("paymentTitle").textContent="Payment & Access."; $("paymentDescription").textContent="Normal CV PDF access costs Rs. 100. Submit your transaction reference and wait for admin approval.";$("paymentAmount").textContent="Rs. 100"}
