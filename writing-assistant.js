@@ -42,7 +42,7 @@
  };
  window.nexaCleanWriting=function(){
   const input=el("waBasicText");if(!input||!input.value.trim()){msg("Cleanup ke liye pehle text paste karein.","error");return;}
-  const cleaned=input.value.replace(/[\\t ]+/g," ").replace(/ *\\n */g,"\n").replace(/\\n{3,}/g,"\n\n").trim();
+  const nl=String.fromCharCode(10); const cleaned=input.value.split(nl).map(line=>line.trim().replace(/ +/g," ")).join(nl).replace(new RegExp(nl+"{3,}","g"),nl+nl).trim();
   el("waOutput").value=cleaned;msg("Extra spaces clean kar di gayi hain. Ye basic cleanup hai, AI grammar correction nahi.","success");
  };
  window.nexaClearWriting=function(){["waRecipient","waName","waReason","waDetails","waOutput","waBasicText"].forEach(id=>{if(el(id))el(id).value="";});msg("Fields clear ho gaye.","info");};
