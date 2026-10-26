@@ -271,7 +271,7 @@ def fetch_job_location(job_url):
         html = raw.decode(charset, errors="replace")
 
         # Prefer structured JobPosting/JSON-LD location data when present.
-        for block in re.findall(r'<script[^>]*type=["\\']application/ld\\+json["\\'][^>]*>(.*?)</script>', html, re.I | re.S):
+        for block in re.findall(r"""<script[^>]*type=["']application/ld\+json["'][^>]*>(.*?)</script>""", html, re.I | re.S):
             try:
                 data = json.loads(unescape(block).strip())
             except (json.JSONDecodeError, TypeError):
@@ -300,15 +300,15 @@ def fetch_job_location(job_url):
 
         # Fall back to visible label/value patterns in the official page.
         plain = unescape(re.sub(r"<[^>]+>", " ", html))
-        plain = re.sub(r"\\s+", " ", plain)
+        plain = re.sub(r"\s+", " ", plain)
         patterns = [
-            r"\\b(?:job\\s+)?location\\s*[:：]\\s*([^|;]{2,100}?)(?=\\s{2,}|\\b(?:job type|employment type|salary|deadline|apply|description)\\b|$)",
+            r"\b(?:job\s+)?location\s*[:：]\s*([^|;]{2,100}?)(?=\s{2,}|\b(?:job type|employment type|salary|deadline|apply|description)\b|$)",
             r"\\bcity\\s*[:：]\\s*([A-Z][A-Za-z .,'()-]{1,70}?)(?=\\s{2,}|\\b(?:state|country|salary|deadline|apply)\\b|$)",
         ]
         for pattern in patterns:
             match = re.search(pattern, plain, re.I)
             if match:
-                value = re.sub(r"\\s+", " ", match.group(1)).strip(" -,:;|")
+                value = re.sub(r"\s+", " ", match.group(1)).strip(" -,:;|")
                 if value and not re.search(r"^(?:not specified|unknown|n/?a|view job|details)$", value, re.I):
                     return value[:120]
     except Exception:
