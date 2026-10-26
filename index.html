@@ -1359,8 +1359,21 @@ input:focus,select:focus,textarea:focus{outline:3px solid #36baff20!important;bo
   }
 }
 
-/* Justify descriptive text like Ctrl+J in Word, while keeping headings and controls unchanged */
-p:not(.no-justify){text-align:justify;text-justify:inter-word}
+/* Justify all paragraph and description text across the site, like Ctrl+J in Word */
+p:not(.no-justify),
+.muted:not(button):not(input),
+.small-note,
+.welcome-subtitle,
+.studio-intro-copy > p,
+.card-description,
+.description,
+.service-description,
+.help-text,
+.form-description,
+.section-description {
+  text-align:justify;
+  text-justify:inter-word;
+}
 
 /* Site-wide compact spacing: reduce excessive gaps while preserving CV/certificate print layouts */
 body:not(.print-mode){line-height:1.4}
