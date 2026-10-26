@@ -1187,7 +1187,8 @@ function showPage(id){
 
 function toggleCertificateCustomRole(){const select=$("ecRole"),custom=$("ecRoleCustom");if(custom)custom.style.display=select&&select.value==="Other"?"block":"none";updateExperienceCertificate()}
 function toggleCertificateCustom(id){const select=$(id),custom=$(id+"Custom");if(custom)custom.style.display=select&&select.value==="CUSTOM"?"block":"none";updateExperienceCertificate()}
-function applyCertificateTemplate(template){const allowed=["classic","navy","emerald","burgundy","blue","charcoal"];const chosen=allowed.includes(template)?template:"classic";const paper=$("experienceCertificatePaper");if(paper)paper.className="experience-certificate template-"+chosen;try{localStorage.setItem("nexa_experience_template",chosen)}catch(e){} }\n function updateExperienceCertificate(){
+function applyCertificateTemplate(template){const allowed=["classic","navy","emerald","burgundy","blue","charcoal"];const chosen=allowed.includes(template)?template:"classic";const paper=$("experienceCertificatePaper");if(paper)paper.className="experience-certificate template-"+chosen;try{localStorage.setItem("nexa_experience_template",chosen)}catch(e){} }
+ function updateExperienceCertificate(){
  const roleSelect=$("ecRole"),roleCustom=$("ecRoleCustom");const roleValue=roleSelect&&roleSelect.value==="Other"?(roleCustom?.value||""):(roleSelect?.value||"");
  const customVal=id=>{const el=$(id),custom=$(id+"Custom");return el&&el.value==="CUSTOM"?(custom?.value||""):((el?.value)||"")};
  const endValue=$("ecEnd")?.value==="CUSTOM"?($("ecEndCustom")?.value||""):( $("ecEnd")?.value||"Present");
