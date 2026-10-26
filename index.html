@@ -1227,7 +1227,7 @@ input::placeholder,textarea::placeholder{
     <div class="field"><label for="freeVoice">Urdu voice (Pakistan)</label><select id="freeVoice"><option value="">Detecting Urdu voices…</option></select><small class="muted">Only Urdu voices are listed. If no Urdu voice is installed, speech will stop instead of using an English voice.</small></div>
     <div class="field"><label for="voiceRate">Speaking speed</label><input id="voiceRate" type="range" min="0.6" max="1.4" step="0.1" value="1"><small class="muted">Move left for slower speech, right for faster speech.</small></div>
     <div class="field"><label for="voicePitch">Voice pitch</label><input id="voicePitch" type="range" min="0.7" max="1.4" step="0.1" value="1"><small class="muted">Changes pitch only; it does not clone or create a new person's voice.</small></div>
-    <div class="field"><label for="voiceMood">Delivery style</label><select id="voiceMood"><option value="neutral">Neutral / Normal</option><option value="energetic">Energetic / Gaming intro</option><option value="dramatic">Dramatic / Storytelling</option><option value="calm">Calm / Soft</option></select><small class="muted">Free browser controls only change speed and pitch; they cannot create real human acting.</small></div>
+    <div class="field"><label for="voiceMood">Voice character / style</label><select id="voiceMood"><option value="neutral">Neutral / Normal</option><option value="child">Child-like / High pitch</option><option value="elder">Elder / Deep & slow</option><option value="energetic">Energetic / Gaming intro</option><option value="dramatic">Dramatic / Storytelling</option><option value="calm">Calm / Soft</option><option value="robot">Robot / Mechanical</option><option value="announcer">News / Announcer</option><option value="cheerful">Cheerful / Friendly</option></select><small class="muted">These presets adjust speed and pitch using your browser voice. They do not create a real child/adult voice or clone a person; results depend on your device.</small></div>
     <div class="field"><label for="voiceText">Your text</label><textarea id="voiceText" maxlength="2500" placeholder="یہاں اردو متن لکھیں..." required style="min-height:180px"></textarea><div class="voice-counter"><span id="voiceCharCount">0</span> / 2,500 characters</div><div class="actions"></div><small class="muted">Emoji are visual only and will be removed before speaking. Punctuation helps guide pauses, but cannot create real emotion.</small></div>
     <div class="actions">
      <button id="voiceGenerateBtn" type="submit">▶ Speak Text</button>
@@ -1936,7 +1936,7 @@ function resumeVoice(){
 }
 function applyVoiceMood(){
  const mood=$("voiceMood")?.value||"neutral";
- const settings={neutral:[1,1],energetic:[1.18,1.12],dramatic:[0.88,0.92],calm:[0.82,0.94]};
+ const settings={neutral:[1,1],child:[1.06,1.38],elder:[0.78,0.72],energetic:[1.18,1.12],dramatic:[0.88,0.92],calm:[0.82,0.94],robot:[1,0.82],announcer:[1.04,0.96],cheerful:[1.12,1.16]};
  const pair=settings[mood]||settings.neutral;
  $("voiceRate").value=pair[0];$("voicePitch").value=pair[1];
 }
