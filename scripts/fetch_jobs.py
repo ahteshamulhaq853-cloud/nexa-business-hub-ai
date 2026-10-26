@@ -117,7 +117,7 @@ def extract_details(url, title, card_context, source_type, source_name):
         "company": employer,
         "location": location,
         "category": "Government" if source_type == "government" else ("Government / Private" if source_type == "mixed" else "Private"),
-        "employment_type": field_from_text(combined, [r"(?:employment type|job type|type of employment)\s*:?\s*([^|]{2,100}?)(?=\s+(?:salary|location|qualification|education|experience|apply|deadline)\b|[|]|$)")]),
+        "employment_type": field_from_text(combined, [r"(?:employment type|job type|type of employment)\s*:?\s*([^|]{2,100}?)(?=\s+(?:salary|location|qualification|education|experience|apply|deadline)\b|[|]|$)"]),
         "description": clean(card_context)[:1800],
         "education_required": education,
         "experience_needed": experience,
