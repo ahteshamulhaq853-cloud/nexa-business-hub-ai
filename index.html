@@ -742,6 +742,21 @@ button:not(:disabled):hover{box-shadow:0 5px 18px #65f3dc18}
   .hero{padding:15px 0 18px!important}
 }
 
+
+/* Nexa AI Voice Generator */
+#voiceGeneratorPage .voice-grid{align-items:stretch}
+#voiceGeneratorPage .voice-card{padding:22px}
+#voiceGeneratorPage .voice-counter{font-size:11px;color:var(--muted);text-align:right;margin-top:6px}
+#voiceGeneratorPage .voice-empty{min-height:220px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;border:1px dashed #315563;border-radius:14px;background:#091321;color:var(--muted);text-align:center;padding:22px}
+#voiceGeneratorPage .voice-wave{width:58px;height:58px;display:grid;place-items:center;border:1px solid var(--cyan);border-radius:50%;font-size:28px;color:var(--cyan);box-shadow:0 0 28px #65f3dc15}
+#voiceGeneratorPage .voice-empty strong{color:var(--text)}
+#voiceGeneratorPage #voiceAudio{width:100%;margin:14px 0 20px}
+#voiceGeneratorPage .voice-download-actions{align-items:center;margin:10px 0 22px}
+#voiceGeneratorPage .voice-download{display:inline-flex;align-items:center;justify-content:center;padding:11px 14px;border-radius:9px;background:var(--cyan);color:#06131b;text-decoration:none;font-size:13px;font-weight:800}
+#voiceGeneratorPage .voice-security-note{display:flex;flex-direction:column;gap:7px;padding:14px;border:1px solid #315563;border-radius:10px;background:#091321;color:var(--muted);font-size:12px;line-height:1.6}
+#voiceGeneratorPage .voice-security-note strong{color:var(--cyan)}
+#voiceGeneratorPage .voice-card .muted{font-size:12px}
+@media(max-width:760px){#voiceGeneratorPage .voice-grid{grid-template-columns:minmax(0,1fr)}#voiceGeneratorPage .voice-card{padding:16px 0}}
 </style>
 </head>
 <body>
@@ -752,6 +767,7 @@ button:not(:disabled):hover{box-shadow:0 5px 18px #65f3dc18}
   <button class="ghost" onclick="showPage('dashboardPage')">Dashboard</button>
   <button class="ghost" onclick="showPage('cvSectionPage')">CV</button>
   <button class="ghost" onclick="showPage('servicesPage')">Services</button>
+  <button class="ghost" onclick="showPage('voiceGeneratorPage')">AI Voice</button>
   <button class="ghost" id="adminButton" style="display:none" onclick="showPage('adminPage')">Admin</button>
   <button class="ghost" onclick="showPage('paymentPage')">Our Payment</button>
   <button class="ghost" onclick="openPasswordOption('change')">Change Password</button>
@@ -817,6 +833,11 @@ button:not(:disabled):hover{box-shadow:0 5px 18px #65f3dc18}
 <section id="servicesPage" class="page">
  
  <div class="service-list">
+  <button class="service-row" onclick="showPage('voiceGeneratorPage')">
+   <span class="service-number">01</span>
+   <span class="service-copy"><strong>AI Voice Generator</strong><small>Convert text into natural-sounding speech and download MP3 audio</small></span>
+   <span class="service-arrow" aria-hidden="true">›</span>
+  </button>
   <button class="service-row" onclick="showPage('experienceCertificatePage')">
    <span class="service-number">01</span>
    <span class="service-copy"><strong>Experience Certificate</strong><small>Create a professional work experience certificate</small></span>
@@ -1131,6 +1152,63 @@ button:not(:disabled):hover{box-shadow:0 5px 18px #65f3dc18}
 <section id="adminPage" class="page">
  <div class="hero"><span class="eyebrow">RESTRICTED AREA / 03</span><h1>Admin <span class="neon">Control Panel.</span></h1><p>Only authorised admins can review payment requests.</p></div>
  <div class="card"><div id="adminMsg" class="message"></div><div class="preview-head"><h2>Payment Requests</h2><button onclick="loadAdminOrders()">Refresh Orders</button></div><div id="adminOrders" class="table-wrap">Loading...</div></div>
+</section>
+
+<section id="voiceGeneratorPage" class="page">
+ <div class="hero voice-hero">
+  <span class="eyebrow">NEXA AI STUDIO / VOICE</span>
+  <h1>AI Voice <span class="neon">Generator.</span></h1>
+  <p>Turn your script into natural AI speech, preview it, and save the generated audio as an MP3.</p>
+  <span class="pill">SECURE ELEVENLABS CONNECTION</span>
+ </div>
+ <div class="grid voice-grid">
+  <div class="card voice-card">
+   <h2>🎙️ Create your voice</h2>
+   <p class="muted">Write or paste your narration below. Maximum 2,500 characters per generation.</p>
+   <form id="voiceForm">
+    <div class="field">
+     <label for="voiceText">Your text</label>
+     <textarea id="voiceText" maxlength="2500" placeholder="Type your Urdu or English script here..." required style="min-height:180px"></textarea>
+     <div class="voice-counter"><span id="voiceCharCount">0</span> / 2,500 characters</div>
+    </div>
+    <div class="field">
+     <label for="voiceModel">Voice model</label>
+     <select id="voiceModel">
+      <option value="eleven_multilingual_v2">Multilingual v2 — narration</option>
+      <option value="eleven_flash_v2_5">Flash v2.5 — faster generation</option>
+     </select>
+    </div>
+    <div class="field">
+     <label for="voiceId">ElevenLabs Voice ID</label>
+     <input id="voiceId" value="JBFqnCBsd6RMkjVDRZzb" maxlength="100" autocomplete="off" spellcheck="false" required>
+     <small class="muted">Default voice ID: George. Replace it with a voice ID available in your ElevenLabs account if needed.</small>
+    </div>
+    <div class="actions">
+     <button id="voiceGenerateBtn" type="submit">Generate AI Voice</button>
+     <button class="secondary" type="button" onclick="clearVoiceText()">Clear Text</button>
+    </div>
+    <div id="voiceMsg" class="message" role="status" aria-live="polite"></div>
+   </form>
+  </div>
+  <div class="card voice-card voice-output">
+   <h2>🎧 Your generated audio</h2>
+   <p class="muted">When generation finishes, listen here or save the MP3 file to your device.</p>
+   <div id="voiceEmpty" class="voice-empty">
+    <div class="voice-wave">♫</div>
+    <strong>Your audio will appear here</strong>
+    <span>Enter text and press Generate AI Voice.</span>
+   </div>
+   <div id="voiceResult" style="display:none">
+    <audio id="voiceAudio" controls preload="metadata"></audio>
+    <div class="actions voice-download-actions">
+     <a id="voiceDownload" class="voice-download" href="#" download="nexa-ai-voice.mp3">⬇ Download MP3</a>
+     <button class="secondary" type="button" onclick="resetVoiceAudio()">Remove Audio</button>
+    </div>
+   </div>
+   <div class="voice-security-note"><strong>Privacy &amp; security</strong><span>Your ElevenLabs API key stays on the secure server. Avoid including passwords or sensitive personal information in your script.</span></div>
+  </div>
+ </div>
+ <div class="actions"><button class="secondary" onclick="showPage('servicesPage')">← Back to Services</button><button class="secondary" onclick="showPage('dashboardPage')">Dashboard</button></div>
 </section>
 </main>
 <nav id="bottomNav" aria-label="Main navigation">
@@ -1783,6 +1861,62 @@ $("supportForm").addEventListener("submit",e=>{
  const input=$("supportInput");
  const question=input.value.trim();
  if(question)askSupport(question);
+});
+
+
+let voiceAudioUrl = null;
+function voiceMessage(text, type="info"){
+ const el=$("voiceMsg");if(!el)return;
+ el.textContent=text;el.className="message show "+type;
+}
+function resetVoiceAudio(){
+ const audio=$("voiceAudio"),download=$("voiceDownload");
+ if(audio){audio.pause();audio.removeAttribute("src");audio.load();}
+ if(voiceAudioUrl){URL.revokeObjectURL(voiceAudioUrl);voiceAudioUrl=null;}
+ if(download)download.removeAttribute("href");
+ $("voiceResult").style.display="none";$("voiceEmpty").style.display="flex";
+}
+function clearVoiceText(){
+ $("voiceText").value="";$("voiceCharCount").textContent="0";
+ $("voiceMsg").textContent="";$("voiceMsg").className="message";
+}
+$("voiceText").addEventListener("input",()=>{$("voiceCharCount").textContent=String($("voiceText").value.length)});
+$("voiceForm").addEventListener("submit",async e=>{
+ e.preventDefault();
+ const textValue=$("voiceText").value.trim();
+ const voiceId=$("voiceId").value.trim();
+ const modelId=$("voiceModel").value;
+ if(!currentUser){voiceMessage("Please sign in first to use AI Voice Generator.","error");showPage("accountPage");return;}
+ if(!textValue){voiceMessage("Please enter the text you want to convert to speech.","error");return;}
+ if(textValue.length>2500){voiceMessage("Please keep your text under 2,500 characters.","error");return;}
+ const btn=$("voiceGenerateBtn");btn.disabled=true;btn.textContent="Generating voice...";
+ voiceMessage("Connecting securely and generating your audio. This may take a little while.","info");
+ try{
+  const sessionResult=await db.auth.getSession();
+  const session=sessionResult.data&&sessionResult.data.session;
+  if(sessionResult.error||!session||!session.access_token)throw new Error("Your login session expired. Please sign in again.");
+  const response=await fetch(SUPABASE_URL+"/functions/v1/nexa-voice-generator",{
+   method:"POST",
+   headers:{"Content-Type":"application/json","apikey":SUPABASE_KEY,"Authorization":"Bearer "+session.access_token},
+   body:JSON.stringify({text:textValue,voiceId:voiceId,modelId:modelId})
+  });
+  if(!response.ok){
+   let message="Voice generation failed. Please try again.";
+   try{const data=await response.json();if(data&&data.error)message=data.error;}catch(err){}
+   throw new Error(message);
+  }
+  const blob=await response.blob();
+  if(!blob.size)throw new Error("The voice service returned an empty audio file.");
+  resetVoiceAudio();
+  voiceAudioUrl=URL.createObjectURL(new Blob([blob],{type:"audio/mpeg"}));
+  $("voiceAudio").src=voiceAudioUrl;
+  $("voiceDownload").href=voiceAudioUrl;
+  $("voiceResult").style.display="block";$("voiceEmpty").style.display="none";
+  voiceMessage("Your AI voice is ready. Play it or download the MP3 below.","success");
+ }catch(error){
+  console.error("AI Voice Generator:",error);
+  voiceMessage(error&&error.message?error.message:"Could not generate audio. Please try again.","error");
+ }finally{btn.disabled=false;btn.textContent="Generate AI Voice";}
 });
 
 initSearchableSelects();
