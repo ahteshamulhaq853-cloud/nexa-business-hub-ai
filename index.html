@@ -1227,6 +1227,7 @@ input::placeholder,textarea::placeholder{
     <div class="field"><label for="freeVoice">Urdu voice (Pakistan)</label><select id="freeVoice"><option value="">Detecting Urdu voices…</option></select><small class="muted">Only Urdu voices are listed. If no Urdu voice is installed, speech will stop instead of using an English voice.</small></div>
     <div class="field"><label for="voiceRate">Speaking speed</label><input id="voiceRate" type="range" min="0.6" max="1.4" step="0.1" value="1"><small class="muted">Move left for slower speech, right for faster speech.</small></div>
     <div class="field"><label for="voicePitch">Voice pitch</label><input id="voicePitch" type="range" min="0.7" max="1.4" step="0.1" value="1"><small class="muted">Changes pitch only; it does not clone or create a new person's voice.</small></div>
+    <div class="field"><label for="voiceMood">Delivery style</label><select id="voiceMood"><option value="neutral">Neutral / Normal</option><option value="energetic">Energetic / Gaming intro</option><option value="dramatic">Dramatic / Storytelling</option><option value="calm">Calm / Soft</option></select><small class="muted">Free browser controls only change speed and pitch; they cannot create real human acting.</small></div>
     <div class="field"><label for="voiceText">Your text</label><textarea id="voiceText" maxlength="2500" placeholder="یہاں اردو متن لکھیں..." required style="min-height:180px"></textarea><div class="voice-counter"><span id="voiceCharCount">0</span> / 2,500 characters</div><div class="actions"><button class="secondary" type="button" id="pubgVoiceSampleBtn">🔥 Add energetic PUBG sample</button></div><small class="muted">Emoji are visual only and will be removed before speaking. Punctuation helps guide pauses, but cannot create real emotion.</small></div>
     <div class="actions">
      <button id="voiceGenerateBtn" type="submit">▶ Speak Text</button>
@@ -1234,6 +1235,7 @@ input::placeholder,textarea::placeholder{
      <button class="secondary" type="button" id="voiceResumeBtn" onclick="resumeVoice()">▶ Resume</button>
      <button class="secondary" type="button" onclick="stopVoice()">■ Stop</button>
      <button class="secondary" type="button" onclick="clearVoiceText()">Clear Text</button>
+     <button class="secondary" type="button" id="voiceRecordBtn" onclick="recordAndDownloadVoice()">⏺ Record &amp; Download Audio (WebM)</button>
     </div>
     <div id="voiceMsg" class="message" role="status" aria-live="polite"></div>
    </form>
@@ -1241,7 +1243,7 @@ input::placeholder,textarea::placeholder{
   <div class="card voice-card voice-output">
    <h2>🎧 Voice player</h2>
    <div id="voiceEmpty" class="voice-empty"><div class="voice-wave">♫</div><strong>Your speech plays here</strong><span>Enter text and press Speak Text.</span></div>
-   <div class="voice-security-note"><strong>How this works</strong><span>Nexa is configured to use Urdu voices only and will not fall back to English. Pronunciation quality still depends on the Urdu voice installed in your browser/device; this browser engine cannot guarantee fully native Pakistani Urdu or export MP3 audio.</span></div>
+   <div class="voice-security-note"><strong>How this works</strong><span>Nexa is configured to use Urdu voices only and will not fall back to English. Pronunciation quality still depends on the Urdu voice installed in your browser/device; this browser engine cannot guarantee fully native Pakistani Urdu or directly export MP3. On supported desktop browsers, you can try recording the shared tab audio as WebM.</span></div>
   </div>
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('servicesPage')">← Back to Services</button><button class="secondary" onclick="showPage('dashboardPage')">Dashboard</button></div>
@@ -1932,12 +1934,65 @@ function pauseVoice(){
 function resumeVoice(){
  if("speechSynthesis" in window&&window.speechSynthesis.paused){window.speechSynthesis.resume();voiceMessage("Speech resumed.","success");}
 }
+function applyVoiceMood(){
+ const mood=$("voiceMood")?.value||"neutral";
+ const settings={neutral:[1,1],energetic:[1.18,1.12],dramatic:[0.88,0.92],calm:[0.82,0.94]};
+ const pair=settings[mood]||settings.neutral;
+ $("voiceRate").value=pair[0];$("voicePitch").value=pair[1];
+}
+$("voiceMood")?.addEventListener("change",applyVoiceMood);
+async function recordAndDownloadVoice(){
+ if(!navigator.mediaDevices||!navigator.mediaDevices.getDisplayMedia||typeof MediaRecorder==="undefined"){
+  voiceMessage("Audio recording is not supported in this browser. Try an updated desktop Chrome or Edge.","error");return;
+ }
+ const textValue=cleanSpeechText($("voiceText").value);
+ if(!textValue){voiceMessage("Pehle Urdu script likhein.","error");return;}
+ if(textValue.length>2500){voiceMessage("Please keep the text under 2,500 characters.","error");return;}
+ const voiceName=$("freeVoice").value;
+ const voices=("speechSynthesis" in window)?window.speechSynthesis.getVoices():[];
+ if(!voices.some(v=>v.name===voiceName&&/^ur(-|$)/i.test(v.lang))){
+  voiceMessage("Is device par Urdu voice available nahi. Pehle Urdu voice install/select karein.","error");return;
+ }
+ let displayStream=null,recorder=null;
+ try{
+  voiceMessage("Share screen dialog mein isi browser tab ko select karein aur 'Share tab audio' ko on karein. Recording us ke baad shuru hogi.","info");
+  displayStream=await navigator.mediaDevices.getDisplayMedia({video:true,audio:true});
+  const audioTracks=displayStream.getAudioTracks();
+  if(!audioTracks.length){displayStream.getTracks().forEach(t=>t.stop());voiceMessage("Tab audio share nahi hui. Dobara try karein aur 'Share tab audio' enable karein.","error");return;}
+  const audioStream=new MediaStream(audioTracks);
+  const mimeType=MediaRecorder.isTypeSupported("audio/webm;codecs=opus")?"audio/webm;codecs=opus":"audio/webm";
+  const chunks=[];
+  recorder=new MediaRecorder(audioStream,{mimeType});
+  recorder.ondataavailable=e=>{if(e.data&&e.data.size)chunks.push(e.data);};
+  recorder.onerror=()=>voiceMessage("Recording error. Please try again.","error");
+  recorder.onstop=()=>{
+   if(chunks.length){
+    const blob=new Blob(chunks,{type:"audio/webm"});
+    const url=URL.createObjectURL(blob),a=document.createElement("a");
+    a.href=url;a.download="nexa-urdu-voice.webm";document.body.appendChild(a);a.click();a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),30000);
+    voiceMessage("Recording ready. WebM audio download shuru ho gaya. MP3 export is browser-only mode mein available nahi.","success");
+   }else voiceMessage("Koi audio record nahi hui. Tab audio sharing check karein.","error");
+   if(displayStream)displayStream.getTracks().forEach(t=>t.stop());
+   const b=$("voiceRecordBtn");if(b){b.disabled=false;b.textContent="⏺ Record & Download Audio (WebM)";}
+  };
+  recorder.start();
+  const b=$("voiceRecordBtn");if(b){b.disabled=true;b.textContent="Recording...";}
+  speakFreeVoice(textValue,()=>{if(recorder&&recorder.state!=="inactive")recorder.stop();});
+  voiceMessage("Recording started. Please keep this tab open until speech finishes.","success");
+ }catch(err){
+  if(recorder&&recorder.state!=="inactive")try{recorder.stop()}catch(e){}
+  if(displayStream)displayStream.getTracks().forEach(t=>t.stop());
+  const b=$("voiceRecordBtn");if(b){b.disabled=false;b.textContent="⏺ Record & Download Audio (WebM)";}
+  voiceMessage("Recording cancelled or unavailable: "+(err.message||"browser permission required"),"error");
+ }
+}
 function clearVoiceText(){
  stopVoice();$("voiceText").value="";$("voiceCharCount").textContent="0";
  $("voiceMsg").textContent="";$("voiceMsg").className="message";
 }
-function cleanSpeechText(raw){return String(raw||"").replace(/[\\p{Extended_Pictographic}\\uFE0F\\u200D]/gu," ").replace(/[#*_~]/g,"").replace(/\\s+/g," ").replace(/\\s+([،۔,!?.])/g,"$1").trim();}
-function speakFreeVoice(textValue){
+function cleanSpeechText(raw){return String(raw||"").replace(/[\p{Extended_Pictographic}\uFE0F\u200D]/gu," ").replace(/[#*_~]/g,"").replace(/\s+/g," ").replace(/\s+([،۔,!?.])/g,"$1").trim();}
+function speakFreeVoice(textValue,onFinished){
  if(!("speechSynthesis" in window)||!("SpeechSynthesisUtterance" in window))throw new Error("This browser does not support speech synthesis. Please use an updated Chrome or Edge.");
  window.speechSynthesis.cancel();
  const name=$("freeVoice").value,voices=window.speechSynthesis.getVoices();
@@ -1947,8 +2002,8 @@ function speakFreeVoice(textValue){
  const utterance=new SpeechSynthesisUtterance(spokenText);
  utterance.lang=voice.lang;utterance.voice=voice;utterance.rate=Number($("voiceRate").value||1.05);utterance.pitch=Number($("voicePitch").value||1.05);
  utterance.onstart=()=>voiceMessage("Urdu voice chal rahi hai. Pronunciation device par installed Urdu voice par depend karti hai.","success");
- utterance.onerror=ev=>{voiceMessage("Speech failed ("+(ev.error||"unknown error")+"). Check the voices installed on your device.","error");const b=$("voiceGenerateBtn");if(b){b.disabled=false;b.textContent="▶ Speak Text";}};
- utterance.onend=()=>{const b=$("voiceGenerateBtn");if(b){b.disabled=false;b.textContent="▶ Speak Text";}voiceMessage("Speech finished. Browser voices cannot add real acting or emotional expression.","success");};
+ utterance.onerror=ev=>{voiceMessage("Speech failed ("+(ev.error||"unknown error")+"). Check the voices installed on your device.","error");const b=$("voiceGenerateBtn");if(b){b.disabled=false;b.textContent="▶ Speak Text";}if(typeof onFinished==="function")onFinished(false);};
+ utterance.onend=()=>{const b=$("voiceGenerateBtn");if(b){b.disabled=false;b.textContent="▶ Speak Text";}voiceMessage("Speech finished. Browser voices cannot add real acting or emotional expression.","success");if(typeof onFinished==="function")onFinished(true);};
  window.speechSynthesis.speak(utterance);
 }
  $("voiceText").addEventListener("input",()=>{$("voiceCharCount").textContent=String($("voiceText").value.length)});
