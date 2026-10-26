@@ -4,8 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090d18">
-<title>Nexa CV Studio | Dark Tech Neon</title>
+<meta name="theme-color" content="#f3f6f4">
+<title>Nexa Business Hub | Modern Green & Slate</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--bg:#080c15;--panel:#0e1727;--panel2:#132238;--line:#294256;--cyan:#65f3dc;--text:#eff8ff;--muted:#9db2c7;--red:#ff91a2;--green:#83ffd0}
@@ -814,6 +814,78 @@ input::placeholder,textarea::placeholder{
 #cvPreview,#cvPreview *,.europass-paper,.europass-paper *,.experience-certificate,.experience-certificate *{
  font-family:Arial,Helvetica,sans-serif!important;
 }
+
+/* Nexa Business Hub — Modern Green & Slate redesign */
+:root{
+ --bg:#f3f6f4;--panel:#ffffff;--panel2:#edf2ef;--line:#dce5df;
+ --cyan:#2f765b;--text:#26352e;--muted:#68776f;--red:#b94a48;--green:#277b55;
+ color-scheme:light;
+}
+html{scroll-behavior:smooth}
+body{background:#f3f6f4!important;color:#26352e!important}
+header{background:rgba(255,255,255,.96)!important;border-bottom:1px solid #dce5df!important;box-shadow:0 4px 18px rgba(35,55,44,.06);backdrop-filter:blur(12px)}
+.brand{color:#243b30!important;font-size:clamp(23px,3vw,30px);letter-spacing:-.7px}
+.brand small{color:#2f765b!important;letter-spacing:1.8px!important}
+nav{gap:6px}
+nav button{background:transparent!important;color:#52645a!important;border:1px solid transparent!important;border-radius:10px!important;padding:9px 12px!important}
+nav button:hover,nav button.active{background:#e5f0e9!important;color:#246449!important;border-color:#c8dfd0!important}
+main{max-width:1280px;margin:30px auto;padding:0 22px}
+.hero{background:linear-gradient(125deg,#e6f1e9,#f9fbf9)!important;border:1px solid #d4e4d9!important;border-radius:22px!important;padding:clamp(22px,4vw,38px)!important;box-shadow:0 10px 28px rgba(34,67,48,.06)!important}
+.eyebrow,.pill{color:#2f765b!important}
+.hero h1{color:#20392c!important;letter-spacing:-1px}
+.neon{color:#2f765b!important;text-shadow:none!important}
+.hero p,.muted{color:#68776f!important}
+.card,.stat{background:#fff!important;border:1px solid #dfe7e1!important;border-radius:17px!important;box-shadow:0 5px 18px rgba(31,55,40,.045)!important}
+.card{padding:clamp(16px,2.5vw,24px)!important}
+h1,h2,h3{color:#263b30!important}
+label{color:#46594d!important}
+input,select,textarea,.option-search,.search-select-trigger{background:#fbfcfb!important;color:#26352e!important;border-color:#d2ded6!important;border-radius:10px!important}
+input:focus,select:focus,textarea:focus,.search-select-trigger:focus{border-color:#579477!important;box-shadow:0 0 0 3px rgba(47,118,91,.12)!important}
+input::placeholder,textarea::placeholder{color:#8a978f!important}
+button{background:#2f765b!important;color:#fff!important;border-radius:10px!important;box-shadow:none!important}
+button:hover{background:#245e48!important;transform:translateY(-1px)}
+button.secondary{background:#e9efeb!important;color:#355344!important;border-color:#d3dfd7!important}
+button.ghost{background:transparent!important;color:#2f765b!important;border-color:#b9d1c2!important}
+button.danger{background:#fff0ef!important;color:#a43e3b!important;border-color:#f0c9c7!important}
+.search-select-menu{background:#fff!important;border-color:#d5e1d9!important;box-shadow:0 15px 35px rgba(30,55,40,.13)!important}
+.search-select-option{color:#33483b!important}
+.search-select-option:hover,.search-select-option:focus{background:#e5f0e9!important;color:#245e48!important}
+.search-select-option[aria-selected="true"]{color:#2f765b!important}
+.welcome-notice{background:#fff!important;color:#26352e!important;border-color:#c8dfd0!important;box-shadow:0 22px 75px rgba(31,55,40,.18)!important}
+.welcome-message{color:#2f765b!important;text-shadow:none!important}
+.welcome-subtitle{color:#68776f!important}
+.welcome-confirm{background:#2f765b!important;color:#fff!important}
+.message.show{background:#edf6ef!important;color:#2d6043!important;border-color:#cde2d2!important}
+.message.error{background:#fff0ef!important;color:#a43e3b!important;border-color:#efcfcd!important}
+.message.success{background:#e9f6ed!important;color:#246746!important;border-color:#c4e4cf!important}
+.stat strong{color:#2f765b!important}
+.copyline{background:#f8faf8!important;border-color:#dce5df!important}
+.template-option{background:#fff!important;color:#26352e!important;border-color:#dce5df!important}
+.template-option.active{border-color:#2f765b!important;box-shadow:0 0 0 3px rgba(47,118,91,.1)!important}
+.template-option small,.stat span,.small-note{color:#68776f!important}
+th{background:#e8f0eb!important;color:#315e47!important}
+td,th{border-bottom-color:#dce5df!important}
+.table-wrap{border-color:#dce5df!important}
+.pill{border-color:#c8dfd0!important;background:#edf6ef!important}
+#voiceGeneratorPage .voice-hero,#voiceGeneratorPage .voice-card{background:#fff!important;border-color:#dce5df!important;color:#26352e!important;box-shadow:0 5px 18px rgba(31,55,40,.045)!important}
+#voiceGeneratorPage .voice-hero h1,#voiceGeneratorPage .voice-card h2,#voiceGeneratorPage .voice-empty strong{color:#263b30!important;text-shadow:none!important}
+#voiceGeneratorPage .voice-card p,#voiceGeneratorPage .voice-card .muted{color:#68776f!important}
+#voiceGeneratorPage .voice-wave{border-color:#2f765b!important;color:#2f765b!important;box-shadow:none!important}
+#voiceGeneratorPage .voice-security-note{background:#f8faf8!important;border-color:#dce5df!important;color:#68776f!important}
+#voiceGeneratorPage .voice-security-note strong{color:#2f765b!important}
+#voiceGeneratorPage .voice-download{background:#2f765b!important;color:#fff!important}
+#cvPreview,#cvPreview *,.europass-paper,.europass-paper *,.experience-certificate,.experience-certificate *{print-color-adjust:exact}
+@media(max-width:760px){
+ main{padding:0 12px;margin:18px auto}
+ header{padding:12px!important}
+ header .brand{position:static;transform:none;width:100%;max-width:100%;text-align:left}
+ nav{width:100%;overflow-x:auto;flex-wrap:nowrap;padding:4px 0}
+ nav button{flex:0 0 auto;white-space:nowrap}
+ .grid,.grid.three{grid-template-columns:minmax(0,1fr)!important}
+ .cv-layout{grid-template-columns:minmax(0,1fr)!important}
+ .hero{padding:20px!important}
+}
+
 </style>
 </head>
 <body>
