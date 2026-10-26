@@ -605,6 +605,28 @@ button:not(:disabled):hover{box-shadow:0 5px 18px #65f3dc18}
  #supportLauncher{right:12px!important}
 }
 
+
+/* Keep Ask Nexa Support floating clearly above the bottom navigation */
+#supportLauncher{
+  bottom:calc(88px + env(safe-area-inset-bottom))!important;
+  z-index:1060!important;
+}
+#supportPanel{
+  bottom:calc(145px + env(safe-area-inset-bottom))!important;
+  z-index:1061!important;
+}
+@media(max-width:420px){
+  #supportLauncher{
+    right:12px!important;
+    bottom:calc(88px + env(safe-area-inset-bottom))!important;
+  }
+  #supportPanel{
+    right:12px!important;
+    bottom:calc(145px + env(safe-area-inset-bottom))!important;
+    width:calc(100vw - 24px)!important;
+    height:min(500px,calc(100vh - 170px))!important;
+  }
+}
 </style>
 </head>
 <body>
