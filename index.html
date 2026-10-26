@@ -1318,6 +1318,37 @@ input:focus,select:focus,textarea:focus{outline:3px solid #36baff20!important;bo
 
 /* Hide the promotional hero text on the login/register page */
 #accountPage > .hero{display:none!important}
+
+/* Mobile login: use the full screen width with no side clipping */
+@media(max-width:700px){
+  body:has(#accountPage.active){overflow-x:hidden!important}
+  body:has(#accountPage.active) header{display:none!important}
+  body:has(#accountPage.active) main{
+    width:100%!important;max-width:none!important;
+    margin:0!important;padding:0!important;
+    box-sizing:border-box!important;
+  }
+  #accountPage.active{
+    display:flex!important;flex-direction:column!important;
+    width:100%!important;max-width:none!important;
+    min-height:100vh!important;min-height:100dvh!important;
+    margin:0!important;padding:16px!important;
+    box-sizing:border-box!important;gap:0!important;
+    justify-content:center!important;align-items:stretch!important;
+  }
+  #accountPage>.grid#authFormsGrid{
+    display:grid!important;grid-template-columns:minmax(0,1fr)!important;
+    width:100%!important;max-width:none!important;
+    min-width:0!important;margin:0!important;padding:0!important;
+    box-sizing:border-box!important;
+  }
+  #accountPage>.grid#authFormsGrid>.card{
+    width:100%!important;max-width:none!important;min-width:0!important;
+    margin:0!important;padding:22px 18px!important;
+    box-sizing:border-box!important;border-radius:18px!important;
+  }
+}
+
 </style>
 </head>
 <body>
