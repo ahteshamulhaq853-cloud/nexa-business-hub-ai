@@ -98,12 +98,13 @@ def looks_like_job(url, text, source_url):
             or bool(re.search(r"[?&](jobid|job_id|vacancyid|vacancy_id)=", url, re.I))
         )
     if host == "rozee.pk":
-        # Never import a Rozee search/results page as an individual vacancy.
-        if path.startswith("/job/jsearch/") or path.startswith("/EN/search/"):
+        # Rozee search URLs can contain job IDs in their slugs; exclude them.
+        if "/jsearch/" in path or path.startswith("/EN/search/"):
             return False
-        # Rozee individual job URLs commonly end in jobs-<numeric ID>.
-        return "/job/" in path and (
-            bool(re.search(r"/jobs-\d{4,}(?:/|$)", path))
+        # Accept legacy individual vacancy slugs across Rozee's URL sections.
+        return (
+            bool(re.search(r"jobs-\d{4,}(?:[./]|$)", path))
+            or bool(re.search(r"/job/(?:detail/)?\d{4,}/?$", path))
             or bool(re.search(r"[?&](jid|jobid|job_id|id)=\d+", url, re.I))
         )
     if host == "mustakbil.com":
