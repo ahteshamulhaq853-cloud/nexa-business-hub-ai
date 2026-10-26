@@ -1228,7 +1228,7 @@ input::placeholder,textarea::placeholder{
     <div class="field"><label for="voiceRate">Speaking speed</label><input id="voiceRate" type="range" min="0.6" max="1.4" step="0.1" value="1"><small class="muted">Move left for slower speech, right for faster speech.</small></div>
     <div class="field"><label for="voicePitch">Voice pitch</label><input id="voicePitch" type="range" min="0.7" max="1.4" step="0.1" value="1"><small class="muted">Changes pitch only; it does not clone or create a new person's voice.</small></div>
     <div class="field"><label for="voiceMood">Delivery style</label><select id="voiceMood"><option value="neutral">Neutral / Normal</option><option value="energetic">Energetic / Gaming intro</option><option value="dramatic">Dramatic / Storytelling</option><option value="calm">Calm / Soft</option></select><small class="muted">Free browser controls only change speed and pitch; they cannot create real human acting.</small></div>
-    <div class="field"><label for="voiceText">Your text</label><textarea id="voiceText" maxlength="2500" placeholder="یہاں اردو متن لکھیں..." required style="min-height:180px"></textarea><div class="voice-counter"><span id="voiceCharCount">0</span> / 2,500 characters</div><div class="actions"><button class="secondary" type="button" id="pubgVoiceSampleBtn">🔥 Add energetic PUBG sample</button></div><small class="muted">Emoji are visual only and will be removed before speaking. Punctuation helps guide pauses, but cannot create real emotion.</small></div>
+    <div class="field"><label for="voiceText">Your text</label><textarea id="voiceText" maxlength="2500" placeholder="یہاں اردو متن لکھیں..." required style="min-height:180px"></textarea><div class="voice-counter"><span id="voiceCharCount">0</span> / 2,500 characters</div><div class="actions"></div><small class="muted">Emoji are visual only and will be removed before speaking. Punctuation helps guide pauses, but cannot create real emotion.</small></div>
     <div class="actions">
      <button id="voiceGenerateBtn" type="submit">▶ Speak Text</button>
      <button class="secondary" type="button" id="voicePauseBtn" onclick="pauseVoice()">⏸ Pause</button>
@@ -2007,7 +2007,7 @@ function speakFreeVoice(textValue,onFinished){
  window.speechSynthesis.speak(utterance);
 }
  $("voiceText").addEventListener("input",()=>{$("voiceCharCount").textContent=String($("voiceText").value.length)});
- $("pubgVoiceSampleBtn").addEventListener("click",()=>{const sample="السلام علیکم گیمرز! میرا نام احتشام ہے۔ تیار ہو جاؤ، کیونکہ اب میدان میں انٹری ہو رہی ہے میری! فوکس آن، ٹیم تیار، اور ہمت فل پاور! آخری زون تک مقابلہ جاری رہے گا۔ چلو، گیم شروع کرتے ہیں!";$("voiceText").value=sample;$("voiceCharCount").textContent=String(sample.length);voiceMessage("Energetic Urdu sample added. Press Speak Text to hear it.","success");});
+
 $("voiceForm").addEventListener("submit",e=>{
   e.preventDefault();const textValue=cleanSpeechText($("voiceText").value),btn=$("voiceGenerateBtn");
  if(!textValue){voiceMessage("Please enter the text you want to speak.","error");return;}
