@@ -1205,7 +1205,8 @@ function printExperienceCertificate(){
  window.addEventListener("afterprint",()=>document.body.classList.remove("print-experience-certificate"),{once:true});
  window.print();
 }
-try{applyCertificateTemplate(localStorage.getItem("nexa_experience_template")||$("ecTemplate")?.value||"classic");if($("ecTemplate"))$("ecTemplate").value=localStorage.getItem("nexa_experience_template")||"classic"}catch(e){applyCertificateTemplate("classic")}\n ["ecOrg","ecSubtitle","ecName","ecRole","ecStart","ecEnd","ecType","ecIssue","ecRef","ecSign","ecSignRole","ecLocation","ecDuties"].forEach(id=>{const el=$(id);if(el){el.addEventListener("input",updateExperienceCertificate);el.addEventListener("change",updateExperienceCertificate)}});
+try{applyCertificateTemplate(localStorage.getItem("nexa_experience_template")||$("ecTemplate")?.value||"classic");if($("ecTemplate"))$("ecTemplate").value=localStorage.getItem("nexa_experience_template")||"classic"}catch(e){applyCertificateTemplate("classic")}
+ ["ecOrg","ecSubtitle","ecName","ecRole","ecStart","ecEnd","ecType","ecIssue","ecRef","ecSign","ecSignRole","ecLocation","ecDuties"].forEach(id=>{const el=$(id);if(el){el.addEventListener("input",updateExperienceCertificate);el.addEventListener("change",updateExperienceCertificate)}});
 
 function openPasswordOption(which){
  showPage("settingsPage");
