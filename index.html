@@ -164,7 +164,7 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
 .experience-certificate:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #c6a65e20;border-radius:50%;top:180px;left:50%;transform:translateX(-50%);box-shadow:0 0 0 18px #c6a65e0c,0 0 0 36px #c6a65e0a;pointer-events:none;z-index:-1}
 .ec-corner{position:absolute;width:45px;height:45px;border-color:#b38b3b;border-style:solid;z-index:1}.ec-corner-tl{top:17px;left:17px;border-width:2px 0 0 2px}.ec-corner-tr{top:17px;right:17px;border-width:2px 2px 0 0}.ec-corner-bl{bottom:17px;left:17px;border-width:0 0 2px 2px}.ec-corner-br{bottom:17px;right:17px;border-width:0 2px 2px 0}
 .ec-topline{display:flex;justify-content:center;align-items:center;gap:14px;color:#9c792f;font:700 9px Arial,sans-serif;letter-spacing:3px}.ec-topline span{font-size:15px;color:#b38b3b}
-.ec-seal{display:flex;align-items:center;justify-content:center;width:54px;height:54px;margin:20px auto 10px;border:1px solid #b38b3b;border-radius:50%;outline:1px solid #b38b3b;outline-offset:4px;background:#15243c;color:#e8d19a;font-size:25px;font-weight:bold}
+.ec-seal{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}.ec-seal img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff;padding:3px}.ec-seal{display:flex;align-items:center;justify-content:center;width:54px;height:54px;margin:20px auto 10px;border:1px solid #b38b3b;border-radius:50%;outline:1px solid #b38b3b;outline-offset:4px;background:#15243c;color:#e8d19a;font-size:25px;font-weight:bold}
 .ec-org{font-size:clamp(20px,3vw,30px);font-weight:bold;letter-spacing:2px;text-transform:uppercase;overflow-wrap:anywhere}.ec-tagline{margin-top:6px;color:#9a7935;font:700 8px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;overflow-wrap:anywhere}.ec-rule{display:flex;align-items:center;gap:12px;max-width:220px;margin:18px auto;color:#b38b3b}.ec-rule:before,.ec-rule:after{content:"";height:1px;flex:1;background:#c7ab6a}
 .ec-kicker{margin-top:16px;color:#9b7934;font:700 11px Arial,sans-serif;letter-spacing:5px}.experience-certificate h1{margin:6px 0 18px;color:#15243c;font-size:clamp(27px,4.5vw,43px);letter-spacing:3px;font-weight:500}.experience-certificate h1 em{color:#a37d30;font-style:normal}.ec-presented{font:700 9px Arial,sans-serif;letter-spacing:2px;color:#657185}.ec-name{margin:10px auto 0;color:#14243d;font-size:clamp(24px,4vw,36px);font-style:italic;font-weight:bold;overflow-wrap:anywhere}.ec-name-rule{width:58%;max-width:340px;height:1px;margin:12px auto 20px;background:linear-gradient(90deg,transparent,#b38b3b,transparent)}
 .ec-body{max-width:680px;margin:0 auto;color:#39465a;font-size:14px;line-height:1.9}.ec-body strong{color:#182942}.ec-duties{max-width:640px;margin:12px auto;color:#596578;font-size:12px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere}.ec-appreciation{max-width:580px;margin:14px auto 26px;color:#8a6a2c;font-size:12px;font-style:italic;line-height:1.6}
@@ -832,6 +832,7 @@ button:not(:disabled):hover{box-shadow:0 5px 18px #65f3dc18}
   <h2 class="neon">Experience Certificate</h2>
   <p class="muted">Fill in the details below. Your elegant certificate updates instantly. Use only accurate, authorised employment details.</p>
   <div class="field"><label for="ecTemplate">Certificate Template</label><select id="ecTemplate" onchange="applyCertificateTemplate(this.value)"><option value="classic">Classic Gold</option><option value="navy">Royal Navy &amp; Gold</option><option value="emerald">Emerald Green</option><option value="burgundy">Burgundy Elegance</option><option value="blue">Modern Blue</option><option value="charcoal">Charcoal Minimal</option></select></div>
+  <div class="field"><label for="ecLogoUpload">Organisation Logo (optional)</label><input id="ecLogoUpload" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml"><small class="muted">Upload PNG, JPG, WEBP or SVG logo (maximum 2 MB). It will appear on the certificate and in the saved PDF.</small><button type="button" class="secondary" id="ecLogoRemove" style="display:none;margin-top:8px">Remove Logo</button></div>
   <div class="grid">
    <div class="field"><label for="ecOrg">Company / Organisation Name</label><input id="ecOrg" placeholder="e.g. Company Name"></div>
    <div class="field"><label for="ecSubtitle">Organisation Tagline</label><select id="ecSubtitle" onchange="toggleCertificateCustom('ecSubtitle')"><option value="EXCELLENCE • TRUST • PROFESSIONALISM">Excellence • Trust • Professionalism</option><option value="INTEGRITY • SERVICE • COMMITMENT">Integrity • Service • Commitment</option><option value="QUALITY • TRUST • INNOVATION">Quality • Trust • Innovation</option><option value="LEARNING • GROWTH • SUCCESS">Learning • Growth • Success</option><option value="CUSTOM">Other / Custom</option></select><input id="ecSubtitleCustom" placeholder="Enter custom tagline" style="display:none;margin-top:8px"></div>
@@ -854,7 +855,7 @@ button:not(:disabled):hover{box-shadow:0 5px 18px #65f3dc18}
   <article id="experienceCertificatePaper" class="experience-certificate">
    <div class="ec-corner ec-corner-tl"></div><div class="ec-corner ec-corner-tr"></div><div class="ec-corner ec-corner-bl"></div><div class="ec-corner ec-corner-br"></div>
    <div class="ec-topline"><span>✦</span><span id="ecPRef">CERTIFICATE OF EXPERIENCE</span><span>✦</span></div>
-   <div class="ec-seal">N</div>
+   <div class="ec-seal" id="ecPLogoSeal"><span id="ecPLogoInitial">N</span><img id="ecPLogoImage" alt="Organisation logo" style="display:none;width:100%;height:100%;object-fit:contain;border-radius:50%"></div>
    <div class="ec-org" id="ecPOrg">YOUR ORGANISATION</div>
    <div class="ec-tagline" id="ecPSubtitle">EXCELLENCE • TRUST • PROFESSIONALISM</div>
    <div class="ec-rule"><span>◆</span></div>
@@ -1205,6 +1206,25 @@ function printExperienceCertificate(){
  window.addEventListener("afterprint",()=>document.body.classList.remove("print-experience-certificate"),{once:true});
  window.print();
 }
+function handleCertificateLogoUpload(){
+ const input=$("ecLogoUpload"),file=input&&input.files&&input.files[0],img=$("ecPLogoImage"),initial=$("ecPLogoInitial"),remove=$("ecLogoRemove");
+ if(!file)return;
+ if(!/^image\/(png|jpeg|webp|svg\+xml)$/.test(file.type)){alert("Please choose a PNG, JPG, WEBP or SVG image.");input.value="";return}
+ if(file.size>2*1024*1024){alert("Logo file must be 2 MB or smaller.");input.value="";return}
+ const reader=new FileReader();
+ reader.onload=()=>{if(typeof reader.result!=="string")return;img.src=reader.result;img.style.display="block";initial.style.display="none";if(remove)remove.style.display="inline-flex"};
+ reader.onerror=()=>alert("Could not read this logo. Please try another image.");
+ reader.readAsDataURL(file);
+}
+function removeCertificateLogo(){
+ const input=$("ecLogoUpload"),img=$("ecPLogoImage"),initial=$("ecPLogoInitial"),remove=$("ecLogoRemove");
+ if(input)input.value="";
+ if(img){img.removeAttribute("src");img.style.display="none"}
+ if(initial)initial.style.display="inline";
+ if(remove)remove.style.display="none";
+}
+if($("ecLogoUpload"))$("ecLogoUpload").addEventListener("change",handleCertificateLogoUpload);
+if($("ecLogoRemove"))$("ecLogoRemove").addEventListener("click",removeCertificateLogo);
 try{applyCertificateTemplate(localStorage.getItem("nexa_experience_template")||$("ecTemplate")?.value||"classic");if($("ecTemplate"))$("ecTemplate").value=localStorage.getItem("nexa_experience_template")||"classic"}catch(e){applyCertificateTemplate("classic")}
  ["ecOrg","ecSubtitle","ecName","ecRole","ecStart","ecEnd","ecType","ecIssue","ecRef","ecSign","ecSignRole","ecLocation","ecDuties"].forEach(id=>{const el=$(id);if(el){el.addEventListener("input",updateExperienceCertificate);el.addEventListener("change",updateExperienceCertificate)}});
 
