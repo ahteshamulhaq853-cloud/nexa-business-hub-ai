@@ -33,7 +33,7 @@ GENERIC = {
     "rawalpindi", "remote", "hr & recruiting", "web & e-commerce"
 }
 JOB_WORDS = re.compile(
-    r"\\b(job|vacanc|career|position|officer|director|manager|assistant|engineer|teacher|lecturer|intern|analyst|clerk|consultant|specialist|coordinator|supervisor|technician|professor|staff|driver|accountant|nurse|developer|designer|operator|inspector|scientist|secretary|executive|expert|administrator|account|finance|legal|procurement|statistician|monitoring|sales|marketing|human resource|hr|data entry|support|lead|architect|hacker|representative|customer service|operations|implementation|creator|auditor|trainer|researcher|economist|doctor|medical|laboratory|security|planning|management)\\b", re.I
+    r"\\b(job|vacanc|career|position|officer|director|manager|assistant|engineer|teacher|lecturer|intern|analyst|clerk|consultant|specialist|coordinator|supervisor|technician|professor|staff|driver|accountant|nurse|developer|designer|operator|inspector|scientist|secretary|executive|expert|administrator|account|finance|legal|procurement|statistician|monitoring|chairman|chief|lawyer|advisor|adviser|deputy|senior|junior|tax|technical|chemist|pharmacist|psychologist|social worker|economist|environmental|policy|sales|marketing|human resource|hr|data entry|support|lead|architect|hacker|representative|customer service|operations|implementation|creator|auditor|trainer|researcher|economist|doctor|medical|laboratory|security|planning|management)\\b", re.I
 )
 
 def valid_title(label):
