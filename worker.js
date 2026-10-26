@@ -26,6 +26,27 @@ export default {
       );
     }
 
+    if (url.pathname === "/api/voice" && request.method === "POST") {
+      try {
+        if (!env.AI) return Response.json({error:"Cloudflare AI binding is not configured."},{status:503,headers:corsHeaders});
+        const body = await request.json();
+        const prompt = String(body.text || "").trim();
+        if (!prompt) return Response.json({error:"Please enter text."},{status:400,headers:corsHeaders});
+        if (prompt.length > 1200) return Response.json({error:"Keep text under 1,200 characters."},{status:413,headers:corsHeaders});
+        const result = await env.AI.run("@cf/myshell-ai/melotts", { prompt, lang:"en" });
+        const encoded = typeof result === "string" ? result : result?.audio;
+        if (typeof encoded !== "string" || !encoded.length) return Response.json({error:"No audio returned. Urdu may not be supported by this model."},{status:502,headers:corsHeaders});
+        const raw = atob(encoded);
+        const bytes = new Uint8Array(raw.length);
+        for (let i=0;i<raw.length;i++) bytes[i]=raw.charCodeAt(i);
+        return new Response(bytes,{status:200,headers:{...corsHeaders,"Content-Type":"audio/mpeg","Content-Disposition":'inline; filename="nexa-cloudflare-voice.mp3"',"Cache-Control":"no-store"}});
+      } catch (error) {
+        const message = String(error?.message || "");
+        const limited = /daily free allocation|neurons|quota|rate limit|limit exceeded/i.test(message);
+        return Response.json({error:limited ? "Cloudflare ki daily free AI limit khatam hai. Baad mein dobara try karein." : "AI voice generate nahi hui. MeloTTS Urdu ko officially support nahi karta; result acha na ho sakta hai."},{status:limited?429:502,headers:corsHeaders});
+      }
+    }
+
     if (url.pathname === "/api/generate" && request.method === "POST") {
       try {
         const body = await request.json();
