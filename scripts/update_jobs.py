@@ -23,6 +23,7 @@ SOURCES = [
     ("https://www.rozee.pk/EN/jobs-in-pakistan/", "Rozee.pk", "Private"),
     ("https://www.mustakbil.com/", "Mustakbil", "Private"),
     ("https://auth.brightspyre.com/jobs", "BrightSpyre", "Private"),
+    ("https://etea.online/", "ETEA", "Government"),
 ]
 GENERIC = {
     "home", "home page", "login", "log in", "sign in", "register", "sign up",
@@ -88,6 +89,8 @@ def looks_like_job(url, text, source_url):
     host = p.netloc.lower().removeprefix("www.")
     path = p.path.lower()
     label = re.sub(r"\s+", " ", text).strip()
+    if host == "etea.online":
+        return path.startswith("/advertisement/") and len(label) >= 5 and bool(re.search(r"[A-Za-z]{3}", label))
     if not valid_title(label):
         return False
     if host == "njp.gov.pk":
@@ -114,7 +117,109 @@ def looks_like_job(url, text, source_url):
         return bool(re.fullmatch(r"/jobs/[a-z0-9_-]+/?", path)) and path.rstrip("/") != "/jobs"
     return False
 
+
+class EteaRows(HTMLParser):
+    """Extract project rows and their linked advertisement images from ETEA."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.rows = []
+        self.row = None
+        self.cell = None
+        self.anchor = None
+    def handle_starttag(self, tag, attrs):
+        tag = tag.lower()
+        attrs = dict(attrs)
+        if tag == "tr":
+            self.row = []
+        elif self.row is not None and tag in ("td", "th"):
+            self.cell = {"text": "", "links": []}
+        elif self.cell is not None and tag == "a":
+            self.anchor = {"href": attrs.get("href", ""), "text": ""}
+    def handle_data(self, data):
+        if self.cell is not None:
+            self.cell["text"] += " " + data
+        if self.anchor is not None:
+            self.anchor["text"] += " " + data
+    def handle_endtag(self, tag):
+        tag = tag.lower()
+        if tag == "a" and self.anchor is not None:
+            if self.cell is not None:
+                self.cell["links"].append(self.anchor)
+            self.anchor = None
+        elif tag in ("td", "th") and self.cell is not None:
+            self.cell["text"] = re.sub(r"\s+", " ", self.cell["text"]).strip()
+            self.row.append(self.cell)
+            self.cell = None
+        elif tag == "tr" and self.row is not None:
+            if self.row:
+                self.rows.append(self.row)
+            self.row = None
+
+def fetch_etea_source(source_url, source_name, category):
+    req = Request(source_url, headers={
+        "User-Agent": "Mozilla/5.0 (compatible; NexaJobsFeed/1.0)",
+        "Accept": "text/html,application/xhtml+xml"
+    })
+    with urlopen(req, timeout=25) as response:
+        if response.status < 200 or response.status >= 300:
+            raise RuntimeError(f"HTTP {response.status}")
+        raw = response.read(5_000_000)
+        charset = response.headers.get_content_charset() or "utf-8"
+    parser = EteaRows()
+    parser.feed(raw.decode(charset, errors="replace"))
+    found = []
+    seen = set()
+    for row in parser.rows:
+        if len(row) < 5:
+            continue
+        title = row[1]["text"]
+        code = row[2]["text"] if len(row) > 2 else ""
+        last_date = row[3]["text"] if len(row) > 3 else ""
+        if not title or re.search(r"\b(?:B-1|A-1)\s+Examination\b|\bRetotaling\b", title, re.I):
+            continue
+        ad_links = row[4]["links"] if len(row) > 4 else []
+        ad_url = next((canonical(urljoin(source_url, link.get("href", "")))
+                       for link in ad_links
+                       if link.get("href") and "/advertisement/" in urlparse(urljoin(source_url, link["href"])).path.lower()), "")
+        if not ad_url or ad_url in seen:
+            continue
+        seen.add(ad_url)
+        normalized_date = ""
+        for fmt in ("%d-%B-%Y", "%d-%b-%Y", "%d %B %Y", "%d %b %Y"):
+            try:
+                normalized_date = datetime.strptime(last_date.strip(), fmt).date().isoformat()
+                break
+            except ValueError:
+                pass
+        description = f"ETEA recruitment project {code}. Last date shown on ETEA portal: {last_date or 'Check official advertisement'}. Open the official advertisement for eligibility, vacancies, and application instructions."
+        found.append({
+            "title": title[:180],
+            "company": "ETEA / " + title,
+            "location": "Khyber Pakhtunkhwa",
+            "category": category,
+            "employment_type": "Government Recruitment",
+            "description": description,
+            "education_required": "See official advertisement",
+            "experience_needed": "See official advertisement",
+            "experience_field": "",
+            "skills_needed": "See official advertisement",
+            "salary": "See official advertisement",
+            "age_limit": "See official advertisement",
+            "last_date_to_apply": normalized_date or last_date,
+            "availability": "Active",
+            "official_url": ad_url,
+            "url": ad_url,
+            "source": source_name,
+            "source_url": source_url,
+            "project_code": code,
+            "fetched_at": now_iso()
+        })
+    return found
+
+
 def fetch_source(source_url, source_name, category):
+    if urlparse(source_url).netloc.lower().removeprefix("www.") == "etea.online":
+        return fetch_etea_source(source_url, source_name, category)
     req = Request(source_url, headers={
         "User-Agent": "Mozilla/5.0 (compatible; NexaJobsFeed/1.0; +https://github.com/ahteshamulhaq853-cloud/nexa-business-hub-ai)",
         "Accept": "text/html,application/xhtml+xml"
