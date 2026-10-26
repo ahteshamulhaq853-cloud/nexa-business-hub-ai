@@ -2040,7 +2040,7 @@ async function loadNexaJobs(){
   const value=k=>jobField(j,k);
   const url=j.official_url||j.url;
   const details=fieldRow("Company/Organization",value("company"))+locationRow(value("location"))+fieldRow("Employment Type",value("employment_type"))+fieldRow("Education Required",value("education_required"))+fieldRow("Experience Needed",value("experience_needed"))+fieldRow("Experience Field",value("experience_field"))+fieldRow("Skills Needed",value("skills_needed"))+fieldRow("Salary",value("salary"))+fieldRow("Age Limit",value("age_limit"))+fieldRow("Last Date to Apply",value("last_date_to_apply"))+fieldRow("Availability",value("availability"));
-  return '<article class="card job-listing-card"><span class="studio-kicker">'+escapeJobHTML(j.category||"PAKISTAN JOB")+'</span><h3>Post: '+escapeJobHTML(value("title")||j.title)+'</h3>'+details+fieldRow("Source",value("source"))+'<button type="button" data-job-id="'+escapeJobHTML("feed:"+String(j.url||j.official_url||j.title))+'" onclick="openNexaJobApplication(this.dataset.jobId)">Apply on NEXA</button></article>';
+  return '<article class="card job-listing-card"><span class="studio-kicker">'+escapeJobHTML(j.category||"PAKISTAN JOB")+'</span><h3>Post: '+escapeJobHTML(value("title")||j.title)+'</h3>'+details+fieldRow("Source",value("source"))+'<button type="button" data-job-url="'+escapeJobHTML(url)+'" onclick="window.open(this.dataset.jobUrl,\'_blank\',\'noopener,noreferrer\')">Official Job / Apply Page ↗</button></article>';
  }).join("");
  const portals=[
   {type:"government",title:"Government Jobs — National Jobs Portal",description:"Federal government vacancies aur official job details.",url:"https://www.njp.gov.pk/index.php/jobs/live",label:"Browse Government Jobs"},
@@ -2050,9 +2050,9 @@ async function loadNexaJobs(){
   {type:"private",title:"Development Sector Jobs — BrightSpyre",description:"Development aur private-sector opportunities search karein.",url:"https://auth.brightspyre.com/jobs",label:"Browse BrightSpyre"}
  ].filter(p=>(!category||p.type===category||(p.type==="mixed"&&(category==="government"||category==="private"))||(category==="teaching"&&p.type==="private")||(category==="computer / data entry"&&p.type==="private")||(category==="office / clerk"&&p.type==="private")||(category==="internship"&&p.type==="private"))&&(!query||(p.title+" "+p.description+" "+p.type).toLowerCase().includes(query)));
  const portalHTML=portals.map(p=>'<article class="card job-listing-card"><span class="studio-kicker">'+(p.type==="government"?"GOVERNMENT JOBS":p.type==="private"?"PRIVATE JOBS":"GOVERNMENT & PRIVATE")+'</span><h3>'+escapeJobHTML(p.title)+'</h3><p>'+escapeJobHTML(p.description)+'</p><button type="button" data-portal-url="'+escapeJobHTML(p.url)+'" onclick="window.open(this.dataset.portalUrl,\'_blank\',\'noopener,noreferrer\')">'+escapeJobHTML(p.label)+'</button></article>').join("");
- list.innerHTML=internalCards+importedCards+portalHTML;
+ list.innerHTML=internalCards+importedCards;
  const stamp=window.nexaJobsFeedUpdated?" Feed last refreshed: "+new Date(window.nexaJobsFeedUpdated).toLocaleString()+".":"";
- if(status)status.textContent=internalJobs.length+" NEXA vacancies · "+feedJobs.length+" verified imported jobs · "+portals.length+" job portal links. "+(warnings.length?warnings.join(" "):"Har imported listing individual detail page se fetch ki gayi hai.")+stamp;
+ if(status)status.textContent=internalJobs.length+" NEXA vacancies · "+feedJobs.length+" imported job listings. "+(warnings.length?warnings.join(" "):"Imported jobs ke buttons seedha usi job ke specific official listing page par le jate hain.")+stamp;
 }
 function openNexaJobApplication(id){
  const job=nexaJobsCache.find(j=>String(j.id)===String(id));if(!job)return;
