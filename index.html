@@ -1415,6 +1415,52 @@ th,td{padding:8px}
  input,select,textarea{padding:9px}
 }
 
+
+/* Header wordmark: perfectly centered and sized to fill the header */
+header{
+  position:sticky!important;top:0!important;min-height:112px!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  padding:12px 64px!important;box-sizing:border-box!important;
+}
+header .brand{
+  position:absolute!important;left:50%!important;top:50%!important;
+  transform:translate(-50%,-50%)!important;width:calc(100% - 112px)!important;
+  max-width:none!important;display:flex!important;align-items:center!important;
+  justify-content:center!important;gap:clamp(8px,1.8vw,18px)!important;
+  text-align:center!important;white-space:nowrap!important;line-height:1!important;
+}
+header .brand-mark{
+  flex:0 0 auto!important;width:clamp(42px,5vw,64px)!important;
+  height:clamp(42px,5vw,64px)!important;display:inline-flex!important;
+  align-items:center!important;justify-content:center!important;
+  font-size:clamp(26px,3.5vw,42px)!important;border-radius:14px!important;
+}
+header .brand-word{
+  display:block!important;font-size:clamp(30px,4.2vw,54px)!important;
+  font-weight:950!important;letter-spacing:clamp(1px,.45vw,5px)!important;
+  line-height:1!important;white-space:nowrap!important;
+}
+header .brand-word>span{margin-left:0!important}
+header .brand-word small{
+  display:block!important;text-align:center!important;
+  font-size:clamp(8px,1.05vw,12px)!important;
+  letter-spacing:clamp(1px,.35vw,3px)!important;line-height:1.2!important;
+  margin-top:7px!important;
+}
+@media(max-width:600px){
+  header{min-height:88px!important;padding:8px 48px!important}
+  header .brand{width:calc(100% - 76px)!important;gap:6px!important}
+  header .brand-mark{width:34px!important;height:34px!important;font-size:23px!important;border-radius:9px!important}
+  header .brand-word{font-size:clamp(19px,5.7vw,32px)!important;letter-spacing:clamp(.5px,.35vw,2px)!important}
+  header .brand-word small{font-size:clamp(6px,1.8vw,9px)!important;letter-spacing:clamp(.5px,.3vw,1.5px)!important;margin-top:5px!important}
+}
+@media(max-width:360px){
+  header .brand{width:calc(100% - 66px)!important;gap:4px!important}
+  header .brand-mark{width:28px!important;height:28px!important;font-size:19px!important}
+  header .brand-word{font-size:18px!important;letter-spacing:.3px!important}
+  header .brand-word small{font-size:6px!important;letter-spacing:.4px!important}
+}
+
 </style>
 </head>
 <body>
