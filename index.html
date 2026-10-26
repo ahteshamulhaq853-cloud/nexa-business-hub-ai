@@ -54,6 +54,15 @@ main{max-width:1180px;margin:25px auto;padding:0 15px}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
 .grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
 .card{background:linear-gradient(145deg,#111e2e,#0c1421);border:1px solid var(--line);border-radius:15px;padding:19px;margin-bottom:16px;box-shadow:0 8px 25px #0003;min-width:0}
+/* Compact search/filter panel — intentionally distinct from job result cards */
+.job-search-panel{background:linear-gradient(120deg,#102b3b,#0b1725 72%);border:1px solid #287080;border-left:4px solid var(--cyan);border-radius:12px;padding:13px 15px 11px;margin-bottom:14px;box-shadow:0 5px 16px #0002;min-width:0}
+.job-search-panel .grid{gap:8px 12px}
+.job-search-panel .field{margin-bottom:7px}
+.job-search-panel label{font-size:11px;letter-spacing:.15px;margin-bottom:4px;color:#9debe8}
+.job-search-panel select,.job-search-panel input{padding:8px 10px;min-height:36px;font-size:12px;border-radius:7px;background:#081522;border-color:#2c5264}
+.job-search-panel button{padding:9px 14px;margin-top:2px;border-radius:7px;font-size:12px;background:linear-gradient(90deg,#1aa9a1,#2479a7);box-shadow:none}
+.job-search-panel #jobsStatus{font-size:11px;line-height:1.4;margin:8px 0 0;padding:7px 9px;border-radius:6px;background:#08152280;border:1px solid #203d4d;overflow-wrap:anywhere}
+@media(max-width:640px){.job-search-panel{padding:11px;border-radius:10px}.job-search-panel .grid{gap:5px}.job-search-panel .field{margin-bottom:6px}.job-search-panel select,.job-search-panel input{min-height:35px;padding:8px;font-size:12px}}
 /* Compact, polished job listing cards */
 .job-listing-card{position:relative;padding:14px 15px;margin-bottom:10px;border-radius:13px;background:linear-gradient(145deg,#142438,#0c1522);border:1px solid #263d52;box-shadow:0 6px 18px #0002;min-width:0;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
 .job-listing-card:hover{transform:translateY(-2px);border-color:#4d8291;box-shadow:0 10px 24px #0003}
@@ -1897,7 +1906,7 @@ th,td{padding:8px}
 </section>
 <section id="latestJobsPage" class="page">
  <div class="studio-section-heading"><div><span class="studio-kicker">NEXA CAREERS</span><h2>Latest Jobs</h2><p class="muted">Pakistan ki government aur private jobs search karein. NEXA vacancies ke saath trusted job portals bhi dekhein.</p></div></div>
- <div class="card" style="max-width:1000px">
+ <div class="job-search-panel" style="max-width:1000px">
   <div class="grid two">
    <div class="field"><label for="jobsKeyword">Job title / skill / department</label><select id="jobsKeyword">
     <option value="">All jobs / Any title</option>
