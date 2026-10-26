@@ -6,8 +6,8 @@ on:
       - ".github/workflows/refresh-jobs.yml"
       - "scripts/update_jobs.py"
   schedule:
-    # Every 6 hours, offset from the top of the hour to reduce scheduling delays.
-    - cron: "17 */6 * * *"
+    # Refresh every hour, offset from the top of the hour.
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
