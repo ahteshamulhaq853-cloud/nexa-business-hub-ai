@@ -155,7 +155,7 @@ def fetch_source(source_url, source_name, category):
         samples = []
         for item in parser.links:
             href = item.get("href", "")
-            if "job" in href.lower() or "career" in href.lower():
+            if re.search(r"jobs-\\d{4,}|/job/", href, re.I):
                 samples.append((href, re.sub(r"\\s+", " ", item.get("text", "")).strip()[:80]))
             if len(samples) >= 12:
                 break
