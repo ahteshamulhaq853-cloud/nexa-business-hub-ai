@@ -214,13 +214,25 @@ body.has-bottom-nav main{padding-bottom:100px}
  body.print-experience-certificate .page{display:none!important}
  body.print-experience-certificate #experienceCertificatePage.active{display:block!important}
  body.print-experience-certificate #experienceCertificatePage .experience-certificate-wrap{margin:0!important;padding:0!important;background:white!important;box-shadow:none!important;max-width:none!important}
- body.print-experience-certificate #experienceCertificatePaper{width:200mm!important;min-height:287mm!important;padding:13mm 13mm 9mm!important;border:2px solid #b38b3b!important;box-shadow:none!important;break-inside:avoid;page-break-inside:avoid}
+ body.print-experience-certificate #experienceCertificatePaper{width:287mm!important;height:200mm!important;min-height:200mm!important;padding:10mm 16mm 7mm!important;border:2px solid #b38b3b!important;box-shadow:none!important;break-inside:avoid;page-break-inside:avoid}
+ body.print-experience-certificate .ec-seal{width:42px!important;height:42px!important;margin:4mm auto 5px!important;font-size:20px!important}
+ body.print-experience-certificate .ec-topline{font-size:8px!important}
+ body.print-experience-certificate .ec-kicker{margin-top:7px!important}
+ body.print-experience-certificate #experienceCertificatePaper h1{font-size:29pt!important;margin:4px 0 9px!important}
+ body.print-experience-certificate .ec-name{font-size:25pt!important;margin-top:5px!important}
+ body.print-experience-certificate .ec-name-rule{margin:7px auto 10px!important}
+ body.print-experience-certificate .ec-body{font-size:11pt!important;line-height:1.55!important}
+ body.print-experience-certificate .ec-duties{font-size:9pt!important;line-height:1.4!important;margin:7px auto!important}
+ body.print-experience-certificate .ec-appreciation{margin:8px auto 10px!important}
+ body.print-experience-certificate .ec-footer{margin:9px auto 12px!important;max-width:580px!important}
+ body.print-experience-certificate .ec-corner{width:35px!important;height:35px!important}
  body.print-experience-certificate #experienceCertificatePaper:before{inset:3mm!important}
  body.print-experience-certificate .ec-seal{margin-top:8mm!important}
  body.print-experience-certificate .ec-footer{margin-top:9mm!important}
  body.print-experience-certificate .ec-appreciation{margin-bottom:9mm!important}
 }
 
+@media print{body.print-experience-certificate{@page{size:A4 landscape;margin:5mm}}}
 @page{size:A4;margin:5mm}
 @media print{
  html,body{background:white!important;margin:0!important;padding:0!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
