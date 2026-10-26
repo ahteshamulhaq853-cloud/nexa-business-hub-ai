@@ -831,6 +831,7 @@ button:not(:disabled):hover{box-shadow:0 5px 18px #65f3dc18}
   <span class="eyebrow">PREMIUM DOCUMENT STUDIO</span>
   <h2 class="neon">Experience Certificate</h2>
   <p class="muted">Fill in the details below. Your elegant certificate updates instantly. Use only accurate, authorised employment details.</p>
+  <div class="field"><label for="ecTemplate">Certificate Template</label><select id="ecTemplate" onchange="applyCertificateTemplate(this.value)"><option value="classic">Classic Gold</option><option value="navy">Royal Navy &amp; Gold</option><option value="emerald">Emerald Green</option><option value="burgundy">Burgundy Elegance</option><option value="blue">Modern Blue</option><option value="charcoal">Charcoal Minimal</option></select></div>
   <div class="grid">
    <div class="field"><label for="ecOrg">Company / Organisation Name</label><input id="ecOrg" placeholder="e.g. Company Name"></div>
    <div class="field"><label for="ecSubtitle">Organisation Tagline</label><select id="ecSubtitle" onchange="toggleCertificateCustom('ecSubtitle')"><option value="EXCELLENCE • TRUST • PROFESSIONALISM">Excellence • Trust • Professionalism</option><option value="INTEGRITY • SERVICE • COMMITMENT">Integrity • Service • Commitment</option><option value="QUALITY • TRUST • INNOVATION">Quality • Trust • Innovation</option><option value="LEARNING • GROWTH • SUCCESS">Learning • Growth • Success</option><option value="CUSTOM">Other / Custom</option></select><input id="ecSubtitleCustom" placeholder="Enter custom tagline" style="display:none;margin-top:8px"></div>
