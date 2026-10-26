@@ -84,7 +84,13 @@ def extract_details(url, title, card_context, source_type, source_name):
         r"(?:education required|required qualification|qualification|education)\s*:?\s*([^|]{2,220}?)(?=\s+(?:experience|skills|salary|age limit|location|apply|deadline)\b|[|]|$)"
     ])
     experience = field_from_text(combined, [
+        r"(?:required|relevant|professional|post[- ]?qualification|work)?\s*experience\s*(?:in|with|of)\s+([^|]{2,220}?)(?=\s+(?:salary|age limit|location|qualification|education|skills|apply|deadline)\b|[|]|$)",
         r"(?:experience needed|required experience|experience)\s*:?\s*([^|]{2,220}?)(?=\s+(?:skills|salary|age limit|location|qualification|education|apply|deadline)\b|[|]|$)"
+    ])
+    # Capture the experience domain separately when the advertisement names one.
+    experience_field = field_from_text(combined, [
+        r"(?:experience|experienced)\s+(?:in|of|with)\s+([^|.]{2,180}?)(?=\s+(?:for|salary|age limit|location|qualification|education|skills|apply|deadline)\b|[|.]|$)",
+        r"(?:relevant|professional|work)\s+experience\s+(?:in|of|with)\s+([^|.]{2,180}?)(?=\s+(?:for|salary|age limit|location|qualification|education|skills|apply|deadline)\b|[|.]|$)"
     ])
     skills = field_from_text(combined, [
         r"(?:skills needed|required skills|skills)\s*:?\s*([^|]{2,260}?)(?=\s+(?:salary|age limit|location|qualification|education|experience|apply|deadline)\b|[|]|$)"
@@ -121,6 +127,7 @@ def extract_details(url, title, card_context, source_type, source_name):
         "description": clean(card_context)[:1800],
         "education_required": education,
         "experience_needed": experience,
+        "experience_field": experience_field,
         "skills_needed": skills,
         "salary": salary,
         "age_limit": age,
