@@ -1235,11 +1235,18 @@ input::placeholder,textarea::placeholder{
       <option value="eleven_flash_v2_5">Flash v2.5 — faster generation</option>
      </select>
     </div>
-    <div class="field">
-     <label for="voiceId">ElevenLabs Voice ID</label>
-     <input id="voiceId" value="JBFqnCBsd6RMkjVDRZzb" maxlength="100" autocomplete="off" spellcheck="false" required>
-     <small class="muted">Default voice ID: George. Replace it with a voice ID available in your ElevenLabs account if needed.</small>
-    </div>
+    <div class="field"><label for="voicePreset">Choose a voice</label><select id="voicePreset">
+<option value="JBFqnCBsd6RMkjVDRZzb">George — male narrator</option>
+<option value="21m00Tcm4TlvDq8ikWAM">Rachel — female narrator</option>
+<option value="AZnzlk1XvdvUeBnXmlld">Domi — female confident</option>
+<option value="EXAVITQu4vr4xnSDxMaL">Bella — female soft</option>
+<option value="ErXwobaYiN019PkySvjV">Antoni — male friendly</option>
+<option value="MF3mGyEYCl7XYWbV9V6O">Elli — female expressive</option>
+<option value="TxGEqnHWrfWFTfGW9XjX">Josh — male deep</option>
+<option value="VR6AewLTigWG4xSOukaG">Arnold — male strong</option>
+<option value="pNInz6obpgDQGcFmaJgB">Adam — male narration</option>
+<option value="custom">Custom voice ID</option></select><small class="muted">Voice availability depends on your ElevenLabs account.</small></div>
+<div class="field" id="customVoiceField" style="display:none"><label for="voiceId">Custom Voice ID</label><input id="voiceId" value="JBFqnCBsd6RMkjVDRZzb" maxlength="100" autocomplete="off" spellcheck="false"><small class="muted">Use a voice ID available in your account.</small></div>
     <div class="actions">
      <button id="voiceGenerateBtn" type="submit">Generate AI Voice</button>
      <button class="secondary" type="button" onclick="clearVoiceText()">Clear Text</button>
@@ -1938,6 +1945,7 @@ function clearVoiceText(){
  $("voiceMsg").textContent="";$("voiceMsg").className="message";
 }
 $("voiceText").addEventListener("input",()=>{$("voiceCharCount").textContent=String($("voiceText").value.length)});
+const vp=$("voicePreset");const cv=$("customVoiceField");if(vp&&cv){vp.addEventListener("change",()=>{const c=vp.value==="custom";cv.style.display=c?"block":"none";if(!c)$("voiceId").value=vp.value;});$("voiceId").value=vp.value;}
 $("voiceForm").addEventListener("submit",async e=>{
  e.preventDefault();
  const textValue=$("voiceText").value.trim();
