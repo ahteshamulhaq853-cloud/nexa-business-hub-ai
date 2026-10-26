@@ -19,7 +19,7 @@ FEED = ROOT / "data" / "jobs.json"
 SOURCES = [
     ("https://www.njp.gov.pk/index.php/jobs/live", "National Jobs Portal", "Government"),
     ("https://jobs.gov.pk/?pageid=602", "National Employment Exchange", "Government"),
-    ("https://www.rozee.pk/EN/jobs-in-pakistan/", "Rozee.pk", "Private"),
+    ("https://www.rozee.pk/EN/search/English/?fpn=0", "Rozee.pk", "Private"),
     ("https://www.mustakbil.com/", "Mustakbil", "Private"),
     ("https://auth.brightspyre.com/jobs", "BrightSpyre", "Private"),
 ]
