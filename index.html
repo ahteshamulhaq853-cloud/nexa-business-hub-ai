@@ -576,6 +576,35 @@ header{padding:16px clamp(16px,4vw,46px)!important;background:rgba(9,10,13,.96)!
 
 /* Ensure the header separator is removed across all theme overrides */
 header{border-bottom:0!important;box-shadow:none!important}
+
+/* NEXA Dark Tech Neon polish */
+:root{--bg:#070b14;--panel:#0d1728;--panel2:#12243a;--line:#24475b;--cyan:#65f3dc;--text:#effaff;--muted:#a1b7ca;--red:#ff91a2;--green:#83ffd0}
+body{background:radial-gradient(ellipse at 50% -12%,#16354a 0%,#0a1321 42%,#070b14 78%);background-attachment:fixed}
+header{background:rgba(7,12,22,.92)!important;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid #65f3dc22!important}
+header .brand{font-size:clamp(23px,3.2vw,34px)!important;letter-spacing:1.7px!important;text-shadow:0 0 22px #65f3dc24;line-height:1.15}
+header .brand small{font-size:clamp(10px,1.35vw,14px)!important;letter-spacing:2.6px!important;color:#65f3dc!important;text-shadow:0 0 14px #65f3dc35}
+.card,.hero,.panel,.workspace-card{border-color:#2b5368!important;box-shadow:0 12px 32px #0003,inset 0 1px 0 #ffffff05;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.card{background:linear-gradient(145deg,#101e31 0%,#0b1422 100%)}
+.card:hover{border-color:#65f3dc70!important;box-shadow:0 14px 34px #0004,0 0 20px #65f3dc0c}
+h1,h2,h3{letter-spacing:.2px}
+.neon{color:#65f3dc;text-shadow:0 0 16px #65f3dc20}
+input,select,textarea{border-color:#29495d!important;background-color:#091321!important;color:#effaff!important}
+input:focus,select:focus,textarea:focus{outline:2px solid #65f3dc35!important;border-color:#65f3dc!important;box-shadow:0 0 0 3px #65f3dc10!important}
+button:not(#bottomNav button){transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+button:not(:disabled):hover{box-shadow:0 5px 18px #65f3dc18}
+#bottomNav{background:rgba(7,12,22,.96)!important;border-top:1px solid #65f3dc30!important;box-shadow:0 -10px 30px #0006,0 -1px 12px #65f3dc08!important}
+#bottomNav button{border:1px solid transparent!important;color:#9db2c7!important}
+#bottomNav button.active{color:#65f3dc!important;background:#65f3dc12!important;border-color:#65f3dc30!important;text-shadow:0 0 12px #65f3dc30}
+#bottomNav button.active .bottom-icon{filter:drop-shadow(0 0 5px #65f3dc55)}
+#supportLauncher{box-shadow:0 8px 24px #0007,0 0 22px #65f3dc25!important}
+@media(max-width:760px){
+ header{padding:14px 10px!important;min-height:74px}
+ header .brand{letter-spacing:1px!important;max-width:calc(100% - 82px)!important}
+ header .brand small{letter-spacing:1.4px!important}
+ .card{border-radius:14px}
+ #supportLauncher{right:12px!important}
+}
+
 </style>
 </head>
 <body>
