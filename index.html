@@ -1456,6 +1456,11 @@ input:focus,select:focus,textarea:focus{outline:3px solid #36baff20!important;bo
    <span class="service-copy"><strong>Experience Certificate</strong><small>Create a professional work experience certificate</small></span>
    <span class="service-arrow" aria-hidden="true">›</span>
   </button>
+  <button class="service-row" onclick="showPage('latestJobsPage')">
+   <span class="service-number">04</span>
+   <span class="service-copy"><strong>Latest Jobs in Pakistan</strong><small>Search government, private, remote and entry-level job openings</small></span>
+   <span class="service-arrow" aria-hidden="true">›</span>
+  </button>
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
 
@@ -1836,6 +1841,28 @@ input:focus,select:focus,textarea:focus{outline:3px solid #36baff20!important;bo
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('servicesPage')">← Back to Services</button><button class="secondary" onclick="showPage('dashboardPage')">Dashboard</button></div>
 </section>
+<section id="latestJobsPage" class="page">
+ <div class="studio-section-heading"><div><span class="studio-kicker">CAREER OPPORTUNITIES</span><h2>Latest Jobs</h2><p class="muted">Pakistan aur international job openings dhoondein. Search results job portals par khulenge.</p></div></div>
+ <div class="card" style="max-width:900px">
+  <div class="field"><label for="jobsKeyword">Job title / skill / department</label><input id="jobsKeyword" type="search" placeholder="e.g. Computer Operator, Teacher, Data Entry"></div>
+  <div class="grid two">
+   <div class="field"><label for="jobsLocation">Location</label><select id="jobsLocation"><option value="Pakistan">All Pakistan</option><option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option><option value="Bannu">Bannu</option><option value="Peshawar">Peshawar</option><option value="Islamabad">Islamabad</option><option value="Rawalpindi">Rawalpindi</option><option value="Lahore">Lahore</option><option value="Karachi">Karachi</option><option value="Remote">Remote / Work from home</option><option value="Abroad">Abroad</option></select></div>
+   <div class="field"><label for="jobsType">Job category</label><select id="jobsType"><option value="">All categories</option><option value="government jobs">Government</option><option value="private jobs">Private</option><option value="teaching jobs">Teaching</option><option value="computer operator data entry jobs">Computer / Data Entry</option><option value="office assistant clerk jobs">Office / Clerk</option><option value="internships">Internships</option><option value="remote jobs">Remote</option></select></div>
+  </div>
+  <button type="button" onclick="searchLatestJobs()">🔎 Search Latest Jobs</button>
+  <p class="muted" style="font-size:12px">Job title aur city select karne se zyada relevant results milenge.</p>
+ </div>
+ <div class="studio-section-heading" style="margin-top:26px"><div><span class="studio-kicker">QUICK ACCESS</span><h2>Popular Job Websites</h2></div></div>
+ <div class="grid two">
+  <div class="card"><h3>National Job Portal</h3><p class="muted">Federal government jobs in Pakistan.</p><a href="https://njp.gov.pk/" target="_blank" rel="noopener noreferrer">Open NJP ↗</a></div>
+  <div class="card"><h3>FPSC</h3><p class="muted">Federal Public Service Commission vacancies and announcements.</p><a href="https://www.fpsc.gov.pk/" target="_blank" rel="noopener noreferrer">Open FPSC ↗</a></div>
+  <div class="card"><h3>KPPSC</h3><p class="muted">Khyber Pakhtunkhwa Public Service Commission jobs.</p><a href="https://www.kppsc.gov.pk/" target="_blank" rel="noopener noreferrer">Open KPPSC ↗</a></div>
+  <div class="card"><h3>Pakistan Railways</h3><p class="muted">Official recruitment notices and announcements.</p><a href="https://www.pakrail.gov.pk/" target="_blank" rel="noopener noreferrer">Open Pakistan Railways ↗</a></div>
+  <div class="card"><h3>Rozee.pk</h3><p class="muted">Private-sector jobs across Pakistan.</p><a href="https://www.rozee.pk/" target="_blank" rel="noopener noreferrer">Open Rozee.pk ↗</a></div>
+  <div class="card"><h3>BrightSpyre</h3><p class="muted">Jobs and development-sector opportunities.</p><a href="https://www.brightspyre.com/" target="_blank" rel="noopener noreferrer">Open BrightSpyre ↗</a></div>
+ </div>
+ <div class="actions"><button class="secondary" onclick="showPage('servicesPage')">← Back to Services</button><button class="secondary" onclick="showPage('dashboardPage')">Dashboard</button></div>
+</section>
 </main>
 <nav id="bottomNav" aria-label="Main navigation">
  <button type="button" onclick="bottomNavigate('dashboardPage',this)"><span class="bottom-icon">⌂</span><span>Dashboard</span></button>
@@ -1880,6 +1907,14 @@ function clearMsg(id){$(id).textContent="";$(id).className="message"}
 function bottomNavigate(id,button){
  showPage(id);
  document.querySelectorAll('#bottomNav button').forEach(b=>b.classList.toggle('active',b===button));
+}
+function searchLatestJobs(){
+ const keyword=(($("jobsKeyword")&&$("jobsKeyword").value)||"").trim();
+ const location=(($("jobsLocation")&&$("jobsLocation").value)||"Pakistan").trim();
+ const category=(($("jobsType")&&$("jobsType").value)||"").trim();
+ const place=location==="Remote"?"remote work from home":location==="Abroad"?"jobs abroad":location;
+ const terms=[keyword,category,place,"latest vacancies"].filter(Boolean).join(" ");
+ window.open("https://www.google.com/search?q="+encodeURIComponent(terms)+"&ibp=htl;jobs","_blank","noopener,noreferrer");
 }
 function showPage(id){
  if(id==="paymentPage"&&$("paymentProduct")){$("paymentProduct").value="normal";$("paymentTitle").textContent="Payment & Access."; $("paymentDescription").textContent="Normal CV PDF access costs Rs. 100. Submit your transaction reference and wait for admin approval.";$("paymentAmount").textContent="Rs. 100"}
