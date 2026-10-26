@@ -14,7 +14,7 @@ jobs = []
 seen = set()
 
 def clean(value):
-    return re.sub(r"\\s+", " ", value or "").strip()
+    return re.sub(r"\s+ ", " ", value or "").strip()
 
 def looks_like_job(title):
     title = clean(title)
