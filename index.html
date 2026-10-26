@@ -940,9 +940,10 @@ button:not(:disabled):hover{box-shadow:0 5px 18px #65f3dc18}
 <section id="settingsPage" class="page">
  <div class="hero"><span class="eyebrow">ACCOUNT PREFERENCES</span><h1>Account <span class="neon">Settings.</span></h1><p>Manage your password and account security.</p></div>
  <div class="grid">
-  <div class="card"><h2>Change Password</h2><p class="muted">Enter a new password for your current account.</p><div id="changePasswordMsg" class="message"></div>
+  <div class="card"><h2>Change Password</h2><p class="muted">Enter your current password before choosing a new one.</p><div id="changePasswordMsg" class="message"></div>
    <form id="changePasswordForm">
-    <div class="field"><label for="newPassword">New Password</label><input id="newPassword" type="password" minlength="6" autocomplete="new-password" required></div>
+    <div class="field"><label for="currentPassword">Current Password</label><input id="currentPassword" type="password" autocomplete="current-password" required></div>
+     <div class="field"><label for="newPassword">New Password</label><input id="newPassword" type="password" minlength="6" autocomplete="new-password" required></div>
     <div class="field"><label for="confirmNewPassword">Confirm New Password</label><input id="confirmNewPassword" type="password" minlength="6" autocomplete="new-password" required></div>
     <button type="submit">Update Password</button>
    </form>
@@ -1090,10 +1091,14 @@ function showAuthForm(type){
 }
 async function changeAccountPassword(e){
  e.preventDefault();clearMsg("changePasswordMsg");
- const password=$("newPassword").value,confirm=$("confirmNewPassword").value;
+ const current=$("currentPassword").value,password=$("newPassword").value,confirm=$("confirmNewPassword").value;
+ if(!current){msg("changePasswordMsg","Please enter your current password.","error");return}
  if(password.length<6){msg("changePasswordMsg","Password must be at least 6 characters.","error");return}
  if(password!==confirm){msg("changePasswordMsg","Passwords do not match.","error");return}
  if(!currentUser){msg("changePasswordMsg","Please log in first.","error");return}
+ if(!currentUser.email){msg("changePasswordMsg","This account does not have an email/password login. Use Forgot Password or your account sign-in method.","error");return}
+ const {error:verifyError}=await db.auth.signInWithPassword({email:currentUser.email,password:current});
+ if(verifyError){msg("changePasswordMsg","Current password is incorrect. Please try again.","error");return}
  const {error}=await db.auth.updateUser({password});
  if(error){msg("changePasswordMsg",error.message,"error");return}
  $("changePasswordForm").reset();msg("changePasswordMsg","Password updated successfully.","success");
