@@ -7,6 +7,7 @@ and never invents deadlines or job details.
 """
 from datetime import datetime, timezone
 from html.parser import HTMLParser
+from html import unescape
 from pathlib import Path
 from urllib.parse import urljoin, urlparse, urldefrag
 from urllib.request import Request, urlopen
@@ -152,6 +153,64 @@ def fetch_source(source_url, source_name, category):
         })
     return found
 
+def fetch_job_location(job_url):
+    """Best-effort location extraction from an individual official job page."""
+    try:
+        req = Request(job_url, headers={
+            "User-Agent": "Mozilla/5.0 (compatible; NexaJobsFeed/1.0)",
+            "Accept": "text/html,application/xhtml+xml"
+        })
+        with urlopen(req, timeout=12) as response:
+            raw = response.read(1_500_000)
+            charset = response.headers.get_content_charset() or "utf-8"
+        html = raw.decode(charset, errors="replace")
+
+        # Prefer structured JobPosting/JSON-LD location data when present.
+        for block in re.findall(r'<script[^>]*type=["\\']application/ld\\+json["\\'][^>]*>(.*?)</script>', html, re.I | re.S):
+            try:
+                data = json.loads(unescape(block).strip())
+            except (json.JSONDecodeError, TypeError):
+                continue
+            candidates = data if isinstance(data, list) else [data]
+            for item in candidates:
+                if not isinstance(item, dict):
+                    continue
+                if item.get("@graph") and isinstance(item["@graph"], list):
+                    candidates.extend(x for x in item["@graph"] if isinstance(x, dict))
+                loc = item.get("jobLocation", [])
+                if isinstance(loc, dict):
+                    loc = [loc]
+                for place in loc if isinstance(loc, list) else []:
+                    if not isinstance(place, dict):
+                        continue
+                    address = place.get("address", {})
+                    if isinstance(address, str):
+                        value = address.strip()
+                    elif isinstance(address, dict):
+                        value = ", ".join(str(address.get(k, "")).strip() for k in ("addressLocality", "addressRegion", "addressCountry") if address.get(k))
+                    else:
+                        value = ""
+                    if value and len(value) <= 120:
+                        return value
+
+        # Fall back to visible label/value patterns in the official page.
+        plain = unescape(re.sub(r"<[^>]+>", " ", html))
+        plain = re.sub(r"\\s+", " ", plain)
+        patterns = [
+            r"\\b(?:job\\s+)?location\\s*[:：]\\s*([^|;]{2,100}?)(?=\\s{2,}|\\b(?:job type|employment type|salary|deadline|apply|description)\\b|$)",
+            r"\\bcity\\s*[:：]\\s*([A-Z][A-Za-z .,'()-]{1,70}?)(?=\\s{2,}|\\b(?:state|country|salary|deadline|apply)\\b|$)",
+        ]
+        for pattern in patterns:
+            match = re.search(pattern, plain, re.I)
+            if match:
+                value = re.sub(r"\\s+", " ", match.group(1)).strip(" -,:;|")
+                if value and not re.search(r"^(?:not specified|unknown|n/?a|view job|details)$", value, re.I):
+                    return value[:120]
+    except Exception:
+        pass
+    return ""
+
+
 def main():
     feed = read_feed()
     existing = feed.get("jobs", [])
@@ -188,6 +247,17 @@ def main():
     if successes == 0:
         print("ERROR: every job source failed; leaving jobs.json unchanged.", file=sys.stderr)
         return 1
+
+    # Gradually enrich older records with real locations from official detail pages.
+    # Limit requests per run so hourly refreshes stay lightweight; never guess a location.
+    missing_locations = [job for job in by_url.values() if not str(job.get("location", "")).strip()]
+    enriched = 0
+    for job in missing_locations[:12]:
+        location = fetch_job_location(str(job.get("url", "")))
+        if location:
+            job["location"] = location
+            enriched += 1
+    print(f"Location enrichment: {enriched} locations found from {min(len(missing_locations), 12)} official detail pages checked.")
 
     # Refresh timestamp only after at least one source responded. Existing jobs
     # remain available when a source blocks automated requests.
