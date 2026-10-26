@@ -17,6 +17,8 @@ jobs:
           python-version: "3.12"
       - name: Install scraper dependencies
         run: pip install requests beautifulsoup4
+      - name: Validate scraper syntax
+        run: python -m py_compile scripts/fetch_jobs.py
       - name: Fetch public job listings
         run: python scripts/fetch_jobs.py
       - name: Commit updated jobs data
