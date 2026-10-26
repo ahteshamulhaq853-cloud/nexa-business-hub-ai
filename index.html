@@ -1227,7 +1227,7 @@ input::placeholder,textarea::placeholder{
     <div class="field"><label for="freeVoice">Urdu voice (Pakistan)</label><select id="freeVoice"><option value="">Detecting Urdu voices…</option></select><small class="muted">Only Urdu voices are listed. If no Urdu voice is installed, speech will stop instead of using an English voice.</small></div>
     <div class="field"><label for="voiceRate">Speaking speed</label><input id="voiceRate" type="range" min="0.6" max="1.4" step="0.1" value="1"><small class="muted">Move left for slower speech, right for faster speech.</small></div>
     <div class="field"><label for="voicePitch">Voice pitch</label><input id="voicePitch" type="range" min="0.7" max="1.4" step="0.1" value="1"><small class="muted">Changes pitch only; it does not clone or create a new person's voice.</small></div>
-    <div class="field"><label for="voiceText">Your text</label><textarea id="voiceText" maxlength="2500" placeholder="یہاں اردو یا English متن لکھیں..." required style="min-height:180px"></textarea><div class="voice-counter"><span id="voiceCharCount">0</span> / 2,500 characters</div></div>
+    <div class="field"><label for="voiceText">Your text</label><textarea id="voiceText" maxlength="2500" placeholder="یہاں اردو متن لکھیں..." required style="min-height:180px"></textarea><div class="voice-counter"><span id="voiceCharCount">0</span> / 2,500 characters</div><div class="actions"><button class="secondary" type="button" id="pubgVoiceSampleBtn">🔥 Add energetic PUBG sample</button></div><small class="muted">Emoji are visual only and will be removed before speaking. Punctuation helps guide pauses, but cannot create real emotion.</small></div>
     <div class="actions">
      <button id="voiceGenerateBtn" type="submit">▶ Speak Text</button>
      <button class="secondary" type="button" id="voicePauseBtn" onclick="pauseVoice()">⏸ Pause</button>
@@ -1936,22 +1936,25 @@ function clearVoiceText(){
  stopVoice();$("voiceText").value="";$("voiceCharCount").textContent="0";
  $("voiceMsg").textContent="";$("voiceMsg").className="message";
 }
+function cleanSpeechText(raw){return String(raw||"").replace(/[\\p{Extended_Pictographic}\\uFE0F\\u200D]/gu," ").replace(/[#*_~]/g,"").replace(/\\s+/g," ").replace(/\\s+([،۔,!?.])/g,"$1").trim();}
 function speakFreeVoice(textValue){
  if(!("speechSynthesis" in window)||!("SpeechSynthesisUtterance" in window))throw new Error("This browser does not support speech synthesis. Please use an updated Chrome or Edge.");
  window.speechSynthesis.cancel();
  const name=$("freeVoice").value,voices=window.speechSynthesis.getVoices();
  const voice=voices.find(v=>v.name===name&&/^ur(-|$)/i.test(v.lang));
  if(!voice)throw new Error("Is device par Urdu voice install nahi hai. English voice use nahi ki jayegi.");
- const utterance=new SpeechSynthesisUtterance(textValue);
- utterance.lang=voice.lang;utterance.voice=voice;utterance.rate=Number($("voiceRate").value||0.9);utterance.pitch=Number($("voicePitch").value||1);
+ const spokenText=cleanSpeechText(textValue);if(!spokenText)throw new Error("Please enter words for the voice to speak; emoji alone cannot be spoken.");
+ const utterance=new SpeechSynthesisUtterance(spokenText);
+ utterance.lang=voice.lang;utterance.voice=voice;utterance.rate=Number($("voiceRate").value||1.05);utterance.pitch=Number($("voicePitch").value||1.05);
  utterance.onstart=()=>voiceMessage("Urdu voice chal rahi hai. Pronunciation device par installed Urdu voice par depend karti hai.","success");
  utterance.onerror=ev=>{voiceMessage("Speech failed ("+(ev.error||"unknown error")+"). Check the voices installed on your device.","error");const b=$("voiceGenerateBtn");if(b){b.disabled=false;b.textContent="▶ Speak Text";}};
- utterance.onend=()=>{const b=$("voiceGenerateBtn");if(b){b.disabled=false;b.textContent="▶ Speak Text";}voiceMessage("Speech finished.","success");};
+ utterance.onend=()=>{const b=$("voiceGenerateBtn");if(b){b.disabled=false;b.textContent="▶ Speak Text";}voiceMessage("Speech finished. Browser voices cannot add real acting or emotional expression.","success");};
  window.speechSynthesis.speak(utterance);
 }
-$("voiceText").addEventListener("input",()=>{$("voiceCharCount").textContent=String($("voiceText").value.length)});
+ $("voiceText").addEventListener("input",()=>{$("voiceCharCount").textContent=String($("voiceText").value.length)});
+ $("pubgVoiceSampleBtn").addEventListener("click",()=>{const sample="السلام علیکم گیمرز! میرا نام احتشام ہے۔ تیار ہو جاؤ، کیونکہ اب میدان میں انٹری ہو رہی ہے میری! فوکس آن، ٹیم تیار، اور ہمت فل پاور! آخری زون تک مقابلہ جاری رہے گا۔ چلو، گیم شروع کرتے ہیں!";$("voiceText").value=sample;$("voiceCharCount").textContent=String(sample.length);voiceMessage("Energetic Urdu sample added. Press Speak Text to hear it.","success");});
 $("voiceForm").addEventListener("submit",e=>{
- e.preventDefault();const textValue=$("voiceText").value.trim(),btn=$("voiceGenerateBtn");
+  e.preventDefault();const textValue=cleanSpeechText($("voiceText").value),btn=$("voiceGenerateBtn");
  if(!textValue){voiceMessage("Please enter the text you want to speak.","error");return;}
  if(textValue.length>2500){voiceMessage("Please keep the text under 2,500 characters.","error");return;}
  const voices=("speechSynthesis" in window)?window.speechSynthesis.getVoices():[];
