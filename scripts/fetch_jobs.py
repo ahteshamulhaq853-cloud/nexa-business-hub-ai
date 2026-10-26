@@ -78,7 +78,8 @@ def extract_details(url, title, card_context, source_type, source_name):
         r"(?:company|organization|organisation|employer)\s*:?\s*([^|]{2,100}?)(?=\s+(?:location|job type|employment type|qualification|education|experience|salary|apply|deadline)\b|[|]|$)"
     ])
     location = field_from_text(combined, [
-        r"(?:job location|location|city)\s*:?\s*([^|]{2,100}?)(?=\s+(?:company|organization|job type|employment type|qualification|education|experience|salary|apply|deadline)\b|[|]|$)"
+        r"(?:job\s+location|work\s+location|place\s+of\s+posting|posting\s+location|duty\s+station|location|city)\s*[:：-]\s*([^|.]{2,120}?)(?=\s+(?:company|organization|organisation|employer|job type|employment type|qualification|education|experience|salary|pay|apply|deadline|last date|age limit|vacancies|number of posts)\b|[|.]|$)",
+        r"(?:job\s+location|work\s+location|place\s+of\s+posting|posting\s+location|duty\s+station|location|city)\s+([A-Z][A-Za-z .,'()/&-]{1,100}?)(?=\s+(?:company|organization|organisation|employer|job type|employment type|qualification|education|experience|salary|pay|apply|deadline|last date|age limit|vacancies|number of posts)\b|[|.]|$)"
     ])
     education = field_from_text(combined, [
         r"(?:education required|required qualification|qualification|education)\s*:?\s*([^|]{2,220}?)(?=\s+(?:experience|skills|salary|age limit|location|apply|deadline)\b|[|]|$)"
