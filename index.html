@@ -1458,7 +1458,7 @@ input:focus,select:focus,textarea:focus{outline:3px solid #36baff20!important;bo
   </button>
   <button class="service-row" onclick="showPage('latestJobsPage')">
    <span class="service-number">04</span>
-   <span class="service-copy"><strong>Latest Jobs in Pakistan</strong><small>Search government, private, remote and entry-level job openings</small></span>
+   <span class="service-copy"><strong>Latest Jobs in Pakistan</strong><small>Search government and private job openings across Pakistan</small></span>
    <span class="service-arrow" aria-hidden="true">›</span>
   </button>
  </div>
@@ -1842,7 +1842,7 @@ input:focus,select:focus,textarea:focus{outline:3px solid #36baff20!important;bo
  <div class="actions"><button class="secondary" onclick="showPage('servicesPage')">← Back to Services</button><button class="secondary" onclick="showPage('dashboardPage')">Dashboard</button></div>
 </section>
 <section id="latestJobsPage" class="page">
- <div class="studio-section-heading"><div><span class="studio-kicker">NEXA CAREERS</span><h2>Latest Jobs</h2><p class="muted">Jobs dekhein, details parhein aur isi website par application submit karein.</p></div></div>
+ <div class="studio-section-heading"><div><span class="studio-kicker">NEXA CAREERS</span><h2>Latest Jobs</h2><p class="muted">Pakistan ki government aur private jobs search karein. NEXA vacancies ke saath trusted job portals bhi dekhein.</p></div></div>
  <div class="card" style="max-width:1000px">
   <div class="grid two">
    <div class="field"><label for="jobsKeyword">Job title / skill / department</label><select id="jobsKeyword">
@@ -1852,12 +1852,12 @@ input:focus,select:focus,textarea:focus{outline:3px solid #36baff20!important;bo
     <optgroup label="Government &amp; Public Service"><option>Government Jobs</option><option>Police Jobs</option><option>Army Jobs</option><option>FPSC Jobs</option><option>KPPSC Jobs</option><option>Clerk BPS-11</option><option>Junior Clerk</option><option>Constable</option></optgroup>
     <optgroup label="Business &amp; Customer Service"><option>Sales Representative</option><option>Customer Service Representative</option><option>Marketing Officer</option><option>Shop Assistant</option><option>Cashier</option><option>Manager</option></optgroup>
     <optgroup label="Technical &amp; Skilled Work"><option>Electrician</option><option>Driver</option><option>Graphic Designer</option><option>Web Developer</option><option>Video Editor</option><option>Mobile Repair Technician</option><option>Lab Technician</option><option>Nurse</option></optgroup>
-    <optgroup label="Other Opportunities"><option>Internship</option><option>Fresh Graduate Jobs</option><option>Part-Time Jobs</option><option>Work From Home</option><option>Freelancer</option><option>Any Job</option></optgroup>
+    <optgroup label="Other Opportunities"><option>Internship</option><option>Fresh Graduate Jobs</option><option>Part-Time Jobs</option><option>Freelancer</option><option>Any Job</option></optgroup>
    </select></div>
-   <div class="field"><label for="jobsLocation">Location</label><select id="jobsLocation"><option value="">All locations</option><option>Pakistan</option><option>Khyber Pakhtunkhwa</option><option>Bannu</option><option>Peshawar</option><option>Islamabad</option><option>Rawalpindi</option><option>Lahore</option><option>Karachi</option><option>Remote</option><option>Abroad</option></select></div>
+   <div class="field"><label for="jobsLocation">Location</label><select id="jobsLocation"><option value="">All locations</option><option>Pakistan</option><option>Khyber Pakhtunkhwa</option><option>Bannu</option><option>Peshawar</option><option>Islamabad</option><option>Rawalpindi</option><option>Lahore</option><option>Karachi</option></select></div>
   </div>
   <div class="grid two">
-   <div class="field"><label for="jobsType">Job category</label><select id="jobsType"><option value="">All categories</option><option>Government</option><option>Private</option><option>Teaching</option><option>Computer / Data Entry</option><option>Office / Clerk</option><option>Internship</option><option>Remote</option></select></div>
+   <div class="field"><label for="jobsType">Job category</label><select id="jobsType"><option value="">All categories</option><option>Government</option><option>Private</option><option>Teaching</option><option>Computer / Data Entry</option><option>Office / Clerk</option><option>Internship</option></select></div>
    <div class="field"><label for="jobsSearchText">Search by company or keyword</label><input id="jobsSearchText" type="search" placeholder="Company, skill, keyword..."></div>
   </div>
   <button type="button" onclick="loadNexaJobs()">🔎 Search Jobs on NEXA</button>
@@ -1936,13 +1936,13 @@ function escapeJobHTML(value){return String(value==null?"":value).replace(/[&<>"
 function jobDate(value){if(!value)return "Not specified";const d=new Date(value);return isNaN(d.getTime())?escapeJobHTML(value):d.toLocaleDateString();}
 async function loadNexaJobs(){
  const status=$("jobsStatus"),list=$("nexaJobsList");
- if(status)status.textContent="Pakistan ki vacancies aur Pakistan se apply ki ja sakne wali remote jobs load ho rahi hain…";
+ if(status)status.textContent="Pakistan ki government aur private vacancies load ho rahi hain…";
  if(list)list.innerHTML="";
  const keyword=(($("jobsKeyword")||{}).value||"").trim().toLowerCase();
  const location=(($("jobsLocation")||{}).value||"").trim().toLowerCase();
  const category=(($("jobsType")||{}).value||"").trim().toLowerCase();
  const query=(($("jobsSearchText")||{}).value||"").trim().toLowerCase();
- let internalJobs=[],remoteJobs=[],warnings=[];
+ let internalJobs=[],warnings=[];
  try{
   const {data,error}=await db.from("job_listings").select("id,title,company,location,category,employment_type,description,requirements,application_deadline,created_at").eq("is_active",true).order("created_at",{ascending:false}).limit(100);
   if(error)throw error;
@@ -1950,25 +1950,18 @@ async function loadNexaJobs(){
    const hay=[j.title,j.company,j.location,j.category,j.employment_type,j.description,j.requirements].join(" ").toLowerCase();
    return (!keyword||hay.includes(keyword))&&(!location||String(j.location||"").toLowerCase().includes(location))&&(!category||String(j.category||"").toLowerCase().includes(category))&&(!query||hay.includes(query));
   });
- }catch(error){console.error("NEXA jobs database error:",error);warnings.push("NEXA database vacancies load nahi ho sakin.");}
- try{
-  const remoteUrl="https://remotive.com/api/remote-jobs?limit=50&search="+encodeURIComponent([keyword,query,"Pakistan"].filter(Boolean).join(" "));
-  const response=await fetch(remoteUrl,{headers:{"Accept":"application/json"}});
-  if(!response.ok)throw new Error("Remote jobs source returned "+response.status);
-  const payload=await response.json();
-  remoteJobs=(payload.jobs||[]).filter(j=>{
-   const hay=[j.title,j.company_name,j.category,j.job_type,j.candidate_required_location,j.description].join(" ").toLowerCase();
-   const loc=String(j.candidate_required_location||"").toLowerCase();
-   const pakistanEligible=loc.includes("pakistan")||loc.includes("worldwide")||loc.includes("anywhere");
-   return pakistanEligible&&(!keyword||hay.includes(keyword))&&(!category||hay.includes(category))&&(!query||hay.includes(query))&&(!location||location==="pakistan"||location==="remote"||loc.includes(location));
-  });
- }catch(error){console.warn("Remote jobs source unavailable:",error);warnings.push("Pakistan-eligible remote jobs source abhi connect nahi ho saka.");}
+ }catch(error){console.error("NEXA jobs database error:",error);warnings.push("NEXA par manually added vacancies load nahi ho sakin.");}
  nexaJobsCache=internalJobs;
  const internalCards=internalJobs.map(j=>'<article class="card"><span class="studio-kicker">'+escapeJobHTML(j.category||"Career Opportunity")+'</span><h3>'+escapeJobHTML(j.title)+'</h3><p><strong>'+escapeJobHTML(j.company||"Employer not specified")+'</strong></p><p class="muted">'+escapeJobHTML(j.location||"Location not specified")+(j.employment_type?" · "+escapeJobHTML(j.employment_type):"")+'</p><p>'+escapeJobHTML(j.description||"Job details ke liye employer se rabta karein.")+'</p>'+(j.requirements?'<p><strong>Requirements:</strong> '+escapeJobHTML(j.requirements)+'</p>':"")+'<p class="muted">Apply before: '+jobDate(j.application_deadline)+'</p><button type="button" data-job-id="'+escapeJobHTML(j.id)+'" onclick="openNexaJobApplication(this.dataset.jobId)">Apply on NEXA</button></article>').join("");
- const remoteCards=remoteJobs.map(j=>'<article class="card"><span class="studio-kicker">PAKISTAN-ELIGIBLE REMOTE · '+escapeJobHTML(j.category||"Remote job")+'</span><h3>'+escapeJobHTML(j.title)+'</h3><p><strong>'+escapeJobHTML(j.company_name||"Company not specified")+'</strong></p><p class="muted">'+escapeJobHTML(j.candidate_required_location||"Remote / multiple locations")+(j.job_type?" · "+escapeJobHTML(j.job_type):"")+'</p><p>'+escapeJobHTML(String(j.description||"").replace(/<[^>]*>/g," ").replace(/\s+/g," ").slice(0,320))+'</p><p class="muted">Source: Remotive · Published '+jobDate(j.publication_date)+'</p><button type="button" data-job-url="'+escapeJobHTML(j.url||"https://remotive.com/")+'" onclick="window.open(this.dataset.jobUrl,\'_blank\',\'noopener,noreferrer\')">View details &amp; apply</button></article>').join("");
- list.innerHTML=internalCards+remoteCards;
- if(!internalCards&&!remoteCards)status.textContent="Is search mein koi job nahi mili. Filters change karke dobara try karein. "+warnings.join(" ");
- else status.textContent=internalJobs.length+" NEXA job(s) · "+remoteJobs.length+" Pakistan-eligible remote job(s). "+(warnings.length?warnings.join(" "):"Remote listings third-party source se aati hain; apply original employer portal par hota hai.");
+ const portalCards=[
+  {type:"government",title:"Government Jobs — National Jobs Portal",description:"Federal aur government departments ki verified vacancies dekhein.",url:"https://njp.gov.pk/jobs/",label:"Browse Government Jobs"},
+  {type:"government",title:"Government & Private — National Employment Exchange",description:"Pakistan ke national employment platform par government aur private openings explore karein.",url:"https://jobs.gov.pk/",label:"Explore Jobs"},
+  {type:"private",title:"Private Jobs — Rozee.pk",description:"Pakistan bhar ki private companies, offices aur business jobs search karein.",url:"https://www.rozee.pk/",label:"Browse Private Jobs"},
+  {type:"private",title:"Private Jobs — Mustakbil",description:"Private-sector jobs aur career opportunities Pakistan mein dekhein.",url:"https://www.mustakbil.com/",label:"Find Private Jobs"}
+ ].filter(p=>(!category||p.type===category||category==="teaching"&&p.type==="private"||category==="computer / data entry"&&p.type==="private"||category==="office / clerk"&&p.type==="private"||category==="internship"&&p.type==="private")&&(!location||location!=="abroad")&&(!query||(p.title+" "+p.description+" "+p.type).toLowerCase().includes(query)));
+ const portalHTML=portalCards.map(p=>'<article class="card"><span class="studio-kicker">'+(p.type==="government"?"GOVERNMENT JOBS":"PRIVATE JOBS")+'</span><h3>'+escapeJobHTML(p.title)+'</h3><p>'+escapeJobHTML(p.description)+'</p><button type="button" data-portal-url="'+escapeJobHTML(p.url)+'" onclick="window.open(this.dataset.portalUrl,\'_blank\',\'noopener,noreferrer\')">'+escapeJobHTML(p.label)+'</button></article>').join("");
+ list.innerHTML=internalCards+portalHTML;
+ if(status)status.textContent=internalJobs.length+" NEXA vacancy/vacancies · "+portalCards.length+" government/private job portals. "+(warnings.length?warnings.join(" "):"External portals par latest vacancies aur applications unki original websites par milengi.");
 }
 function openNexaJobApplication(id){
  const job=nexaJobsCache.find(j=>String(j.id)===String(id));if(!job)return;
