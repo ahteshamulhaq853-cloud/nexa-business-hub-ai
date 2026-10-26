@@ -1953,8 +1953,8 @@ async function loadNexaJobs(){
   const response=await fetch("data/jobs.json?updated="+Date.now(),{cache:"no-store"});if(!response.ok)throw new Error("Jobs feed not available");
   const feed=await response.json();
   feedJobs=(Array.isArray(feed.jobs)?feed.jobs:[]).filter(j=>{
-   if(j.verified_detail_page!==true)return false;
-   if(!j.title||!j.url||!j.official_url||isExpired(j.last_date_to_apply)||String(j.availability||"").toLowerCase()==="expired")return false;
+   // Keep legacy feed entries visible while the new detail-page scraper fills structured fields.
+   if(!j.title||!j.url||isExpired(j.last_date_to_apply)||String(j.availability||"").toLowerCase()==="expired")return false;
    const title=String(j.title).toLowerCase();
    if(/^(how to apply|quick links|categories|find your industry|hire smarter|built different|view all|latest jobs)$/.test(title))return false;
    const h=searchable(j)+" "+String(j.source||"").toLowerCase();
