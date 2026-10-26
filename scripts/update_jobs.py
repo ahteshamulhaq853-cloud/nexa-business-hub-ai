@@ -19,7 +19,7 @@ FEED = ROOT / "data" / "jobs.json"
 SOURCES = [
     ("https://www.njp.gov.pk/index.php/jobs/live", "National Jobs Portal", "Government"),
     ("https://jobs.gov.pk/?pageid=602", "National Employment Exchange", "Government"),
-    ("https://www.rozee.pk/", "Rozee.pk", "Private"),
+    ("https://www.rozee.pk/EN/jobs-in-pakistan/", "Rozee.pk", "Private"),
     ("https://www.mustakbil.com/", "Mustakbil", "Private"),
     ("https://auth.brightspyre.com/jobs", "BrightSpyre", "Private"),
 ]
@@ -98,7 +98,11 @@ def looks_like_job(url, text, source_url):
             or bool(re.search(r"[?&](jobid|job_id|vacancyid|vacancy_id)=", url, re.I))
         )
     if host == "rozee.pk":
-        return "/job/" in path and bool(re.search(r"/(jid/)?[a-z0-9-]*\d+[a-z0-9-]*$", path))
+        # Rozee detail URLs vary; accept individual job pages with an ID.
+        return "/job/" in path and (
+            bool(re.search(r"\d{4,}", path))
+            or bool(re.search(r"[?&](jid|jobid|job_id|id)=\d+", url, re.I))
+        )
     if host == "mustakbil.com":
         return bool(re.fullmatch(r"/jobs/job/\d+/?", path))
     if host == "auth.brightspyre.com":
