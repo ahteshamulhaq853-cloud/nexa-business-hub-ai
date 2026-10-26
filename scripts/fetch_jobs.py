@@ -14,7 +14,7 @@ jobs = []
 seen = set()
 
 def clean(value):
-    return re.sub(r"\s+ ", " ", value or "").strip()
+    return re.sub(r"\s+", " ", value or "").strip()
 
 def looks_like_job(title):
     title = clean(title)
@@ -58,7 +58,7 @@ for source_type, source_name, page_url in SOURCES:
             if host not in {"www.njp.gov.pk", "njp.gov.pk", "jobs.gov.pk", "www.jobs.gov.pk"}:
                 continue
             context = clean(container.get_text(" ", strip=True))
-            if re.search(r"\\bexpired\\b", context, re.I):
+            if re.search(r"\bexpired\b", context, re.I):
                 continue
             if re.search(r"overseas|saudi arabia|united arab emirates|qatar|kuwait|oman|riyadh|abroad", context, re.I):
                 continue
