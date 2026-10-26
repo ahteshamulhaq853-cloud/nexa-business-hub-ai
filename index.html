@@ -1231,6 +1231,7 @@ input::placeholder,textarea::placeholder{
     <div class="field"><label for="voiceText">Your text</label><textarea id="voiceText" maxlength="2500" placeholder="یہاں اردو متن لکھیں..." required style="min-height:180px"></textarea><div class="voice-counter"><span id="voiceCharCount">0</span> / 2,500 characters</div><div class="actions"></div><small class="muted">Emoji are visual only and will be removed before speaking. Punctuation helps guide pauses, but cannot create real emotion.</small></div>
     <div class="actions">
      <button id="voiceGenerateBtn" type="submit">▶ Speak Text</button>
+     <button class="secondary" type="button" id="cloudVoiceBtn" onclick="generateCloudflareVoice()">✨ Try Cloudflare AI MP3 (Experimental)</button>
      <button class="secondary" type="button" id="voicePauseBtn" onclick="pauseVoice()">⏸ Pause</button>
      <button class="secondary" type="button" id="voiceResumeBtn" onclick="resumeVoice()">▶ Resume</button>
      <button class="secondary" type="button" onclick="stopVoice()">■ Stop</button>
@@ -1243,6 +1244,9 @@ input::placeholder,textarea::placeholder{
   <div class="card voice-card voice-output">
    <h2>🎧 Voice player</h2>
    <div id="voiceEmpty" class="voice-empty"><div class="voice-wave">♫</div><strong>Your speech plays here</strong><span>Enter text and press Speak Text.</span></div>
+   <audio id="cloudVoiceAudio" controls hidden style="width:100%;margin:14px 0"></audio>
+   <a id="cloudVoiceDownload" class="voice-download" hidden download="nexa-cloudflare-voice.mp3" style="margin:0 0 18px">⬇ Download AI MP3</a>
+   <p class="muted" style="line-height:1.6">Experimental Cloudflare AI test. Urdu is not officially listed as supported by MeloTTS, so pronunciation may be poor or the request may fail. This uses your Cloudflare Workers AI daily allowance.</p>
    <div class="voice-security-note"><strong>How this works</strong><span>Nexa is configured to use Urdu voices only and will not fall back to English. Pronunciation quality still depends on the Urdu voice installed in your browser/device; this browser engine cannot guarantee fully native Pakistani Urdu or directly export MP3. On supported desktop browsers, you can try recording the shared tab audio as WebM.</span></div>
   </div>
  </div>
@@ -2001,6 +2005,36 @@ async function recordAndDownloadVoice(){
   const b=$("voiceRecordBtn");if(b){b.disabled=false;b.textContent="⏺ Record & Download Audio (WebM)";}
   voiceMessage("Recording cancelled or unavailable: "+(err.message||"browser permission required"),"error");
  }
+}
+let cloudVoiceObjectUrl = null;
+async function generateCloudflareVoice(){
+ const textValue=cleanSpeechText($("voiceText").value);
+ const btn=$("cloudVoiceBtn");
+ if(!textValue){voiceMessage("Pehle apna text likhein.","error");return;}
+ if(textValue.length>1200){voiceMessage("Cloudflare AI test ke liye text 1,200 characters se kam rakhein.","error");return;}
+ if(btn){btn.disabled=true;btn.textContent="Generating AI MP3...";}
+ voiceMessage("Cloudflare AI se experimental MP3 ban rahi hai. Is mein kuch waqt lag sakta hai.","info");
+ try{
+  const response=await fetch("https://nexa-business-hub-ai.ahteshamulhaq853.workers.dev/api/voice",{
+   method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({text:textValue})
+  });
+  if(!response.ok){
+   let message="AI voice generate nahi hui.";
+   try{const data=await response.json();if(data&&data.error)message=data.error;}catch(e){}
+   throw new Error(message);
+  }
+  const blob=await response.blob();
+  if(!blob.size)throw new Error("AI ne khali audio file bheji.");
+  if(cloudVoiceObjectUrl)URL.revokeObjectURL(cloudVoiceObjectUrl);
+  cloudVoiceObjectUrl=URL.createObjectURL(blob);
+  const audio=$("cloudVoiceAudio"),link=$("cloudVoiceDownload");
+  audio.src=cloudVoiceObjectUrl;audio.hidden=false;
+  link.href=cloudVoiceObjectUrl;link.hidden=false;
+  $("voiceEmpty").style.display="none";
+  audio.load();
+  voiceMessage("AI MP3 tayyar hai. Play karein; Urdu pronunciation achi na ho to is experimental model ko remove kar sakte hain.","success");
+ }catch(err){voiceMessage(err.message||"Cloudflare AI voice available nahi hui.","error");}
+ finally{if(btn){btn.disabled=false;btn.textContent="✨ Try Cloudflare AI MP3 (Experimental)";}}
 }
 function clearVoiceText(){
  stopVoice();$("voiceText").value="";$("voiceCharCount").textContent="0";
