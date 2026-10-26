@@ -4,8 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f3f6f4">
-<title>Nexa Business Hub | Modern Green & Slate</title>
+<meta name="theme-color" content="#f5f5f0">
+<title>Nexa Studio | Creative Workspace</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 :root{--bg:#080c15;--panel:#0e1727;--panel2:#132238;--line:#294256;--cyan:#65f3dc;--text:#eff8ff;--muted:#9db2c7;--red:#ff91a2;--green:#83ffd0}
@@ -886,12 +886,167 @@ td,th{border-bottom-color:#dce5df!important}
  .hero{padding:20px!important}
 }
 
+
+/* CREATIVE STUDIO REDESIGN — new navigation geometry, dashboard composition and tool cards */
+:root{--bg:#f5f5f0;--panel:#fff;--panel2:#eceee7;--line:#e0e2d9;--cyan:#315d4b;--text:#222b27;--muted:#737c74;--green:#315d4b}
+html,body{background:#f5f5f0!important;color:#222b27!important}
+body{background-image:radial-gradient(ellipse at 85% 4%,rgba(211,224,202,.32),transparent 35%)!important}
+header{height:88px;position:sticky;top:0;z-index:20;background:rgba(250,250,246,.94)!important;border-bottom:1px solid #e5e7df!important;box-shadow:0 4px 24px rgba(34,43,39,.035);backdrop-filter:blur(18px);padding:14px 28px!important;display:flex;align-items:center;justify-content:flex-start}
+.brand{display:flex!important;align-items:center;gap:12px;text-align:left!important;width:auto!important;position:static!important;transform:none!important;color:#202b25!important;letter-spacing:0!important;font-size:20px!important}
+.brand-mark{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:#315d4b;color:#fff;font-size:22px;font-weight:900;box-shadow:0 7px 16px #315d4b24}
+.brand-word{font-size:18px;line-height:1.05;font-weight:900;letter-spacing:1.1px}
+.brand-word>span{color:#66816e;margin-left:5px}
+.brand small{display:block!important;text-align:left!important;color:#899087!important;font-size:9px!important;letter-spacing:1.8px!important;margin-top:5px!important}
+#settingsLauncher{position:fixed;z-index:30;top:21px;right:25px;width:44px;height:44px;border-radius:14px;background:#fff!important;color:#315d4b!important;border:1px solid #e0e5dc!important;box-shadow:0 3px 12px #222b270a!important}
+#settingsLauncher:hover{background:#e9eee7!important}
+#mainNav.menu-open{background:#f9faf6!important;border-right:1px solid #e0e5dc!important;box-shadow:18px 0 55px #26352e18!important}
+#mainNav.menu-open:before{color:#315d4b!important}
+#mainNav.menu-open button{background:transparent!important;color:#4c5b51!important;border:1px solid transparent!important;text-align:left!important;border-radius:12px!important;padding:13px 14px!important}
+#mainNav.menu-open button:hover,#mainNav.menu-open button.active{background:#e8eee7!important;color:#315d4b!important}
+body.has-bottom-nav main{max-width:none!important;margin:0 0 0 244px!important;padding:34px clamp(20px,3.2vw,52px) 90px!important;min-height:calc(100vh - 88px)}
+#bottomNav{position:fixed!important;z-index:15!important;top:88px!important;bottom:0!important;left:0!important;right:auto!important;width:244px!important;height:auto!important;display:flex;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;gap:6px!important;padding:27px 15px 22px!important;background:#fafaf6!important;border-right:1px solid #e4e6de!important;border-top:0!important;box-shadow:none!important}
+#bottomNav:before{content:"WORKSPACE";font-size:10px;letter-spacing:2px;font-weight:850;color:#9ba298;padding:0 12px 12px}
+#bottomNav button{display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:12px!important;width:100%!important;min-height:48px!important;padding:11px 13px!important;border-radius:12px!important;background:transparent!important;color:#69746b!important;border:1px solid transparent!important;text-align:left!important;font-size:13px!important;font-weight:650!important;box-shadow:none!important}
+#bottomNav button:hover,#bottomNav button.active{background:#e7eee6!important;color:#315d4b!important;border-color:#dce7da!important;transform:none!important}
+#bottomNav .bottom-icon{width:25px!important;height:25px!important;display:grid!important;place-items:center!important;border-radius:8px!important;background:#eef0e9!important;color:#315d4b!important;font-size:16px!important}
+body.has-bottom-nav footer{margin-left:244px!important}
+.page{max-width:1500px;margin:0 auto}
+.hero{background:#fff!important;border:1px solid #e3e5dc!important;border-radius:22px!important;box-shadow:0 8px 28px rgba(32,43,37,.035)!important}
+.eyebrow,.pill{color:#315d4b!important}
+.hero h1,.neon{color:#273d31!important;text-shadow:none!important}
+.hero p,.muted{color:#737c74!important}
+.card,.stat{background:#fff!important;border:1px solid #e3e5dc!important;border-radius:18px!important;box-shadow:0 6px 24px rgba(32,43,37,.035)!important}
+h1,h2,h3{color:#27352c!important}
+button{background:#315d4b!important;color:#fff!important;border-radius:11px!important;box-shadow:none!important;transition:background .18s,transform .18s}
+button:hover{background:#254a3a!important}
+button.secondary{background:#edf0e9!important;color:#315d4b!important;border-color:#dce3d8!important}
+button.ghost{background:transparent!important;color:#315d4b!important;border-color:#d7e0d5!important}
+button.danger{background:#fff0ef!important;color:#a43e3b!important;border-color:#f0c9c7!important}
+input,select,textarea,.option-search,.search-select-trigger{background:#fbfcf9!important;color:#26352e!important;border-color:#d9e0d7!important}
+input:focus,select:focus,textarea:focus{border-color:#72957a!important;box-shadow:0 0 0 3px #315d4b15!important}
+label{color:#46574a!important}
+th{background:#edf1e9!important;color:#315d4b!important}
+td,th{border-bottom-color:#e2e5dd!important}
+.table-wrap,.copyline{border-color:#e0e4db!important}
+.copyline{background:#f8faf6!important}
+.pill{background:#edf3eb!important;border-color:#dce7da!important}
+.message.show{background:#eef5eb!important;color:#315d4b!important;border-color:#d6e5d1!important}
+.message.error{background:#fff0ef!important;color:#a43e3b!important;border-color:#efcfcd!important}
+.message.success{background:#e9f6ed!important;color:#246746!important;border-color:#c4e4cf!important}
+.welcome-notice{background:#fff!important;color:#27352c!important;border-color:#dce7da!important;box-shadow:0 22px 75px #26352e24!important}
+.welcome-message{color:#315d4b!important;text-shadow:none!important}
+.welcome-subtitle{color:#737c74!important}
+.welcome-confirm{background:#315d4b!important;color:#fff!important}
+.search-select-menu{background:#fff!important;border-color:#dce4da!important;box-shadow:0 14px 35px #26352e18!important}
+.search-select-option{color:#33483b!important}
+.search-select-option:hover,.search-select-option:focus{background:#e8eee6!important;color:#254a3a!important}
+.search-select-option[aria-selected="true"]{color:#315d4b!important}
+.studio-dashboard{max-width:1500px}
+.studio-intro{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(270px,.9fr);gap:25px;align-items:center;overflow:hidden;min-height:315px;padding:clamp(26px,4vw,52px);border-radius:28px;background:#dfe9d9;border:1px solid #d5e1d0;margin-bottom:37px}
+.studio-intro:before{content:"";position:absolute;z-index:-1;width:470px;height:470px;border-radius:50%;background:#cadbc5;right:-110px;top:-210px}
+.studio-intro:after{content:"";position:absolute;z-index:-1;width:280px;height:280px;border-radius:50%;border:1px solid #b4c9af;right:90px;bottom:-215px}
+.studio-intro-copy{max-width:620px}
+.studio-kicker{display:inline-flex;align-items:center;gap:8px;color:#4d6d55;font-size:10px;font-weight:850;letter-spacing:2px}
+.studio-live-dot{width:7px;height:7px;border-radius:50%;background:#568e64;box-shadow:0 0 0 4px #568e6418}
+.studio-intro h1{font-size:clamp(34px,4.5vw,60px);letter-spacing:-2.4px;line-height:1.02;margin:20px 0 15px;color:#263b2c!important;max-width:600px}
+.studio-intro h1 span{color:#658568}
+.studio-intro-copy>p{font-size:14px;line-height:1.8;max-width:510px;color:#5d6f60!important}
+.studio-intro-copy>p strong{color:#2e4935}
+.studio-hero-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.studio-hero-actions button{padding:13px 17px}
+.studio-hero-actions .studio-light-button{background:#f8faf5!important;color:#315d4b!important;border:1px solid #cad8c6!important}
+.studio-art{height:240px;position:relative;display:flex;align-items:center;justify-content:center}
+.studio-orbit{position:absolute;border:1px solid #9fb99b;border-radius:50%;transform:rotate(-28deg)}
+.studio-orbit-one{width:280px;height:165px}
+.studio-orbit-two{width:230px;height:205px;transform:rotate(35deg)}
+.studio-art-tile{position:relative;width:172px;height:188px;padding:21px;display:flex;flex-direction:column;justify-content:space-between;background:#315d4b;border-radius:22px;color:#fff;box-shadow:0 22px 38px #315d4b2b;transform:rotate(-5deg)}
+.studio-art-tile>span{font-size:29px;color:#cde0bd}
+.studio-art-tile strong{font-size:26px;line-height:1.02;letter-spacing:-1px}
+.studio-art-tile small{font-size:7px;letter-spacing:1.4px;color:#d6e5d1}
+.studio-float{position:absolute;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #e1e7dc;border-radius:12px;padding:11px 13px;color:#315d4b;box-shadow:0 8px 24px #26352e12;font-size:12px;font-weight:750}
+.studio-float-top{right:0;top:15px}
+.studio-float-bottom{left:0;bottom:13px;color:#68776c;font-size:10px}
+.studio-mini-check{width:20px;height:20px;display:grid;place-items:center;border-radius:7px;background:#e7f0e3;color:#315d4b}
+.studio-section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:15px;margin:0 0 17px}
+.studio-section-heading h2{font-size:clamp(22px,2.7vw,30px);letter-spacing:-.8px;margin:8px 0 0}
+.studio-text-button{background:transparent!important;color:#315d4b!important;padding:8px 0}
+.studio-tool-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.studio-tool-card{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;min-height:222px;padding:23px!important;border:1px solid #e0e5dc!important;border-radius:20px!important;background:#fff!important;color:#27352c!important;text-align:left!important;box-shadow:0 5px 20px #26352e08!important}
+.studio-tool-card:hover{transform:translateY(-3px)!important;box-shadow:0 12px 30px #26352e12!important}
+.studio-tool-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:#e8f0e5;color:#315d4b;font-size:23px;margin-bottom:17px}
+.studio-tool-tag{font-size:9px;letter-spacing:1.8px;color:#849084;font-weight:850;margin-bottom:7px}
+.studio-tool-card>strong{font-size:21px;color:#29392e;margin-bottom:8px;position:relative;z-index:1}
+.studio-tool-card>small{font-size:12px;line-height:1.7;color:#737c74;max-width:310px;position:relative;z-index:1}
+.studio-tool-link{font-size:11px;color:#315d4b;font-weight:850;margin-top:18px;position:relative;z-index:1}
+.studio-card-decoration{position:absolute;right:15px;top:30px;font-size:70px;line-height:1;font-weight:900;color:#e9efe5;letter-spacing:-5px;pointer-events:none}
+.studio-tool-voice .studio-tool-icon{background:#e8ecef;color:#4f6979}
+.studio-tool-writing .studio-tool-icon{background:#f1e8dc;color:#8c6744}
+.studio-tool-services .studio-tool-icon{background:#e9e6f1;color:#75628c}
+.studio-bottom-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:15px;margin-top:17px}
+.studio-note-panel,.studio-access-panel{display:flex;align-items:center;gap:15px;padding:22px;border-radius:18px;background:#fff;border:1px solid #e2e5dd}
+.studio-note-mark{display:grid;place-items:center;flex:0 0 42px;height:42px;border-radius:14px;background:#e8f0e5;color:#315d4b;font-size:22px}
+.studio-note-panel>div{flex:1}
+.studio-note-panel strong,.studio-access-panel h3{font-size:14px;color:#2c3b30}
+.studio-note-panel p,.studio-access-panel p{font-size:11px;line-height:1.7;color:#778078;margin:5px 0 0}
+.studio-note-panel>button{white-space:nowrap;font-size:11px;padding:10px 12px}
+.studio-access-panel{display:block;background:#eef2e9}
+.studio-access-panel h3{font-size:18px;margin:10px 0 0}
+.studio-access-panel>button{margin-top:15px}
+footer{color:#899187!important;border-color:#e0e5dc!important}
+#supportLauncher{background:#315d4b!important;color:#fff!important;box-shadow:0 8px 24px #315d4b25!important}
+#supportPanel{background:#fff!important;border-color:#e0e5dc!important;box-shadow:0 18px 60px #26352e20!important}
+#supportPanel .support-head{background:#315d4b!important}
+#supportPanel .support-bubble.bot{background:#edf3eb!important;color:#314438!important}
+#voiceGeneratorPage .voice-hero,#voiceGeneratorPage .voice-card{background:#fff!important;border-color:#e0e5dc!important;color:#26352e!important;box-shadow:0 6px 24px #26352e08!important}
+#voiceGeneratorPage .voice-hero h1,#voiceGeneratorPage .voice-card h2{color:#27352c!important;text-shadow:none!important}
+#voiceGeneratorPage .voice-card p,#voiceGeneratorPage .voice-card .muted{color:#737c74!important}
+#voiceGeneratorPage .voice-wave{border-color:#315d4b!important;color:#315d4b!important;box-shadow:none!important}
+#voiceGeneratorPage .voice-security-note{background:#f7f9f5!important;border-color:#e0e5dc!important;color:#737c74!important}
+#voiceGeneratorPage .voice-security-note strong{color:#315d4b!important}
+#voiceGeneratorPage .voice-download{background:#315d4b!important;color:#fff!important}
+@media(max-width:850px){
+ body.has-bottom-nav main{margin:0!important;padding:22px 15px 105px!important}
+ #bottomNav{top:auto!important;left:0!important;right:0!important;bottom:0!important;width:100%!important;height:76px!important;flex-direction:row!important;align-items:center!important;justify-content:space-around!important;gap:2px!important;padding:7px 4px calc(7px + env(safe-area-inset-bottom))!important;border-right:0!important;border-top:1px solid #e0e5dc!important;background:rgba(250,250,246,.97)!important;backdrop-filter:blur(15px)}
+ #bottomNav:before{display:none!important}
+ #bottomNav button{flex:1 1 0!important;width:auto!important;min-height:52px!important;flex-direction:column!important;justify-content:center!important;gap:3px!important;padding:5px 2px!important;font-size:10px!important}
+ #bottomNav .bottom-icon{width:23px!important;height:23px!important;font-size:14px!important}
+ body.has-bottom-nav footer{margin-left:0!important}
+ .studio-intro{grid-template-columns:minmax(0,1fr);padding:25px!important;gap:8px}
+ .studio-art{height:200px}
+ .studio-intro h1{font-size:clamp(36px,8vw,54px)}
+ .studio-bottom-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:520px){
+ header{height:74px;padding:10px 13px!important}
+ .brand-mark{width:37px;height:37px;border-radius:12px}
+ .brand-word{font-size:15px}
+ .brand small{font-size:8px!important}
+ #settingsLauncher{top:15px;right:12px;width:40px;height:40px}
+ body.has-bottom-nav main{padding:17px 11px 95px!important}
+ .studio-intro{border-radius:21px;padding:22px!important}
+ .studio-art{height:180px}
+ .studio-art-tile{width:145px;height:160px}
+ .studio-float-top{right:-5px;top:8px}
+ .studio-float-bottom{left:-4px;bottom:0}
+ .studio-tool-grid{grid-template-columns:minmax(0,1fr)}
+ .studio-tool-card{min-height:205px;padding:20px!important}
+ .studio-section-heading{align-items:flex-start}
+ .studio-section-heading h2{font-size:22px}
+ .studio-note-panel{align-items:flex-start;flex-wrap:wrap}
+ .studio-note-panel>div{min-width:calc(100% - 65px)}
+ .studio-note-panel>button{margin-left:57px}
+}
+@media(min-width:851px){
+ body.has-bottom-nav main{padding-top:32px!important}
+ .studio-tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
 </style>
 </head>
 <body>
 <button id="settingsLauncher" type="button" aria-label="Open menu" title="Menu" aria-expanded="false" onclick="toggleMainMenu()">☰</button>
 <header>
- <div class="brand">⚡ NEXA CV STUDIO<small>DARK TECH RESUME BUILDER</small></div>
+ <div class="brand"><span class="brand-mark">N</span><span class="brand-word">NEXA<span>STUDIO</span><small>CREATE SOMETHING GREAT</small></span></div>
  <nav id="mainNav" style="display:none">
   <button class="ghost" onclick="showPage('dashboardPage')">Dashboard</button>
   <button class="ghost" onclick="showPage('cvSectionPage')">CV</button>
@@ -940,17 +1095,32 @@ td,th{border-bottom-color:#dce5df!important}
   </div>
  </div>
 </section>
-<section id="dashboardPage" class="page">
+<section id="dashboardPage" class="page studio-dashboard">
  <div id="welcomeNotice" class="welcome-notice" role="dialog" aria-modal="true" aria-live="polite"><div id="welcomeMessage" class="welcome-message">YOU ARE WELCOME TO THE NEXA WORLD</div><p class="welcome-subtitle">Your journey to a smarter, more professional future starts here. Create your CV, explore your potential, and let your next opportunity begin with NEXA.</p><button type="button" class="welcome-confirm" onclick="dismissWelcome()">OK, CONTINUE</button></div>
- <div class="hero">
-  <span class="eyebrow">YOUR WORKSPACE</span>
-  <h1>WELCOME BACK,<br><span class="neon" id="dashboardName">CV Creator.</span></h1>
-  <p>Manage your resume, save your details and check PDF access.</p>
-  <div class="actions"><button onclick="showPage('builderPage')">Open CV Builder →</button><button class="secondary" onclick="showPage('paymentPage')">Payment & Access</button></div>
+ <div class="studio-intro">
+  <div class="studio-intro-copy">
+   <span class="studio-kicker"><span class="studio-live-dot"></span> YOUR CREATIVE WORKSPACE</span>
+   <h1>Ideas into <span>impressive work.</span></h1>
+   <p>Welcome back, <strong id="dashboardName">Creator</strong>. Create documents, build your CV and explore your digital tools from one place.</p>
+   <div class="studio-hero-actions"><button onclick="showPage('builderPage')">✦ Start creating a CV</button><button class="studio-light-button" onclick="showPage('servicesPage')">Explore all tools ↗</button></div>
+  </div>
+  <div class="studio-art" aria-hidden="true">
+   <div class="studio-orbit studio-orbit-one"></div><div class="studio-orbit studio-orbit-two"></div>
+   <div class="studio-art-tile studio-art-main"><span>✳</span><strong>MAKE IT<br>MATTER.</strong><small>DESIGN · CREATE · GROW</small></div>
+   <div class="studio-float studio-float-top">✦ <span>Creative tools</span></div>
+   <div class="studio-float studio-float-bottom"><span class="studio-mini-check">✓</span><span>Ready for your next idea</span></div>
+  </div>
  </div>
- <div class="grid two" style="margin-top:16px">
-  <div class="card"><h3 class="neon">▤ CV Section</h3><p class="muted">Create and edit your normal professional CV here.</p><button onclick="showPage('cvSectionPage')">Open CV Section →</button></div>
-  <div class="card"><h3 class="neon">⚙ Services Section</h3><p class="muted">A dedicated place for services. We will add services one by one later.</p><button class="secondary" onclick="showPage('servicesPage')">Open Services →</button></div>
+ <div class="studio-section-heading"><div><span class="studio-kicker">YOUR TOOLKIT</span><h2>What would you like to create?</h2></div><button class="studio-text-button" onclick="showPage('servicesPage')">View all tools <span>↗</span></button></div>
+ <div class="studio-tool-grid">
+  <button class="studio-tool-card studio-tool-feature" onclick="showPage('builderPage')"><span class="studio-tool-icon">▤</span><span class="studio-tool-tag">DOCUMENTS</span><strong>CV Builder</strong><small>Build a polished, professional resume with your own details.</small><span class="studio-tool-link">Open CV Studio ↗</span><span class="studio-card-decoration">CV</span></button>
+  <button class="studio-tool-card studio-tool-voice" onclick="showPage('voiceGeneratorPage')"><span class="studio-tool-icon">♫</span><span class="studio-tool-tag">AUDIO STUDIO</span><strong>Urdu Voice</strong><small>Turn your Urdu script into speech using available device voices.</small><span class="studio-tool-link">Open Voice Studio ↗</span><span class="studio-card-decoration">آواز</span></button>
+  <button class="studio-tool-card studio-tool-writing" onclick="showPage('writingAssistantPage')"><span class="studio-tool-icon">✎</span><span class="studio-tool-tag">WRITING DESK</span><strong>Writing Assistant</strong><small>Prepare Urdu and English application drafts and save your text.</small><span class="studio-tool-link">Start writing ↗</span><span class="studio-card-decoration">Aa</span></button>
+  <button class="studio-tool-card studio-tool-services" onclick="showPage('servicesPage')"><span class="studio-tool-icon">✳</span><span class="studio-tool-tag">DIGITAL SERVICES</span><strong>Explore Services</strong><small>Open certificates, document tools and more workspace features.</small><span class="studio-tool-link">Browse services ↗</span><span class="studio-card-decoration">✦</span></button>
+ </div>
+ <div class="studio-bottom-grid">
+  <div class="studio-note-panel"><span class="studio-note-mark">✦</span><div><strong>Your ideas, one workspace.</strong><p>Use the tools above to get started, then return here whenever you need something new.</p></div><button onclick="showPage('cvSectionPage')">Explore CV options →</button></div>
+  <div class="studio-access-panel"><span class="studio-kicker">ACCOUNT & ACCESS</span><h3>Keep everything in order.</h3><p>Review your PDF access and payment requests in one place.</p><button onclick="showPage('paymentPage')">Payment & access ↗</button></div>
  </div>
 </section>
 <section id="cvSectionPage" class="page">
