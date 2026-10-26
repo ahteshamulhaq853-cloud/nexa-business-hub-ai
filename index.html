@@ -1961,12 +1961,27 @@ async function loadNexaJobs(){
  const importedCards=feedJobs.map(j=>{
   const raw=String(j.description||"");
   const combined=[j.title,j.company,raw].join(" ");
-  const experience=(combined.match(/Experience\s*:\s*([^.;|]{2,90})/i)||[])[1]||"Asal job advertisement mein check karein";
-  const skills=(combined.match(/Skills?\s*(?:needed|required)?\s*:\s*([^.;|]{2,180})/i)||[])[1]||"Official advertisement mein check karein";
-  const availability=(combined.match(/(?:Available\s+Till|Apply\s+Before|Last\s+Date|Deadline|Closing\s+Date|Expires?\s+On)\s*:?\s*([^.;|]{2,70})/i)||[])[1]||"Official source par date confirm karein";
-  const post=j.title||"Post source par check karein";
-  const company=j.company||j.source||"Organization source par check karein";
-  return '<article class="card"><span class="studio-kicker">'+escapeJobHTML(j.category||"PAKISTAN JOB")+'</span><h3>Post: '+escapeJobHTML(post)+'</h3><p><strong>Company/Organization:</strong> '+escapeJobHTML(company)+'</p><p><strong>Location:</strong> '+escapeJobHTML(j.location||"Pakistan — exact location source par check karein")+'</p><p><strong>Experience needed:</strong> '+escapeJobHTML(experience)+'</p><p><strong>Skills needed:</strong> '+escapeJobHTML(skills)+'</p><p><strong>Availability:</strong> '+escapeJobHTML(availability)+'</p><p><strong>Job type:</strong> '+escapeJobHTML(j.employment_type||"Official source par check karein")+'</p><p class="muted">Source: '+escapeJobHTML(j.source||"Job portal")+'</p><button type="button" data-job-url="'+escapeJobHTML(j.url||j.source_url||"https://www.njp.gov.pk/index.php/jobs/live")+'" onclick="window.open(this.dataset.jobUrl,\'_blank\',\'noopener,noreferrer\')">Full details &amp; apply ↗</button></article>';
+  const post=j.title||"Not specified";
+  let company=j.company||j.source||"Not specified";
+  const isOgra=/chairman.*ogra|ogra.*chairman|oil and gas regulatory authority/i.test([post,company,raw].join(" "));
+  let experience=(combined.match(/Experience\s*:\s*([^.;|]{2,90})/i)||[])[1]||"Not specified in listing";
+  let skills=(combined.match(/Skills?\s*(?:needed|required)?\s*:\s*([^.;|]{2,180})/i)||[])[1]||"Not specified in listing";
+  let availability=(combined.match(/(?:Available\s+Till|Apply\s+Before|Last\s+Date|Deadline|Closing\s+Date|Expires?\s+On)\s*:?\s*([^.;|]{2,70})/i)||[])[1]||"See deadline on source";
+  let location=j.location||"Pakistan";
+  let jobType=j.employment_type||"Not specified in listing";
+  let officialUrl=j.url||j.source_url||"https://www.njp.gov.pk/index.php/jobs/live";
+  let sourceName=j.source||"Job portal";
+  if(isOgra){
+   experience="Minimum 20 years of relevant experience, including at least 3 years as head of a public and/or private sector organization";
+   skills="Leadership, team building, analytical and interpersonal skills; policy and strategy formulation; sector-regulation experience is desirable";
+   availability="30 October 2026";
+   location="Pakistan";
+   jobType="Contract; SPPS-I; initial term of 4 years";
+   company="Cabinet Division — Government of Pakistan / OGRA";
+   officialUrl="https://cabinet.gov.pk/SiteImage/Misc/files/Jobs/Chairman-OGRA-VP.pdf";
+   sourceName="Official Cabinet Division advertisement";
+  }
+  return '<article class="card"><span class="studio-kicker">'+escapeJobHTML(j.category||"PAKISTAN JOB")+'</span><h3>Post: '+escapeJobHTML(post)+'</h3><p><strong>Company/Organization:</strong> '+escapeJobHTML(company)+'</p><p><strong>Location:</strong> '+escapeJobHTML(location)+'</p><p><strong>Experience needed:</strong> '+escapeJobHTML(experience)+'</p><p><strong>Skills needed:</strong> '+escapeJobHTML(skills)+'</p><p><strong>Availability:</strong> '+escapeJobHTML(availability)+'</p><p><strong>Job type:</strong> '+escapeJobHTML(jobType)+'</p><p class="muted">Source: '+escapeJobHTML(sourceName)+'</p><button type="button" data-job-url="'+escapeJobHTML(officialUrl)+'" onclick="window.open(this.dataset.jobUrl,\'_blank\',\'noopener,noreferrer\')">View official advertisement &amp; apply ↗</button></article>';
  }).join("");
  const portals=[
   {type:"government",title:"Government Jobs — National Jobs Portal",description:"Verified federal government vacancies aur original application details.",url:"https://www.njp.gov.pk/index.php/jobs/live",label:"Browse Government Jobs"},
