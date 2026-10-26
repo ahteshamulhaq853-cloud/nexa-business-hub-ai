@@ -1961,12 +1961,12 @@ async function loadNexaJobs(){
  const importedCards=feedJobs.map(j=>{
   const raw=String(j.description||"");
   const combined=[j.title,j.company,raw].join(" ");
-  const experience=(combined.match(/Experience\\s*:\\s*([^.;|]{2,90})/i)||[])[1]||"Asal job advertisement mein check karein";
-  const skills=(combined.match(/Skills?\\s*(?:needed|required)?\\s*:\\s*([^.;|]{2,180})/i)||[])[1]||"Official advertisement mein check karein";
-  const availability=(combined.match(/(?:Available\\s+Till|Apply\\s+Before|Last\\s+Date|Deadline|Closing\\s+Date|Expires?\\s+On)\\s*:?\\s*([^.;|]{2,70})/i)||[])[1]||"Official source par date confirm karein";
+  const experience=(combined.match(/Experience\s*:\s*([^.;|]{2,90})/i)||[])[1]||"Asal job advertisement mein check karein";
+  const skills=(combined.match(/Skills?\s*(?:needed|required)?\s*:\s*([^.;|]{2,180})/i)||[])[1]||"Official advertisement mein check karein";
+  const availability=(combined.match(/(?:Available\s+Till|Apply\s+Before|Last\s+Date|Deadline|Closing\s+Date|Expires?\s+On)\s*:?\s*([^.;|]{2,70})/i)||[])[1]||"Official source par date confirm karein";
   const post=j.title||"Post source par check karein";
   const company=j.company||j.source||"Organization source par check karein";
-  return '<article class="card"><span class="studio-kicker">'+escapeJobHTML(j.category||"PAKISTAN JOB")+'</span><h3>Post: '+escapeJobHTML(post)+'</h3><p><strong>Company/Organization:</strong> '+escapeJobHTML(company)+'</p><p><strong>Location:</strong> '+escapeJobHTML(j.location||"Pakistan — exact location source par check karein")+'</p><p><strong>Experience needed:</strong> '+escapeJobHTML(experience)+'</p><p><strong>Skills needed:</strong> '+escapeJobHTML(skills)+'</p><p><strong>Availability:</strong> '+escapeJobHTML(availability)+'</p><p><strong>Job type:</strong> '+escapeJobHTML(j.employment_type||"Official source par check karein")+'</p><p class="muted">Source: '+escapeJobHTML(j.source||"Job portal")+'</p><button type="button" data-job-url="'+escapeJobHTML(j.url||j.source_url||"https://www.njp.gov.pk/index.php/jobs/live")+'" onclick="window.open(this.dataset.jobUrl,\\'_blank\\',\\'noopener,noreferrer\\')">Full details &amp; apply ↗</button></article>';
+  return '<article class="card"><span class="studio-kicker">'+escapeJobHTML(j.category||"PAKISTAN JOB")+'</span><h3>Post: '+escapeJobHTML(post)+'</h3><p><strong>Company/Organization:</strong> '+escapeJobHTML(company)+'</p><p><strong>Location:</strong> '+escapeJobHTML(j.location||"Pakistan — exact location source par check karein")+'</p><p><strong>Experience needed:</strong> '+escapeJobHTML(experience)+'</p><p><strong>Skills needed:</strong> '+escapeJobHTML(skills)+'</p><p><strong>Availability:</strong> '+escapeJobHTML(availability)+'</p><p><strong>Job type:</strong> '+escapeJobHTML(j.employment_type||"Official source par check karein")+'</p><p class="muted">Source: '+escapeJobHTML(j.source||"Job portal")+'</p><button type="button" data-job-url="'+escapeJobHTML(j.url||j.source_url||"https://www.njp.gov.pk/index.php/jobs/live")+'" onclick="window.open(this.dataset.jobUrl,\'_blank\',\'noopener,noreferrer\')">Full details &amp; apply ↗</button></article>';
  }).join("");
  const portals=[
   {type:"government",title:"Government Jobs — National Jobs Portal",description:"Verified federal government vacancies aur original application details.",url:"https://www.njp.gov.pk/index.php/jobs/live",label:"Browse Government Jobs"},
@@ -2343,8 +2343,8 @@ function addSkillRecord(){
  if(!skill){alert("Please choose a skill or type your own skill.");return}
  const entry="• "+skill+(level?" ("+level+")":"");
  const field=$("cvSkills");
- const normalized=entry.replace(/^•\\s*/,"").trim().toLowerCase();
- const existing=field.value.split("\\n").map(x=>x.replace(/^•\\s*/,"").trim().toLowerCase());
+ const normalized=entry.replace(/^•\s*/,"").trim().toLowerCase();
+ const existing=field.value.split("\\n").map(x=>x.replace(/^•\s*/,"").trim().toLowerCase());
  if(existing.includes(normalized)){alert("This skill is already added.");return}
  field.value+=(field.value.trim()?"\\n":"")+entry;
  preview();
@@ -2419,7 +2419,7 @@ function preview(){
  const escapeHTML=s=>String(s).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
  $("pEducation").innerHTML=v("cvEducation")?v("cvEducation").split("\\n").map(line=>{const parts=line.split(" — ").filter(Boolean);const degree=parts.shift()||"";const meta=parts.filter(part=>/^(Year:|Marks:|Marks Obtained:|Total Marks:|Board \/ University \/ Organization:|Result:)/i.test(part));const details=parts.filter(part=>!meta.includes(part));return "<div class=\"education-entry\"><strong>"+escapeHTML(degree)+"</strong>"+(details.length?"<div class=\"education-details\">"+details.map(escapeHTML).join(" · ")+"</div>":"")+(meta.length?"<div class=\"education-meta\">"+meta.map(part=>escapeHTML(part.replace("Board / University / Organization:","Board:"))).join(" · ")+"</div>":"")+"</div>"}).join(""):"Add education details.";
  $("pExperience").textContent=v("cvExperience")||"Add work experience.";
- $("pSkills").innerHTML=v("cvSkills")?v("cvSkills").split("\\n").filter(Boolean).map(skill=>"<div>"+escapeHTML(skill.replace(/^•\\s*/,""))+"</div>").join(""):"Add your skills";
+ $("pSkills").innerHTML=v("cvSkills")?v("cvSkills").split("\\n").filter(Boolean).map(skill=>"<div>"+escapeHTML(skill.replace(/^•\s*/,""))+"</div>").join(""):"Add your skills";
  $("pLanguages").textContent=v("cvLanguages")||"Add your languages";$("pReferences").textContent=v("cvReferences");
 }
 $("cvPhoto").addEventListener("change",e=>{
