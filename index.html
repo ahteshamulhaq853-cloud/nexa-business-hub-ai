@@ -1933,32 +1933,42 @@ function escapeJobHTML(value){return String(value==null?"":value).replace(/[&<>"
 function jobDate(value){if(!value)return "Not specified";const d=new Date(value);return isNaN(d.getTime())?escapeJobHTML(value):d.toLocaleDateString();}
 async function loadNexaJobs(){
  const status=$("jobsStatus"),list=$("nexaJobsList");
- if(status)status.textContent="Pakistan ki government aur private vacancies load ho rahi hain…";
+ if(status)status.textContent="Pakistan ki Government aur Private jobs update ho rahi hain…";
  if(list)list.innerHTML="";
  const keyword=(($("jobsKeyword")||{}).value||"").trim().toLowerCase();
  const location=(($("jobsLocation")||{}).value||"").trim().toLowerCase();
  const category=(($("jobsType")||{}).value||"").trim().toLowerCase();
  const query=(($("jobsSearchText")||{}).value||"").trim().toLowerCase();
- let internalJobs=[],warnings=[];
+ let internalJobs=[],feedJobs=[],warnings=[];
  try{
   const {data,error}=await db.from("job_listings").select("id,title,company,location,category,employment_type,description,requirements,application_deadline,created_at").eq("is_active",true).order("created_at",{ascending:false}).limit(100);
   if(error)throw error;
-  internalJobs=(data||[]).filter(j=>{
-   const hay=[j.title,j.company,j.location,j.category,j.employment_type,j.description,j.requirements].join(" ").toLowerCase();
-   return (!keyword||hay.includes(keyword))&&(!location||String(j.location||"").toLowerCase().includes(location))&&(!category||String(j.category||"").toLowerCase().includes(category))&&(!query||hay.includes(query));
+  internalJobs=(data||[]).filter(j=>{const h=[j.title,j.company,j.location,j.category,j.employment_type,j.description,j.requirements].join(" ").toLowerCase();return (!keyword||h.includes(keyword))&&(!location||String(j.location||"").toLowerCase().includes(location))&&(!category||String(j.category||"").toLowerCase().includes(category))&&(!query||h.includes(query));});
+ }catch(error){console.error("NEXA jobs database error:",error);warnings.push("NEXA ki manually added vacancies load nahi ho sakin.");}
+ try{
+  const response=await fetch("data/jobs.json?updated="+Date.now(),{cache:"no-store"});if(!response.ok)throw new Error("Jobs feed not available");
+  const feed=await response.json();
+  feedJobs=(Array.isArray(feed.jobs)?feed.jobs:[]).filter(j=>{
+   const h=[j.title,j.company,j.location,j.category,j.employment_type,j.description,j.source].join(" ").toLowerCase();
+   const jc=String(j.category||"").toLowerCase();
+   const mc=!category||jc.includes(category)||(category==="government"&&jc.includes("government"))||(category==="private"&&jc.includes("private"));
+   return (!keyword||h.includes(keyword))&&(!location||h.includes(location))&&mc&&(!query||h.includes(query));
   });
- }catch(error){console.error("NEXA jobs database error:",error);warnings.push("NEXA par manually added vacancies load nahi ho sakin.");}
+  if(feed.updated_at)window.nexaJobsFeedUpdated=feed.updated_at;
+ }catch(error){console.warn("Automatic jobs feed unavailable:",error);warnings.push("Automatic feed filhaal available nahi; official portal links neeche hain.");}
  nexaJobsCache=internalJobs;
  const internalCards=internalJobs.map(j=>'<article class="card"><span class="studio-kicker">'+escapeJobHTML(j.category||"Career Opportunity")+'</span><h3>'+escapeJobHTML(j.title)+'</h3><p><strong>'+escapeJobHTML(j.company||"Employer not specified")+'</strong></p><p class="muted">'+escapeJobHTML(j.location||"Location not specified")+(j.employment_type?" · "+escapeJobHTML(j.employment_type):"")+'</p><p>'+escapeJobHTML(j.description||"Job details ke liye employer se rabta karein.")+'</p>'+(j.requirements?'<p><strong>Requirements:</strong> '+escapeJobHTML(j.requirements)+'</p>':"")+'<p class="muted">Apply before: '+jobDate(j.application_deadline)+'</p><button type="button" data-job-id="'+escapeJobHTML(j.id)+'" onclick="openNexaJobApplication(this.dataset.jobId)">Apply on NEXA</button></article>').join("");
- const portalCards=[
-  {type:"government",title:"Government Jobs — National Jobs Portal",description:"Federal aur government departments ki verified vacancies dekhein.",url:"https://njp.gov.pk/jobs/",label:"Browse Government Jobs"},
-  {type:"government",title:"Government & Private — National Employment Exchange",description:"Pakistan ke national employment platform par government aur private openings explore karein.",url:"https://jobs.gov.pk/",label:"Explore Jobs"},
-  {type:"private",title:"Private Jobs — Rozee.pk",description:"Pakistan bhar ki private companies, offices aur business jobs search karein.",url:"https://www.rozee.pk/",label:"Browse Private Jobs"},
+ const importedCards=feedJobs.map(j=>'<article class="card"><span class="studio-kicker">'+escapeJobHTML(j.category||"PAKISTAN JOB")+'</span><h3>'+escapeJobHTML(j.title)+'</h3><p><strong>'+escapeJobHTML(j.company||j.source||"Employer details on source")+'</strong></p><p class="muted">'+escapeJobHTML(j.location||"Pakistan · Check source for location")+'</p><p>'+escapeJobHTML(j.description||"Original source par job details aur eligibility check karein.")+'</p><p class="muted">Source: '+escapeJobHTML(j.source||"Job portal")+'</p><button type="button" data-job-url="'+escapeJobHTML(j.url||j.source_url||"https://www.njp.gov.pk/index.php/jobs/live")+'" onclick="window.open(this.dataset.jobUrl,\'_blank\',\'noopener,noreferrer\')">View job &amp; apply on source ↗</button></article>').join("");
+ const portals=[
+  {type:"government",title:"Government Jobs — National Jobs Portal",description:"Verified federal government vacancies aur original application details.",url:"https://www.njp.gov.pk/index.php/jobs/live",label:"Browse Government Jobs"},
+  {type:"mixed",title:"Government & Private — National Employment Exchange",description:"Pakistan ke national employment platform par listed opportunities.",url:"https://jobs.gov.pk/?pageid=602",label:"Explore Jobs"},
+  {type:"private",title:"Private Jobs — Rozee.pk",description:"Pakistan bhar ki private companies aur business jobs search karein.",url:"https://www.rozee.pk/",label:"Browse Private Jobs"},
   {type:"private",title:"Private Jobs — Mustakbil",description:"Private-sector jobs aur career opportunities Pakistan mein dekhein.",url:"https://www.mustakbil.com/",label:"Find Private Jobs"}
- ].filter(p=>(!category||p.type===category||category==="teaching"&&p.type==="private"||category==="computer / data entry"&&p.type==="private"||category==="office / clerk"&&p.type==="private"||category==="internship"&&p.type==="private")&&(!location||location!=="abroad")&&(!query||(p.title+" "+p.description+" "+p.type).toLowerCase().includes(query)));
- const portalHTML=portalCards.map(p=>'<article class="card"><span class="studio-kicker">'+(p.type==="government"?"GOVERNMENT JOBS":"PRIVATE JOBS")+'</span><h3>'+escapeJobHTML(p.title)+'</h3><p>'+escapeJobHTML(p.description)+'</p><button type="button" data-portal-url="'+escapeJobHTML(p.url)+'" onclick="window.open(this.dataset.portalUrl,\'_blank\',\'noopener,noreferrer\')">'+escapeJobHTML(p.label)+'</button></article>').join("");
- list.innerHTML=internalCards+portalHTML;
- if(status)status.textContent=internalJobs.length+" NEXA vacancy/vacancies · "+portalCards.length+" government/private job portals. "+(warnings.length?warnings.join(" "):"External portals par latest vacancies aur applications unki original websites par milengi.");
+ ].filter(p=>(!category||p.type===category||(p.type==="mixed"&&(category==="government"||category==="private"))||(category==="teaching"&&p.type==="private")||(category==="computer / data entry"&&p.type==="private")||(category==="office / clerk"&&p.type==="private")||(category==="internship"&&p.type==="private"))&&(!query||(p.title+" "+p.description+" "+p.type).toLowerCase().includes(query)));
+ const portalHTML=portals.map(p=>'<article class="card"><span class="studio-kicker">'+(p.type==="government"?"GOVERNMENT JOBS":p.type==="private"?"PRIVATE JOBS":"GOVERNMENT & PRIVATE")+'</span><h3>'+escapeJobHTML(p.title)+'</h3><p>'+escapeJobHTML(p.description)+'</p><button type="button" data-portal-url="'+escapeJobHTML(p.url)+'" onclick="window.open(this.dataset.portalUrl,\'_blank\',\'noopener,noreferrer\')">'+escapeJobHTML(p.label)+'</button></article>').join("");
+ list.innerHTML=internalCards+importedCards+portalHTML;
+ const stamp=window.nexaJobsFeedUpdated?" Feed last refreshed: "+new Date(window.nexaJobsFeedUpdated).toLocaleString()+".":"";
+ if(status)status.textContent=internalJobs.length+" NEXA vacancies · "+feedJobs.length+" automatically imported listings · "+portals.length+" job portal links. "+(warnings.length?warnings.join(" "):"Applications original job source par hongi.")+stamp;
 }
 function openNexaJobApplication(id){
  const job=nexaJobsCache.find(j=>String(j.id)===String(id));if(!job)return;
