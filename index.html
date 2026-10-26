@@ -1041,6 +1041,72 @@ footer{color:#899187!important;border-color:#e0e5dc!important}
  .studio-tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 
+
+/* NEXA STUDIO — Aurora editorial redesign v2 */
+:root{--bg:#f6f7fb;--panel:#ffffff;--panel2:#f0efff;--line:#e4e5ef;--cyan:#6558f5;--text:#17172d;--muted:#72748c;--red:#c73555;--green:#087e67}
+html{background:var(--bg)}
+body{background:#f6f7fb;color:#17172d;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;letter-spacing:-.01em}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 88% 3%,#e4dfff 0,transparent 33%),radial-gradient(ellipse at 5% 45%,#e8f3ff 0,transparent 28%)}
+header{background:#ffffffd9!important;border-bottom:1px solid #e5e5ef!important;box-shadow:0 8px 30px #28234b08!important;backdrop-filter:blur(18px)}
+.brand-mark{background:linear-gradient(145deg,#6558f5,#9c63ef)!important;color:white!important;border-radius:14px!important;box-shadow:0 8px 18px #6558f533}
+.brand-word{color:#1c1b35!important}.brand-word>span{color:#6558f5!important}.brand-word small{color:#8b8ca2!important}
+button{background:linear-gradient(135deg,#6558f5,#8b5cf6);color:#fff;border-radius:12px;border:0;box-shadow:0 7px 16px #6558f522;transition:transform .18s,box-shadow .18s}
+button:hover{transform:translateY(-1px);box-shadow:0 10px 22px #6558f533}
+button.ghost,.secondary,.auth-link{background:#f0efff!important;color:#5045cb!important;border:1px solid #e1defe!important;box-shadow:none!important}
+.card,.hero,.panel,.studio-tool-card,.service-row,.cv-option-card{background:#fff!important;color:#20203a!important;border:1px solid #e7e7f1!important;border-radius:22px!important;box-shadow:0 14px 40px #25234b0b!important}
+h1,h2,h3,.neon{color:#1d1c37!important}
+.neon{background:linear-gradient(110deg,#6558f5,#c05bd8);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+p,.muted,small{color:#777990}
+input,select,textarea,.search-select-trigger,.option-search{background:#fbfbff!important;color:#24243d!important;border:1px solid #dedfec!important;border-radius:12px!important}
+input:focus,select:focus,textarea:focus{outline:3px solid #6558f51c!important;border-color:#8c80fa!important}
+.eyebrow{color:#6558f5!important;letter-spacing:2px;font-weight:800}
+#settingsLauncher{background:#fff!important;color:#6558f5!important;border:1px solid #e5e3f5!important;box-shadow:0 8px 24px #25234b12!important}
+#bottomNav{background:#ffffffed!important;border:1px solid #e7e6f1!important;box-shadow:0 10px 34px #29234b13!important}
+#bottomNav button{background:transparent!important;color:#777990!important;box-shadow:none!important}
+#bottomNav button.active{background:#f0efff!important;color:#5b4fe8!important}
+#supportLauncher{background:linear-gradient(135deg,#6558f5,#8b5cf6)!important;color:white!important;border:0!important;box-shadow:0 12px 28px #6558f544!important}
+.studio-dashboard .hero{background:linear-gradient(120deg,#fff 0%,#f4f1ff 70%,#f0f8ff 100%)!important}
+.studio-dashboard .studio-hero-visual,.studio-dashboard .hero-visual{border-radius:26px}
+.studio-tool-card{transition:transform .2s,box-shadow .2s}
+.studio-tool-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px #6558f51a!important}
+.service-row{margin:8px 0;padding:18px!important}
+.message{border-radius:12px}
+#accountPage{display:grid;grid-template-columns:minmax(260px,.85fr) minmax(320px,1.15fr);gap:26px;align-items:stretch;max-width:1160px;padding:24px 0}
+#accountPage>.hero{grid-column:1;grid-row:1;display:flex;flex-direction:column;justify-content:center;min-height:100%;padding:clamp(28px,4vw,48px)!important;background:linear-gradient(150deg,#201b4a 0%,#5144bc 54%,#a16ae9 100%)!important;border:0!important;border-radius:28px!important;box-shadow:0 24px 55px #4739a42c!important;position:relative;overflow:hidden}
+#accountPage>.hero:after{content:"N";position:absolute;right:-18px;bottom:-100px;font-size:clamp(240px,30vw,390px);font-weight:950;line-height:1;color:#ffffff0d;pointer-events:none}
+#accountPage>.hero .eyebrow,#accountPage>.hero h1,#accountPage>.hero h2,#accountPage>.hero p{color:#fff!important;position:relative;z-index:1}
+#accountPage>.hero .neon{color:#e9d9ff!important;background:none!important}
+#accountPage>.hero .pill{color:#f2eaff!important;border:1px solid #ffffff3a!important;background:#ffffff12!important;border-radius:12px!important;position:relative;z-index:1}
+#accountPage>.grid{grid-column:2;grid-row:1;display:flex;align-items:center;justify-content:center;min-width:0}
+#accountPage>.grid>.card{width:100%;padding:clamp(24px,3vw,38px)!important;border:1px solid #e7e5f5!important;border-radius:26px!important;background:#ffffff!important;box-shadow:0 22px 60px #29234b12!important}
+#accountPage>.grid>.card:first-child,#accountPage>.grid>.card:last-child{border-top:1px solid #e7e5f5!important}
+#accountPage .eyebrow{color:#6558f5!important}
+#accountPage h2{color:#201e3c!important}
+#accountPage label{color:#45445e!important}
+#accountPage input,#accountPage select,#accountPage textarea{background:#fbfbff!important;color:#24243d!important;border:1px solid #dedfec!important;border-radius:12px!important;min-height:48px}
+#accountPage .auth-switch{color:#777990!important}
+#accountPage .auth-link{padding:5px 9px!important}
+#accountPage button[type=submit]{min-height:49px}
+#accountPage .muted{color:#777990!important}
+@media(max-width:850px){
+ #accountPage{display:flex;flex-direction:column;gap:16px;padding:14px 0 30px}
+ #accountPage>.hero{min-height:0;padding:25px!important;border-radius:22px!important}
+ #accountPage>.hero:after{font-size:200px;bottom:-62px}
+ #accountPage>.grid{width:100%}
+ #accountPage>.grid>.card{padding:23px!important;border-radius:22px!important}
+}
+@media(min-width:851px){
+ body.has-bottom-nav main{padding:24px 28px 40px 108px!important}
+ #bottomNav{display:flex!important;left:18px;top:50%;bottom:auto;right:auto;transform:translateY(-50%);width:72px;flex-direction:column;gap:8px;padding:12px 7px!important;border-radius:22px!important}
+ #bottomNav button{width:100%;min-height:58px;border-radius:13px!important}
+ #bottomNav button span:last-child{font-size:9px}
+}
+@media(max-width:850px){
+ #bottomNav{display:flex!important;left:10px;right:10px;bottom:8px;border-radius:18px!important;padding:8px 5px calc(8px + env(safe-area-inset-bottom))!important}
+ body.has-bottom-nav main{padding-bottom:110px!important}
+ #supportLauncher{right:16px!important;bottom:calc(94px + env(safe-area-inset-bottom))!important}
+}
+
 </style>
 </head>
 <body>
