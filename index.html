@@ -156,6 +156,21 @@ footer{text-align:center;color:#738ca1;padding:22px;font-size:11px}
 .service-copy small{font-size:12px;line-height:1.45;color:var(--muted);font-weight:normal}
 .service-arrow{font-size:28px;line-height:1;color:var(--cyan);font-weight:400}
 
+
+/* Premium navy-and-gold experience certificate */
+.experience-certificate-wrap{max-width:1000px;margin:24px auto 30px;padding:12px;background:linear-gradient(135deg,#b9954e,#f1dfad,#8b6a2b);box-shadow:0 18px 55px #0006}
+.experience-certificate{position:relative;isolation:isolate;overflow:hidden;min-height:680px;padding:34px 55px 25px;background:radial-gradient(ellipse at 50% 35%,#fff 0%,#fffdf7 58%,#f7f0df 100%);color:#17253c;border:2px solid #b38b3b;text-align:center;font-family:Georgia,'Times New Roman',serif}
+.experience-certificate:before{content:"";position:absolute;inset:9px;border:1px solid #c6a65e;pointer-events:none;z-index:-1}
+.experience-certificate:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #c6a65e20;border-radius:50%;top:180px;left:50%;transform:translateX(-50%);box-shadow:0 0 0 18px #c6a65e0c,0 0 0 36px #c6a65e0a;pointer-events:none;z-index:-1}
+.ec-corner{position:absolute;width:45px;height:45px;border-color:#b38b3b;border-style:solid;z-index:1}.ec-corner-tl{top:17px;left:17px;border-width:2px 0 0 2px}.ec-corner-tr{top:17px;right:17px;border-width:2px 2px 0 0}.ec-corner-bl{bottom:17px;left:17px;border-width:0 0 2px 2px}.ec-corner-br{bottom:17px;right:17px;border-width:0 2px 2px 0}
+.ec-topline{display:flex;justify-content:center;align-items:center;gap:14px;color:#9c792f;font:700 9px Arial,sans-serif;letter-spacing:3px}.ec-topline span{font-size:15px;color:#b38b3b}
+.ec-seal{display:flex;align-items:center;justify-content:center;width:54px;height:54px;margin:20px auto 10px;border:1px solid #b38b3b;border-radius:50%;outline:1px solid #b38b3b;outline-offset:4px;background:#15243c;color:#e8d19a;font-size:25px;font-weight:bold}
+.ec-org{font-size:clamp(20px,3vw,30px);font-weight:bold;letter-spacing:2px;text-transform:uppercase;overflow-wrap:anywhere}.ec-tagline{margin-top:6px;color:#9a7935;font:700 8px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;overflow-wrap:anywhere}.ec-rule{display:flex;align-items:center;gap:12px;max-width:220px;margin:18px auto;color:#b38b3b}.ec-rule:before,.ec-rule:after{content:"";height:1px;flex:1;background:#c7ab6a}
+.ec-kicker{margin-top:16px;color:#9b7934;font:700 11px Arial,sans-serif;letter-spacing:5px}.experience-certificate h1{margin:6px 0 18px;color:#15243c;font-size:clamp(27px,4.5vw,43px);letter-spacing:3px;font-weight:500}.experience-certificate h1 em{color:#a37d30;font-style:normal}.ec-presented{font:700 9px Arial,sans-serif;letter-spacing:2px;color:#657185}.ec-name{margin:10px auto 0;color:#14243d;font-size:clamp(24px,4vw,36px);font-style:italic;font-weight:bold;overflow-wrap:anywhere}.ec-name-rule{width:58%;max-width:340px;height:1px;margin:12px auto 20px;background:linear-gradient(90deg,transparent,#b38b3b,transparent)}
+.ec-body{max-width:680px;margin:0 auto;color:#39465a;font-size:14px;line-height:1.9}.ec-body strong{color:#182942}.ec-duties{max-width:640px;margin:12px auto;color:#596578;font-size:12px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere}.ec-appreciation{max-width:580px;margin:14px auto 26px;color:#8a6a2c;font-size:12px;font-style:italic;line-height:1.6}
+.ec-footer{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:end;margin:22px auto 24px;max-width:650px;text-align:center}.ec-footer>div{display:flex;flex-direction:column;align-items:center;gap:4px}.ec-sign-line{width:90%;max-width:200px;border-top:1px solid #9e844d;margin-bottom:5px}.ec-footer strong{font-size:12px;color:#1b2b43;overflow-wrap:anywhere}.ec-footer span,.ec-footer small{font:9px Arial,sans-serif;color:#778092;overflow-wrap:anywhere}.ec-issued>span{letter-spacing:1.5px;color:#9b7934}.ec-bottomline{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;border-top:1px solid #d8c79e;padding-top:10px;color:#9b7934;font:700 7px Arial,sans-serif;letter-spacing:2px}
+@media(max-width:620px){.experience-certificate-wrap{padding:5px;margin:14px auto}.experience-certificate{padding:27px 22px 22px;min-height:0}.ec-topline{font-size:7px;letter-spacing:1.5px;gap:7px}.ec-footer{gap:18px}.ec-body{font-size:12px}.ec-appreciation{margin-bottom:20px}.ec-corner{width:30px;height:30px}}
+
 /* Mobile-style bottom navigation */
 #bottomNav{display:none;position:fixed;left:0;right:0;bottom:0;z-index:1050;justify-content:space-around;align-items:center;gap:2px;padding:9px 5px calc(9px + env(safe-area-inset-bottom));background:rgba(13,15,20,.97);border-top:1px solid #252b35;box-shadow:0 -8px 24px #0007;backdrop-filter:blur(12px)}
 #bottomNav button{display:flex;flex:1;min-width:0;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:6px 2px;margin:0;border:0;border-radius:9px;background:transparent;color:#9aa5b1;font-size:11px;font-weight:700;line-height:1.15;white-space:nowrap}
@@ -194,6 +209,18 @@ body.has-bottom-nav main{padding-bottom:100px}
 .europass-paper{background:#fff;color:#24364b;border:1px solid #d5dfeb;width:100%;min-height:690px;padding:24px 28px;font-family:Arial,sans-serif;overflow-wrap:anywhere}
 .europass-band{border-bottom:3px solid #155eef;padding-bottom:12px}.eu-kicker{font-size:10px;letter-spacing:2px;color:#155eef;font-weight:bold}.europass-band h1{font-size:25px;color:#123b7a;margin:7px 0}.eu-contact{padding:12px 0;border-bottom:1px solid #d8e2ef;font-size:10px;white-space:pre-wrap}.eu-section{margin-top:16px}.eu-section h2{font-size:11px;color:#155eef;border-bottom:1px solid #b9cdea;padding-bottom:5px}.eu-section p{font-size:10px;line-height:1.5;white-space:pre-wrap}.eu-foot{text-align:center;font-size:7px;color:#8493a7;margin-top:20px}
 @media print{body.print-europass header,body.print-europass footer,body.print-europass .no-print{display:none!important}body.print-europass .page{display:none!important}body.print-europass #europassPage.active{display:block!important}body.print-europass #europassPage .cv-layout{display:block!important}body.print-europass #europassForm{display:none!important}body.print-europass .preview-head{display:none!important}body.print-europass #europassPaper{width:200mm!important;border:0!important;padding:5mm 7mm!important}body.print-europass .eu-section{margin-top:4mm!important}}
+@media print{
+ body.print-experience-certificate header,body.print-experience-certificate footer,body.print-experience-certificate .no-print,body.print-experience-certificate #bottomNav,body.print-experience-certificate #supportLauncher,body.print-experience-certificate #supportPanel{display:none!important}
+ body.print-experience-certificate .page{display:none!important}
+ body.print-experience-certificate #experienceCertificatePage.active{display:block!important}
+ body.print-experience-certificate #experienceCertificatePage .experience-certificate-wrap{margin:0!important;padding:0!important;background:white!important;box-shadow:none!important;max-width:none!important}
+ body.print-experience-certificate #experienceCertificatePaper{width:200mm!important;min-height:287mm!important;padding:13mm 13mm 9mm!important;border:2px solid #b38b3b!important;box-shadow:none!important;break-inside:avoid;page-break-inside:avoid}
+ body.print-experience-certificate #experienceCertificatePaper:before{inset:3mm!important}
+ body.print-experience-certificate .ec-seal{margin-top:8mm!important}
+ body.print-experience-certificate .ec-footer{margin-top:9mm!important}
+ body.print-experience-certificate .ec-appreciation{margin-bottom:9mm!important}
+}
+
 @page{size:A4;margin:5mm}
 @media print{
  html,body{background:white!important;margin:0!important;padding:0!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -778,13 +805,61 @@ button:not(:disabled):hover{box-shadow:0 5px 18px #65f3dc18}
 <section id="servicesPage" class="page">
  
  <div class="service-list">
-  <button class="service-row" onclick="alert('Experience Certificate selected. The certificate form and design will be added next.')">
+  <button class="service-row" onclick="showPage('experienceCertificatePage')">
    <span class="service-number">01</span>
    <span class="service-copy"><strong>Experience Certificate</strong><small>Create a professional work experience certificate</small></span>
    <span class="service-arrow" aria-hidden="true">›</span>
   </button>
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
+
+</section>
+<section id="experienceCertificatePage" class="page">
+ <div class="card no-print cert-editor">
+  <span class="eyebrow">PREMIUM DOCUMENT STUDIO</span>
+  <h2 class="neon">Experience Certificate</h2>
+  <p class="muted">Fill in the details below. Your elegant certificate updates instantly. Use only accurate, authorised employment details.</p>
+  <div class="grid">
+   <div class="field"><label for="ecOrg">Company / Organisation Name</label><input id="ecOrg" placeholder="e.g. Company Name"></div>
+   <div class="field"><label for="ecSubtitle">Organisation tagline (optional)</label><input id="ecSubtitle" placeholder="e.g. Excellence • Trust • Professionalism"></div>
+   <div class="field"><label for="ecName">Employee Full Name *</label><input id="ecName" placeholder="Enter employee's full name"></div>
+   <div class="field"><label for="ecRole">Job Title / Position *</label><input id="ecRole" placeholder="e.g. Office Assistant"></div>
+   <div class="field"><label for="ecStart">Employment Start Date</label><input id="ecStart" placeholder="e.g. 01 July 2024"></div>
+   <div class="field"><label for="ecEnd">Employment End Date</label><input id="ecEnd" placeholder="e.g. Present / 30 September 2026"></div>
+   <div class="field"><label for="ecType">Employment Type</label><select id="ecType"><option value="Full-time">Full-time</option><option value="Part-time">Part-time</option><option value="Contract">Contract</option><option value="Internship">Internship</option><option value="Apprenticeship">Apprenticeship</option></select></div>
+   <div class="field"><label for="ecIssue">Date of Issue</label><input id="ecIssue" placeholder="e.g. 26 October 2026"></div>
+   <div class="field"><label for="ecRef">Certificate / Reference No. (optional)</label><input id="ecRef" placeholder="e.g. EXP-2026-001"></div>
+   <div class="field"><label for="ecSign">Authorised Signatory Name</label><input id="ecSign" placeholder="Name of authorised person"></div>
+   <div class="field"><label for="ecSignRole">Signatory Designation</label><input id="ecSignRole" placeholder="e.g. HR Manager / Director"></div>
+   <div class="field"><label for="ecLocation">Organisation Location (optional)</label><input id="ecLocation" placeholder="City, Country"></div>
+  </div>
+  <div class="field"><label for="ecDuties">Experience Description / Key Responsibilities</label><textarea id="ecDuties" placeholder="Briefly describe responsibilities, performance or professional conduct."></textarea></div>
+  <div class="actions"><button onclick="updateExperienceCertificate()">Update Preview</button><button onclick="printExperienceCertificate()">Print / Save as PDF</button><button class="secondary" onclick="showPage('servicesPage')">← Back to Services</button></div>
+  <p class="small-note">Tip: In the print window choose “Save as PDF” for a high-quality A4 document. This certificate is a template and should be issued or signed only by an authorised organisation representative.</p>
+ </div>
+ <div class="experience-certificate-wrap">
+  <article id="experienceCertificatePaper" class="experience-certificate">
+   <div class="ec-corner ec-corner-tl"></div><div class="ec-corner ec-corner-tr"></div><div class="ec-corner ec-corner-bl"></div><div class="ec-corner ec-corner-br"></div>
+   <div class="ec-topline"><span>✦</span><span id="ecPRef">CERTIFICATE OF EXPERIENCE</span><span>✦</span></div>
+   <div class="ec-seal">N</div>
+   <div class="ec-org" id="ecPOrg">YOUR ORGANISATION</div>
+   <div class="ec-tagline" id="ecPSubtitle">EXCELLENCE • TRUST • PROFESSIONALISM</div>
+   <div class="ec-rule"><span>◆</span></div>
+   <div class="ec-kicker">CERTIFICATE</div>
+   <h1>OF <em>EXPERIENCE</em></h1>
+   <p class="ec-presented">THIS CERTIFICATE IS PROUDLY PRESENTED TO</p>
+   <div class="ec-name" id="ecPName">EMPLOYEE FULL NAME</div>
+   <div class="ec-name-rule"></div>
+   <p class="ec-body">This is to certify that <strong id="ecPBodyName">Employee Full Name</strong> was associated with <strong id="ecPBodyOrg">Your Organisation</strong> as <strong id="ecPBodyRole">Job Title</strong> from <strong id="ecPStart">Start Date</strong> to <strong id="ecPEnd">Present</strong>, on a <strong id="ecPType">Full-time</strong> basis.</p>
+   <p class="ec-duties" id="ecPDuties">During this period, the employee carried out assigned responsibilities with professionalism and dedication.</p>
+   <div class="ec-appreciation">We appreciate their contribution and wish them every success in their future endeavours.</div>
+   <div class="ec-footer">
+    <div><div class="ec-sign-line"></div><strong id="ecPSign">Authorised Signatory</strong><span id="ecPSignRole">Designation</span></div>
+    <div class="ec-issued"><span>DATE OF ISSUE</span><strong id="ecPIssue">26 October 2026</strong><small id="ecPLocation"></small></div>
+   </div>
+   <div class="ec-bottomline"><span>PROFESSIONAL RECORD</span><span>•</span><span id="ecPBottomOrg">YOUR ORGANISATION</span></div>
+  </article>
+ </div>
 </section>
 <section id="builderPage" class="page">
  <div class="hero no-print">
@@ -1096,6 +1171,22 @@ function showPage(id){
  if(id==="paymentPage")loadMyOrders();
  if(id==="adminPage")loadAdminOrders();
 }
+
+function updateExperienceCertificate(){
+ const val=id=>(($(id)&&$(id).value)||"").trim();
+ const put=(id,value,fallback)=>{const el=$(id);if(el)el.textContent=value||fallback};
+ const org=val("ecOrg")||"YOUR ORGANISATION",name=val("ecName")||"EMPLOYEE FULL NAME",role=val("ecRole")||"Job Title",start=val("ecStart")||"Start Date",end=val("ecEnd")||"Present",subtitle=val("ecSubtitle")||"EXCELLENCE • TRUST • PROFESSIONALISM";
+ put("ecPOrg",org);put("ecPBottomOrg",org.toUpperCase());put("ecPSubtitle",subtitle);put("ecPName",name);put("ecPBodyName",name);put("ecPBodyOrg",org);put("ecPBodyRole",role);put("ecPStart",start);put("ecPEnd",end);put("ecPType",val("ecType")||"Full-time");put("ecPIssue",val("ecIssue")||new Date().toLocaleDateString(undefined,{day:"2-digit",month:"long",year:"numeric"}));put("ecPRef",val("ecRef")||"CERTIFICATE OF EXPERIENCE");put("ecPSign",val("ecSign")||"Authorised Signatory");put("ecPSignRole",val("ecSignRole")||"Designation");put("ecPLocation",val("ecLocation"));put("ecPDuties",val("ecDuties")||"During this period, the employee carried out assigned responsibilities with professionalism and dedication.");
+}
+function printExperienceCertificate(){
+ updateExperienceCertificate();
+ if(!String($("ecName").value||"").trim()||!String($("ecOrg").value||"").trim()||!String($("ecRole").value||"").trim()){alert("Please enter the organisation name, employee name and job title first.");return}
+ document.body.classList.add("print-experience-certificate");
+ window.addEventListener("afterprint",()=>document.body.classList.remove("print-experience-certificate"),{once:true});
+ window.print();
+}
+["ecOrg","ecSubtitle","ecName","ecRole","ecStart","ecEnd","ecType","ecIssue","ecRef","ecSign","ecSignRole","ecLocation","ecDuties"].forEach(id=>{const el=$(id);if(el){el.addEventListener("input",updateExperienceCertificate);el.addEventListener("change",updateExperienceCertificate)}});
+
 function openPasswordOption(which){
  showPage("settingsPage");
  const target=$(which==="forgot"?"forgotPasswordForm":"changePasswordForm");
