@@ -1970,6 +1970,7 @@ header .brand-word small{
    <div class="field"><label for="jobsSearchText">Search by company or keyword</label><input id="jobsSearchText" type="search" placeholder="Company, skill, keyword..."></div>
   </div>
   <button type="button" onclick="loadNexaJobs()">🔎 Search Jobs on NEXA</button>
+  <button type="button" class="secondary" onclick="searchJobsOnGoogle()">🌐 Search Jobs on Google</button>
   <p id="jobsStatus" class="muted" role="status">Website ke andar available vacancies load ho rahi hain…</p>
  </div>
  <div id="nexaJobsList" class="grid two" style="margin-top:18px"></div>
@@ -2043,6 +2044,16 @@ function bottomNavigate(id,button){
 let nexaJobsCache=[];
 function escapeJobHTML(value){return String(value==null?"":value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));}
 function jobDate(value){if(!value)return "Not specified";const d=new Date(value);return isNaN(d.getTime())?escapeJobHTML(value):d.toLocaleDateString();}
+function searchJobsOnGoogle(){
+ const keyword=(($("jobsKeyword")||{}).value||"").trim();
+ const location=(($("jobsLocation")||{}).value||"").trim();
+ const category=(($("jobsType")||{}).value||"").trim();
+ const extra=(($("jobsSearchText")||{}).value||"").trim();
+ const terms=[keyword,category,extra,"jobs",location||"Pakistan"].filter(Boolean).join(" ");
+ const url="https://www.google.com/search?ibp=htl;jobs&q="+encodeURIComponent(terms);
+ window.open(url,"_blank","noopener,noreferrer");
+}
+ 
 async function loadNexaJobs(){
  const status=$("jobsStatus"),list=$("nexaJobsList");
  if(status)status.textContent="Official job details verify ho rahi hain…";
