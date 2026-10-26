@@ -212,9 +212,9 @@ body.has-bottom-nav main{padding-bottom:100px}
 @media print{
  body.print-experience-certificate header,body.print-experience-certificate footer,body.print-experience-certificate .no-print,body.print-experience-certificate #bottomNav,body.print-experience-certificate #supportLauncher,body.print-experience-certificate #supportPanel{display:none!important}
  body.print-experience-certificate .page{display:none!important}
- body.print-experience-certificate #experienceCertificatePage.active{display:block!important}
- body.print-experience-certificate #experienceCertificatePage .experience-certificate-wrap{margin:0!important;padding:0!important;background:white!important;box-shadow:none!important;max-width:none!important}
- body.print-experience-certificate #experienceCertificatePaper{width:287mm!important;height:200mm!important;min-height:200mm!important;padding:10mm 16mm 7mm!important;border:2px solid #b38b3b!important;box-shadow:none!important;break-inside:avoid;page-break-inside:avoid}
+ body.print-experience-certificate #experienceCertificatePage.active{display:block!important;page:experienceCertificatePage!important}
+ body.print-experience-certificate #experienceCertificatePage{width:287mm!important;max-width:none!important;margin:0!important;padding:0!important;overflow:visible!important}body.print-experience-certificate #experienceCertificatePage .experience-certificate-wrap{display:block!important;width:287mm!important;height:200mm!important;min-height:0!important;margin:0!important;padding:0!important;background:white!important;box-shadow:none!important;max-width:none!important;overflow:hidden!important}
+ body.print-experience-certificate #experienceCertificatePaper{page:experienceCertificatePage!important;display:block!important;box-sizing:border-box!important;width:287mm!important;height:200mm!important;min-height:0!important;max-height:200mm!important;margin:0!important;padding:6mm 14mm!important;border:2px solid #b38b3b!important;box-shadow:none!important;overflow:hidden!important;break-before:avoid!important;break-after:avoid!important;break-inside:avoid!important;page-break-before:avoid!important;page-break-after:avoid!important;page-break-inside:avoid!important}
  body.print-experience-certificate .ec-seal{width:42px!important;height:42px!important;margin:4mm auto 5px!important;font-size:20px!important}
  body.print-experience-certificate .ec-topline{font-size:8px!important}
  body.print-experience-certificate .ec-kicker{margin-top:7px!important}
@@ -227,13 +227,13 @@ body.has-bottom-nav main{padding-bottom:100px}
  body.print-experience-certificate .ec-footer{margin:9px auto 12px!important;max-width:580px!important}
  body.print-experience-certificate .ec-corner{width:35px!important;height:35px!important}
  body.print-experience-certificate #experienceCertificatePaper:before{inset:3mm!important}
- body.print-experience-certificate .ec-seal{margin-top:8mm!important}
- body.print-experience-certificate .ec-footer{margin-top:9mm!important}
- body.print-experience-certificate .ec-appreciation{margin-bottom:9mm!important}
+ body.print-experience-certificate .ec-seal{margin-top:4mm!important}
+ body.print-experience-certificate .ec-footer{margin-top:4mm!important}
+ body.print-experience-certificate .ec-appreciation{margin-bottom:4mm!important}
 }
 
-@media print{body.print-experience-certificate{@page{size:A4 landscape;margin:5mm}}}
-@page{size:A4;margin:5mm}
+@page experienceCertificatePage{size:A4 landscape;margin:5mm}
+@page{size:A4 portrait;margin:5mm}
 @media print{
  html,body{background:white!important;margin:0!important;padding:0!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
  header,footer,.no-print,#editor,.preview-head{display:none!important}
