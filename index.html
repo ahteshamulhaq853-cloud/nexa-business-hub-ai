@@ -1359,6 +1359,37 @@ input:focus,select:focus,textarea:focus{outline:3px solid #36baff20!important;bo
   }
 }
 
+/* Site-wide compact spacing: reduce excessive gaps while preserving CV/certificate print layouts */
+body:not(.print-mode){line-height:1.4}
+main{margin:16px auto}
+.page:not(.cv-page) p{line-height:1.4;margin-block:6px}
+.page:not(.cv-page) h1,.page:not(.cv-page) h2,.page:not(.cv-page) h3{line-height:1.25}
+.page:not(.cv-page) h1{margin-block:10px}
+.page:not(.cv-page) h2{margin-block:9px}
+.page:not(.cv-page) h3{margin-block:7px}
+.hero{padding:20px;margin-bottom:12px;border-radius:15px}
+.hero h1{margin:7px 0}
+.grid{gap:10px}
+.card{padding:14px;margin-bottom:10px;border-radius:12px}
+.field{margin-bottom:8px}
+label{margin-bottom:4px}
+input,select,textarea{padding:10px}
+textarea{min-height:72px}
+.stat{padding:13px}
+.cv-layout{gap:12px}
+.table-wrap{margin-block:8px}
+th,td{padding:8px}
+.message{padding:9px;margin:8px 0}
+.actions{gap:4px}
+@media(max-width:640px){
+ main{margin:10px auto;padding:0 10px}
+ .hero{padding:15px;margin-bottom:10px}
+ .grid,.grid.three{grid-template-columns:minmax(0,1fr);gap:9px}
+ .card{padding:12px;margin-bottom:8px}
+ .field{margin-bottom:7px}
+ input,select,textarea{padding:9px}
+}
+
 </style>
 </head>
 <body>
