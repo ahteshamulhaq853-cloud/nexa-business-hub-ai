@@ -638,6 +638,71 @@ button:not(:disabled):hover{box-shadow:0 5px 18px #65f3dc18}
     height:min(500px,calc(100vh - 170px))!important;
   }
 }
+
+/* Site-wide flat layout: remove boxed card UI while preserving CV paper/template previews */
+.card,.stat,.hero{
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
+.card{
+  padding:18px 0!important;
+  margin:0 0 14px!important;
+  border-bottom:1px solid #294256!important;
+}
+.hero{
+  padding:18px 0 22px!important;
+  margin-bottom:18px!important;
+  border-bottom:1px solid #294256!important;
+}
+.stat{
+  padding:14px 10px!important;
+  border-bottom:1px solid #294256!important;
+}
+.grid,.grid.three{
+  gap:18px 24px!important;
+}
+#authFormsGrid>.card{
+  padding:18px 0!important;
+}
+.template-grid{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:0!important;
+}
+.template-option{
+  display:flex!important;
+  align-items:center!important;
+  gap:14px!important;
+  padding:13px 4px!important;
+  border:0!important;
+  border-bottom:1px solid #294256!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.template-option.active{
+  border:0!important;
+  border-bottom:1px solid var(--cyan)!important;
+  box-shadow:inset 3px 0 var(--cyan)!important;
+  padding-left:12px!important;
+}
+.template-swatch{
+  flex:0 0 86px!important;
+  width:86px!important;
+  height:58px!important;
+  margin:0!important;
+}
+.template-option small{margin-top:3px!important}
+.eu-template-card{padding-top:14px!important}
+@media(max-width:760px){
+  .grid,.grid.three{grid-template-columns:minmax(0,1fr)!important}
+  .cv-layout{grid-template-columns:minmax(0,1fr)!important}
+  .card{padding:15px 0!important}
+  .hero{padding:15px 0 18px!important}
+}
+
 </style>
 </head>
 <body>
