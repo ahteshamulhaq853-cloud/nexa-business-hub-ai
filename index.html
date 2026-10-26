@@ -769,14 +769,14 @@ button:not(:disabled):hover{box-shadow:0 5px 18px #65f3dc18}
  </div>
 </section>
 <section id="cvSectionPage" class="page">
- <div class="hero"><span class="eyebrow">CV WORKSPACE</span><h1>Your <span class="neon">CV Section.</span></h1><p>Create and edit your normal professional CV here.</p></div>
+ 
  <div class="grid two">
   <div class="card"><span class="eyebrow">OPTION 01</span><h2 class="neon">Normal CV</h2><p class="muted">Create and edit your professional CV using the existing CV templates and tools.</p><button onclick="showPage('builderPage')">Open Normal CV →</button></div>
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
 </section>
 <section id="servicesPage" class="page">
- <div class="hero"><span class="eyebrow">SERVICES WORKSPACE</span><h1>Our <span class="neon">Services.</span></h1><p>Select a service from the list below. More services will be added here one by one.</p></div>
+ 
  <div class="service-list">
   <button class="service-row" onclick="alert('Experience Certificate selected. The certificate form and design will be added next.')">
    <span class="service-number">01</span>
@@ -960,7 +960,7 @@ button:not(:disabled):hover{box-shadow:0 5px 18px #65f3dc18}
  </div>
 </section>
 <section id="europassPage" class="page">
-<div class="hero no-print"><span class="eyebrow">EUROPASS WORKSPACE</span><h1>Europass <span class="neon">CV Builder.</span></h1><p>A separate CV builder with its own form and preview. Optional fields can be left blank.</p></div>
+
 <div class="actions no-print"><button class="secondary" onclick="showPage('builderPage')">Normal CV Builder</button><button onclick="openEuropassPayment()">Europass Payment · Rs. 200</button></div>
 <div class="card no-print eu-template-card"><h2>International CV Templates</h2><p class="small-note">25 European-inspired and international designs, including the Europass-inspired layout. Choose a style for your CV preview.</p><div class="field"><label for="euTemplate">Choose template</label><select id="euTemplate" onchange="applyEuropassTemplate(this.value)"><option value="eu-blue">European Blue Classic</option><option value="eu-navy">Navy Executive</option><option value="eu-minimal">Minimal ATS</option><option value="eu-green">Emerald Professional</option><option value="eu-burgundy">Burgundy Elegant</option><option value="eu-slate">Modern Slate</option><option value="eu-teal">Nordic Teal</option><option value="eu-gold">European Gold</option><option value="eu-purple">Creative International</option><option value="eu-corporate">Corporate Global</option><option value="eu-medical">Healthcare Professional</option><option value="eu-academic">Academic Research</option><option value="eu-tech">Technology Specialist</option><option value="eu-compact">Compact ATS Resume</option><option value="eu-classic">Classic International</option><option value="eu-rose">Rose Modern</option><option value="eu-forest">Forest Green</option><option value="eu-orange">Warm Orange</option><option value="eu-ice">Ice Blue</option><option value="eu-black">Black & White</option><option value="eu-red">Professional Red</option><option value="eu-sand">Soft Sand</option><option value="eu-indigo">Indigo Professional</option><option value="eu-cyan">Clean Cyan</option><option value="eu-lilac">Lilac Creative</option><option value="eu-mint">Mint Fresh</option><option value="eu-copper">Copper Executive</option><option value="eu-sky">Sky Blue Modern</option><option value="eu-plum">Plum Professional</option><option value="eu-olive">Olive Classic</option><option value="eu-cherry">Cherry Accent</option><option value="eu-stone">Stone Minimal</option><option value="eu-aqua">Aqua Clean</option><option value="eu-midnight">Midnight Executive</option></select></div><p class="small-note">European-inspired layout — not an official EU-issued Europass document.</p></div>
 <div class="cv-layout"><form id="europassForm" class="card no-print" onsubmit="return false">
