@@ -825,6 +825,7 @@ input::placeholder,textarea::placeholder{
   <button class="ghost" onclick="showPage('cvSectionPage')">CV</button>
   <button class="ghost" onclick="showPage('servicesPage')">Services</button>
   <button class="ghost" onclick="showPage('voiceGeneratorPage')">AI Voice</button>
+  <button class="ghost" onclick="showPage('writingAssistantPage')">Writing Assistant</button>
   <button class="ghost" id="adminButton" style="display:none" onclick="showPage('adminPage')">Admin</button>
   <button class="ghost" onclick="showPage('paymentPage')">Our Payment</button>
   <button class="ghost" onclick="openPasswordOption('change')">Change Password</button>
@@ -893,6 +894,11 @@ input::placeholder,textarea::placeholder{
   <button class="service-row" onclick="showPage('voiceGeneratorPage')">
    <span class="service-number">01</span>
    <span class="service-copy"><strong>AI Voice Generator</strong><small>Convert text into natural-sounding speech and download MP3 audio</small></span>
+   <span class="service-arrow" aria-hidden="true">›</span>
+  </button>
+  <button class="service-row" onclick="showPage('writingAssistantPage')">
+   <span class="service-number">02</span>
+   <span class="service-copy"><strong>Urdu &amp; English Writing Assistant</strong><small>Create application and official-letter drafts, copy text or save it as TXT</small></span>
    <span class="service-arrow" aria-hidden="true">›</span>
   </button>
   <button class="service-row" onclick="showPage('experienceCertificatePage')">
@@ -1209,6 +1215,38 @@ input::placeholder,textarea::placeholder{
 <section id="adminPage" class="page">
  <div class="hero"><span class="eyebrow">RESTRICTED AREA / 03</span><h1>Admin <span class="neon">Control Panel.</span></h1><p>Only authorised admins can review payment requests.</p></div>
  <div class="card"><div id="adminMsg" class="message"></div><div class="preview-head"><h2>Payment Requests</h2><button onclick="loadAdminOrders()">Refresh Orders</button></div><div id="adminOrders" class="table-wrap">Loading...</div></div>
+</section>
+
+<section id="writingAssistantPage" class="page">
+ <div class="hero">
+  <span class="eyebrow">NEXA WRITING STUDIO</span>
+  <h1>Writing <span class="neon">Assistant.</span></h1>
+  <p>Urdu aur English mein applications aur official-letter drafts tayyar karein.</p>
+  <span class="pill">FREE TEMPLATES · COPY · TXT DOWNLOAD</span>
+ </div>
+ <div class="grid two" style="align-items:start">
+  <div class="card">
+   <h2 class="neon">Create a document</h2>
+   <p class="muted">Details bharein aur apna draft banayein. Ye version templates use karta hai; AI translation ya AI grammar correction abhi connected nahi.</p>
+   <div class="field"><label for="waLanguage">Document language</label><select id="waLanguage"><option value="ur">Urdu</option><option value="en">English</option></select></div>
+   <div class="field"><label for="waType">Document type</label><select id="waType"><option value="leave">Leave application</option><option value="job">Job application</option><option value="admission">Admission application</option><option value="general">General request / darkhwast</option></select></div>
+   <div class="field"><label for="waRecipient">To / Mukhatib (optional)</label><input id="waRecipient" maxlength="120" placeholder="Principal / Manager / جناب پرنسپل صاحب"></div>
+   <div class="field"><label for="waName">Your name (optional)</label><input id="waName" maxlength="120" placeholder="Apna naam"></div>
+   <div class="field"><label for="waReason">Reason / Subject</label><input id="waReason" maxlength="200" placeholder="e.g. three days leave / تین دن کی چھٹی" required></div>
+   <div class="field"><label for="waDetails">Extra details (optional)</label><textarea id="waDetails" maxlength="1200" placeholder="Dates, class, post, department ya mazeed tafseel..." style="min-height:110px"></textarea></div>
+   <div class="actions"><button type="button" onclick="nexaGenerateWriting()">Generate Draft</button><button class="secondary" type="button" onclick="nexaClearWriting()">Clear</button></div>
+   <div id="waMessage" class="message" role="status" aria-live="polite"></div>
+  </div>
+  <div class="card">
+   <h2 class="neon">Your draft</h2>
+   <p class="muted">Generate karne ke baad yahan text aayega. Send karne se pehle names, dates aur facts check kar lein.</p>
+   <div class="field"><label for="waOutput">Editable result</label><textarea id="waOutput" maxlength="5000" placeholder="Your generated draft will appear here..." style="min-height:360px"></textarea></div>
+   <div class="actions"><button type="button" onclick="nexaCopyWriting()">Copy Text</button><button class="secondary" type="button" onclick="nexaDownloadWriting()">Download TXT</button></div>
+   <div class="field" style="margin-top:16px"><label for="waBasicText">Basic text cleanup (non-AI)</label><textarea id="waBasicText" maxlength="5000" placeholder="Paste text to remove extra spaces and blank lines..." style="min-height:90px"></textarea><button class="secondary" type="button" style="margin-top:8px" onclick="nexaCleanWriting()">Clean spacing</button></div>
+   <p class="muted" style="font-size:12px">Privacy: is tool mein likha text browser mein hi process hota hai; is feature ke liye server par send nahi hota.</p>
+  </div>
+ </div>
+ <div class="actions"><button class="secondary" onclick="showPage('servicesPage')">← Back to Services</button><button class="secondary" onclick="showPage('dashboardPage')">Dashboard</button></div>
 </section>
 
 <section id="voiceGeneratorPage" class="page">
@@ -2044,5 +2082,6 @@ async function init(){
 }
 init();
 </script>
+<script src="writing-assistant.js"></script>
 </body>
 </html>
