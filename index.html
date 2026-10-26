@@ -1224,10 +1224,10 @@ input::placeholder,textarea::placeholder{
    <p class="muted">Type or paste your script. Voice options depend on the voices available on your device.</p>
    <form id="voiceForm">
     <input id="freeLanguage" type="hidden" value="ur-PK">
-    <div class="field"><label for="freeVoice">Urdu voice (Pakistan)</label><select id="freeVoice"><option value="">Detecting Urdu voices…</option></select><small class="muted">Only Urdu voices are listed. If no Urdu voice is installed, speech will stop instead of using an English voice.</small></div>
+    <div class="field"><label for="freeVoice">Urdu voice (Pakistan) / Character</label><select id="freeVoice"><option value="">Detecting Urdu voices…</option></select><small class="muted">Select an installed Urdu voice or a character style. Styles adjust pitch/speed on an installed Urdu voice; they do not create a new voice.</small></div>
     <div class="field"><label for="voiceRate">Speaking speed</label><input id="voiceRate" type="range" min="0.6" max="1.4" step="0.1" value="1"><small class="muted">Move left for slower speech, right for faster speech.</small></div>
     <div class="field"><label for="voicePitch">Voice pitch</label><input id="voicePitch" type="range" min="0.7" max="1.4" step="0.1" value="1"><small class="muted">Changes pitch only; it does not clone or create a new person's voice.</small></div>
-    <div class="field"><label for="voiceMood">Voice character / style</label><select id="voiceMood"><option value="neutral">Neutral / Normal</option><option value="child">Child-like / High pitch</option><option value="elder">Elder / Deep & slow</option><option value="energetic">Energetic / Gaming intro</option><option value="dramatic">Dramatic / Storytelling</option><option value="calm">Calm / Soft</option><option value="robot">Robot / Mechanical</option><option value="announcer">News / Announcer</option><option value="cheerful">Cheerful / Friendly</option></select><small class="muted">These presets adjust speed and pitch using your browser voice. They do not create a real child/adult voice or clone a person; results depend on your device.</small></div>
+    
     <div class="field"><label for="voiceText">Your text</label><textarea id="voiceText" maxlength="2500" placeholder="یہاں اردو متن لکھیں..." required style="min-height:180px"></textarea><div class="voice-counter"><span id="voiceCharCount">0</span> / 2,500 characters</div><div class="actions"></div><small class="muted">Emoji are visual only and will be removed before speaking. Punctuation helps guide pauses, but cannot create real emotion.</small></div>
     <div class="actions">
      <button id="voiceGenerateBtn" type="submit">▶ Speak Text</button>
@@ -1915,10 +1915,25 @@ function refreshFreeVoices(){
   const o=document.createElement("option");o.value="";o.textContent="No Urdu voice installed on this device";sel.appendChild(o);
   return;
  }
- matches.forEach(v=>{const o=document.createElement("option");o.value=v.name;o.textContent=v.name+" ("+v.lang+")";sel.appendChild(o);});
- if(matches.some(v=>v.name===previous))sel.value=previous;
+ const installed=document.createElement("optgroup");installed.label="Installed Urdu voices";
+ matches.forEach(v=>{const o=document.createElement("option");o.value=v.name;o.textContent=v.name+" ("+v.lang+")";installed.appendChild(o);});
+ sel.appendChild(installed);
+ const styles=document.createElement("optgroup");styles.label="Character styles (uses installed Urdu voice)";
+ [["preset:child","Child-like / High pitch"],["preset:elder","Elder / Deep & slow"],["preset:energetic","Energetic / Gaming"],["preset:dramatic","Dramatic / Storytelling"],["preset:calm","Calm / Soft"],["preset:robot","Robot / Mechanical"],["preset:announcer","News / Announcer"],["preset:cheerful","Cheerful / Friendly"],["preset:neutral","Neutral / Normal"]].forEach(([value,label])=>{const o=document.createElement("option");o.value=value;o.textContent=label;styles.appendChild(o);});
+ sel.appendChild(styles);
+ if(matches.some(v=>v.name===previous)||previous.startsWith("preset:"))sel.value=previous;
  else sel.value=matches[0].name;
+ applyVoiceCharacter();
 }
+function applyVoiceCharacter(){
+ const selected=$("freeVoice")?.value||"";
+ if(!selected.startsWith("preset:"))return;
+ const mood=selected.slice(7);
+ const settings={neutral:[1,1],child:[1.06,1.38],elder:[0.78,0.72],energetic:[1.18,1.12],dramatic:[0.88,0.92],calm:[0.82,0.94],robot:[1,0.82],announcer:[1.04,0.96],cheerful:[1.12,1.16]};
+ const pair=settings[mood]||settings.neutral;
+ $("voiceRate").value=pair[0];$("voicePitch").value=pair[1];
+}
+$("freeVoice")?.addEventListener("change",applyVoiceCharacter);
 function voiceMessage(text,type="info"){
  const el=$("voiceMsg");if(!el)return;
  el.textContent=text;el.className="message show "+type;
@@ -1996,8 +2011,12 @@ function speakFreeVoice(textValue,onFinished){
  if(!("speechSynthesis" in window)||!("SpeechSynthesisUtterance" in window))throw new Error("This browser does not support speech synthesis. Please use an updated Chrome or Edge.");
  window.speechSynthesis.cancel();
  const name=$("freeVoice").value,voices=window.speechSynthesis.getVoices();
- const voice=voices.find(v=>v.name===name&&/^ur(-|$)/i.test(v.lang));
+ const presets={neutral:[1,1],child:[1.06,1.38],elder:[0.78,0.72],energetic:[1.18,1.12],dramatic:[0.88,0.92],calm:[0.82,0.94],robot:[1,0.82],announcer:[1.04,0.96],cheerful:[1.12,1.16]};
+ const preset=name.startsWith("preset:")?name.slice(7):null;
+ const voiceName=preset?(voices.find(v=>/^ur(-|$)/i.test(v.lang))?.name||""):name;
+ const voice=voices.find(v=>v.name===voiceName&&/^ur(-|$)/i.test(v.lang));
  if(!voice)throw new Error("Is device par Urdu voice install nahi hai. English voice use nahi ki jayegi.");
+ if(preset){const pair=presets[preset]||presets.neutral;$("voiceRate").value=pair[0];$("voicePitch").value=pair[1];}
  const spokenText=cleanSpeechText(textValue);if(!spokenText)throw new Error("Please enter words for the voice to speak; emoji alone cannot be spoken.");
  const utterance=new SpeechSynthesisUtterance(spokenText);
  utterance.lang=voice.lang;utterance.voice=voice;utterance.rate=Number($("voiceRate").value||1.05);utterance.pitch=Number($("voicePitch").value||1.05);
