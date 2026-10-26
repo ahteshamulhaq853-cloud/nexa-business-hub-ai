@@ -303,7 +303,7 @@ def fetch_job_location(job_url):
         plain = re.sub(r"\s+", " ", plain)
         patterns = [
             r"\b(?:job\s+)?location\s*[:：]\s*([^|;]{2,100}?)(?=\s{2,}|\b(?:job type|employment type|salary|deadline|apply|description)\b|$)",
-            r"\\bcity\\s*[:：]\\s*([A-Z][A-Za-z .,'()-]{1,70}?)(?=\\s{2,}|\\b(?:state|country|salary|deadline|apply)\\b|$)",
+            r"\bcity\s*[:：]\s*([A-Z][A-Za-z .,'()-]{1,70}?)(?=\s{2,}|\b(?:state|country|salary|deadline|apply)\b|$)",
         ]
         for pattern in patterns:
             match = re.search(pattern, plain, re.I)
