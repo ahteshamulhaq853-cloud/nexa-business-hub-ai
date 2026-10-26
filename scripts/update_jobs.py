@@ -19,7 +19,7 @@ FEED = ROOT / "data" / "jobs.json"
 SOURCES = [
     ("https://www.njp.gov.pk/index.php/jobs/live", "National Jobs Portal", "Government"),
     ("https://jobs.gov.pk/?pageid=602", "National Employment Exchange", "Government"),
-    ("https://www.rozee.pk/job/jsearch/q/English/?fpn=0", "Rozee.pk", "Private"),
+    ("https://www.rozee.pk/EN/jobs-in-pakistan/", "Rozee.pk", "Private"),
     ("https://www.mustakbil.com/", "Mustakbil", "Private"),
     ("https://auth.brightspyre.com/jobs", "BrightSpyre", "Private"),
 ]
@@ -151,6 +151,15 @@ def fetch_source(source_url, source_name, category):
             "fetched_at": now_iso()
         })
     print(f"{source_name}: parsed {len(parser.links)} links; {len(found)} valid individual listings.")
+    if source_name == "Rozee.pk" and not found:
+        samples = []
+        for item in parser.links:
+            href = item.get("href", "")
+            if "job" in href.lower() or "career" in href.lower():
+                samples.append((href, re.sub(r"\\s+", " ", item.get("text", "")).strip()[:80]))
+            if len(samples) >= 12:
+                break
+        print("Rozee sample links: " + repr(samples))
     return found
 
 def main():
