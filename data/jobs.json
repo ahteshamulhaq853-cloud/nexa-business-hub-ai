@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T05:46:34.317184+00:00",
+  "updated_at": "2026-10-27T06:59:29.798885+00:00",
   "sources": [
     "https://www.njp.gov.pk/index.php/jobs/live",
     "https://jobs.gov.pk/?pageid=602",
@@ -1654,6 +1654,66 @@
       "source_url": "https://etea.online/",
       "project_code": "839",
       "fetched_at": "2026-10-27T05:46:27.146658+00:00"
+    },
+    {
+      "title": "Sales Executive, Helper, Digital Marketing Assistant, Rider",
+      "company": "",
+      "location": "Lahore, PK",
+      "category": "Private",
+      "employment_type": "",
+      "description": "Vacancy listing imported from Mustakbil. Open the official listing for full requirements and application instructions.",
+      "url": "https://www.mustakbil.com/jobs/job/1437017",
+      "source": "Mustakbil",
+      "source_url": "https://www.mustakbil.com/",
+      "fetched_at": "2026-10-27T06:59:25.419669+00:00"
+    },
+    {
+      "title": "AM Accounts & Finance",
+      "company": "",
+      "location": "Lahore, PK",
+      "category": "Private",
+      "employment_type": "",
+      "description": "Vacancy listing imported from Mustakbil. Open the official listing for full requirements and application instructions.",
+      "url": "https://www.mustakbil.com/jobs/job/1437016",
+      "source": "Mustakbil",
+      "source_url": "https://www.mustakbil.com/",
+      "fetched_at": "2026-10-27T06:59:25.419886+00:00"
+    },
+    {
+      "title": "Sales Executive",
+      "company": "",
+      "location": "Karachi, PK",
+      "category": "Private",
+      "employment_type": "",
+      "description": "Vacancy listing imported from Mustakbil. Open the official listing for full requirements and application instructions.",
+      "url": "https://www.mustakbil.com/jobs/job/1437015",
+      "source": "Mustakbil",
+      "source_url": "https://www.mustakbil.com/",
+      "fetched_at": "2026-10-27T06:59:25.419914+00:00"
+    },
+    {
+      "title": "Sales Executive",
+      "company": "",
+      "location": "Rawalpindi, PK",
+      "category": "Private",
+      "employment_type": "",
+      "description": "Vacancy listing imported from Mustakbil. Open the official listing for full requirements and application instructions.",
+      "url": "https://www.mustakbil.com/jobs/job/1437008",
+      "source": "Mustakbil",
+      "source_url": "https://www.mustakbil.com/",
+      "fetched_at": "2026-10-27T06:59:25.419939+00:00"
+    },
+    {
+      "title": "Sales Support Liaison",
+      "company": "",
+      "location": "Karachi, PK",
+      "category": "Private",
+      "employment_type": "",
+      "description": "Vacancy listing imported from Mustakbil. Open the official listing for full requirements and application instructions.",
+      "url": "https://www.mustakbil.com/jobs/job/1437011",
+      "source": "Mustakbil",
+      "source_url": "https://www.mustakbil.com/",
+      "fetched_at": "2026-10-27T06:59:25.419966+00:00"
     }
   ]
 }
