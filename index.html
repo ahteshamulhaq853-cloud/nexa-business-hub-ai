@@ -3064,18 +3064,47 @@ async function init(){
 init();
 </script>
 <script src="writing-assistant.js">
-function saveNexaNewsDigestPDF(){
+async function saveNexaNewsDigestPDF(){
  const urduList=$("nexaUrduNewsList"),englishList=$("nexaEnglishNewsList");
  const urduHTML=urduList?urduList.innerHTML:"";
  const englishHTML=englishList?englishList.innerHTML:"";
- const dateText=new Intl.DateTimeFormat("ur-PK",{dateStyle:"full",timeZone:"Asia/Karachi"}).format(new Date());
- const popup=window.open("","_blank");
- if(!popup){alert("PDF banane ke liye popup allow karein, phir button dobara dabayein.");return;}
- popup.document.open();
- popup.document.write('<!doctype html><html lang="ur"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nexa Today's News Digest</title><style>body{font-family:Arial,sans-serif;color:#172033;margin:24px;line-height:1.6}h1{text-align:center;font-size:24px;margin-bottom:4px}h2{border-bottom:2px solid #1769d2;padding-bottom:6px;margin-top:28px}article{border:1px solid #d8deea;border-radius:8px;padding:12px;margin:10px 0;break-inside:avoid}h3{font-size:17px;margin:4px 0 8px}p{margin:5px 0}.studio-kicker{font-size:11px;color:#53647a}a{color:#1259a8;overflow-wrap:anywhere}.muted{color:#526174;font-size:13px}@media print{body{margin:12mm}.no-print{display:none}}</style></head><body><h1>Nexa Business Hub — Today&#39;s News Digest</h1><p style="text-align:center">'+dateText+'</p><p class="muted">This digest contains available headlines and summaries. For complete newspaper pages, use each publisher&#39;s official e-paper.</p><h2 dir="rtl">اردو خبریں</h2>'+urduHTML+'<h2>English News</h2>'+englishHTML+'<p class="muted">Source links are included on the news cards. Copyright remains with the respective publishers.</p><button class="no-print" onclick="window.print()">Print / Save as PDF</button></body></html>');
- popup.document.close();
- popup.focus();
- setTimeout(()=>popup.print(),700);
+ if(!urduHTML.trim()&&!englishHTML.trim()){
+  alert("Abhi news load nahi hui. Pehle News Center kholein, phir dobara try karein.");
+  return;
+ }
+ const dateText=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Karachi",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+ const dateLabel=new Intl.DateTimeFormat("ur-PK",{dateStyle:"full",timeZone:"Asia/Karachi"}).format(new Date());
+ let pdfHost=document.getElementById("nexaPdfDownloadHost");
+ if(pdfHost) pdfHost.remove();
+ pdfHost=document.createElement("div");
+ pdfHost.id="nexaPdfDownloadHost";
+ pdfHost.style.cssText="position:fixed;left:-10000px;top:0;width:760px;background:#fff;color:#172033;padding:28px;font-family:Arial,sans-serif;line-height:1.65;z-index:-1";
+ pdfHost.innerHTML='<div style="text-align:center;border-bottom:3px solid #1769d2;padding-bottom:14px;margin-bottom:20px"><h1 style="margin:0;font-size:26px;color:#102a56">Nexa Business Hub</h1><h2 style="margin:6px 0;font-size:20px">Today\'s News Digest</h2><p style="margin:0;color:#53647a">'+dateLabel+'</p></div><h2 dir="rtl" style="font-family:Arial,sans-serif;background:#eaf3ff;padding:8px;color:#102a56">اردو خبریں</h2><div dir="rtl">'+urduHTML+'</div><h2 style="background:#eaf3ff;padding:8px;color:#102a56">English News</h2><div>'+englishHTML+'</div><p style="font-size:11px;color:#526174;border-top:1px solid #d8deea;padding-top:10px">This PDF contains the headlines and summaries currently displayed on Nexa Business Hub. Publisher copyrights remain with their respective owners.</p>';
+ document.body.appendChild(pdfHost);
+ try{
+  if(!window.html2pdf){
+   await new Promise((resolve,reject)=>{
+    const script=document.createElement("script");
+    script.src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js";
+    script.onload=resolve;
+    script.onerror=()=>reject(new Error("PDF library load failed"));
+    document.head.appendChild(script);
+   });
+  }
+  await window.html2pdf().set({
+   margin:[8,8,8,8],
+   filename:"Nexa-News-Digest-"+dateText+".pdf",
+   image:{type:"jpeg",quality:0.96},
+   html2canvas:{scale:2,useCORS:true,backgroundColor:"#ffffff",logging:false},
+   jsPDF:{unit:"mm",format:"a4",orientation:"portrait"},
+   pagebreak:{mode:["css","legacy"]}
+  }).from(pdfHost).save();
+ }catch(error){
+  console.error("PDF download error:",error);
+  alert("Direct PDF download abhi nahi ho saka. Internet connection check karke dobara try karein.");
+ }finally{
+  pdfHost.remove();
+ }
 }
 
 </script>
