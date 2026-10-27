@@ -2077,6 +2077,7 @@ async function loadNexaNews(force=false){
   if(list.dataset.loaded!=="yes")list.innerHTML='<article class="card"><h3>News feed abhi tayyar ho rahi hai</h3><p class="muted">Automated feed ka pehla update chalne mein kuch minute lag sakte hain. Refresh dobara try karein.</p></article>';
  }
 }
+setInterval(()=>{const page=$("latestNewsPage");if(page&&page.classList.contains("active"))loadNexaNews(true)},5*60*1000);
 function openNexaNewsSources(){
  window.open("https://www.dawn.com/latest-news","_blank","noopener,noreferrer");
  window.open("https://urdu.arynews.tv/category/pakistan-2/","_blank","noopener,noreferrer");
