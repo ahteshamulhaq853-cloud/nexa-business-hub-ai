@@ -1,12 +1,22 @@
 {
-  "updated": "2026-10-27T22:21:43.529676+00:00",
+  "updated": "2026-10-27T22:58:12.236040+00:00",
   "items": [
     {
-      "title": "King to acknowledge 'suffering of the past' as Caribbean tour begins",
+      "title": "King acknowledges 'suffering of the past' as Caribbean tour begins",
       "link": "https://www.bbc.co.uk/news/articles/cmwyv8ld22z1o?at_medium=RSS&at_campaign=rss",
       "summary": "The King is on a nine-day tour that will take him to three countries, including the Bahamas, Guyana and Antigua and Barbuda.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f0e4/live/7d77ba00-d249-11f1-8ba3-9fd3e261415f.jpg",
-      "published": "2026-10-27T22:13:37+00:00",
+      "published": "2026-10-27T22:34:02+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Chris Mason: Budget needs to go some way towards delivering PM's promises",
+      "link": "https://www.bbc.co.uk/news/articles/c6y43wkln1k2o?at_medium=RSS&at_campaign=rss",
+      "summary": "Support on the cost of living, and in particular energy bills, as well as announcments on devolution will be central to John Healey's first Budget.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7041/live/3d52f8e0-d23a-11f1-a701-fddedf244c16.jpg",
+      "published": "2026-10-27T22:30:09+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -332,16 +342,6 @@
       "language": "ur"
     },
     {
-      "title": "Chris Mason: Budget needs to go some way towards delivering PM's promises",
-      "link": "https://www.bbc.co.uk/news/articles/c6y43wkln1k2o?at_medium=RSS&at_campaign=rss",
-      "summary": "Support on the cost of living, and in particular energy bills, as well as announcments on devolution will be central to John Healey's first Budget.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7041/live/3d52f8e0-d23a-11f1-a701-fddedf244c16.jpg",
-      "published": "2026-10-27T19:41:05+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "Dutch zookeeper dies after being mauled by leopard",
       "link": "https://www.bbc.co.uk/news/articles/crwyq90gwg8jo?at_medium=RSS&at_campaign=rss",
       "summary": "The woman began her career at the park when she was 17 and had worked there on-and-off for four decades.",
@@ -530,6 +530,16 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "کراچی، بجلی کی بندش پر شہریوں کا احتجاج، سڑک بلاک کرکے ٹائر جلا دیے",
+      "link": "https://www.express.pk/story/2840774/karachi-citizens-protest-against-power-outages-block-roads-and-set-tires-on-fire-2840774/",
+      "summary": "گھروں اور مساجد میں پانی بھی ختم ہوگیا ہے، علاقہ مکین",
+      "image_url": "",
+      "published": "2026-10-27T17:26:52+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "UK and EU officials to discuss freedom of movement",
@@ -989,16 +999,6 @@
       "published": "2026-10-27T15:05:38+00:00",
       "source": "ARY News",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Minimum wage set to rise but 18-20 year-olds will not get bigger increase",
-      "link": "https://www.bbc.co.uk/news/articles/c6d93gq1xdgno?at_medium=RSS&at_campaign=rss",
-      "summary": "Chancellor John Healey will reveal the new pay rates in the Budget, and has also announced measures to help households with the cost of living.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4419/live/b4233800-d211-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-10-27T15:01:27+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     }
   ]
