@@ -1,0 +1,93 @@
+name: Auto Update News
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout website
+        uses: actions/checkout@v4
+      - name: Fetch latest RSS headlines
+        run: |
+          python - <<'PY'
+          import json, re, html, urllib.request, xml.etree.ElementTree as ET
+          from datetime import datetime, timezone
+          from email.utils import parsedate_to_datetime
+
+          FEEDS = [
+            ("Dawn", "https://www.dawn.com/feeds/home", "Pakistan"),
+            ("Express Tribune", "https://tribune.com.pk/feed/latest", "Pakistan"),
+            ("ARY News", "https://arynews.tv/feed/", "Pakistan"),
+            ("Associated Press of Pakistan", "https://www.app.com.pk/feed/", "Pakistan"),
+          ]
+
+          def text_of(node, names):
+            for name in names:
+              found = node.find(name)
+              if found is not None and found.text:
+                return found.text.strip()
+            return ""
+
+          def clean(value):
+            value = re.sub(r"(?is)<(script|style).*?>.*?</\\1>", " ", value or "")
+            value = re.sub(r"(?s)<[^>]+>", " ", value)
+            return re.sub(r"\\s+", " ", html.unescape(value)).strip()
+
+          def parse_date(value):
+            if not value: return ""
+            try:
+              return parsedate_to_datetime(value).astimezone(timezone.utc).isoformat()
+            except Exception:
+              try: return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc).isoformat()
+              except Exception: return ""
+
+          all_items, errors = [], []
+          for source, url, category in FEEDS:
+            try:
+              req = urllib.request.Request(url, headers={"User-Agent": "NexaNewsBot/1.0 (RSS reader)"})
+              with urllib.request.urlopen(req, timeout=20) as response:
+                root = ET.fromstring(response.read())
+              nodes = root.findall(".//item")
+              if not nodes:
+                nodes = root.findall(".//{http://www.w3.org/2005/Atom}entry")
+              for node in nodes[:20]:
+                title = clean(text_of(node, ["title", "{http://www.w3.org/2005/Atom}title"]))
+                link = text_of(node, ["link"])
+                if not link:
+                  atom_link = node.find("{http://www.w3.org/2005/Atom}link")
+                  if atom_link is not None: link = atom_link.attrib.get("href", "")
+                summary = clean(text_of(node, ["description", "summary", "content", "{http://www.w3.org/2005/Atom}summary", "{http://www.w3.org/2005/Atom}content"]))
+                published = parse_date(text_of(node, ["pubDate", "published", "updated", "{http://www.w3.org/2005/Atom}published", "{http://www.w3.org/2005/Atom}updated"]))
+                if title and link.startswith("http"):
+                  all_items.append({"title": title, "link": link, "summary": summary[:360], "published": published, "source": source, "category": category})
+            except Exception as exc:
+              errors.append(source + ": " + str(exc))
+          # Deduplicate and put the newest items first.
+          seen, unique = set(), []
+          for item in sorted(all_items, key=lambda x: x.get("published", ""), reverse=True):
+            key = item["link"]
+            if key not in seen:
+              seen.add(key); unique.append(item)
+          if not unique:
+            raise SystemExit("No RSS items could be fetched; leaving the existing news.json untouched. " + " | ".join(errors))
+          output = {"updated": datetime.now(timezone.utc).isoformat(), "items": unique[:60]}
+          with open("news.json", "w", encoding="utf-8") as f:
+            json.dump(output, f, ensure_ascii=False, indent=2)
+          print("Published", len(output["items"]), "news items.")
+          if errors: print("Some sources unavailable:", " | ".join(errors))
+          PY
+      - name: Commit updated news
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news.json
+          if git diff --cached --quiet; then
+            echo "No news changes to publish."
+            exit 0
+          fi
+          git commit -m "Auto-update latest news"
+          git push
