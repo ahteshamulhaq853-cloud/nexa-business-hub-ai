@@ -2160,6 +2160,12 @@ function escapeNewsHTML(value){return String(value==null?"":value).replace(/[&<>
 function newsDate(value){if(!value)return "Recent";const d=new Date(value);return isNaN(d.getTime())?"Recent":d.toLocaleString(undefined,{dateStyle:"medium",timeStyle:"short"});}
 function renderNexaNewsGroup(id,items,language){
  const list=$(id);if(!list)return;
+ // Always show the newest published stories first within each news category.
+ items=[...items].sort((a,b)=>{
+  const timeA=Date.parse(a.published||"")||0;
+  const timeB=Date.parse(b.published||"")||0;
+  return timeB-timeA;
+ });
  if(!items.length){list.innerHTML='<article class="card"><h3>'+(language==="ur"?'ابھی اردو خبریں دستیاب نہیں':'No English headlines yet')+'</h3><p class="muted">First automatic update complete hone ke baad yahan news nazar aayegi. Refresh dobara try karein.</p></article>';return;}
  list.innerHTML=items.map(item=>'<article class="card"'+(language==="ur"?' dir="rtl" style="text-align:right"':'')+'><span class="studio-kicker">'+escapeNewsHTML(item.source||"NEWS")+' · '+escapeNewsHTML(item.category||"LATEST")+'</span><h3>'+escapeNewsHTML(item.title||"Latest News")+'</h3><p class="muted">'+escapeNewsHTML(item.summary||"Original publisher se poori khabar parhein.")+'</p><p class="muted" style="font-size:12px">🕒 '+escapeNewsHTML(newsDate(item.published))+'</p><a href="'+escapeNewsHTML(item.link||"#")+'" target="_blank" rel="noopener noreferrer">'+(language==="ur"?'مکمل خبر پڑھیں ↗':'Read Full Story ↗')+'</a></article>').join("");
 }
