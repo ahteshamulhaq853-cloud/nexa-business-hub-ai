@@ -1540,6 +1540,25 @@ header .brand-word small{
 }
 
 </style>
+
+<style id="compact-card-spacing">
+/* Tighter spacing between cards across the whole website */
+.grid,
+.grid.three,
+.template-grid,
+.studio-tool-grid,
+.studio-bottom-grid {
+  gap: 5px !important;
+  row-gap: 5px !important;
+  column-gap: 5px !important;
+}
+.grid > .card,
+.grid > button.card,
+.template-grid > *,
+.studio-tool-grid > * {
+  margin-bottom: 0 !important;
+}
+</style>
 </head>
 <body>
 <button id="settingsLauncher" type="button" aria-label="Open menu" title="Menu" aria-expanded="false" onclick="toggleMainMenu()">☰</button>
