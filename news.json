@@ -1,6 +1,16 @@
 {
-  "updated": "2026-10-27T21:11:17.972058+00:00",
+  "updated": "2026-10-27T21:50:04.776499+00:00",
   "items": [
+    {
+      "title": "Ex-Met officer from Couzens unit guilty of rape",
+      "link": "https://www.bbc.co.uk/news/articles/ckx2qgjd0w3no?at_medium=RSS&at_campaign=rss",
+      "summary": "Mark Tyrell is also convicted of sexual assault and trying to delete messages he sent the woman.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2a23/live/de64f8b0-d24d-11f1-8ba3-9fd3e261415f.jpg",
+      "published": "2026-10-27T21:35:52+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Landline switchover could cut people off in emergency, minister warned",
       "link": "https://www.bbc.co.uk/news/articles/c6x29g1nlr51o?at_medium=RSS&at_campaign=rss",
@@ -352,16 +362,6 @@
       "language": "en"
     },
     {
-      "title": "Worker at US embassy in London investigated over abuse images is senior Air Force member",
-      "link": "https://www.bbc.co.uk/news/articles/cm2ke82w44nxo?at_medium=RSS&at_campaign=rss",
-      "summary": "The BBC has been told Lt Col Michael Morris, who was flown out of the UK before being questioned by police, is under investigation.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c87e/live/41e4a2e0-d222-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-10-27T19:27:25+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "One killed, five injured in Afghan Taliban shelling in South Waziristan: security sources",
       "link": "https://arynews.tv/one-killed-five-injured-in-afghan-taliban-shelling-in-south-waziristan-security-sources",
       "summary": "",
@@ -662,6 +662,16 @@
       "language": "en"
     },
     {
+      "title": "انسان سے دگنی مہارت، تشخیص کے لیے اے آئی ڈاکٹر آ گیا",
+      "link": "https://www.express.pk/story/2840768/twice-as-skilled-as-a-human-an-ai-doctor-arrives-for-diagnosis-2840768/",
+      "summary": "اے آئی ڈاکٹر عام امراض کی تشخیص کرنے میں 83.2 فیصد کامیاب رہا، امریکی جریدہ",
+      "image_url": "",
+      "published": "2026-10-27T16:42:15+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Saudi citizens can now apply for US fast-track travel program",
       "link": "https://arynews.tv/saudi-citizens-can-now-apply-for-us-fast-track-travel-program",
       "summary": "",
@@ -758,6 +768,16 @@
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-27/b_1628276_094858_updates.jpg\"/",
       "published": "2026-10-27T16:10:00+00:00",
       "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کے ڈبلیو ایس ایس آئی پی نے حسن اسکوائر سے نیپا چورنگی آگمینٹیشن کام مکمل ہونے کی نئی تاریخ دے دی",
+      "link": "https://www.express.pk/story/2840767/kwssip-has-announced-a-new-completion-date-for-the-augmentation-work-from-hassan-square-to-nipa-chowrangi-2840767/",
+      "summary": "2 اعشاریہ 7 کلومیٹر کام میں ایک سال لگ گیا 96 کلومیٹر میں کتنے سال لگیں گے؟",
+      "image_url": "",
+      "published": "2026-10-27T16:06:49+00:00",
+      "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
     },
@@ -977,26 +997,6 @@
       "summary": "کنیسٹ کی 120 نشستوں کے لیے الیکشن میں آج مجموعی ٹرن آؤٹ 66.7 فیصد تک پہنچ گیا",
       "image_url": "",
       "published": "2026-10-27T14:31:08+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Hero Keyboard PC turns your iPad or Android tablet into a full Windows laptop",
-      "link": "https://arynews.tv/hero-keyboard-pc-turns-your-ipad-or-android-tablet-into-a-full-windows-laptop",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Hero-keyboard.jpg",
-      "published": "2026-10-27T14:31:06+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "تہران کا سفارتی اجتماع ، علاقائی امن کی نئی امید",
-      "link": "https://www.express.pk/story/2840763/tehrans-diplomatic-gathering-a-new-hope-for-regional-peace-2840763/",
-      "summary": "تہران میں ہونے والی مشاورت کا بنیادی پیغام یہ ہے کہ اختلافات کے باوجود رابطے کا دروازہ کھلا رکھنا ناگزیر ہے",
-      "image_url": "",
-      "published": "2026-10-27T14:26:00+00:00",
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
