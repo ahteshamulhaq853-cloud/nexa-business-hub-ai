@@ -1996,11 +1996,33 @@ header .brand-word small{
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('servicesPage')">← Back to Services</button><button class="secondary" onclick="showPage('dashboardPage')">Dashboard</button></div>
 </section>
+<section id="latestNewsPage" class="page">
+ <div class="studio-section-heading"><div><span class="studio-kicker">NEXA NEWS DESK</span><h2>Latest News</h2><p class="muted">Pakistan aur duniya ki latest headlines. Khabar parhne ke liye source link open karein.</p></div></div>
+ <div class="card" style="margin-bottom:18px">
+  <h3>📰 News Sources</h3>
+  <p class="muted">Neeche diye gaye trusted news pages se latest updates dekhein. News websites par headlines waqt ke saath update hoti rehti hain.</p>
+  <div class="actions">
+   <a class="button" href="https://www.dawn.com/latest-news" target="_blank" rel="noopener noreferrer">Dawn — Latest</a>
+   <a class="button secondary" href="https://tribune.com.pk/" target="_blank" rel="noopener noreferrer">Express Tribune</a>
+   <a class="button secondary" href="https://www.app.com.pk/latest-news/" target="_blank" rel="noopener noreferrer">APP Pakistan</a>
+   <a class="button secondary" href="https://urdu.arynews.tv/category/pakistan-2/" target="_blank" rel="noopener noreferrer">ARY Urdu</a>
+  </div>
+ </div>
+ <div class="studio-section-heading"><div><span class="studio-kicker">TOP STORIES</span><h3>Latest Headlines</h3><p class="muted">Headlines dated 27 October 2026. Tap a headline to read the full report from its publisher.</p></div></div>
+ <div class="grid two">
+  <article class="card"><span class="studio-kicker">PAKISTAN · ECONOMY</span><h3>Pakistan raises policy rate amid economic pressures</h3><p class="muted">Read the latest report on interest rates and economic developments.</p><a href="https://www.arabnews.pk/" target="_blank" rel="noopener noreferrer">Read on Arab News Pakistan ↗</a></article>
+  <article class="card"><span class="studio-kicker">PAKISTAN · DIPLOMACY</span><h3>Regional talks continue amid Middle East tensions</h3><p class="muted">Updates on diplomatic discussions and regional security.</p><a href="https://www.aa.com.tr/en/" target="_blank" rel="noopener noreferrer">Read on Anadolu Agency ↗</a></article>
+  <article class="card"><span class="studio-kicker">PAKISTAN · BUSINESS</span><h3>Pakistan’s markets and business updates</h3><p class="muted">Follow business, markets, energy and economic news.</p><a href="https://tribune.com.pk/business" target="_blank" rel="noopener noreferrer">Read Business News ↗</a></article>
+  <article class="card"><span class="studio-kicker">URDU NEWS</span><h3>پاکستان کی تازہ ترین خبریں</h3><p class="muted">اردو میں تازہ خبریں اور اہم قومی اپ ڈیٹس پڑھیں۔</p><a href="https://urdu.arynews.tv/category/pakistan-2/" target="_blank" rel="noopener noreferrer">خبریں پڑھیں ↗</a></article>
+ </div>
+ <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button><button type="button" onclick="openNexaNewsSources()">Open News Websites</button></div>
+</section>
 </main>
 <nav id="bottomNav" aria-label="Main navigation">
  <button type="button" onclick="bottomNavigate('dashboardPage',this)"><span class="bottom-icon">⌂</span><span>Dashboard</span></button>
  <button type="button" onclick="bottomNavigate('cvSectionPage',this)"><span class="bottom-icon">▤</span><span>CV</span></button>
  <button type="button" onclick="bottomNavigate('latestJobsPage',this)"><span class="bottom-icon">💼</span><span>Jobs</span></button>
+ <button type="button" onclick="bottomNavigate('latestNewsPage',this)"><span class="bottom-icon">📰</span><span>News</span></button>
  <button type="button" onclick="bottomNavigate('servicesPage',this)"><span class="bottom-icon">⚙</span><span>Services</span></button>
  <button type="button" onclick="bottomNavigate('settingsPage',this)"><span class="bottom-icon">♙</span><span>Profile</span></button>
 </nav>
@@ -2040,6 +2062,10 @@ function clearMsg(id){$(id).textContent="";$(id).className="message"}
 function bottomNavigate(id,button){
  showPage(id);
  document.querySelectorAll('#bottomNav button').forEach(b=>b.classList.toggle('active',b===button));
+}
+function openNexaNewsSources(){
+ window.open("https://www.dawn.com/latest-news","_blank","noopener,noreferrer");
+ window.open("https://urdu.arynews.tv/category/pakistan-2/","_blank","noopener,noreferrer");
 }
 let nexaJobsCache=[];
 function escapeJobHTML(value){return String(value==null?"":value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));}
