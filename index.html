@@ -2096,23 +2096,24 @@ header .brand-word small{
   </div>
   <div id="nexaNewspapersPanel" style="display:none">
    <div class="studio-section-heading">
-    <div><span class="studio-kicker">NEWSPAPERS</span><h3>Today's Newspapers — Auto-Updated Official Links</h3>
-    <p class="muted">Yahan se official e-paper kholein. Akhbar ka naya edition publisher apni website par publish karta hai; aapko GitHub par roz PDF upload karne ki zaroorat nahi.</p></div>
+    <div><span class="studio-kicker">NEWSPAPERS</span><h3>Manual Newspaper PDF Upload</h3>
+    <p class="muted">Apni newspaper PDF select karein aur isi browser mein open karein.</p></div>
    </div>
    <div class="card" style="margin-bottom:14px">
-    <h4 style="margin-top:0">🔄 Rozana editions</h4>
-    <p class="muted">Neeche diye gaye buttons official newspaper websites kholte hain. Latest edition ki availability publisher par depend karti hai. Kuch sites par free reading, login ya subscription ki zaroorat ho sakti hai.</p>
-    <p class="muted" style="margin-bottom:0">Note: Website PDFs ko apne server par copy nahi karti; yeh official sources ke links hain.</p>
+    <h4 style="margin-top:0">📤 Upload Newspaper PDF</h4>
+    <div class="field">
+     <label for="manualNewspaperFiles">Select PDF file(s)</label>
+     <input id="manualNewspaperFiles" type="file" accept="application/pdf,.pdf" multiple onchange="handleManualNewspaperUpload(event)">
+     <small class="muted">Aap ek ya zyada PDF files select kar sakte hain.</small>
+    </div>
+    <p class="muted" style="margin-bottom:0"><strong>Important:</strong> GitHub Pages static website hai. Yahan select ki gayi files sirf aapke current browser session mein dikhengi; public website par sab visitors ke liye publish nahi hongi. Sab visitors ko dikhane ke liye PDFs ko GitHub repository mein upload karke unke links code mein add karne honge.</p>
    </div>
-   <div class="grid two">
-    <article class="card"><h3>📰 Dawn ePaper</h3><p class="muted">English · Pakistan · Official digital edition</p><a class="button-link" href="https://epaper.dawn.com/" target="_blank" rel="noopener noreferrer">Open Latest ePaper ↗</a></article>
-    <article class="card" dir="rtl" style="text-align:right"><h3>📰 روزنامہ جنگ</h3><p class="muted">اردو · پاکستان · آفیشل ای پیپر</p><a class="button-link" href="https://e.jang.com.pk/" target="_blank" rel="noopener noreferrer">تازہ اخبار کھولیں ↗</a></article>
-    <article class="card" dir="rtl" style="text-align:right"><h3>📰 روزنامہ ایکسپریس</h3><p class="muted">اردو · پاکستان · آفیشل ویب سائٹ</p><a class="button-link" href="https://www.express.com.pk/" target="_blank" rel="noopener noreferrer">تازہ اخبار کھولیں ↗</a></article>
-    <article class="card" dir="rtl" style="text-align:right"><h3>📰 روزنامہ دنیا</h3><p class="muted">اردو · پاکستان · ای پیپر</p><a class="button-link" href="https://e.dunya.com.pk/splash.php" target="_blank" rel="noopener noreferrer">تازہ اخبار کھولیں ↗</a></article>
-    <article class="card"><h3>📰 The Express Tribune</h3><p class="muted">English · Pakistan · Latest news</p><a class="button-link" href="https://tribune.com.pk/" target="_blank" rel="noopener noreferrer">Open Official Website ↗</a></article>
-    <article class="card"><h3>📰 BBC News</h3><p class="muted">English · International · Latest news</p><a class="button-link" href="https://www.bbc.com/news" target="_blank" rel="noopener noreferrer">Open Official Website ↗</a></article>
-    <article class="card" dir="rtl" style="text-align:right"><h3>📰 بی بی سی اردو</h3><p class="muted">اردو · عالمی خبریں</p><a class="button-link" href="https://www.bbc.com/urdu" target="_blank" rel="noopener noreferrer">تازہ خبریں کھولیں ↗</a></article>
-    <article class="card"><h3>📰 The Nation</h3><p class="muted">English · Pakistan · Latest news</p><a class="button-link" href="https://www.nation.com.pk/" target="_blank" rel="noopener noreferrer">Open Official Website ↗</a></article>
+   <div id="manualNewspaperStatus" class="muted" role="status">Abhi koi PDF select nahi ki gayi.</div>
+   <div id="manualNewspaperList" class="grid two" aria-live="polite"></div>
+   <div class="card" style="margin-top:14px">
+    <h4 style="margin-top:0">Public website par PDF dikhani hai?</h4>
+    <p class="muted">PDF ko repository ke <code>newspapers</code> folder mein upload karein. Phir uska path, misal ke taur par <code>newspapers/dawn-today.pdf</code>, website ke code mein link ki surat mein add karein. File size aur publisher ki permission ka khayal rakhein.</p>
+    <a class="button-link" href="https://github.com/ahteshamulhaq853-cloud/nexa-business-hub-ai" target="_blank" rel="noopener noreferrer">Open GitHub Repository ↗</a>
    </div>
   </div>
  </div>
@@ -3154,5 +3155,27 @@ async function saveNexaNewsDigestPDF(){
 })();
 </script>
 
+
+<script>
+function handleManualNewspaperUpload(event){
+ const files=Array.from((event.target&&event.target.files)||[]);
+ const list=document.getElementById('manualNewspaperList');
+ const status=document.getElementById('manualNewspaperStatus');
+ if(!list||!status)return;
+ list.innerHTML='';
+ if(!files.length){status.textContent='Abhi koi PDF select nahi ki gayi.';return;}
+ const pdfs=files.filter(file=>file.type==='application/pdf'||file.name.toLowerCase().endsWith('.pdf'));
+ if(!pdfs.length){status.textContent='Meherbani karke PDF file select karein.';return;}
+ status.textContent=pdfs.length+' PDF file(s) selected. Ye files sirf is browser session mein available hain.';
+ pdfs.forEach(file=>{
+  const url=URL.createObjectURL(file);
+  const card=document.createElement('article');card.className='card';
+  const title=document.createElement('h3');title.textContent='📰 '+file.name;
+  const meta=document.createElement('p');meta.className='muted';meta.textContent='Size: '+(file.size/1024/1024).toFixed(2)+' MB';
+  const link=document.createElement('a');link.className='button-link';link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Open PDF ↗';
+  card.append(title,meta,link);list.appendChild(card);
+ });
+}
+</script>
 </body>
 </html>
