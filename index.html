@@ -1559,6 +1559,14 @@ header .brand-word small{
   margin-bottom: 0 !important;
 }
 </style>
+
+<style id="urdu-nastaleeq-font-style">
+/* Use Jameel Noori Nastaleeq for Urdu text; use Nastaliq fallback if unavailable */
+.urdu-nastaleeq-text {
+  font-family: "Jameel Noori Nastaleeq", "Jameel Noori Nastaleeq Kasheeda", "Noto Nastaliq Urdu", serif !important;
+  line-height: 1.9;
+}
+</style>
 </head>
 <body>
 <button id="settingsLauncher" type="button" aria-label="Open menu" title="Menu" aria-expanded="false" onclick="toggleMainMenu()">☰</button>
@@ -3212,6 +3220,62 @@ async function handleManualNewspaperUpload(event){
  await loadPublicNewspaperPdfs();
 }
 document.addEventListener('DOMContentLoaded',loadPublicNewspaperPdfs);
+</script>
+
+<script id="urdu-nastaleeq-font-script">
+(function(){
+  const urduChars = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF]/;
+  function applyUrduFont(root){
+    if(!root) return;
+    if(root.nodeType === 1 && /^(INPUT|TEXTAREA)$/i.test(root.tagName)){
+      const attrs = [root.getAttribute("placeholder") || "", root.value || ""].join(" ");
+      if(urduChars.test(attrs)) root.classList.add("urdu-nastaleeq-text");
+    }
+    const doc = root.ownerDocument || document;
+    const walker = doc.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    let node;
+    while((node = walker.nextNode())){
+      if(urduChars.test(node.nodeValue || "")){
+        const parent = node.parentElement;
+        if(parent && !/^(SCRIPT|STYLE|NOSCRIPT)$/i.test(parent.tagName)){
+          parent.classList.add("urdu-nastaleeq-text");
+        }
+      }
+    }
+    if(root.querySelectorAll){
+      root.querySelectorAll("input, textarea").forEach(function(el){
+        const attrs = [el.getAttribute("placeholder") || "", el.value || ""].join(" ");
+        if(urduChars.test(attrs)) el.classList.add("urdu-nastaleeq-text");
+      });
+    }
+  }
+  function start(){
+    applyUrduFont(document.body);
+    const observer = new MutationObserver(function(records){
+      records.forEach(function(record){
+        if(record.type === "childList"){
+          record.addedNodes.forEach(function(node){
+            if(node.nodeType === 1 || node.nodeType === 3){
+              if(node.nodeType === 3){
+                if(urduChars.test(node.nodeValue || "") && node.parentElement) node.parentElement.classList.add("urdu-nastaleeq-text");
+              } else applyUrduFont(node);
+            }
+          });
+        } else if(record.type === "characterData"){
+          const node = record.target;
+          if(urduChars.test(node.nodeValue || "") && node.parentElement) node.parentElement.classList.add("urdu-nastaleeq-text");
+        } else if(record.type === "attributes" && record.target){
+          const el = record.target;
+          const attrs = [el.getAttribute("placeholder") || "", el.value || ""].join(" ");
+          if(urduChars.test(attrs)) el.classList.add("urdu-nastaleeq-text");
+        }
+      });
+    });
+    observer.observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:["placeholder"]});
+  }
+  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded",start,{once:true});
+  else start();
+})();
 </script>
 </body>
 </html>
