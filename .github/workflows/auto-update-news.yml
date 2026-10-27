@@ -1,5 +1,8 @@
 name: Auto Update News
 on:
+  push:
+    paths:
+      - ".github/workflows/auto-update-news.yml"
   schedule:
     - cron: "7,37 * * * *"
   workflow_dispatch:
