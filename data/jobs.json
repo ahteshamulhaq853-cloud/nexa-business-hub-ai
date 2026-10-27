@@ -1,12 +1,11 @@
 {
-  "updated_at": "2026-10-27T04:46:52.271830+00:00",
+  "updated_at": "2026-10-27T05:27:08.671920+00:00",
   "sources": [
     "https://www.njp.gov.pk/index.php/jobs/live",
     "https://jobs.gov.pk/?pageid=602",
-    "https://www.rozee.pk/EN/jobs-in-pakistan/",
+    "https://www.rozee.pk/",
     "https://www.mustakbil.com/",
-    "https://auth.brightspyre.com/jobs",
-    "https://etea.online/"
+    "https://auth.brightspyre.com/jobs"
   ],
   "jobs": [
     {
@@ -29,7 +28,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9831",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Director/ Business Development",
@@ -51,7 +50,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9834",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Deputy Director (Financial Analyst)",
@@ -73,7 +72,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9835",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Tax Lawyer",
@@ -95,7 +94,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9836",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Analyst-Personal Income Tax",
@@ -117,7 +116,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9837",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Consultant Transaction",
@@ -139,7 +138,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9838",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "ASSISTANT PRIVATE SECRETARY (APS) — EQUIVALENT TO PPS-6",
@@ -161,7 +160,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9840",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "ACCOUNTANT — EQUIVALENT TO PPS-6",
@@ -183,7 +182,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9842",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Senior Officer Finance & Accounts (Islamabad)",
@@ -205,7 +204,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9843",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Team Lead Legal/Senior Manager Legal/Manager Legal",
@@ -227,7 +226,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9844",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Senior Legislative Advisor Pay Package-MP-I Scale Max Age: 62 years",
@@ -249,7 +248,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9845",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Junior Accountant",
@@ -271,7 +270,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9846",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Creative Lead (PPS-08)",
@@ -293,7 +292,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9847",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Technical Consultant (Minerals) (SPPS-II)",
@@ -315,7 +314,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9848",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Technical Consultant (Minerals) (SPPS-III)",
@@ -337,7 +336,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9849",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Oil Refining & Marketing Expert (SPPS-III)",
@@ -359,7 +358,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9850",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Financial Analyst (Gas) (SPPS-IV)",
@@ -381,7 +380,7 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9851",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Manager - Legal",
@@ -403,7 +402,29 @@
       "source": "National Jobs Portal",
       "source_url": "https://www.njp.gov.pk/index.php/jobs/9852",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
+    },
+    {
+      "title": "Stenotypist- PID (I) 3765/26",
+      "company": "Cabinet Division Balochistan",
+      "location": "Not specified in advertisement",
+      "category": "Government",
+      "employment_type": "Regular Vacancies 2 vacancies Login to",
+      "description": "Stenotypist- PID (I) 3765/26 by Cabinet Division Balochistan Regular BPS-14 2 Vacancies Available Till Nov 10, 2026",
+      "education_required": "Not specified in advertisement",
+      "experience_needed": "Not specified in advertisement",
+      "experience_field": "Not specified in advertisement",
+      "skills_needed": "Not specified in advertisement",
+      "salary": "Not specified in advertisement",
+      "age_limit": "Max: 30 years Age Relaxation Federal Age Relaxation Rules Applied Application",
+      "last_date_to_apply": "2026-11-10",
+      "availability": "Active",
+      "official_url": "https://www.njp.gov.pk/index.php/jobs/9854",
+      "url": "https://www.njp.gov.pk/index.php/jobs/9854",
+      "source": "National Jobs Portal",
+      "source_url": "https://www.njp.gov.pk/index.php/jobs/9854",
+      "verified_detail_page": true,
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Healthcare Outreach Representative (Remote, Night Shift, US Healthcare Company)",
@@ -425,7 +446,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436023",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Architect",
@@ -447,7 +468,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1434855",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Microsoft Dynamics 365 F&O Implementation Specialist",
@@ -469,7 +490,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436976",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Ethical Hacker / Web Penetration Tester - Remote / Work From Home",
@@ -491,7 +512,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436963",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "B2B Field Sales Executive – Printing & Corporate Branding",
@@ -513,7 +534,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436926",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "eBay Virtual Assistant (VA) — Account Management & Product Listing",
@@ -535,7 +556,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1437001",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Business Development Officer",
@@ -557,7 +578,29 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1437004",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
+    },
+    {
+      "title": "Video Editor - Short-Form & Long-Form Content",
+      "company": "profile Good to know",
+      "location": "or schedule Jobs at Vispectra Every open role at this",
+      "category": "Private",
+      "employment_type": "Not specified in advertisement",
+      "description": "Video Editor - Short-Form & Long-Form Content Vispectra · Karachi, Pakistan",
+      "education_required": "Not specified in advertisement",
+      "experience_needed": "1 year Career level Student Shift Evening shift",
+      "experience_field": "Not specified in advertisement",
+      "skills_needed": "with the ability to consistently meet project deadlines. About the employer Vispectra Karachi, Pakistan Verified Follow Employee reviews Worked here? Your insights help others make better career decisions. Share your",
+      "salary": "PKR 30,000–60,000",
+      "age_limit": "Not specified in advertisement",
+      "last_date_to_apply": "Not specified in advertisement",
+      "availability": "Active",
+      "official_url": "https://www.mustakbil.com/jobs/job/1437002",
+      "url": "https://www.mustakbil.com/jobs/job/1437002",
+      "source": "Mustakbil",
+      "source_url": "https://www.mustakbil.com/jobs/job/1437002",
+      "verified_detail_page": true,
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Last Mile Operations Executive - US Logistics",
@@ -579,7 +622,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436993",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "AI Operations & Governance Manager",
@@ -601,7 +644,29 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436992",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
+    },
+    {
+      "title": "Customer Services Officers - Card Swiping Machines",
+      "company": "profile Good to know",
+      "location": "or schedule Jobs at Global Tech Solutions Every open role at this",
+      "category": "Private",
+      "employment_type": "Not specified in advertisement",
+      "description": "Customer Services Officers - Card Swiping Machines Global Tech Solutions · Islamabad, Pakistan",
+      "education_required": "Intermediate or higher education is preferred. Candidates with equivalent customer support training or practical",
+      "experience_needed": "sale of Card Swiping Machines. Strong spoken and written communication",
+      "experience_field": "sale of Card Swiping Machines",
+      "skills_needed": ", with a courteous and professional telephone manner. Ability to listen actively, identify customer needs, explain information clearly, and handle concerns calmly.",
+      "salary": "PKR 40,000–120,000",
+      "age_limit": "Not specified in advertisement",
+      "last_date_to_apply": "Not specified in advertisement",
+      "availability": "Active",
+      "official_url": "https://www.mustakbil.com/jobs/job/1436983",
+      "url": "https://www.mustakbil.com/jobs/job/1436983",
+      "source": "Mustakbil",
+      "source_url": "https://www.mustakbil.com/jobs/job/1436983",
+      "verified_detail_page": true,
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Sales Intern",
@@ -623,7 +688,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436982",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Sales & Marketing Executives",
@@ -645,7 +710,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436981",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Content Creator",
@@ -667,7 +732,29 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436980",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
+    },
+    {
+      "title": "Ecommerce Internship",
+      "company": "profile Good to know",
+      "location": "In person What we’re looking for Bachelor's degree from a recognized university",
+      "category": "Private",
+      "employment_type": "Not specified in advertisement",
+      "description": "Ecommerce Internship Seller 11 · Islamabad, Pakistan",
+      "education_required": "Bachelor's degree What you’ll be doing We are looking for a motivated, enthusiastic, and detail-oriented individual to join our growing e-commerce team. What You'll Gain: Hands-on",
+      "experience_needed": "e-commerce operations. Exposure to product listings, online marketplaces, and digital business processes. Opportunity to develop professional",
+      "experience_field": "e-commerce operations",
+      "skills_needed": "in a growing industry. Potential for a full-time position based on performance. Work",
+      "salary": "PKR 20,000–30,000",
+      "age_limit": "Not specified in advertisement",
+      "last_date_to_apply": "Not specified in advertisement",
+      "availability": "Active",
+      "official_url": "https://www.mustakbil.com/jobs/job/1436978",
+      "url": "https://www.mustakbil.com/jobs/job/1436978",
+      "source": "Mustakbil",
+      "source_url": "https://www.mustakbil.com/jobs/job/1436978",
+      "verified_detail_page": true,
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Business Development Executive",
@@ -689,7 +776,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436977",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Sales Executive",
@@ -711,7 +798,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436975",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Business Development Executive",
@@ -733,7 +820,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436974",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Business Development Executive",
@@ -755,7 +842,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436973",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Google And Meta Ads Expert",
@@ -777,7 +864,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436972",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "AI Medical Expert Evaluator",
@@ -799,7 +886,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436971",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Procurement Officer",
@@ -821,7 +908,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436970",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Flutter Developer Part Time",
@@ -843,7 +930,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436968",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Digital Solutions Consultant",
@@ -865,7 +952,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436954",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Customer Support & Order Management Officer",
@@ -887,7 +974,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436947",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Consultant Nephrologist",
@@ -909,7 +996,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436946",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Lab Technician",
@@ -931,7 +1018,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436945",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Organic Social Media Growth Expert (Remote)",
@@ -953,7 +1040,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436941",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Outreach And Sales Closer Expert (Remote)",
@@ -975,7 +1062,7 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436940",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
       "title": "Field Partnership / SME Sales Executive",
@@ -997,619 +1084,95 @@
       "source": "Mustakbil",
       "source_url": "https://www.mustakbil.com/jobs/job/1436938",
       "verified_detail_page": true,
-      "fetched_at": "2026-10-27T04:27:56.445957+00:00"
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
-      "title": "Director General (MP-I), Pakistan Institute of Education",
-      "company": "",
-      "location": "Islamabad Test City(s): Islamabad Gender: Male / Female Job",
-      "category": "Government",
-      "employment_type": "",
-      "description": "Vacancy listing imported from National Jobs Portal. Open the official listing for full requirements and application instructions.",
-      "url": "https://www.njp.gov.pk/index.php/jobs/9829",
-      "source": "National Jobs Portal",
-      "source_url": "https://www.njp.gov.pk/index.php/jobs/live",
-      "fetched_at": "2026-10-27T04:46:39.526191+00:00"
-    },
-    {
-      "title": "Short Term Expert (Contract Management)",
-      "company": "",
-      "location": "Islamabad",
-      "category": "Government",
-      "employment_type": "",
-      "description": "Vacancy listing imported from National Employment Exchange. Open the official listing for full requirements and application instructions.",
-      "url": "https://jobs.gov.pk/JobSeeker/ViewJobDetails/129acf20-6a5c-49e8-ae1a-08dcc051e55e?orgId=49679fd7-ecff-4ba7-9567-7e5d9321d175&jobId=26b2699f-76b1-4340-4a03-08df2ea2fc21",
-      "source": "National Employment Exchange",
-      "source_url": "https://jobs.gov.pk/?pageid=602",
-      "fetched_at": "2026-10-27T04:46:41.730500+00:00"
-    },
-    {
-      "title": "Short Term Expert (Procurement Compliances)",
-      "company": "",
-      "location": "Islamabad",
-      "category": "Government",
-      "employment_type": "",
-      "description": "Vacancy listing imported from National Employment Exchange. Open the official listing for full requirements and application instructions.",
-      "url": "https://jobs.gov.pk/JobSeeker/ViewJobDetails/129acf20-6a5c-49e8-ae1a-08dcc051e55e?orgId=49679fd7-ecff-4ba7-9567-7e5d9321d175&jobId=f3b11090-a773-414a-4a04-08df2ea2fc21",
-      "source": "National Employment Exchange",
-      "source_url": "https://jobs.gov.pk/?pageid=602",
-      "fetched_at": "2026-10-27T04:46:41.730621+00:00"
-    },
-    {
-      "title": "SHORT TERM EXPERT (HUMAN RESOURCE MANAGEMENT)",
-      "company": "",
-      "location": "Islamabad",
-      "category": "Government",
-      "employment_type": "",
-      "description": "Vacancy listing imported from National Employment Exchange. Open the official listing for full requirements and application instructions.",
-      "url": "https://jobs.gov.pk/JobSeeker/ViewJobDetails/129acf20-6a5c-49e8-ae1a-08dcc051e55e?orgId=49679fd7-ecff-4ba7-9567-7e5d9321d175&jobId=02a301b7-6f49-4d13-5b37-08df290e86da",
-      "source": "National Employment Exchange",
-      "source_url": "https://jobs.gov.pk/?pageid=602",
-      "fetched_at": "2026-10-27T04:46:41.730715+00:00"
-    },
-    {
-      "title": "View job",
-      "company": "",
-      "location": "",
+      "title": "Pick your city",
+      "company": "’s beauty products, build strong customer relationships, and help deliver a positive buying",
+      "location": "Not specified in advertisement",
       "category": "Private",
-      "employment_type": "",
-      "description": "Vacancy listing imported from Mustakbil. Open the official listing for full requirements and application instructions.",
-      "url": "https://www.mustakbil.com/jobs/job/1437002",
+      "employment_type": "Full-time, fixed monthly",
+      "description": "Locations Pick your city All locations",
+      "education_required": "or equivalent and practical eBay or comparable marketplace",
+      "experience_needed": "US logistics or last mile operations, strong written and verbal English, coordination and problem-solving",
+      "experience_field": "US logistics or last mile operations, strong written and verbal English, coordination and problem-solving",
+      "skills_needed": ", and availability for rotating shifts. Bachelor’s degree required. Travel required.",
+      "salary": "PKR 30,000–60,000. Requires 1–2 years of professional video editing",
+      "age_limit": "ment of one project per month, with flexible hours and a morning shift.",
+      "last_date_to_apply": "Not specified in advertisement",
+      "availability": "Active",
+      "official_url": "https://www.mustakbil.com/jobs/pakistan",
+      "url": "https://www.mustakbil.com/jobs/pakistan",
       "source": "Mustakbil",
-      "source_url": "https://www.mustakbil.com/",
-      "fetched_at": "2026-10-27T04:46:42.049790+00:00"
+      "source_url": "https://www.mustakbil.com/jobs/pakistan",
+      "verified_detail_page": true,
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
-      "title": "View job",
-      "company": "",
-      "location": "Islamabad, PK",
+      "title": "Free job posting",
+      "company": "AI. Priced per job ad. About 3× to 10× more applicants Featured on the homepage Every applicant AI-ranked Fewer than 5 applicants from a Boost? Run it again free. See packages and prices Resume database Search millions of CVs free, read full profiles, and pay only for the contact details of people you want to call. Search and read CVs free Filter by skills, city and",
+      "location": "you named",
       "category": "Private",
-      "employment_type": "",
-      "description": "Vacancy listing imported from Mustakbil. Open the official listing for full requirements and application instructions.",
-      "url": "https://www.mustakbil.com/jobs/job/1436983",
+      "employment_type": "Not specified in advertisement",
+      "description": "Free job posting Post a job at no cost. AI writes the ad for you and ranks your first 25 applicants. AI writes your job ad First 25 applicants AI-ranked Boost any job for more applicants Post a job free More applicants Job posting packages Your job on the homepage and ranked above basic listings, sent to matching candidates, with every applicant ranked by AI. Priced per job ad. About 3× to 10× more applicants Featured on the homepage Every applicant AI-ranked Fewer than 5 applicants from a Boost? Run it again free. See packages and prices Resume database Search millions of CVs free, read full profiles, and pay only for the contact details of people you want to call. Search and read CVs free Filter by skills, city and experience Pay only to contact Search resumes",
+      "education_required": "Not specified in advertisement",
+      "experience_needed": "Not specified in advertisement",
+      "experience_field": "Not specified in advertisement",
+      "skills_needed": "Not specified in advertisement",
+      "salary": "Not specified in advertisement",
+      "age_limit": "for 3, 10 or 30 days, sends it to matching candidates and lets you invite up to 500 people to",
+      "last_date_to_apply": "Not specified in advertisement",
+      "availability": "Active",
+      "official_url": "https://www.mustakbil.com/employers/job-posting",
+      "url": "https://www.mustakbil.com/employers/job-posting",
       "source": "Mustakbil",
-      "source_url": "https://www.mustakbil.com/",
-      "fetched_at": "2026-10-27T04:46:42.049992+00:00"
+      "source_url": "https://www.mustakbil.com/employers/job-posting",
+      "verified_detail_page": true,
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
-      "title": "View job",
-      "company": "",
-      "location": "Islamabad, PK",
+      "title": "Built different for your career",
+      "company": "; sharing service details; and connecting interested clients with the team. No technical or formal",
+      "location": "Not specified in advertisement",
       "category": "Private",
-      "employment_type": "",
-      "description": "Vacancy listing imported from Mustakbil. Open the official listing for full requirements and application instructions.",
-      "url": "https://www.mustakbil.com/jobs/job/1436978",
+      "employment_type": "Not specified in advertisement",
+      "description": "Land your dream job in Pakistan AI-powered job matching that connects millions of job seekers with the right opportunities Job title or skill City Popular: IT jobs Lahore Karachi Islamabad Rawalpindi Remote Get started free Fresh today Latest jobs View all jobs Healthcare Outreach Representative (Remote, Night Shift, US Healthcare Company) Conversiq · Islamabad, Pakistan Remote Full-time 18 days ago PKR 100k–250k View job Architect Confidential · Karachi, Pakistan Full-time 46 days ago PKR 80k–180k View job LL Microsoft Dynamics 365 F&O Implementation Specialist Leatherware Pvt Ltd · Sialkot, Pakistan Full-time 22 hours ago PKR 100k–250k View job Ethical Hacker / Web Penetration Tester - Remote / Work From Home Geungjeong-Isangsa · Islamabad, Pakistan Remote Part-time 1 day ago PKR 40k–100k View job B2B Field Sales Executive – Printing & Corporate Branding Edvetize (Design & Print House) · Karachi, Pakistan Full-time 2 days ago PKR 30k–45k View job RL eBay Virtual Assistant (VA) — Account Management & Product Listing Retail Verge LTD · Rawalpindi, Pakistan Remote Part-time 9 hours ago PKR 20k–100k View job Business Development Officer Rizviz International Impex · Lahore, Pakistan Full-time 9 hours ago PKR 40k–80k View job Vi Video Editor - Short-Form & Long-Form Content Vispectra · Karachi, Pakistan Remote Part-time 9 hours ago PKR 30k–60k View job Last Mile Operations Executive - US Logistics CCI Insights People & Technology Services! · Karachi, Pakistan Full-time 16 hours ago PKR 100k–120k View job AI Operations & Governance Manager Print Volt · Rawalpindi, Pakistan Remote Full-time 17 hours ago PKR 50k–75k View job Customer Services Officers - Card Swiping Machines Global Tech Solutions · Islamabad, Pakistan Full-time 18 hours ago PKR 40k–120k View job Sales Intern B",
+      "education_required": "is required. Pay not disclosed View job Your next chapter starts here Create a free account to save jobs, get tailored recommendations, and",
+      "experience_needed": "Cloud Infrastructure, DevOps, or Systems Administration; Kubernetes, Terraform / Infrastructure as Code, cloud platforms, Linux/Windows administration, monitoring, SQL, networking, and security knowledge.",
+      "experience_field": "manual software QA, test execution, defect tracking, Agile/Scrum workflows, and release validation",
+      "skills_needed": "Not specified in advertisement",
+      "salary": "PKR 60,000–100,000. PKR 60k–100k View job Get hired faster with a free profile Save jobs, upload your resume once, and",
+      "age_limit": "rial position requiring 4 years of",
+      "last_date_to_apply": "Not specified in advertisement",
+      "availability": "Active",
+      "official_url": "https://www.mustakbil.com/jobs/pakistan/information-technology",
+      "url": "https://www.mustakbil.com/jobs/pakistan/information-technology",
       "source": "Mustakbil",
-      "source_url": "https://www.mustakbil.com/",
-      "fetched_at": "2026-10-27T04:46:42.050180+00:00"
+      "source_url": "https://www.mustakbil.com/jobs/pakistan/information-technology",
+      "verified_detail_page": true,
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     },
     {
-      "title": "Office of the Senior Civil Judge, Karak - 2026",
-      "company": "ETEA / Office of the Senior Civil Judge, Karak - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 886. Last date shown on ETEA portal: 25-November-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-11-25",
+      "title": "Locations",
+      "company": "s. AKH .... #Lower Chitral Aga Khan Health Service, Pakistan",
+      "location": "Industry: - Health Care Contractual - Rs",
+      "category": "Private",
+      "employment_type": "Not specified in advertisement",
+      "description": "Categories Health Care (26) Development Sector (14) Tender (8) Accounting/Auditing (6) Consultancy (4) Education (4) Others (4) Training & Development (4) Sales & Business Development (3) Agriculture (3) Media (3) Administration (3) Marketing (2) Purchasing & Procurement (2) Engineering (2) Monitoring & Evaluation (2) Communication (2) Finance (2) Project Management (1) Customer Care (1) Legal officers & Practitioners (1) Financial Services,Banking (1) Management and Executive (1) Architecture and Engineering (1) Computer and Information Technology (1) Livelihood (1) Construction (1) Enumerator (1) Advertising (1) Operations Management (1) Social Mobilization (1) Community & Social Services (1) Locations Islamabad (27) Lahore (10) Karachi (8) Gilgit (4) Shangla (4) Kp (4) Qambar Shahdadkot (3) Kohistan (2) Peshawar (2) Battagram (2) Gilgit Baltistan (2) Rawalpindi (2) Kpk (2) Astore (2) Lakki Marwat (2) Qambar (1) Sanghar & Mirpurkhas (1) Quetta/Islamabad (1) Dera Ismail Khan (1) Lahore/Islamabad (1) Kharian (1) Lower Chitral (1) District Dadu (1) Or Siovs Hyderabad (1) Dg Khan (1) Besham And Chitral Lower (1) Nowshera - Kpk (1) District Larkana (1) Pakistan (1) Larkana (1) Vehari (1) Charsadda And Malakand (1) Shahdadkot - Sindh (1) Harnai (1) Kohistan/Besham (1) Lodhran With Frequent Travel To Project Sites (1) Bahria Enclave Islamabad (1) Attock (1) Haripur/ Islamabad (1) Shangla And Chitral (1)",
+      "education_required": "Not specified in advertisement",
+      "experience_needed": "Not specified in advertisement",
+      "experience_field": "Not specified in advertisement",
+      "skills_needed": "Not specified in advertisement",
+      "salary": ". Normeca International Last date to",
+      "age_limit": "r - Qambar Shahdakot, Sindh",
+      "last_date_to_apply": "2026-11-19",
       "availability": "Active",
-      "official_url": "https://etea.online/advertisement/886_senior_civil_karak_2026.jpg",
-      "url": "https://etea.online/advertisement/886_senior_civil_karak_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "886",
-      "fetched_at": "2026-10-27T04:46:45.616240+00:00"
-    },
-    {
-      "title": "Medical Teaching Institution Hayatabad Medical Complex KGMC - 2026",
-      "company": "ETEA / Medical Teaching Institution Hayatabad Medical Complex KGMC - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 885. Last date shown on ETEA portal: 15-November-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-11-15",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/885_kgmc_2026.jpg",
-      "url": "https://etea.online/advertisement/885_kgmc_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "885",
-      "fetched_at": "2026-10-27T04:46:45.616333+00:00"
-    },
-    {
-      "title": "Conservator, Malakand Wildlife Circle Swat - 2026",
-      "company": "ETEA / Conservator, Malakand Wildlife Circle Swat - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 884. Last date shown on ETEA portal: 15-November-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-11-15",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/884_conservator_malakand_wildlife_2026.jpg",
-      "url": "https://etea.online/advertisement/884_conservator_malakand_wildlife_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "884",
-      "fetched_at": "2026-10-27T04:46:45.616384+00:00"
-    },
-    {
-      "title": "Medical Teaching Institution Khyber Teaching Hospital, Peshawar - 2026",
-      "company": "ETEA / Medical Teaching Institution Khyber Teaching Hospital, Peshawar - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 883. Last date shown on ETEA portal: 10-November-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-11-10",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/883_kth_hospital_2026.jpg",
-      "url": "https://etea.online/advertisement/883_kth_hospital_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "883",
-      "fetched_at": "2026-10-27T04:46:45.616427+00:00"
-    },
-    {
-      "title": "Peshawar High Court, Peshawar - 2026",
-      "company": "ETEA / Peshawar High Court, Peshawar - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 882. Last date shown on ETEA portal: 20-November-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-11-20",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/882_peshawar_high_court_2026.jpg",
-      "url": "https://etea.online/advertisement/882_peshawar_high_court_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "882",
-      "fetched_at": "2026-10-27T04:46:45.616467+00:00"
-    },
-    {
-      "title": "District and Sessions Judge, Upper Chitral - 2026",
-      "company": "ETEA / District and Sessions Judge, Upper Chitral - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 881. Last date shown on ETEA portal: 20-November-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-11-20",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/881_district_session_judge_chitral_2026.jpg",
-      "url": "https://etea.online/advertisement/881_district_session_judge_chitral_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "881",
-      "fetched_at": "2026-10-27T04:46:45.616507+00:00"
-    },
-    {
-      "title": "Director General Agriculture Extension Khyber Pakhtunkhwa-2026 (Junior Clerk)",
-      "company": "ETEA / Director General Agriculture Extension Khyber Pakhtunkhwa-2026 (Junior Clerk)",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 880. Last date shown on ETEA portal: 30-October-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-10-30",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/880_dg_agriculture_jc_2026.jpg",
-      "url": "https://etea.online/advertisement/880_dg_agriculture_jc_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "880",
-      "fetched_at": "2026-10-27T04:46:45.616542+00:00"
-    },
-    {
-      "title": "Forest Department KPK Demarcation Division Abbottabad - 2026",
-      "company": "ETEA / Forest Department KPK Demarcation Division Abbottabad - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 879. Last date shown on ETEA portal: 10-November-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-11-10",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/879_demarcation_abbottabad_2026.jpg",
-      "url": "https://etea.online/advertisement/879_demarcation_abbottabad_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "879",
-      "fetched_at": "2026-10-27T04:46:45.616583+00:00"
-    },
-    {
-      "title": "Director General Agriculture Extension - 2026 (Field Assistant)",
-      "company": "ETEA / Director General Agriculture Extension - 2026 (Field Assistant)",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 878. Last date shown on ETEA portal: 30-October-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-10-30",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/878_dg_agriculture_2026.jpg",
-      "url": "https://etea.online/advertisement/878_dg_agriculture_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "878",
-      "fetched_at": "2026-10-27T04:46:45.616618+00:00"
-    },
-    {
-      "title": "DFO Wildlife National Park WIldlife Division D.I.KHAN - 2026 (Implementation of Management Plan of Sheikh Buddin National Park)",
-      "company": "ETEA / DFO Wildlife National Park WIldlife Division D.I.KHAN - 2026 (Implementation of Management Plan of Sheikh Buddin National Park)",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 877. Last date shown on ETEA portal: 06-November-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-11-06",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/877_dfo_wildlife_dikhan_2026.jpeg",
-      "url": "https://etea.online/advertisement/877_dfo_wildlife_dikhan_2026.jpeg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "877",
-      "fetched_at": "2026-10-27T04:46:45.616654+00:00"
-    },
-    {
-      "title": "Peshawar High Court Abbottabad Bench - 2026",
-      "company": "ETEA / Peshawar High Court Abbottabad Bench - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 876. Last date shown on ETEA portal: 15-November-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-11-15",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/876_peshawar_high_court_2026.jpg",
-      "url": "https://etea.online/advertisement/876_peshawar_high_court_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "876",
-      "fetched_at": "2026-10-27T04:46:45.616686+00:00"
-    },
-    {
-      "title": "MTI Mardan - 2026",
-      "company": "ETEA / MTI Mardan - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 875. Last date shown on ETEA portal: 31-October-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-10-31",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/875_mti_mardan_2026.jpg",
-      "url": "https://etea.online/advertisement/875_mti_mardan_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "875",
-      "fetched_at": "2026-10-27T04:46:45.616720+00:00"
-    },
-    {
-      "title": "Peshawar Electric Supply Company (PESCO) - 2026",
-      "company": "ETEA / Peshawar Electric Supply Company (PESCO) - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 874. Last date shown on ETEA portal: 10-November-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-11-10",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/874_pesco_2026.jpg",
-      "url": "https://etea.online/advertisement/874_pesco_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "874",
-      "fetched_at": "2026-10-27T04:46:45.616752+00:00"
-    },
-    {
-      "title": "Ayub Medical College- 2026",
-      "company": "ETEA / Ayub Medical College- 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 873. Last date shown on ETEA portal: 05-November-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-11-05",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/873_ayub_medical_2026.jpeg",
-      "url": "https://etea.online/advertisement/873_ayub_medical_2026.jpeg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "873",
-      "fetched_at": "2026-10-27T04:46:45.616783+00:00"
-    },
-    {
-      "title": "MTI Nowshera- 2026",
-      "company": "ETEA / MTI Nowshera- 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 872. Last date shown on ETEA portal: 02-November-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-11-02",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/872_mti_nowshera_2026.jpg",
-      "url": "https://etea.online/advertisement/872_mti_nowshera_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "872",
-      "fetched_at": "2026-10-27T04:46:45.616814+00:00"
-    },
-    {
-      "title": "DHO Chitral Upper - 2026",
-      "company": "ETEA / DHO Chitral Upper - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 871. Last date shown on ETEA portal: 05-November-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-11-05",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/871_dho_upper_chitral_2026.jpg",
-      "url": "https://etea.online/advertisement/871_dho_upper_chitral_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "871",
-      "fetched_at": "2026-10-27T04:46:45.616846+00:00"
-    },
-    {
-      "title": "Khyber Institute of Child Health and Children Hospital Hayatabad Peshawar - 2026",
-      "company": "ETEA / Khyber Institute of Child Health and Children Hospital Hayatabad Peshawar - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 870. Last date shown on ETEA portal: 27-October-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-10-27",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/870_kich_2026.jpg",
-      "url": "https://etea.online/advertisement/870_kich_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "870",
-      "fetched_at": "2026-10-27T04:46:45.616879+00:00"
-    },
-    {
-      "title": "Conservator Wildlife Swat Zoo - 2026",
-      "company": "ETEA / Conservator Wildlife Swat Zoo - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 869. Last date shown on ETEA portal: 30-October-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-10-30",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/869_swat_zoo_2026.pdf",
-      "url": "https://etea.online/advertisement/869_swat_zoo_2026.pdf",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "869",
-      "fetched_at": "2026-10-27T04:46:45.616929+00:00"
-    },
-    {
-      "title": "Khyber Girls Medical College (KGMC) - 2026",
-      "company": "ETEA / Khyber Girls Medical College (KGMC) - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 868. Last date shown on ETEA portal: 27-October-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-10-27",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/868_kgmc_2026.jpg",
-      "url": "https://etea.online/advertisement/868_kgmc_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "868",
-      "fetched_at": "2026-10-27T04:46:45.616966+00:00"
-    },
-    {
-      "title": "Bacha Khan Medical Complex Swabi Medical Teaching Institution - 2026",
-      "company": "ETEA / Bacha Khan Medical Complex Swabi Medical Teaching Institution - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 866. Last date shown on ETEA portal: 27-October-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-10-27",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/866_bkmc_2026.pdf",
-      "url": "https://etea.online/advertisement/866_bkmc_2026.pdf",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "866",
-      "fetched_at": "2026-10-27T04:46:45.617001+00:00"
-    },
-    {
-      "title": "Director General Soil and Water Conservation - 2026",
-      "company": "ETEA / Director General Soil and Water Conservation - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 865. Last date shown on ETEA portal: 27-October-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-10-27",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/865_dg_soil_2026.jpg",
-      "url": "https://etea.online/advertisement/865_dg_soil_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "865",
-      "fetched_at": "2026-10-27T04:46:45.617034+00:00"
-    },
-    {
-      "title": "Senior Civil Judge Mansehra - 2026",
-      "company": "ETEA / Senior Civil Judge Mansehra - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 859. Last date shown on ETEA portal: 30-October-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-10-30",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/859_senior_judge_mansehra_2026.jpg",
-      "url": "https://etea.online/advertisement/859_senior_judge_mansehra_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "859",
-      "fetched_at": "2026-10-27T04:46:45.617067+00:00"
-    },
-    {
-      "title": "Senior Civil Judge Bannu - 2026",
-      "company": "ETEA / Senior Civil Judge Bannu - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 858. Last date shown on ETEA portal: 30-November-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-11-30",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/858_senior_judge_bannu_2026.jpg",
-      "url": "https://etea.online/advertisement/858_senior_judge_bannu_2026.jpg",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "858",
-      "fetched_at": "2026-10-27T04:46:45.617101+00:00"
-    },
-    {
-      "title": "District Judge Kohat - 2026",
-      "company": "ETEA / District Judge Kohat - 2026",
-      "location": "Khyber Pakhtunkhwa",
-      "category": "Government",
-      "employment_type": "Government Recruitment",
-      "description": "ETEA recruitment project 857. Last date shown on ETEA portal: 30-October-2026. Open the official advertisement for eligibility, vacancies, and application instructions.",
-      "education_required": "See official advertisement",
-      "experience_needed": "See official advertisement",
-      "experience_field": "",
-      "skills_needed": "See official advertisement",
-      "salary": "See official advertisement",
-      "age_limit": "See official advertisement",
-      "last_date_to_apply": "2026-10-30",
-      "availability": "Active",
-      "official_url": "https://etea.online/advertisement/857_distict_judge_kohat_sep_2026.pdf",
-      "url": "https://etea.online/advertisement/857_distict_judge_kohat_sep_2026.pdf",
-      "source": "ETEA",
-      "source_url": "https://etea.online/",
-      "project_code": "857",
-      "fetched_at": "2026-10-27T04:46:45.617133+00:00"
+      "official_url": "https://auth.brightspyre.com/jobs?category=583",
+      "url": "https://auth.brightspyre.com/jobs?category=583",
+      "source": "BrightSpyre",
+      "source_url": "https://auth.brightspyre.com/jobs?category=583",
+      "verified_detail_page": true,
+      "fetched_at": "2026-10-27T05:27:08.671920+00:00"
     }
   ]
 }
