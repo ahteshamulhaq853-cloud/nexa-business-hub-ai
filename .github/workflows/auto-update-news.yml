@@ -33,9 +33,9 @@ jobs:
             return ""
 
           def clean(value):
-            value = re.sub(r"(?is)<(script|style).*?>.*?</\\1>", " ", value or "")
+            value = re.sub(r"(?is)<(script|style).*?>.*?</\1>", " ", value or "")
             value = re.sub(r"(?s)<[^>]+>", " ", value)
-            return re.sub(r"\\s+", " ", html.unescape(value)).strip()
+            return re.sub(r"\s+", " ", html.unescape(value)).strip()
 
           def parse_date(value):
             if not value: return ""
