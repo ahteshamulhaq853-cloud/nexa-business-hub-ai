@@ -1508,6 +1508,36 @@ header .brand-word small{
 #nexaUrduNewsPanel .card span {
   line-height: 1.55 !important;
 }
+
+/* Compact login / registration screen: reduce excess vertical space */
+#accountPage{max-width:900px!important}
+#accountPage>.hero{
+ padding:18px 22px!important;min-height:0!important;margin-bottom:12px!important;
+ border-radius:16px!important;box-shadow:0 12px 32px #0006!important
+}
+#accountPage>.hero h1{
+ font-size:clamp(27px,4vw,42px)!important;line-height:1.08!important;
+ margin:7px 0 8px!important;letter-spacing:-.7px!important
+}
+#accountPage>.hero .eyebrow{font-size:9px!important;margin-bottom:3px!important}
+#accountPage>.hero p{font-size:13px!important;line-height:1.45!important;margin:0 0 9px!important}
+#accountPage>.hero .pill{font-size:9px!important;padding:5px 9px!important;line-height:1.4!important}
+#accountPage>.grid{gap:12px!important}
+#accountPage>.grid>.card{padding:16px!important;border-radius:14px!important}
+#accountPage h2{font-size:22px!important;margin:5px 0 12px!important}
+#accountPage label{font-size:11px!important;margin-bottom:4px!important}
+#accountPage input,#accountPage select,#accountPage textarea{min-height:39px!important;padding:9px 11px!important;border-radius:8px!important}
+#accountPage .field{margin-bottom:9px!important}
+#accountPage form button[type="submit"]{min-height:41px!important;margin-top:4px!important;padding:9px 12px!important}
+#accountPage .auth-switch{margin:10px 0 0!important}
+#accountPage .muted{font-size:12px!important;line-height:1.5!important}
+@media(max-width:700px){
+ #accountPage>.hero{padding:16px!important;margin-bottom:10px!important}
+ #accountPage>.hero h1{font-size:clamp(25px,7vw,34px)!important}
+ #accountPage>.grid{gap:10px!important}
+ #accountPage>.grid>.card{padding:14px!important}
+}
+
 </style>
 </head>
 <body>
