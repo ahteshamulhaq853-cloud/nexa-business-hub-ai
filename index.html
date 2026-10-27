@@ -2129,7 +2129,13 @@ header .brand-word small{
    <p id="nexaNewsStatus" class="muted" role="status">News feed check ho rahi hai…</p>
   </div>
   <div id="nexaUrduNewsPanel" style="display:none">
-   <div class="studio-section-heading"><div><span class="studio-kicker">URDU</span><h3>اردو خبریں</h3><p class="muted">تازہ اردو خبریں</p></div></div>
+   <div class="studio-section-heading"><div><span class="studio-kicker">URDU</span><h3>اردو خبریں</h3><p class="muted">قومی، بین الاقوامی اور مقامی خبریں منتخب کریں</p></div></div>
+   <div class="news-filter-tabs" role="group" aria-label="اردو خبروں کی قسم" style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 16px">
+    <button type="button" class="secondary-btn active" data-urdu-news-filter="national" onclick="filterNexaUrduNews('national',this)">قومی خبریں</button>
+    <button type="button" class="secondary-btn" data-urdu-news-filter="international" onclick="filterNexaUrduNews('international',this)">بین الاقوامی خبریں</button>
+    <button type="button" class="secondary-btn" data-urdu-news-filter="local" onclick="filterNexaUrduNews('local',this)">مقامی خبریں</button>
+    <button type="button" class="secondary-btn" data-urdu-news-filter="all" onclick="filterNexaUrduNews('all',this)">تمام خبریں</button>
+   </div>
    <div id="nexaUrduNewsList" class="grid two" aria-live="polite"><article class="card"><p class="muted">اردو خبریں لوڈ ہو رہی ہیں…</p></article></div>
   </div>
   <div id="nexaEnglishNewsPanel" style="display:none">
@@ -2186,6 +2192,22 @@ function bottomNavigate(id,button){
  document.querySelectorAll('#bottomNav button').forEach(b=>b.classList.toggle('active',b===button));
 }
 let nexaNewsLastLoaded=0;
+let nexaUrduNewsItems=[];
+let nexaUrduNewsFilter="national";
+function classifyNexaUrduNews(item){
+ const t=(String(item.title||"")+" "+String(item.summary||"")+" "+String(item.category||"")).toLowerCase();
+ const localTerms=["bannu","بنوں","پشاور","پشاور","خیبر پختونخوا","خیبرپختونخوا","کے پی","مردان","کوہاٹ","ڈیرہ اسماعیل خان","لکی مروت","ٹانک","کرک","ہنگو","چارسدہ","نوشہرہ","سوات","ایبٹ آباد","مانسہرہ","باجوڑ","مہمند","وزیرستان","اورکزئی","کرم","خیبر","چترال","شانگلہ","بونیر","پاکستان کے ضلع"];
+ if(localTerms.some(term=>t.includes(term)))return "local";
+ const internationalTerms=["اقوام متحدہ","سلامتی کونسل","امریکا","امریکی","برطانیہ","برطانوی","چین","چینی","بھارت","انڈیا","اسرائیل","غزہ","فلسطین","ایران","افغانستان","روس","یوکرین","یورپی یونین","بنگلہ دیش","سری لنکا","نیپال","جاپان","عالمی","بین الاقوامی","امریکی صدر","ٹرمپ","نیتن یاہو","اقوام عالم","مشرق وسطی","اقوام متحدہ"];
+ if(internationalTerms.some(term=>t.includes(term)))return "international";
+ return "national";
+}
+function filterNexaUrduNews(filter,button){
+ nexaUrduNewsFilter=filter;
+ document.querySelectorAll("[data-urdu-news-filter]").forEach(b=>b.classList.toggle("active",b===button));
+ const selected=filter==="all"?nexaUrduNewsItems:nexaUrduNewsItems.filter(item=>classifyNexaUrduNews(item)===filter);
+ renderNexaNewsGroup("nexaUrduNewsList",selected,"ur");
+}
 function escapeNewsHTML(value){return String(value==null?"":value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));}
 function newsDate(value){if(!value)return "Recent";const d=new Date(value);return isNaN(d.getTime())?"Recent":d.toLocaleString(undefined,{dateStyle:"medium",timeStyle:"short"});}
 function toggleNexaNewsDetails(button){
@@ -2242,7 +2264,9 @@ async function loadNexaNews(force=false){
   if(!items.length)throw new Error("Abhi feed mein headlines nahi hain. GitHub Actions ka pehla successful run zaroori hai.");
   const urdu=items.filter(item=>String(item.language||"en").toLowerCase().startsWith("ur"));
   const english=items.filter(item=>!String(item.language||"en").toLowerCase().startsWith("ur"));
-  renderNexaNewsGroup("nexaUrduNewsList",urdu,"ur");
+  nexaUrduNewsItems=urdu;
+  const activeFilter=document.querySelector('[data-urdu-news-filter].active');
+  filterNexaUrduNews(nexaUrduNewsFilter,activeFilter||document.querySelector('[data-urdu-news-filter="national"]'));
   renderNexaNewsGroup("nexaEnglishNewsList",english,"en");
   $("nexaUrduNewsList").dataset.loaded="yes";
   status.textContent="Updated: "+newsDate(payload.updated)+" · Urdu: "+urdu.length+" · English: "+english.length;
