@@ -1997,25 +1997,19 @@ header .brand-word small{
  <div class="actions"><button class="secondary" onclick="showPage('servicesPage')">← Back to Services</button><button class="secondary" onclick="showPage('dashboardPage')">Dashboard</button></div>
 </section>
 <section id="latestNewsPage" class="page">
- <div class="studio-section-heading"><div><span class="studio-kicker">NEXA NEWS DESK</span><h2>Latest News</h2><p class="muted">Pakistan aur duniya ki latest headlines. Khabar parhne ke liye source link open karein.</p></div></div>
- <div class="card" style="margin-bottom:18px">
-  <h3>📰 News Sources</h3>
-  <p class="muted">Neeche diye gaye trusted news pages se latest updates dekhein. News websites par headlines waqt ke saath update hoti rehti hain.</p>
-  <div class="actions">
-   <a class="button" href="https://www.dawn.com/latest-news" target="_blank" rel="noopener noreferrer">Dawn — Latest</a>
-   <a class="button secondary" href="https://tribune.com.pk/" target="_blank" rel="noopener noreferrer">Express Tribune</a>
-   <a class="button secondary" href="https://www.app.com.pk/latest-news/" target="_blank" rel="noopener noreferrer">APP Pakistan</a>
-   <a class="button secondary" href="https://urdu.arynews.tv/category/pakistan-2/" target="_blank" rel="noopener noreferrer">ARY Urdu</a>
-  </div>
+ <div class="studio-section-heading"><div><span class="studio-kicker">NEXA NEWS DESK</span><h2>Latest News</h2><p class="muted">Pakistan aur duniya ki taza headlines — ye list automatically update hoti rahegi.</p></div></div>
+ <div class="card" style="margin-bottom:16px">
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><div><h3 style="margin:0 0 6px">📰 Live News Feed</h3><p class="muted" style="margin:0">Nayi headlines GitHub Actions ke zariye taqreeban har 30 minute mein publish hongi. Har khabar ke saath original source diya jayega.</p></div><button type="button" onclick="loadNexaNews(true)">↻ Refresh</button></div>
+  <p id="nexaNewsStatus" class="muted" role="status">Latest news load ho rahi hai…</p>
  </div>
- <div class="studio-section-heading"><div><span class="studio-kicker">TOP STORIES</span><h3>Latest Headlines</h3><p class="muted">Headlines dated 27 October 2026. Tap a headline to read the full report from its publisher.</p></div></div>
- <div class="grid two">
-  <article class="card"><span class="studio-kicker">PAKISTAN · ECONOMY</span><h3>Pakistan raises policy rate amid economic pressures</h3><p class="muted">Read the latest report on interest rates and economic developments.</p><a href="https://www.arabnews.pk/" target="_blank" rel="noopener noreferrer">Read on Arab News Pakistan ↗</a></article>
-  <article class="card"><span class="studio-kicker">PAKISTAN · DIPLOMACY</span><h3>Regional talks continue amid Middle East tensions</h3><p class="muted">Updates on diplomatic discussions and regional security.</p><a href="https://www.aa.com.tr/en/" target="_blank" rel="noopener noreferrer">Read on Anadolu Agency ↗</a></article>
-  <article class="card"><span class="studio-kicker">PAKISTAN · BUSINESS</span><h3>Pakistan’s markets and business updates</h3><p class="muted">Follow business, markets, energy and economic news.</p><a href="https://tribune.com.pk/business" target="_blank" rel="noopener noreferrer">Read Business News ↗</a></article>
-  <article class="card"><span class="studio-kicker">URDU NEWS</span><h3>پاکستان کی تازہ ترین خبریں</h3><p class="muted">اردو میں تازہ خبریں اور اہم قومی اپ ڈیٹس پڑھیں۔</p><a href="https://urdu.arynews.tv/category/pakistan-2/" target="_blank" rel="noopener noreferrer">خبریں پڑھیں ↗</a></article>
- </div>
- <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button><button type="button" onclick="openNexaNewsSources()">Open News Websites</button></div>
+ <div id="nexaNewsList" class="grid two" aria-live="polite"><article class="card"><p class="muted">Latest headlines load ho rahi hain…</p></article></div>
+ <div class="card" style="margin-top:16px"><h3>News Publishers</h3><p class="muted">Headlines aur short summaries publishers ki feeds se aati hain. Mukammal report ke liye original publisher ka link kholein.</p><div class="actions">
+  <a class="button" href="https://www.dawn.com/latest-news" target="_blank" rel="noopener noreferrer">Dawn</a>
+  <a class="button secondary" href="https://tribune.com.pk/" target="_blank" rel="noopener noreferrer">Express Tribune</a>
+  <a class="button secondary" href="https://www.app.com.pk/latest-news/" target="_blank" rel="noopener noreferrer">APP Pakistan</a>
+  <a class="button secondary" href="https://arynews.tv/" target="_blank" rel="noopener noreferrer">ARY News</a>
+ </div></div>
+ <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
 </section>
 </main>
 <nav id="bottomNav" aria-label="Main navigation">
@@ -2062,6 +2056,26 @@ function clearMsg(id){$(id).textContent="";$(id).className="message"}
 function bottomNavigate(id,button){
  showPage(id);
  document.querySelectorAll('#bottomNav button').forEach(b=>b.classList.toggle('active',b===button));
+}
+let nexaNewsLastLoaded=0;
+function escapeNewsHTML(value){return String(value==null?"":value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));}
+function newsDate(value){if(!value)return "Recent";const d=new Date(value);return isNaN(d.getTime())?"Recent":d.toLocaleString(undefined,{dateStyle:"medium",timeStyle:"short"});}
+async function loadNexaNews(force=false){
+ const list=$("nexaNewsList"),status=$("nexaNewsStatus");if(!list||!status)return;
+ if(!force&&Date.now()-nexaNewsLastLoaded<60000&&list.dataset.loaded==="yes")return;
+ status.textContent="Latest news load ho rahi hai…";
+ try{
+  const response=await fetch("news.json?updated="+Date.now(),{cache:"no-store"});
+  if(!response.ok)throw new Error("News feed abhi available nahi (HTTP "+response.status+").");
+  const payload=await response.json(),items=Array.isArray(payload.items)?payload.items:[];
+  if(!items.length)throw new Error("Feed mein abhi headlines nahi hain. Kuch der baad dobara try karein.");
+  list.innerHTML=items.map(item=>'<article class="card"><span class="studio-kicker">'+escapeNewsHTML(item.source||"NEWS")+' · '+escapeNewsHTML(item.category||"LATEST")+'</span><h3>'+escapeNewsHTML(item.title||"Latest News")+'</h3><p class="muted">'+escapeNewsHTML(item.summary||"Original publisher se poori khabar parhein.")+'</p><p class="muted" style="font-size:12px">🕒 '+escapeNewsHTML(newsDate(item.published))+'</p><a href="'+escapeNewsHTML(item.link||"#")+'" target="_blank" rel="noopener noreferrer">Read Full Story ↗</a></article>').join("");
+  status.textContent="Updated: "+newsDate(payload.updated)+" · "+items.length+" headlines";
+  list.dataset.loaded="yes";nexaNewsLastLoaded=Date.now();
+ }catch(error){
+  status.textContent="News load nahi ho saki. Internet check karein ya thori der baad Refresh dabayein. ("+error.message+")";
+  if(list.dataset.loaded!=="yes")list.innerHTML='<article class="card"><h3>News feed abhi tayyar ho rahi hai</h3><p class="muted">Automated feed ka pehla update chalne mein kuch minute lag sakte hain. Refresh dobara try karein.</p></article>';
+ }
 }
 function openNexaNewsSources(){
  window.open("https://www.dawn.com/latest-news","_blank","noopener,noreferrer");
@@ -2171,6 +2185,7 @@ function showPage(id){
  document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
  $(id).classList.add("active");window.scrollTo({top:0,behavior:"smooth"});
  if(id==="latestJobsPage")loadNexaJobs();
+ if(id==="latestNewsPage")loadNexaNews();
  if(id==="europassPage")loadEuropass();
  if(id==="paymentPage")loadMyOrders();
  if(id==="adminPage")loadAdminOrders();
