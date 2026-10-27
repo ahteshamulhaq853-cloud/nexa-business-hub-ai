@@ -2107,8 +2107,11 @@ header .brand-word small{
     </div>
     <div class="field">
      <label for="manualNewspaperFiles">Select PDF file(s)</label>
-     <input id="manualNewspaperFiles" type="file" accept="application/pdf,.pdf" multiple onchange="handleManualNewspaperUpload(event)">
-     <small class="muted">Har PDF 8 MB ya us se chhoti honi chahiye. Upload hone par file public repository mein save hogi.</small>
+     <input id="manualNewspaperFiles" type="file" accept="application/pdf,.pdf" multiple>
+     <small class="muted">Har PDF 8 MB ya us se chhoti honi chahiye. File select karne ke baad neeche Upload button dabayein.</small>
+    </div>
+    <div class="actions" style="margin-top:12px">
+     <button type="button" id="uploadNewspaperButton" onclick="uploadSelectedNewspaperPdfs()">📤 Upload PDF to GitHub</button>
     </div>
     <p class="muted" style="margin-bottom:0">Sirf woh PDFs upload karein jinhein aap share karne ke haqdar hain. File names unique rakhein; same name wali file dobara upload nahi hogi.</p>
    </div>
@@ -3182,6 +3185,11 @@ async function loadPublicNewspaperPdfs(){
    card.append(title,meta,link);list.appendChild(card);
   });
  }catch(error){status.textContent='PDF list load nahi hui: '+(error.message||'Network error');}
+}
+function uploadSelectedNewspaperPdfs(){
+ const input=document.getElementById('manualNewspaperFiles');
+ if(!input){return;}
+ handleManualNewspaperUpload({target:input});
 }
 async function handleManualNewspaperUpload(event){
  const input=event.target;
