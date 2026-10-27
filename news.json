@@ -1,6 +1,66 @@
 {
-  "updated": "2026-10-27T11:08:45.676822+00:00",
+  "updated": "2026-10-27T11:41:31.967536+00:00",
   "items": [
+    {
+      "title": "UK and EU officials to discuss freedom of movement",
+      "link": "https://www.bbc.co.uk/news/articles/cmqlngkz0elxo?at_medium=RSS&at_campaign=rss",
+      "summary": "Officials are expected to begin discussions on a range of options for the future UK-EU relationship before a summit next month.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9def/live/df52aa20-d1f7-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-10-27T11:29:23+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "At UNGA debate, Pakistan warns against adding more permanent members to Security Council, extending veto privileges",
+      "link": "https://www.dawn.com/news/2040183/at-unga-debate-pakistan-warns-against-adding-more-permanent-members-to-security-council-extending-veto-privileges",
+      "summary": "Pakistan has warned that adding more permanent members to the United Nations Security Council (UNSC) and extending veto privileges would “deepen existing inequalities, perpetuate historical advantages and increase the risk of Council paralysis”. The counsellor at the Pakistan Mission at UN, Gul Qaiser Sarwani, presented these views at the UN General Assembly",
+      "image_url": "https://i.dawn.com/large/2026/09/19224151e216fb7.webp",
+      "published": "2026-10-27T11:27:08+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Truce begins in Ukraine city where residents ate weeds to survive",
+      "link": "https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo?at_medium=RSS&at_campaign=rss",
+      "summary": "The Oleshky ceasefire, which the White House said was secured by US First Lady Melania Trump, is meant to allow aid to get in and civilians to get out.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/af90/live/ca109650-d1b0-11f1-93f3-e3ba7480d857.jpg",
+      "published": "2026-10-27T11:17:27+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Pakistan, China launch information corridor 'CPIC' to counter misleading narratives, promote cultural exchange",
+      "link": "https://www.dawn.com/news/2040200/pakistan-china-launch-information-corridor-cpic-to-counter-misleading-narratives-promote-cultural-exchange",
+      "summary": "Pakistan and China have launched the China-Pakistan Information Corridor (CPIC), with Information Minister Ataullah Tarar saying that the initiative will focus on countering misleading narratives, cultural exchanges and cooperation between think tanks. The corridor was launched at a ceremony in Islamabad, which was televised on Tuesday. Chinese Foreign Minis",
+      "image_url": "https://i.dawn.com/large/2026/10/27160020e8720df.webp",
+      "published": "2026-10-27T11:16:53+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Chancellor to cut tariffs on some food and freeze fuel duty to give families 'breathing space'",
+      "link": "https://www.bbc.co.uk/news/articles/c6d93gq1xdgno?at_medium=RSS&at_campaign=rss",
+      "summary": "A series of small announcements are part of John Healey's pledge to give households help with the cost of living.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/055d/live/fd74d4f0-d1ee-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-10-27T11:15:53+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Turnout so far highest in decades as Israelis vote in pivotal election",
+      "link": "https://www.bbc.co.uk/news/articles/c3j47l4kdez4o?at_medium=RSS&at_campaign=rss",
+      "summary": "The elections - the first since the Hamas-led attacks on Israel and the wars which followed - are widely seen as a referendum on Benjamin Netanyahu.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9543/live/7b21c3e0-d1cc-11f1-837e-832a94a7445c.png",
+      "published": "2026-10-27T11:11:33+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Destructive Abhishek 113 leads India to series win over New Zealand",
       "link": "https://arynews.tv/destructive-abhishek-113-leads-india-to-series-win-over-new-zealand",
@@ -20,16 +80,6 @@
       "source": "BBC Urdu",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "UK and EU officials to discuss freedom of movement",
-      "link": "https://www.bbc.co.uk/news/articles/cmqlngkz0elxo?at_medium=RSS&at_campaign=rss",
-      "summary": "Officials are expected to begin discussions on a range of options for the future UK-EU relationship before a summit next month.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a0b1/live/d7989070-d1e2-11f1-8e07-c79267b33d55.png",
-      "published": "2026-10-27T11:02:53+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
     },
     {
       "title": "120-day deadline set for shrimp farming roadmap",
@@ -64,7 +114,7 @@
     {
       "title": "Two charged over alleged plot to assist Iran in RAF Fairford incident",
       "link": "https://www.bbc.co.uk/news/articles/cqly3v5vz4kko?at_medium=RSS&at_campaign=rss",
-      "summary": "Mohmed Ahmad Abdulkarim and Nouman Essghir, both 24, will appear at Westminster Magistrates' Court later.",
+      "summary": "Mohmed Ahmad Abdulkarim and Nouman Essghir, both 24, will appear at Westminster Magistrates' Court on Tuesday.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4072/live/4e196450-d1ec-11f1-a701-fddedf244c16.png",
       "published": "2026-10-27T10:54:54+00:00",
       "source": "BBC News",
@@ -282,20 +332,10 @@
       "language": "ur"
     },
     {
-      "title": "Turnout highest since 1981 as Israelis vote in pivotal election",
-      "link": "https://www.bbc.co.uk/news/articles/c3j47l4kdez4o?at_medium=RSS&at_campaign=rss",
-      "summary": "Many fear neither of the leading political blocs will win enough seats for a majority - meaning weeks or months of political wrangling may lie ahead.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9543/live/7b21c3e0-d1cc-11f1-837e-832a94a7445c.png",
-      "published": "2026-10-27T10:14:00+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "MPs and MSP detained by Israel and barred from entering West Bank",
       "link": "https://www.bbc.co.uk/news/articles/cqg7xenmde78o?at_medium=RSS&at_campaign=rss",
       "summary": "SNP MP Lara Bird and the Scottish Greens MSP Kate Nevens were part of an international delegation turned away by Israeli security forces.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e6ef/live/cf573070-d1f0-11f1-b441-2b33b063138f.jpg",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7bf3/live/532f6ba0-d1f7-11f1-93e1-3b657b665bcf.jpg",
       "published": "2026-10-27T10:11:46+00:00",
       "source": "BBC News",
       "category": "World",
@@ -310,16 +350,6 @@
       "source": "UrduPoint",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "Chancellor to cut tariffs on some staple goods to offer cost of living help",
-      "link": "https://www.bbc.co.uk/news/articles/c6d93gq1xdgno?at_medium=RSS&at_campaign=rss",
-      "summary": "A series of small announcements are part of John Healey's pledge to give households help with the cost of living.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/055d/live/fd74d4f0-d1ee-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-10-27T10:10:31+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
     },
     {
       "title": "No pressure from US to cut Russian oil imports, says Indian oil minister",
@@ -489,16 +519,6 @@
       "published": "2026-10-27T09:19:14+00:00",
       "source": "ARY News",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Truce begins in Ukraine city where residents ate weeds to survive",
-      "link": "https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo?at_medium=RSS&at_campaign=rss",
-      "summary": "The ceasefire in Oleshky, secured by US First Lady Melania Trump, is meant to allow aid deliveries and the evacuation of civilians.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/af90/live/ca109650-d1b0-11f1-93f3-e3ba7480d857.jpg",
-      "published": "2026-10-27T09:18:44+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     },
     {
@@ -742,16 +762,6 @@
       "language": "ur"
     },
     {
-      "title": "At UNGA debate, Pakistan warns against adding more members to Security Council, extending veto privileges",
-      "link": "https://www.dawn.com/news/2040183/at-unga-debate-pakistan-warns-against-adding-more-members-to-security-council-extending-veto-privileges",
-      "summary": "Pakistan has warned that adding more permanent members to the United Nations Security Council (UNSC) and extending veto privileges would “deepen existing inequalities, perpetuate historical advantages and increase the risk of Council paralysis”. The counsellor at the Pakistan Mission at UN, Gul Qaiser Sarwani, presented these views at the UN General Assembly",
-      "image_url": "https://i.dawn.com/large/2026/09/19224151e216fb7.webp",
-      "published": "2026-10-27T07:08:28+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
       "title": "Pakistan's last antique restorers give old treasures new life",
       "link": "https://www.dawn.com/news/2040182/pakistans-last-antique-restorers-give-old-treasures-new-life",
       "summary": "Sitting outside his small shop in a warren of alleyways in Rawalpindi, Ahsan Shakeel buffed an antique brass pot to a high shine, pressing it against a mechanised wheel. “We’ve removed all the dents, but it still needs polishing,” the 72-year-old restorer, among the last still practising his craft, told AFP as the spinning buffer sent fine metal dust into th",
@@ -802,6 +812,26 @@
       "language": "en"
     },
     {
+      "title": "انڈر 19 ایشیا کپ: دفاعی چیمپئن پاکستان نے 15 رکنی اسکواڈ کا اعلان کردیا",
+      "link": "https://www.express.pk/story/2840684/defending-champions-pakistan-announce-squad-for-acc-mens-u19-asia-cup-2840684/",
+      "summary": "پاکستان نے گزشتہ ایڈیشن کے فائنل میں بھارت کو 191 رنز سے شکست دے کر ٹائٹل جیتا تھا",
+      "image_url": "",
+      "published": "2026-10-27T06:31:37+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "اسلام آباد ہائیکورٹ، کشمیر احتجاج کے خلاف مقدمات خارج کرنے کی درخواستیں مسترد",
+      "link": "https://www.express.pk/story/2840683/islamabad-high-court-rejects-pleas-to-quash-cases-over-kashmir-protest-2840683/",
+      "summary": "ٹرائل کورٹ میرٹ پر کیس سنے، اسلام آباد ہائی کورٹ کا فیصلہ",
+      "image_url": "",
+      "published": "2026-10-27T06:25:21+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Jordan strikes militant groups in Syria after church attack",
       "link": "https://www.dawn.com/news/2040176/jordan-strikes-militant-groups-in-syria-after-church-attack",
       "summary": "The Jordanian military said it had struck “terrorist organisations” in neighbouring Syria on Monday in retaliation for a deadly attack on a church last week, hours after authorities arrested three men they accused of the killings. It said air force jets had “destroyed several terrorist positions” and killed and wounded “numerous members” of groups linked to ",
@@ -842,6 +872,16 @@
       "language": "en"
     },
     {
+      "title": "نو مئی کیس: حماد اظہر کے مزید جسمانی ریمانڈ کی استدعا مسترد",
+      "link": "https://www.express.pk/story/2840679/hammad-azhar-sent-to-jail-on-judicial-remand-2840679/",
+      "summary": "انسداد دہشتگردی کی خصوصی عدالت نے پی ٹی آئی رہنما کو جوڈیشل ریمانڈ پر جیل بھیج دیا",
+      "image_url": "",
+      "published": "2026-10-27T06:14:10+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "شہریوں کی مشکلات اور پریشانیوں کو دور کرنا ہماری ذمے داری ہے: مرتضیٰ وہاب",
       "link": "https://jang.com.pk/news/1628200",
       "summary": "میئر کراچی مرتضیٰ وہاب—فائل فوٹومیئر کراچی مرتضیٰ وہاب نے کہا ہے کہ شہریوں کی مشکلات اور پریشانیوں کو دور کرنا ہماری ذمے داری...",
@@ -858,6 +898,16 @@
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-27/b_1628190_111007_updates.jpg\"/",
       "published": "2026-10-27T06:10:33+00:00",
       "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "پیلے دانتوں کو سفید اور چمکدار کیسے بنائیں؟ جانیے آسان طریقے",
+      "link": "https://www.express.pk/story/2840678/how-to-make-yellow-teeth-white-and-shiny-learn-some-easy-methods-2840678/",
+      "summary": "دانتوں کی رنگت متاثر ہونے کی کئی وجوہات ہو سکتی ہیں",
+      "image_url": "",
+      "published": "2026-10-27T06:03:50+00:00",
+      "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
     },
@@ -932,71 +982,21 @@
       "language": "en"
     },
     {
-      "title": "Minister blames closure of border for LPG price hike",
-      "link": "https://www.dawn.com/news/2040031/minister-blames-closure-of-border-for-lpg-price-hike",
-      "summary": "ISLAMABAD: The National Assembly was apprised on Monday that closure of Pakistan-Iran border was one of the main reasons of sky rocketing price of Liquefied Petroleum Gas (LPG) in the country. “Closure of Pak-Iran border is one of the main reasons of high prices of LPG and now we are trying to get the fuel from sea route,” said Federal Minister for Petroleum",
-      "image_url": "https://i.dawn.com/large/2025/12/071431438ed8305.webp",
-      "published": "2026-10-27T05:34:44+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "کراچی: اقدام قتل اور پولیس مقابلے کے مقدمات میں 2 ملزمان کو دو، دو بار سزائے موت",
-      "link": "https://www.express.pk/story/2840672/two-accused-sentence-to-death-in-attempt-to-murder-and-police-encounter-case-2840672/",
-      "summary": "ملزمان کو مجموعی طور پر 29، 29 برس قید اور پانچ لاکھ نوے ہزار روپے جرمانہ بھی بھگتنا ہوگا، عدالت",
+      "title": "تیسرا ٹی ٹوئنٹی: ابھیشیک کی طوفانی سنچری، نیا ریکارڈ قائم، سیریز بھارت کے نام",
+      "link": "https://www.express.pk/story/2840674/abhishek-and-sooryavanshi-power-india-to-t20i-series-win-in-new-zealand-2840674/",
+      "summary": "ابھیشیک نے نوجوان اوپنر ویبھاؤ سوریاونشی کے ساتھ مل کر محض 7.1 اوورز میں 133 رنز کی شراکت قائم کی",
       "image_url": "",
-      "published": "2026-10-27T05:34:21+00:00",
+      "published": "2026-10-27T05:41:21+00:00",
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
     },
     {
-      "title": "Boy who stabbed girl at school was radicalised online, says father",
-      "link": "https://www.bbc.co.uk/news/articles/cmj6j950ywp1o?at_medium=RSS&at_campaign=rss",
-      "summary": "A father calls for tighter controls on extreme material after his son's attempted murder conviction.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f508/live/319e6af0-1d79-11f1-a77a-39b849d4606b.jpg",
-      "published": "2026-10-27T05:33:25+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "آپ ماضی کی یادوں میں کھوئے رہتے ہیں یا مستقبل کے خواب دیکھتے ہیں؟ جانیے اس کے پیچھے چھپی نفسیات",
-      "link": "https://www.express.pk/story/2840671/do-you-remain-lost-in-memories-of-the-past-or-do-you-dream-about-the-future-discover-the-psychology-behind-this-2840671/",
-      "summary": "نفسیات میں ماضی کی خوشگوار یادوں سے جذباتی وابستگی کو نوسٹیلجیا (Nostalgia) کہا جاتا ہے۔",
+      "title": "برطانوی ایئربیس سے متعلق سازش کا معاملہ، قومی سلامتی کے الزامات میں دو افراد پر فردِ جرم عائد",
+      "link": "https://www.express.pk/story/2840673/two-men-charged-with-uk-national-security-offences-over-airbase-incident-2840673/",
+      "summary": "برطانوی پولیس کے مطابق دونوں ملزمان برطانوی شہری ہیں اور ان پر الگ الگ نوعیت کے الزامات عائد کیے گئے ہیں",
       "image_url": "",
-      "published": "2026-10-27T05:29:53+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Average price of gasoline during Trump's term now exceeds Biden's, as midterms loom",
-      "link": "https://www.dawn.com/news/2040170/average-price-of-gasoline-during-trumps-term-now-exceeds-bidens-as-midterms-loom",
-      "summary": "Americans have paid more for their gasoline and diesel at the pump on average during President Donald Trump’s second term than they did under his Democratic predecessor, Joe Biden, according to the American Automobile Association (AAA). Surging fuel prices are a major thorn in Trump’s side as midterm elections loom and the Republican Party looks to defend na",
-      "image_url": "https://i.dawn.com/large/2023/10/18094740f18154d.jpg",
-      "published": "2026-10-27T05:24:47+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "پاکستان میں بچوں کے آن لائن جنسی استحصال کے واقعات، تحفظ کا نظام غیر مؤثر قرار",
-      "link": "https://www.express.pk/story/2840670/child-online-sexual-abuse-in-pakistan-protection-system-deemed-ineffective-2840670/",
-      "summary": "آن لائن جنسی استحصال کے واقعات کی مکمل تعداد معلوم کرنے کے لیے قومی سطح پر قابلِ اعتماد ڈیٹا بیس موجود نہیں",
-      "image_url": "",
-      "published": "2026-10-27T05:19:51+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ملک میں سائبر کرائمز کی ہوشربا صورتحال، پاکستانیوں کے اربوں روپے لوٹ لیے گئے",
-      "link": "https://www.express.pk/story/2840667/alarming-state-of-cybercrime-in-the-country-billions-of-rupees-stolen-from-pakistanis-2840667/",
-      "summary": "3 سالوں کے دوران این سی سی آئی اے صرف 3ہزار82 سائبر کریمنلز کو پکڑ سکا",
-      "image_url": "",
-      "published": "2026-10-27T05:19:24+00:00",
+      "published": "2026-10-27T05:39:34+00:00",
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
