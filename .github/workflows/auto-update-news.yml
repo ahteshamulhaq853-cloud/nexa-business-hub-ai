@@ -98,7 +98,7 @@ jobs:
                     image_url = candidate
                     break
                 if not image_url:
-                  match = re.search(r'<img[^>]+src=["\\']([^"\\']+)["\\']', summary_raw or "", re.I)
+    match = re.search(r"""<img[^>]+src=["\']([^"\']+)["\']""", summary_raw or "", re.I)
                   if match and match.group(1).startswith("http"):
                     image_url = html.unescape(match.group(1))
                 published = parse_date(first_text(node, ["pubDate", "published", "updated", "date", "{http://www.w3.org/2005/Atom}published", "{http://www.w3.org/2005/Atom}updated", "{http://purl.org/dc/elements/1.1/}date"]))
