@@ -1,6 +1,15 @@
 {
-  "updated": "2026-10-27T03:17:59.311072+00:00",
+  "updated": "2026-10-27T03:54:57.785449+00:00",
   "items": [
+    {
+      "title": "Sharp rise in sales of some essential goods after government call to stock up",
+      "link": "https://www.bbc.co.uk/news/articles/c5rmy84np001o?at_medium=RSS&at_campaign=rss",
+      "summary": "Figures obtained by BBC Newsnight show large spikes in sales of torches, radios and power banks.",
+      "published": "2026-10-27T03:48:21+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Jay-Z to perform at Super Bowl half-time show",
       "link": "https://www.bbc.co.uk/news/articles/cq8ezg4364epo?at_medium=RSS&at_campaign=rss",
@@ -56,7 +65,7 @@
       "language": "en"
     },
     {
-      "title": "Jordan says 'terrorists' killed in Syria in retaliatory strike over church attack",
+      "title": "Jordan carries out deadly strike in Syria in retaliation for church attack",
       "link": "https://www.bbc.co.uk/news/articles/cq8ezg6dy6xlo?at_medium=RSS&at_campaign=rss",
       "summary": "The attack on a village in Syria killed five people, including women and children, Syrian health officials said.",
       "published": "2026-10-27T02:40:17+00:00",
@@ -69,6 +78,15 @@
       "link": "https://www.dawn.com/news/2040061/regional-trade-deficit-widens-sharply",
       "summary": "ISLAMABAD: Pakistan’s trade deficit with nine neighbouring countries widened by 26.62 per cent to $4.97 billion during the first quarter of 2026-27 compared to $3.93bn in the corresponding period last year. The widening gap reflects a contraction in Pakistan’s exports to regional markets, largely due to reduced shipments to Afghanistan and Bangladesh. Trade ",
       "published": "2026-10-27T02:36:47+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Balochistan Assembly shelves resolution against Sardari system",
+      "link": "https://www.dawn.com/news/2040072/balochistan-assembly-shelves-resolution-against-sardari-system",
+      "summary": "• Speaker says legislation abolishing the system already passed in 1976, applies to whole country • JI MPA and opposition leader trade barbs over renewed move to abolish system QUETTA: A resolution seeking the immediate abolition of the Sardari system in Balo­ch­istan and a ban on the use of the titles Sardar and Nawab in writing and speech was dispo­sed of ",
+      "published": "2026-10-27T01:58:00+00:00",
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
@@ -171,6 +189,15 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "کراچی: تیز رفتار کار گرین لائن اسٹاپ کی جالیوں سے ٹکرا گئی، نوجوان جاں بحق، کم عمر لڑکا زخمی",
+      "link": "https://www.express.pk/story/2840574/karachi-a-speeding-car-crashed-into-the-railings-of-a-green-line-stop-a-young-man-was-killed-and-an-underage-boy-was-injured-2840574/",
+      "summary": "جاں بحق نوجوان اور زخمی لڑکے کی شناخت ہوگئی ہے، ریسکیو حکام",
+      "published": "2026-10-26T22:11:59+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "ملک بھر کے ایئرپورٹس پر ایف آئی اے کا امیگریشن سسٹم ایک گھنٹہ معطل رہا، مسافروں کی طویل لائنیں لگ گئیں",
@@ -871,33 +898,6 @@
       "summary": "ملک بھر میں شہری علاقوں کی مجموعی شرح خواندگی 74 فیصد جبکہ دیہی علاقوں میں یہ 55 فیصد ہے",
       "published": "2026-10-26T16:17:14+00:00",
       "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سیاسی مذاکرات ہی واحد آپشن",
-      "link": "https://www.express.pk/story/2840558/siyasi-muzakraat-hi-wahid-option-2840558/",
-      "summary": "ہمیں ان چھوٹے مسائل کی صورت میں الجھنے کی بجائے عام آدمی کے براہ راست مفادات کی بنیاد پر مذاکرات کا حصہ بننا ہوگا۔",
-      "published": "2026-10-26T16:16:30+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Independent review announced into murder of student Henry Nowak",
-      "link": "https://www.bbc.co.uk/news/articles/cv70pnw784x7o?at_medium=RSS&at_campaign=rss",
-      "summary": "\"We must get to truth of what happened before, during and after that awful night,\" the home secretary says while announcing the review.",
-      "published": "2026-10-26T16:15:16+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "خیبر پختونخوا میں ایم پاکس کیسز میں اضافہ، 72 گھنٹوں کے دوران 4 نئے کیس رپورٹ",
-      "link": "https://jang.com.pk/news/1627984",
-      "summary": "علامتی تصویر۔خیبر پختونخوا میں ایم پاکس کیسز میں اضافہ ہوا ہے۔ 72 گھنٹوں کے دوران ایم پاکس کے 4 نئے کیسز رپورٹ ہوئے ہیں۔ محکمہ صحت کے...",
-      "published": "2026-10-26T16:10:54+00:00",
-      "source": "Jang",
       "category": "اردو",
       "language": "ur"
     }
