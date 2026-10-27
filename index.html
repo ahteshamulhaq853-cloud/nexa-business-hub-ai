@@ -2095,33 +2095,23 @@ header .brand-word small{
   </div>
   <div id="nexaNewspapersPanel" style="display:none">
    <div class="studio-section-heading">
-    <div><span class="studio-kicker">NEWSPAPERS</span><h3>Today's Newspapers — Direct PDF Downloads</h3>
-    <p class="muted">PDF file upload hone ke baad yahan se seedha download hogi; kisi doosri website par jane ki zaroorat nahi.</p></div>
+    <div><span class="studio-kicker">NEWSPAPERS</span><h3>Today's Newspapers — Auto-Updated Official Links</h3>
+    <p class="muted">Yahan se official e-paper kholein. Akhbar ka naya edition publisher apni website par publish karta hai; aapko GitHub par roz PDF upload karne ki zaroorat nahi.</p></div>
    </div>
    <div class="card" style="margin-bottom:14px">
-    <h4 style="margin-top:0">📂 Manual PDF setup</h4>
-    <p class="muted">Har newspaper ki woh PDF upload karein jise aapko apni website par host aur share karne ki ijazat ho. GitHub repository mein <code>newspapers</code> naam ka folder banayein aur neeche diye gaye exact filenames use karein. File upload hone ke baad button khud enable ho jayega.</p>
-    <p class="muted" style="margin-bottom:0">Note: Abhi asal newspaper PDFs upload nahi hain. Is liye buttons filhal unavailable dikh sakte hain.</p>
+    <h4 style="margin-top:0">🔄 Rozana editions</h4>
+    <p class="muted">Neeche diye gaye buttons official newspaper websites kholte hain. Latest edition ki availability publisher par depend karti hai. Kuch sites par free reading, login ya subscription ki zaroorat ho sakti hai.</p>
+    <p class="muted" style="margin-bottom:0">Note: Website PDFs ko apne server par copy nahi karti; yeh official sources ke links hain.</p>
    </div>
-   <p id="nexaPaperPdfStatus" class="muted" role="status">PDF files check ho rahi hain…</p>
    <div class="grid two">
-    <article class="card"><h3>📰 Dawn</h3><p class="muted">English · Pakistan · File: <code>newspapers/dawn.pdf</code></p><button type="button" class="primary" data-newspaper-pdf="dawn.pdf" data-paper-name="Dawn">Download PDF</button></article>
-    <article class="card"><h3>📰 The Express Tribune</h3><p class="muted">English · Pakistan · File: <code>newspapers/express-tribune.pdf</code></p><button type="button" class="primary" data-newspaper-pdf="express-tribune.pdf" data-paper-name="Express-Tribune">Download PDF</button></article>
-    <article class="card"><h3>📰 BBC News</h3><p class="muted">English · International · File: <code>newspapers/bbc-news.pdf</code></p><button type="button" class="primary" data-newspaper-pdf="bbc-news.pdf" data-paper-name="BBC-News">Download PDF</button></article>
-    <article class="card" dir="rtl" style="text-align:right"><h3>📰 روزنامہ جنگ</h3><p class="muted">اردو · پاکستان · فائل: <code>newspapers/jang.pdf</code></p><button type="button" class="primary" data-newspaper-pdf="jang.pdf" data-paper-name="Jang">Download PDF</button></article>
-    <article class="card" dir="rtl" style="text-align:right"><h3>📰 ایکسپریس اردو</h3><p class="muted">اردو · پاکستان · فائل: <code>newspapers/express-urdu.pdf</code></p><button type="button" class="primary" data-newspaper-pdf="express-urdu.pdf" data-paper-name="Express-Urdu">Download PDF</button></article>
-    <article class="card" dir="rtl" style="text-align:right"><h3>📰 بی بی سی اردو</h3><p class="muted">اردو · عالمی خبریں · فائل: <code>newspapers/bbc-urdu.pdf</code></p><button type="button" class="primary" data-newspaper-pdf="bbc-urdu.pdf" data-paper-name="BBC-Urdu">Download PDF</button></article>
-    <article class="card" dir="rtl" style="text-align:right"><h3>📰 جیو نیوز</h3><p class="muted">اردو · پاکستان · فائل: <code>newspapers/geo-news.pdf</code></p><button type="button" class="primary" data-newspaper-pdf="geo-news.pdf" data-paper-name="Geo-News">Download PDF</button></article>
-    <article class="card"><h3>📰 ARY News</h3><p class="muted">English and Urdu · Pakistan · File: <code>newspapers/ary-news.pdf</code></p><button type="button" class="primary" data-newspaper-pdf="ary-news.pdf" data-paper-name="ARY-News">Download PDF</button></article>
-   </div>
-   <div class="card" style="margin-top:14px">
-    <h4 style="margin-top:0">GitHub par PDF upload karne ke steps</h4>
-    <ol class="muted">
-     <li>Apna repository kholein: <a href="https://github.com/ahteshamulhaq853-cloud/nexa-business-hub-ai" target="_blank" rel="noopener noreferrer">nexa-business-hub-ai</a>.</li>
-     <li><b>Add file → Create new file</b> se <code>newspapers/README.txt</code> banayein aur commit karein; is se folder ban jayega.</li>
-     <li>Folder khol kar <b>Add file → Upload files</b> se authorized PDF upload karein. Upar diya gaya exact filename use karein.</li>
-     <li>Website ko refresh karein. Agar PDF mil gayi to us newspaper ka <b>Download PDF</b> button enable ho jayega.</li>
-    </ol>
+    <article class="card"><h3>📰 Dawn ePaper</h3><p class="muted">English · Pakistan · Official digital edition</p><a class="button-link" href="https://epaper.dawn.com/" target="_blank" rel="noopener noreferrer">Open Latest ePaper ↗</a></article>
+    <article class="card" dir="rtl" style="text-align:right"><h3>📰 روزنامہ جنگ</h3><p class="muted">اردو · پاکستان · آفیشل ای پیپر</p><a class="button-link" href="https://e.jang.com.pk/" target="_blank" rel="noopener noreferrer">تازہ اخبار کھولیں ↗</a></article>
+    <article class="card" dir="rtl" style="text-align:right"><h3>📰 روزنامہ ایکسپریس</h3><p class="muted">اردو · پاکستان · آفیشل ویب سائٹ</p><a class="button-link" href="https://www.express.com.pk/" target="_blank" rel="noopener noreferrer">تازہ اخبار کھولیں ↗</a></article>
+    <article class="card" dir="rtl" style="text-align:right"><h3>📰 روزنامہ دنیا</h3><p class="muted">اردو · پاکستان · ای پیپر</p><a class="button-link" href="https://e.dunya.com.pk/splash.php" target="_blank" rel="noopener noreferrer">تازہ اخبار کھولیں ↗</a></article>
+    <article class="card"><h3>📰 The Express Tribune</h3><p class="muted">English · Pakistan · Latest news</p><a class="button-link" href="https://tribune.com.pk/" target="_blank" rel="noopener noreferrer">Open Official Website ↗</a></article>
+    <article class="card"><h3>📰 BBC News</h3><p class="muted">English · International · Latest news</p><a class="button-link" href="https://www.bbc.com/news" target="_blank" rel="noopener noreferrer">Open Official Website ↗</a></article>
+    <article class="card" dir="rtl" style="text-align:right"><h3>📰 بی بی سی اردو</h3><p class="muted">اردو · عالمی خبریں</p><a class="button-link" href="https://www.bbc.com/urdu" target="_blank" rel="noopener noreferrer">تازہ خبریں کھولیں ↗</a></article>
+    <article class="card"><h3>📰 The Nation</h3><p class="muted">English · Pakistan · Latest news</p><a class="button-link" href="https://www.nation.com.pk/" target="_blank" rel="noopener noreferrer">Open Official Website ↗</a></article>
    </div>
   </div>
  </div>
