@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Checkout website
         uses: actions/checkout@v4
-      - name: Fetch latest RSS headlines
+      - name: Fetch latest Urdu and English RSS headlines
         run: |
           python - <<'PY'
           import json, re, html, urllib.request, xml.etree.ElementTree as ET
@@ -19,66 +19,88 @@ jobs:
           from email.utils import parsedate_to_datetime
 
           FEEDS = [
-            ("Dawn", "https://www.dawn.com/feeds/home", "Pakistan"),
-            ("Express Tribune", "https://tribune.com.pk/feed/latest", "Pakistan"),
-            ("ARY News", "https://arynews.tv/feed/", "Pakistan"),
-            ("Associated Press of Pakistan", "https://www.app.com.pk/feed/", "Pakistan"),
+            ("Dawn", "https://www.dawn.com/feeds/home", "English", "en"),
+            ("Express Tribune", "https://tribune.com.pk/feed/home", "English", "en"),
+            ("BBC News", "https://feeds.bbci.co.uk/news/rss.xml", "World", "en"),
+            ("ARY News", "https://arynews.tv/feed/", "Pakistan", "en"),
+            ("BBC Urdu", "https://feeds.bbci.co.uk/urdu/rss.xml", "اردو", "ur"),
+            ("Express Urdu", "https://www.express.pk/feed/", "اردو", "ur"),
+            ("UrduPoint", "https://www.urdupoint.com/rss/urdupoint.rss", "اردو", "ur"),
+            ("Jang", "https://jang.com.pk/rss/1/1", "اردو", "ur"),
           ]
 
-          def text_of(node, names):
+          def first_text(node, names):
             for name in names:
               found = node.find(name)
-              if found is not None and found.text:
-                return found.text.strip()
+              if found is not None:
+                if found.text and found.text.strip():
+                  return found.text.strip()
+                if found.attrib.get("href"):
+                  return found.attrib["href"].strip()
             return ""
 
           def clean(value):
-            value = re.sub(r"(?is)<(script|style).*?>.*?</\1>", " ", value or "")
+            value = re.sub(r"(?is)<(script|style).*?>.*?</\\1>", " ", value or "")
             value = re.sub(r"(?s)<[^>]+>", " ", value)
-            return re.sub(r"\s+", " ", html.unescape(value)).strip()
+            return re.sub(r"\\s+", " ", html.unescape(value)).strip()
 
           def parse_date(value):
-            if not value: return ""
+            if not value:
+              return ""
             try:
-              return parsedate_to_datetime(value).astimezone(timezone.utc).isoformat()
+              parsed = parsedate_to_datetime(value)
+              if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=timezone.utc)
+              return parsed.astimezone(timezone.utc).isoformat()
             except Exception:
-              try: return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc).isoformat()
-              except Exception: return ""
+              try:
+                parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+                if parsed.tzinfo is None:
+                  parsed = parsed.replace(tzinfo=timezone.utc)
+                return parsed.astimezone(timezone.utc).isoformat()
+              except Exception:
+                return ""
 
           all_items, errors = [], []
-          for source, url, category in FEEDS:
+          for source, url, category, language in FEEDS:
             try:
-              req = urllib.request.Request(url, headers={"User-Agent": "NexaNewsBot/1.0 (RSS reader)"})
-              with urllib.request.urlopen(req, timeout=20) as response:
+              req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 NexaNewsReader/1.0"})
+              with urllib.request.urlopen(req, timeout=25) as response:
                 root = ET.fromstring(response.read())
               nodes = root.findall(".//item")
+              atom = False
               if not nodes:
                 nodes = root.findall(".//{http://www.w3.org/2005/Atom}entry")
-              for node in nodes[:20]:
-                title = clean(text_of(node, ["title", "{http://www.w3.org/2005/Atom}title"]))
-                link = text_of(node, ["link"])
-                if not link:
-                  atom_link = node.find("{http://www.w3.org/2005/Atom}link")
-                  if atom_link is not None: link = atom_link.attrib.get("href", "")
-                summary = clean(text_of(node, ["description", "summary", "content", "{http://www.w3.org/2005/Atom}summary", "{http://www.w3.org/2005/Atom}content"]))
-                published = parse_date(text_of(node, ["pubDate", "published", "updated", "{http://www.w3.org/2005/Atom}published", "{http://www.w3.org/2005/Atom}updated"]))
+                atom = True
+              for node in nodes[:25]:
+                title = clean(first_text(node, ["title", "{http://www.w3.org/2005/Atom}title"]))
+                if atom:
+                  link = ""
+                  for link_node in node.findall("{http://www.w3.org/2005/Atom}link"):
+                    if link_node.attrib.get("rel", "alternate") == "alternate":
+                      link = link_node.attrib.get("href", "")
+                      break
+                else:
+                  link = first_text(node, ["link"])
+                summary = clean(first_text(node, ["description", "summary", "content", "{http://www.w3.org/2005/Atom}summary", "{http://www.w3.org/2005/Atom}content", "{http://purl.org/rss/1.0/modules/content/}encoded"]))
+                published = parse_date(first_text(node, ["pubDate", "published", "updated", "date", "{http://www.w3.org/2005/Atom}published", "{http://www.w3.org/2005/Atom}updated", "{http://purl.org/dc/elements/1.1/}date"]))
                 if title and link.startswith("http"):
-                  all_items.append({"title": title, "link": link, "summary": summary[:360], "published": published, "source": source, "category": category})
+                  all_items.append({"title": title, "link": link, "summary": summary[:360], "published": published, "source": source, "category": category, "language": language})
             except Exception as exc:
               errors.append(source + ": " + str(exc))
-          # Deduplicate and put the newest items first.
           seen, unique = set(), []
           for item in sorted(all_items, key=lambda x: x.get("published", ""), reverse=True):
-            key = item["link"]
-            if key not in seen:
-              seen.add(key); unique.append(item)
+            if item["link"] not in seen:
+              seen.add(item["link"])
+              unique.append(item)
           if not unique:
-            raise SystemExit("No RSS items could be fetched; leaving the existing news.json untouched. " + " | ".join(errors))
-          output = {"updated": datetime.now(timezone.utc).isoformat(), "items": unique[:60]}
+            raise SystemExit("No RSS items fetched; leaving existing news.json untouched. " + " | ".join(errors))
+          output = {"updated": datetime.now(timezone.utc).isoformat(), "items": unique[:100]}
           with open("news.json", "w", encoding="utf-8") as f:
             json.dump(output, f, ensure_ascii=False, indent=2)
-          print("Published", len(output["items"]), "news items.")
-          if errors: print("Some sources unavailable:", " | ".join(errors))
+          print("Published", len(output["items"]), "items; Urdu:", sum(1 for x in output["items"] if x["language"] == "ur"), "English:", sum(1 for x in output["items"] if x["language"] == "en"))
+          if errors:
+            print("Some sources unavailable:", " | ".join(errors))
           PY
       - name: Commit updated news
         run: |
@@ -89,5 +111,5 @@ jobs:
             echo "No news changes to publish."
             exit 0
           fi
-          git commit -m "Auto-update latest news"
+          git commit -m "Auto-update Urdu and English news"
           git push
