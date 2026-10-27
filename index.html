@@ -2096,24 +2096,28 @@ header .brand-word small{
   </div>
   <div id="nexaNewspapersPanel" style="display:none">
    <div class="studio-section-heading">
-    <div><span class="studio-kicker">NEWSPAPERS</span><h3>Manual Newspaper PDF Upload</h3>
-    <p class="muted">Apni newspaper PDF select karein aur isi browser mein open karein.</p></div>
+    <div><span class="studio-kicker">NEWSPAPERS</span><h3>Secure Newspaper PDF Upload</h3>
+    <p class="muted">Admin password ke saath PDF GitHub mein upload karein. Uploaded PDFs yahan sab visitors ko nazar aayengi.</p></div>
    </div>
    <div class="card" style="margin-bottom:14px">
-    <h4 style="margin-top:0">📤 Upload Newspaper PDF</h4>
+    <h4 style="margin-top:0">📤 Upload PDF to GitHub</h4>
+    <div class="field">
+     <label for="pdfUploadPassword">Admin upload password</label>
+     <input id="pdfUploadPassword" type="password" autocomplete="current-password" placeholder="Apna PDF upload password likhein">
+    </div>
     <div class="field">
      <label for="manualNewspaperFiles">Select PDF file(s)</label>
      <input id="manualNewspaperFiles" type="file" accept="application/pdf,.pdf" multiple onchange="handleManualNewspaperUpload(event)">
-     <small class="muted">Aap ek ya zyada PDF files select kar sakte hain.</small>
+     <small class="muted">Har PDF 8 MB ya us se chhoti honi chahiye. Upload hone par file public repository mein save hogi.</small>
     </div>
-    <p class="muted" style="margin-bottom:0"><strong>Important:</strong> GitHub Pages static website hai. Yahan select ki gayi files sirf aapke current browser session mein dikhengi; public website par sab visitors ke liye publish nahi hongi. Sab visitors ko dikhane ke liye PDFs ko GitHub repository mein upload karke unke links code mein add karne honge.</p>
+    <p class="muted" style="margin-bottom:0">Sirf woh PDFs upload karein jinhein aap share karne ke haqdar hain. File names unique rakhein; same name wali file dobara upload nahi hogi.</p>
    </div>
-   <div id="manualNewspaperStatus" class="muted" role="status">Abhi koi PDF select nahi ki gayi.</div>
+   <div id="manualNewspaperStatus" class="muted" role="status">Public PDFs load ho rahi hain…</div>
    <div id="manualNewspaperList" class="grid two" aria-live="polite"></div>
    <div class="card" style="margin-top:14px">
-    <h4 style="margin-top:0">Public website par PDF dikhani hai?</h4>
-    <p class="muted">PDF ko repository ke <code>newspapers</code> folder mein upload karein. Phir uska path, misal ke taur par <code>newspapers/dawn-today.pdf</code>, website ke code mein link ki surat mein add karein. File size aur publisher ki permission ka khayal rakhein.</p>
-    <a class="button-link" href="https://github.com/ahteshamulhaq853-cloud/nexa-business-hub-ai" target="_blank" rel="noopener noreferrer">Open GitHub Repository ↗</a>
+    <h4 style="margin-top:0">GitHub repository</h4>
+    <p class="muted">Uploaded PDFs <code>newspapers</code> folder mein save hongi aur is list mein automatically aa jayengi.</p>
+    <a class="button-link" href="https://github.com/ahteshamulhaq853-cloud/nexa-business-hub-ai/tree/main/newspapers" target="_blank" rel="noopener noreferrer">View Uploaded PDFs ↗</a>
    </div>
   </div>
  </div>
@@ -3157,25 +3161,59 @@ async function saveNexaNewsDigestPDF(){
 
 
 <script>
-function handleManualNewspaperUpload(event){
- const files=Array.from((event.target&&event.target.files)||[]);
+const NEXA_PDF_UPLOAD_ENDPOINT='https://njfobttocvkjsrvlcjaj.supabase.co/functions/v1/nexa-pdf-upload';
+async function loadPublicNewspaperPdfs(){
  const list=document.getElementById('manualNewspaperList');
  const status=document.getElementById('manualNewspaperStatus');
  if(!list||!status)return;
- list.innerHTML='';
- if(!files.length){status.textContent='Abhi koi PDF select nahi ki gayi.';return;}
- const pdfs=files.filter(file=>file.type==='application/pdf'||file.name.toLowerCase().endsWith('.pdf'));
- if(!pdfs.length){status.textContent='Meherbani karke PDF file select karein.';return;}
- status.textContent=pdfs.length+' PDF file(s) selected. Ye files sirf is browser session mein available hain.';
- pdfs.forEach(file=>{
-  const url=URL.createObjectURL(file);
-  const card=document.createElement('article');card.className='card';
-  const title=document.createElement('h3');title.textContent='📰 '+file.name;
-  const meta=document.createElement('p');meta.className='muted';meta.textContent='Size: '+(file.size/1024/1024).toFixed(2)+' MB';
-  const link=document.createElement('a');link.className='button-link';link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Open PDF ↗';
-  card.append(title,meta,link);list.appendChild(card);
- });
+ try{
+  const response=await fetch(NEXA_PDF_UPLOAD_ENDPOINT);
+  const data=await response.json();
+  if(!response.ok)throw new Error(data.error||'PDF list load nahi ho saki.');
+  list.innerHTML='';
+  const files=Array.isArray(data.files)?data.files:[];
+  if(!files.length){status.textContent='Abhi public newspaper PDFs upload nahi hui.';return;}
+  status.textContent=files.length+' public PDF file(s) available hain.';
+  files.sort((a,b)=>a.name.localeCompare(b.name)).forEach(file=>{
+   const card=document.createElement('article');card.className='card';
+   const title=document.createElement('h3');title.textContent='📰 '+file.name;
+   const meta=document.createElement('p');meta.className='muted';meta.textContent='Saved in GitHub · Public PDF';
+   const link=document.createElement('a');link.className='button-link';link.href=file.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Open / Download PDF ↗';
+   card.append(title,meta,link);list.appendChild(card);
+  });
+ }catch(error){status.textContent='PDF list load nahi hui: '+(error.message||'Network error');}
 }
+async function handleManualNewspaperUpload(event){
+ const input=event.target;
+ const files=Array.from((input&&input.files)||[]);
+ const status=document.getElementById('manualNewspaperStatus');
+ const passwordInput=document.getElementById('pdfUploadPassword');
+ if(!status)return;
+ if(!files.length){status.textContent='Meherbani karke PDF select karein.';return;}
+ const password=passwordInput?passwordInput.value:'';
+ if(!password){status.textContent='Pehle admin upload password likhein, phir PDF select karein.';input.value='';return;}
+ const pdfs=files.filter(file=>file.type==='application/pdf'||file.name.toLowerCase().endsWith('.pdf'));
+ if(!pdfs.length){status.textContent='Meherbani karke PDF file select karein.';input.value='';return;}
+ const tooLarge=pdfs.find(file=>file.size>8*1024*1024);
+ if(tooLarge){status.textContent=tooLarge.name+' 8 MB se bari hai. Chhoti PDF select karein.';input.value='';return;}
+ let uploaded=0;
+ for(const file of pdfs){
+  status.textContent='GitHub par upload ho rahi hai: '+file.name+' ('+(uploaded+1)+'/'+pdfs.length+')…';
+  try{
+   const response=await fetch(NEXA_PDF_UPLOAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/pdf','x-upload-password':password,'x-file-name':file.name},body:file});
+   const data=await response.json();
+   if(!response.ok)throw new Error(data.error||'Upload fail ho gaya.');
+   uploaded++;
+  }catch(error){
+   status.textContent='Upload error ('+file.name+'): '+(error.message||'Network error')+' '+uploaded+' file(s) upload ho chuki hain.';
+   await loadPublicNewspaperPdfs();input.value='';return;
+  }
+ }
+ status.textContent='Kamyaab! '+uploaded+' PDF file(s) GitHub mein save ho gayi. Public list refresh ho rahi hai…';
+ input.value='';
+ await loadPublicNewspaperPdfs();
+}
+document.addEventListener('DOMContentLoaded',loadPublicNewspaperPdfs);
 </script>
 </body>
 </html>
