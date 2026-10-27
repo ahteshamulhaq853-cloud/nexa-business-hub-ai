@@ -2079,7 +2079,6 @@ header .brand-word small{
  <div id="newsCategoryCards" class="grid three" style="margin-bottom:10px;gap:8px">
   <button type="button" class="card" style="text-align:left;color:var(--text);background:var(--panel);border:1px solid var(--line);padding:13px;min-height:112px;line-height:1.25" onclick="openNexaNewsCategory('urdu')"><span style="font-size:24px">🇵🇰</span><h3 style="margin:6px 0 3px;font-size:16px">اردو خبریں</h3><p class="muted" style="margin:4px 0;font-size:12px">Pakistan aur duniya ki taza Urdu khabrein</p><strong>اردو خبریں کھولیں ←</strong></button>
   <button type="button" class="card" style="text-align:left;color:var(--text);background:var(--panel);border:1px solid var(--line);padding:22px;min-height:150px" onclick="openNexaNewsCategory('english')"><span style="font-size:24px">🌐</span><h3 style="margin:6px 0 3px;font-size:16px">English News</h3><p class="muted" style="margin:4px 0;font-size:12px">Latest Pakistan and world headlines in English</p><strong>Open English News →</strong></button>
-  <button type="button" class="card" style="text-align:left;color:var(--text);background:var(--panel);border:1px solid var(--line);padding:22px;min-height:150px" onclick="openNexaNewsCategory('papers')"><span style="font-size:24px">🗞️</span><h3 style="margin:6px 0 3px;font-size:16px">Newspapers</h3><p class="muted" style="margin:4px 0;font-size:12px">Popular Urdu and English newspaper websites</p><strong>Browse Newspapers →</strong></button>
  </div>
  <div id="nexaNewsContent" style="display:none">
   <div class="card" style="margin-bottom:16px">
@@ -2094,35 +2093,7 @@ header .brand-word small{
    <div class="studio-section-heading"><div><span class="studio-kicker">ENGLISH</span><h3>English News</h3><p class="muted">Latest headlines in English</p></div></div>
    <div id="nexaEnglishNewsList" class="grid two" aria-live="polite"><article class="card"><p class="muted">English headlines are loading…</p></article></div>
   </div>
-  <div id="nexaNewspapersPanel" style="display:none">
-   <div class="studio-section-heading">
-    <div><span class="studio-kicker">NEWSPAPERS</span><h3>Secure Newspaper PDF Upload</h3>
-    <p class="muted">Admin password ke saath PDF GitHub mein upload karein. Uploaded PDFs yahan sab visitors ko nazar aayengi.</p></div>
-   </div>
-   <div class="card" style="margin-bottom:14px">
-    <h4 style="margin-top:0">📤 Upload PDF to GitHub</h4>
-    <div class="field">
-     <label for="pdfUploadPassword">Admin upload password</label>
-     <input id="pdfUploadPassword" type="password" autocomplete="current-password" placeholder="Apna PDF upload password likhein">
-    </div>
-    <div class="field">
-     <label for="manualNewspaperFiles">Select PDF file(s)</label>
-     <input id="manualNewspaperFiles" type="file" accept="application/pdf,.pdf" multiple>
-     <small class="muted">Har PDF 8 MB ya us se chhoti honi chahiye. File select karne ke baad neeche Upload button dabayein.</small>
-    </div>
-    <div class="actions" style="margin-top:12px">
-     <button type="button" id="uploadNewspaperButton" onclick="uploadSelectedNewspaperPdfs()">📤 Upload PDF to GitHub</button>
-    </div>
-    <p class="muted" style="margin-bottom:0">Sirf woh PDFs upload karein jinhein aap share karne ke haqdar hain. File names unique rakhein; same name wali file dobara upload nahi hogi.</p>
-   </div>
-   <div id="manualNewspaperStatus" class="muted" role="status">Public PDFs load ho rahi hain…</div>
-   <div id="manualNewspaperList" class="grid two" aria-live="polite"></div>
-   <div class="card" style="margin-top:14px">
-    <h4 style="margin-top:0">GitHub repository</h4>
-    <p class="muted">Uploaded PDFs <code>newspapers</code> folder mein save hongi aur is list mein automatically aa jayengi.</p>
-    <a class="button-link" href="https://github.com/ahteshamulhaq853-cloud/nexa-business-hub-ai/tree/main/newspapers" target="_blank" rel="noopener noreferrer">View Uploaded PDFs ↗</a>
-   </div>
-  </div>
+
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
 </section>
