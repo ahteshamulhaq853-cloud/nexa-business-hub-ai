@@ -2184,6 +2184,13 @@ function bottomNavigate(id,button){
 let nexaNewsLastLoaded=0;
 function escapeNewsHTML(value){return String(value==null?"":value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));}
 function newsDate(value){if(!value)return "Recent";const d=new Date(value);return isNaN(d.getTime())?"Recent":d.toLocaleString(undefined,{dateStyle:"medium",timeStyle:"short"});}
+function toggleNexaNewsDetails(button){
+ const details=button.closest(".nexa-news-card")?.querySelector(".nexa-news-fulltext");
+ if(!details)return;
+ const opening=details.hidden;
+ details.hidden=!opening;
+ button.textContent=opening?(button.dataset.less||"See Less"):(button.dataset.more||"See More");
+}
 function renderNexaNewsGroup(id,items,language){
  const list=$(id);if(!list)return;
  // Always show the newest published stories first within each news category.
@@ -2193,7 +2200,15 @@ function renderNexaNewsGroup(id,items,language){
   return timeB-timeA;
  });
  if(!items.length){list.innerHTML='<article class="card"><h3>'+(language==="ur"?'ابھی اردو خبریں دستیاب نہیں':'No English headlines yet')+'</h3><p class="muted">First automatic update complete hone ke baad yahan news nazar aayegi. Refresh dobara try karein.</p></article>';return;}
- list.innerHTML=items.map(item=>'<article class="card"'+(language==="ur"?' dir="rtl" style="text-align:right"':'')+'><span class="studio-kicker">'+escapeNewsHTML(item.source||"NEWS")+' · '+escapeNewsHTML(item.category||"LATEST")+'</span><h3>'+escapeNewsHTML(item.title||"Latest News")+'</h3><p class="muted">'+escapeNewsHTML(item.summary||"Original publisher se poori khabar parhein.")+'</p><p class="muted" style="font-size:12px">🕒 '+escapeNewsHTML(newsDate(item.published))+'</p><a href="'+escapeNewsHTML(item.link||"#")+'" target="_blank" rel="noopener noreferrer">'+(language==="ur"?'مکمل خبر پڑھیں ↗':'Read Full Story ↗')+'</a></article>').join("");
+ list.innerHTML=items.map((item,index)=>{
+  const ur=language==="ur",summary=String(item.summary||"").trim();
+  const more=ur?"مزید پڑھیں ↓":"See More";
+  const less=ur?"کم دکھائیں ↑":"See Less";
+  const source=ur?"View Source ↗":"View Source ↗";
+  const fullText=summary|| (ur?"اس خبر کی مکمل تفصیل اصل خبر رساں ادارے کے صفحے پر دستیاب ہے۔":"The full article text is not included in the news feed. Open the original publisher to read the complete story.");
+  const detailsId="nexaNewsDetails_"+id+"_"+index;
+  return '<article class="card nexa-news-card"'+(ur?' dir="rtl" style="text-align:right"':'')+'><span class="studio-kicker">'+escapeNewsHTML(item.source||"NEWS")+' · '+escapeNewsHTML(item.category||"LATEST")+'</span><h3>'+escapeNewsHTML(item.title||"Latest News")+'</h3><p class="muted">'+escapeNewsHTML(summary|| (ur?"خبر کا خلاصہ دستیاب نہیں۔":"Summary not available."))+'</p><div id="'+detailsId+'" class="nexa-news-fulltext" hidden><p>'+escapeNewsHTML(fullText)+'</p><p class="muted" style="font-size:12px">'+(ur?"نوٹ: اوپر خبر کا دستیاب خلاصہ ہے؛ مکمل اصل رپورٹ کے لیے View Source کھولیں۔":"Note: This is the available feed summary. Use View Source for the publisher’s complete original report.")+'</p></div><p class="muted" style="font-size:12px">🕒 '+escapeNewsHTML(newsDate(item.published))+'</p><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;'+(ur?'justify-content:flex-start;':'')+'"><button type="button" class="secondary-btn" data-more="'+more+'" data-less="'+less+'" aria-controls="'+detailsId+'" aria-expanded="false" onclick="toggleNexaNewsDetails(this)">'+more+'</button><a href="'+escapeNewsHTML(item.link||"#")+'" target="_blank" rel="noopener noreferrer" style="font-weight:700">'+source+'</a></div></article>';
+ }).join("");
 }
 function openNexaNewsCategory(category){
  $("newsCategoryCards").style.display="none";
