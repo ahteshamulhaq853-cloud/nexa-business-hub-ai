@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T22:58:12.236040+00:00",
+  "updated": "2026-10-27T23:26:04.502530+00:00",
   "items": [
     {
       "title": "King acknowledges 'suffering of the past' as Caribbean tour begins",
@@ -27,6 +27,16 @@
       "summary": "The truce was originally planned for the stranded residents of Oleshky, and Russia and Ukraine say no breaches have been reported.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/97b7/live/fc424bf0-d23c-11f1-904a-5b90e72e87ff.jpg",
       "published": "2026-10-27T22:11:08+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Trump says US voter fraud is 'rampant' - evidence suggests it is extremely rare",
+      "link": "https://www.bbc.co.uk/news/articles/ckeq3vezxlx1o?at_medium=RSS&at_campaign=rss",
+      "summary": "As the US president casts doubt on the security of the midterm elections, BBC Verify examines his claims.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d705/live/81506150-d23e-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-10-27T21:46:43+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -990,16 +1000,6 @@
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "Chelsea boss Alonso expects Palmer to avoid repeat of red card ‘mistakes’",
-      "link": "https://arynews.tv/chelsea-boss-alonso-expects-palmer-to-avoid-repeat-of-red-card-mistakes",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/07/1-132.jpg",
-      "published": "2026-10-27T15:05:38+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
     }
   ]
 }
