@@ -2094,17 +2094,34 @@ header .brand-word small{
    <div id="nexaEnglishNewsList" class="grid two" aria-live="polite"><article class="card"><p class="muted">English headlines are loading…</p></article></div>
   </div>
   <div id="nexaNewspapersPanel" style="display:none">
-   <div class="studio-section-heading"><div><span class="studio-kicker">NEWSPAPERS</span><h3>Today's Newspapers & PDF</h3><p class="muted">Official e-paper kholein; jahan publisher PDF/print deta hai, wahan se save karein.</p><button type="button" class="primary" onclick="saveNexaNewsDigestPDF()">📄 Save Today's News Digest as PDF</button></div></div>
-   <div class="card" style="margin-bottom:14px"><p class="muted" style="margin:0">Note: poora newspaper PDF publisher ki official e-paper website par mil sakta hai. Neeche e-paper kholne ke baad <b>Downloadable Version</b> ya print/download icon check karein. PDF save karne ke liye browser ke Print menu mein “Save as PDF” bhi chun sakte hain.</p></div>
+   <div class="studio-section-heading">
+    <div><span class="studio-kicker">NEWSPAPERS</span><h3>Today's Newspapers — Direct PDF Downloads</h3>
+    <p class="muted">PDF file upload hone ke baad yahan se seedha download hogi; kisi doosri website par jane ki zaroorat nahi.</p></div>
+   </div>
+   <div class="card" style="margin-bottom:14px">
+    <h4 style="margin-top:0">📂 Manual PDF setup</h4>
+    <p class="muted">Har newspaper ki woh PDF upload karein jise aapko apni website par host aur share karne ki ijazat ho. GitHub repository mein <code>newspapers</code> naam ka folder banayein aur neeche diye gaye exact filenames use karein. File upload hone ke baad button khud enable ho jayega.</p>
+    <p class="muted" style="margin-bottom:0">Note: Abhi asal newspaper PDFs upload nahi hain. Is liye buttons filhal unavailable dikh sakte hain.</p>
+   </div>
+   <p id="nexaPaperPdfStatus" class="muted" role="status">PDF files check ho rahi hain…</p>
    <div class="grid two">
-    <article class="card"><h3>📰 Dawn</h3><p class="muted">English · Pakistan</p><a href="https://epaper.dawn.com/" target="_blank" rel="noopener noreferrer">Open Today's Dawn ePaper ↗</a><p><a href="https://www.dawn.com/" target="_blank" rel="noopener noreferrer">Dawn News Website ↗</a></p></article>
-    <article class="card"><h3>📰 The Express Tribune</h3><p class="muted">English · Pakistan</p><a href="https://tribune.com.pk/" target="_blank" rel="noopener noreferrer">Open Express Tribune ↗</a></article>
-    <article class="card"><h3>📰 BBC News</h3><p class="muted">English · International</p><a href="https://www.bbc.com/news" target="_blank" rel="noopener noreferrer">Open BBC News ↗</a></article>
-    <article class="card" dir="rtl" style="text-align:right"><h3>📰 جنگ</h3><p class="muted">اردو · پاکستان</p><a href="https://e.jang.com.pk/" target="_blank" rel="noopener noreferrer">آج کا ای پیپر کھولیں ↗</a><p><a href="https://jang.com.pk/" target="_blank" rel="noopener noreferrer">جنگ کی خبریں ↗</a></p></article>
-    <article class="card" dir="rtl" style="text-align:right"><h3>📰 ایکسپریس اردو</h3><p class="muted">اردو · پاکستان</p><a href="https://www.express.pk/" target="_blank" rel="noopener noreferrer">ایکسپریس اردو کھولیں ↗</a></article>
-    <article class="card" dir="rtl" style="text-align:right"><h3>📰 بی بی سی اردو</h3><p class="muted">اردو · عالمی خبریں</p><a href="https://www.bbc.com/urdu" target="_blank" rel="noopener noreferrer">بی بی سی اردو کھولیں ↗</a></article>
-    <article class="card" dir="rtl" style="text-align:right"><h3>📰 جیو نیوز</h3><p class="muted">اردو · پاکستان</p><a href="https://www.geo.tv/ur" target="_blank" rel="noopener noreferrer">جیو نیوز کھولیں ↗</a></article>
-    <article class="card"><h3>📰 ARY News</h3><p class="muted">English and Urdu · Pakistan</p><a href="https://arynews.tv/" target="_blank" rel="noopener noreferrer">Open ARY News ↗</a></article>
+    <article class="card"><h3>📰 Dawn</h3><p class="muted">English · Pakistan · File: <code>newspapers/dawn.pdf</code></p><button type="button" class="primary" data-newspaper-pdf="dawn.pdf" data-paper-name="Dawn">Download PDF</button></article>
+    <article class="card"><h3>📰 The Express Tribune</h3><p class="muted">English · Pakistan · File: <code>newspapers/express-tribune.pdf</code></p><button type="button" class="primary" data-newspaper-pdf="express-tribune.pdf" data-paper-name="Express-Tribune">Download PDF</button></article>
+    <article class="card"><h3>📰 BBC News</h3><p class="muted">English · International · File: <code>newspapers/bbc-news.pdf</code></p><button type="button" class="primary" data-newspaper-pdf="bbc-news.pdf" data-paper-name="BBC-News">Download PDF</button></article>
+    <article class="card" dir="rtl" style="text-align:right"><h3>📰 روزنامہ جنگ</h3><p class="muted">اردو · پاکستان · فائل: <code>newspapers/jang.pdf</code></p><button type="button" class="primary" data-newspaper-pdf="jang.pdf" data-paper-name="Jang">Download PDF</button></article>
+    <article class="card" dir="rtl" style="text-align:right"><h3>📰 ایکسپریس اردو</h3><p class="muted">اردو · پاکستان · فائل: <code>newspapers/express-urdu.pdf</code></p><button type="button" class="primary" data-newspaper-pdf="express-urdu.pdf" data-paper-name="Express-Urdu">Download PDF</button></article>
+    <article class="card" dir="rtl" style="text-align:right"><h3>📰 بی بی سی اردو</h3><p class="muted">اردو · عالمی خبریں · فائل: <code>newspapers/bbc-urdu.pdf</code></p><button type="button" class="primary" data-newspaper-pdf="bbc-urdu.pdf" data-paper-name="BBC-Urdu">Download PDF</button></article>
+    <article class="card" dir="rtl" style="text-align:right"><h3>📰 جیو نیوز</h3><p class="muted">اردو · پاکستان · فائل: <code>newspapers/geo-news.pdf</code></p><button type="button" class="primary" data-newspaper-pdf="geo-news.pdf" data-paper-name="Geo-News">Download PDF</button></article>
+    <article class="card"><h3>📰 ARY News</h3><p class="muted">English and Urdu · Pakistan · File: <code>newspapers/ary-news.pdf</code></p><button type="button" class="primary" data-newspaper-pdf="ary-news.pdf" data-paper-name="ARY-News">Download PDF</button></article>
+   </div>
+   <div class="card" style="margin-top:14px">
+    <h4 style="margin-top:0">GitHub par PDF upload karne ke steps</h4>
+    <ol class="muted">
+     <li>Apna repository kholein: <a href="https://github.com/ahteshamulhaq853-cloud/nexa-business-hub-ai" target="_blank" rel="noopener noreferrer">nexa-business-hub-ai</a>.</li>
+     <li><b>Add file → Create new file</b> se <code>newspapers/README.txt</code> banayein aur commit karein; is se folder ban jayega.</li>
+     <li>Folder khol kar <b>Add file → Upload files</b> se authorized PDF upload karein. Upar diya gaya exact filename use karein.</li>
+     <li>Website ko refresh karein. Agar PDF mil gayi to us newspaper ka <b>Download PDF</b> button enable ho jayega.</li>
+    </ol>
    </div>
   </div>
  </div>
@@ -3108,5 +3125,43 @@ async function saveNexaNewsDigestPDF(){
 }
 
 </script>
+
+<script>
+(function(){
+ const buttons = Array.from(document.querySelectorAll("[data-newspaper-pdf]"));
+ if(!buttons.length) return;
+ const status = document.getElementById("nexaPaperPdfStatus");
+ async function checkFiles(){
+  let ready = 0;
+  await Promise.all(buttons.map(async button => {
+   const file = button.getAttribute("data-newspaper-pdf");
+   const url = new URL("newspapers/" + file, document.baseURI).href;
+   button.disabled = true;
+   button.textContent = "PDF not uploaded yet";
+   try {
+    const response = await fetch(url + "?check=" + Date.now(), {method:"HEAD",cache:"no-store"});
+    if(response.ok){
+     button.disabled = false;
+     button.textContent = "Download PDF";
+     button.onclick = function(){
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = button.getAttribute("data-paper-name") + ".pdf";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+     };
+     ready++;
+    }
+   } catch(e) {}
+  }));
+  if(status) status.textContent = ready
+   ? ready + " PDF file(s) ready for direct download. Baqi files upload hone ka intezar hai."
+   : "Abhi koi newspaper PDF upload nahi hui. GitHub par authorized PDF files upload karein; phir yahan direct download available hoga.";
+ }
+ checkFiles();
+})();
+</script>
+
 </body>
 </html>
