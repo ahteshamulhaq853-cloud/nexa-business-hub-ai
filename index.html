@@ -1673,7 +1673,7 @@ header .brand-word small{
 <section id="liveTVPage" class="page">
  <div class="studio-section-heading"><div><span class="studio-kicker">NEXA ENTERTAINMENT</span><h2>📺 Live TV</h2><p class="muted">Country select karne ki zaroorat nahi — available channels seedha list mein hain. Channel choose karein aur isi player mein dekhein.</p></div></div>
  <div class="card" style="max-width:900px;margin:0 auto 18px">
-  <div class="field"><label for="liveTVChannelSelect">📺 Select Live Channel</label><select id="liveTVChannelSelect"><option value="">Loading channels…</option></select></div>
+  <div class="field"><label for="liveTVSearch">🔎 Search worldwide live channels</label><input id="liveTVSearch" type="search" placeholder="Channel name, language, or country…" autocomplete="off"></div><div class="field"><label for="liveTVChannelSelect">📺 Available Live Channels</label><select id="liveTVChannelSelect" size="7" style="min-height:180px"><option value="">Loading worldwide channel list…</option></select><p class="muted" style="font-size:12px;margin-top:6px">Global public-stream directory. Search to narrow the list; streams may vary by region and broadcaster.</p></div>
   <p id="liveTVStatus" class="message" role="status" aria-live="polite">Channel select karein; video isi player mein load hogi.</p>
   <div id="liveTVPlayerCard" style="display:none;margin-top:16px">
    <h3 id="liveTVSelectedTitle">Live TV Player</h3>
@@ -2406,27 +2406,82 @@ async function submitNexaJobApplication(event){
  }catch(error){console.error("NEXA application submit error:",error);status.textContent="Application submit nahi hui. Supabase mein job_applications table aur insert policy configure karein. Details: "+(error.message||"connection error");}
  finally{button.disabled=false;}
 }
-const liveTVChannels=[
-{name:"ARY News — Live",embed:"https://www.youtube.com/embed/RqUZ2Fv9l8w"},
-{name:"Express News — Live",embed:"https://www.youtube.com/embed/6i2L8XcQE1o"},
-{name:"PTV News — Live",embed:"https://www.youtube.com/embed/CGb02nb7Ni4"},
-{name:"Al Jazeera English — Live",stream:"https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8"},
-{name:"Al Jazeera Arabic — Live",stream:"https://live-hls-apps-aja-fa.getaj.net/AJA/index.m3u8"}
+const liveTVFallbackChannels=[
+{name:"ARY News — Live",embed:"https://www.youtube.com/embed/RqUZ2Fv9l8w",country:"Pakistan"},
+{name:"Express News — Live",embed:"https://www.youtube.com/embed/6i2L8XcQE1o",country:"Pakistan"},
+{name:"PTV News — Live",embed:"https://www.youtube.com/embed/CGb02nb7Ni4",country:"Pakistan"},
+{name:"Al Jazeera English — Live",stream:"https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",country:"Qatar"},
+{name:"Al Jazeera Arabic — Live",stream:"https://live-hls-apps-aja-fa.getaj.net/AJA/index.m3u8",country:"Qatar"}
 ];
-function initLiveTVCountries(){
- const select=$("liveTVChannelSelect");if(!select||select.dataset.ready==="yes")return;
- select.innerHTML="";
- liveTVChannels.forEach((channel,index)=>{const option=document.createElement("option");option.value=String(index);option.textContent=channel.name;select.appendChild(option);});
- select.dataset.ready="yes";
- select.disabled=false;
- select.addEventListener("change",playSelectedLiveTVChannel);
- if(liveTVChannels.length){select.value="0";playSelectedLiveTVChannel();}
-}
-function updateLiveTVChannels(){
- const select=$("liveTVChannelSelect");
- if(select&&select.options.length)playSelectedLiveTVChannel();
-}
+let liveTVChannels=[...liveTVFallbackChannels];
+let liveTVAllChannels=[...liveTVFallbackChannels];
 let liveTVHlsInstance=null;
+function initLiveTVCountries(){
+ const select=$("liveTVChannelSelect"),search=$("liveTVSearch");
+ if(!select)return;
+ if(select.dataset.ready==="yes")return;
+ select.dataset.ready="yes";
+ select.addEventListener("change",playSelectedLiveTVChannel);
+ if(search)search.addEventListener("input",filterLiveTVChannels);
+ renderLiveTVOptions(liveTVChannels);
+ loadWorldwideLiveTVChannels();
+}
+function renderLiveTVOptions(channels){
+ const select=$("liveTVChannelSelect");if(!select)return;
+ const previous=select.value;
+ select.innerHTML="";
+ channels.forEach((channel,index)=>{
+  const option=document.createElement("option");
+  option.value=String(liveTVAllChannels.indexOf(channel));
+  option.textContent=channel.country?channel.name+" — "+channel.country:channel.name;
+  select.appendChild(option);
+ });
+ if(!channels.length){const option=document.createElement("option");option.value="";option.textContent="No matches — try another search";select.appendChild(option);return;}
+ const stillExists=channels.some(channel=>String(liveTVAllChannels.indexOf(channel))===previous);
+ select.value=stillExists?previous:String(liveTVAllChannels.indexOf(channels[0]));
+}
+function filterLiveTVChannels(){
+ const q=($("liveTVSearch")?.value||"").trim().toLowerCase();
+ const matches=!q?liveTVAllChannels:liveTVAllChannels.filter(ch=>(ch.name+" "+(ch.country||"")+" "+(ch.language||"")+" "+(ch.category||"")).toLowerCase().includes(q));
+ renderLiveTVOptions(matches);
+}
+async function loadWorldwideLiveTVChannels(){
+ const status=$("liveTVStatus");
+ try{
+  if(status){status.className="message show";status.textContent="Duniya bhar ke public live-stream sources load ho rahe hain…";}
+  const response=await fetch("https://iptv-org.github.io/iptv/index.m3u",{cache:"no-store"});
+  if(!response.ok)throw new Error("Global playlist unavailable");
+  const playlist=await response.text();
+  const lines=playlist.split(/\r?\n/);
+  const found=[];let meta="";
+  for(const lineRaw of lines){
+   const line=lineRaw.trim();if(!line)continue;
+   if(line.startsWith("#EXTINF")){
+    meta=line;continue;
+   }
+   if(line.startsWith("#"))continue;
+   if(!/^https?:\/\//i.test(line))continue;
+   const nameMatch=meta.match(/,(.+)$/);
+   const name=(nameMatch?nameMatch[1]:"Live channel").trim();
+   const groupMatch=meta.match(/group-title="([^"]*)"/i);
+   const countryMatch=meta.match(/tvg-country="([^"]*)"/i);
+   const languageMatch=meta.match(/tvg-language="([^"]*)"/i);
+   const category=groupMatch?groupMatch[1]:"";
+   // Only add direct media streams supported by the HTML video/HLS player.
+   if(!/\.(m3u8|m3u|mpd)(\?|$)/i.test(line)) {meta="";continue;}
+   found.push({name,stream:line,country:countryMatch?countryMatch[1]:"",language:languageMatch?languageMatch[1]:"",category});
+   meta="";
+  }
+  const seen=new Set();const unique=found.filter(ch=>{const key=ch.name.toLowerCase()+"|"+ch.stream;if(seen.has(key))return false;seen.add(key);return true;});
+  liveTVAllChannels=[...liveTVFallbackChannels,...unique.filter(ch=>!liveTVFallbackChannels.some(f=>f.name.toLowerCase()===ch.name.toLowerCase()))];
+  liveTVChannels=liveTVAllChannels;
+  filterLiveTVChannels();
+  if(status){status.className="message show";status.textContent=liveTVAllChannels.length.toLocaleString()+" worldwide channel entries loaded. Select a channel to try playback; some sources may be offline, region-restricted, or not embeddable.";}
+ }catch(error){
+  liveTVAllChannels=[...liveTVFallbackChannels];liveTVChannels=liveTVAllChannels;filterLiveTVChannels();
+  if(status){status.className="message show";status.textContent="Worldwide list abhi load nahi ho saki. Basic channels list dikh rahi hai; internet ya source baad mein dobara try karein.";}
+ }
+}
 function playSelectedLiveTVChannel(){
  const select=$("liveTVChannelSelect");
  const channel=liveTVChannels[Number(select?.value)];
