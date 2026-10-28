@@ -3753,19 +3753,19 @@ body:has(#welcomeNotice.show)::before{content:"";position:fixed;inset:0;z-index:
 </style>
 
 <style id="nexa-welcome-as-notification">
-/* Turn the welcome modal into a compact, non-blocking NEXA notification. */
-body:has(#welcomeNotice.show)::before{content:none!important;display:none!important}
-#welcomeNotice.welcome-notice{top:16px!important;right:16px!important;left:auto!important;bottom:auto!important;transform:translateX(24px)!important;width:min(390px,calc(100vw - 32px))!important;max-height:calc(100vh - 32px);overflow:auto;box-sizing:border-box;padding:17px 18px 16px!important;border:1px solid rgba(101,243,220,.45)!important;border-left:4px solid #65f3dc!important;border-radius:16px!important;background:linear-gradient(135deg,#12273a 0%,#081321 100%)!important;color:#eff8ff!important;text-align:left!important;box-shadow:0 16px 48px rgba(0,0,0,.42),0 0 22px rgba(101,243,220,.09)!important}
-#welcomeNotice.welcome-notice.show{display:block!important;animation:nexaToastIn .28s ease-out forwards}
-#welcomeNotice .welcome-brand-mark{width:34px!important;height:34px!important;float:left;margin:0 10px 7px 0!important;border-radius:11px!important;font-size:19px!important}
-#welcomeNotice .welcome-kicker{font-size:9px!important;letter-spacing:1.3px!important;margin:0 0 5px!important;padding-top:2px}
-#welcomeNotice .welcome-message{font-size:17px!important;line-height:1.25!important;margin:0 0 7px!important;color:#f4fbff!important}
-#welcomeNotice .welcome-subtitle{clear:both;font-size:12px!important;line-height:1.55!important;margin:0 0 12px!important;color:#b9cada!important;max-width:none}
-#welcomeNotice .welcome-feature-row{justify-content:flex-start!important;gap:5px!important;margin:0 0 12px!important}
-#welcomeNotice .welcome-feature-row span{font-size:9px!important;padding:5px 8px!important}
-#welcomeNotice .welcome-confirm{width:auto!important;min-height:34px!important;padding:8px 12px!important;border-radius:9px!important;font-size:10px!important;letter-spacing:.45px!important;box-shadow:none!important}
-@keyframes nexaToastIn{from{opacity:0;transform:translate(24px,-8px)!important}to{opacity:1;transform:translate(0,0)!important}}
-@media(max-width:480px){#welcomeNotice.welcome-notice{top:10px!important;right:10px!important;width:calc(100vw - 20px)!important;padding:14px!important;max-height:calc(100vh - 20px)}}
+/* Keep the original centered popup position; refine only its appearance. */
+body:has(#welcomeNotice.show)::before{content:"";display:block;position:fixed;inset:0;z-index:9998;background:rgba(3,9,18,.58);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+#welcomeNotice.welcome-notice{display:none;position:fixed;z-index:9999;top:50%!important;left:50%!important;right:auto!important;bottom:auto!important;transform:translate(-50%,-50%)!important;width:min(90vw,420px)!important;max-height:calc(100vh - 32px);overflow:auto;box-sizing:border-box;padding:27px 23px 22px!important;border:1px solid rgba(101,243,220,.42)!important;border-radius:22px!important;background:radial-gradient(ellipse at top,rgba(101,243,220,.13),transparent 48%),linear-gradient(145deg,#13283d 0%,#091321 76%)!important;color:#eff8ff!important;text-align:center!important;box-shadow:0 24px 70px rgba(0,0,0,.48),0 0 28px rgba(101,243,220,.1)!important}
+#welcomeNotice.welcome-notice.show{display:block!important;animation:nexaWelcomePolish .28s ease-out}
+#welcomeNotice .welcome-brand-mark{float:none!important;width:48px!important;height:48px!important;margin:0 auto 12px!important;display:grid;place-items:center;border-radius:15px!important;border:1px solid rgba(101,243,220,.4)!important;background:linear-gradient(145deg,#173e4b,#102034)!important;color:#65f3dc!important;font-size:25px!important;box-shadow:0 0 22px rgba(101,243,220,.1)!important}
+#welcomeNotice .welcome-kicker{font-size:9px!important;font-weight:800!important;letter-spacing:1.6px!important;line-height:1.5!important;color:#65f3dc!important;margin:0 0 8px!important;padding:0!important}
+#welcomeNotice .welcome-message{font-size:clamp(21px,5vw,27px)!important;font-weight:900!important;letter-spacing:.1px!important;line-height:1.2!important;margin:0 0 10px!important;color:#f4fbff!important;text-shadow:none!important}
+#welcomeNotice .welcome-subtitle{clear:both;font-size:13px!important;line-height:1.65!important;color:#b9cada!important;margin:0 auto 16px!important;max-width:340px}
+#welcomeNotice .welcome-feature-row{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:6px!important;margin:0 0 18px!important}
+#welcomeNotice .welcome-feature-row span{font-size:10px!important;font-weight:700!important;color:#d6f9f2!important;border:1px solid rgba(101,243,220,.2)!important;background:rgba(101,243,220,.06)!important;border-radius:30px!important;padding:6px 9px!important}
+#welcomeNotice .welcome-confirm{width:100%!important;min-height:43px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;border:0!important;border-radius:12px!important;background:linear-gradient(100deg,#65f3dc,#9cf7e9)!important;color:#06131b!important;font-size:11px!important;font-weight:900!important;letter-spacing:.65px!important;box-shadow:0 7px 18px rgba(101,243,220,.12)!important}
+@keyframes nexaWelcomePolish{from{opacity:0;transform:translate(-50%,-47%) scale(.98)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+@media(max-width:420px){#welcomeNotice.welcome-notice{padding:23px 17px 18px!important;border-radius:19px!important}#welcomeNotice .welcome-brand-mark{width:43px!important;height:43px!important;font-size:22px!important}#welcomeNotice .welcome-feature-row{gap:5px!important}#welcomeNotice .welcome-feature-row span{font-size:9px!important;padding:6px 8px!important}}
 </style>
 </body>
 </html>
