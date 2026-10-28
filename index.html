@@ -2630,17 +2630,18 @@ function initLiveTVCountries(){
 }
 function renderLiveTVOptions(channels){
  const select=$("liveTVChannelSelect");if(!select)return;
- const previous=select.value;
+ const previousChannel=liveTVChannels[Number(select.value)];
+ liveTVChannels=channels;
  select.innerHTML="";
  channels.forEach((channel,index)=>{
   const option=document.createElement("option");
-  option.value=String(liveTVAllChannels.indexOf(channel));
+  option.value=String(index);
   option.textContent=channel.country?channel.name+" — "+channel.country:channel.name;
   select.appendChild(option);
  });
  if(!channels.length){const option=document.createElement("option");option.value="";option.textContent="No matches — try another search";select.appendChild(option);return;}
- const stillExists=channels.some(channel=>String(liveTVAllChannels.indexOf(channel))===previous);
- select.value=stillExists?previous:String(liveTVAllChannels.indexOf(channels[0]));
+ const previousIndex=channels.indexOf(previousChannel);
+ select.value=String(previousIndex>=0?previousIndex:0);
 }
 function filterLiveTVChannels(){
  const q=($("liveTVSearch")?.value||"").trim().toLowerCase();
@@ -2670,7 +2671,7 @@ async function loadWorldwideLiveTVChannels(){
    const languageMatch=meta.match(/tvg-language="([^"]*)"/i);
    const category=groupMatch?groupMatch[1]:"";
    // Only add direct media streams supported by the HTML video/HLS player.
-   if(!/\.(m3u8|m3u|mpd)(\?|$)/i.test(line)) {meta="";continue;}
+   if(!/\.m3u8(\?|$)/i.test(line)) {meta="";continue;}
    found.push({name,stream:line,country:countryMatch?countryMatch[1]:"",language:languageMatch?languageMatch[1]:"",category});
    meta="";
   }
@@ -2704,16 +2705,26 @@ function playSelectedLiveTVChannel(){
    // Low-data default: start at 360p when the stream offers it, and cap
    // adaptive quality at 360p. If 360p is unavailable, use the lowest rendition.
    liveTVHlsInstance=new Hls({
+    enableWorker:true,
     startLevel:-1,
-    capLevelToPlayerSize:false,
-    abrEwmaDefaultEstimate:350000,
-    abrEwmaDefaultEstimateMax:900000,
+    capLevelToPlayerSize:true,
+    abrEwmaDefaultEstimate:700000,
+    abrEwmaDefaultEstimateMax:1800000,
     abrBandWidthFactor:0.85,
-    abrBandWidthUpFactor:0.6,
-    maxBufferLength:12,
-    maxMaxBufferLength:24,
-    backBufferLength:15,
-    lowLatencyMode:true
+    abrBandWidthUpFactor:0.7,
+    maxBufferLength:30,
+    maxMaxBufferLength:60,
+    maxBufferSize:45*1000*1000,
+    maxBufferHole:0.5,
+    backBufferLength:30,
+    lowLatencyMode:false,
+    manifestLoadingMaxRetry:4,
+    manifestLoadingRetryDelay:1000,
+    levelLoadingMaxRetry:4,
+    levelLoadingRetryDelay:1000,
+    fragLoadingMaxRetry:6,
+    fragLoadingRetryDelay:1000,
+    fragLoadingMaxRetryTimeout:20000
    });
    liveTVHlsInstance.loadSource(channel.stream);
    liveTVHlsInstance.attachMedia(video);
@@ -2731,12 +2742,18 @@ function playSelectedLiveTVChannel(){
     video.play().catch(()=>{if(status)status.textContent="Low-data player tayyar hai — video par Play dabayein."});
    });
    liveTVHlsInstance.on(Hls.Events.ERROR,(event,data)=>{
-    if(data&&data.fatal){
-     try{liveTVHlsInstance.destroy();}catch(e){}liveTVHlsInstance=null;
-     video.pause();video.removeAttribute("src");video.load();video.style.display="none";
-     frame.src="about:blank";frame.style.display="none";
-     if(status){status.className="message show";status.textContent=channel.name+" ki direct live stream abhi play nahi ho saki. Website/page fallback nahi khola gaya.";}
+    if(!data||!data.fatal)return;
+    if(data.type===Hls.ErrorTypes.NETWORK_ERROR){
+     if(status)status.textContent=channel.name+" ka connection dobara try ho raha hai…";
+     try{liveTVHlsInstance.startLoad();return;}catch(e){}
+    }else if(data.type===Hls.ErrorTypes.MEDIA_ERROR){
+     if(status)status.textContent="Video playback recover ho rahi hai…";
+     try{liveTVHlsInstance.recoverMediaError();return;}catch(e){}
     }
+    try{liveTVHlsInstance.destroy();}catch(e){}liveTVHlsInstance=null;
+    video.pause();video.removeAttribute("src");video.load();video.style.display="none";
+    frame.src="about:blank";frame.style.display="none";
+    if(status){status.className="message show";status.textContent=channel.name+" ki stream unavailable ya blocked hai. Koi doosra channel try karein; har public stream smooth ya online nahi hoti.";}
    });
   }else if(video.canPlayType("application/vnd.apple.mpegurl")){
    video.src=channel.stream;
