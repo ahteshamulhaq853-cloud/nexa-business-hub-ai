@@ -2045,6 +2045,9 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
    <button type="button" onclick="openPasswordOption('forgot')">✉ Forgot Password</button>
    <button type="button" class="secondary" onclick="openPasswordOption('change')">🔐 Change Password</button>
    <button type="button" class="profile-logout-btn" onclick="logout()">↪ Logout</button>
+   <button type="button" class="secondary" onclick="toggleSupport(true)">❔ Help</button>
+   <button type="button" class="secondary" onclick="showPage('privacyPolicyPage')">🛡 Privacy Policy</button>
+   <button type="button" class="secondary" onclick="toggleSupport(true)">🎧 Customer Service</button>
   </div>
  </div>
  <div class="grid">
@@ -2062,6 +2065,25 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
     <button type="submit">Send Reset Link</button>
    </form>
   </div>
+ </div>
+</section>
+<section id="privacyPolicyPage" class="page">
+ <div class="hero"><span class="eyebrow">YOUR PRIVACY MATTERS</span><h1>Privacy <span class="neon">Policy.</span></h1><p>How NEXA Studio handles information when you use this website.</p></div>
+ <div class="card">
+  <h2>Information You Provide</h2>
+  <p class="muted">When you create an account or use website tools, you may provide details such as your name, phone number, email address, CV information, and payment reference. Only enter information needed for the feature you are using.</p>
+  <h2>How Information Is Used</h2>
+  <p class="muted">Information may be used to operate your account, provide CV and website features, process access or payment requests, and respond to support questions.</p>
+  <h2>Account and Security</h2>
+  <p class="muted">Keep your password private. Never send passwords, one-time codes, payment PINs, or other secret credentials to support. Account and authentication services are handled through the website's configured service providers.</p>
+  <h2>CVs and Personal Details</h2>
+  <p class="muted">Only add details you want included in your CV. Before sharing or downloading a CV, review it to ensure it contains the correct information.</p>
+  <h2>Third-Party Services and Links</h2>
+  <p class="muted">Some features may rely on third-party services or external links. Those services may have their own privacy policies and terms.</p>
+  <h2>Questions or Requests</h2>
+  <p class="muted">For questions about privacy or your account, use Help or Customer Service from your Profile page. Do not include passwords or OTPs in your message.</p>
+  <p class="small-note">This is a general website privacy notice, not a legal guarantee. Update it to reflect the site's actual data retention, analytics, and provider practices before relying on it as a formal legal policy.</p>
+  <div class="actions"><button type="button" class="secondary" onclick="showPage('settingsPage')">← Back to Profile</button></div>
  </div>
 </section>
 <section id="adminPage" class="page">
@@ -3782,6 +3804,14 @@ body:has(#welcomeNotice.show)::before{content:"";display:block;position:fixed;in
 #settingsPage #profileActions{display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between;margin-top:22px}
 #settingsPage #profileActions button{min-height:42px}
 @media(max-width:560px){#settingsPage .profile-option-row{display:grid;grid-template-columns:1fr}#settingsPage .profile-option-row button{width:100%}#settingsPage #profileActions{display:grid;grid-template-columns:1fr}#settingsPage #profileActions button{width:100%}}
+</style>
+<style id="nexa-profile-help-policy">
+#settingsPage .profile-option-row{display:flex;flex-wrap:wrap;gap:10px}
+#settingsPage .profile-option-row button{min-height:44px}
+#privacyPolicyPage .card h2{margin-top:22px}
+#privacyPolicyPage .card h2:first-child{margin-top:0}
+#privacyPolicyPage .card .muted{line-height:1.75}
+@media(max-width:560px){#settingsPage .profile-option-row{display:grid;grid-template-columns:1fr 1fr}#settingsPage .profile-option-row button{width:100%;padding:10px 8px;font-size:13px}#settingsPage .profile-option-row button:nth-child(3){grid-column:auto}}
 </style>
 </body>
 </html>
