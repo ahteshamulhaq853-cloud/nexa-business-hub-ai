@@ -1549,6 +1549,10 @@ header .brand-word small{
 #dashboardPage{padding-bottom:0!important;margin-bottom:0!important}
 #dashboardPage .studio-intro{margin-bottom:0!important}
 @media(max-width:760px){#dashboardPage .studio-intro{margin-bottom:0!important}#dashboardPage .studio-art{margin-bottom:-10px!important}}
+
+/* NEXA Studio geometric brand emblem */
+header .brand .nexa-brand-logo{display:block;flex:0 0 42px;width:42px;height:42px;object-fit:contain;padding:0;background:transparent!important;border:0!important;border-radius:14px!important;box-shadow:none!important}
+@media(max-width:760px){header .brand .nexa-brand-logo{flex-basis:37px;width:37px;height:37px}}
 </style>
 
 <style id="compact-card-spacing">
@@ -1641,7 +1645,7 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
 <body>
 <button id="settingsLauncher" type="button" aria-label="Open menu" title="Menu" aria-expanded="false" onclick="toggleMainMenu()">☰</button>
 <header>
- <div class="brand"><span class="brand-mark">N</span><span class="brand-word">NEXA<span>STUDIO</span><small>CREATE SOMETHING GREAT</small></span></div>
+ <div class="brand"><img class="brand-mark nexa-brand-logo" src="./nexa-logo.svg" alt="NEXA Studio logo" width="42" height="42"><span class="brand-word">NEXA<span>STUDIO</span><small>CREATE SOMETHING GREAT</small></span></div>
  <nav id="mainNav" style="display:none">
   <button class="ghost" onclick="showPage('dashboardPage')">Dashboard</button>
   <button class="ghost" onclick="showPage('cvSectionPage')">CV</button>
