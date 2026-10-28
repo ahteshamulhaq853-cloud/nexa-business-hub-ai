@@ -1681,7 +1681,7 @@ header .brand-word small{
     <iframe id="liveTVFrame" title="Live TV Player" src="about:blank" style="width:100%;height:100%;border:0;background:#111827" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
    </div>
    <div class="actions" style="margin-top:12px"><a id="liveTVOfficialLink" href="#" target="_blank" rel="noopener noreferrer" class="button" style="display:inline-block;text-decoration:none">Open Official Live Stream ↗</a><button type="button" class="secondary" onclick="resetLiveTVPlayer()">Stop Player</button></div>
-   <p class="muted" style="font-size:12px">Note: Kuch broadcasters apni website ko doosri website ke player mein chalne nahi dete. Aisi surat mein “Open Official Live Stream” par tap karein.</p>
+   <p class="muted" style="font-size:12px">Official live page kholne ke liye button par tap karein. Kuch broadcasters apni website ko doosri website ke player mein chalne nahi dete, is liye official page naye tab mein khulega.</p>
   </div>
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button><button class="secondary" onclick="showPage('servicesPage')">Back to Services</button></div>
@@ -2471,10 +2471,11 @@ function playSelectedLiveTVChannel(){
  const country=$("liveTVCountry")?.value,select=$("liveTVChannelSelect"),channel=liveTVChannelsByCountry[country]?.[Number(select?.value)];
  const frame=$("liveTVFrame"),official=$("liveTVOfficialLink"),status=$("liveTVStatus"),card=$("liveTVPlayerCard");
  if(!channel||!frame||!official)return;
- frame.src=channel.url;official.href=channel.official;official.textContent="Open "+channel.name+" Official Stream ↗";
+ frame.src="about:blank";
+ official.href=channel.official;official.textContent="Open "+channel.name+" Official Stream ↗";
  $("liveTVSelectedTitle").textContent="📺 "+country+" — "+channel.name;
  if(card)card.style.display="block";
- if(status){status.className="message show";status.textContent=channel.name+" load ho raha hai. Agar player blank rahe to official stream ka button use karein.";}
+ if(status){status.className="message show";status.textContent=channel.name+" ki official website neeche button se kholein. Kuch channels external player mein chalne ki ijazat nahi dete.";}
 }
 function resetLiveTVPlayer(showMessage=true){
  const frame=$("liveTVFrame"),card=$("liveTVPlayerCard"),status=$("liveTVStatus");
