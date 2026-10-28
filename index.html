@@ -1687,7 +1687,7 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
  </div>
 </section>
 <section id="dashboardPage" class="page studio-dashboard">
- <div id="welcomeNotice" class="welcome-notice" role="dialog" aria-modal="true" aria-live="polite"><div id="welcomeMessage" class="welcome-message">YOU ARE WELCOME TO THE NEXA WORLD</div><p class="welcome-subtitle">Your journey to a smarter, more professional future starts here. Create your CV, explore your potential, and let your next opportunity begin with NEXA.</p><button type="button" class="welcome-confirm" onclick="dismissWelcome()">OK, CONTINUE</button></div>
+ <div id="welcomeNotice" class="welcome-notice" role="dialog" aria-modal="true" aria-live="polite"><div class="welcome-brand-mark">✦</div><div class="welcome-kicker">WELCOME TO YOUR DIGITAL WORKSPACE</div><div id="welcomeMessage" class="welcome-message">WELCOME TO NEXA STUDIO</div><p class="welcome-subtitle">Your smarter workspace starts here. Build a professional CV, explore the latest jobs and news, watch Live TV, and discover useful digital tools—all in one place.</p><div class="welcome-feature-row"><span>✦ CV Studio</span><span>▣ Live TV</span><span>↗ Jobs &amp; News</span></div><button type="button" class="welcome-confirm" onclick="dismissWelcome()">LET’S GET STARTED <span aria-hidden="true">→</span></button></div>
  <div class="studio-intro">
   <div class="studio-intro-copy">
    <span class="studio-kicker"><span class="studio-live-dot"></span> YOUR ALL-IN-ONE DIGITAL HUB</span>
@@ -3738,6 +3738,19 @@ header .brand small{margin-top:3px!important}
 }
 </style>
 
+<style id="nexa-welcome-popup-refresh">
+body:has(#welcomeNotice.show)::before{content:"";position:fixed;inset:0;z-index:9998;background:rgba(3,9,18,.76);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+#welcomeNotice.welcome-notice{z-index:9999;width:min(91vw,440px);box-sizing:border-box;padding:30px 25px 24px;border:1px solid rgba(101,243,220,.55)!important;border-radius:24px;background:radial-gradient(ellipse at top,rgba(101,243,220,.14),transparent 48%),linear-gradient(145deg,#13263b 0%,#08111f 75%)!important;color:#eff8ff!important;box-shadow:0 28px 90px rgba(0,0,0,.55),0 0 36px rgba(101,243,220,.12)!important;overflow:hidden}
+#welcomeNotice .welcome-brand-mark{width:54px;height:54px;margin:0 auto 13px;display:grid;place-items:center;border-radius:17px;border:1px solid rgba(101,243,220,.5);background:linear-gradient(145deg,#173e4b,#102034);color:#65f3dc;font-size:28px;box-shadow:0 0 25px rgba(101,243,220,.12)}
+#welcomeNotice .welcome-kicker{font-size:10px;font-weight:800;letter-spacing:2px;line-height:1.5;color:#65f3dc;margin-bottom:9px}
+#welcomeNotice .welcome-message{font-size:clamp(22px,5.8vw,29px);font-weight:900;letter-spacing:.2px;line-height:1.18;margin:0 0 12px;color:#f4fbff!important;text-shadow:none!important}
+#welcomeNotice .welcome-subtitle{font-size:13px;line-height:1.75;color:#b9cada!important;margin:0 auto 18px;max-width:340px}
+#welcomeNotice .welcome-feature-row{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin:0 0 21px}
+#welcomeNotice .welcome-feature-row span{font-size:10px;font-weight:700;letter-spacing:.2px;color:#d6f9f2;border:1px solid rgba(101,243,220,.22);background:rgba(101,243,220,.07);border-radius:30px;padding:7px 10px}
+#welcomeNotice .welcome-confirm{width:100%;min-height:46px;display:flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:13px;background:linear-gradient(100deg,#65f3dc,#9cf7e9);color:#06131b;font-size:12px;font-weight:900;letter-spacing:.8px;box-shadow:0 8px 22px rgba(101,243,220,.15);transition:transform .18s ease,filter .18s ease}
+#welcomeNotice .welcome-confirm:active{transform:scale(.98)}
+@media(max-width:420px){#welcomeNotice.welcome-notice{padding:25px 18px 19px;border-radius:20px}#welcomeNotice .welcome-brand-mark{width:48px;height:48px;font-size:25px}#welcomeNotice .welcome-feature-row{gap:5px}#welcomeNotice .welcome-feature-row span{font-size:9px;padding:6px 8px}}
+</style>
 </body>
 </html>
 
