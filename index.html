@@ -1682,13 +1682,6 @@ header .brand-word small{
     <iframe id="liveTVFrame" title="Live TV Player" src="about:blank" style="display:none;width:100%;height:100%;border:0;background:#111827" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
    </div>
    <div class="actions" style="margin-top:12px"><button type="button" class="secondary" onclick="resetLiveTVPlayer()">Stop Player</button></div>
-   <div id="liveTVUrduCaptions" style="margin-top:14px;padding:14px;border:1px solid var(--line,#dbe4f0);border-radius:14px;background:var(--card,#f8fafc)">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap"><strong>🌐 English → Urdu Captions (Beta)</strong><span id="liveTVCaptionBadge" class="muted" style="font-size:12px">Off</span></div>
-    <p class="muted" style="font-size:12px;margin:8px 0">Captions ke liye Start dabayein aur microphone permission allow karein. TV ki awaaz speakers se sunai deni chahiye; headphones par mic audio nahi sun sakega.</p>
-    <div class="actions" style="margin:8px 0"><button id="liveTVCaptionStart" type="button" onclick="startLiveTVUrduCaptions()">Start Urdu Captions</button><button id="liveTVCaptionStop" type="button" class="secondary" onclick="stopLiveTVUrduCaptions()" disabled>Stop Captions</button><button type="button" class="secondary" onclick="clearLiveTVUrduCaptions()">Clear</button></div>
-    <p id="liveTVCaptionStatus" class="muted" role="status" aria-live="polite" style="font-size:12px">Ready. Is feature ko microphone aur internet ki zaroorat ho sakti hai.</p>
-    <div id="liveTVCaptionOutput" lang="ur" dir="rtl" style="min-height:52px;max-height:180px;overflow:auto;padding:12px;border-radius:10px;background:#101827;color:#fff;font-size:18px;line-height:1.8">اردو ترجمہ یہاں ظاہر ہوگا۔</div>
-   </div>
    <p class="muted" style="font-size:12px">Channels jo official embedded live player dete hain woh isi website ke andar chalenge. Agar broadcaster embedding band kare ya live feed offline ho, us channel ka player kaam nahi karega. Urdu captions speech recognition aur online translation par depend karte hain; har channel par perfect ya guaranteed nahi honge.</p>
   </div>
  </div>
@@ -2553,86 +2546,7 @@ function playSelectedLiveTVChannel(){
   if(status){status.className="message show";status.textContent="Is channel ki video feed abhi available nahi hai.";}
  }
 }
-let liveTVCaptionRecognition=null;
-let liveTVCaptionRunning=false;
-let liveTVCaptionRestarting=false;
-let liveTVCaptionLines=[];
-function setLiveTVCaptionStatus(message){const el=$("liveTVCaptionStatus");if(el)el.textContent=message;}
-function renderLiveTVCaptionLines(){
- const out=$("liveTVCaptionOutput");if(!out)return;
- out.textContent=liveTVCaptionLines.length?liveTVCaptionLines.slice(-4).join("  •  "):"اردو ترجمہ یہاں ظاہر ہوگا۔";
-}
-async function translateLiveTVTextToUrdu(text){
- const url="https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=ur&dt=t&q="+encodeURIComponent(text);
- const response=await fetch(url);
- if(!response.ok)throw new Error("Translation service unavailable");
- const data=await response.json();
- const translated=Array.isArray(data?.[0])?data[0].map(part=>part&&part[0]?part[0]:"").join(""):"";
- if(!translated)throw new Error("No translated text");
- return translated;
-}
-function startLiveTVUrduCaptions(){
- const SpeechRecognition=window.SpeechRecognition||window.webkitSpeechRecognition;
- if(!SpeechRecognition){setLiveTVCaptionStatus("Is browser mein speech recognition supported nahi. Chrome ya Edge ka updated version try karein.");return;}
- if(liveTVCaptionRunning)return;
- try{
-  liveTVCaptionRecognition=new SpeechRecognition();
-  liveTVCaptionRecognition.lang="en-US";
-  liveTVCaptionRecognition.continuous=true;
-  liveTVCaptionRecognition.interimResults=false;
-  liveTVCaptionRecognition.maxAlternatives=1;
-  liveTVCaptionRunning=true;
-  const start=$("liveTVCaptionStart"),stop=$("liveTVCaptionStop"),badge=$("liveTVCaptionBadge");
-  if(start)start.disabled=true;if(stop)stop.disabled=false;if(badge)badge.textContent="Listening…";
-  setLiveTVCaptionStatus("Microphone sun raha hai. TV ki awaaz speakers se chalayein; pehli caption aane mein kuch waqt lag sakta hai.");
-  liveTVCaptionRecognition.onresult=async(event)=>{
-   for(let i=event.resultIndex;i<event.results.length;i++){
-    if(!event.results[i].isFinal)continue;
-    const english=(event.results[i][0]?.transcript||"").trim();
-    if(!english)continue;
-    setLiveTVCaptionStatus("English speech suni gayi — Urdu mein tarjuma ho raha hai…");
-    try{
-     const urdu=await translateLiveTVTextToUrdu(english);
-     liveTVCaptionLines.push(urdu);renderLiveTVCaptionLines();
-     setLiveTVCaptionStatus("Urdu captions chal rahe hain. Tarjuma thora late aa sakta hai.");
-    }catch(error){
-     liveTVCaptionLines.push("ترجمہ دستیاب نہیں: "+english);renderLiveTVCaptionLines();
-     setLiveTVCaptionStatus("Online translation abhi nahi chal saki. Internet connection check karein.");
-    }
-   }
-  };
-  liveTVCaptionRecognition.onerror=(event)=>{
-   const msg=event.error==="not-allowed"?"Microphone permission allow karein, phir dobara Start dabayein.":event.error==="no-speech"?"Abhi speech sunai nahi di. TV ki awaaz barhayein aur speakers use karein.":"Speech recognition mein masla hua: "+event.error;
-   setLiveTVCaptionStatus(msg);
-   if(event.error==="not-allowed"||event.error==="service-not-allowed")stopLiveTVUrduCaptions();
-  };
-  liveTVCaptionRecognition.onend=()=>{
-   if(liveTVCaptionRunning&&!liveTVCaptionRestarting){
-    liveTVCaptionRestarting=true;
-    setTimeout(()=>{liveTVCaptionRestarting=false;if(liveTVCaptionRunning&&liveTVCaptionRecognition){try{liveTVCaptionRecognition.start();}catch(e){}}},500);
-   }else if(!liveTVCaptionRunning){
-    const start=$("liveTVCaptionStart"),stop=$("liveTVCaptionStop"),badge=$("liveTVCaptionBadge");
-    if(start)start.disabled=false;if(stop)stop.disabled=true;if(badge)badge.textContent="Off";
-   }
-  };
-  liveTVCaptionRecognition.start();
- }catch(error){
-  liveTVCaptionRunning=false;
-  const start=$("liveTVCaptionStart"),stop=$("liveTVCaptionStop"),badge=$("liveTVCaptionBadge");
-  if(start)start.disabled=false;if(stop)stop.disabled=true;if(badge)badge.textContent="Off";
-  setLiveTVCaptionStatus("Captions start nahi ho sake. Browser permission aur HTTPS connection check karein.");
- }
-}
-function stopLiveTVUrduCaptions(){
- liveTVCaptionRunning=false;
- if(liveTVCaptionRecognition){try{liveTVCaptionRecognition.onend=null;liveTVCaptionRecognition.stop();}catch(e){}liveTVCaptionRecognition=null;}
- const start=$("liveTVCaptionStart"),stop=$("liveTVCaptionStop"),badge=$("liveTVCaptionBadge");
- if(start)start.disabled=false;if(stop)stop.disabled=true;if(badge)badge.textContent="Off";
- setLiveTVCaptionStatus("Urdu captions band hain.");
-}
-function clearLiveTVUrduCaptions(){liveTVCaptionLines=[];renderLiveTVCaptionLines();}
 function resetLiveTVPlayer(showMessage=true){
- stopLiveTVUrduCaptions();
  const frame=$("liveTVFrame"),video=$("liveTVVideo"),card=$("liveTVPlayerCard"),status=$("liveTVStatus");
  if(liveTVHlsInstance){try{liveTVHlsInstance.destroy();}catch(e){}liveTVHlsInstance=null;}
  if(frame){frame.src="about:blank";frame.style.display="none";}
