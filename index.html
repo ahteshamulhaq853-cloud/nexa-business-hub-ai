@@ -1578,6 +1578,59 @@ header .brand-word small{
   direction: rtl;
   text-align: right;
 }
+
+/* NEXA STUDIO mobile dashboard polish — Oct 2026 */
+html{scroll-padding-top:84px;scroll-padding-bottom:calc(112px + env(safe-area-inset-bottom))}
+body{overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+img,video,iframe,canvas{max-width:100%}
+header{min-height:88px;padding-top:14px;padding-bottom:14px}
+.brand{line-height:1.05}
+.brand .brand-mark{display:inline-flex;align-items:center;justify-content:center}
+#settingsLauncher{border:1px solid #35516b;background:linear-gradient(145deg,#12243a,#0b1421);border-radius:16px;width:54px;height:54px;box-shadow:0 5px 18px #0003}
+#settingsLauncher:hover{background:#172b41}
+#bottomNav{padding:10px 7px calc(10px + env(safe-area-inset-bottom));background:rgba(8,16,29,.97);border:1px solid #294256;border-bottom:0;border-radius:24px 24px 0 0;box-shadow:0 -10px 30px #0005;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+#bottomNav button{min-height:58px;gap:5px;color:#9db2c7;font-size:11px;transition:color .18s ease,background .18s ease,transform .18s ease}
+#bottomNav button .bottom-icon{display:flex;align-items:center;justify-content:center;min-height:29px;font-size:22px}
+#bottomNav button.active{color:#65f3dc;background:linear-gradient(180deg,#65f3dc16,#65f3dc05)}
+#bottomNav button:focus-visible{outline:2px solid #65f3dc;outline-offset:-2px}
+body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom))}
+.studio-dashboard{width:100%;max-width:1500px}
+.studio-intro{min-width:0}
+.studio-intro-copy,.studio-art{min-width:0}
+.studio-hero-actions button{min-height:48px}
+.card,.hero,.page,.grid>*{min-width:0;overflow-wrap:anywhere}
+@media(max-width:760px){
+  header{position:sticky;top:0;z-index:1055;min-height:88px;padding:12px 10px;background:rgba(8,14,25,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+  header .brand{max-width:calc(100% - 104px);font-size:clamp(23px,6vw,30px);letter-spacing:.5px}
+  header .brand small{font-size:11px;letter-spacing:1.2px;margin-top:5px}
+  #settingsLauncher{top:16px;left:14px;width:48px;height:48px;font-size:27px}
+  main{margin:14px auto;padding:0 12px}
+  .studio-intro{grid-template-columns:minmax(0,1fr);gap:14px;min-height:0;padding:clamp(22px,5vw,32px);border-radius:22px;margin-bottom:20px}
+  .studio-intro h1{font-size:clamp(32px,8.4vw,48px);letter-spacing:-1.4px;line-height:1.04;margin:18px 0 14px}
+  .studio-intro-copy>p{font-size:15px;line-height:1.65}
+  .studio-hero-actions{display:grid;grid-template-columns:minmax(0,1fr);gap:9px;margin-top:20px}
+  .studio-hero-actions button{width:100%;margin:0;padding:14px 12px}
+  .studio-art{min-height:210px;max-height:280px;transform:scale(.96);transform-origin:top center;margin-bottom:-5px}
+  .grid,.grid.three{grid-template-columns:minmax(0,1fr)}
+  .hero,.card{padding:16px;border-radius:15px}
+  #bottomNav{gap:1px;padding-left:4px;padding-right:4px}
+  #bottomNav button{font-size:clamp(9px,2.6vw,11px);padding:6px 1px;min-height:57px}
+  #bottomNav button .bottom-icon{font-size:21px}
+  #supportLauncher{right:12px;bottom:calc(82px + env(safe-area-inset-bottom));padding:10px 12px;font-size:12px;max-width:calc(100vw - 24px)}
+  #supportPanel{right:10px;width:calc(100vw - 20px);bottom:calc(130px + env(safe-area-inset-bottom))}
+}
+@media(max-width:360px){
+  header .brand{font-size:22px}
+  header .brand small{font-size:9px;letter-spacing:.8px}
+  #bottomNav button{font-size:9px}
+  #bottomNav button .bottom-icon{font-size:19px}
+  .studio-intro{padding:19px}
+  .studio-intro h1{font-size:30px}
+}
+@media(prefers-reduced-motion:reduce){
+  #bottomNav button,#supportLauncher{transition:none}
+}
+
 </style>
 </head>
 <body>
