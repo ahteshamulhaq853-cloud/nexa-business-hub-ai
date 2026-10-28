@@ -1,6 +1,26 @@
 {
-  "updated": "2026-10-28T21:00:04.886617+00:00",
+  "updated": "2026-10-28T21:35:12.651568+00:00",
   "items": [
+    {
+      "title": "Bloodied, dazed and angry - how passengers' rail journey turned to disaster in Spain",
+      "link": "https://www.bbc.co.uk/news/articles/cm9qzd47ng98o?at_medium=RSS&at_campaign=rss",
+      "summary": "Survivors of the train crash in Spain have spoken of their shock, panic and anger at the accident in Toledo province on Wednesday.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c63d/live/bb688fa0-d312-11f1-a701-fddedf244c16.jpg",
+      "published": "2026-10-28T21:24:41+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Flávio Bolsonaro lands in Miami after defeat in Brazil's presidential election",
+      "link": "https://www.bbc.co.uk/news/articles/c6kglwe4lxwzo?at_medium=RSS&at_campaign=rss",
+      "summary": "Bolsonaro's arrival in the US ends speculation about his whereabouts after he failed to comply with an order to surrender his passports.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2c2c/live/4c19c1e0-d2eb-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-10-28T21:07:06+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Israel's election deadlock is a sign of the country's deep divisions",
       "link": "https://www.bbc.co.uk/news/articles/cqz0ve94ygpjo?at_medium=RSS&at_campaign=rss",
@@ -27,16 +47,6 @@
       "summary": "With 85% of ballots counted, Netanyahu's Likud party and its allies are set to win 53 seats in the 120-seat Knesset.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3381/live/719a4410-d2f2-11f1-8d86-83eebc838351.jpg",
       "published": "2026-10-28T20:24:39+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Flávio Bolsonaro lands in Miami after defeat in Brazil's presidential election",
-      "link": "https://www.bbc.co.uk/news/articles/c6kglwe4lxwzo?at_medium=RSS&at_campaign=rss",
-      "summary": "Bolsonaro's arrival in the US ends speculation about his whereabouts after he failed to comply with an order to surrender his passports.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2c2c/live/4c19c1e0-d2eb-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-10-28T20:22:49+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -462,16 +472,6 @@
       "language": "en"
     },
     {
-      "title": "Bloodied, dazed and angry - how passengers' rail journey turned to disaster in Spain",
-      "link": "https://www.bbc.co.uk/news/articles/cm9qzd47ng98o?at_medium=RSS&at_campaign=rss",
-      "summary": "Survivors of the train crash in Spain have spoken of their shock, panic and anger at the accident in Toledo province on Wednesday.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/178d/live/98c35e40-d2da-11f1-93e1-3b657b665bcf.png",
-      "published": "2026-10-28T17:16:03+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "وزارت اطلاعات نے افغان طالبان رجیم کے بیان کو جھوٹا اور من گھڑت قرار دیدیا",
       "link": "https://jang.com.pk/news/1628600",
       "summary": "وزارت اطلاعات و نشریات نے افغان طالبان رجیم کے بیان کو جھوٹا اور من گھڑت قرار دیدیا۔ اسلام آباد سے وزارت اطلاعات کے مطابق انگور اڈہ...",
@@ -672,6 +672,16 @@
       "language": "en"
     },
     {
+      "title": "مٹھی، بی ایچ یو کی کھڑی ایمبولینس میں سلنڈر دھماکا، 8 افراد جاں بحق",
+      "link": "https://www.express.pk/story/2841009/mithi-cylinder-explosion-in-a-parked-ambulance-at-bhu-8-people-killed-2841009/",
+      "summary": "دھماکے کے بعد لگنے والی آگ کی وجہ سے ایمبولینس مکمل طور پر جل کر تباہ ہو گئی",
+      "image_url": "",
+      "published": "2026-10-28T15:50:11+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Govt considering creation of regulatory authority for construction industry",
       "link": "https://www.dawn.com/news/2040454/govt-considering-creation-of-regulatory-authority-for-construction-industry",
       "summary": "ISLAMABAD: The government is considering establishing two new bodies — a regulatory authority and a marketing entity — for the construction industry along with a three-year defect liability period for major construction projects in the country. Private sector figures in construction and the government, however, differ over the financial size for the applicat",
@@ -700,6 +710,36 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "سیاسی بے چینی پر مبنی رجحانات",
+      "link": "https://www.express.pk/story/2841006/siyasi-bechaini-par-mabni-rujhanat-2841006/",
+      "summary": "پاکستان میں روائتی سیاسی اور مذہبی جماعتوں کی سیاست دم توڑ رہی ہے اوران کی قیادت کی نئی نسل میں کوئی اہمیت نہیں ہے۔",
+      "image_url": "",
+      "published": "2026-10-28T15:35:59+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "آٹے کی قیمت میں اضافہ",
+      "link": "https://www.express.pk/story/2841005/aatay-ki-qeemat-mein-izafa-2841005/",
+      "summary": "پاکستان کے ہر شعبے میں ،ہر بازار میں، ہر دفتر میں، ہر کھیت و کھلیان میں، صنعت و حرفت ہو یا زراعت ہر جگہ ان مافیاز کی کارفرمائی واضح نظر آتی ہے",
+      "image_url": "",
+      "published": "2026-10-28T15:35:58+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "شکرانے اورٹوکریاں",
+      "link": "https://www.express.pk/story/2841004/shukrane-aur-tokriyan-2841004/",
+      "summary": "ہمارے کچھ پوچھنے سے پہلے گویا ہوئے کہ یہ ہمارے ’’باس‘‘ کی لکھی ہوئی کتاب ہے ، وہ آپ کے فین ہیں",
+      "image_url": "",
+      "published": "2026-10-28T15:35:58+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "ہم پرورش لوح و قلم کرتے رہیں گے (حصہ دوئم)",
@@ -960,46 +1000,6 @@
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "'Conscience does not permit': LHC's Justice Kayani resigns, cites 'executive's growing control' over judiciary",
-      "link": "https://www.dawn.com/news/2040428/conscience-does-not-permit-lhcs-justice-kayani-resigns-cites-executives-growing-control-over-judiciary",
-      "summary": "LAHORE: Lahore High Court’s (LHC) Justice Mohsin Akhtar Kayani resigned on Wednesday, citing personal reasons, including health concerns following a recent surgery, and “reasons of conscience”. In his resignation letter to the president of Pakistan, a copy of which is available with Dawn , Justice Kayani said it had been a privilege for him to serve at the I",
-      "image_url": "https://i.dawn.com/large/2026/10/28144530894f38a.webp",
-      "published": "2026-10-28T14:13:16+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "سیکریٹری میٹرک بورڈ کراچی کیخلاف تحقیقات کا آغاز",
-      "link": "https://jang.com.pk/news/1628582",
-      "summary": "عدالتی حکم پر اینٹی کرپشن نے سیکریٹری میٹرک بورڈ کراچی کے خلاف تحقیقات کا آغاز کردیا۔اینٹی کرپشن اسٹیبلشمنٹ سندھ نے چیئرمین بورڈ...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-28/b_1628582_074713_updates.jpg\"/",
-      "published": "2026-10-28T14:10:59+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "حکومت اور پیپلز پارٹی کے درمیان قانون سازی سے متعلق مذاکرات، بات چیت جاری رکھنے پر اتفاق",
-      "link": "https://jang.com.pk/news/1628577",
-      "summary": "حکومت اور پیپلز پارٹی کے درمیان قانون سازی سے متعلق مذاکرات کا دوسرا دور ہوا، دونوں جماعتوں نے بات چیت جاری رکھنے پر اتفاق...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-28/b_1628577_072002_updates.jpg\"/",
-      "published": "2026-10-28T14:10:53+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "میر رضا کیس: سندھ حکومت نے جوڈیشل کمیشن کی ہدایت پر جے آئی ٹی تشکیل دے دی",
-      "link": "https://jang.com.pk/news/1628583",
-      "summary": "کراچی کے نوجوان تاجر میر رضا کیس کی تحقیقات کیلئے سندھ حکومت نے جوڈیشل کمیشن کی ہدایت پر جے آئی ٹی تشکیل دیتے ہوئے مشترکہ تحقیقاتی...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-28/b_1628583_080816_updates.jpg\"/",
-      "published": "2026-10-28T14:10:50+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
     }
   ]
 }
