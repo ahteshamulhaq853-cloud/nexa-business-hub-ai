@@ -3239,7 +3239,7 @@ function supportReply(raw){
   return "Aap personal help ke liye WhatsApp Support button dabayein. Message mein apna masla likhein. Password, OTP ya bank/payment PIN share na karein.";
  if(/weather|mausam|temperature|forecast|barish|rain/.test(q))
   return "Weather dekhne ke liye neeche News section kholein aur us ke andar Weather tab select karein. City ka naam likh kar Search Weather dabayein. Current temperature aur 7-day forecast milta hai. My Location ke liye browser permission deni hogi.";
- if(/\\b(news|khabar|khabrein|headlines)\\b/.test(q))
+ if(/\b(news|khabar|khabrein|headlines)\b/.test(q))
   return "Latest news ke liye bottom navigation mein News kholein. News section mein available Urdu aur English news categories select kar sakte hain. Agar headlines load na hon to internet connection check karke page refresh karein.";
  if(/live tv|television|tv channel|channel/.test(q))
   return "Live TV kholne ke liye bottom navigation mein Live TV dabayein. Available country/channel list se channel select karein. Kuch channels region restrictions ya apne stream ki wajah se play nahi kar sakte.";
@@ -3256,10 +3256,10 @@ function supportReply(raw){
  if(/save|saved|data|details/.test(q))
   return "CV Builder mein Save CV Details dabayein. Website database mein save karne ki koshish karegi aur browser mein local backup bhi rakhti hai. Shared/public device par apna account logout karna na bhoolen.";
  if(/hello|hi|salam|assalam|aoa/.test(q))
-  return "Wa-Alaikum-Assalam! 😊 Main Nexa CV Studio ke account, CV Builder, templates aur PDF access ke baare mein guide kar sakta hoon. Apna sawal likhein ya neeche quick options use karein.";
+  return "Wa-Alaikum-Assalam! 😊 Main NEXA AI Support hoon. CV, account/login, templates, PDF access, Jobs, News, Weather aur Live TV mein help ke liye apna sawal likhein ya quick options use karein.";
  if(/course|service|logo|poster|video|business hub/.test(q))
-  return "Is waqt aapki connected website Nexa CV Studio hai, jahan account, CV Builder, 15 professional CV designs aur PDF access available hain. Agar aap doosri Nexa Business Hub services ke baare mein pooch rahe hain to WhatsApp Support button se rabta karein.";
- return "Main Nexa CV Studio ke CV Builder, templates, account/login aur Rs. 100 PDF access mein help kar sakta hoon. Apna sawal thora detail se likhein ya WhatsApp Support dabayein.";
+  return "NEXA mein CV Builder, CV templates, account/login, PDF access, Jobs, News, Weather aur Live TV maujood hain. Kisi feature ka masla ho to apna sawal detail se likhein ya WhatsApp Support use karein.";
+ return "Main CV Builder, templates, account/login, PDF access, Jobs, News, Weather aur Live TV mein guide kar sakta hoon. Apna sawal thora detail se likhein ya WhatsApp Support dabayein.";
 }
 async function askSupport(text){
  const question=String(text||"").trim();
