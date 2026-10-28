@@ -2144,6 +2144,10 @@ header .brand-word small{
 </section>
 <section id="latestNewsPage" class="page">
  <div class="studio-section-heading"><div><span class="studio-kicker">NEXA NEWS DESK</span><h2>NEXA NEWS CENTER</h2></div></div>
+ <div class="actions" style="margin:10px 0;gap:8px;flex-wrap:wrap">
+  <button type="button" class="secondary" id="nexaNewsTab" onclick="showNexaNewsWeather('news')">📰 News</button>
+  <button type="button" class="secondary" id="nexaWeatherTab" onclick="showNexaNewsWeather('weather')">🌦️ Weather</button>
+ </div>
  <div id="newsCategoryCards" class="grid three" style="margin-bottom:10px;gap:8px">
   <button type="button" class="card" style="text-align:left;color:var(--text);background:var(--panel);border:1px solid var(--line);padding:13px;min-height:112px;line-height:1.25" onclick="openNexaNewsCategory('urdu')"><span style="font-size:24px">🇵🇰</span><h3 style="margin:6px 0 3px;font-size:16px">اردو خبریں</h3><p class="muted" style="margin:4px 0;font-size:12px">Pakistan aur duniya ki taza Urdu khabrein</p><strong>اردو خبریں کھولیں ←</strong></button>
   <button type="button" class="card" style="text-align:left;color:var(--text);background:var(--panel);border:1px solid var(--line);padding:22px;min-height:150px" onclick="openNexaNewsCategory('english')"><span style="font-size:24px">🌐</span><h3 style="margin:6px 0 3px;font-size:16px">English News</h3><p class="muted" style="margin:4px 0;font-size:12px">Latest Pakistan and world headlines in English</p><strong>Open English News →</strong></button>
@@ -2170,9 +2174,8 @@ header .brand-word small{
 
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
-</section>
 
-<section id="weatherPage" class="page">
+<div id="weatherPanel" style="display:none;margin-top:16px">
  <div class="studio-section-heading"><div><span class="studio-kicker">NEXA WEATHER DESK</span><h2>WEATHER FORECAST</h2></div></div>
  <div class="card" style="padding:16px;margin-bottom:12px">
   <p class="muted" style="margin-top:0">Apne shehar ka naam likhein aur current weather dekhein.</p>
@@ -2187,13 +2190,15 @@ header .brand-word small{
  <h3 style="margin:14px 0 8px">7-Day Forecast</h3>
  <div id="weatherForecast" class="grid two" style="gap:8px"><article class="card"><p class="muted">Forecast load ho raha hai…</p></article></div>
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
+</div>
 </section>
+
+
 </main>
 <nav id="bottomNav" aria-label="Main navigation">
  <button type="button" onclick="bottomNavigate('dashboardPage',this)"><span class="bottom-icon">⌂</span><span>Dashboard</span></button>
  <button type="button" onclick="bottomNavigate('latestJobsPage',this)"><span class="bottom-icon">💼</span><span>Jobs</span></button>
  <button type="button" onclick="bottomNavigate('latestNewsPage',this)"><span class="bottom-icon">📰</span><span>News</span></button>
- <button type="button" onclick="bottomNavigate('weatherPage',this)"><span class="bottom-icon">🌦️</span><span>Weather</span></button>
  <button type="button" onclick="bottomNavigate('servicesPage',this)"><span class="bottom-icon">⚙</span><span>Services</span></button>
 <button type="button" onclick="bottomNavigate('liveTVPage',this)"><span class="bottom-icon">📺</span><span>Live TV</span></button>
  <button type="button" onclick="bottomNavigate('settingsPage',this)"><span class="bottom-icon">♙</span><span>Profile</span></button>
@@ -2264,6 +2269,20 @@ function getNexaWeatherLocation(){
  navigator.geolocation.getCurrentPosition(async function(pos){
   try{const url="https://api.open-meteo.com/v1/forecast?latitude="+pos.coords.latitude+"&longitude="+pos.coords.longitude+"&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=auto&forecast_days=7";const res=await fetch(url);if(!res.ok)throw new Error("Weather service unavailable");const data=await res.json(),c=data.current,d=data.daily;document.getElementById("weatherCity").value="My Location";document.getElementById("weatherCurrent").innerHTML="<div class='muted'>Your current location</div><div style='font-size:52px;font-weight:800'>"+nexaWeatherIcon(c.weather_code)+" "+Math.round(c.temperature_2m)+"°C</div><h3>"+(nexaWeatherDescriptions[c.weather_code]||"Weather update")+"</h3><div>Feels like "+Math.round(c.apparent_temperature)+"°C · 💧 "+c.relative_humidity_2m+"% humidity · 💨 "+c.wind_speed_10m+" km/h wind</div>";let html="";for(let i=0;i<d.time.length;i++){const dt=new Date(d.time[i]+"T12:00:00"),day=i===0?"Today":dt.toLocaleDateString("en",{weekday:"short",day:"numeric"});html+="<article class='card' style='padding:12px'><strong>"+day+"</strong><div style='font-size:24px;margin:5px 0'>"+nexaWeatherIcon(d.weather_code[i])+"</div><div>"+Math.round(d.temperature_2m_max[i])+"° / "+Math.round(d.temperature_2m_min[i])+"°</div><div class='muted' style='font-size:12px'>Rain chance: "+(d.precipitation_probability_max[i]??0)+"%</div></article>";}document.getElementById("weatherForecast").innerHTML=html;status.textContent="Weather update mil gaya.";status.className="message show success";}catch(e){status.textContent=e.message||"Weather load nahi ho saka.";status.className="message show error";}
  },function(){status.textContent="Location permission nahi mili. City ka naam search karein.";status.className="message show error";},{enableHighAccuracy:false,timeout:10000});
+}
+
+
+function showNexaNewsWeather(which){
+ const news=document.getElementById("newsCategoryCards");
+ const panel=document.getElementById("weatherPanel");
+ const newsContent=document.querySelector("#latestNewsPage > .grid:not(#newsCategoryCards)");
+ if(news)news.style.display=which==="news"?"grid":"none";
+ if(newsContent)newsContent.style.display=which==="news"?"":"none";
+ if(panel)panel.style.display=which==="weather"?"block":"none";
+ const nt=document.getElementById("nexaNewsTab"),wt=document.getElementById("nexaWeatherTab");
+ if(nt)nt.classList.toggle("active",which==="news");
+ if(wt)wt.classList.toggle("active",which==="weather");
+ if(which==="weather")loadNexaWeather(document.getElementById("weatherCity")?.value||"Bannu");
 }
 
 function bottomNavigate(id,button){
@@ -2613,7 +2632,7 @@ function showPage(id){
  $(id).classList.add("active");window.scrollTo({top:0,behavior:"smooth"});
  if(id==="latestJobsPage")loadNexaJobs();
  if(id==="latestNewsPage")loadNexaNews();
- if(id==="weatherPage")loadNexaWeather(document.getElementById("weatherCity")?.value||"Bannu");
+ if(id==="weatherPage")showPage("latestNewsPage");
  if(id==="europassPage")loadEuropass();
  if(id==="paymentPage")loadMyOrders();
  if(id==="liveTVPage")initLiveTVCountries();
