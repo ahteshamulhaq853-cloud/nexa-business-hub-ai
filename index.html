@@ -7,6 +7,7 @@
 <meta name="theme-color" content="#f5f5f0">
 <title>Nexa Studio | Creative Workspace</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js"></script>
 <style>
 :root{--bg:#080c15;--panel:#0e1727;--panel2:#132238;--line:#294256;--cyan:#65f3dc;--text:#eff8ff;--muted:#9db2c7;--red:#ff91a2;--green:#83ffd0}
 *{box-sizing:border-box}
@@ -1678,7 +1679,8 @@ header .brand-word small{
   <div id="liveTVPlayerCard" style="display:none;margin-top:16px">
    <h3 id="liveTVSelectedTitle">Live TV Player</h3>
    <div style="position:relative;width:100%;aspect-ratio:16/9;background:#111827;border-radius:14px;overflow:hidden;border:1px solid #e5e7eb">
-    <iframe id="liveTVFrame" title="Live TV Player" src="about:blank" style="width:100%;height:100%;border:0;background:#111827" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+    <video id="liveTVVideo" controls playsinline preload="metadata" style="display:none;width:100%;height:100%;background:#111827" aria-label="Live TV stream"></video>
+    <iframe id="liveTVFrame" title="Live TV Player" src="about:blank" style="display:none;width:100%;height:100%;border:0;background:#111827" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
    </div>
    <div class="actions" style="margin-top:12px"><a id="liveTVOfficialLink" href="#" target="_blank" rel="noopener noreferrer" class="button" style="display:inline-block;text-decoration:none">Open Official Live Stream ↗</a><button type="button" class="secondary" onclick="resetLiveTVPlayer()">Stop Player</button></div>
    <p class="muted" style="font-size:12px">Official live page kholne ke liye button par tap karein. Kuch broadcasters apni website ko doosri website ke player mein chalne nahi dete, is liye official page naye tab mein khulega.</p>
@@ -2410,9 +2412,9 @@ const liveTVCountries=[
 ];
 const liveTVChannelsByCountry={
 "Pakistan":[
-{name:"ARY News",url:"https://live.arynews.tv/hq/",official:"https://live.arynews.tv/"},
+{name:"ARY News",url:"https://live.arynews.tv/hq/",stream:"https://live.arydigital.tv/arynews/playlist.m3u8",official:"https://live.arynews.tv/"},
 {name:"PTV News",url:"https://moib.gov.pk/LiveStream",official:"https://moib.gov.pk/LiveStream"},
-{name:"Geo News",url:"https://www.geo.tv/",official:"https://www.geo.tv/"},
+{name:"Geo News",url:"https://www.geo.tv/",stream:"https://live.geo.tv/geonews/playlist.m3u8",official:"https://www.geo.tv/"},
 {name:"Samaa TV",url:"https://www.samaa.tv/",official:"https://www.samaa.tv/"},
 {name:"Dawn News",url:"https://www.dawnnews.tv/",official:"https://www.dawnnews.tv/"}],
 "United States":[
@@ -2425,7 +2427,7 @@ const liveTVChannelsByCountry={
 "India":[
 {name:"NDTV",url:"https://www.ndtv.com/livetv",official:"https://www.ndtv.com/livetv"},
 {name:"India Today",url:"https://www.indiatoday.in/livetv",official:"https://www.indiatoday.in/livetv"}],
-"Qatar":[{name:"Al Jazeera English",url:"https://www.aljazeera.com/live",official:"https://www.aljazeera.com/live"}],
+"Qatar":[{name:"Al Jazeera English",url:"https://www.aljazeera.com/video/live",stream:"https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",official:"https://www.aljazeera.com/video/live"},{name:"Al Jazeera Arabic",url:"https://www.aljazeera.net/live",stream:"https://live-hls-apps-aja-fa.getaj.net/AJA/index.m3u8",official:"https://www.aljazeera.net/live"}],
 "United Arab Emirates":[{name:"Sky News Arabia",url:"https://www.skynewsarabia.com/",official:"https://www.skynewsarabia.com/"}],
 "Saudi Arabia":[{name:"Al Arabiya",url:"https://english.alarabiya.net/live-stream",official:"https://english.alarabiya.net/live-stream"}],
 "Türkiye":[{name:"TRT World",url:"https://www.trtworld.com/watch",official:"https://www.trtworld.com/watch"}],
@@ -2467,26 +2469,47 @@ function updateLiveTVChannels(){
  select.disabled=!country||!channels.length;
  if(status){status.className="message"+(country&&!channels.length?" show":"");status.textContent=country?(channels.length?"Ab "+country+" ka channel select karein.":"Is country ke channels ki official links abhi add nahi hain; filhal doosra country select karein."):"Country select karein, phir channel dropdown se channel choose karein.";}
 }
+let liveTVHlsInstance=null;
 function playSelectedLiveTVChannel(){
  const country=$("liveTVCountry")?.value,select=$("liveTVChannelSelect");
  const channel=liveTVChannelsByCountry[country]?.[Number(select?.value)];
- const frame=$("liveTVFrame"),official=$("liveTVOfficialLink"),status=$("liveTVStatus"),card=$("liveTVPlayerCard");
- if(!channel||!frame||!official)return;
- // Try loading the selected broadcaster's official live page in the player.
- // Some broadcasters block embedding; the official-link button remains as a fallback.
- frame.src=channel.url;
+ const frame=$("liveTVFrame"),video=$("liveTVVideo"),official=$("liveTVOfficialLink"),status=$("liveTVStatus"),card=$("liveTVPlayerCard");
+ if(!channel||!frame||!video||!official)return;
+ if(liveTVHlsInstance){try{liveTVHlsInstance.destroy();}catch(e){}liveTVHlsInstance=null;}
+ video.pause();video.removeAttribute("src");video.load();
+ frame.src="about:blank";
  official.href=channel.official;
  official.textContent="Open "+channel.name+" Official Stream ↗";
  $("liveTVSelectedTitle").textContent="📺 "+country+" — "+channel.name;
  if(card)card.style.display="block";
- if(status){
-  status.className="message show";
-  status.textContent=channel.name+" load ho raha hai. Agar player blank rahe ya playback block ho, to neeche 'Open Official Stream' button dabayein.";
+ if(channel.stream){
+  frame.style.display="none";video.style.display="block";
+  if(status){status.className="message show";status.textContent=channel.name+" ki live stream load ho rahi hai…";}
+  if(window.Hls&&Hls.isSupported()){
+   liveTVHlsInstance=new Hls();
+   liveTVHlsInstance.loadSource(channel.stream);
+   liveTVHlsInstance.attachMedia(video);
+   liveTVHlsInstance.on(Hls.Events.MANIFEST_PARSED,()=>{video.play().catch(()=>{if(status)status.textContent="Stream tayyar hai — video par Play dabayein."});});
+   liveTVHlsInstance.on(Hls.Events.ERROR,(event,data)=>{
+    if(data&&data.fatal&&status){status.className="message show";status.textContent="Is stream ko browser mein play nahi kiya ja saka. Neeche official stream link try karein.";}
+   });
+  }else if(video.canPlayType("application/vnd.apple.mpegurl")){
+   video.src=channel.stream;
+   video.play().catch(()=>{if(status)status.textContent="Stream tayyar hai — video par Play dabayein."});
+  }else{
+   if(status)status.textContent="Aapka browser HLS video support nahi karta. Official stream link neeche kholein.";
+  }
+ }else{
+  video.style.display="none";frame.style.display="block";frame.src=channel.url;
+  if(status){status.className="message show";status.textContent=channel.name+" ka page load ho raha hai. Agar yahan video na chale to neeche official stream button use karein.";}
  }
 }
 function resetLiveTVPlayer(showMessage=true){
- const frame=$("liveTVFrame"),card=$("liveTVPlayerCard"),status=$("liveTVStatus");
- if(frame)frame.src="about:blank";if(card)card.style.display="none";
+ const frame=$("liveTVFrame"),video=$("liveTVVideo"),card=$("liveTVPlayerCard"),status=$("liveTVStatus");
+ if(liveTVHlsInstance){try{liveTVHlsInstance.destroy();}catch(e){}liveTVHlsInstance=null;}
+ if(frame){frame.src="about:blank";frame.style.display="none";}
+ if(video){video.pause();video.removeAttribute("src");video.load();video.style.display="none";}
+ if(card)card.style.display="none";
  if(showMessage&&status){status.className="message";status.textContent="Player stop kar diya gaya.";}
 }
 function showPage(id){
