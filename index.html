@@ -3716,3 +3716,10 @@ document.addEventListener('DOMContentLoaded',loadPublicNewspaperPdfs);
 
 </body>
 </html>
+
+<style id="nexa-hide-bottom-nav-on-auth">
+/* Keep app navigation hidden until a user logs in or creates an account. */
+body:has(#accountPage.active) #bottomNav{display:none!important}
+body:has(#accountPage.active) #supportLauncher{display:none!important}
+body:has(#accountPage.active) main{padding-bottom:24px!important}
+</style>
