@@ -2040,7 +2040,13 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
  <div class="card"><div class="preview-head"><h2>My Requests</h2><button class="secondary" onclick="loadMyOrders()">Refresh</button></div><div id="myOrders" class="table-wrap">Please login to view requests.</div></div>
 </section>
 <section id="settingsPage" class="page">
- <div class="hero"><span class="eyebrow">ACCOUNT PREFERENCES</span><h1>Account <span class="neon">Settings.</span></h1><p>Manage your password and account security.</p></div>
+ <div class="hero"><span class="eyebrow">MY PROFILE</span><h1>Profile <span class="neon">Settings.</span></h1><p>Choose an account option below. Each option opens its working action.</p>
+  <div class="profile-option-row">
+   <button type="button" onclick="openPasswordOption('forgot')">✉ Forgot Password</button>
+   <button type="button" class="secondary" onclick="openPasswordOption('change')">🔐 Change Password</button>
+   <button type="button" class="profile-logout-btn" onclick="logout()">↪ Logout</button>
+  </div>
+ </div>
  <div class="grid">
   <div class="card"><h2>Change Password</h2><p class="muted">Enter your current password before choosing a new one.</p><div id="changePasswordMsg" class="message"></div>
    <form id="changePasswordForm">
@@ -3766,6 +3772,14 @@ body:has(#welcomeNotice.show)::before{content:"";display:block;position:fixed;in
 #welcomeNotice .welcome-confirm{width:100%!important;min-height:43px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;border:0!important;border-radius:12px!important;background:linear-gradient(100deg,#65f3dc,#9cf7e9)!important;color:#06131b!important;font-size:11px!important;font-weight:900!important;letter-spacing:.65px!important;box-shadow:0 7px 18px rgba(101,243,220,.12)!important}
 @keyframes nexaWelcomePolish{from{opacity:0;transform:translate(-50%,-47%) scale(.98)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
 @media(max-width:420px){#welcomeNotice.welcome-notice{padding:23px 17px 18px!important;border-radius:19px!important}#welcomeNotice .welcome-brand-mark{width:43px!important;height:43px!important;font-size:22px!important}#welcomeNotice .welcome-feature-row{gap:5px!important}#welcomeNotice .welcome-feature-row span{font-size:9px!important;padding:6px 8px!important}}
+</style>
+<style id="nexa-profile-options-working">
+#settingsPage .profile-option-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+#settingsPage .profile-option-row button{min-height:44px;padding:11px 17px;border-radius:12px;font-weight:800;cursor:pointer}
+#settingsPage .profile-option-row .profile-logout-btn,#settingsPage #profileActions .profile-logout-btn{background:linear-gradient(135deg,#7f1020,#4a0710)!important;border:1px solid #b91c32!important;color:#fff!important}
+#settingsPage #profileActions{display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between;margin-top:22px}
+#settingsPage #profileActions button{min-height:42px}
+@media(max-width:560px){#settingsPage .profile-option-row{display:grid;grid-template-columns:1fr}#settingsPage .profile-option-row button{width:100%}#settingsPage #profileActions{display:grid;grid-template-columns:1fr}#settingsPage #profileActions button{width:100%}}
 </style>
 </body>
 </html>
