@@ -1687,7 +1687,7 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
  </div>
 </section>
 <section id="dashboardPage" class="page studio-dashboard">
- <div id="welcomeNotice" class="welcome-notice" role="dialog" aria-modal="true" aria-live="polite"><div class="welcome-brand-mark">✦</div><div class="welcome-kicker">WELCOME TO YOUR DIGITAL WORKSPACE</div><div id="welcomeMessage" class="welcome-message">WELCOME TO NEXA STUDIO</div><p class="welcome-subtitle">Your smarter workspace starts here. Build a professional CV, explore the latest jobs and news, watch Live TV, and discover useful digital tools—all in one place.</p><div class="welcome-feature-row"><span>✦ CV Studio</span><span>▣ Live TV</span><span>↗ Jobs &amp; News</span></div><button type="button" class="welcome-confirm" onclick="dismissWelcome()">LET’S GET STARTED <span aria-hidden="true">→</span></button></div>
+ <div id="welcomeNotice" class="welcome-notice" role="status" aria-modal="false" aria-live="polite"><div class="welcome-brand-mark">✦</div><div class="welcome-kicker">WELCOME TO YOUR DIGITAL WORKSPACE</div><div id="welcomeMessage" class="welcome-message">WELCOME TO NEXA STUDIO</div><p class="welcome-subtitle">Your smarter workspace starts here. Build a professional CV, explore the latest jobs and news, watch Live TV, and discover useful digital tools—all in one place.</p><div class="welcome-feature-row"><span>✦ CV Studio</span><span>▣ Live TV</span><span>↗ Jobs &amp; News</span></div><button type="button" class="welcome-confirm" onclick="dismissWelcome()">LET’S GET STARTED <span aria-hidden="true">→</span></button></div>
  <div class="studio-intro">
   <div class="studio-intro-copy">
    <span class="studio-kicker"><span class="studio-live-dot"></span> YOUR ALL-IN-ONE DIGITAL HUB</span>
@@ -3750,6 +3750,22 @@ body:has(#welcomeNotice.show)::before{content:"";position:fixed;inset:0;z-index:
 #welcomeNotice .welcome-confirm{width:100%;min-height:46px;display:flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:13px;background:linear-gradient(100deg,#65f3dc,#9cf7e9);color:#06131b;font-size:12px;font-weight:900;letter-spacing:.8px;box-shadow:0 8px 22px rgba(101,243,220,.15);transition:transform .18s ease,filter .18s ease}
 #welcomeNotice .welcome-confirm:active{transform:scale(.98)}
 @media(max-width:420px){#welcomeNotice.welcome-notice{padding:25px 18px 19px;border-radius:20px}#welcomeNotice .welcome-brand-mark{width:48px;height:48px;font-size:25px}#welcomeNotice .welcome-feature-row{gap:5px}#welcomeNotice .welcome-feature-row span{font-size:9px;padding:6px 8px}}
+</style>
+
+<style id="nexa-welcome-as-notification">
+/* Turn the welcome modal into a compact, non-blocking NEXA notification. */
+body:has(#welcomeNotice.show)::before{content:none!important;display:none!important}
+#welcomeNotice.welcome-notice{top:16px!important;right:16px!important;left:auto!important;bottom:auto!important;transform:translateX(24px)!important;width:min(390px,calc(100vw - 32px))!important;max-height:calc(100vh - 32px);overflow:auto;box-sizing:border-box;padding:17px 18px 16px!important;border:1px solid rgba(101,243,220,.45)!important;border-left:4px solid #65f3dc!important;border-radius:16px!important;background:linear-gradient(135deg,#12273a 0%,#081321 100%)!important;color:#eff8ff!important;text-align:left!important;box-shadow:0 16px 48px rgba(0,0,0,.42),0 0 22px rgba(101,243,220,.09)!important}
+#welcomeNotice.welcome-notice.show{display:block!important;animation:nexaToastIn .28s ease-out forwards}
+#welcomeNotice .welcome-brand-mark{width:34px!important;height:34px!important;float:left;margin:0 10px 7px 0!important;border-radius:11px!important;font-size:19px!important}
+#welcomeNotice .welcome-kicker{font-size:9px!important;letter-spacing:1.3px!important;margin:0 0 5px!important;padding-top:2px}
+#welcomeNotice .welcome-message{font-size:17px!important;line-height:1.25!important;margin:0 0 7px!important;color:#f4fbff!important}
+#welcomeNotice .welcome-subtitle{clear:both;font-size:12px!important;line-height:1.55!important;margin:0 0 12px!important;color:#b9cada!important;max-width:none}
+#welcomeNotice .welcome-feature-row{justify-content:flex-start!important;gap:5px!important;margin:0 0 12px!important}
+#welcomeNotice .welcome-feature-row span{font-size:9px!important;padding:5px 8px!important}
+#welcomeNotice .welcome-confirm{width:auto!important;min-height:34px!important;padding:8px 12px!important;border-radius:9px!important;font-size:10px!important;letter-spacing:.45px!important;box-shadow:none!important}
+@keyframes nexaToastIn{from{opacity:0;transform:translate(24px,-8px)!important}to{opacity:1;transform:translate(0,0)!important}}
+@media(max-width:480px){#welcomeNotice.welcome-notice{top:10px!important;right:10px!important;width:calc(100vw - 20px)!important;padding:14px!important;max-height:calc(100vh - 20px)}}
 </style>
 </body>
 </html>
