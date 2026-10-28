@@ -202,7 +202,7 @@ body.has-bottom-nav main{padding-bottom:100px}
 /* Floating customer support assistant — matched to Nexa's dark navy and cyan UI */
 #supportLauncher{position:fixed;right:20px;bottom:calc(82px + env(safe-area-inset-bottom));z-index:1060;border:1px solid #65f3dc;border-radius:12px;padding:12px 15px;background:linear-gradient(135deg,#65f3dc,#28b9d4);color:#06131b;box-shadow:0 8px 24px #0007,0 0 18px #65f3dc20;font-weight:900;font-size:13px;transition:transform .18s ease,box-shadow .18s ease}
 #supportLauncher:hover{transform:translateY(-2px);box-shadow:0 10px 28px #0008,0 0 22px #65f3dc35}
-#supportPanel{display:none;position:fixed;right:20px;bottom:calc(140px + env(safe-area-inset-bottom));width:min(420px,calc(100vw - 24px));height:min(570px,calc(100vh - 105px));z-index:1001;background:linear-gradient(155deg,#101e30,#0a1220 72%);border:1px solid #315764;border-radius:16px;box-shadow:0 18px 55px #000b,0 0 24px #65f3dc12;overflow:hidden;flex-direction:column}
+#supportPanel{display:none;position:fixed;right:16px;bottom:calc(132px + env(safe-area-inset-bottom));width:min(380px,calc(100vw - 32px));height:min(500px,calc(100dvh - 150px));max-height:calc(100dvh - 150px);z-index:1001;background:linear-gradient(155deg,#101e30,#0a1220 72%);border:1px solid #315764;border-radius:16px;box-shadow:0 18px 55px #000b,0 0 24px #65f3dc12;overflow:hidden;flex-direction:column}
 #supportPanel.open{display:flex}
 .support-head{padding:14px 15px;background:linear-gradient(120deg,#142b40,#0d1929);border-bottom:1px solid #294256;display:flex;align-items:center;justify-content:space-between;gap:8px}
 .support-head strong{display:block;color:#65f3dc;font-size:14px;letter-spacing:.2px}
@@ -223,7 +223,7 @@ body.has-bottom-nav main{padding-bottom:100px}
 #supportInput:focus{border-color:#65f3dc;box-shadow:0 0 0 2px #65f3dc16}
 #supportSend{margin:0;padding:9px 12px;border-radius:8px;white-space:nowrap}
 .support-footnote{font-size:10px;color:#8fa8bd;padding:0 12px 10px;background:#0a1220}
-@media(max-width:420px){#supportLauncher{right:12px;bottom:12px;padding:11px 13px;font-size:12px}#supportPanel{right:12px;bottom:68px;width:calc(100vw - 24px);height:min(500px,calc(100vh - 88px))}}
+@media(max-width:420px){#supportLauncher{right:12px;bottom:calc(78px + env(safe-area-inset-bottom));padding:9px 11px;font-size:11px}#supportPanel{right:10px;bottom:calc(76px + env(safe-area-inset-bottom));width:calc(100vw - 20px);height:min(420px,calc(100dvh - 150px));max-height:calc(100dvh - 150px);border-radius:13px}.support-head{padding:9px 11px}.support-head strong{font-size:13px}.support-head small{font-size:10px;margin-top:2px}#supportMessages{padding:9px;gap:7px}.support-bubble{padding:8px 10px;font-size:12px;line-height:1.4}.support-quick{gap:5px;padding:0 9px 7px}.support-quick button{font-size:10px;padding:5px 7px}.support-input-row{padding:7px;gap:5px}#supportInput{padding:8px;font-size:12px}#supportSend{padding:8px 10px}.support-footnote{padding:0 9px 7px;font-size:9px}}
 
 @media(max-width:760px){header{position:relative}nav{width:100%}nav button{flex:1}.grid,.grid.three,.cv-layout{grid-template-columns:1fr}.hero{padding:21px}}
 @media(max-width:420px){main{padding:0 9px;margin-top:15px}.card{padding:14px}.paper{grid-template-columns:32% 68%}.side{padding:9px}.content{padding:12px 10px}.content h1{font-size:18px}.photo{width:63px;height:78px}.template-grid{grid-template-columns:1fr 1fr}}
