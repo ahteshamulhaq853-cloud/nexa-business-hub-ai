@@ -2650,18 +2650,29 @@ function filterLiveTVChannels(){
 }
 async function loadWorldwideLiveTVChannels(){
  const status=$("liveTVStatus");
+ const cacheKey="nexa_live_tv_worldwide_v2";
+ // Show a saved channel list immediately; refresh it quietly in the background.
  try{
-  if(status){status.className="message show";status.textContent="Duniya bhar ke public live-stream sources load ho rahe hain…";}
-  const response=await fetch("https://iptv-org.github.io/iptv/index.m3u",{cache:"no-store"});
+  const cached=JSON.parse(localStorage.getItem(cacheKey)||"null");
+  if(cached&&Array.isArray(cached.channels)&&Date.now()-cached.savedAt<86400000){
+   liveTVAllChannels=cached.channels;
+   liveTVChannels=liveTVAllChannels;
+   filterLiveTVChannels();
+   if(status){status.className="message show";status.textContent=liveTVAllChannels.length.toLocaleString()+" channels ready (saved list). Updating in background…";}
+  }else if(status){
+   status.className="message show";
+   status.textContent="Basic channels ready — worldwide list background mein load ho rahi hai.";
+  }
+ }catch(e){}
+ try{
+  const response=await fetch("https://iptv-org.github.io/iptv/index.m3u",{cache:"force-cache"});
   if(!response.ok)throw new Error("Global playlist unavailable");
   const playlist=await response.text();
   const lines=playlist.split(/\r?\n/);
   const found=[];let meta="";
   for(const lineRaw of lines){
    const line=lineRaw.trim();if(!line)continue;
-   if(line.startsWith("#EXTINF")){
-    meta=line;continue;
-   }
+   if(line.startsWith("#EXTINF")){meta=line;continue;}
    if(line.startsWith("#"))continue;
    if(!/^https?:\/\//i.test(line))continue;
    const nameMatch=meta.match(/,(.+)$/);
@@ -2670,8 +2681,7 @@ async function loadWorldwideLiveTVChannels(){
    const countryMatch=meta.match(/tvg-country="([^"]*)"/i);
    const languageMatch=meta.match(/tvg-language="([^"]*)"/i);
    const category=groupMatch?groupMatch[1]:"";
-   // Only add direct media streams supported by the HTML video/HLS player.
-   if(!/\.m3u8(\?|$)/i.test(line)) {meta="";continue;}
+   if(!/\.m3u8(\?|$)/i.test(line)){meta="";continue;}
    found.push({name,stream:line,country:countryMatch?countryMatch[1]:"",language:languageMatch?languageMatch[1]:"",category});
    meta="";
   }
@@ -2679,10 +2689,11 @@ async function loadWorldwideLiveTVChannels(){
   liveTVAllChannels=[...liveTVFallbackChannels,...unique.filter(ch=>!liveTVFallbackChannels.some(f=>f.name.toLowerCase()===ch.name.toLowerCase()))];
   liveTVChannels=liveTVAllChannels;
   filterLiveTVChannels();
-  if(status){status.className="message show";status.textContent=liveTVAllChannels.length.toLocaleString()+" worldwide channel entries loaded. Select a channel to try playback; some sources may be offline, region-restricted, or not embeddable.";}
+  try{localStorage.setItem(cacheKey,JSON.stringify({savedAt:Date.now(),channels:liveTVAllChannels}));}catch(e){}
+  if(status){status.className="message show";status.textContent=liveTVAllChannels.length.toLocaleString()+" worldwide channels ready. List next time saved cache se foran khulegi.";}
  }catch(error){
-  liveTVAllChannels=[...liveTVFallbackChannels];liveTVChannels=liveTVAllChannels;filterLiveTVChannels();
-  if(status){status.className="message show";status.textContent="Worldwide list abhi load nahi ho saki. Basic channels list dikh rahi hai; internet ya source baad mein dobara try karein.";}
+  if(!liveTVAllChannels.length){liveTVAllChannels=[...liveTVFallbackChannels];liveTVChannels=liveTVAllChannels;filterLiveTVChannels();}
+  if(status){status.className="message show";status.textContent="Saved/basic channel list available. Worldwide list abhi refresh nahi hui — internet milne par dobara try karein.";}
  }
 }
 function playSelectedLiveTVChannel(){
