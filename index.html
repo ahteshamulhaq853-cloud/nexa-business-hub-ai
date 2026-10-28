@@ -2500,10 +2500,35 @@ function playSelectedLiveTVChannel(){
   frame.style.display="none";video.style.display="block";
   if(status){status.className="message show";status.textContent=channel.name+" ki live stream load ho rahi hai…";}
   if(window.Hls&&Hls.isSupported()){
-   liveTVHlsInstance=new Hls();
+   // Low-data default: start at 360p when the stream offers it, and cap
+   // adaptive quality at 360p. If 360p is unavailable, use the lowest rendition.
+   liveTVHlsInstance=new Hls({
+    startLevel:-1,
+    capLevelToPlayerSize:false,
+    abrEwmaDefaultEstimate:350000,
+    abrEwmaDefaultEstimateMax:900000,
+    abrBandWidthFactor:0.85,
+    abrBandWidthUpFactor:0.6,
+    maxBufferLength:12,
+    maxMaxBufferLength:24,
+    backBufferLength:15,
+    lowLatencyMode:true
+   });
    liveTVHlsInstance.loadSource(channel.stream);
    liveTVHlsInstance.attachMedia(video);
-   liveTVHlsInstance.on(Hls.Events.MANIFEST_PARSED,()=>{video.play().catch(()=>{if(status)status.textContent="Stream tayyar hai — video par Play dabayein."});});
+   liveTVHlsInstance.on(Hls.Events.MANIFEST_PARSED,()=>{
+    const levels=liveTVHlsInstance.levels||[];
+    if(levels.length){
+     let capIndex=-1;
+     levels.forEach((level,index)=>{if(Number(level.height)>0&&Number(level.height)<=360)capIndex=index;});
+     if(capIndex<0)capIndex=0;
+     liveTVHlsInstance.autoLevelCapping=capIndex;
+     liveTVHlsInstance.startLevel=capIndex;
+     liveTVHlsInstance.loadLevel=capIndex;
+     if(status)status.textContent="Low-data mode: 360p default (ya stream ki sab se kam available quality).";
+    }
+    video.play().catch(()=>{if(status)status.textContent="Low-data player tayyar hai — video par Play dabayein."});
+   });
    liveTVHlsInstance.on(Hls.Events.ERROR,(event,data)=>{
     if(data&&data.fatal){
      try{liveTVHlsInstance.destroy();}catch(e){}liveTVHlsInstance=null;
