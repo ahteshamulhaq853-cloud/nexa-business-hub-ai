@@ -2178,11 +2178,13 @@ header .brand-word small{
 <div id="weatherPanel" style="display:none;margin-top:16px">
  <div class="studio-section-heading"><div><span class="studio-kicker">NEXA WEATHER DESK</span><h2>WEATHER FORECAST</h2></div></div>
  <div class="card" style="padding:16px;margin-bottom:12px">
-  <p class="muted" style="margin-top:0">Apne shehar ka naam likhein aur current weather dekhein.</p>
-  <form onsubmit="event.preventDefault();loadNexaWeather(document.getElementById('weatherCity').value)" style="display:flex;gap:8px;flex-wrap:wrap">
-   <input id="weatherCity" type="search" placeholder="City name, e.g. Bannu" value="Bannu" style="flex:1;min-width:150px">
-   <button type="submit">Search Weather</button>
-  </form>
+  <p class="muted" style="margin-top:0">Country select karein, phir province/state aur district/city choose karein.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px">
+   <label>Country<select id="weatherCountry" onchange="loadWeatherStates()" style="width:100%;margin-top:5px"><option value="">Loading countries…</option></select></label>
+   <label>State / Province<select id="weatherState" onchange="loadWeatherCities()" style="width:100%;margin-top:5px" disabled><option value="">Select state / province</option></select></label>
+   <label>District / City<select id="weatherDistrict" onchange="updateWeatherSearchButton()" style="width:100%;margin-top:5px" disabled><option value="">Select district / city</option></select></label>
+  </div>
+  <button type="button" onclick="searchSelectedNexaWeather()" style="margin-top:12px">Show Weather</button>
   <button type="button" class="secondary" onclick="getNexaWeatherLocation()" style="margin-top:10px">📍 Use My Location</button>
   <div id="weatherStatus" class="message" style="margin-top:10px"></div>
  </div>
@@ -2240,10 +2242,9 @@ function clearMsg(id){$(id).textContent="";$(id).className="message"}
 const nexaWeatherDescriptions={0:"Clear sky",1:"Mainly clear",2:"Partly cloudy",3:"Overcast",45:"Fog",48:"Rime fog",51:"Light drizzle",53:"Drizzle",55:"Heavy drizzle",61:"Light rain",63:"Rain",65:"Heavy rain",71:"Light snow",73:"Snow",75:"Heavy snow",80:"Rain showers",81:"Rain showers",82:"Heavy rain showers",95:"Thunderstorm",96:"Thunderstorm with hail",99:"Heavy thunderstorm"};
 function nexaWeatherIcon(code){if(code===0)return "☀️";if([1,2].includes(code))return "🌤️";if(code===3)return "☁️";if([45,48].includes(code))return "🌫️";if([51,53,55,61,63,65,80,81,82].includes(code))return "🌧️";if([71,73,75].includes(code))return "❄️";if([95,96,99].includes(code))return "⛈️";return "🌡️";}
 async function loadNexaWeather(city){
- const input=document.getElementById("weatherCity"),status=document.getElementById("weatherStatus"),current=document.getElementById("weatherCurrent"),forecast=document.getElementById("weatherForecast");
+ const status=document.getElementById("weatherStatus"),current=document.getElementById("weatherCurrent"),forecast=document.getElementById("weatherForecast");
  city=String(city||"").trim();
  if(!city){status.textContent="Meherbani karke city ka naam likhein.";status.className="message show";return;}
- if(input)input.value=city;
  status.textContent="Weather check ho raha hai…";status.className="message show";
  current.innerHTML="<p class='muted'>Weather load ho raha hai…</p>";forecast.innerHTML="";
  try{
@@ -2272,6 +2273,57 @@ function getNexaWeatherLocation(){
 }
 
 
+
+let nexaWeatherCountries=[];
+let nexaWeatherCountryData=[];
+async function initNexaWeatherDropdowns(){
+ const country=document.getElementById("weatherCountry");
+ if(!country||country.dataset.loaded==="yes")return;
+ const status=document.getElementById("weatherStatus");
+ country.innerHTML="<option value=''>Loading countries…</option>";
+ try{
+  const res=await fetch("https://countriesnow.space/api/v0.1/countries/states");
+  if(!res.ok)throw new Error("Country list load nahi hui.");
+  const json=await res.json();
+  if(!json.data||!Array.isArray(json.data))throw new Error("Country list unavailable.");
+  nexaWeatherCountryData=json.data.slice().sort((a,b)=>a.name.localeCompare(b.name));
+  country.innerHTML="<option value=''>Select country</option>"+nexaWeatherCountryData.map(c=>"<option value='"+c.name.replace(/'/g,"&#39;")+"'>"+c.name+"</option>").join("");
+  country.dataset.loaded="yes";
+  const pakistan=nexaWeatherCountryData.find(c=>c.name.toLowerCase()==="pakistan");
+  if(pakistan){country.value=pakistan.name;await loadWeatherStates();}
+ }catch(e){country.innerHTML="<option value=''>Could not load countries</option>";if(status){status.textContent=e.message+" Internet connection check karein.";status.className="message show error";}}
+}
+async function loadWeatherStates(){
+ const country=document.getElementById("weatherCountry"),state=document.getElementById("weatherState"),district=document.getElementById("weatherDistrict");
+ if(!country||!state||!district)return;
+ state.disabled=true;district.disabled=true;state.innerHTML="<option value=''>Loading states / provinces…</option>";district.innerHTML="<option value=''>Select district / city</option>";
+ const selected=nexaWeatherCountryData.find(c=>c.name===country.value);
+ if(!selected){state.innerHTML="<option value=''>Select state / province</option>";return;}
+ const states=Array.isArray(selected.states)?selected.states:[];
+ state.innerHTML="<option value=''>Select state / province</option>"+states.map(x=>"<option value='"+String(x.name).replace(/'/g,"&#39;")+"'>"+x.name+"</option>").join("");
+ state.disabled=states.length===0;
+ if(!states.length){state.innerHTML="<option value=''>No state list available</option>";}
+}
+async function loadWeatherCities(){
+ const country=document.getElementById("weatherCountry").value,state=document.getElementById("weatherState").value,district=document.getElementById("weatherDistrict");
+ district.disabled=true;district.innerHTML="<option value=''>Loading districts / cities…</option>";
+ if(!country||!state){district.innerHTML="<option value=''>Select district / city</option>";return;}
+ try{
+  const res=await fetch("https://countriesnow.space/api/v0.1/countries/state/cities",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({country:country,state:state})});
+  if(!res.ok)throw new Error("City list load nahi hui.");
+  const json=await res.json(),cities=Array.isArray(json.data)?json.data:[];
+  district.innerHTML="<option value=''>Select district / city</option>"+cities.slice().sort((a,b)=>a.localeCompare(b)).map(x=>"<option value='"+String(x).replace(/'/g,"&#39;")+"'>"+x+"</option>").join("");
+  district.disabled=cities.length===0;
+  if(!cities.length)district.innerHTML="<option value=''>No cities listed — try another state</option>";
+ }catch(e){district.innerHTML="<option value=''>City list unavailable</option>";district.disabled=true;const status=document.getElementById("weatherStatus");status.textContent=e.message;status.className="message show error";}
+}
+function updateWeatherSearchButton(){}
+function searchSelectedNexaWeather(){
+ const country=document.getElementById("weatherCountry")?.value,state=document.getElementById("weatherState")?.value,city=document.getElementById("weatherDistrict")?.value;
+ if(!country||!state||!city){const status=document.getElementById("weatherStatus");status.textContent="Country, state/province aur district/city teeno select karein.";status.className="message show error";return;}
+ loadNexaWeather(city+", "+state+", "+country);
+}
+
 function showNexaNewsWeather(which){
  const page=document.getElementById("latestNewsPage");
  const panel=document.getElementById("weatherPanel");
@@ -2283,7 +2335,7 @@ function showNexaNewsWeather(which){
  const nt=document.getElementById("nexaNewsTab"),wt=document.getElementById("nexaWeatherTab");
  if(nt)nt.classList.toggle("active",which==="news");
  if(wt)wt.classList.toggle("active",which==="weather");
- if(which==="weather")loadNexaWeather(document.getElementById("weatherCity")?.value||"Bannu");
+ if(which==="weather")initNexaWeatherDropdowns();
 }
 function bottomNavigate(id,button){
  showPage(id);
