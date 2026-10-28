@@ -1579,22 +1579,6 @@ header .brand-word small{
   text-align: right;
 }
 </style>
-<style id="nexa-entertainment-styles">
-#entertainmentPage .ent-hero{background:linear-gradient(125deg,#102a56,#123b4a 65%,#0e1727);border:1px solid #65f3dc50;border-radius:18px;padding:22px;margin-bottom:16px}
-#entertainmentPage .ent-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-#entertainmentPage .ent-tile{background:#101e30;border:1px solid #294256;border-radius:13px;padding:14px;min-width:0}
-#entertainmentPage .ent-tile a{color:#65f3dc;font-weight:700;text-decoration:none}#entertainmentPage .ent-tile a:hover{text-decoration:underline}
-#entertainmentPage .ent-player{width:100%;aspect-ratio:16/9;background:#050a12;border:1px solid #294256;border-radius:12px;overflow:hidden}
-#entertainmentPage .ent-player iframe{width:100%;height:100%;border:0}
-#entertainmentPage .ent-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}#entertainmentPage .ent-row input{flex:1;min-width:190px}
-#entertainmentPage .ent-game-board{display:grid;grid-template-columns:repeat(3,minmax(55px,90px));gap:7px;justify-content:center;margin:12px auto}
-#entertainmentPage .ent-game-cell{aspect-ratio:1;font-size:26px;border:1px solid #315563;border-radius:10px;background:#0b1726;color:#eff8ff;margin:0}
-#entertainmentPage .ent-memory-board{display:grid;grid-template-columns:repeat(4,minmax(42px,70px));gap:7px;justify-content:center;margin:12px auto}
-#entertainmentPage .ent-memory-cell{aspect-ratio:1;font-size:21px;border:1px solid #315563;border-radius:9px;background:#132238;color:#eff8ff;margin:0;padding:3px}
-#entertainmentPage .ent-status{color:#65f3dc;min-height:22px;font-size:13px}#entertainmentPage audio{width:100%;margin-top:10px}
-@media(max-width:700px){#entertainmentPage .ent-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}#entertainmentPage .ent-hero{padding:16px}}
-@media(max-width:390px){#entertainmentPage .ent-tiles{grid-template-columns:1fr}}
-</style>
 </head>
 <body>
 <button id="settingsLauncher" type="button" aria-label="Open menu" title="Menu" aria-expanded="false" onclick="toggleMainMenu()">☰</button>
@@ -1702,23 +1686,6 @@ header .brand-word small{
   </div>
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button><button class="secondary" onclick="showPage('servicesPage')">Back to Services</button></div>
-</section>
-<section id="entertainmentPage" class="page">
- <div class="ent-hero"><span class="studio-kicker">NEXA ENTERTAINMENT HUB</span><h1 style="margin:9px 0;color:#fff">🎬 Entertainment Zone</h1><p style="color:#c7d9e8;line-height:1.65;margin:0">Movies ke trailers, funny clips, music, trending videos aur browser mini-games — ek hi jagah. Free external videos unki apni service se load hote hain.</p></div>
- <div class="card"><h2 class="neon">🎥 Video Player</h2><p class="muted">YouTube video ka link paste karein. Agar creator embedding allow karta hai to video yahan chalegi; warna Watch on YouTube button use karein.</p><div class="ent-row"><input id="entVideoUrl" type="url" placeholder="YouTube video link paste karein" aria-label="YouTube video URL"><button type="button" onclick="entLoadVideo()">Play Video</button></div><div id="entVideoStatus" class="ent-status" role="status" aria-live="polite">Abhi koi video select nahi ki gayi.</div><div id="entVideoPlayer" class="ent-player" style="display:none"><iframe id="entVideoFrame" title="Entertainment video player" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div class="actions"><a id="entWatchLink" class="button-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" style="display:none">Watch on YouTube ↗</a><button type="button" class="secondary" onclick="entStopVideo()">Stop Video</button></div></div>
- <div class="card"><h2 class="neon">🌍 Explore Videos</h2><p class="muted">Ye buttons YouTube ki live search kholte hain, is liye dead ya banawati video IDs par depend nahi karte.</p><div class="ent-tiles">
-  <div class="ent-tile"><div style="font-size:27px">🎬</div><h3>Movies & Trailers</h3><p class="muted">Official trailers aur film previews.</p><a href="https://www.youtube.com/results?search_query=official+movie+trailers" target="_blank" rel="noopener noreferrer">Browse trailers ↗</a></div>
-  <div class="ent-tile"><div style="font-size:27px">😂</div><h3>Funny Videos</h3><p class="muted">Comedy aur family-friendly clips.</p><a href="https://www.youtube.com/results?search_query=clean+comedy+funny+videos" target="_blank" rel="noopener noreferrer">Browse comedy ↗</a></div>
-  <div class="ent-tile"><div style="font-size:27px">🌍</div><h3>Trending Videos</h3><p class="muted">YouTube par popular videos explore karein.</p><a href="https://www.youtube.com/feed/trending" target="_blank" rel="noopener noreferrer">Explore trending ↗</a></div>
-  <div class="ent-tile"><div style="font-size:27px">🎵</div><h3>Music & Songs</h3><p class="muted">Music videos aur official audio.</p><a href="https://www.youtube.com/results?search_query=official+music+videos" target="_blank" rel="noopener noreferrer">Browse music ↗</a></div>
-  <div class="ent-tile"><div style="font-size:27px">🎞️</div><h3>Animation</h3><p class="muted">Animation aur short films.</p><a href="https://www.youtube.com/results?search_query=animated+short+films" target="_blank" rel="noopener noreferrer">Browse animation ↗</a></div>
-  <div class="ent-tile"><div style="font-size:27px">📺</div><h3>Live TV</h3><p class="muted">Aapka existing Live TV page yahin se kholein.</p><button type="button" onclick="showPage('liveTVPage')">Open Live TV</button></div>
- </div></div>
- <div class="card"><h2 class="neon">🎧 Your Music Player</h2><p class="muted">Apne phone/computer se audio file select karein. Audio browser mein hi play hoti hai; file kisi server par upload nahi hoti.</p><div class="field"><label for="entAudioFile">Choose audio file (MP3, WAV, OGG, M4A supported by browser)</label><input id="entAudioFile" type="file" accept="audio/*" onchange="entLoadAudio(event)"></div><p id="entAudioStatus" class="ent-status" role="status" aria-live="polite">Abhi audio select nahi ki gayi.</p><audio id="entAudioPlayer" controls preload="metadata" style="display:none"></audio></div>
- <div class="grid two">
-  <div class="card"><h2 class="neon">🎮 Tic-Tac-Toe</h2><p class="muted">Do players bari bari X aur O lagayein.</p><div id="entTttStatus" class="ent-status" role="status" aria-live="polite">X ki bari.</div><div id="entTttBoard" class="ent-game-board" aria-label="Tic Tac Toe board"></div><div class="actions"><button type="button" onclick="entResetTtt()">New Game</button></div></div>
-  <div class="card"><h2 class="neon">🧠 Memory Match</h2><p class="muted">Cards kholein aur matching emoji pairs dhoondein.</p><div id="entMemoryStatus" class="ent-status" role="status" aria-live="polite">Cards match karein.</div><div id="entMemoryBoard" class="ent-memory-board" aria-label="Memory matching game board"></div><div class="actions"><button type="button" onclick="entResetMemory()">Restart Game</button></div></div>
- </div><div class="actions"><button class="secondary" type="button" onclick="showPage('dashboardPage')">← Back to Dashboard</button><button class="secondary" type="button" onclick="showPage('servicesPage')">Services</button></div>
 </section>
 <section id="servicesPage" class="page">
  
@@ -2210,8 +2177,7 @@ header .brand-word small{
  <button type="button" onclick="bottomNavigate('latestJobsPage',this)"><span class="bottom-icon">💼</span><span>Jobs</span></button>
  <button type="button" onclick="bottomNavigate('latestNewsPage',this)"><span class="bottom-icon">📰</span><span>News</span></button>
  <button type="button" onclick="bottomNavigate('servicesPage',this)"><span class="bottom-icon">⚙</span><span>Services</span></button>
- <button type="button" onclick="bottomNavigate('entertainmentPage',this)"><span class="bottom-icon">🎬</span><span>Fun</span></button>
-  <button type="button" onclick="bottomNavigate('liveTVPage',this)"><span class="bottom-icon">📺</span><span>Live TV</span></button>
+<button type="button" onclick="bottomNavigate('liveTVPage',this)"><span class="bottom-icon">📺</span><span>Live TV</span></button>
  <button type="button" onclick="bottomNavigate('settingsPage',this)"><span class="bottom-icon">♙</span><span>Profile</span></button>
 </nav>
 
@@ -2588,20 +2554,6 @@ function resetLiveTVPlayer(showMessage=true){
  if(card)card.style.display="none";
  if(showMessage&&status){status.className="message show";status.textContent="Player stop kar diya gaya.";}
 }
-/* Nexa Entertainment: local audio, YouTube link player and mini games */
-let entAudioObjectUrl=null,entTttCells=Array(9).fill(""),entTttTurn="X",entTttOver=false;
-let entMemoryValues=[],entMemoryOpen=[],entMemoryMatched=[],entMemoryLock=false;
-function entGetYouTubeId(raw){try{const u=new URL(String(raw||"").trim());if(!["youtube.com","www.youtube.com","m.youtube.com","music.youtube.com","youtu.be","www.youtube-nocookie.com","youtube-nocookie.com"].includes(u.hostname.toLowerCase()))return "";let id="";if(u.hostname.toLowerCase().includes("youtu.be"))id=u.pathname.split("/").filter(Boolean)[0]||"";else if(u.pathname==="/watch")id=u.searchParams.get("v")||"";else if(/^\/(embed|shorts|live)\//.test(u.pathname))id=u.pathname.split("/")[2]||"";return /^[A-Za-z0-9_-]{11}$/.test(id)?id:""}catch(e){return ""}}
-function entLoadVideo(){const input=document.getElementById("entVideoUrl"),status=document.getElementById("entVideoStatus"),frame=document.getElementById("entVideoFrame"),player=document.getElementById("entVideoPlayer"),link=document.getElementById("entWatchLink"),raw=(input&&input.value||"").trim(),id=entGetYouTubeId(raw);if(!id){if(status)status.textContent="Valid YouTube video URL paste karein (video ID 11 characters ki hoti hai).";if(player)player.style.display="none";if(link)link.style.display="none";if(frame)frame.src="about:blank";return}if(frame)frame.src="https://www.youtube-nocookie.com/embed/"+id;if(player)player.style.display="block";if(link){link.href="https://www.youtube.com/watch?v="+id;link.style.display="inline-block"}if(status)status.textContent="Video player load ho raha hai. Kuch videos embedding allow nahi kartin; aisi surat mein Watch on YouTube dabayein."}
-function entStopVideo(){const f=document.getElementById("entVideoFrame"),p=document.getElementById("entVideoPlayer"),l=document.getElementById("entWatchLink"),s=document.getElementById("entVideoStatus");if(f)f.src="about:blank";if(p)p.style.display="none";if(l)l.style.display="none";if(s)s.textContent="Video stop kar di gayi."}
-function entLoadAudio(event){const file=event&&event.target&&event.target.files&&event.target.files[0],audio=document.getElementById("entAudioPlayer"),status=document.getElementById("entAudioStatus");if(!file||!audio)return;if(entAudioObjectUrl)URL.revokeObjectURL(entAudioObjectUrl);entAudioObjectUrl=URL.createObjectURL(file);audio.src=entAudioObjectUrl;audio.style.display="block";audio.load();if(status)status.textContent="Selected: "+file.name+" — Play dabayein."}
-function entResetTtt(){entTttCells=Array(9).fill("");entTttTurn="X";entTttOver=false;entDrawTtt();const s=document.getElementById("entTttStatus");if(s)s.textContent="X ki bari."}
-function entDrawTtt(){const board=document.getElementById("entTttBoard");if(!board)return;board.innerHTML="";entTttCells.forEach((v,i)=>{const b=document.createElement("button");b.type="button";b.className="ent-game-cell";b.textContent=v;b.setAttribute("aria-label","Cell "+(i+1)+(v?", "+v:""));b.disabled=!!v||entTttOver;b.addEventListener("click",()=>entTttMove(i));board.appendChild(b)})}
-function entTttMove(i){if(entTttOver||entTttCells[i])return;entTttCells[i]=entTttTurn;const wins=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]],won=wins.some(line=>line.every(n=>entTttCells[n]===entTttTurn)),status=document.getElementById("entTttStatus");if(won){entTttOver=true;if(status)status.textContent=entTttTurn+" jeet gaya! 🎉"}else if(entTttCells.every(Boolean)){entTttOver=true;if(status)status.textContent="Match draw! New Game dabayein."}else{entTttTurn=entTttTurn==="X"?"O":"X";if(status)status.textContent=entTttTurn+" ki bari."}entDrawTtt()}
-function entResetMemory(){const vals=["🍎","🍋","🍇","🍉","⭐","🌙","🎈","⚽"];entMemoryValues=vals.concat(vals).sort(()=>Math.random()-.5);entMemoryOpen=[];entMemoryMatched=[];entMemoryLock=false;entDrawMemory();const s=document.getElementById("entMemoryStatus");if(s)s.textContent="0 pairs matched."}
-function entDrawMemory(){const board=document.getElementById("entMemoryBoard");if(!board)return;board.innerHTML="";entMemoryValues.forEach((v,i)=>{const b=document.createElement("button");b.type="button";b.className="ent-memory-cell";b.textContent=entMemoryMatched.includes(i)||entMemoryOpen.includes(i)?v:"?";b.disabled=entMemoryMatched.includes(i)||entMemoryOpen.includes(i)||entMemoryLock;b.setAttribute("aria-label","Memory card "+(i+1));b.addEventListener("click",()=>entFlipMemory(i));board.appendChild(b)})}
-function entFlipMemory(i){if(entMemoryLock||entMemoryMatched.includes(i)||entMemoryOpen.includes(i))return;entMemoryOpen.push(i);entDrawMemory();if(entMemoryOpen.length===2){const [a,b]=entMemoryOpen;if(entMemoryValues[a]===entMemoryValues[b]){entMemoryMatched.push(a,b);entMemoryOpen=[];entDrawMemory();const s=document.getElementById("entMemoryStatus");if(s)s.textContent=entMemoryMatched.length===entMemoryValues.length?"Shabash! Saare pairs mil gaye. 🎉":(entMemoryMatched.length/2)+" / 8 pairs matched."}else{entMemoryLock=true;const s=document.getElementById("entMemoryStatus");if(s)s.textContent="Match nahi hua — dobara koshish karein.";window.setTimeout(()=>{entMemoryOpen=[];entMemoryLock=false;entDrawMemory()},850)}}}
-
 function showPage(id){
  if(id==="paymentPage"&&$("paymentProduct")){$("paymentProduct").value="normal";$("paymentTitle").textContent="Payment & Access."; $("paymentDescription").textContent="Normal CV PDF access costs Rs. 100. Submit your transaction reference and wait for admin approval.";$("paymentAmount").textContent="Rs. 100"}
  document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
@@ -2611,7 +2563,6 @@ function showPage(id){
  if(id==="europassPage")loadEuropass();
  if(id==="paymentPage")loadMyOrders();
  if(id==="liveTVPage")initLiveTVCountries();
- if(id==="entertainmentPage"){entDrawTtt();if(!document.getElementById("entMemoryBoard").children.length)entResetMemory();}
  if(id==="adminPage")loadAdminOrders();
 }
 
