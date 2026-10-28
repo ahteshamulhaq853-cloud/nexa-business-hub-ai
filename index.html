@@ -2708,36 +2708,38 @@ function playSelectedLiveTVChannel(){
     enableWorker:true,
     startLevel:-1,
     capLevelToPlayerSize:true,
-    abrEwmaDefaultEstimate:700000,
-    abrEwmaDefaultEstimateMax:1800000,
-    abrBandWidthFactor:0.85,
-    abrBandWidthUpFactor:0.7,
-    maxBufferLength:30,
-    maxMaxBufferLength:60,
-    maxBufferSize:45*1000*1000,
+    abrEwmaDefaultEstimate:250000,
+    abrEwmaDefaultEstimateMax:500000,
+    abrBandWidthFactor:0.8,
+    abrBandWidthUpFactor:0.5,
+    maxBufferLength:18,
+    maxMaxBufferLength:30,
+    maxBufferSize:20*1000*1000,
     maxBufferHole:0.5,
-    backBufferLength:30,
+    backBufferLength:12,
     lowLatencyMode:false,
-    manifestLoadingMaxRetry:4,
+    manifestLoadingMaxRetry:5,
     manifestLoadingRetryDelay:1000,
-    levelLoadingMaxRetry:4,
+    levelLoadingMaxRetry:5,
     levelLoadingRetryDelay:1000,
-    fragLoadingMaxRetry:6,
+    fragLoadingMaxRetry:8,
     fragLoadingRetryDelay:1000,
-    fragLoadingMaxRetryTimeout:20000
+    fragLoadingMaxRetryTimeout:30000
    });
    liveTVHlsInstance.loadSource(channel.stream);
    liveTVHlsInstance.attachMedia(video);
    liveTVHlsInstance.on(Hls.Events.MANIFEST_PARSED,()=>{
     const levels=liveTVHlsInstance.levels||[];
     if(levels.length){
+     // Prefer 240p or lower for weak mobile networks; otherwise use the
+     // lowest available rendition and let HLS adapt conservatively.
      let capIndex=-1;
-     levels.forEach((level,index)=>{if(Number(level.height)>0&&Number(level.height)<=360)capIndex=index;});
+     levels.forEach((level,index)=>{if(Number(level.height)>0&&Number(level.height)<=240)capIndex=index;});
      if(capIndex<0)capIndex=0;
      liveTVHlsInstance.autoLevelCapping=capIndex;
      liveTVHlsInstance.startLevel=capIndex;
      liveTVHlsInstance.loadLevel=capIndex;
-     if(status)status.textContent="Low-data mode: 360p default (ya stream ki sab se kam available quality).";
+     if(status)status.textContent="Low Network Mode: 240p ya stream ki sab se kam available quality, buffering kam karne ke liye.";
     }
     video.play().catch(()=>{if(status)status.textContent="Low-data player tayyar hai — video par Play dabayein."});
    });
