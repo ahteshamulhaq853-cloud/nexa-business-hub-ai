@@ -2412,7 +2412,7 @@ const liveTVCountries=[
 ];
 const liveTVChannelsByCountry={
 "Pakistan":[
-{name:"ARY News",url:"https://live.arynews.tv/hq/",stream:"https://live.arydigital.tv/arynews/playlist.m3u8",official:"https://live.arynews.tv/"},
+{name:"ARY News",url:"https://live.arynews.tv/hq/",official:"https://live.arynews.tv/"},
 {name:"PTV News",url:"https://moib.gov.pk/LiveStream",official:"https://moib.gov.pk/LiveStream"},
 {name:"Geo News",url:"https://www.geo.tv/",stream:"https://live.geo.tv/geonews/playlist.m3u8",official:"https://www.geo.tv/"},
 {name:"Samaa TV",url:"https://www.samaa.tv/",official:"https://www.samaa.tv/"},
@@ -2491,7 +2491,12 @@ function playSelectedLiveTVChannel(){
    liveTVHlsInstance.attachMedia(video);
    liveTVHlsInstance.on(Hls.Events.MANIFEST_PARSED,()=>{video.play().catch(()=>{if(status)status.textContent="Stream tayyar hai — video par Play dabayein."});});
    liveTVHlsInstance.on(Hls.Events.ERROR,(event,data)=>{
-    if(data&&data.fatal&&status){status.className="message show";status.textContent="Is stream ko browser mein play nahi kiya ja saka. Neeche official stream link try karein.";}
+    if(data&&data.fatal){
+     try{liveTVHlsInstance.destroy();}catch(e){}liveTVHlsInstance=null;
+     video.pause();video.removeAttribute("src");video.load();video.style.display="none";
+     frame.style.display="block";frame.src=channel.url;
+     if(status){status.className="message show";status.textContent="Direct stream available nahi hui — official player khola ja raha hai. Agar phir bhi na chale to neeche Open Official Stream dabayein.";}
+    }
    });
   }else if(video.canPlayType("application/vnd.apple.mpegurl")){
    video.src=channel.stream;
