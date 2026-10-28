@@ -1,22 +1,72 @@
 {
-  "updated": "2026-10-28T04:26:43.044003+00:00",
+  "updated": "2026-10-28T05:12:08.282509+00:00",
   "items": [
     {
-      "title": "King acknowledges 'suffering of the past' as Caribbean tour begins",
-      "link": "https://www.bbc.co.uk/news/articles/cmwyv8ld22z1o?at_medium=RSS&at_campaign=rss",
-      "summary": "The King is on a nine-day tour that will take him to three countries, including the Bahamas, Guyana and Antigua and Barbuda.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f0e4/live/7d77ba00-d249-11f1-8ba3-9fd3e261415f.jpg",
-      "published": "2026-10-28T04:25:25+00:00",
-      "source": "BBC News",
-      "category": "World",
+      "title": "Cyclone Arnab lashes India coast",
+      "link": "https://arynews.tv/cyclone-arnab-lashes-india-coast",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Cyclone-Arnab-lashes-India-coast.jpg",
+      "published": "2026-10-28T05:08:01+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "پاکستان-ایران سرحد کی بندش کے بعد جزوی بحالی اور خدشات: ایران سے سامانِ تجارت محدود انداز میں کیوں آ رہا ہے؟",
+      "link": "https://www.bbc.com/urdu/articles/cwdd8g10d789o?at_medium=RSS&at_campaign=rss",
+      "summary": "گزر گاہوں کی اس جزوی بندش نے نہ صرف دونوں ممالک کی تجارت کو متاثر کیا بلکہ ایران کے لیے زمینی راستوں سے سامان کی فراہمی کے مستقبل کے بارے میں بھی سوالات کھڑے کر دیے ہیں۔ اگرچہ ایرانی اور پاکستانی حکام اس اقدام کی وجوہات تکنیکی، انتظامی اور سکیورٹی امور کو قرار دیتے ہیں، تاہم بعض ایرانی مبصرین اسے ایران کی معیشت پر وسیع تر عالمی دباؤ کے تناظر میں دیکھتے ہیں۔",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/8fd9/live/ad2dd1f0-d10c-11f1-ac54-9f7716f7b702.jpg",
+      "published": "2026-10-28T04:59:40+00:00",
+      "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Constitutional questions",
+      "link": "https://www.dawn.com/news/2040389/constitutional-questions",
+      "summary": "PAKISTAN has had three constitutions. Two given to it by its people in 1956 and 1973. One promulgated by a field marshal in 1962. The 1973 Constitution was adopted by the people through their representatives in the constituent assembly. Article 1 states that Pakistan shall be a federal republic. Neither the term “federal” nor “republic” is expressly defined.",
+      "image_url": "https://i.dawn.com/large/2024/10/6715b6d8ed3ee.png",
+      "published": "2026-10-28T04:45:42+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
       "language": "en"
     },
     {
       "title": "Netanyahu and rival each claim mandate after tight Israel election",
       "link": "https://www.dawn.com/news/2040402/netanyahu-and-rival-each-claim-mandate-after-tight-israel-election",
-      "summary": "Israeli Prime Minister Benjamin Netanyahu and rival Gadi Eisenkot each vowed on Wednesday to form a government after both came up short in the first election since the October 7, 2023 attack traumatised the country. Voters turned out Tuesday in the highest numbers in decades to give their verdict on the divisive rule of Netanyahu, Israel’s longest-serving pr",
+      "summary": "Israeli Prime Minister Benjamin Netanyahu and rival Gadi Eisenkot each vowed on Wednesday to form a government after both came up short in the first election since the events of October 7, 2023. Voters turned out Tuesday in the highest numbers in decades to give their verdict on the divisive rule of Netanyahu, Israel’s longest-serving prime minister who has ",
       "image_url": "https://i.dawn.com/large/2026/10/28092142b7ea82a.webp",
-      "published": "2026-10-28T04:24:21+00:00",
+      "published": "2026-10-28T04:36:23+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Lahore High court rules against divorce-linked Quran oath",
+      "link": "https://www.dawn.com/news/2040316/lahore-high-court-rules-against-divorce-linked-quran-oath",
+      "summary": "LAHORE: The Lahore High Court has held that an offer to settle a civil dispute through a “special oath” on the Holy Quran, coupled with a condition of divorce if the oath is false, is not a lawful offer. Justice Anwaar Hussain issued the ruling allowing a civil revision filed by Muhammad Azam Khan against Akhtar Khan and others. During a pending appeal befor",
+      "image_url": "https://i.dawn.com/large/2026/09/01075108d2d7f59.webp",
+      "published": "2026-10-28T04:33:28+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "King acknowledges 'suffering of the past' as Caribbean tour begins",
+      "link": "https://www.bbc.co.uk/news/articles/cmwyv8ld22z1o?at_medium=RSS&at_campaign=rss",
+      "summary": "The King is on a nine-day tour that will take him to three countries, including the Bahamas, Guyana and Antigua and Barbuda.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f0e4/live/7d77ba00-d249-11f1-8ba3-9fd3e261415f.jpg",
+      "published": "2026-10-28T04:32:36+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "The Tehran opening",
+      "link": "https://www.dawn.com/news/2040390/the-tehran-opening",
+      "summary": "HELD amid the threat of a renewed US-Israeli attack on Iran and escalating conflict in the Arabian Peninsula, the meeting between Iranian leaders and members of the Makkah Defence Alliance was deeply significant — though it remained unclear whether the talks had produced any major breakthrough. The quadrilateral meeting reportedly discussed “regional coopera",
+      "image_url": "https://i.dawn.com/large/2023/04/19085329f4eec05.jpg",
+      "published": "2026-10-28T04:26:58+00:00",
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
@@ -52,7 +102,7 @@
       "language": "en"
     },
     {
-      "title": "کسی واضح فاتح کے بغیر اسرائیل میں حکومت کیسے بنے گی اور حکومت سازی کے لیے عرب جماعتیں کیوں اہم ہیں؟",
+      "title": "اسرائیلی انتخابات سے جڑے سوال اور وہ عرب جماعتیں جو حکومت سازی میں اہم کردار ادا کر سکتی ہیں",
       "link": "https://www.bbc.com/urdu/articles/c6n04y7e9jelo?at_medium=RSS&at_campaign=rss",
       "summary": "اسرائیل کے عام انتخابات کے ابتدائی ایگزٹ پولز میں وزیرِ اعظم بنیامین نیتن یاہو اور سابق فوجی سربراہ گادی آئزنکوٹ کے درمیان سخت مقابلہ دکھائی دے رہا ہے۔ کسی بھی بلاک کو حکومت سازی کے لیے درکار 61 نشستوں کی واضح اکثریت حاصل ہوتی نظر نہیں آ رہی، جس سے ایک بار پھر اتحادی حکومت یا سیاسی تعطل کے امکانات بڑھ گئے ہیں۔",
       "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/c38d/live/19e08ff0-d0a3-11f1-adbe-cd0eaeb0fff9.jpg",
@@ -165,10 +215,30 @@
       "title": "Israeli exit polls suggest no clear winner in pivotal general election",
       "link": "https://www.bbc.co.uk/news/articles/cq1kdgxw302zo?at_medium=RSS&at_campaign=rss",
       "summary": "Two polls project that veteran PM Benjamin Netanyahu and former military chief Gadi Eisenkot are tied, with neither winning a majority.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9997/live/2e4cebd0-d26c-11f1-a701-fddedf244c16.jpg",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b32c/live/565a2170-d275-11f1-93e1-3b657b665bcf.jpg",
       "published": "2026-10-28T02:09:11+00:00",
       "source": "BBC News",
       "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "1,500 prisoners to be shifted to Islamabad Model Jail in first phase: Naqvi",
+      "link": "https://www.dawn.com/news/2040274/1500-prisoners-to-be-shifted-to-islamabad-model-jail-in-first-phase-naqvi",
+      "summary": "ISLAMABAD: Interior Minister Mohsin Naqvi on Tuesday said prisoners from Islamabad will be shifted to the new model jail in the capital which is awaiting inauguration by Prime Minister Shehbaz Sharif. Talking to media at the newly-built Islamabad Model Jail at H-16, Mr Naqvi, accompanied by State Minister for Interior Talal Chaudhry, said the jail project ha",
+      "image_url": "https://i.dawn.com/large/2026/09/21133758462a157.webp",
+      "published": "2026-10-28T01:52:12+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Judge recuses himself from bail plea of suspect in Azeri woman case",
+      "link": "https://www.dawn.com/news/2040318/judge-recuses-himself-from-bail-plea-of-suspect-in-azeri-woman-case",
+      "summary": "LAHORE: Additional District & Sessions Judge (AD&SJ) Rafaqat Ali Gondal on Tuesday recused himself from hearing the bail application of Ahmed Tanveer, a key suspect, in the rape case of an Azeri woman, and referred the matter to the Lahore High Court for further proceedings. Earlier, Advocate Safdar Shaheen Pirzada, counsel for the suspect, filed an applicat",
+      "image_url": "https://i.dawn.com/large/2023/08/2109424237be0de.jpg",
+      "published": "2026-10-28T01:52:04+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
       "language": "en"
     },
     {
@@ -252,6 +322,26 @@
       "language": "en"
     },
     {
+      "title": "کراچی؛ سرکاری فلیٹ سے 5بچوں کی ماں کی تشدد زدہ گلا کٹی لاش برآمد",
+      "link": "https://www.express.pk/story/2840787/karachi-throat-slit-body-of-mother-of-five-found-in-government-flat-showing-signs-of-torture-2840787/",
+      "summary": "مقتولہ کا ایک بیٹا ماں کے ساتھ رہائش پذیر تھا جبکہ شوہر کئی سالوں سے الگ رہتا تھا، پولیس",
+      "image_url": "",
+      "published": "2026-10-28T00:01:06+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "US costs of Iran war rise to over $47 billion, according to Pentagon estimate",
+      "link": "https://tribune.com.pk/story/2637350/us-costs-of-iran-war-rise-to-over-47-billion-according-to-pentagon-estimate",
+      "summary": "More than $6 billion would be needed to replace military equipment ​and 'platform losses'",
+      "image_url": "",
+      "published": "2026-10-27T23:46:05+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "Where does Fleetwood beating Arsenal rank in biggest cup upsets?",
       "link": "https://www.bbc.co.uk/sport/football/articles/cq62y7yzjdmzo?at_medium=RSS&at_campaign=rss",
       "summary": "BBC Sport looks at the history of the biggest FA Cup and League Cup upsets after Fleetwood Town's shock win against Arsenal.",
@@ -260,6 +350,16 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "یوم سیاہ کشمیر کے موقع پر کینیڈا اور امریکا میں پاکستانی سفارتخانوں میں تقاریب",
+      "link": "https://www.express.pk/story/2840786/kashmir-black-day-ceremonies-in-canada-and-america-2840786/",
+      "summary": "مسئلہ کشمیر ہماری قومی شناخت اور وقار کا حصہ ہے، سفیر پاکستان رضوان سعید شیخ کا واشنگٹن ڈی سی میں خطاب",
+      "image_url": "",
+      "published": "2026-10-27T23:29:27+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "China's families are now supporting more old people than kids",
@@ -310,6 +410,16 @@
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
+    },
+    {
+      "title": "K-P reports four new mpox cases",
+      "link": "https://tribune.com.pk/story/2637348/k-p-reports-four-new-mpox-cases",
+      "summary": "Health authorities step up contact tracing as tally tops 18",
+      "image_url": "",
+      "published": "2026-10-27T21:01:27+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
     },
     {
       "title": "Landline switchover could cut people off in emergency, minister warned",
@@ -682,6 +792,26 @@
       "language": "en"
     },
     {
+      "title": "Snowfall lures tourists to Galiyat resorts",
+      "link": "https://tribune.com.pk/story/2637313/snowfall-lures-tourists-to-galiyat-resorts",
+      "summary": "Nathiagali, Ayubia, Dongagali and Khanspur attract families",
+      "image_url": "",
+      "published": "2026-10-27T19:15:15+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Punjab seeks action on illegal Afghans",
+      "link": "https://tribune.com.pk/story/2637310/punjab-seeks-action-on-illegal-afghans",
+      "summary": "Pindi police have been given three days to submit report",
+      "image_url": "",
+      "published": "2026-10-27T19:15:15+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "Six-month condition to be lifted from 200-unit electricity relief",
       "link": "https://arynews.tv/consumers-using-less-than-200-units-to-get-blanket-relief-back",
       "summary": "",
@@ -812,6 +942,46 @@
       "language": "en"
     },
     {
+      "title": "Afghan posts destroyed after border shelling",
+      "link": "https://tribune.com.pk/story/2637300/afghan-posts-destroyed-after-border-shelling",
+      "summary": "Angoor Adda incident sparks anger among local residents over targeting of civilians",
+      "image_url": "",
+      "published": "2026-10-27T17:40:59+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Piracy to draw 10 years in jail, Rs25m fine",
+      "link": "https://tribune.com.pk/story/2637298/piracy-to-draw-10-years-in-jail-rs25m-fine",
+      "summary": "NEC brings piracy, virtual assets under AML regime",
+      "image_url": "",
+      "published": "2026-10-27T17:40:59+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "SC seeks clarity on DNA evidence in rape conviction",
+      "link": "https://tribune.com.pk/story/2637299/sc-seeks-clarity-on-dna-evidence-in-rape-conviction",
+      "summary": "Bench examines evidence in case involving victim with hearing, speech impairments",
+      "image_url": "",
+      "published": "2026-10-27T17:40:59+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "PM sets fuel relief process in motion",
+      "link": "https://tribune.com.pk/story/2637297/pm-sets-fuel-relief-process-in-motion",
+      "summary": "Shehbaz meets JI delegation led by Hafiz Naeem Both sides agree to form panel to weigh options Expanding subsidy",
+      "image_url": "",
+      "published": "2026-10-27T17:40:59+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "کراچی، بجلی کی بندش پر شہریوں کا احتجاج، سڑک بلاک کرکے ٹائر جلا دیے",
       "link": "https://www.express.pk/story/2840774/karachi-citizens-protest-against-power-outages-block-roads-and-set-tires-on-fire-2840774/",
       "summary": "گھروں اور مساجد میں پانی بھی ختم ہوگیا ہے، علاقہ مکین",
@@ -829,176 +999,6 @@
       "published": "2026-10-27T17:20:40+00:00",
       "source": "BBC News",
       "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "930 ارب کی اسلامی فنانسنگ ٹرانزیکشن کامیابی سے مکمل",
-      "link": "https://www.express.pk/story/2840773/islamic-financing-transaction-worth-930-billion-successfully-completed-2840773/",
-      "summary": "حکومت کو 795 ارب کی سبسڈی اجرا میں معاونت، صارفین کو 183.4 ارب سے زائد ریلیف",
-      "image_url": "",
-      "published": "2026-10-27T17:14:10+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بیرسٹر گوہر نے پارلیمانی پارٹی اجلاس میں اعظم سواتی کو ٹوک دیا",
-      "link": "https://jang.com.pk/news/1628283",
-      "summary": "پاکستان تحریک انصاف کے پارلیمانی پارٹی اجلاس میں چیئرمین بیرسٹر گوہر نے سینیٹر اعظم سواتی کو ٹوک دیا۔ذرائع کے مطابق پی ٹی آئی کا...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-27/b_1628283_110426_updates.jpg\"/",
-      "published": "2026-10-27T17:10:55+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "محکمہ جنگلی حیات کی جامشورو میں کارروائی، 1700 پرندوں کا گوشت برآمد، ملزمان گرفتار",
-      "link": "https://jang.com.pk/news/1628281",
-      "summary": "محکمہ جنگلی حیات نے جامشورو میں کارروائی کرتے ہوئے 5 ملزمان گرفتار کرلیا۔اعلامیہ کے مطابق کارروائی کے دوران 1700 پرندوں کا گوشت برآمد...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-27/b_1628281_103740_updates.jpg\"/",
-      "published": "2026-10-27T17:10:40+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سائبر کرائم، 60 فیصد معاملات مالی فراڈ کے سامنے آئے، این سی سی آئی اے",
-      "link": "https://jang.com.pk/news/1628284",
-      "summary": "سینیٹ قائمہ کمیٹی برائے انسانی حقوق کو بتایا گیا ہے کہ پاکستان میں سائبر کرائم کے 60 فیصد معاملات مالی فراڈ کے سامنے آتے ہیں۔نیشنل...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-27/b_1628284_112948_updates.jpg\"/",
-      "published": "2026-10-27T17:10:29+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پی ٹی آئی کیساتھ آف دی ریکارڈ رابطے ہیں، نام نہیں بتا سکتا ان کیلئے مسئلے بنتے ہیں، رانا ثنا",
-      "link": "https://jang.com.pk/news/1628280",
-      "summary": "سینیٹر رانا ثنا اللہ۔وزیراعظم کے میشر برائے سیاسی امور سینیٹر رانا ثنا اللہ نے کہا ہے کہ پی ٹی آئی کے ساتھ آف دی ریکارڈ رابطے ہیں،...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-27/b_1628280_103645_updates.jpg\"/",
-      "published": "2026-10-27T17:10:06+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پیٹرول سستا، ڈیزل مہنگا کردیا گیا",
-      "link": "https://jang.com.pk/news/1628278",
-      "summary": "وفاقی حکومت نے پیٹرولیم مصنوعات کی نئی قیمتوں کا اعلان کردیا، جس کا نوٹیفکیشن بھی جاری کردیا گیا۔نوٹیفکیشن کے مطابق پیٹرول 3 روپے 19...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-27/b_1628278_101356_updates.jpg\"/",
-      "published": "2026-10-27T17:10:00+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "لاہور ہائیکورٹ‘ ترک معارف فاؤنڈیشن کیخلاف فیصلے کالعدم",
-      "link": "https://www.express.pk/story/2840772/lahore-high-court-sets-aside-decisions-against-turkish-maarif-foundation-2840772/",
-      "summary": "پاک، ترکیہ تعلقات کو مدنظر رکھیں، سابق وی سی عصمت متین تنازع کا دوبارہ فیصلہ کا حکم",
-      "image_url": "",
-      "published": "2026-10-27T17:08:30+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Overseas Pakistanis get major relief from NADRA",
-      "link": "https://arynews.tv/overseas-pakistanis-get-major-relief-from-nadra",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2025/11/NADRA-uses-new-software-to-expose-widespread-CNIC-fraud.jpg.jpeg",
-      "published": "2026-10-27T17:01:34+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "ورچوئل اثاثہ جات ریگولیٹری اتھارٹی کو انسداد منی لانڈرنگ قانون کے تحت اختیارات حاصل",
-      "link": "https://www.express.pk/story/2840771/virtual-assets-regulatory-authority-gets-powers-under-anti-money-laundering-law-2840771/",
-      "summary": "بحری قزاقی کو منی لانڈرنگ کے بنیادی جرم کے طور پر شامل کرنیکی منظوری،7 سال تک قید",
-      "image_url": "",
-      "published": "2026-10-27T17:01:01+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Joint JI-govt committee to mull ways to expand fuel relief scheme",
-      "link": "https://www.dawn.com/news/2040214/joint-ji-govt-committee-to-mull-ways-to-expand-fuel-relief-scheme",
-      "summary": "The government and Jamaat-i-Islami (JI) on Tuesday decided to form a joint committee to recommend proposals for expanding the ongoing fuel relief scheme , while JI warned of marching to Islamabad next month if no relief “package” was announced by then. The decision was made during a high-level meeting between Prime Minister Shehbaz Sharif and JI chief Hafiz ",
-      "image_url": "https://i.dawn.com/large/2026/10/272109183980309.webp",
-      "published": "2026-10-27T16:55:40+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "انفارمیشن گروپ کے شفقت عباس ڈی جی انٹرنل پبلسٹی ونگ تعینات",
-      "link": "https://www.express.pk/story/2840770/shafqat-abbas-of-the-information-group-appointed-as-dg-internal-publicity-wing-2840770/",
-      "summary": "منظور علی اقتصادی امور، سروش فاطمہ صنعت، سارہ ہاشمی ایس او اسٹیبلشمنٹ ڈویژنز تعینات",
-      "image_url": "",
-      "published": "2026-10-27T16:52:27+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "انسان سے دگنی مہارت، تشخیص کے لیے اے آئی ڈاکٹر آ گیا",
-      "link": "https://www.express.pk/story/2840768/twice-as-skilled-as-a-human-an-ai-doctor-arrives-for-diagnosis-2840768/",
-      "summary": "اے آئی ڈاکٹر عام امراض کی تشخیص کرنے میں 83.2 فیصد کامیاب رہا، امریکی جریدہ",
-      "image_url": "",
-      "published": "2026-10-27T16:42:15+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Saudi citizens can now apply for US fast-track travel program",
-      "link": "https://arynews.tv/saudi-citizens-can-now-apply-for-us-fast-track-travel-program",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Saudi-citizens-and-US-entry.jpg",
-      "published": "2026-10-27T16:36:03+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "New Zealand introduces new rules for student visa",
-      "link": "https://arynews.tv/new-zealand-introduces-new-rules-for-student-visa",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/09/New-Zealand-flag.jpg",
-      "published": "2026-10-27T16:32:30+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Pakistan urges use of space technology to tackle climate disasters",
-      "link": "https://arynews.tv/pakistan-urges-use-of-space-technology-to-tackle-climate-disasters",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Ahsan-Iqbal-1.jpg",
-      "published": "2026-10-27T16:29:26+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "PTI leaders clash over Sohail Afridi, long march and negotiations",
-      "link": "https://arynews.tv/pti-leaders-clash-over-sohail-afridi-long-march-and-negotiations",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/07/PTI.jpg",
-      "published": "2026-10-27T16:25:48+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Claude AI users targeted by sophisticated malware hidden on genuine site",
-      "link": "https://arynews.tv/claude-ai-users-targeted-by-sophisticated-malware-hidden-on-genuine-site",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Claude.jpg",
-      "published": "2026-10-27T16:24:07+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
       "language": "en"
     }
   ]
