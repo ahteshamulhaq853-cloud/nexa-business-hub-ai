@@ -1671,10 +1671,9 @@ header .brand-word small{
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
 </section>
 <section id="liveTVPage" class="page">
- <div class="studio-section-heading"><div><span class="studio-kicker">NEXA ENTERTAINMENT</span><h2>📺 Live TV</h2><p class="muted">Mulk select karein, phir us mulk ka available TV channel choose karein.</p></div></div>
+ <div class="studio-section-heading"><div><span class="studio-kicker">NEXA ENTERTAINMENT</span><h2>📺 Live TV</h2><p class="muted">Available live channels yahan milenge. Channel select karte hi isi player mein chalane ki koshish hogi.</p></div></div>
  <div class="card" style="max-width:900px;margin:0 auto 18px">
-  <div class="field"><label for="liveTVCountry">🌍 Select Country</label><select id="liveTVCountry" onchange="updateLiveTVChannels()"><option value="">Choose a country…</option></select></div>
-  <div class="field"><label for="liveTVChannelSelect">📺 Select TV Channel</label><select id="liveTVChannelSelect" onchange="playSelectedLiveTVChannel()" disabled><option value="">Pehle country select karein</option></select></div>
+  <div class="field"><label for="liveTVChannelSelect">📺 Select Live Channel</label><select id="liveTVChannelSelect"><option value="">Loading channels…</option></select></div>
   <p id="liveTVStatus" class="message" role="status" aria-live="polite">Country select karein, phir channel dropdown se channel choose karein.</p>
   <div id="liveTVPlayerCard" style="display:none;margin-top:16px">
    <h3 id="liveTVSelectedTitle">Live TV Player</h3>
@@ -2410,47 +2409,40 @@ async function submitNexaJobApplication(event){
 const liveTVCountries=[
 "Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo","Costa Rica","Côte d’Ivoire","Croatia","Cuba","Cyprus","Czechia","Democratic Republic of the Congo","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent and the Grenadines","Samoa","San Marino","São Tomé and Príncipe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Türkiye","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"
 ];
-const liveTVChannelsByCountry={
-"Pakistan":[
-{name:"ARY News — Live",url:"https://live.arynews.tv/hq/",embed:"https://www.youtube.com/embed/RqUZ2Fv9l8w",official:"https://live.arynews.tv/hq/"},
-{name:"Express News — Official Live",url:"https://www.express.pk/live",embed:"https://www.youtube.com/embed/6i2L8XcQE1o",official:"https://www.express.pk/live"},
-{name:"PTV News — Official Live",url:"https://moib.gov.pk/LiveStream",embed:"https://www.youtube.com/embed/CGb02nb7Ni4",official:"https://moib.gov.pk/LiveStream"}
-],
-"Qatar":[
-{name:"Al Jazeera English — Live",url:"https://www.aljazeera.com/video/live",stream:"https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",official:"https://www.aljazeera.com/video/live"},
-{name:"Al Jazeera Arabic — Live",url:"https://www.aljazeera.net/live",stream:"https://live-hls-apps-aja-fa.getaj.net/AJA/index.m3u8",official:"https://www.aljazeera.net/live"}
-]
-};
+const liveTVChannels=[
+{name:"🇵🇰 ARY News — Live",country:"Pakistan",embed:"https://www.youtube.com/embed/RqUZ2Fv9l8w"},
+{name:"🇵🇰 Express News — Live",country:"Pakistan",embed:"https://www.youtube.com/embed/6i2L8XcQE1o"},
+{name:"🇵🇰 PTV News — Live",country:"Pakistan",embed:"https://www.youtube.com/embed/CGb02nb7Ni4"},
+{name:"🇶🇦 Al Jazeera English — Live",country:"Qatar",stream:"https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8"},
+{name:"🇶🇦 Al Jazeera Arabic — Live",country:"Qatar",stream:"https://live-hls-apps-aja-fa.getaj.net/AJA/index.m3u8"}
+];
 function initLiveTVCountries(){
- const select=$("liveTVCountry");if(!select||select.options.length>1)return;
- liveTVCountries.forEach(country=>{const option=document.createElement("option");option.value=country;option.textContent=country;select.appendChild(option);});
+ const select=$("liveTVChannelSelect");if(!select||select.dataset.ready==="yes")return;
+ select.innerHTML="";
+ liveTVChannels.forEach((channel,index)=>{const option=document.createElement("option");option.value=String(index);option.textContent=channel.name;select.appendChild(option);});
+ select.dataset.ready="yes";
+ select.disabled=false;
+ select.addEventListener("change",playSelectedLiveTVChannel);
+ if(liveTVChannels.length){select.value="0";playSelectedLiveTVChannel();}
 }
 function updateLiveTVChannels(){
- const country=$("liveTVCountry")?.value,select=$("liveTVChannelSelect"),status=$("liveTVStatus");
- resetLiveTVPlayer(false);
- if(!select)return;
- select.innerHTML="";
- const channels=liveTVChannelsByCountry[country]||[];
- const first=document.createElement("option");first.value="";first.textContent=country?(channels.length?"Choose a TV channel…":"Is country ke liye abhi official channel links add nahi hain"):"Pehle country select karein";select.appendChild(first);
- channels.forEach((channel,index)=>{const option=document.createElement("option");option.value=String(index);option.textContent=channel.name;select.appendChild(option);});
- select.disabled=!country||!channels.length;
- if(status){status.className="message"+(country&&!channels.length?" show":"");status.textContent=country?(channels.length?"Ab "+country+" ka channel select karein.":"Is country ke channels ki official links abhi add nahi hain; filhal doosra country select karein."):"Country select karein, phir channel dropdown se channel choose karein.";}
+ const select=$("liveTVChannelSelect");
+ if(select&&select.options.length)playSelectedLiveTVChannel();
 }
 let liveTVHlsInstance=null;
 function playSelectedLiveTVChannel(){
- const country=$("liveTVCountry")?.value,select=$("liveTVChannelSelect");
- const channel=liveTVChannelsByCountry[country]?.[Number(select?.value)];
- const frame=$("liveTVFrame"),video=$("liveTVVideo"),official=$("liveTVOfficialLink"),status=$("liveTVStatus"),card=$("liveTVPlayerCard");
+ const select=$("liveTVChannelSelect");
+ const channel=liveTVChannels[Number(select?.value)];
+ const frame=$("liveTVFrame"),video=$("liveTVVideo"),status=$("liveTVStatus"),card=$("liveTVPlayerCard");
  if(!channel||!frame||!video)return;
  if(liveTVHlsInstance){try{liveTVHlsInstance.destroy();}catch(e){}liveTVHlsInstance=null;}
  video.pause();video.removeAttribute("src");video.load();
  frame.src="about:blank";
- if(official){official.style.display="none";}
- $("liveTVSelectedTitle").textContent="📺 "+country+" — "+channel.name;
+ $("liveTVSelectedTitle").textContent="📺 "+channel.name;
  if(card)card.style.display="block";
  if(channel.embed){
   video.style.display="none";frame.style.display="block";frame.src=channel.embed;
-  if(status){status.className="message show";status.textContent=channel.name+" ka live video player ke andar load ho raha hai. Agar live feed available na ho to player unavailable dikhayega.";}
+  if(status){status.className="message show";status.textContent=channel.name+" ka embedded player load ho raha hai. Agar broadcaster embedding band kare ya feed offline ho, video nahi chalegi.";}
  }else if(channel.stream){
   frame.style.display="none";video.style.display="block";
   if(status){status.className="message show";status.textContent=channel.name+" ki live stream load ho rahi hai…";}
@@ -2470,12 +2462,10 @@ function playSelectedLiveTVChannel(){
   }else if(video.canPlayType("application/vnd.apple.mpegurl")){
    video.src=channel.stream;
    video.play().catch(()=>{if(status)status.textContent="Stream tayyar hai — video par Play dabayein."});
-  }else{
-   if(status)status.textContent="Aapka browser HLS video support nahi karta. Official stream link neeche kholein.";
-  }
+  }else if(status){status.className="message show";status.textContent="Is browser mein yeh direct stream support nahi ho rahi.";}
  }else{
   video.style.display="none";frame.style.display="none";frame.src="about:blank";
-  if(status){status.className="message show";status.textContent="Is channel ke liye direct live video feed available nahi hai. Koi website page nahi khola jayega.";}
+  if(status){status.className="message show";status.textContent="Is channel ki video feed abhi available nahi hai.";}
  }
 }
 function resetLiveTVPlayer(showMessage=true){
@@ -2484,7 +2474,7 @@ function resetLiveTVPlayer(showMessage=true){
  if(frame){frame.src="about:blank";frame.style.display="none";}
  if(video){video.pause();video.removeAttribute("src");video.load();video.style.display="none";}
  if(card)card.style.display="none";
- if(showMessage&&status){status.className="message";status.textContent="Player stop kar diya gaya.";}
+ if(showMessage&&status){status.className="message show";status.textContent="Player stop kar diya gaya.";}
 }
 function showPage(id){
  if(id==="paymentPage"&&$("paymentProduct")){$("paymentProduct").value="normal";$("paymentTitle").textContent="Payment & Access."; $("paymentDescription").textContent="Normal CV PDF access costs Rs. 100. Submit your transaction reference and wait for admin approval.";$("paymentAmount").textContent="Rs. 100"}
