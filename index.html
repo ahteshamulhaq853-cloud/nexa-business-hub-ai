@@ -2171,11 +2171,29 @@ header .brand-word small{
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
 </section>
+
+<section id="weatherPage" class="page">
+ <div class="studio-section-heading"><div><span class="studio-kicker">NEXA WEATHER DESK</span><h2>WEATHER FORECAST</h2></div></div>
+ <div class="card" style="padding:16px;margin-bottom:12px">
+  <p class="muted" style="margin-top:0">Apne shehar ka naam likhein aur current weather dekhein.</p>
+  <form onsubmit="event.preventDefault();loadNexaWeather(document.getElementById('weatherCity').value)" style="display:flex;gap:8px;flex-wrap:wrap">
+   <input id="weatherCity" type="search" placeholder="City name, e.g. Bannu" value="Bannu" style="flex:1;min-width:150px">
+   <button type="submit">Search Weather</button>
+  </form>
+  <button type="button" class="secondary" onclick="getNexaWeatherLocation()" style="margin-top:10px">📍 Use My Location</button>
+  <div id="weatherStatus" class="message" style="margin-top:10px"></div>
+ </div>
+ <div id="weatherCurrent" class="card" style="padding:18px;margin-bottom:12px"><p class="muted">Weather load ho raha hai…</p></div>
+ <h3 style="margin:14px 0 8px">7-Day Forecast</h3>
+ <div id="weatherForecast" class="grid two" style="gap:8px"><article class="card"><p class="muted">Forecast load ho raha hai…</p></article></div>
+ <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
+</section>
 </main>
 <nav id="bottomNav" aria-label="Main navigation">
  <button type="button" onclick="bottomNavigate('dashboardPage',this)"><span class="bottom-icon">⌂</span><span>Dashboard</span></button>
  <button type="button" onclick="bottomNavigate('latestJobsPage',this)"><span class="bottom-icon">💼</span><span>Jobs</span></button>
  <button type="button" onclick="bottomNavigate('latestNewsPage',this)"><span class="bottom-icon">📰</span><span>News</span></button>
+ <button type="button" onclick="bottomNavigate('weatherPage',this)"><span class="bottom-icon">🌦️</span><span>Weather</span></button>
  <button type="button" onclick="bottomNavigate('servicesPage',this)"><span class="bottom-icon">⚙</span><span>Services</span></button>
 <button type="button" onclick="bottomNavigate('liveTVPage',this)"><span class="bottom-icon">📺</span><span>Live TV</span></button>
  <button type="button" onclick="bottomNavigate('settingsPage',this)"><span class="bottom-icon">♙</span><span>Profile</span></button>
@@ -2213,6 +2231,41 @@ const $=id=>document.getElementById(id);
 
 function msg(id,text,type="info"){$(id).textContent=text;$(id).className="message show "+type}
 function clearMsg(id){$(id).textContent="";$(id).className="message"}
+
+const nexaWeatherDescriptions={0:"Clear sky",1:"Mainly clear",2:"Partly cloudy",3:"Overcast",45:"Fog",48:"Rime fog",51:"Light drizzle",53:"Drizzle",55:"Heavy drizzle",61:"Light rain",63:"Rain",65:"Heavy rain",71:"Light snow",73:"Snow",75:"Heavy snow",80:"Rain showers",81:"Rain showers",82:"Heavy rain showers",95:"Thunderstorm",96:"Thunderstorm with hail",99:"Heavy thunderstorm"};
+function nexaWeatherIcon(code){if(code===0)return "☀️";if([1,2].includes(code))return "🌤️";if(code===3)return "☁️";if([45,48].includes(code))return "🌫️";if([51,53,55,61,63,65,80,81,82].includes(code))return "🌧️";if([71,73,75].includes(code))return "❄️";if([95,96,99].includes(code))return "⛈️";return "🌡️";}
+async function loadNexaWeather(city){
+ const input=document.getElementById("weatherCity"),status=document.getElementById("weatherStatus"),current=document.getElementById("weatherCurrent"),forecast=document.getElementById("weatherForecast");
+ city=String(city||"").trim();
+ if(!city){status.textContent="Meherbani karke city ka naam likhein.";status.className="message show";return;}
+ if(input)input.value=city;
+ status.textContent="Weather check ho raha hai…";status.className="message show";
+ current.innerHTML="<p class='muted'>Weather load ho raha hai…</p>";forecast.innerHTML="";
+ try{
+  const geo=await fetch("https://geocoding-api.open-meteo.com/v1/search?name="+encodeURIComponent(city)+"&count=1&language=en&format=json");
+  if(!geo.ok)throw new Error("City search failed");
+  const gd=await geo.json(),place=gd.results&&gd.results[0];
+  if(!place)throw new Error("City nahi mili. Naam check karke dobara try karein.");
+  const url="https://api.open-meteo.com/v1/forecast?latitude="+place.latitude+"&longitude="+place.longitude+"&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=auto&forecast_days=7";
+  const response=await fetch(url);if(!response.ok)throw new Error("Weather service unavailable");
+  const data=await response.json(),c=data.current,d=data.daily;
+  const desc=nexaWeatherDescriptions[c.weather_code]||"Weather update";
+  current.innerHTML="<div style='display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap'><div><div class='muted'>"+place.name+(place.admin1?", "+place.admin1:"")+", "+place.country+"</div><div style='font-size:52px;font-weight:800;line-height:1.2'>"+nexaWeatherIcon(c.weather_code)+" "+Math.round(c.temperature_2m)+"°C</div><h3 style='margin:4px 0'>"+desc+"</h3><div class='muted'>Feels like "+Math.round(c.apparent_temperature)+"°C</div></div><div style='min-width:125px;line-height:2'><div>💧 Humidity: <b>"+c.relative_humidity_2m+"%</b></div><div>💨 Wind: <b>"+c.wind_speed_10m+" km/h</b></div><div>🌧️ Rain: <b>"+c.precipitation+" mm</b></div></div></div>";
+  let html="";
+  for(let i=0;i<d.time.length;i++){const date=new Date(d.time[i]+"T12:00:00");const day=i===0?"Today":date.toLocaleDateString("en",{weekday:"short",day:"numeric"});html+="<article class='card' style='padding:12px'><div style='display:flex;align-items:center;justify-content:space-between;gap:8px'><strong>"+day+"</strong><span style='font-size:24px'>"+nexaWeatherIcon(d.weather_code[i])+"</span></div><div class='muted' style='font-size:12px;margin:5px 0'>"+(nexaWeatherDescriptions[d.weather_code[i]]||"Weather")+"</div><div><b>"+Math.round(d.temperature_2m_max[i])+"°</b> / "+Math.round(d.temperature_2m_min[i])+"°</div><div class='muted' style='font-size:12px;margin-top:4px'>🌧️ Rain chance: "+(d.precipitation_probability_max[i]??0)+"%</div></article>";}
+  forecast.innerHTML=html;
+  status.textContent="Weather update mil gaya.";status.className="message show success";
+ }catch(err){current.innerHTML="<p class='muted'>Weather abhi load nahi ho saka.</p>";forecast.innerHTML="";status.textContent=err.message||"Internet check karke dobara try karein.";status.className="message show error";}
+}
+function getNexaWeatherLocation(){
+ const status=document.getElementById("weatherStatus");
+ if(!navigator.geolocation){status.textContent="Is browser mein location available nahi.";status.className="message show error";return;}
+ status.textContent="Location permission ka intezar hai…";status.className="message show";
+ navigator.geolocation.getCurrentPosition(async function(pos){
+  try{const url="https://api.open-meteo.com/v1/forecast?latitude="+pos.coords.latitude+"&longitude="+pos.coords.longitude+"&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=auto&forecast_days=7";const res=await fetch(url);if(!res.ok)throw new Error("Weather service unavailable");const data=await res.json(),c=data.current,d=data.daily;document.getElementById("weatherCity").value="My Location";document.getElementById("weatherCurrent").innerHTML="<div class='muted'>Your current location</div><div style='font-size:52px;font-weight:800'>"+nexaWeatherIcon(c.weather_code)+" "+Math.round(c.temperature_2m)+"°C</div><h3>"+(nexaWeatherDescriptions[c.weather_code]||"Weather update")+"</h3><div>Feels like "+Math.round(c.apparent_temperature)+"°C · 💧 "+c.relative_humidity_2m+"% humidity · 💨 "+c.wind_speed_10m+" km/h wind</div>";let html="";for(let i=0;i<d.time.length;i++){const dt=new Date(d.time[i]+"T12:00:00"),day=i===0?"Today":dt.toLocaleDateString("en",{weekday:"short",day:"numeric"});html+="<article class='card' style='padding:12px'><strong>"+day+"</strong><div style='font-size:24px;margin:5px 0'>"+nexaWeatherIcon(d.weather_code[i])+"</div><div>"+Math.round(d.temperature_2m_max[i])+"° / "+Math.round(d.temperature_2m_min[i])+"°</div><div class='muted' style='font-size:12px'>Rain chance: "+(d.precipitation_probability_max[i]??0)+"%</div></article>";}document.getElementById("weatherForecast").innerHTML=html;status.textContent="Weather update mil gaya.";status.className="message show success";}catch(e){status.textContent=e.message||"Weather load nahi ho saka.";status.className="message show error";}
+ },function(){status.textContent="Location permission nahi mili. City ka naam search karein.";status.className="message show error";},{enableHighAccuracy:false,timeout:10000});
+}
+
 function bottomNavigate(id,button){
  showPage(id);
  document.querySelectorAll('#bottomNav button').forEach(b=>b.classList.toggle('active',b===button));
@@ -2560,6 +2613,7 @@ function showPage(id){
  $(id).classList.add("active");window.scrollTo({top:0,behavior:"smooth"});
  if(id==="latestJobsPage")loadNexaJobs();
  if(id==="latestNewsPage")loadNexaNews();
+ if(id==="weatherPage")loadNexaWeather(document.getElementById("weatherCity")?.value||"Bannu");
  if(id==="europassPage")loadEuropass();
  if(id==="paymentPage")loadMyOrders();
  if(id==="liveTVPage")initLiveTVCountries();
