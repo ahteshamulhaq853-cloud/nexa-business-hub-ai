@@ -2439,7 +2439,7 @@ function playSelectedLiveTVChannel(){
  const country=$("liveTVCountry")?.value,select=$("liveTVChannelSelect");
  const channel=liveTVChannelsByCountry[country]?.[Number(select?.value)];
  const frame=$("liveTVFrame"),video=$("liveTVVideo"),official=$("liveTVOfficialLink"),status=$("liveTVStatus"),card=$("liveTVPlayerCard");
- if(!channel||!frame||!video||!official)return;
+ if(!channel||!frame||!video)return;
  if(liveTVHlsInstance){try{liveTVHlsInstance.destroy();}catch(e){}liveTVHlsInstance=null;}
  video.pause();video.removeAttribute("src");video.load();
  frame.src="about:blank";
