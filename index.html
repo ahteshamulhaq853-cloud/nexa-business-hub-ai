@@ -1672,13 +1672,19 @@ header .brand-word small{
 <section id="liveTVPage" class="page">
  <div class="studio-section-heading"><div><span class="studio-kicker">NEXA ENTERTAINMENT</span><h2>📺 Live TV</h2><p class="muted">Pakistani aur international channels ek jagah.</p></div></div>
  <div class="card" style="max-width:980px;margin:0 auto 16px">
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="font-size:28px">▶</span><div><h3 style="margin:0 0 4px">Live TV Player</h3><p class="muted" style="margin:0;font-size:12px">Sirf official ya authorized stream ka HTTPS embed link use karein.</p></div></div>
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="font-size:28px">▶</span><div><h3 style="margin:0 0 4px">Live TV Player</h3><p class="muted" style="margin:0;font-size:12px">Neeche channel select karein — stream foran load hone ki koshish karegi.</p></div></div>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:10px;margin-bottom:16px">
+   <button type="button" class="secondary" onclick="selectLiveTVChannel('ary')">🇵🇰 ARY News</button>
+   <button type="button" class="secondary" onclick="selectLiveTVChannel('ptv')">🇵🇰 PTV News</button>
+   <button type="button" class="secondary" onclick="selectLiveTVChannel('geo')">🇵🇰 Geo News</button>
+   <button type="button" class="secondary" onclick="selectLiveTVChannel('bbc')">🌍 BBC News</button>
+   <button type="button" class="secondary" onclick="selectLiveTVChannel('aljazeera')">🌍 Al Jazeera</button>
+  </div>
   <div style="position:relative;width:100%;aspect-ratio:16/9;background:#111827;border-radius:14px;overflow:hidden;border:1px solid #e5e7eb">
    <iframe id="liveTVFrame" title="Live TV Player" src="about:blank" style="width:100%;height:100%;border:0;background:#111827" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
-   <div id="liveTVPlaceholder" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:22px;color:#e5e7eb;background:linear-gradient(145deg,#111827,#273449);pointer-events:none"><div><div style="font-size:42px;margin-bottom:8px">📺</div><strong>Choose an authorized live stream</strong><p style="font-size:12px;line-height:1.6;color:#cbd5e1">Stream link enter karein. Kuch channels apni website par embedding allow nahi karte.</p></div></div>
+   <div id="liveTVPlaceholder" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:22px;color:#e5e7eb;background:linear-gradient(145deg,#111827,#273449);pointer-events:none"><div><div style="font-size:42px;margin-bottom:8px">📺</div><strong id="liveTVPlaceholderTitle">Select a channel to start</strong><p style="font-size:12px;line-height:1.6;color:#cbd5e1">Agar broadcaster embedding allow na kare to official stream ka button neeche use karein.</p></div></div>
   </div>
-  <div class="field" style="margin-top:16px"><label for="liveTVUrl">Official stream / embed URL</label><input id="liveTVUrl" type="url" inputmode="url" placeholder="https://..." autocomplete="url"></div>
-  <div class="actions"><button type="button" onclick="playLiveTVStream()">Play Stream ↗</button><button type="button" class="secondary" onclick="resetLiveTVPlayer()">Reset Player</button></div>
+  <div class="actions" style="margin-top:12px"><a id="liveTVOfficialLink" href="https://live.arynews.tv/" target="_blank" rel="noopener noreferrer" class="button" style="display:inline-block;text-decoration:none">Open Official Live Stream ↗</a><button type="button" class="secondary" onclick="resetLiveTVPlayer()">Stop Player</button></div>
   <div id="liveTVStatus" class="message" role="status" aria-live="polite"></div>
  </div>
  <div class="card" style="max-width:980px;margin:0 auto 16px">
@@ -2412,23 +2418,27 @@ async function submitNexaJobApplication(event){
  }catch(error){console.error("NEXA application submit error:",error);status.textContent="Application submit nahi hui. Supabase mein job_applications table aur insert policy configure karein. Details: "+(error.message||"connection error");}
  finally{button.disabled=false;}
 }
-function playLiveTVStream(){
- const input=$("liveTVUrl"),frame=$("liveTVFrame"),placeholder=$("liveTVPlaceholder"),status=$("liveTVStatus");
- if(!input||!frame||!status)return;
- let url;
- try{url=new URL((input.value||"").trim())}catch(e){status.className="message show error";status.textContent="Meherbani karke valid HTTPS stream/embed link enter karein.";return;}
- if(url.protocol!=="https:"){status.className="message show error";status.textContent="Security ke liye sirf HTTPS link allowed hai.";return;}
- frame.src=url.href;
+const liveTVChannels={
+ ary:{name:"ARY News",url:"https://live.arynews.tv/hq/",official:"https://live.arynews.tv/"},
+ ptv:{name:"PTV News",url:"https://moib.gov.pk/LiveStream",official:"https://moib.gov.pk/LiveStream"},
+ geo:{name:"Geo News",url:"https://www.geo.tv/",official:"https://www.geo.tv/"},
+ bbc:{name:"BBC News",url:"https://www.bbc.com/news",official:"https://www.bbc.com/news"},
+ aljazeera:{name:"Al Jazeera",url:"https://www.aljazeera.com/live",official:"https://www.aljazeera.com/live"}
+};
+function selectLiveTVChannel(key){
+ const channel=liveTVChannels[key],frame=$("liveTVFrame"),placeholder=$("liveTVPlaceholder"),title=$("liveTVPlaceholderTitle"),official=$("liveTVOfficialLink"),status=$("liveTVStatus");
+ if(!channel||!frame||!official)return;
+ frame.src=channel.url;
+ official.href=channel.official;
+ official.textContent="Open "+channel.name+" Official Stream ↗";
  if(placeholder)placeholder.style.display="none";
- status.className="message show";
- status.textContent="Stream load karne ki koshish ho rahi hai. Agar video na chale to broadcaster ne embedding block ki ho sakti hai.";
+ if(status){status.className="message show";status.textContent=channel.name+" load ho raha hai. Agar player blank rahe to neeche official stream kholein; kuch broadcasters external embedding block karte hain.";}
 }
 function resetLiveTVPlayer(){
- const frame=$("liveTVFrame"),placeholder=$("liveTVPlaceholder"),input=$("liveTVUrl"),status=$("liveTVStatus");
+ const frame=$("liveTVFrame"),placeholder=$("liveTVPlaceholder"),status=$("liveTVStatus");
  if(frame)frame.src="about:blank";
  if(placeholder)placeholder.style.display="flex";
- if(input)input.value="";
- if(status){status.className="message";status.textContent="";}
+ if(status){status.className="message";status.textContent="Player stop kar diya gaya.";}
 }
 function showPage(id){
  if(id==="paymentPage"&&$("paymentProduct")){$("paymentProduct").value="normal";$("paymentTitle").textContent="Payment & Access."; $("paymentDescription").textContent="Normal CV PDF access costs Rs. 100. Submit your transaction reference and wait for admin approval.";$("paymentAmount").textContent="Rs. 100"}
