@@ -2214,13 +2214,16 @@ header .brand-word small{
   <button id="supportClose" type="button" aria-label="Close support chat" onclick="toggleSupport(false)">✕</button>
  </div>
  <div id="supportMessages" aria-live="polite">
-  <div class="support-bubble bot">Assalam-o-Alaikum! Welcome to Nexa CV Studio. 👋\nMain aapki CV, templates, account aur PDF payment access mein help kar sakta hoon. Password ya OTP kabhi share na karein.</div>
+  <div class="support-bubble bot">Assalam-o-Alaikum! Welcome to NEXA AI Support. 👋\nMain CV Builder, account/login, templates, PDF access, Jobs, News, Weather aur Live TV use karne mein guide kar sakta hoon. Password, OTP ya payment secrets kabhi share na karein.</div>
  </div>
  <div class="support-quick">
   <button type="button" onclick="askSupport('How do I create a CV?')">Create CV</button>
   <button type="button" onclick="askSupport('Tell me about CV templates')">CV Templates</button>
   <button type="button" onclick="askSupport('How does PDF payment work?')">PDF / Payment</button>
   <button type="button" onclick="askSupport('I cannot log in')">Login Help</button>
+  <button type="button" onclick="askSupport('How do I find government jobs on NEXA?')">Jobs Help</button>
+  <button type="button" onclick="askSupport('How do I use News and Weather?')">News & Weather</button>
+  <button type="button" onclick="askSupport('How do I open Live TV and select a channel?')">Live TV Help</button>
   <button type="button" onclick="openSupportWhatsApp()">WhatsApp Support</button>
  </div>
  <form id="supportForm" class="support-input-row">
@@ -3233,7 +3236,15 @@ function addSupportMessage(text,who){
 function supportReply(raw){
  const q=String(raw||"").toLowerCase();
  if(/whatsapp|human|person|agent|contact|support number/.test(q))
-  return "Aap personal help ke liye WhatsApp par rabta kar sakte hain. Neeche WhatsApp Support button dabayein. Apna password ya OTP share na karein.";
+  return "Aap personal help ke liye WhatsApp Support button dabayein. Message mein apna masla likhein. Password, OTP ya bank/payment PIN share na karein.";
+ if(/weather|mausam|temperature|forecast|barish|rain/.test(q))
+  return "Weather dekhne ke liye neeche News section kholein aur us ke andar Weather tab select karein. City ka naam likh kar Search Weather dabayein. Current temperature aur 7-day forecast milta hai. My Location ke liye browser permission deni hogi.";
+ if(/\\b(news|khabar|khabrein|headlines)\\b/.test(q))
+  return "Latest news ke liye bottom navigation mein News kholein. News section mein available Urdu aur English news categories select kar sakte hain. Agar headlines load na hon to internet connection check karke page refresh karein.";
+ if(/live tv|television|tv channel|channel/.test(q))
+  return "Live TV kholne ke liye bottom navigation mein Live TV dabayein. Available country/channel list se channel select karein. Kuch channels region restrictions ya apne stream ki wajah se play nahi kar sakte.";
+ if(/job|jobs|vacanc|employment|et(ea|ea)|government job/.test(q))
+  return "Jobs dekhne ke liye bottom navigation mein Jobs kholein. Search box mein post, department ya keyword likhein. Vacancy ki deadline, eligibility aur apply link ko official advertisement par zaroor verify karein.";
  if(/template|design|style|format/.test(q))
   return "CV Builder mein login karein, phir CV Builder khol kar Design Collection mein se 15 professional templates mein se select karein: Classic, Navy & Gold, Minimalist, Modern Sidebar, Executive, Fresh Graduate, Advocate / Legal, Creative Studio, ATS-Friendly, Medical, IT & Technology, Elegant Rose, Marketing, Academic ya Charcoal Premium.";
  if(/pdf|download|print|payment|pay|easypaisa|jazzcash|100|transaction/.test(q))
@@ -3265,7 +3276,7 @@ async function askSupport(text){
    headers:{"Content-Type":"application/json"},
    body:JSON.stringify({
     service:"Nexa CV Studio website support",
-    details:"Aap Nexa CV Studio ke general AI helper hain. Har sawal ka jawab asaan, saaf aur aam feham Roman Urdu mein dein. Urdu script mein jawab na dein jab tak user khud na kahe. Aap website support ke ilawa CV banana, professions ki skills, computer operator skills, job duties, CV ke liye professional summaries, interview preparation, education aur general learning ke sawalat mein bhi madad karein. Agar user kahe 'mujhe [profession] ki skills do', to us profession ke liye relevant skills ki saaf bullet list dein aur CV mein use karne ke liye munasib alfaaz bhi suggest karein. User ki asli skills na maloom hon to unhein apni CV mein sirf wohi skills likhne ka mashwara dein jo waqai aati hon. Jawab mukhtasar, mufeed aur zaroorat par step-by-step dein. Website ke features ya prices ke bare mein ghair-musaddaqa baat na banayein. Password, OTP ya payment ki secret information kabhi na maangein. User ka sawal: "+question,
+    details:"Aap NEXA AI Support hain. Aasaan, saaf Roman Urdu mein jawab dein; Urdu script sirf tab use karein jab user kahe. NEXA website ke current features mein CV Builder, CV templates, account/login, PDF payment/access, Jobs, News, News section ke andar Weather tab, aur Live TV shamil hain. User ko website ke andar navigation step-by-step samjhayen. Weather ke liye News > Weather, jobs ke liye bottom Jobs, aur TV ke liye bottom Live TV batayein. Jobs ki eligibility/deadline aur apply link official advertisement se verify karne ko kahein. Agar website kisi feature ke bare mein yaqini maloomat na deti ho to guess na karein; WhatsApp Support suggest karein. Website support ke ilawa CV writing, profession-specific skills, job duties, professional summaries, interview preparation aur general learning mein madad karein. User ki asal skills ka andaza na lagayein; CV mein sirf waqai aane wali skills likhne ka mashwara dein. Jawab mukhtasar, mufeed aur zaroorat par step-by-step dein. Prices ya features ke bare mein ghair-musaddaqa baat na banayein. Password, OTP, payment PIN ya secret information kabhi na maangein. User ka sawal: "+question,
     language:"Roman Urdu"
    })
   });
