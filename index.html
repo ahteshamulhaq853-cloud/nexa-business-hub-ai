@@ -2048,7 +2048,7 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
   </div>
  </div>
  <div class="grid">
-  <div class="card"><h2>Change Password</h2><p class="muted">Enter your current password before choosing a new one.</p><div id="changePasswordMsg" class="message"></div>
+  <div class="card profile-password-panel" id="changePasswordPanel" style="display:none"><h2>Change Password</h2><p class="muted">Enter your current password before choosing a new one.</p><div id="changePasswordMsg" class="message"></div>
    <form id="changePasswordForm">
     <div class="field"><label for="currentPassword">Current Password</label><input id="currentPassword" type="password" autocomplete="current-password" required></div>
      <div class="field"><label for="newPassword">New Password</label><input id="newPassword" type="password" minlength="6" autocomplete="new-password" required></div>
@@ -2056,7 +2056,7 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
     <button type="submit">Update Password</button>
    </form>
   </div>
-  <div class="card"><h2>Forgot Password</h2><p class="muted">We will send a password reset link to your email address.</p><div id="forgotPasswordMsg" class="message"></div>
+  <div class="card profile-password-panel" id="forgotPasswordPanel" style="display:none"><h2>Forgot Password</h2><p class="muted">We will send a password reset link to your email address.</p><div id="forgotPasswordMsg" class="message"></div>
    <form id="forgotPasswordForm">
     <div class="field"><label for="resetEmail">Account Email</label><input id="resetEmail" type="email" autocomplete="email" required></div>
     <button type="submit">Send Reset Link</button>
@@ -2782,6 +2782,9 @@ try{applyCertificateTemplate(localStorage.getItem("nexa_experience_template")||$
 
 function openPasswordOption(which){
  showPage("settingsPage");
+ const changePanel=$("changePasswordPanel"),forgotPanel=$("forgotPasswordPanel");
+ if(changePanel)changePanel.style.display=which==="change"?"block":"none";
+ if(forgotPanel)forgotPanel.style.display=which==="forgot"?"block":"none";
  const target=$(which==="forgot"?"forgotPasswordForm":"changePasswordForm");
  if(target){target.scrollIntoView({behavior:"smooth",block:"center"});const first=target.querySelector("input");if(first)first.focus({preventScroll:true});}
 }
