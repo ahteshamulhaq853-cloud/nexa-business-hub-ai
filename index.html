@@ -1683,7 +1683,7 @@ header .brand-word small{
     <iframe id="liveTVFrame" title="Live TV Player" src="about:blank" style="display:none;width:100%;height:100%;border:0;background:#111827" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
    </div>
    <div class="actions" style="margin-top:12px"><a id="liveTVOfficialLink" href="#" target="_blank" rel="noopener noreferrer" class="button" style="display:inline-block;text-decoration:none">Open Official Live Stream ↗</a><button type="button" class="secondary" onclick="resetLiveTVPlayer()">Stop Player</button></div>
-   <p class="muted" style="font-size:12px">Official live page kholne ke liye button par tap karein. Kuch broadcasters apni website ko doosri website ke player mein chalne nahi dete, is liye official page naye tab mein khulega.</p>
+   <p class="muted" style="font-size:12px">Channels jo official embedded live player dete hain woh isi website ke andar chalenge. Agar broadcaster embedding band kare ya live feed offline ho, us channel ka player kaam nahi karega.</p>
   </div>
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button><button class="secondary" onclick="showPage('servicesPage')">Back to Services</button></div>
@@ -2412,9 +2412,9 @@ const liveTVCountries=[
 ];
 const liveTVChannelsByCountry={
 "Pakistan":[
-{name:"ARY News",url:"https://live.arynews.tv/hq/",official:"https://live.arynews.tv/"},
+{name:"ARY News",url:"https://live.arynews.tv/hq/",embed:"https://www.youtube-nocookie.com/embed/live_stream?channel=UCMmpLL2ucRHAXbNHiCPyIyg",official:"https://live.arynews.tv/"},
 {name:"PTV News",url:"https://moib.gov.pk/LiveStream",official:"https://moib.gov.pk/LiveStream"},
-{name:"Geo News",url:"https://www.geo.tv/",stream:"https://live.geo.tv/geonews/playlist.m3u8",official:"https://www.geo.tv/"},
+{name:"Geo News",url:"https://live.geo.tv/",official:"https://live.geo.tv/"},
 {name:"Samaa TV",url:"https://www.samaa.tv/",official:"https://www.samaa.tv/"},
 {name:"Dawn News",url:"https://www.dawnnews.tv/",official:"https://www.dawnnews.tv/"}],
 "United States":[
@@ -2482,7 +2482,10 @@ function playSelectedLiveTVChannel(){
  official.textContent="Open "+channel.name+" Official Stream ↗";
  $("liveTVSelectedTitle").textContent="📺 "+country+" — "+channel.name;
  if(card)card.style.display="block";
- if(channel.stream){
+ if(channel.embed){
+  video.style.display="none";frame.style.display="block";frame.src=channel.embed;
+  if(status){status.className="message show";status.textContent=channel.name+" ka official live player load ho raha hai — video player ke andar Play dabayein.";} 
+ }else if(channel.stream){
   frame.style.display="none";video.style.display="block";
   if(status){status.className="message show";status.textContent=channel.name+" ki live stream load ho rahi hai…";}
   if(window.Hls&&Hls.isSupported()){
