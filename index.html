@@ -1671,10 +1671,10 @@ header .brand-word small{
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
 </section>
 <section id="liveTVPage" class="page">
- <div class="studio-section-heading"><div><span class="studio-kicker">NEXA ENTERTAINMENT</span><h2>📺 Live TV</h2><p class="muted">Available live channels yahan milenge. Channel select karte hi isi player mein chalane ki koshish hogi.</p></div></div>
+ <div class="studio-section-heading"><div><span class="studio-kicker">NEXA ENTERTAINMENT</span><h2>📺 Live TV</h2><p class="muted">Country select karne ki zaroorat nahi — available channels seedha list mein hain. Channel choose karein aur isi player mein dekhein.</p></div></div>
  <div class="card" style="max-width:900px;margin:0 auto 18px">
   <div class="field"><label for="liveTVChannelSelect">📺 Select Live Channel</label><select id="liveTVChannelSelect"><option value="">Loading channels…</option></select></div>
-  <p id="liveTVStatus" class="message" role="status" aria-live="polite">Country select karein, phir channel dropdown se channel choose karein.</p>
+  <p id="liveTVStatus" class="message" role="status" aria-live="polite">Channel select karein; video isi player mein load hogi.</p>
   <div id="liveTVPlayerCard" style="display:none;margin-top:16px">
    <h3 id="liveTVSelectedTitle">Live TV Player</h3>
    <div style="position:relative;width:100%;aspect-ratio:16/9;background:#111827;border-radius:14px;overflow:hidden;border:1px solid #e5e7eb">
@@ -2406,15 +2406,12 @@ async function submitNexaJobApplication(event){
  }catch(error){console.error("NEXA application submit error:",error);status.textContent="Application submit nahi hui. Supabase mein job_applications table aur insert policy configure karein. Details: "+(error.message||"connection error");}
  finally{button.disabled=false;}
 }
-const liveTVCountries=[
-"Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo","Costa Rica","Côte d’Ivoire","Croatia","Cuba","Cyprus","Czechia","Democratic Republic of the Congo","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent and the Grenadines","Samoa","San Marino","São Tomé and Príncipe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Türkiye","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"
-];
 const liveTVChannels=[
-{name:"🇵🇰 ARY News — Live",country:"Pakistan",embed:"https://www.youtube.com/embed/RqUZ2Fv9l8w"},
-{name:"🇵🇰 Express News — Live",country:"Pakistan",embed:"https://www.youtube.com/embed/6i2L8XcQE1o"},
-{name:"🇵🇰 PTV News — Live",country:"Pakistan",embed:"https://www.youtube.com/embed/CGb02nb7Ni4"},
-{name:"🇶🇦 Al Jazeera English — Live",country:"Qatar",stream:"https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8"},
-{name:"🇶🇦 Al Jazeera Arabic — Live",country:"Qatar",stream:"https://live-hls-apps-aja-fa.getaj.net/AJA/index.m3u8"}
+{name:"ARY News — Live",embed:"https://www.youtube.com/embed/RqUZ2Fv9l8w"},
+{name:"Express News — Live",embed:"https://www.youtube.com/embed/6i2L8XcQE1o"},
+{name:"PTV News — Live",embed:"https://www.youtube.com/embed/CGb02nb7Ni4"},
+{name:"Al Jazeera English — Live",stream:"https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8"},
+{name:"Al Jazeera Arabic — Live",stream:"https://live-hls-apps-aja-fa.getaj.net/AJA/index.m3u8"}
 ];
 function initLiveTVCountries(){
  const select=$("liveTVChannelSelect");if(!select||select.dataset.ready==="yes")return;
