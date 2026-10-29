@@ -1648,10 +1648,6 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
  <div class="brand"><img class="brand-mark nexa-brand-logo" src="./nexa-logo.svg" alt="NEXA Studio logo" width="42" height="42"><span class="brand-word">NEXA<span>STUDIO</span><small>CREATE SOMETHING GREAT</small></span></div>
  <nav id="mainNav" style="display:none">
   <button class="ghost" onclick="showPage('dashboardPage')">Dashboard</button>
-  <button class="ghost" onclick="showPage('cvSectionPage')">CV</button>
-  <button class="ghost" onclick="showPage('servicesPage')">Services</button>
-  <button class="ghost" onclick="showPage('voiceGeneratorPage')">AI Voice</button>
-  <button class="ghost" onclick="showPage('writingAssistantPage')">Writing Assistant</button>
 
   <button class="ghost" id="adminButton" style="display:none" onclick="showPage('adminPage')">Admin</button>
   <button class="ghost" onclick="showPage('paymentPage')">Our Payment</button>
@@ -1663,10 +1659,10 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
 <main>
 <section id="accountPage" class="page active">
  <div class="hero">
-  <span class="eyebrow">NEXT-GEN RESUME PLATFORM</span>
-  <h1>Build Your Future.<br><span class="neon">One CV at a Time.</span></h1>
-  <p>Create your professional resume with a modern experience. Register or log in to get started.</p>
-  <span class="pill">SECURE ACCOUNT · BEAUTIFUL & PROFESSIONAL DESIGNS · A4 EXPORT</span>
+  <span class="eyebrow">WELCOME TO NEXA STUDIO</span>
+  <h1>Your Digital <span class="neon">Business Hub.</span></h1>
+  <p>Register or log in to explore jobs, latest news, Live TV, weather, and useful business updates in one place.</p>
+  <span class="pill">JOBS · NEWS · LIVE TV · WEATHER</span>
  </div>
  <div class="grid" id="authFormsGrid">
   <div class="card" id="registerCard">
@@ -2274,7 +2270,6 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
  <button type="button" onclick="bottomNavigate('dashboardPage',this)"><span class="bottom-icon">⌂</span><span>Dashboard</span></button>
  <button type="button" onclick="bottomNavigate('latestJobsPage',this)"><span class="bottom-icon">💼</span><span>Jobs</span></button>
  <button type="button" onclick="bottomNavigate('latestNewsPage',this)"><span class="bottom-icon">📰</span><span>News</span></button>
- <button type="button" onclick="bottomNavigate('servicesPage',this)"><span class="bottom-icon">⚙</span><span>Services</span></button>
 <button type="button" onclick="bottomNavigate('liveTVPage',this)"><span class="bottom-icon">📺</span><span>Live TV</span></button>
  <button type="button" onclick="bottomNavigate('settingsPage',this)"><span class="bottom-icon">♙</span><span>Profile</span></button>
 </nav>
@@ -2284,7 +2279,7 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
 <button id="supportLauncher" type="button" aria-label="Open customer support chat" onclick="toggleSupport(true)">✦ Ask Nexa Support</button>
 <section id="supportPanel" role="dialog" aria-label="Nexa customer support chat" aria-modal="false">
  <div class="support-head">
-  <div><strong>✦ Nexa AI Support</strong><small>CV Builder · Templates · PDF Access</small></div>
+  <div><strong>✦ Nexa Support</strong><small>Website help and account support</small></div>
   <button id="supportClose" type="button" aria-label="Close support chat" onclick="toggleSupport(false)">✕</button>
  </div>
  <div id="supportMessages" aria-live="polite">
@@ -3932,6 +3927,7 @@ body:has(#welcomeNotice.show)::before{content:"";display:block;position:fixed;in
 #privacyPolicyPage .card .muted{line-height:1.75}
 @media(max-width:560px){#settingsPage .profile-option-row{display:grid;grid-template-columns:1fr 1fr}#settingsPage .profile-option-row button{width:100%;padding:10px 8px;font-size:13px}#settingsPage .profile-option-row button:nth-child(3){grid-column:auto}}
 </style>
+<style id="nexa-remove-document-services">/* Remove CV and document-creation service pages from the public interface. */ #servicesPage,#cvSectionPage,#builderPage,#europassPage,#voiceGeneratorPage,#writingAssistantPage,#experienceCertificatePage{display:none!important}</style>
 </body>
 </html>
 
