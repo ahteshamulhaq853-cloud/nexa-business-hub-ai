@@ -2676,7 +2676,7 @@ const liveTVFallbackChannels=[
 {name:"Time News",country:"Pakistan",category:"Regional"},
 {name:"Al Jazeera English — Live",stream:"https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",country:"Qatar",category:"News"},
 {name:"Al Jazeera Arabic — Live",stream:"https://live-hls-apps-aja-fa.getaj.net/AJA/index.m3u8",country:"Qatar",category:"News"}
-];
+].filter(ch=>ch.embed||ch.stream);
 let liveTVChannels=[...liveTVFallbackChannels];
 let liveTVAllChannels=[...liveTVFallbackChannels];
 let liveTVHlsInstance=null;
@@ -2717,7 +2717,7 @@ async function loadWorldwideLiveTVChannels(){
  try{
   const cached=JSON.parse(localStorage.getItem(cacheKey)||"null");
   if(cached&&Array.isArray(cached.channels)&&Date.now()-cached.savedAt<86400000){
-   liveTVAllChannels=cached.channels;
+   liveTVAllChannels=cached.channels.filter(ch=>ch&&(ch.embed||ch.stream));
    liveTVChannels=liveTVAllChannels;
    filterLiveTVChannels();
    if(status){status.className="message show";status.textContent=liveTVAllChannels.length.toLocaleString()+" channels ready (saved list). Updating in background…";}
@@ -2748,7 +2748,7 @@ async function loadWorldwideLiveTVChannels(){
    meta="";
   }
   const seen=new Set();const unique=found.filter(ch=>{const key=ch.name.toLowerCase()+"|"+ch.stream;if(seen.has(key))return false;seen.add(key);return true;});
-  liveTVAllChannels=[...liveTVFallbackChannels.map(f=>unique.find(ch=>ch.name.toLowerCase()===f.name.toLowerCase())||f),...unique.filter(ch=>!liveTVFallbackChannels.some(f=>f.name.toLowerCase()===ch.name.toLowerCase()))];
+  liveTVAllChannels=[...liveTVFallbackChannels.map(f=>unique.find(ch=>ch.name.toLowerCase()===f.name.toLowerCase())||f),...unique.filter(ch=>!liveTVFallbackChannels.some(f=>f.name.toLowerCase()===ch.name.toLowerCase()))].filter(ch=>ch&&(ch.embed||ch.stream));
   liveTVChannels=liveTVAllChannels;
   filterLiveTVChannels();
   try{localStorage.setItem(cacheKey,JSON.stringify({savedAt:Date.now(),channels:liveTVAllChannels}));}catch(e){}
@@ -2757,6 +2757,17 @@ async function loadWorldwideLiveTVChannels(){
   if(!liveTVAllChannels.length){liveTVAllChannels=[...liveTVFallbackChannels];liveTVChannels=liveTVAllChannels;filterLiveTVChannels();}
   if(status){status.className="message show";status.textContent="Saved/basic channel list available. Worldwide list abhi refresh nahi hui — internet milne par dobara try karein.";}
  }
+}
+function removeUnavailableLiveTVChannel(channel,reason){
+ if(!channel)return;
+ const key=(channel.name||"").toLowerCase()+"|"+(channel.stream||channel.embed||"");
+ const keep=ch=>((ch.name||"").toLowerCase()+"|"+(ch.stream||ch.embed||""))!==key;
+ liveTVAllChannels=liveTVAllChannels.filter(keep);
+ liveTVChannels=liveTVChannels.filter(keep);
+ try{localStorage.setItem("nexa_live_tv_worldwide_v2",JSON.stringify({savedAt:Date.now(),channels:liveTVAllChannels}));}catch(e){}
+ renderLiveTVOptions(liveTVChannels);
+ const status=$("liveTVStatus");
+ if(status){status.className="message show";status.textContent=channel.name+" ki stream kaam nahi kar rahi thi, is liye list se hata diya. "+(reason||"")+" Ab baqi available feeds dikh rahi hain.";}
 }
 function playSelectedLiveTVChannel(){
  const select=$("liveTVChannelSelect");
@@ -2804,6 +2815,7 @@ function playSelectedLiveTVChannel(){
     fragLoadingRetryDelay:1000,
     fragLoadingMaxRetryTimeout:30000
    });
+   video.onerror=()=>{removeUnavailableLiveTVChannel(channel,"Browser ne stream play nahi ki.");};
    liveTVHlsInstance.loadSource(channel.stream);
    liveTVHlsInstance.attachMedia(video);
    liveTVHlsInstance.on(Hls.Events.MANIFEST_PARSED,()=>{
@@ -2833,10 +2845,11 @@ function playSelectedLiveTVChannel(){
     try{liveTVHlsInstance.destroy();}catch(e){}liveTVHlsInstance=null;
     video.pause();video.removeAttribute("src");video.load();video.style.display="none";
     frame.src="about:blank";frame.style.display="none";
-    if(status){status.className="message show";status.textContent=channel.name+" ki stream unavailable ya blocked hai. Koi doosra channel try karein; har public stream smooth ya online nahi hoti.";}
+    removeUnavailableLiveTVChannel(channel,"Stream unavailable, blocked, ya error de rahi thi."); 
    });
   }else if(video.canPlayType("application/vnd.apple.mpegurl")){
    video.src=channel.stream;
+   video.onerror=()=>{removeUnavailableLiveTVChannel(channel,"Browser ne stream play nahi ki.");};
    video.play().catch(()=>{if(status)status.textContent="Stream tayyar hai — video par Play dabayein."});
   }else if(status){status.className="message show";status.textContent="Is browser mein yeh direct stream support nahi ho rahi.";}
  }else{
