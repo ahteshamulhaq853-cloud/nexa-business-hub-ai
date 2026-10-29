@@ -1720,7 +1720,7 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
 <section id="liveTVPage" class="page">
  <div class="studio-section-heading"><div><span class="studio-kicker">NEXA ENTERTAINMENT</span><h2>📺 Live TV</h2><p class="muted">Country select karne ki zaroorat nahi — available channels seedha list mein hain. Channel choose karein aur isi player mein dekhein.</p></div></div>
  <div class="card" style="max-width:900px;margin:0 auto 18px">
-  <div class="field"><label for="liveTVSearch">🔎 Search worldwide live channels</label><input id="liveTVSearch" type="search" placeholder="Channel name, language, or country…" autocomplete="off"></div><div class="field"><label for="liveTVChannelSelect">📺 Available Live Channels</label><select id="liveTVChannelSelect" style="width:100%;min-height:44px"><option value="">Loading worldwide channel list…</option></select><p class="muted" style="font-size:12px;margin-top:6px">Choose a channel from the dropdown to watch it in the player.</p></div>
+  <div class="field"><label for="liveTVSearch">🔎 Search worldwide live channels</label><input id="liveTVSearch" type="search" placeholder="Channel name, language, or country…" autocomplete="off"></div><div id="liveTVSections" class="live-tv-sections"><p class="muted">Live channels load ho rahe hain…</p></div><div class="field" style="display:none" aria-hidden="true"><label for="liveTVChannelSelect">Selected channel</label><select id="liveTVChannelSelect"><option value="">Loading worldwide channel list…</option></select></div>
   <p id="liveTVStatus" class="message" role="status" aria-live="polite">Channel select karein; video isi player mein load hogi.</p>
   <div id="liveTVPlayerCard" style="display:none;margin-top:16px">
    <h3 id="liveTVSelectedTitle">Live TV Player</h3>
@@ -2675,6 +2675,14 @@ const liveTVFallbackChannels=[
 let liveTVChannels=[...liveTVFallbackChannels];
 let liveTVAllChannels=[...liveTVFallbackChannels];
 let liveTVHlsInstance=null;
+document.addEventListener("click",function(event){
+ const button=event.target.closest("#liveTVSections [data-channel-index]");
+ if(!button)return;
+ const select=$("liveTVChannelSelect");if(!select)return;
+ select.value=button.dataset.channelIndex;
+ playSelectedLiveTVChannel();
+ const card=$("liveTVPlayerCard");if(card)card.scrollIntoView({behavior:"smooth",block:"start"});
+});
 function initLiveTVCountries(){
  const select=$("liveTVChannelSelect"),search=$("liveTVSearch");
  if(!select)return;
@@ -2686,7 +2694,7 @@ function initLiveTVCountries(){
  loadWorldwideLiveTVChannels();
 }
 function renderLiveTVOptions(channels){
- const select=$("liveTVChannelSelect");if(!select)return;
+ const select=$("liveTVChannelSelect"),sections=$("liveTVSections");if(!select)return;
  const previousChannel=liveTVChannels[Number(select.value)];
  liveTVChannels=channels;
  select.innerHTML="";
@@ -2696,9 +2704,35 @@ function renderLiveTVOptions(channels){
   option.textContent=channel.country?channel.name+" — "+channel.country:channel.name;
   select.appendChild(option);
  });
- if(!channels.length){const option=document.createElement("option");option.value="";option.textContent="No matches — try another search";select.appendChild(option);return;}
+ if(!channels.length){const option=document.createElement("option");option.value="";option.textContent="No matching channels";select.appendChild(option);if(sections)sections.innerHTML='<p class="muted">Koi channel nahi mila. Search badal kar dekhein.</p>';return;}
  const previousIndex=channels.indexOf(previousChannel);
  select.value=String(previousIndex>=0?previousIndex:0);
+ if(sections){
+  const groups={"🇵🇰 Pakistan":[], "📰 News":[], "⚽ Sports":[], "🎬 Entertainment":[], "🕌 Religious":[], "🌍 Other Channels":[]};
+  channels.forEach((ch,index)=>{
+   const text=((ch.name||"")+" "+(ch.category||"")+" "+(ch.country||"")).toLowerCase();
+   if((ch.country||"").toLowerCase().includes("pakistan"))groups["🇵🇰 Pakistan"].push({ch,index});
+   else if(/sport|football|cricket/.test(text))groups["⚽ Sports"].push({ch,index});
+   else if(/relig|islam|madani|quran|church/.test(text))groups["🕌 Religious"].push({ch,index});
+   else if(/news|current affairs/.test(text))groups["📰 News"].push({ch,index});
+   else if(/entertain|movie|film|music|drama|kids|cartoon/.test(text))groups["🎬 Entertainment"].push({ch,index});
+   else groups["🌍 Other Channels"].push({ch,index});
+  });
+  sections.innerHTML="";
+  Object.entries(groups).forEach(([title,items])=>{
+   if(!items.length)return;
+   const section=document.createElement("section");section.className="live-tv-category";
+   const heading=document.createElement("h3");heading.textContent=title+" ("+items.length+")";section.appendChild(heading);
+   const grid=document.createElement("div");grid.className="live-tv-channel-grid";
+   items.forEach(({ch,index})=>{
+    const btn=document.createElement("button");btn.type="button";btn.className="live-tv-channel-card";btn.dataset.channelIndex=String(index);
+    const name=document.createElement("strong");name.textContent=ch.name||"Live Channel";btn.appendChild(name);
+    const meta=document.createElement("small");meta.textContent=[ch.country,ch.language].filter(Boolean).join(" · ")||"Live stream";btn.appendChild(meta);
+    grid.appendChild(btn);
+   });
+   section.appendChild(grid);sections.appendChild(section);
+  });
+ }
 }
 function filterLiveTVChannels(){
  const q=($("liveTVSearch")?.value||"").trim().toLowerCase();
@@ -3928,6 +3962,16 @@ body:has(#welcomeNotice.show)::before{content:"";display:block;position:fixed;in
 @media(max-width:560px){#settingsPage .profile-option-row{display:grid;grid-template-columns:1fr 1fr}#settingsPage .profile-option-row button{width:100%;padding:10px 8px;font-size:13px}#settingsPage .profile-option-row button:nth-child(3){grid-column:auto}}
 </style>
 <style id="nexa-remove-document-services">/* Remove CV and document-creation service pages from the public interface. */ #servicesPage,#cvSectionPage,#builderPage,#europassPage,#voiceGeneratorPage,#writingAssistantPage,#experienceCertificatePage{display:none!important}</style>
+<style id="nexa-live-tv-category-sections">
+.live-tv-sections{display:grid;gap:18px;margin:16px 0}
+.live-tv-category{border:1px solid rgba(101,243,220,.2);background:rgba(10,25,39,.48);border-radius:16px;padding:14px}
+.live-tv-category h3{font-size:16px;margin:0 0 12px;color:var(--cyan,#65f3dc)}
+.live-tv-channel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px}
+.live-tv-channel-card{display:flex;flex-direction:column;align-items:flex-start;gap:7px;text-align:left;min-height:68px;padding:12px;border-radius:12px;border:1px solid rgba(148,163,184,.24);background:rgba(15,23,42,.72);color:inherit;cursor:pointer}
+.live-tv-channel-card strong{font-size:13px;line-height:1.35}
+.live-tv-channel-card small{font-size:11px;opacity:.72}
+.live-tv-channel-card:hover,.live-tv-channel-card:focus-visible{border-color:var(--cyan,#65f3dc);outline:none;transform:translateY(-1px)}
+</style>
 </body>
 </html>
 
