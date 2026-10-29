@@ -1,6 +1,16 @@
 {
-  "updated": "2026-10-29T21:56:07.683043+00:00",
+  "updated": "2026-10-29T22:29:25.026321+00:00",
   "items": [
+    {
+      "title": "Watch: Life and career of iconic actor Sir Patrick Stewart",
+      "link": "https://www.bbc.co.uk/news/videos/c6qxnlxn0n15o?at_medium=RSS&at_campaign=rss",
+      "summary": "In a career that spanned seven decades, Sir Patrick won multiple Emmys and Golden Globes, a star on the Hollywood Walk of Fame and a knighthood from Queen Elizabeth II.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3c0a/live/202db8a0-d3d8-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-10-29T21:57:04+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "نگرپارکر، ایمبولینس سلنڈر دھماکے میں ہلاکتیں 10 ہوگئیں",
       "link": "https://jang.com.pk/news/1628979",
@@ -45,7 +55,7 @@
       "title": "'Continue your journey': Key moments of leaked Spain train crash audio",
       "link": "https://www.bbc.co.uk/news/videos/c6vgjeg0myzgo?at_medium=RSS&at_campaign=rss",
       "summary": "Recordings between a control centre and the train drivers appear to show one train was given clearance to move even though another train had stalled on the track.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/221a/live/4d1466f0-d3da-11f1-93e1-3b657b665bcf.jpg",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d46f/live/7d9cd370-d3e4-11f1-9caf-3b69fd8bbd8b.jpg",
       "published": "2026-10-29T20:50:25+00:00",
       "source": "BBC News",
       "category": "World",
@@ -512,16 +522,6 @@
       "language": "en"
     },
     {
-      "title": "George Michael's Faith guitar sells for £180k after auction row",
-      "link": "https://www.bbc.co.uk/news/articles/cmr4y51gd5yro?at_medium=RSS&at_campaign=rss",
-      "summary": "The brother of the singer's late personal assistant said she would not have wanted the items to be sold.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7e53/live/5b4a4ea0-d2eb-11f1-8d86-83eebc838351.jpg",
-      "published": "2026-10-29T18:26:42+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "Pakistan Stock Exchange launches ‘Shariah-Compliant’ trading counter",
       "link": "https://arynews.tv/pakistan-stock-exchange-launches-shariah-compliant-trading-counter",
       "summary": "",
@@ -682,6 +682,16 @@
       "language": "ur"
     },
     {
+      "title": "ایکسپوٹ پراسیسنگ زون کے لیے بھیجی گئی کھیپ میں غلط بیانی کا انکشاف",
+      "link": "https://www.express.pk/story/2841219/misrepresentation-revealed-in-shipment-sent-to-export-processing-zone-2841219",
+      "summary": "محکمہ کسٹمز میں داخل کردہ گڈز ڈیکلریشن میں’’مشین پریس پارٹس‘‘ ظاہر کیا گیا تھا لیکن کنٹینر سے لوڈ سیلز برآمد ہوئے",
+      "image_url": "",
+      "published": "2026-10-29T17:03:44+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Waqar Younis labels Babar Azam as Pakistan’s ‘last superstar’",
       "link": "https://arynews.tv/waqar-younis-labels-babar-azam-as-pakistans-last-superstar",
       "summary": "",
@@ -690,6 +700,26 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "کوہاٹ سول لائنز حملہ: دشمن دہشت گردی کے محاذ کو وسعت دے رہا ہے",
+      "link": "https://www.express.pk/story/2841218/kohat-civil-lines-hamla-dushman-dehshatgardi-ke-mahaz-ko-wusat-de-raha-hai-2841218",
+      "summary": "بھارت اسرائیل تزویراتی اتحاد پاکستان کی سلامتی کیلئے خطرہ ہے",
+      "image_url": "",
+      "published": "2026-10-29T16:50:47+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کھربوں کا بجٹ 1279 بڑے سرکاری اسپتال فعال، ہزار افراد کے لیے آدھا بستر",
+      "link": "https://www.express.pk/story/2841217/a-budget-in-the-trillions-1279-major-government-hospitals-operationalyet-only-half-a-hospital-bed-available-for-every-thousand-people-2841217",
+      "summary": "پنجاب 500.63، سندھ 500.62، کے پی 334 اور بلوچستان میں 96 ارب روپے مختص",
+      "image_url": "",
+      "published": "2026-10-29T16:49:31+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Barrister Gohar issues notification reaffirming Sohail Afridi as KP CM",
@@ -770,6 +800,26 @@
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
+    },
+    {
+      "title": "SBP reserves rise $33m to $21.52b",
+      "link": "https://tribune.com.pk/story/2637649/sbp-reserves-rise-33m-to-2152b",
+      "summary": "Total holdings stand at $26.75b; gold unchanged locally as global prices fall",
+      "image_url": "",
+      "published": "2026-10-29T16:20:44+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "NEPRA to decide on Rs2.56 hike",
+      "link": "https://tribune.com.pk/story/2637648/nepra-to-decide-on-rs256-hike",
+      "summary": "Average fuel cost rose to Rs10.02 per unit against a reference price of Rs7.46",
+      "image_url": "",
+      "published": "2026-10-29T16:20:44+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
     },
     {
       "title": "US fires top military planner over alleged leaks: reports",
@@ -912,6 +962,16 @@
       "language": "ur"
     },
     {
+      "title": "Patrick Stewart, Shakespearean actor turned 'Star Trek' and 'X-Men' star, dies at 86",
+      "link": "https://tribune.com.pk/story/2637645/patrick-stewart-shakespearean-actor-turned-star-trek-and-x-men-star-dies-at-86",
+      "summary": "Stewart rose from a childhood in poverty to become a celebrated Shakespearean actor and global star",
+      "image_url": "",
+      "published": "2026-10-29T15:52:16+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "صدر ٹرمپ اور ایران کی جنگ",
       "link": "https://www.express.pk/story/2841205/sadr-trump-aur-iran-ki-jang-2841205",
       "summary": "مشرقِ وسطیٰ میں جاری کشیدہ صورتحال کی وجہ سے ہر ایک کی نظریں امریکا کے مِڈ ٹرم انتخابات اور اسرائیل میں عام انتخابات کے حتمی نتائج پر لگی ہوئی ہیں۔",
@@ -939,66 +999,6 @@
       "published": "2026-10-29T15:49:02+00:00",
       "source": "ARY News",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Faisal Islam: This Budget was micro and that was deliberate",
-      "link": "https://www.bbc.co.uk/news/articles/cwx283zynnv3o?at_medium=RSS&at_campaign=rss",
-      "summary": "Chancellor John Healey's plans fall short of radical action to create a promised new economic model.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8ec0/live/8d883540-d3a3-11f1-a5cd-49637fcbd4e4.jpg",
-      "published": "2026-10-29T15:48:44+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "طلبہ اور جسمانی سرگرمیاں",
-      "link": "https://www.express.pk/story/2841204/talaba-aur-jismani-sargarmiyan-2841204",
-      "summary": "پاکستان میں نوجوانوں کو کھیلوں کی سہولتوں تک رسائی کا مسئلہ بھی خاص اہمیت رکھتا ہے",
-      "image_url": "",
-      "published": "2026-10-29T15:47:58+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Pakistan launches digital platform to streamline SME financing",
-      "link": "https://arynews.tv/pakistan-launches-digital-platform-to-streamline-sme-financing",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/SBP-1.jpg",
-      "published": "2026-10-29T15:46:36+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "عرب ووٹ، اسرائیلی سیاست اور امن کا امتحان",
-      "link": "https://www.express.pk/story/2841203/arab-vote-israeli-siyasat-aur-aman-ka-imtihan-2841203",
-      "summary": "نیتن یاہو کی سیاسی حکمت عملی کا ایک اہم پہلو ایران کا معاملہ بھی ہے",
-      "image_url": "",
-      "published": "2026-10-29T15:45:24+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ATC sentences Imaan, Hadi to 10 years in security breach case",
-      "link": "https://www.dawn.com/news/2040694/atc-sentences-imaan-hadi-to-10-years-in-security-breach-case",
-      "summary": "ISLAMABAD: An anti-terrorism court on Thursday sentenced human rights lawyer Imaan Zainab Mazari-Hazir and her husband, Hadi Ali Chattha, to 10 years in prison each in the security breach case. Imaan and Hadi were being tried in jail in the 2024 case pertaining to the alleged disruption of an international cricket team’s security route and incitement to publ",
-      "image_url": "https://i.dawn.com/large/2025/11/06152256b1c233f.webp",
-      "published": "2026-10-29T15:43:47+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Burnham says he wants to cut welfare bill 'as soon as we possibly can'",
-      "link": "https://www.bbc.co.uk/news/articles/c6x2w4zy15nwo?at_medium=RSS&at_campaign=rss",
-      "summary": "Opponents have questioned the Budget's lack of detail on welfare reform, with the prime minister not outlining a timetable for any reductions.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/80a9/live/4b0bdaa0-d3b7-11f1-a701-fddedf244c16.png",
-      "published": "2026-10-29T15:42:56+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     }
   ]
