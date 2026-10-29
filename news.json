@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T22:29:25.026321+00:00",
+  "updated": "2026-10-29T23:10:16.762420+00:00",
   "items": [
     {
       "title": "Watch: Life and career of iconic actor Sir Patrick Stewart",
@@ -7,6 +7,16 @@
       "summary": "In a career that spanned seven decades, Sir Patrick won multiple Emmys and Golden Globes, a star on the Hollywood Walk of Fame and a knighthood from Queen Elizabeth II.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3c0a/live/202db8a0-d3d8-11f1-b441-2b33b063138f.jpg",
       "published": "2026-10-29T21:57:04+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Young athlete and former minister among victims of Spain train crash",
+      "link": "https://www.bbc.co.uk/news/articles/cr78plp1p9yvo?at_medium=RSS&at_campaign=rss",
+      "summary": "As some of the victims' names are released publicly, an outpouring of grief and anger is sweeping across Spain.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e9c9/live/e9ad7380-d3c6-11f1-867c-77016fb236d7.jpg",
+      "published": "2026-10-29T21:33:35+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -32,9 +42,9 @@
       "language": "ur"
     },
     {
-      "title": "کراچی، کامران چورنگی کے قریب فرنیچر مارکیٹ میں آتشزدگی",
+      "title": "کراچی، کامران چورنگی کے قریب فرنیچر مارکیٹ میں لگی آگ پر قابو پالیا گیا",
       "link": "https://jang.com.pk/news/1628934",
-      "summary": "کراچی کے علاقے گلستانِ جوہر کامران چورنگی کے قریب فرنیچر مارکیٹ میں آگ لگ گئی۔ترجمان ریسکیو کا کہنا ہے کہ فرنیچر مارکیٹ میں لگی آگ...",
+      "summary": "کراچی کے علاقے گلستانِ جوہر کامران چورنگی کے قریب فرنیچر مارکیٹ میں لگی آگ پر قابو پالیا گیا۔متاثرہ مارکیٹ میں کولنگ کا عمل کا جاری...",
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-30/b_1628934_023543_updates.jpg\"/",
       "published": "2026-10-29T21:10:11+00:00",
       "source": "Jang",
@@ -622,6 +632,26 @@
       "language": "en"
     },
     {
+      "title": "طائف میں موسلادھار بارش کے باعث نشیبی علاقے زیرِ آب، موسم خوشگوار",
+      "link": "https://www.express.pk/story/2841222/low-lying-areas-in-taif-submerged-due-to-heavy-rainfall-weather-remains-pleasant-2841222",
+      "summary": "آئندہ چند روز کے دوران مملکت کے مختلف علاقوں میں بارش کا سلسلہ جاری رہنے کا امکان ہے",
+      "image_url": "",
+      "published": "2026-10-29T17:43:16+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "جامشورو نیشنل گرڈ میں فنی خرابی، حیسکو کے 42 فیڈرز بند، متعدد علاقے اندھیرے میں ڈوب گئے",
+      "link": "https://www.express.pk/story/2841221/technical-fault-in-the-jamshoro-national-grid-42-hesco-feeders-shut-down-leaving-several-areas-in-the-dark-2841221",
+      "summary": "بجلی کی فراہمی معمول پر آتے ہی متاثرہ فیڈرز کی بجلی بحال کردی جائے گی، حیسکو ترجمان",
+      "image_url": "",
+      "published": "2026-10-29T17:34:13+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Hundreds of GP practices lose online services after collapse of tech firm",
       "link": "https://www.bbc.co.uk/news/articles/cq146562ld3no?at_medium=RSS&at_campaign=rss",
       "summary": "It will cause huge disruption in some parts of England and Wales, say GP leaders.",
@@ -802,9 +832,9 @@
       "language": "ur"
     },
     {
-      "title": "SBP reserves rise $33m to $21.52b",
-      "link": "https://tribune.com.pk/story/2637649/sbp-reserves-rise-33m-to-2152b",
-      "summary": "Total holdings stand at $26.75b; gold unchanged locally as global prices fall",
+      "title": "'Regulatory maze blocks investment'",
+      "link": "https://tribune.com.pk/story/2637652/regulatory-maze-blocks-investment",
+      "summary": "Experts say 'regulatory DNA' must shift from controlling to facilitating markets",
       "image_url": "",
       "published": "2026-10-29T16:20:44+00:00",
       "source": "Express Tribune",
@@ -812,9 +842,29 @@
       "language": "en"
     },
     {
-      "title": "NEPRA to decide on Rs2.56 hike",
-      "link": "https://tribune.com.pk/story/2637648/nepra-to-decide-on-rs256-hike",
-      "summary": "Average fuel cost rose to Rs10.02 per unit against a reference price of Rs7.46",
+      "title": "Imported cotton seed to get 12-month approval",
+      "link": "https://tribune.com.pk/story/2637656/imported-cotton-seed-to-get-12-month-approval",
+      "summary": "Fast-track path replaces seven-year process as Punjab farmers shift to sugarcane and maize",
+      "image_url": "",
+      "published": "2026-10-29T16:20:44+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "PSX extends recovery for fourth session",
+      "link": "https://tribune.com.pk/story/2637655/psx-extends-recovery-for-fourth-session",
+      "summary": "KSE-100 rises 0.88% as fertiliser firms, banks lift index to multi-week high",
+      "image_url": "",
+      "published": "2026-10-29T16:20:44+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Finance minister, Saudi envoy explore economic cooperation",
+      "link": "https://tribune.com.pk/story/2637654/finance-minister-saudi-envoy-explore-economic-cooperation",
+      "summary": "Look for investment opportunities in agriculture, minerals and mining",
       "image_url": "",
       "published": "2026-10-29T16:20:44+00:00",
       "source": "Express Tribune",
@@ -950,56 +1000,6 @@
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "سکھر، پولیس اور وفاقی سول حساس ادارے کی مشترکہ کارروائی میں انعام یافتہ انتہائی مطلوب ڈاکو ہلاک",
-      "link": "https://www.express.pk/story/2841206/sukkur-highly-wanted-bounty-carrying-bandit-killed-in-a-joint-operation-by-the-police-and-a-federal-sensitive-civilian-agency-2841206",
-      "summary": "ہلاک ڈاکو اور اس کا گروہ کچے کے علاقے میں پناہ لے کر مجرمانہ سرگرمیاں جاری رکھے ہوئے تھا، پولیس",
-      "image_url": "",
-      "published": "2026-10-29T15:53:06+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Patrick Stewart, Shakespearean actor turned 'Star Trek' and 'X-Men' star, dies at 86",
-      "link": "https://tribune.com.pk/story/2637645/patrick-stewart-shakespearean-actor-turned-star-trek-and-x-men-star-dies-at-86",
-      "summary": "Stewart rose from a childhood in poverty to become a celebrated Shakespearean actor and global star",
-      "image_url": "",
-      "published": "2026-10-29T15:52:16+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "صدر ٹرمپ اور ایران کی جنگ",
-      "link": "https://www.express.pk/story/2841205/sadr-trump-aur-iran-ki-jang-2841205",
-      "summary": "مشرقِ وسطیٰ میں جاری کشیدہ صورتحال کی وجہ سے ہر ایک کی نظریں امریکا کے مِڈ ٹرم انتخابات اور اسرائیل میں عام انتخابات کے حتمی نتائج پر لگی ہوئی ہیں۔",
-      "image_url": "",
-      "published": "2026-10-29T15:51:04+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "UK will reduce ‘unsustainable’ welfare costs",
-      "link": "https://arynews.tv/uk-will-reduce-unsustainable-welfare-costs",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/John-Healey.jpg",
-      "published": "2026-10-29T15:51:01+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "No surprise to Carrick he’s still Man Utd manager",
-      "link": "https://arynews.tv/no-surprise-to-carrick-hes-still-man-utd-manager",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/09/1-89.jpg",
-      "published": "2026-10-29T15:49:02+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
     }
   ]
 }
