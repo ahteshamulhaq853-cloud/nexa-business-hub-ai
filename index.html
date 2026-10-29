@@ -2609,11 +2609,73 @@ async function submitNexaJobApplication(event){
  finally{button.disabled=false;}
 }
 const liveTVFallbackChannels=[
-{name:"ARY News — Live",embed:"https://www.youtube.com/embed/RqUZ2Fv9l8w",country:"Pakistan"},
-{name:"Express News — Live",embed:"https://www.youtube.com/embed/6i2L8XcQE1o",country:"Pakistan"},
-{name:"PTV News — Live",embed:"https://www.youtube.com/embed/CGb02nb7Ni4",country:"Pakistan"},
-{name:"Al Jazeera English — Live",stream:"https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",country:"Qatar"},
-{name:"Al Jazeera Arabic — Live",stream:"https://live-hls-apps-aja-fa.getaj.net/AJA/index.m3u8",country:"Qatar"}
+{name:"ARY News — Live",embed:"https://www.youtube.com/embed/RqUZ2Fv9l8w",country:"Pakistan",category:"News"},
+{name:"Express News — Live",embed:"https://www.youtube.com/embed/6i2L8XcQE1o",country:"Pakistan",category:"News"},
+{name:"PTV News — Live",embed:"https://www.youtube.com/embed/CGb02nb7Ni4",country:"Pakistan",category:"News"},
+{name:"Geo News",country:"Pakistan",category:"News"},
+{name:"Dunya News",country:"Pakistan",category:"News"},
+{name:"Samaa TV",country:"Pakistan",category:"News"},
+{name:"Aaj News",country:"Pakistan",category:"News"},
+{name:"Hum News",country:"Pakistan",category:"News"},
+{name:"92 News HD",country:"Pakistan",category:"News"},
+{name:"BOL News",country:"Pakistan",category:"News"},
+{name:"GNN",country:"Pakistan",category:"News"},
+{name:"Neo News",country:"Pakistan",category:"News"},
+{name:"Public News",country:"Pakistan",category:"News"},
+{name:"City 42",country:"Pakistan",category:"Regional"},
+{name:"Lahore News",country:"Pakistan",category:"Regional"},
+{name:"Khyber News",country:"Pakistan",category:"Regional"},
+{name:"Such TV",country:"Pakistan",category:"News"},
+{name:"Channel 5",country:"Pakistan",category:"News"},
+{name:"Dawn News",country:"Pakistan",category:"News"},
+{name:"Suno News",country:"Pakistan",category:"News"},
+{name:"24 News HD",country:"Pakistan",category:"News"},
+{name:"Raftar",country:"Pakistan",category:"News"},
+{name:"HUM TV",country:"Pakistan",category:"Entertainment"},
+{name:"ARY Digital",country:"Pakistan",category:"Entertainment"},
+{name:"Geo Entertainment",country:"Pakistan",category:"Entertainment"},
+{name:"Green Entertainment",country:"Pakistan",category:"Entertainment"},
+{name:"Express Entertainment",country:"Pakistan",category:"Entertainment"},
+{name:"A-Plus",country:"Pakistan",category:"Entertainment"},
+{name:"TV One",country:"Pakistan",category:"Entertainment"},
+{name:"Urdu 1",country:"Pakistan",category:"Entertainment"},
+{name:"ATV",country:"Pakistan",category:"Entertainment"},
+{name:"Aan TV",country:"Pakistan",category:"Entertainment"},
+{name:"Play Entertainment",country:"Pakistan",category:"Entertainment"},
+{name:"Filmazia",country:"Pakistan",category:"Entertainment"},
+{name:"See TV",country:"Pakistan",category:"Entertainment"},
+{name:"Sab TV",country:"Pakistan",category:"Entertainment"},
+{name:"Venus HD",country:"Pakistan",category:"Entertainment"},
+{name:"PTV Sports",country:"Pakistan",category:"Sports"},
+{name:"A Sports",country:"Pakistan",category:"Sports"},
+{name:"Geo Super",country:"Pakistan",category:"Sports"},
+{name:"Ten Sports",country:"Pakistan",category:"Sports"},
+{name:"Fast Sports HD",country:"Pakistan",category:"Sports"},
+{name:"Madani Channel",country:"Pakistan",category:"Islamic"},
+{name:"ARY QTV",country:"Pakistan",category:"Islamic"},
+{name:"Noor TV",country:"Pakistan",category:"Islamic"},
+{name:"Hadi TV",country:"Pakistan",category:"Islamic"},
+{name:"8XM",country:"Pakistan",category:"Music"},
+{name:"The Musik",country:"Pakistan",category:"Music"},
+{name:"Play TV",country:"Pakistan",category:"Music"},
+{name:"Aag TV",country:"Pakistan",category:"Music"},
+{name:"PTV Home",country:"Pakistan",category:"Government"},
+{name:"PTV World",country:"Pakistan",category:"Government"},
+{name:"PTV National",country:"Pakistan",category:"Government"},
+{name:"PTV Bolan",country:"Pakistan",category:"Regional"},
+{name:"PTV Global",country:"Pakistan",category:"Government"},
+{name:"PTV Parliament",country:"Pakistan",category:"Government"},
+{name:"AJK TV",country:"Pakistan",category:"Regional"},
+{name:"Mashriq TV",country:"Pakistan",category:"Regional"},
+{name:"Sindh TV",country:"Pakistan",category:"Regional"},
+{name:"Sindh TV News",country:"Pakistan",category:"Regional"},
+{name:"Awaz TV",country:"Pakistan",category:"Regional"},
+{name:"Mehran TV",country:"Pakistan",category:"Regional"},
+{name:"VSH News",country:"Pakistan",category:"Regional"},
+{name:"Waseb TV",country:"Pakistan",category:"Regional"},
+{name:"Time News",country:"Pakistan",category:"Regional"},
+{name:"Al Jazeera English — Live",stream:"https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",country:"Qatar",category:"News"},
+{name:"Al Jazeera Arabic — Live",stream:"https://live-hls-apps-aja-fa.getaj.net/AJA/index.m3u8",country:"Qatar",category:"News"}
 ];
 let liveTVChannels=[...liveTVFallbackChannels];
 let liveTVAllChannels=[...liveTVFallbackChannels];
@@ -2686,7 +2748,7 @@ async function loadWorldwideLiveTVChannels(){
    meta="";
   }
   const seen=new Set();const unique=found.filter(ch=>{const key=ch.name.toLowerCase()+"|"+ch.stream;if(seen.has(key))return false;seen.add(key);return true;});
-  liveTVAllChannels=[...liveTVFallbackChannels,...unique.filter(ch=>!liveTVFallbackChannels.some(f=>f.name.toLowerCase()===ch.name.toLowerCase()))];
+  liveTVAllChannels=[...liveTVFallbackChannels.map(f=>unique.find(ch=>ch.name.toLowerCase()===f.name.toLowerCase())||f),...unique.filter(ch=>!liveTVFallbackChannels.some(f=>f.name.toLowerCase()===ch.name.toLowerCase()))];
   liveTVChannels=liveTVAllChannels;
   filterLiveTVChannels();
   try{localStorage.setItem(cacheKey,JSON.stringify({savedAt:Date.now(),channels:liveTVAllChannels}));}catch(e){}
@@ -2706,6 +2768,11 @@ function playSelectedLiveTVChannel(){
  frame.src="about:blank";
  $("liveTVSelectedTitle").textContent="📺 "+channel.name;
  if(card)card.style.display="block";
+ if(!channel.embed&&!channel.stream){
+  video.style.display="none";frame.style.display="none";
+  if(status){status.className="message show";status.textContent=channel.name+" list mein add hai, lekin is waqt verified public live stream available nahi mili. Doosra channel select karein.";}
+  return;
+ }
  if(channel.embed){
   video.style.display="none";frame.style.display="block";frame.src=channel.embed;
   if(status){status.className="message show";status.textContent=channel.name+" ka embedded player load ho raha hai. Agar broadcaster embedding band kare ya feed offline ho, video nahi chalegi.";}
