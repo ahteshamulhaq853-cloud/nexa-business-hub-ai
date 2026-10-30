@@ -1,6 +1,46 @@
 {
-  "updated": "2026-10-30T20:22:16.488597+00:00",
+  "updated": "2026-10-30T21:06:16.710554+00:00",
   "items": [
+    {
+      "title": "Police deployed during stand-off over control of Poland's top court",
+      "link": "https://www.bbc.co.uk/news/articles/crz9824d5e88o?at_medium=RSS&at_campaign=rss",
+      "summary": "It comes after the government suspended two senior justices and moved to bring criminal charges against them.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b6c2/live/46cc2780-d49b-11f1-a701-fddedf244c16.jpg",
+      "published": "2026-10-30T20:52:01+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "King visits Guyanan slave rebellion site on Caribbean tour",
+      "link": "https://www.bbc.co.uk/news/articles/c693zxw11x1wo?at_medium=RSS&at_campaign=rss",
+      "summary": "Hundreds of slaves were killed by colonial leaders in the Demerera rebellion of 1823, with many survivors executed.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3b8d/live/fd60a120-d495-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-10-30T20:51:26+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "They strangled us, says founder of Russian newspaper shut under pressure from authorities",
+      "link": "https://www.bbc.co.uk/news/articles/cmewepdr109do?at_medium=RSS&at_campaign=rss",
+      "summary": "Novaya Gazeta has been one of the most high-profile independent news outlets in Russia over the last three decades.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/13b1/live/6aa032d0-d44d-11f1-bfc7-afe23fc6cf5b.jpg",
+      "published": "2026-10-30T20:41:51+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "US tech stocks see sharp falls as AI spending nears $1tn",
+      "link": "https://www.bbc.co.uk/news/articles/cvwy72e0n72yo?at_medium=RSS&at_campaign=rss",
+      "summary": "Shares in Intel continue to fall while the tech-heavy Nasdaq opens at its lowest level in more than two months.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/10b0/live/dcdf2a60-d46e-11f1-9dda-1ba6fcc7d159.jpg",
+      "published": "2026-10-30T20:34:46+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Crypto giant Binance attempting to recover $6.3bn stolen in hack linked to North Korea",
       "link": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo?at_medium=RSS&at_campaign=rss",
@@ -20,6 +60,26 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "مریم نواز کا پنجاب کی معاشی تقدیر بدلنے کے لیے بڑا اقدام، 3 سالہ معاشی پلان پیوٹ لانچ، 906 ارب روپے کی نجی سرمایہ کاری اور 1 لاکھ 62 ہزار نئی ملازمتوں کا ہدف",
+      "link": "https://urdupoint.com/n/4994928",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T19:32:01+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "محسن نقوی کی بات بالکل درست کہ سسٹم تباہ ہوچکا ہے اس کو ری سیٹ کرنے کی ضرورت ہے، ندیم افضل چن ... بلوچستان میں دن کے وقت اور خیبرپختونخواہ میں رات کو سفر نہیں کرسکتا ، پھر ... مزید",
+      "link": "https://urdupoint.com/n/4994927",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2025/125x125/pic_b1c88_1759861838.jpg._3",
+      "published": "2026-10-30T19:30:29+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Four fishermen die under mysterious circumstances after returning from sea",
@@ -159,16 +219,6 @@
       "published": "2026-10-30T17:53:37+00:00",
       "source": "ARY News",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "US tech stocks see sharp falls as AI spending nears $1tn",
-      "link": "https://www.bbc.co.uk/news/articles/cvwy72e0n72yo?at_medium=RSS&at_campaign=rss",
-      "summary": "Shares in Intel continue to fall while the tech-heavy Nasdaq opens at its lowest level in more than two months.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/10b0/live/dcdf2a60-d46e-11f1-9dda-1ba6fcc7d159.jpg",
-      "published": "2026-10-30T17:47:01+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     },
     {
@@ -492,6 +542,116 @@
       "language": "en"
     },
     {
+      "title": "ML-I phase one to cost $2.1b",
+      "link": "https://tribune.com.pk/story/2637856/ml-i-phase-one-to-cost-21b",
+      "summary": "PM forms body to securitise railway land for Rs470b phase-II; 67% of track found unsafe",
+      "image_url": "",
+      "published": "2026-10-30T15:25:43+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Local businessmen demand level playing field",
+      "link": "https://tribune.com.pk/story/2637859/local-businessmen-demand-level-playing-field",
+      "summary": "Insist they should be facilitated in same manner as foreign investors",
+      "image_url": "",
+      "published": "2026-10-30T15:25:43+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "FBR faces first tax shortfall of FY27",
+      "link": "https://tribune.com.pk/story/2637864/fbr-faces-first-tax-shortfall-of-fy27",
+      "summary": "Collects Rs4.06 trillion in July-October, misses target by Rs124 billion",
+      "image_url": "",
+      "published": "2026-10-30T15:25:43+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "National Grid Co plans to issue Rs100b Sukuk",
+      "link": "https://tribune.com.pk/story/2637865/national-grid-co-plans-to-issue-rs100b-sukuk",
+      "summary": "Capital market council encourages public offerings, access to financing",
+      "image_url": "",
+      "published": "2026-10-30T15:25:43+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "تین دیس‘ ایک دل",
+      "link": "https://www.express.pk/story/2841417/teen-des-ek-dil-2841417",
+      "summary": "چاہے نظریں ہوں آسمانوں پر پاؤں لیکن زمین پر رکھیے جانے کس وقت کوچ کرنا ہو اپنا سامان مختصر رکھیے",
+      "image_url": "",
+      "published": "2026-10-30T15:24:32+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "تیل کی قیمت اور لیوی",
+      "link": "https://www.express.pk/story/2841416/tail-ki-qeemat-aur-levy-2841416",
+      "summary": "تیل صرف ایک سیال نہیں، یہ زمانے کی رگوں میں دوڑتا ہوا خون ہے، عالمی تیل کی قیمتوں میں اضافہ یا کمی سے بیرون ممالک خوب نمٹنا جانتے ہیں",
+      "image_url": "",
+      "published": "2026-10-30T15:24:31+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "اگر اسرائیل واقعی جمہوری ریاست ہوتا؟",
+      "link": "https://www.express.pk/story/2841415/agar-israel-waqai-jamhoori-riyasat-hota-2841415",
+      "summary": "اسرائیلی پارلیمنٹ کی ایک سو بیس نشستوں میں سے جس کے پاس اکسٹھ نشستیں ہوں وہ حکومت بنا سکتا ہے۔",
+      "image_url": "",
+      "published": "2026-10-30T15:24:31+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سندھ اسمبلی کا فل اسٹاپ اور باقی؟",
+      "link": "https://www.express.pk/story/2841414/sindh-assembly-ka-full-stop-aur-baqi-2841414",
+      "summary": "پیپلز پارٹی کے چیئرمین بلاول بھٹو نے کہا ہے کہ سندھ اسمبلی نے نئے صوبے کے معاملے پر فل اسٹاپ لگا دیا ہے",
+      "image_url": "",
+      "published": "2026-10-30T15:24:31+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "گورنر سندھ کی کینیڈا آمد",
+      "link": "https://www.express.pk/story/2841413/governor-sindh-ki-canada-aamad-2841413",
+      "summary": "میں سمجھتا ہوں کہ ہماری کمیونٹی میں ایسے بے شمار لوگ ہیں جن کی کہانیاں ابھی تک پوری طرح سامنے نہیں آئیں",
+      "image_url": "",
+      "published": "2026-10-30T15:24:30+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "گدڑی میں لعل",
+      "link": "https://www.express.pk/story/2841412/gadri-mein-laal-2841412",
+      "summary": "عالمی سیاست میں مفادات اور وسائل کے تحفظ میں طاقت کا کردار ہمیشہ نمایاں رہا ہے",
+      "image_url": "",
+      "published": "2026-10-30T15:24:29+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "عالمی امن کا فیصلہ کن موڑ",
+      "link": "https://www.express.pk/story/2841411/alami-aman-ka-faisla-kun-mor-2841411",
+      "summary": "آبنائے ہرمز میں پیدا ہونے والی صورت حال اس تنازع کی سنگینی کو مزید واضح کرتی ہے۔",
+      "image_url": "",
+      "published": "2026-10-30T15:19:43+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Noreen Niazi shifted back to Kot Lakhpat Jail, says lawyer",
       "link": "https://arynews.tv/noreen-niazi-shifted-back-to-kot-lakhpat-jail-says-lawyer",
       "summary": "",
@@ -672,16 +832,6 @@
       "language": "ur"
     },
     {
-      "title": "Wettest week for two years but still not enough rain to get out of drought",
-      "link": "https://www.bbc.co.uk/weather/articles/cmwyq27lqe9no?at_medium=RSS&at_campaign=rss",
-      "summary": "After above average rainfall in October, reservoirs across England are still very low with much of the country remaining in drought, as Simon King explains.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3dfc/live/872bf440-d446-11f1-97f9-27ebf08d99fe.jpg",
-      "published": "2026-10-30T14:12:04+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "کینیڈا ایئرپورٹ پر پاکستانی مسافروں کے سامان سے بکرے کے پائے، گھی اور چکن برآمد: ’انھیں بتائیں یہ چیزیں یہاں ملتی ہیں‘",
       "link": "https://www.bbc.com/urdu/articles/cqj34pljdvr0o?at_medium=RSS&at_campaign=rss",
       "summary": "سی بی ایس اے کا کہنا ہے کہ مسافروں پر کھانے پینے کی اشیا ڈکلیئر نہ کرنے پر ایک ہزار 350 کینیڈین ڈالر کا جرمانہ بھی عائد کیا گیا ہے۔",
@@ -850,156 +1000,6 @@
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "پی ٹی آئی پارلیمانی پارٹی نے گورنر راج، ایمرجنسی کے خاتمے کیلئے وفاقی حکومت سے بات چیت کی حمایت کردی",
-      "link": "https://jang.com.pk/news/1629150",
-      "summary": "پاکستان تحریک انصاف کی صوبائی پارلیمانی پارٹی نے گورنر راج اور ایمرجنسی سمیت دیگر معاملات کے حل کے لیے وفاقی حکومت سے مذاکرات...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-30/b_1629150_061330_updates.jpg\"/",
-      "published": "2026-10-30T13:10:25+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سنگاپور کے وزیر خارجہ کی فیلڈ مارشل سے ملاقات، علاقائی و عالمی سیکیورٹی صورتحال پر تبادلہ خیال",
-      "link": "https://jang.com.pk/news/1629155",
-      "summary": "سنگاپور کے وزیر خارجہ ڈاکٹر ویوین بالاکرشنن نے فیلڈ مارشل سید عاصم منیر سے ملاقات کی ہے، جہاں علاقائی اور عالمی سیکیورٹی...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-30/b_1629155_071314_updates.jpg\"/",
-      "published": "2026-10-30T13:10:06+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "13 برس میں خیبر پختونخوا میں صحت، تعلیم کو نظر انداز کیا گیا، امیر مقام",
-      "link": "https://jang.com.pk/news/1629154",
-      "summary": "وفاقی وزیر امیر مقام نے کہا ہے کہ 13 برس میں خیبر پختونخوا میں صحت اور تعلیم کو عملی طور پر نظر انداز کیا گیا۔پشاور میں تقریب سے خطاب...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-30/b_1629154_063431_updates.jpg\"/",
-      "published": "2026-10-30T13:10:04+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سندھ بلڈنگ کنٹرول اتھارٹی کی کارکردگی، سالانہ آڈٹ رپورٹ میں اہم انکشافات سامنے آگئے",
-      "link": "https://www.express.pk/story/2841403/performance-of-the-sindh-building-control-authority-significant-revelations-emerge-in-the-annual-audit-report-2841403",
-      "summary": "740 خطرناک عمارتیں تاحال مسمار نہ ہوسکیں، رپورٹ",
-      "image_url": "",
-      "published": "2026-10-30T12:50:48+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ثانیہ مرزا نے بیٹے اذہان کو سالگرہ پر جذباتی پیغام شیئر کردیا",
-      "link": "https://www.express.pk/story/2841402/sania-mirza-shared-an-emotional-message-for-her-son-izhaan-on-his-birthday-2841402",
-      "summary": "ثانیہ کے مداح بھی کمنٹس میں اذہان کو مبارکباد اور دعائیں دے رہے ہیں",
-      "image_url": "",
-      "published": "2026-10-30T12:49:02+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Pakistan Army destroys Afghan Taliban posts in response to firing at Angoor Adda: state media",
-      "link": "https://www.dawn.com/news/2040969/pakistan-army-destroys-afghan-taliban-posts-in-response-to-firing-at-angoor-adda-state-media",
-      "summary": "Pakistan’s armed forces targeted and destroyed several Afghan Taliban posts and military positions in areas adjacent to South Waziristan and Parachinar, state media reported on Friday, citing security sources. According to state-run Radio Pakistan , the army “gave a befitting reply to unprovoked firing by the Afghan Taliban along the Pak-Afghan border in the",
-      "image_url": "https://i.dawn.com/large/2026/09/250015393f696b4.webp",
-      "published": "2026-10-30T12:45:41+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Sir Ian McKellen leads tributes to 'beloved actor' Sir Patrick Stewart after his death at 86",
-      "link": "https://www.bbc.co.uk/news/articles/cm20v3029p5xo?at_medium=RSS&at_campaign=rss",
-      "summary": "The actor died in Los Angeles following a \"a brief and poignant journey\" with Alzheimer's Disease and Lewy Body Dementia.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5ef3/live/ecaa3020-d473-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-10-30T12:43:46+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "’’کھل نائیک ریٹرنز‘‘ میں سلمان خان اور سنجے دت ساتھ نظر آئیں گے؟",
-      "link": "https://www.express.pk/story/2841400/will-salman-khan-and-sanjay-dutt-be-seen-together-in-khalnayak-returns-2841400",
-      "summary": "یہ فلم 1993 میں ریلیز ہونے والی سنجے دت کی مقبول فلم ’کھل نائیک‘ کا سیکوئل ہے",
-      "image_url": "",
-      "published": "2026-10-30T12:39:31+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ابراہیم علی خان اور پلک تیواری کا بریک اپ ہوگیا",
-      "link": "https://www.express.pk/story/2841399/ibrahim-ali-khan-and-palak-tiwari-have-broken-up-2841399",
-      "summary": "پلک اور ابراہیم کے تعلقات کی خبریں پہلی مرتبہ 2022 میں سامنے آئی تھیں",
-      "image_url": "",
-      "published": "2026-10-30T12:39:29+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "PSL franchises allowed seven retentions, must release top-tier player if maximum limit exercised",
-      "link": "https://www.dawn.com/news/2040968/psl-franchises-allowed-seven-retentions-must-release-top-tier-player-if-maximum-limit-exercised",
-      "summary": "Pakistan Super League (PSL) franchises will be allowed to retain a maximum of seven players, including their direct signing, for the 12th edition of the tournament, but any side exercising the full retention allowance will have to release a player from the highest price tier of the previous auction into the general player pool. The provision, unanimously app",
-      "image_url": "https://i.dawn.com/large/2026/01/08173420e8aeac9.webp",
-      "published": "2026-10-30T12:35:18+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "FCC says not implementing SC's verdicts amounts to 'challenging the very framework of the legal system'",
-      "link": "https://www.dawn.com/news/2040962/fcc-says-not-implementing-scs-verdicts-amounts-to-challenging-the-very-framework-of-the-legal-system",
-      "summary": "ISLAMABAD: The Federal Constitutional Court (FCC) on Friday regretted the non-implementation of an earlier Supreme Court judgment in the sacked employees case , underlining that disregarding or delaying the implementation of the latter’s verdicts by the government amounts to “challenging the very framework of the legal system”. The observation came while hea",
-      "image_url": "https://i.dawn.com/large/2026/09/151401299ffbefe.webp",
-      "published": "2026-10-30T12:32:00+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "What we know about Binance's $6.3bn hack",
-      "link": "https://www.bbc.co.uk/news/videos/cv2d62e34rw5o?at_medium=RSS&at_campaign=rss",
-      "summary": "Cyber correspondent Joe Tidy explains more about what is suspected to be the biggest hack in history.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5ae1/live/ab354520-d460-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-10-30T12:27:28+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "امریکا: دورانِ پرواز پائلٹس کا پُراسرار فضائی شے دیکھنے کا دعویٰ",
-      "link": "https://www.express.pk/story/2841396/mysterious-pill-shaped-2841396",
-      "summary": "رپورٹس کے مطابق نیشنل یو ایف او رپورٹنگ سینٹر پر 26 اکتوبر کو ایک واقعے کی تفصیلات شیئر کی گئیں",
-      "image_url": "",
-      "published": "2026-10-30T12:19:22+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ایران سے عراق جانے کے منتظر پاکستانی زائرین کو نئی سفری ہدایات دیکھنے کا کہہ دیا گیا",
-      "link": "https://jang.com.pk/news/1629148",
-      "summary": "پاکستان نے ایران سے عراق جانے کے منتظر زائرین کو نئی سفری ہدایات ضرور دیکھنے کا کہہ دیا۔ترجمان وزارت مذہبی امور کے مطابق ایران سے...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-30/b_1629148_060252_updates.jpg\"/",
-      "published": "2026-10-30T12:10:50+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کراچی کو جدید بنانے کیلئے ترقیاتی کام مربوط منصوبہ بندی کے تحت آگے بڑھیں گے، شرجیل میمن",
-      "link": "https://jang.com.pk/news/1629143",
-      "summary": "سندھ کے سینئر وزیر شرجیل میمن نے کہا ہے کہ کراچی کو جدید بنانے کیلئے ترقیاتی کام مربوط منصوبہ بندی کے تحت آگے بڑھیں گے، ڈبل ڈیکر...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-30/b_1629143_051658_updates.jpg\"/",
-      "published": "2026-10-30T12:10:48+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
     }
   ]
 }
