@@ -1,6 +1,406 @@
 {
-  "updated": "2026-10-30T06:09:29.738416+00:00",
+  "updated": "2026-10-30T06:58:53.112972+00:00",
   "items": [
+    {
+      "title": "Pakistan grants airspace access to Taiwan airlines",
+      "link": "https://arynews.tv/pakistan-grants-airspace-access-to-taiwan-airlines",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Taiwan-1.jpg",
+      "published": "2026-10-30T06:52:23+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Flu vaccine disappear from Pakistani markets amid supply shortage",
+      "link": "https://arynews.tv/flu-vaccine-disappear-from-pakistani-markets-amid-supply-shortage",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Flu-vaccine-Pakisetan-shortage.jpg",
+      "published": "2026-10-30T06:50:52+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "حنا جاوید قتل کیس: قومی اسمبلی کی قائمہ کمیٹی کا اجلاس اور پولیس کو ’دوبارہ تفتیش‘ کرنے کی تجویز",
+      "link": "https://www.bbc.com/urdu/articles/cm89zpq58yv5o?at_medium=RSS&at_campaign=rss",
+      "summary": "قومی اسمبلی کی قائمہ کمیٹی برائے امور داخلہ نے حنا جاوید قتل کیس میں پولیس کو دوبارہ تفتیش کرنے کی سفارش کی ہے تاکہ مقتولہ کے اہلخانہ کے تحفظات کا جائزہ لیا جا سکے۔",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/afad/live/fe058c80-c888-11f1-bc2e-018d645d8d21.png",
+      "published": "2026-10-30T06:50:27+00:00",
+      "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Police officer sentenced to death, two cops given life terms in fake encounter case",
+      "link": "https://arynews.tv/police-officer-sentenced-to-death-two-cops-given-life-terms-in-fake-encounter-case",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/09/Karachi-police.jpg",
+      "published": "2026-10-30T06:48:59+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "ڈاکار یوتھ اولمپکس میں ووشو پہلی بار باضابطہ کھیل کے طور پر شامل، آئی او سی صدر کرسٹی کووینٹری مقابلے دیکھنے کی منتظر",
+      "link": "https://urdupoint.com/n/4993843",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:43:40+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "چنیوٹ ،پنجاب حکومت کی جانب سے مدارس سے متعلق قانون کی منظوری ایک خوش آئند پیش رفت ہے،طاہر محمود اشرفی",
+      "link": "https://urdupoint.com/n/4993842",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:43:36+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "پاکستان سٹاک ایکسچینج میں کا روز مندی، انڈیکس 41 پوائنٹس کمی سے ایک لاکھ 67 ہزار 192 پوائنٹس ہوگیا",
+      "link": "https://urdupoint.com/n/4993840",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:43:28+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سپر ایل نینو 10 ماہ میں 9 لاکھ اضافی اموات کا سبب بن سکتا ہے، موسمیاتی ماہرین",
+      "link": "https://urdupoint.com/n/4993839",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:43:24+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "پشاور ، ہشتنگری چوک سے چوک یادگار تک تجاوزات کا خاتمہ",
+      "link": "https://urdupoint.com/n/4993838",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:43:22+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "چنیوٹ ، ماضی میں دینی قیادت نے اتحاد اور یکجہتی کا مظاہرہ کیا تو قادیانیوں کو غیر مسلم اقلیت قرار دینے کا تاریخی فیصلہ ممکن ہوا،سابق امیر جماعت اسلامی سراج الحق",
+      "link": "https://urdupoint.com/n/4993837",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:43:18+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "اسسٹنٹ کمشنر آلائی کی زیر نگرانی تجاوزات کے خلاف آپریشن جاری",
+      "link": "https://urdupoint.com/n/4993836",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:43:15+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "پولٹری فارمزکے 39ماحولیاتی منظوری کیسز کاجائزہ،این اوسی کے اجرا میں تاخیرختم کرنے کی ہدایت",
+      "link": "https://urdupoint.com/n/4993835",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:43:11+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "قصور ،بدنام زمانہ منشیات فروش گرفتار، تقریباً 03 ملین مالیت کی 03 کلوگرام سے زائد ہیروئن اور 04 لاکھ روپے برآمد،پولیس ترجمان قصور",
+      "link": "https://urdupoint.com/n/4993834",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:43:08+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "خیبر ، آن لائن گیمز میں لاکھوں روپے ہارنے والے شخص کا ڈکیتی کا ڈرامہ بے نقاب، ملزم گرفتار",
+      "link": "https://urdupoint.com/n/4993833",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:43:05+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ایس ایچ او تھانہ انقلاب پشاور سرکل نے فریقین کے مابین 40 مرلے جائیداد کا تنازعہ حل کر دیا",
+      "link": "https://urdupoint.com/n/4993832",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:43:01+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کلورکوٹ ،گزشتہ روز قتل ہونے والی خاتون کا مقدمہ بھائی کی مدعیت میں تھانہ جنڈانوالہ میں درج",
+      "link": "https://urdupoint.com/n/4993831",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:42:06+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "غازی یونیورسٹی کا چوتھا کانووکیشن دسمبر میں ہو گا، تین سال کے فارغ التحصیل طلبہ کو ایک ساتھ ڈگریاں دی جائیں گی",
+      "link": "https://urdupoint.com/n/4993830",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:42:01+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Singaporean foreign minister lands in Islamabad",
+      "link": "https://www.dawn.com/news/2040938/singaporean-foreign-minister-lands-in-islamabad",
+      "summary": "Sin­ga­porean Foreign Minister Vivian Balakrishnan arrived in Islamabad on Friday on an official visit, the Foreign Office (FO) said. The visiting dignitary is undertaking the trip at the invitation of Deputy Prime Minister and Foreign Minister Ishaq Dar, who is scheduled to hold “comprehensive talks” with Balakrishnan on cooperation in bilateral and multila",
+      "image_url": "https://i.dawn.com/large/2026/10/30113826f1d0ff3.webp",
+      "published": "2026-10-30T06:39:04+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "'You are disgusting': Trump lashes out at reporter as he cancels weekend rallies ahead of midterm polls",
+      "link": "https://www.dawn.com/news/2040934/you-are-disgusting-trump-lashes-out-at-reporter-as-he-cancels-weekend-rallies-ahead-of-midterm-polls",
+      "summary": "US President Donald Trump is scrapping two of his last midterm election rallies, his Republican Party said Thursday, as the 80-year-old leader lashed out at a reporter who asked if he was “sick of travelling”. “You’re sick to ask that question. You are sick,” Trump told the reporter after returning to Washington from a campaign trip to South Carolina. “I fee",
+      "image_url": "https://i.dawn.com/large/2026/10/301123199bab59b.webp",
+      "published": "2026-10-30T06:35:43+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "مریم نواز پتھر کے دور میں واپس لے جانا چاہتی ہے جہاں گولی کے بدلی گولی ہو، لطیف کھوسہ ... چوری کے بدلے چوری، یہ متشددانہ سوچ رکھتی ہے، مریم بی بی نے جو بات کی ہے وہ لاقانونیت ... مزید",
+      "link": "https://urdupoint.com/n/4993829",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2024/125x125/pic_971b0_1717482978.jpg._3",
+      "published": "2026-10-30T06:28:39+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "بھکر ،غیر معیاری زرعی ادویات کی روک تھام، مارکیٹ کی نگرانی کی جارہی ہے،ڈائریکٹر جنرل",
+      "link": "https://urdupoint.com/n/4993828",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:27:16+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "مظفرگڑھ ،تیزرفتار ٹریکٹرٹرالی کی زد میں آ کر نوجوان جاں بحق،پولیس زرائع",
+      "link": "https://urdupoint.com/n/4993827",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:27:14+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "مظفرگڑھ ،فائرنگ سے زخمی ہونے والے شخص نے دم توڑ دیا،پولیس زرائع",
+      "link": "https://urdupoint.com/n/4993826",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:27:11+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "مظفرگڑھ ،موٹرسائیکل کی ٹریکٹرٹرالی کو ٹکر،ایک شخص جاں بحق،ریسکیو زرائع",
+      "link": "https://urdupoint.com/n/4993825",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:27:08+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "لاہور،نشہ آور مشروب پلا کر بلیک میلنگ اور بچوں کے جنسی استحصال کا مواد بنانے والے دو ملزمان گرفتار",
+      "link": "https://urdupoint.com/n/4993824",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:27:05+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "مظفرگڑھ ،غیرقانونی آٹا سمگلنگ،36 ٹن آٹا ضبط،مقدمہ درج کر لیا گیا،ڈسٹرکٹ فوڈ کنٹرولر",
+      "link": "https://urdupoint.com/n/4993823",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:27:02+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ڈیرہ غازی خان تعلیمی بورڈ کے سیکرٹری اور کنٹرولر امتحانات مدتِ تعیناتی مکمل ہونے پر سبکدوش، اعزاز میں الوداعی تقریب کا انعقاد",
+      "link": "https://urdupoint.com/n/4993822",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:22:08+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کوہستان لوئر، اسسٹنٹ کمشنر پٹن کی زیر نگرانی تجاوزات کے خلاف آپریشن جاری",
+      "link": "https://urdupoint.com/n/4993821",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:22:05+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ڈیرہ غازی خان میں نیب کے تعاون سے کرپشن کے خلاف آگاہی مقابلہ، طالبات نے اردو، انگریزی اور سرائیکی میں صلاحیتوں کا مظاہرہ کیا",
+      "link": "https://urdupoint.com/n/4993820",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:22:01+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "We went on holiday with our neighbours and swapped families - it tore us apart",
+      "link": "https://www.bbc.co.uk/news/articles/cxddv1vygpvmo?at_medium=RSS&at_campaign=rss",
+      "summary": "Rachel Stone tells how her parents swapped partners, the chaos it caused and how she came to forgive them.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/45d8/live/1344e1b0-d156-11f1-a701-fddedf244c16.jpg",
+      "published": "2026-10-30T06:21:28+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Oil set for fourth monthly gain as Hormuz tanker attack highlights supply risks from war",
+      "link": "https://arynews.tv/oil-set-for-fourth-monthly-gain-as-hormuz-tanker-attack-highlights-supply-risks-from-war",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Oil-3.jpg",
+      "published": "2026-10-30T06:19:57+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Hazardous driving conditions for Friday as fog warning issued by Met Office",
+      "link": "https://www.bbc.co.uk/weather/articles/c6ly075l742ro?at_medium=RSS&at_campaign=rss",
+      "summary": "Foggy conditions likely to bring tricky conditions for the Friday morning commute as severe weather warning issued.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4691/live/e3834500-d427-11f1-9908-9f0b87e663bb.jpg",
+      "published": "2026-10-30T06:18:35+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "منیژه باختری: افغان سفارتکار جنھوں نے طالبان کے حکم پر عہدہ چھوڑنے سے انکار کیا اور جو ایک کمرے سے سفارتخانہ چلاتی ہیں",
+      "link": "https://www.bbc.com/urdu/articles/cw8rz4jxg1z6o?at_medium=RSS&at_campaign=rss",
+      "summary": "پہلی مرتبہ طالبان کے اقتدار پر قبضے کے بعد اُن کے شوہر نے جب سابق افغان وزیر اعظم نجیب اللہ کی لاش کو کھمبے سے لٹکا دیکھا، تو باختری اور اُن کے اہلخانہ نے پاکستان جانے کا فیصلہ کیا۔",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/bf7c/live/0faad030-d3b5-11f1-a340-478c8f3b9e55.jpg",
+      "published": "2026-10-30T06:18:14+00:00",
+      "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Scottish police to target online gangs forcing children to self-harm",
+      "link": "https://www.bbc.co.uk/news/articles/c6vg03xl0751o?at_medium=RSS&at_campaign=rss",
+      "summary": "Officers are hunting members of loose online networks of sadists who mainly targets girls on gaming platforms and social media.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8156/live/1a3de4e0-b00e-11f0-b2a1-6f537f66f9aa.jpg",
+      "published": "2026-10-30T06:17:09+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Binance freezes assets after $6.3 billion heist, crypto industry’s biggest",
+      "link": "https://arynews.tv/binance-freezes-assets-after-6-3-billion-heist-crypto-industrys-biggest",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Binance.jpg",
+      "published": "2026-10-30T06:12:32+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "بارشوں نے مکہ مکرمہ کے جنوبی علاقے دفاق کو سبزہ زار بنا دیا",
+      "link": "https://urdupoint.com/n/4993819",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:12:09+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "پولیس ہاکی ٹیم کی گوانگ ڈونگ کے خلاف سنسنی خیز مقابلے میں کامیابی، 6-7 سے فتح ،ترجمان",
+      "link": "https://urdupoint.com/n/4993818",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-10-30T06:12:06+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Hyrox athlete who soiled herself in race says she put others at risk",
+      "link": "https://www.bbc.co.uk/news/articles/c6gr8l15k744o?at_medium=RSS&at_campaign=rss",
+      "summary": "In her first interview since the incident, Joanna Wietrzyk told the BBC she takes responsibility for it but did not deserve such a severe backlash.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2a5c/live/1c953ab0-d3fb-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-10-30T06:10:50+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Heart attack patient, 83, had to drive four hours for hospital appointment",
+      "link": "https://www.bbc.co.uk/news/articles/cr89zkvdlqpgo?at_medium=RSS&at_campaign=rss",
+      "summary": "Charles Swift faced a 140-mile round trip to get to a hospital, but had to drive himself.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0a0c/live/e3df6a00-d14e-11f1-9eb5-811878e0f07d.jpg",
+      "published": "2026-10-30T06:08:38+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "'I run a spotless kitchen', says Michelin-star restaurant chef in wake of food hygiene debacle",
+      "link": "https://www.bbc.co.uk/news/articles/cqp8g19r66y4o?at_medium=RSS&at_campaign=rss",
+      "summary": "Chef Gareth Ward defends how he operates in documentary after Ynyshir got a one-star hygiene rating.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d7e9/live/7ce4e4d0-d386-11f1-a701-fddedf244c16.jpg",
+      "published": "2026-10-30T06:08:16+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Syrians struggle with soaring prices as crisis challenges post-Assad recovery",
       "link": "https://www.bbc.co.uk/news/articles/cmn4egvez1yzo?at_medium=RSS&at_campaign=rss",
@@ -62,7 +462,7 @@
       "language": "ur"
     },
     {
-      "title": "Crypto giant Binance hit by hack suspected to be largest in history",
+      "title": "Crypto giant Binance hit by $6.3bn hack suspected to be largest in history",
       "link": "https://www.bbc.co.uk/news/articles/cwg7xp8kx4v5o?at_medium=RSS&at_campaign=rss",
       "summary": "Two analytics firms have attributed the incident to a North Korean hacking unit called TraderTraitor.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6a4c/live/ee32b970-d406-11f1-b5d5-035446124886.jpg",
@@ -70,16 +470,6 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
-    },
-    {
-      "title": "مولانا مشکل وقت میں ن لیگ کے ساتھ کھڑے ہوئے ہیں: رانا ثناء اللّٰہ",
-      "link": "https://jang.com.pk/news/1629071",
-      "summary": "— فائل فوٹووزیرِ اعظم شہباز شریف کے مشیر برائے سیاسی امور رانا ثناء اللّٰہ نے کہا ہے کہ مولانا فضل الرحمٰن مشکل وقت میں مسلم لیگ ن کے...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-30/b_1629071_103040_updates.jpg\"/",
-      "published": "2026-10-30T05:10:36+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
     },
     {
       "title": "Iran says four tankers on fire after hitting mines in Hormuz",
@@ -120,16 +510,6 @@
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "بلوچستان: سیکیورٹی فورسز نے فتنہ الہندوستان کے 5 ڈرون مار گرائے",
-      "link": "https://jang.com.pk/news/1629058",
-      "summary": "— تصویر بشکریہ سوشل میڈیابلوچستان میں سیکیورٹی فورسز نے فتنہ الہندوستان کے ڈرون حملے کی کوشش ناکام بنا دی۔سیکیورٹی ذرائع کے...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-30/b_1629058_104226_updates.jpg\"/",
-      "published": "2026-10-30T04:10:39+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
     },
     {
       "title": "’عمران خان خوشی سے منتقل ہوں گے‘: بی بی سی نے ’نامکمل‘ اسلام آباد ماڈل جیل میں کیا دیکھا؟",
@@ -175,7 +555,7 @@
       "title": "Sir Patrick Stewart: Actor who moved effortlessly between Star Trek and Shakespeare",
       "link": "https://www.bbc.co.uk/news/articles/cye0l23lx15o?at_medium=RSS&at_campaign=rss",
       "summary": "The English actor began his career on stage before finding fame as the captain of the USS Enterprise.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/adc6/live/62ea9ce0-d3ff-11f1-b497-e5f21e10c3e0.jpg",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/43ea/live/afe085e0-d42d-11f1-a701-fddedf244c16.jpg",
       "published": "2026-10-30T03:57:06+00:00",
       "source": "BBC News",
       "category": "World",
@@ -322,6 +702,16 @@
       "language": "ur"
     },
     {
+      "title": "ایل پی جی کی قیمت کم نہ ہو سکی، سرکاری اور مارکیٹ پرائس میں تین سو روپے کا فرق",
+      "link": "https://www.express.pk/story/2841279/lpg-crisis-2841279",
+      "summary": "صارفین 550 سے 600 روپے فی کلو تک ایل پی جی خریدنے پر مجبور ہیں",
+      "image_url": "",
+      "published": "2026-10-30T01:47:26+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Australian mushroom murderer loses appeal to overturn convictions",
       "link": "https://www.bbc.co.uk/news/articles/ck8dz8j5n993o?at_medium=RSS&at_campaign=rss",
       "summary": "Erin Patterson argued her trial was unfair due to seven grounds but three appeal judges dismissed them all.",
@@ -332,14 +722,124 @@
       "language": "en"
     },
     {
-      "title": "We went on holiday with our neighbours and swapped families - it tore us apart",
-      "link": "https://www.bbc.co.uk/news/articles/cxddv1vygpvmo?at_medium=RSS&at_campaign=rss",
-      "summary": "Rachel Stone tells how her parents swapped partners, the chaos it caused and how she came to forgive them.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/45d8/live/1344e1b0-d156-11f1-a701-fddedf244c16.jpg",
-      "published": "2026-10-30T00:57:45+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
+      "title": "راولپنڈی؛ محلے دار شادی شدہ شخص کی 14 سالہ بچی مبینہ زیادتی",
+      "link": "https://www.express.pk/story/2841277/rawalpindi-married-neighbour-accused-of-sexually-assaulting-14-year-old-girl-2841277",
+      "summary": "کچھ روز قبل بچی گھر میں بے ہوش ہوگئی، جس پر اسے ڈاکٹر کے پاس لے جانے کی کوشش کی گئی، مدعی کا بیان",
+      "image_url": "",
+      "published": "2026-10-30T01:33:33+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "امریکا کا یورپی اتحادیوں کو روس کے خلاف بیان بازی میں نرمی اختیار کرنے کا مشورہ",
+      "link": "https://www.express.pk/story/2841274/exclusive-pentagon-tells-europeans-to-cool-their-rhetoric-on-russia-sources-say-2841274",
+      "summary": "لتھوانیا، لٹویا اور ایسٹونیا ان ممالک میں شامل ہیں جنہیں یہ پیغام دیا گیا",
+      "image_url": "",
+      "published": "2026-10-30T01:22:09+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "راشد خان نے ٹی ٹوئنٹی انٹرنیشنل کرکٹ میں تاریخ رقم کردی",
+      "link": "https://www.express.pk/story/2841272/rashid-khan-makes-t20i-history-with-200-wicket-feat-2841272",
+      "summary": "راشد خان نے یہ تاریخی سنگ میل جمعرات کو شارجہ کرکٹ اسٹیڈیم میں زمبابوے کے خلاف دوسرے ٹی ٹوئنٹی میچ کے دوران حاصل کیا",
+      "image_url": "",
+      "published": "2026-10-30T01:17:20+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "جامعہ بنوریہ کا تین روزہ ادبی فیسٹیول ’تکلم‘ اختتام پذیر، 400 سے زائد تعلیمی اداروں کے طلبہ شریک",
+      "link": "https://www.express.pk/story/2841271/jamia-binorias-three-day-literary-festival-takallum-2026-concludes-in-karachi-2841271",
+      "summary": "فیسٹیول کے دوران حسنِ قرأت، نعت، نظم، غزل، بیت بازی، اردو تقاریر اور مقالہ نگاری سمیت متعدد مقابلے منعقد کیے گئے",
+      "image_url": "",
+      "published": "2026-10-30T01:14:45+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "گوگل کو ایک دن میں 500 ارب ڈالر سے زائد کا نقصان، مصنوعی ذہانت پر بھاری سرمایہ کاری مہنگی پڑگئی",
+      "link": "https://www.express.pk/story/2841270/google-loses-over-500-billion-in-market-value-as-ai-spending-fears-rattle-investors-2841270",
+      "summary": "کمپنی کے حصص کی قیمت تقریباً 13 فیصد گر کر گزشتہ چھ ماہ کی کم ترین سطح پر پہنچ گئی",
+      "image_url": "",
+      "published": "2026-10-30T01:14:37+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کرپٹو ایکسچینج بائینانس پر ہیکرز کا بڑا حملہ، 6.3 ارب ڈالر لے اڑے",
+      "link": "https://www.express.pk/story/2841269/major-hacker-attack-on-crypto-exchange-binance-63-billion-stolen-2841269",
+      "summary": "احتیاطی اقدام کے طور پر رقوم جمع کرانے اور نکلوانے کی سہولت عارضی طور پر معطل کر دی گئی ہے۔",
+      "image_url": "",
+      "published": "2026-10-30T01:11:51+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کراچی: جماعت اسلامی نے نہر خیام پر جاری متنازع تعمیرات کو سندھ ہائیکورٹ میں چیلنج کردیا",
+      "link": "https://www.express.pk/story/2841268/jamat-islami-challenge-construction-on-nehar-khayam-in-sindh-high-court-2841268",
+      "summary": "نہرِ خیام پر کمرشل سرگرمیوں اور تعمیرات کے باعث رہائشی علاقوں میں اربن فلڈنگ کا خطرہ پیدا ہوگیا ہے، سیف الدین ایڈووکیٹ",
+      "image_url": "",
+      "published": "2026-10-30T01:08:55+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "تین موٹر سائیکل سواروں کی جانب سے لوٹ مار کا دعویٰ جھوٹا نکلا",
+      "link": "https://www.express.pk/story/2841267/the-claim-of-a-robbery-by-three-motorcyclists-turned-out-to-be-false-2841267",
+      "summary": "جھوٹی کالز کرنے والوں کے خلاف قانونی کارروائی یقینی بنائی جائے گی",
+      "image_url": "",
+      "published": "2026-10-30T01:04:29+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "70سال کی نورین نیازی کو سیاسی انتقام کا نشانہ بنایا جارہا ہے سلمان اکرم راجا",
+      "link": "https://www.express.pk/story/2841263/70-year-old-noreen-niazi-is-being-targeted-for-political-vendetta-says-salman-akram-raja-2841263",
+      "summary": "ہائیکورٹ میں میڈیا سے گفتگو ہمارا مطالبہ ہے کہ نورین نیازی تک فیملی کی رسائی کی دی جائے",
+      "image_url": "",
+      "published": "2026-10-30T01:03:26+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "آزاد کشمیر کے باشعور عوام کا ریاست میں انتشار پھیلانے والے فسادی جتھے کو کرارا جواب",
+      "link": "https://www.express.pk/story/2841262/aware-citizens-of-azad-kashmir-give-a-strong-response-to-elements-spreading-unrest-in-the-region-2841262",
+      "summary": "کالعدم ایکشن کمیٹی ٹولوں میں تقسیم ہوکر انتشاری ٹولہ بن چکی ہے، شہریوں کا موقف",
+      "image_url": "",
+      "published": "2026-10-30T01:01:50+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ہانگ کانگ سکسز: دفاعی چیمپئن پاکستان کو پہلے میچ میں یو اے ای کے ہاتھوں شکست",
+      "link": "https://www.express.pk/story/2841259/hong-kong-sixes-defending-champions-pakistan-defeated-by-the-uae-in-their-opening-match-2841259",
+      "summary": "پاکستان اپنے دوسرے میچ میں کچھ دیر بعد روایتی حریف بھارت کے مدمقابل آئے گا",
+      "image_url": "",
+      "published": "2026-10-30T00:58:13+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سنتھیا ایریوو کا اریانا گرانڈے کے ساتھ گہری دوستی پر تنقید کرنے والوں کو منہ توڑ جواب",
+      "link": "https://www.express.pk/story/2841258/cynthia-erivos-scathing-response-to-critics-of-her-close-friendship-with-ariana-grande-2841258",
+      "summary": "انہوں نے سوال اٹھایا کہ انٹرنیٹ کو دو خواتین کا ایک دوسرے سے قریب ہونا غیر معمولی بات کیوں لگ رہی ہے؟",
+      "image_url": "",
+      "published": "2026-10-30T00:54:08+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "کراچی میں ایل پی جی کی قیمت میں پھر اضافہ",
@@ -402,6 +902,16 @@
       "language": "en"
     },
     {
+      "title": "امریکا ایران معاہدے کے قریب، امریکی نمائندے ٹام بیرک نے قطر اور پاکستان کی کوششوں کا اعتراف کرلیا",
+      "link": "https://www.express.pk/story/2841252/us-and-iran-very-close-to-initial-deal-envoy-credits-qatar-and-pakistan-2841252",
+      "summary": "خطے کے ممالک نے واشنگٹن اور تہران کے درمیان کشیدگی کم کرنے کے لیے بات چیت کا راستہ کھولنے میں مدد فراہم کی ہے، انٹرویو",
+      "image_url": "",
+      "published": "2026-10-30T00:37:53+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "جان ریمبو کے بیٹے نے لمز سے گریجویشن مکمل کر لی، اداکار خوشی سے نہال",
       "link": "https://www.express.pk/story/2841251/john-rambos-son-completes-graduation-from-lums-actor-overjoyed-2841251",
       "summary": "انہوں نے کہا کہ آج وہ خود کو دنیا کا خوش قسمت ترین باپ محسوس کر رہے ہیں۔",
@@ -420,6 +930,26 @@
       "source": "Express Tribune",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "کراچی: جعلی پولیس مقابلے میں نوجوان کو قتل کرنے والے پولیس اہلکار کو سزائے موت سنادی گئی",
+      "link": "https://www.express.pk/story/2841249/karachi-police-officer-who-killed-a-young-man-in-a-staged-police-encounter-sentenced-to-death-2841249",
+      "summary": "عدالت نے شریک ملزمان ناصر اور فیصل کو عمر قید کی سزا سنادی",
+      "image_url": "",
+      "published": "2026-10-30T00:29:14+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "عدالت کی عمران خان کی بہنوں کی بیماری سے متعلق درخواست دائر کرنے کی ہدایت",
+      "link": "https://www.express.pk/story/2841248/court-directs-filing-of-petition-regarding-imran-khans-sisters-illness-2841248",
+      "summary": "جسٹس عبہر گل خان نے کہا کہ آپ نے نورین نیازی کی بیماری سے متعلق درخواست نہیں دی",
+      "image_url": "",
+      "published": "2026-10-30T00:29:12+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "پشاور ناردرن بائی پاس منصوبے پر تعمیراتی کام تیزی سے جاری",
@@ -445,7 +975,7 @@
       "title": "I didn't know I was lacking in vitamin D until I collapsed at work",
       "link": "https://www.bbc.co.uk/news/articles/cm78pxxe55v0o?at_medium=RSS&at_campaign=rss",
       "summary": "Doctors are finding vitamin D deficiency is increasingly widespread in the UK, especially in young people. But the symptoms are difficult to spot and can be missed.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c7fd/live/67a93c60-d3bd-11f1-a62f-fd53d503ac8d.jpg",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0964/live/97f92df0-d42e-11f1-93e1-3b657b665bcf.jpg",
       "published": "2026-10-30T00:29:05+00:00",
       "source": "BBC News",
       "category": "World",
@@ -468,536 +998,6 @@
       "image_url": "",
       "published": "2026-10-30T00:26:04+00:00",
       "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کیا جھانوی کپور جلد اپنے بوائے فرینڈ سے شادی کرنے والی ہیں؟ اداکارہ کا بڑا انکشاف",
-      "link": "https://www.express.pk/story/2841242/is-janhvi-kapoor-going-to-marry-her-boyfriend-soon-the-actresss-big-revelation-2841242",
-      "summary": "جھانوی کے مطابق وہ اور شیکھر بچپن سے ایک دوسرے کو جانتے ہیں",
-      "image_url": "",
-      "published": "2026-10-30T00:21:58+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Student-backed election winners demand sweeping resignations in Serbia",
-      "link": "https://www.bbc.co.uk/news/articles/cmx2dwzp0z0vo?at_medium=RSS&at_campaign=rss",
-      "summary": "Days after ousting Aleksandar Vučić's party from power, Student List MPs call for top figures to stand down.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6a5e/live/adc71d60-d3cd-11f1-9c32-1532a6164171.jpg",
-      "published": "2026-10-30T00:17:28+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Bombshell confession in The Traitors as faithfuls finally turn the screw",
-      "link": "https://www.bbc.co.uk/news/articles/ckr5y12r081zo?at_medium=RSS&at_campaign=rss",
-      "summary": "Could the faithfuls finally come good in Thursday's penultimate episode?",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b92d/live/69d85f50-d3e7-11f1-8aed-e5579b6f5a98.jpg",
-      "published": "2026-10-30T00:16:59+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "انتہاپسندی، تکفیر اور فرقہ واریت کیخلاف علماء مشترکہ لائحہ عمل مرتب کریں، حافظ نعیم الرحمان",
-      "link": "https://www.express.pk/story/2841241/hafiz-naeem-ur-rehman-2841241",
-      "summary": "فلسطین و کشمیر کے تنازعات پر قرآن و سنت کی روشنی میں واضح پالیسی کی ضرورت ہے، امیر جماعت اسلامی",
-      "image_url": "",
-      "published": "2026-10-30T00:14:38+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "فتنۃ الہندوستان کے سہولت کاروں کا دہشت گرد عناصر سے لاتعلقی کا اعلان، اہم انکشافات سامنے آگئے",
-      "link": "https://www.express.pk/story/2841240/facilitators-of-fitna-al-hindustan-disassociate-themselves-from-terrorist-elements-key-revelations-emerge-2841240",
-      "summary": "سیکیورٹی فورسز پر حملوں کے لیے دہشت گرد تنظیم کی سہولت کاری کرتے رہے، سہولت کاروں کا اعتراف",
-      "image_url": "",
-      "published": "2026-10-30T00:13:35+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ایران کے ساتھ جنگ ’ہمیشہ جاری رہنے والی جنگ‘ نہیں بنے گی، ٹرمپ ایسا نہیں ہونے دیں گے: جے ڈی وینس",
-      "link": "https://www.express.pk/story/2841237/vance-says-trump-will-not-let-iran-conflict-become-a-forever-war-2841237",
-      "summary": "طویل فوجی مداخلتوں کی مخالفت کا مطلب یہ نہیں کہ فوجی طاقت کے استعمال کو مکمل طور پر مسترد کردیا جائے، انٹرویو",
-      "image_url": "",
-      "published": "2026-10-30T00:05:55+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "From workshops to the catwalk - why mended clothes are going mainstream",
-      "link": "https://www.bbc.co.uk/news/articles/cmwy9qe5r1z3o?at_medium=RSS&at_campaign=rss",
-      "summary": "A new generation is embracing eye-catching patching and visible mends.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/04bf/live/f3978b70-d08c-11f1-a701-fddedf244c16.jpg",
-      "published": "2026-10-30T00:00:35+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "پی ایس ایل 12: ریٹینشنز کیلیے نئی شرائط کیساتھ آخری تاریخ مقرر کر دی گئی",
-      "link": "https://www.express.pk/story/2841236/psl-12-deadline-for-retentions-has-been-set-2841236",
-      "summary": "7 کھلاڑی ریٹین کرنے کا آپشن استعمال کرنے والی فرنچائز کو پچھلے آکشن کا اپنا سب سے مہنگا کھلاڑی لازمی ریلیز کرنا ہوگا",
-      "image_url": "",
-      "published": "2026-10-29T23:55:24+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "انڈونیشیا: جنگلاتی آگ سے پیدا ہونے والی آلودگی سے 3,560 اموات",
-      "link": "https://www.express.pk/story/2841235/air-pollution-from-fires-killed-3560-people-in-indonesia-in-september-report-finds-2841235",
-      "summary": "آگ سے پیدا ہونے والے باریک ذرات PM2.5 کی قلیل مدتی نمائش سے ہونے والی اموات میں نمایاں اضافہ ہوا",
-      "image_url": "",
-      "published": "2026-10-29T23:54:30+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "US vice president rules out 'forever war' in Iran, says Trump will accomplish objectives",
-      "link": "https://tribune.com.pk/story/2637730/us-vice-president-rules-out-forever-war-in-iran-says-trump-will-accomplish-objectives",
-      "summary": "US deploys 10 military cargo planes to Israel amid preparations for possible strike on Iran",
-      "image_url": "",
-      "published": "2026-10-29T23:49:41+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "امریکی دباؤ کے بعد یوکرین نے روسی آئل ریفائنریوں پر حملے عارضی طور پر روک دیے",
-      "link": "https://www.express.pk/story/2841234/following-american-pressure-ukraine-has-temporarily-halted-attacks-on-russian-oil-refineries-2841234",
-      "summary": "واشنگٹن نے یوکرین کو ہتھیاروں کی فراہمی سے متعلق تعاون محدود کرنے کی دھمکی بھی دی تھی",
-      "image_url": "",
-      "published": "2026-10-29T23:49:01+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "مکہ مکرمہ کی جانب حوثیوں کا ڈرون، سعودی اتحادی فوج نے تباہ کرنے کا دعویٰ کردیا",
-      "link": "https://www.express.pk/story/2841233/saudi-led-coalition-says-houthi-drone-heading-towards-makkah-was-destroyed-2841233",
-      "summary": "حوثیوں کی جانب سے سعودی اتحادی افواج کا ڈرون گرانے سے متعلق بیان پر فوری طور پر کوئی ردعمل سامنے نہیں آیا",
-      "image_url": "",
-      "published": "2026-10-29T23:27:53+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ڈی جی آئی ایس پی آر کا دورہ پشاور، یونیورسٹی طلبہ اور فیکلٹی ممبران کیساتھ خصوصی نشست",
-      "link": "https://www.express.pk/story/2841232/dg-ispr-peshawar-visit-2841232",
-      "summary": "ڈی جی آئی ایس پی آر نے ملکی سیکیورٹی صورتحال اور علاقائی چیلنجز پر طلبہ کے سوالات کے مفصل جوابات دیے",
-      "image_url": "",
-      "published": "2026-10-29T23:24:26+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کراچی کی بدترین صورتحال سے پریشان شہریوں نے نئے صوبوں کے قیام کو ناگزیر قرار دے دیا",
-      "link": "https://www.express.pk/story/2841231/karachi-people-support-new-province-2841231",
-      "summary": "سندھ حکومت کراچی کے مسائل حل کرنے میں ناکام ہوگئی، نیا نظام بنانا ضروری ہے، شہری",
-      "image_url": "",
-      "published": "2026-10-29T23:24:09+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بلوچستان میں فتنۃ الہندوستان کے حملے کی کوشش ناکام، فورسز نے 5 ڈرون مار گرائے",
-      "link": "https://www.express.pk/story/2841230/balochistan-drone-attack-2841230",
-      "summary": "دہشتگردوں نے ضلع خاران میں قائم چیک پوسٹ کو کم درجے کے ڈرونز سے نشانہ بنانے کی کوشش کی، ذرائع",
-      "image_url": "",
-      "published": "2026-10-29T23:23:49+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کرپٹو کرنسی کے بدلے ایران کے لیے جاسوسی، اسرائیلی فوجی گرفتار",
-      "link": "https://www.express.pk/story/2841229/israeli-soldier-arrested-for-spying-for-iran-in-exchange-for-cryptocurrency-2841229",
-      "summary": "ملزم کو مبینہ طور پر معلومات کے بدلے کرپٹو کرنسی میں ادائیگیاں کی گئیں",
-      "image_url": "",
-      "published": "2026-10-29T23:12:52+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Hyrox athlete who soiled herself in race says she put others at risk",
-      "link": "https://www.bbc.co.uk/news/articles/c6gr8l15k744o?at_medium=RSS&at_campaign=rss",
-      "summary": "In her first interview since the incident, Joanna Wietrzyk told the BBC she takes responsibility for it but did not deserve such a severe backlash.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2a5c/live/1c953ab0-d3fb-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-10-29T23:03:39+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Google value plunges by $500bn as AI fears rattle Wall Street",
-      "link": "https://www.bbc.co.uk/news/articles/cm9qzdqpxy48o?at_medium=RSS&at_campaign=rss",
-      "summary": "Google spooked investors so badly that its stock hit a six-month low, after it revealed its AI search summaries were affecting ad revenue.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3304/live/1c4d6e00-d3d4-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-10-29T22:17:52+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "نگرپارکر، ایمبولینس سلنڈر دھماکے میں ہلاکتیں 10 ہوگئیں",
-      "link": "https://jang.com.pk/news/1628979",
-      "summary": "تھرپارکر کی تحصیل نگرپارکر میں ایمبولینس میں سلنڈر پھٹنے سے ہلاک افراد کی تعداد 10 ہوگئی۔ کراچی ٹراما میں زیرعلاج بچہ بھی دم توڑ گیا۔...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-30/b_1628979_024853_updates.jpg\"/",
-      "published": "2026-10-29T21:10:55+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "امریکا کی ایران سے مذاکرات بحالی کی کوشش",
-      "link": "https://jang.com.pk/news/1628932",
-      "summary": "امریکا کی ایران سے مذاکرات کی بحالی کی کوشش، نائب صدر جے ڈی وینس نے ایرانی سپریم نیشنل سیکیورٹی کونسل کے سیکریٹری محسن رضائی کو خط...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-30/b_1628932_020542_updates.jpg\"/",
-      "published": "2026-10-29T21:10:34+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کراچی، کامران چورنگی کے قریب فرنیچر مارکیٹ میں لگی آگ پر قابو پالیا گیا",
-      "link": "https://jang.com.pk/news/1628934",
-      "summary": "کراچی کے علاقے گلستانِ جوہر کامران چورنگی کے قریب فرنیچر مارکیٹ میں لگی آگ پر قابو پالیا گیا۔متاثرہ مارکیٹ میں کولنگ کا عمل کا جاری...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-10-30/b_1628934_023543_updates.jpg\"/",
-      "published": "2026-10-29T21:10:11+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Pakistan 'overperformer' in innovation, climbs 4 ranks globally in 2026: report",
-      "link": "https://www.dawn.com/news/2040752/pakistan-overperformer-in-innovation-climbs-4-ranks-globally-in-2026-report",
-      "summary": "ISLAMABAD: Pakistan rose to 95th place among the 139 economies of the world featured in the ‘Global Innovation Index 2026’ published by the World Intellectual Property Organisation (WIPO), it emerged on Thursday. Advancing in rank from 99th place in 2025, Pakistan also reclaimed its “overperformer” status for the fourth time, a status given to economies iden",
-      "image_url": "https://i.dawn.com/large/2016/03/56e3d7bc62157.jpg",
-      "published": "2026-10-29T21:08:47+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "کراچی: شارع فیصل پر تیز رفتار گاڑی کی ٹکر، موٹرسائیکل سوار جاں بحق، ایک زخمی",
-      "link": "https://www.express.pk/story/2841228/karachi-motorcyclist-killed-another-injured-after-being-struck-by-a-speeding-vehicle-on-sharea-faisal-2841228",
-      "summary": "حادثے کے بعد نامعلوم گاڑی کا ڈرائیور گاڑی سمیت موقع سے فرار ہوگیا",
-      "image_url": "",
-      "published": "2026-10-29T20:57:08+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "'Continue your journey': Key moments of leaked Spain train crash audio",
-      "link": "https://www.bbc.co.uk/news/videos/c6vgjeg0myzgo?at_medium=RSS&at_campaign=rss",
-      "summary": "Recordings between a control centre and the train drivers appear to show one train was given clearance to move even though another train had stalled on the track.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d46f/live/7d9cd370-d3e4-11f1-9caf-3b69fd8bbd8b.jpg",
-      "published": "2026-10-29T20:50:25+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "نیتن یاہو کے متنازع بیان کو اپوزیشن رہنماؤں اور عرب جماعتوں نے مسترد کر دیا",
-      "link": "https://www.express.pk/story/2841227/opposition-leaders-and-arab-parties-have-rejected-netanyahus-controversial-statement-2841227",
-      "summary": "دو عرب سیاسی اتحادوں نے توقعات کے برعکس مجموعی طور پر 19 نشستیں جیت لیں",
-      "image_url": "",
-      "published": "2026-10-29T20:46:41+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Governor Kundi seeks K-P energy dues",
-      "link": "https://tribune.com.pk/story/2637696/governor-kundi-seeks-k-p-energy-dues",
-      "summary": "Province to write letter to Centre pursuing net hydel profits",
-      "image_url": "",
-      "published": "2026-10-29T20:46:40+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "K-P plans digital human rights portal",
-      "link": "https://tribune.com.pk/story/2637697/k-p-plans-digital-human-rights-portal",
-      "summary": "Shared system to link existing bodies for better tracking",
-      "image_url": "",
-      "published": "2026-10-29T20:46:40+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Gwadar's fresh seafood finds new fans in Quetta",
-      "link": "https://tribune.com.pk/story/2637699/gwadars-fresh-seafood-finds-new-fans-in-quetta",
-      "summary": "Availability of fresh fish from Balochistan's own coastline is more than just another dining option",
-      "image_url": "",
-      "published": "2026-10-29T20:46:40+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "King Charles arrives in Guyana as Bahamas visit declared 'diplomatic success'",
-      "link": "https://www.bbc.co.uk/news/articles/c893zev54341o?at_medium=RSS&at_campaign=rss",
-      "summary": "As the King left the Bahamas his spokesman said the islands had \"a special place in the King's heart\".",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/90d9/live/9f67d540-d3cb-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-10-29T20:35:05+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Sana assures family access to Noreen",
-      "link": "https://tribune.com.pk/story/2637695/sana-assures-family-access-to-noreen",
-      "summary": "Describes Imran sister's condition as stable",
-      "image_url": "",
-      "published": "2026-10-29T20:25:39+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "US stocks slide as Google parent's revenue miss revives AI spending jitters",
-      "link": "https://www.dawn.com/news/2040760/us-stocks-slide-as-google-parents-revenue-miss-revives-ai-spending-jitters",
-      "summary": "US stock prices retreated on Thursday, with investors reassessing big tech’s massive AI spending spree as they digested high-profile earnings, crucial inflation data and the US Federal Reserve’s policy decision. All three major US stock indexes were in negative territory, with the Nasdaq dragged sharply lower by tech and tech-related megacaps in the wake of ",
-      "image_url": "https://i.dawn.com/large/2026/10/30012234c51fc1d.webp",
-      "published": "2026-10-29T20:23:37+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Israeli opposition accuses Netanyahu of trying to 'delegitimise' election",
-      "link": "https://www.bbc.co.uk/news/articles/ckdd8qdl9e0eo?at_medium=RSS&at_campaign=rss",
-      "summary": "The PM's Likud party has alleged foreign interference and said Arab-led parties \"stole\" the election after his coalition lost its majority.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/213a/live/ecf64a00-d3d3-11f1-9c32-1532a6164171.jpg",
-      "published": "2026-10-29T20:21:54+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "عدن ایئرپورٹ پر حوثی حملوں کا خدشہ، یمن کا سلامتی کونسل سے سخت کارروائی کا مطالبہ",
-      "link": "https://www.express.pk/story/2841226/fear-of-houthi-attacks-on-aden-airport-yemen-calls-on-security-council-to-take-firm-action-2841226",
-      "summary": "عدن انٹرنیشنل ایئرپورٹ دوبارہ پروازوں کے لیے کھول دیا گیا ہے",
-      "image_url": "",
-      "published": "2026-10-29T20:21:52+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Medvedev battles back from brink to beat Norrie in Vienna",
-      "link": "https://arynews.tv/medvedev-battles-back-from-brink-to-beat-norrie-in-vienna",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/FotoJet-2026-10-30T010628.894.jpg",
-      "published": "2026-10-29T20:12:56+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Govt stands firm on petroleum levy",
-      "link": "https://tribune.com.pk/story/2637689/govt-stands-firm-on-petroleum-levy",
-      "summary": "Rules out concessions under political pressure",
-      "image_url": "",
-      "published": "2026-10-29T20:10:41+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "PM pledges medical care for all",
-      "link": "https://tribune.com.pk/story/2637691/pm-pledges-medical-care-for-all",
-      "summary": "Orders free treatment at Pakistan-China Friendship hospital",
-      "image_url": "",
-      "published": "2026-10-29T20:10:41+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "PTI reposes trust in Sohail Afridi",
-      "link": "https://tribune.com.pk/story/2637692/pti-reposes-trust-in-sohail-afridi",
-      "summary": "Barrister Gohar says that all party members part of the K-P Assembly were a source of pride for us",
-      "image_url": "",
-      "published": "2026-10-29T20:10:41+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "معروف گلوکارہ حمیرا چنہ کی گاڑی چوری ہونے کے واقعہ کا وزیر داخلہ سندھ نے نوٹس لے لیا",
-      "link": "https://www.express.pk/story/2841225/the-sindh-home-minister-has-taken-notice-of-the-incident-involving-the-theft-of-renowned-singer-humaira-channas-car-2841225",
-      "summary": "ضیا الحسن لنجار نے ایس ایس پی اے سی ایل سی اور ایس ایس پی ایسٹ سے واقعے کی تفصیلات طلب کر لیں",
-      "image_url": "",
-      "published": "2026-10-29T20:10:40+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "'Not related to defence': Govt responds to Fazl's remarks about Makkah pact countries' meeting in Tehran",
-      "link": "https://www.dawn.com/news/2040695/not-related-to-defence-govt-responds-to-fazls-remarks-about-makkah-pact-countries-meeting-in-tehran",
-      "summary": "Federal ministers on Thursday responded to Jamiat Ulema-i-Islam-Fazl (JUI-F) chief Maulana Fazlur Rehman’s remarks regarding a recent huddle in Tehran comprising the Makkah defence pact countries and Iran. Defence Minister Khawaja Asif and Interior Minister Mohsin Naqvi said the meeting was not related to defence. Hence, Asif said his presence was not requir",
-      "image_url": "https://i.dawn.com/large/2026/10/29172758a688624.webp",
-      "published": "2026-10-29T20:04:50+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "کراچی: مختلف علاقوں میں پولیس مقابلے، 9 ڈاکو زخمی حالت میں گرفتار",
-      "link": "https://www.express.pk/story/2841224/karachi-police-encounters-in-various-areas-5-bandits-arrested-in-injured-condition-2841224",
-      "summary": "گرفتار ملزمان کے قبضے سے اسلحہ، موبائل فونز اور نقد رقم برآمد کی گئی ہے",
-      "image_url": "",
-      "published": "2026-10-29T20:03:08+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Google expands AI search ads to ten new countries including Pakistan",
-      "link": "https://arynews.tv/google-expands-ai-search-ads-to-ten-new-countries-including-pakistan",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/google.jpg",
-      "published": "2026-10-29T19:49:13+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "سپریم کورٹ بار الیکشن میں کامیابی پر وزیراعظم کی انڈیپینڈنٹ گروپ کو مبارکباد ... اعظم نذیر تارڑ اور احسن بھون کی قیادت قابلِ تحسین ہے، شہباز شریف؛ نو منتخب صدر سید امجد ... مزید",
-      "link": "https://urdupoint.com/n/4993744",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-10-29T19:40:37+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ریاست کو ماں کا درجہ دیا ہے تو ایسے الفاظ استعمال نہیں کیے جا سکتے، رانا ثنا اللہ ... eبانی پی ٹی آئی سے متعلق تمام معاملات سپریم کورٹ کے سامنے رکھے گئے ہیں، وزیراعظم کے ... مزید",
-      "link": "https://urdupoint.com/n/4993743",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-10-29T19:40:34+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "تحریک تحفظ آئین پاکستان کی مولانا فضل الرحمان سے ملاقات، تقریر کی حمایت ... حکومتی وزرائ کی جانب سے مولانا فضل الرحمان کی کردار کشی کی مذمت، بانی پی ٹی آئی کی بہنوں کی ... مزید",
-      "link": "https://urdupoint.com/n/4993742",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-10-29T19:40:31+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بانی پی ٹی آئی کی بہنوں پر اتنا ظلم مارشل لا میں بھی نہیں ہوا، فلک ناز چترالی ... A سینیٹ میں پی ٹی آئی سینیٹر کا خواتین کی گرفتاریوں پر شدید احتجاج، تینوں بہنوں کی فوری ... مزید",
-      "link": "https://urdupoint.com/n/4993741",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-10-29T19:40:28+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ستھرا پنجاب: لاہور بھر میں صفائی ستھرائی اور زیرو ویسٹ مہم جاری ... ئ*تمام یونین کونسلز، نہروں، نالوں اور پبلک سائٹس سے کوڑا کرکٹ کا مکمل خاتمہ جاری ہے",
-      "link": "https://urdupoint.com/n/4993739",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-10-29T19:40:21+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "لاہور :انسانیت سوز واقعہ: سگی بہن کو جنسی زیادتی کا نشانہ بنانے والا بھائی گرفتار ... …ملزم سگی بہن کو زیادتی کا نشانہ بناتا رہا، خاتون کی 4 سال قبل شادی ہوئی، سسرال جا کر ... مزید",
-      "link": "https://urdupoint.com/n/4993738",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-10-29T19:40:16+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ویٹنگ لسٹ سے بھرتی ہونیوالے 2584 کانسٹیبلز کی تنخواہوں کا معاملہ حل ... ں*وزیراعلیٰ پنجاب مریم نواز شریف کی ون ٹائم ویور کے تحت تنخواہوں کے اجرا کی منظوری صوبائی کابینہ ... مزید",
-      "link": "https://urdupoint.com/n/4993737",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-10-29T19:40:13+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "آئی جی پنجاب عبدالکریم سیگولڈ میڈل جیتنے والی پاکستان پولیس والی بال ٹیم کے کھلاڑیوں کی ملاقات ... ۳آئی جی پنجاب نے فاتح ٹیم کے مینیجر، کوچز، ٹرینر سمیت 12 کھلاڑیوں کو ... مزید",
-      "link": "https://urdupoint.com/n/4993736",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-10-29T19:40:08+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "آئی جی پنجاب عبدالکریم کی زیرصدارت پولیس ایگزیکٹو بورڈ کا اجلاس، اہم انتظامی و پالیسی امور کا جائزہ ... ،پولیس افسران و اہلکاروں کیلئے رہائشی سہولیات میں اضافے، خواتین ... مزید",
-      "link": "https://urdupoint.com/n/4993735",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-10-29T19:40:03+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "2025 سے اب تک 2 ہزار کے قریب لوگ ایکسٹرا جوڈیشل کِلنگ میں مار دیئے گئے، اسد قبال بٹ ... پچھلے 6 مہینوں میں1 ہزار لوگوں کو ماردیا گیا، اس طریقے سے جرائم کم نہیں ہوتے، جب تھپڑ ... مزید",
-      "link": "https://urdupoint.com/n/4993734",
-      "summary": "",
-      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_0e55f_1793303355.jpg._3",
-      "published": "2026-10-29T19:36:01+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Protests in Islamabad require permission, no rallies by mobs allowed: Mohsin Naqvi",
-      "link": "https://arynews.tv/protests-in-islamabad-require-permission-no-rallies-by-mobs-allowed-mohsin-naqvi",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/08/Mohsin-Naqvi-2.jpg",
-      "published": "2026-10-29T19:32:40+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "کشمیر چوک انڈر پاس پر دن رات کام جاری، 20 دنوں میں 78 فیصد کام مکمل، منصوبہ آخری مراحل میں داخل",
-      "link": "https://urdupoint.com/n/4993733",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-10-29T19:32:05+00:00",
-      "source": "UrduPoint",
       "category": "اردو",
       "language": "ur"
     }
