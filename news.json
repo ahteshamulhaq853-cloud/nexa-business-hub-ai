@@ -1,6 +1,16 @@
 {
-  "updated": "2026-10-31T22:59:16.385890+00:00",
+  "updated": "2026-10-31T23:29:25.133711+00:00",
   "items": [
+    {
+      "title": "King to address slavery during Commonwealth speech in Antigua on final leg of Caribbean tour",
+      "link": "https://www.bbc.co.uk/news/articles/cq398y0zj9rpo?at_medium=RSS&at_campaign=rss",
+      "summary": "The King will deliver a speech to Commonwealth Heads of Government Meeting as he concludes his nine-day Caribbean tour.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1a11/live/9a9071c0-d57a-11f1-be5a-4bb1a466c469.jpg",
+      "published": "2026-10-31T22:56:15+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Crypto firm Binance covers 90% of losses after $6.3bn hack",
       "link": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o?at_medium=RSS&at_campaign=rss",
@@ -452,6 +462,16 @@
       "language": "ur"
     },
     {
+      "title": "CDA anti-encroachment drive to continue: Talal",
+      "link": "https://tribune.com.pk/story/2637991/cda-anti-encroachment-drive-to-continue-talal",
+      "summary": "State minister questions JUI-F's defence of encroachments",
+      "image_url": "",
+      "published": "2026-10-31T17:17:48+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "Bangladesh death toll from dengue rises, unlikely to ease before December",
       "link": "https://arynews.tv/bangladesh-death-toll-from-dengue-rises-unlikely-to-ease-before-december",
       "summary": "",
@@ -645,16 +665,6 @@
       "title": "S&P revises Meta outlook to 'negative'",
       "link": "https://tribune.com.pk/story/2637983/sp-revises-meta-outlook-to-negative",
       "summary": ".",
-      "image_url": "",
-      "published": "2026-10-31T16:10:25+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Chinese park courts Pakistani pine nuts, rice",
-      "link": "https://tribune.com.pk/story/2637982/chinese-park-courts-pakistani-pine-nuts-rice",
-      "summary": "Hulunbuir e-commerce hub offers beef processing expertise as boiled beef exports hit $14.52m",
       "image_url": "",
       "published": "2026-10-31T16:10:25+00:00",
       "source": "Express Tribune",
@@ -990,16 +1000,6 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "کراچی؛ پولیس سے مبینہ فائرنگ کے تبادلے میں ڈاکو ہلاک",
-      "link": "https://www.express.pk/story/2841557/karachi-police-firing-exchange-one-robber-killed-2841557",
-      "summary": "پولیس ہلاک اور زخمی حالت میں گرفتار ڈاکووں کا کرمنل ریکارڈ بھی چیک کر رہی ہے",
-      "image_url": "",
-      "published": "2026-10-31T14:07:07+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
     }
   ]
 }
