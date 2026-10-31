@@ -1,6 +1,16 @@
 {
-  "updated": "2026-10-31T20:51:38.432578+00:00",
+  "updated": "2026-10-31T21:23:45.152657+00:00",
   "items": [
+    {
+      "title": "Are De Zerbi's Spurs finding elusive consistency?",
+      "link": "https://www.bbc.co.uk/sport/football/articles/c6n04v897qe4o?at_medium=RSS&at_campaign=rss",
+      "summary": "Are Spurs finally finding elusive consistency under Roberto De Zerbi after a third successive Premier League win, asks chief football writer Phil McNulty?",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9051/live/7b9bec80-d567-11f1-910b-9bd7c745c627.jpg",
+      "published": "2026-10-31T21:16:11+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "6.3 ارب ڈالر کی ’تاریخی‘ کرپٹو ہیکنگ کے بعد بائنانس کا 90 فیصد نقصانات پورے کرنے کا دعویٰ",
       "link": "https://www.bbc.com/urdu/articles/cmde8pdl0e7ko?at_medium=RSS&at_campaign=rss",
@@ -87,16 +97,6 @@
       "summary": "One evacuated couple says they crossed minefields in Oleshky in search of food.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/053a/live/d1a9e840-d54c-11f1-bcb7-8f812b44c2e5.jpg",
       "published": "2026-10-31T19:22:26+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Maresca's big test is to address mounting Man City issues",
-      "link": "https://www.bbc.co.uk/sport/football/articles/cve8rkd8r302o?at_medium=RSS&at_campaign=rss",
-      "summary": "Enzo Maresca enjoyed a flawless start as Manchester City manager, winning his first seven Premier League games in charge, but the honeymoon period is now over.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9843/live/a24ea490-d557-11f1-b937-61b94454a4cf.jpg",
-      "published": "2026-10-31T19:05:41+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -602,6 +602,26 @@
       "language": "ur"
     },
     {
+      "title": "فریاد کس سے کریں",
+      "link": "https://www.express.pk/story/2841574/to-whom-should-one-turn-for-redress-2841574",
+      "summary": "لیکن ہمارا مسلہ یہ ہے کہ ہم لکڑی بھی نہیں بن سکتے کہ ہمیں ترکھان نے نہیں بنایا ہے",
+      "image_url": "",
+      "published": "2026-10-31T16:01:41+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ڈسپوزایبل",
+      "link": "https://www.express.pk/story/2841573/disposable-2841573",
+      "summary": "گلی محلوں اور سڑکوں پر کوڑا کرکٹ پھینکنا تو یوں بھی ہمارا فرض عین ہے",
+      "image_url": "",
+      "published": "2026-10-31T15:54:45+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Once Upon A Farm Tractor Wheels Gets Fresh US Warning",
       "link": "https://arynews.tv/fda-warns-against-all-flavors-of-once-upon-a-farm-toddler-bars",
       "summary": "",
@@ -610,6 +630,26 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "انتخابی فتح سے آگے",
+      "link": "https://www.express.pk/story/2841572/beyond-electoral-victory-2841572",
+      "summary": "اصل سوال یہ ہے کہ برازیل کے عوام نے کس مستقبل کے حق میں فیصلہ دیا ہے",
+      "image_url": "",
+      "published": "2026-10-31T15:44:59+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "جی 20 وزرائے خارجہ اجلاس بغیر کسی نتیجے پر پہنچے بغیر ختم",
+      "link": "https://www.express.pk/story/2841571/g20-summit-end-in-usa-2841571",
+      "summary": "روس کی شرکت پر اختلافات کے باعث روایتی گروپ فوٹو بھی منسوخ کردیا گیا۔",
+      "image_url": "",
+      "published": "2026-10-31T15:42:38+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "بے چینی",
@@ -960,46 +1000,6 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "عالمی بینک کی سندھ میں مقامی حکومتوں کی مالی استعداد بڑھانے کیلئے قرض کی منظوری",
-      "link": "https://www.express.pk/story/2841553/world-bank-approves-loan-to-strengthen-financial-capacity-of-local-governments-in-sindh-2841553",
-      "summary": "کراچی میں سالانہ پراپرٹی ٹیکس وصولی ساڑھے 8 کروڑ ڈالر تک بڑھانے کا ہدف مقرر کیا گیا ہے، عالمی بینک",
-      "image_url": "",
-      "published": "2026-10-31T13:38:43+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Burnham 'open' to calls for slavery apology but not reparations",
-      "link": "https://www.bbc.co.uk/news/articles/c5398239je88o?at_medium=RSS&at_campaign=rss",
-      "summary": "The British government has never formally apologised for slavery despite repeated calls from a number of Commonwealth leaders.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7a09/live/908b67d0-d4cf-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-10-31T13:28:40+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Europe can no longer rely on US to 'bankroll' its defence, Starmer says",
-      "link": "https://www.bbc.co.uk/news/articles/cxnv0p4l7rjlo?at_medium=RSS&at_campaign=rss",
-      "summary": "Sir Keir warns that \"things will not go back to the way they were\" as he says the US makes it clear it will no longer \"bankroll\" its allies.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/95ec/live/566810d0-915e-11f1-a8f1-774cbc5e1a9f.jpg",
-      "published": "2026-10-31T13:20:39+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "طالبان کا دہشتگردی کے خلاف کارروائی سے انکار تعلقات کی بحالی میں بڑی رکاوٹ ہے، وزارت اطلاعات",
-      "link": "https://www.express.pk/story/2841552/talibans-refusal-to-act-against-terrorism-is-a-major-obstacle-to-restoring-ties-says-information-ministry-2841552",
-      "summary": "طالبان قیادت اسلام آباد پرالزام تراشی کر رہی ہے جبکہ افغان سرزمین سے ہونے والی دہشت گردی کو دانستہ نظر انداز کر رہی ہے",
-      "image_url": "",
-      "published": "2026-10-31T13:15:50+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
     }
   ]
 }
