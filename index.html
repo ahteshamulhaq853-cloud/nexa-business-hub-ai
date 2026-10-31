@@ -3841,11 +3841,11 @@ async function handleManualNewspaperUpload(event){
  const input=event.target;
  const files=Array.from((input&&input.files)||[]);
  const status=document.getElementById('manualNewspaperStatus');
- const passwordInput=document.getElementById('pdfUploadPassword');
  if(!status)return;
  if(!files.length){status.textContent='Meherbani karke PDF select karein.';return;}
- const password=passwordInput?passwordInput.value:'';
- if(!password){status.textContent='Pehle admin upload password likhein, phir PDF select karein.';input.value='';return;}
+ const {data:sessionData,error:sessionError}=await db.auth.getSession();
+ const accessToken=sessionData&&sessionData.session&&sessionData.session.access_token;
+ if(sessionError||!accessToken){status.textContent='PDF upload ke liye pehle authorised NEXA admin account se login karein.';input.value='';return;}
  const pdfs=files.filter(file=>file.type==='application/pdf'||file.name.toLowerCase().endsWith('.pdf'));
  if(!pdfs.length){status.textContent='Meherbani karke PDF file select karein.';input.value='';return;}
  const tooLarge=pdfs.find(file=>file.size>8*1024*1024);
@@ -3854,7 +3854,7 @@ async function handleManualNewspaperUpload(event){
  for(const file of pdfs){
   status.textContent='GitHub par upload ho rahi hai: '+file.name+' ('+(uploaded+1)+'/'+pdfs.length+')…';
   try{
-   const response=await fetch(NEXA_PDF_UPLOAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/pdf','x-upload-password':password,'x-file-name':file.name},body:file});
+   const response=await fetch(NEXA_PDF_UPLOAD_ENDPOINT,{method:'POST',headers:{'Authorization':'Bearer '+accessToken,'apikey':SUPABASE_KEY,'Content-Type':'application/pdf','x-file-name':file.name},body:file});
    const data=await response.json();
    if(!response.ok)throw new Error(data.error||'Upload fail ho gaya.');
    uploaded++;
