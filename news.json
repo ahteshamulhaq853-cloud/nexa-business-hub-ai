@@ -1,10 +1,20 @@
 {
-  "updated": "2026-10-31T21:23:45.152657+00:00",
+  "updated": "2026-10-31T21:57:38.746759+00:00",
   "items": [
+    {
+      "title": "Thousands demonstrate in Paris as protests spread across Europe",
+      "link": "https://www.bbc.co.uk/news/videos/ck0j0y87j303o?at_medium=RSS&at_campaign=rss",
+      "summary": "More than 320,000 people demonstrated across France against the rising cost of living and poor public services, with clashes between some protesters and police.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1d3a/live/6230e120-d570-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-10-31T21:29:01+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Are De Zerbi's Spurs finding elusive consistency?",
       "link": "https://www.bbc.co.uk/sport/football/articles/c6n04v897qe4o?at_medium=RSS&at_campaign=rss",
-      "summary": "Are Spurs finally finding elusive consistency under Roberto De Zerbi after a third successive Premier League win, asks chief football writer Phil McNulty?",
+      "summary": "Are Spurs finally finding elusive consistency under Roberto de Zerbi after a third successive Premier League win, asks chief football writer Phil McNulty?",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9051/live/7b9bec80-d567-11f1-910b-9bd7c745c627.jpg",
       "published": "2026-10-31T21:16:11+00:00",
       "source": "BBC News",
@@ -59,16 +69,6 @@
       "published": "2026-10-31T19:46:41+00:00",
       "source": "Dawn",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Clashes erupt between police and protesters in Paris",
-      "link": "https://www.bbc.co.uk/news/videos/ck0j0y87j303o?at_medium=RSS&at_campaign=rss",
-      "summary": "Over 320,000 people protested around France in a third weekend of demonstrations against the rising cost of living and poor public services.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9670/live/78247d30-d560-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-10-31T19:37:43+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     },
     {
@@ -582,6 +582,16 @@
       "language": "en"
     },
     {
+      "title": "مشرق وسطیٰ… امن اور خدشات",
+      "link": "https://www.express.pk/story/2841575/the-middle-east-peace-and-concerns-2841575",
+      "summary": "دباؤ ڈالنے اور لالچ دینے کی پالیسی کا ایران پر کوئی اثر نہیں ہوگا",
+      "image_url": "",
+      "published": "2026-10-31T16:12:06+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "مہنگائی میں حکومت کا قصور نہیں، امریکی صدر ٹرمپ کا ہوسکتا ہے، رانا ثنا اللہ",
       "link": "https://jang.com.pk/news/1629434",
       "summary": "رانا ثنا اللہ۔وزیراعظم کے مشیر برائے سیاسی امور سینٹیر رانا ثنا اللہ نے ملک میں مہنگائی کا ذمے دار امریکی صدر ڈونلڈ ٹرمپ کو قرار دے...",
@@ -988,16 +998,6 @@
       "image_url": "",
       "published": "2026-10-31T13:46:43+00:00",
       "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "South Africa beat Australia by 176 runs in third Test to win series",
-      "link": "https://arynews.tv/south-africa-beat-australia-by-176-runs-in-third-test-to-win-series",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/1-191.jpg",
-      "published": "2026-10-31T13:42:52+00:00",
-      "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
     }
