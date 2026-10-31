@@ -3530,11 +3530,12 @@ function hideNexaSystemScan(){
  if(scan&&!scan.classList.contains("done")){scan.classList.add("done");setTimeout(()=>scan.remove(),450)}
 }
 db.auth.onAuthStateChange((event,session)=>{
- currentUser=session&&session.user?session.user:null;setUI();
- if(!currentUser){approvedForPDF=false;$("adminButton").style.display="none";$("pdfBtn").disabled=true}
- if(event==="PASSWORD_RECOVERY"){showPage("passwordRecoveryPage");clearMsg("recoveryMsg");}
- hideNexaSystemScan();
-});
+  currentUser=session&&session.user?session.user:null;setUI();
+  if(!currentUser){approvedForPDF=false;$("adminButton").style.display="none";$("pdfBtn").disabled=true}
+  else{checkAdmin();}
+  if(event==="PASSWORD_RECOVERY"){showPage("passwordRecoveryPage");clearMsg("recoveryMsg");}
+  hideNexaSystemScan();
+ });
 // Safety fallback: never leave the visitor stuck on the scan screen.
 setTimeout(hideNexaSystemScan,8000);
 
