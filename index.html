@@ -2148,8 +2148,10 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
  </div>
 </section>
 <section id="adminPage" class="page">
- <div class="hero"><span class="eyebrow">RESTRICTED AREA / 03</span><h1>Admin <span class="neon">Control Panel.</span></h1><p>Only authorised admins can review payment requests.</p></div>
+ <div class="hero"><span class="eyebrow">RESTRICTED AREA / 03</span><h1>Admin <span class="neon">Control Panel.</span></h1><p>Authorised administration, account controls and security activity.</p></div>
  <div class="card"><div id="adminMsg" class="message"></div><div class="preview-head"><h2>Payment Requests</h2><button onclick="loadAdminOrders()">Refresh Orders</button></div><div id="adminOrders" class="table-wrap">Loading...</div></div>
+ <div class="card" style="margin-top:16px"><div class="preview-head"><h2>User Management</h2><button class="secondary" onclick="loadAdminUsers()">Refresh Users</button></div><p class="muted">Account controls are restricted to authorised admins. Admin accounts cannot be blocked here.</p><input id="adminUserSearch" type="search" placeholder="Search by email or user ID" oninput="renderAdminUsers()" aria-label="Search users"><div id="adminUsersStatus" class="message"></div><div id="adminUsers" class="table-wrap">Loading users...</div></div>
+ <div class="card" style="margin-top:16px"><div class="preview-head"><h2>Security Activity</h2><button class="secondary" onclick="loadSecurityActivity()">Refresh Activity</button></div><p class="muted">Recent admin account-blocking and unblocking actions.</p><div id="adminSecurityActivity" class="table-wrap">Loading...</div></div>
 </section>
 
 <section id="writingAssistantPage" class="page">
@@ -2950,7 +2952,7 @@ function showPage(id){
  if(id==="europassPage")loadEuropass();
  if(id==="paymentPage")loadMyOrders();
  if(id==="liveTVPage")initLiveTVCountries();
- if(id==="adminPage")loadAdminOrders();
+ if(id==="adminPage"){loadAdminOrders();loadAdminUsers();loadSecurityActivity();}
 }
 
 function toggleCertificateCustomRole(){const select=$("ecRole"),custom=$("ecRoleCustom");if(custom)custom.style.display=select&&select.value==="Other"?"block":"none";updateExperienceCertificate()}
@@ -3487,6 +3489,42 @@ async function setStatus(id,status){
  if(error){msg("adminMsg",error.message,"error");return}
  msg("adminMsg","Request updated successfully.","success");await loadAdminOrders();await checkApproval();
 }
+const NEXA_ADMIN_API=SUPABASE_URL+"/functions/v1/nexa-admin-users";
+let nexaAdminUsersCache=[];
+async function callNexaAdminApi(payload){
+ const {data,error}=await db.auth.getSession();const token=data&&data.session&&data.session.access_token;
+ if(error||!token)throw new Error("Please login as an authorised admin.");
+ const response=await fetch(NEXA_ADMIN_API,{method:"POST",headers:{"Authorization":"Bearer "+token,"apikey":SUPABASE_KEY,"Content-Type":"application/json"},body:JSON.stringify(payload)});
+ const result=await response.json().catch(()=>({error:"Invalid server response."}));if(!response.ok)throw new Error(result.error||"Admin request failed.");return result;
+}
+async function loadAdminUsers(){
+ const box=$("adminUsers"),status=$("adminUsersStatus");if(!box)return;box.textContent="Loading users…";
+ try{const result=await callNexaAdminApi({action:"list_users",page:1});nexaAdminUsersCache=result.users||[];renderAdminUsers();if(status){status.textContent="Showing first "+nexaAdminUsersCache.length+" accounts"+(result.has_more?" (more accounts available).":".");status.className="message show";}}
+ catch(error){box.textContent=error.message;if(status){status.textContent=error.message;status.className="message show error";}}
+}
+function renderAdminUsers(){
+ const box=$("adminUsers");if(!box)return;const q=String($("adminUserSearch")?.value||"").trim().toLowerCase();
+ const users=nexaAdminUsersCache.filter(u=>(u.email+" "+u.id).toLowerCase().includes(q));
+ if(!users.length){box.textContent=nexaAdminUsersCache.length?"No matching accounts.":"No user accounts loaded.";return;}
+ box.innerHTML="<table><thead><tr><th>Email</th><th>Created</th><th>Last sign-in</th><th>Status</th><th>Action</th></tr></thead><tbody>"+users.map(u=>{
+  const blocked=!!(u.banned_until&&new Date(u.banned_until).getTime()>Date.now());
+  const created=u.created_at?new Date(u.created_at).toLocaleDateString():"—",last=u.last_sign_in_at?new Date(u.last_sign_in_at).toLocaleDateString():"Never";
+  return "<tr><td>"+esc(u.email||"No email")+"<br><small>"+esc(u.id.slice(0,8))+"…</small></td><td>"+esc(created)+"</td><td>"+esc(last)+"</td><td>"+(blocked?"Blocked":"Active")+"</td><td><button class='"+(blocked?"secondary":"danger")+"' onclick=\"setNexaUserBlock('"+esc(u.id)+"',"+(!blocked)+")\">"+(blocked?"Unblock":"Block")+"</button></td></tr>";
+ }).join("")+"</tbody></table>";
+}
+async function setNexaUserBlock(userId,block){
+ if(!confirm((block?"Block":"Unblock")+" this user account?"))return;
+ try{await callNexaAdminApi({action:block?"block_user":"unblock_user",user_id:userId});msg("adminMsg",block?"User account blocked.":"User account unblocked.","success");await loadAdminUsers();await loadSecurityActivity();}
+ catch(error){msg("adminMsg",error.message,"error");}
+}
+async function loadSecurityActivity(){
+ const box=$("adminSecurityActivity");if(!box)return;box.textContent="Loading activity…";
+ try{const result=await callNexaAdminApi({action:"list_activity"});const events=result.events||[];
+  if(!events.length){box.textContent="No account security actions recorded yet.";return;}
+  box.innerHTML="<table><thead><tr><th>Action</th><th>Target</th><th>Date</th></tr></thead><tbody>"+events.map(e=>"<tr><td>"+(e.action==="user_blocked"?"User blocked":"User unblocked")+"</td><td>"+esc(e.details?.target_email||e.target_user_id||"Account")+"</td><td>"+esc(e.created_at?new Date(e.created_at).toLocaleString():"")+"</td></tr>").join("")+"</tbody></table>";
+ }catch(error){box.textContent=error.message;}
+}
+
 function hideNexaSystemScan(){
  const scan=document.getElementById("nexaSystemScan");
  if(scan&&!scan.classList.contains("done")){scan.classList.add("done");setTimeout(()=>scan.remove(),450)}
