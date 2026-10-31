@@ -1,0 +1,19 @@
+{
+  "name": "NEXA Studio",
+  "short_name": "NEXA",
+  "description": "NEXA Studio — CV Studio, Jobs, News, Weather and Live TV.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#080c15",
+  "theme_color": "#080c15",
+  "icons": [
+    {
+      "src": "./nexa-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
