@@ -29,6 +29,25 @@
 <section id="alerts" class="hidden"><h2 class="section">Notifications</h2><div class="card" id="alertsList">Loading…</div></section><section id="profile" class="hidden"><div id="profileBox"></div></section>
 </main><aside class="right"><div class="card"><div class="ring" style="width:75px;height:75px"><div id="rightAvatar">N</div></div><h3 id="rightName">Your profile</h3><span class="muted small" id="rightHandle">@username</span><div class="stats"><div><b id="postsCount">0</b>Posts</div><div><b id="followersCount">0</b>Followers</div><div><b id="followingCount">0</b>Following</div></div><button class="btn" data-goto="profile" style="width:100%">View profile</button></div><div class="card"><b>Trending</b><p class="muted small">#NexaSocial<br>#CreativeMinds<br>#DailyMoments</p></div><div class="card small muted">Be respectful. Only share content you own or have permission to post. Report harmful content to the platform administrator.</div></aside></div><nav class="mobile" id="mobile"><button class="active" data-page="home">⌂<br>Home</button><button data-page="reels">▷<br>Reels</button><button data-page="explore">⌕<br>Explore</button><button data-page="alerts">♧<br>Alerts</button><button data-page="profile">◉<br>Profile</button></nav></div><div id="toast" class="toast hidden"></div>
 <script>
+window.__nexaAuthReady=false;
+document.getElementById("switch").addEventListener("click",function(){
+ if(window.__nexaAuthReady)return;
+ const extra=document.getElementById("extra"),confirmWrap=document.getElementById("confirmWrap");
+ const title=document.getElementById("authTitle"),sub=document.getElementById("authSub");
+ const go=document.getElementById("authGo"),label=document.getElementById("switchLabel"),sw=document.getElementById("switch");
+ const signup=extra.classList.contains("hidden");
+ extra.classList.toggle("hidden",!signup);confirmWrap.classList.toggle("hidden",!signup);
+ title.textContent=signup?"Create your account":"Welcome back";
+ sub.textContent=signup?"Join the Nexa community.":"Sign in to your account.";
+ go.textContent=signup?"Create account":"Sign in";
+ label.textContent=signup?"Already registered?":"New here?";
+ sw.textContent=signup?"Sign in":"Create account";
+ const msg=document.getElementById("authMessage");
+ msg.textContent="Registration screen opened, lekin connection library load nahi hui. Page reload karein; agar masla rahe to browser console ka error share karein.";
+ msg.style.color="#ffbd75";
+});
+</script>
+<script>
 const URL="https://xlyefzvpuayqrhwbcxfa.supabase.co",KEY="sb_publishable_cxBPD-LapgXOWzrfKF4U3g_pTLwohA7",db=supabase.createClient(URL,KEY);let user=null,profile=null,mode="login",file=null,page="home",chatUser=null;
 const $=x=>document.getElementById(x),esc=s=>String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])),initial=s=>(s||"N").split(/\s+/).slice(0,2).map(x=>x[0]||"").join("").toUpperCase();
 function say(s){$("toast").textContent=s;$("toast").classList.remove("hidden");setTimeout(()=>$("toast").classList.add("hidden"),3000)}
@@ -51,7 +70,7 @@ function renderAuth(){
  $("confirmPassword").placeholder=reset?"Confirm new password":"Confirm password";
 }
 function switchMode(){mode=mode==="login"?"signup":"login";renderAuth();authMessage("")}
-$("switch").onclick=switchMode;
+$("switch").onclick=switchMode;window.__nexaAuthReady=true;
 $("authGo").onclick=async()=>{
  const button=$("authGo");if(button.disabled)return;
  const email=$("email").value.trim().toLowerCase(),password=$("password").value;
