@@ -1875,13 +1875,13 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
     <div class="field"><label for="loginPassword">Password</label><input id="loginPassword" type="password" autocomplete="current-password" required></div>
     <button type="submit" style="width:100%">Login to Nexa →</button>
    </form>
-   <p class="muted">Your workspace keeps your CV details and payment requests together.</p>
+   <p class="muted">Your workspace keeps your account and activity together.</p>
    <p class="muted auth-switch">Don't have an account? <button type="button" class="auth-link" onclick="showAuthForm('register')">Register</button></p>
   </div>
  </div>
 </section>
 <section id="dashboardPage" class="page studio-dashboard">
- <div id="welcomeNotice" class="welcome-notice" role="status" aria-modal="false" aria-live="polite"><div class="welcome-brand-mark">✦</div><div class="welcome-kicker">WELCOME TO YOUR DIGITAL WORKSPACE</div><div id="welcomeMessage" class="welcome-message">WELCOME TO NEXA STUDIO</div><p class="welcome-subtitle">Your smarter workspace starts here. Build a professional CV, explore the latest jobs and news, watch Live TV, and discover useful digital tools—all in one place.</p><div class="welcome-feature-row"><span>✦ CV Studio</span><span>▣ Live TV</span><span>↗ Jobs &amp; News</span></div><button type="button" class="welcome-confirm" onclick="dismissWelcome()">LET’S GET STARTED <span aria-hidden="true">→</span></button></div>
+ <div id="welcomeNotice" class="welcome-notice" role="status" aria-modal="false" aria-live="polite"><div class="welcome-brand-mark">✦</div><div class="welcome-kicker">WELCOME TO YOUR DIGITAL WORKSPACE</div><div id="welcomeMessage" class="welcome-message">WELCOME TO NEXA STUDIO</div><p class="welcome-subtitle">Your smarter workspace starts here. Explore the latest jobs and news, watch Live TV, and discover useful digital tools—all in one place.</p><div class="welcome-feature-row"><span>✦ NEXA Studio</span><span>▣ Live TV</span><span>↗ Jobs &amp; News</span></div><button type="button" class="welcome-confirm" onclick="dismissWelcome()">LET’S GET STARTED <span aria-hidden="true">→</span></button></div>
  <div class="studio-intro">
   <div class="studio-intro-copy">
    <span class="studio-kicker"><span class="studio-live-dot"></span> YOUR ALL-IN-ONE DIGITAL HUB</span>
@@ -2271,8 +2271,7 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
   <p class="muted">Information may be used to operate your account, provide CV and website features, process access or payment requests, and respond to support questions.</p>
   <h2>Account and Security</h2>
   <p class="muted">Keep your password private. Never send passwords, one-time codes, payment PINs, or other secret credentials to support. Account and authentication services are handled through the website's configured service providers.</p>
-  <h2>CVs and Personal Details</h2>
-  <p class="muted">Only add details you want included in your CV. Before sharing or downloading a CV, review it to ensure it contains the correct information.</p>
+  
   <h2>Third-Party Services and Links</h2>
   <p class="muted">Some features may rely on third-party services or external links. Those services may have their own privacy policies and terms.</p>
   <h2>Questions or Requests</h2>
@@ -3743,7 +3742,7 @@ async function askSupport(text){
    headers:{"Content-Type":"application/json"},
    body:JSON.stringify({
     service:"Nexa CV Studio website support",
-    details:"Aap NEXA AI Support hain. Aasaan, saaf Roman Urdu mein jawab dein; Urdu script sirf tab use karein jab user kahe. NEXA website ke current features mein CV Builder, CV templates, account/login, PDF payment/access, Jobs, News, News section ke andar Weather tab, aur Live TV shamil hain. User ko website ke andar navigation step-by-step samjhayen. Weather ke liye News > Weather, jobs ke liye bottom Jobs, aur TV ke liye bottom Live TV batayein. Jobs ki eligibility/deadline aur apply link official advertisement se verify karne ko kahein. Agar website kisi feature ke bare mein yaqini maloomat na deti ho to guess na karein; WhatsApp Support suggest karein. Website support ke ilawa CV writing, profession-specific skills, job duties, professional summaries, interview preparation aur general learning mein madad karein. User ki asal skills ka andaza na lagayein; CV mein sirf waqai aane wali skills likhne ka mashwara dein. Jawab mukhtasar, mufeed aur zaroorat par step-by-step dein. Prices ya features ke bare mein ghair-musaddaqa baat na banayein. Password, OTP, payment PIN ya secret information kabhi na maangein. User ka sawal: "+question,
+    details:"Aap NEXA AI Support hain. Aasaan, saaf Roman Urdu mein jawab dein; Urdu script sirf tab use karein jab user kahe. NEXA website ke current features mein account/login, Jobs, News, News section ke andar Weather tab, aur Live TV shamil hain. User ko website ke andar navigation step-by-step samjhayen. Weather ke liye News > Weather, jobs ke liye bottom Jobs, aur TV ke liye bottom Live TV batayein. Jobs ki eligibility/deadline aur apply link official advertisement se verify karne ko kahein. Agar website kisi feature ke bare mein yaqini maloomat na deti ho to guess na karein; WhatsApp Support suggest karein. Website support ke ilawa CV writing, profession-specific skills, job duties, professional summaries, interview preparation aur general learning mein madad karein. User ki asal skills ka andaza na lagayein; CV mein sirf waqai aane wali skills likhne ka mashwara dein. Jawab mukhtasar, mufeed aur zaroorat par step-by-step dein. Prices ya features ke bare mein ghair-musaddaqa baat na banayein. Password, OTP, payment PIN ya secret information kabhi na maangein. User ka sawal: "+question,
     language:"Roman Urdu"
    })
   });
@@ -4245,6 +4244,43 @@ body:has(#welcomeNotice.show)::before{content:"";display:block;position:fixed;in
  if(!isStandalone())showInstallButton();
 })();
 </script>
+
+<script id="nexa-remove-cv-feature">
+(function(){
+  const removeIds=["cvSectionPage","builderPage","europassPage","experienceCertificatePage"];
+  removeIds.forEach(id=>document.getElementById(id)?.remove());
+  document.querySelectorAll('[onclick*="cvSectionPage"],[onclick*="builderPage"],[onclick*="europassPage"],[onclick*="experienceCertificatePage"]').forEach(el=>el.remove());
+  document.querySelectorAll('#bottomNav button').forEach(el=>{
+    const action=el.getAttribute('onclick')||'';
+    if(/cvSectionPage|builderPage|europassPage|experienceCertificatePage/.test(action))el.remove();
+  });
+  document.querySelectorAll('#servicesPage .service-row').forEach(el=>{
+    if(/CV Builder|Europass|Experience Certificate/i.test(el.innerText||''))el.remove();
+  });
+})();
+</script>
+<style id="nexa-studio-ui-refresh">
+/* Unified NEXA Studio polish for the dashboard, entertainment and news areas. */
+.studio-dashboard .studio-intro{isolation:isolate;overflow:hidden}
+.studio-dashboard .studio-intro-copy{max-width:680px}
+.studio-dashboard .studio-hero-actions{display:flex;flex-wrap:wrap;gap:10px}
+#liveTVPage .card,#latestNewsPage .card,#weatherPage .card{border:1px solid rgba(93,190,230,.2);box-shadow:0 18px 48px rgba(0,0,0,.22)}
+#liveTVPage .studio-section-heading,#latestNewsPage .studio-section-heading{margin-bottom:18px}
+#liveTVPage select,#liveTVPage input,#latestNewsPage select,#weatherPage select{min-height:48px;border-radius:13px}
+#liveTVPlayerCard{padding-top:14px;border-top:1px solid rgba(120,190,220,.2)}
+#liveTVSelectedTitle{color:#e7f7ff}
+#latestNewsPage .news-card,#latestNewsPage .news-item{transition:transform .2s ease,border-color .2s ease}
+#latestNewsPage .news-card:hover,#latestNewsPage .news-item:hover{transform:translateY(-2px);border-color:rgba(83,202,245,.48)}
+#bottomNav{backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+#dashboardPage .studio-intro h1{letter-spacing:-.035em}
+#dashboardPage .studio-intro p{line-height:1.75}
+@media(max-width:600px){
+ .studio-dashboard .studio-intro{padding:22px 17px}
+ .studio-dashboard .studio-hero-actions>*{flex:1 1 100%}
+ #liveTVPage .card,#latestNewsPage .card{padding:15px}
+}
+</style>
+
 </body>
 </html>
 
