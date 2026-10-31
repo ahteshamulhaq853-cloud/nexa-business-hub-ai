@@ -2127,6 +2127,7 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
   </div>
  </div>
 </section>
+<section id="passwordRecoveryPage" class="page"><div class="hero"><span class="eyebrow">ACCOUNT SECURITY</span><h1>Reset Your <span class="neon">Password.</span></h1><p>Choose a new password for your NEXA Studio account.</p></div><div class="card" style="max-width:520px;margin:0 auto"><div id="recoveryMsg" class="message" role="status" aria-live="polite"></div><form id="passwordRecoveryForm"><div class="field"><label for="recoveryNewPassword">New Password</label><input id="recoveryNewPassword" type="password" minlength="8" autocomplete="new-password" required></div><div class="field"><label for="recoveryConfirmPassword">Confirm New Password</label><input id="recoveryConfirmPassword" type="password" minlength="8" autocomplete="new-password" required></div><p class="small-note">Use at least 8 characters, including uppercase, lowercase and a number.</p><button type="submit">Save New Password</button></form></div></section>
 <section id="privacyPolicyPage" class="page">
  <div class="hero"><span class="eyebrow">YOUR PRIVACY MATTERS</span><h1>Privacy <span class="neon">Policy.</span></h1><p>How NEXA Studio handles information when you use this website.</p></div>
  <div class="card">
@@ -3086,6 +3087,16 @@ async function changeAccountPassword(e){
  if(error){msg("changePasswordMsg",error.message,"error");return}
  $("changePasswordForm").reset();msg("changePasswordMsg","Password updated successfully.","success");
 }
+async function recoverAccountPassword(e){
+ e.preventDefault();clearMsg("recoveryMsg");
+ const password=$("recoveryNewPassword").value,confirm=$("recoveryConfirmPassword").value;
+ if(password.length<8||!/[a-z]/.test(password)||!/[A-Z]/.test(password)||!/[0-9]/.test(password)){msg("recoveryMsg","Use at least 8 characters with uppercase, lowercase and a number.","error");return}
+ if(password!==confirm){msg("recoveryMsg","Passwords do not match.","error");return}
+ const {error}=await db.auth.updateUser({password});
+ if(error){msg("recoveryMsg",error.message,"error");return}
+ $("passwordRecoveryForm").reset();msg("recoveryMsg","Password updated. Please log in with your new password.","success");
+ setTimeout(async()=>{await db.auth.signOut();currentUser=null;setUI();showPage("accountPage");showAuthForm("login");},1200);
+}
 async function sendPasswordReset(e){
  e.preventDefault();clearMsg("forgotPasswordMsg");
  const email=$("resetEmail").value.trim();
@@ -3095,6 +3106,7 @@ async function sendPasswordReset(e){
 }
 $("changePasswordForm").addEventListener("submit",changeAccountPassword);
 $("forgotPasswordForm").addEventListener("submit",sendPasswordReset);
+$("passwordRecoveryForm").addEventListener("submit",recoverAccountPassword);
 
 $("registerForm").addEventListener("submit",register);
 $("loginForm").addEventListener("submit",login);
@@ -3479,9 +3491,10 @@ function hideNexaSystemScan(){
  const scan=document.getElementById("nexaSystemScan");
  if(scan&&!scan.classList.contains("done")){scan.classList.add("done");setTimeout(()=>scan.remove(),450)}
 }
-db.auth.onAuthStateChange((_event,session)=>{
+db.auth.onAuthStateChange((event,session)=>{
  currentUser=session&&session.user?session.user:null;setUI();
  if(!currentUser){approvedForPDF=false;$("adminButton").style.display="none";$("pdfBtn").disabled=true}
+ if(event==="PASSWORD_RECOVERY"){showPage("passwordRecoveryPage");clearMsg("recoveryMsg");}
  hideNexaSystemScan();
 });
 // Safety fallback: never leave the visitor stuck on the scan screen.
