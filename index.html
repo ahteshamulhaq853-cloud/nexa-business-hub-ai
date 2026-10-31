@@ -2152,7 +2152,7 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
  <div class="card"><div id="adminMsg" class="message"></div><div class="preview-head"><h2>Payment Requests</h2><button onclick="loadAdminOrders()">Refresh Orders</button></div><div id="adminOrders" class="table-wrap">Loading...</div></div>
  <div class="card" style="margin-top:16px"><div class="preview-head"><h2>User Management</h2><button class="secondary" onclick="loadAdminUsers()">Refresh Users</button></div><p class="muted">Account controls are restricted to authorised admins. Admin accounts cannot be blocked here.</p><input id="adminUserSearch" type="search" placeholder="Search by email or user ID" oninput="renderAdminUsers()" aria-label="Search users"><div id="adminUsersStatus" class="message"></div><div id="adminUsers" class="table-wrap">Loading users...</div></div>
  <div class="card" style="margin-top:16px"><div class="preview-head"><h2>Security Activity</h2><button class="secondary" onclick="loadSecurityActivity()">Refresh Activity</button></div><p class="muted">Recent admin account-blocking and unblocking actions.</p><div id="adminSecurityActivity" class="table-wrap">Loading...</div></div>
- <div class="card" style="margin-top:16px"><div class="preview-head"><h2>Login Security & Alerts</h2><button class="secondary" onclick="loadAuthSecurity()">Refresh Security</button></div><p class="muted">Recent failed password attempts and accounts with 5 or more failures in 24 hours. Password Verification Hook must be enabled in Supabase Auth settings for live capture.</p><div id="adminAuthSecurity" class="table-wrap">Loading login security...</div></div>
+ <div class="card" style="margin-top:16px"><div class="preview-head"><h2>Login Security & Alerts</h2><button class="secondary" onclick="loadAuthSecurity()">Refresh Security</button></div><p class="muted">Supabase Free plan does not provide the password-attempt hook needed for reliable failed-login alerts. See the explanation below.</p><div id="adminAuthSecurity" class="table-wrap">Loading login security...</div></div>
 </section>
 
 <section id="writingAssistantPage" class="page">
@@ -3534,21 +3534,9 @@ async function loadSecurityActivity(){
   box.innerHTML="<table><thead><tr><th>Action</th><th>Target</th><th>Date</th></tr></thead><tbody>"+events.map(e=>"<tr><td>"+(e.action==="user_blocked"?"User blocked":"User unblocked")+"</td><td>"+esc(e.details?.target_email||e.target_user_id||"Account")+"</td><td>"+esc(e.created_at?new Date(e.created_at).toLocaleString():"")+"</td></tr>").join("")+"</tbody></table>";
  }catch(error){box.textContent=error.message;}
 }
-async function loadAuthSecurity(){
- const box=$("adminAuthSecurity");if(!box)return;box.textContent="Loading login security…";
- try{
-  const result=await callNexaAdminApi({action:"list_auth_security"});
-  let html="<div class='stat' style='margin-bottom:12px'><strong>"+Number(result.total_failed_24h||0)+"</strong><span>Failed password attempts in the last 24 hours</span></div>";
-  const alerts=result.alerts||[];
-  if(alerts.length)html+="<h3>Suspicious account alerts</h3><table><thead><tr><th>Account</th><th>Failed attempts (24h)</th><th>Latest</th></tr></thead><tbody>"+alerts.map(a=>"<tr><td>"+esc(a.email||a.user_id)+"</td><td>"+esc(a.failed_24h)+"</td><td>"+esc(a.latest_at?new Date(a.latest_at).toLocaleString():"")+"</td></tr>").join("")+"</tbody></table>";
-  else html+="<p class='muted'>No account reached the alert threshold (5 failed attempts in 24 hours).</p>";
-  const failures=result.recent_failures||[];
-  html+="<h3>Recent failed attempts (last 7 days)</h3>";
-  if(failures.length)html+="<table><thead><tr><th>Account ID</th><th>Time</th></tr></thead><tbody>"+failures.slice(0,30).map(a=>"<tr><td>"+esc(a.email||a.user_id)+"</td><td>"+esc(a.attempted_at?new Date(a.attempted_at).toLocaleString():"")+"</td></tr>").join("")+"</tbody></table>";
-  else html+="<p class='muted'>Abhi koi failed password attempt record nahi hai. Live monitoring ke liye Supabase Auth Hook enable karna zaroori hai.</p>";
-  html+="<p class='muted' style='margin-top:12px'>Monitoring data last 7 days se hai. Alert threshold: 5 failed password attempts per account within 24 hours. Password Verification Hook ko Supabase Dashboard → Authentication → Hooks mein enable karein.</p>";
-  box.innerHTML=html;
- }catch(error){box.textContent=error.message;}
+function loadAuthSecurity(){
+ const box=$("adminAuthSecurity");if(!box)return;
+ box.innerHTML="<div class='message show'><strong>Login-failure alerts are not available on the current Supabase Free plan.</strong><p class='muted'>Supabase Password Verification Attempt Hook, which reliably records incorrect-password attempts, is limited to Teams and Enterprise plans. NEXA will not show invented or unverified login alerts. Existing admin actions (Block/Unblock) remain recorded in Security Activity.</p><p class='muted'>Plan documentation: <a href='https://supabase.com/docs/guides/auth/auth-hooks' target='_blank' rel='noopener'>Supabase Auth Hooks availability</a>.</p></div>";
 }
 function hideNexaSystemScan(){
  const scan=document.getElementById("nexaSystemScan");
