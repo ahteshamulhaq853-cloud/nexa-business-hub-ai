@@ -3178,9 +3178,10 @@ function setUI(){
   const m=currentUser.user_metadata||{};
   const name=m.username||m.full_name||(currentUser.email?currentUser.email.split("@")[0]:"CV Creator");
   $("dashboardName").textContent=String(name).toUpperCase();
-  $("cvName").value=$("cvName").value||m.full_name||"";
-  $("cvPhone").value=$("cvPhone").value||m.phone||"";
-  $("cvEmail").value=$("cvEmail").value||currentUser.email||"";
+  const cvNameField=$("cvName"),cvPhoneField=$("cvPhone"),cvEmailField=$("cvEmail");
+  if(cvNameField)cvNameField.value=cvNameField.value||m.full_name||"";
+  if(cvPhoneField)cvPhoneField.value=cvPhoneField.value||m.phone||"";
+  if(cvEmailField)cvEmailField.value=cvEmailField.value||currentUser.email||"";
  }
 }
 async function register(e){
@@ -3190,17 +3191,17 @@ async function register(e){
  const {data,error}=await db.auth.signUp({email,password,options:{data:{full_name:name,phone,gender}}});
  if(error){msg("regMsg",error.message,"error");return}
  if(data.session&&data.user){
-  currentUser=data.user;setUI();await checkAdmin();await checkApproval();await loadCV();showPage("dashboardPage");showWelcome("register");msg("regMsg","Registration successful!","success");
+  currentUser=data.user;setUI();await checkAdmin();showPage("dashboardPage");showWelcome("register");msg("regMsg","Registration successful!","success");
  }else{msg("regMsg","Registration submitted. If email confirmation is enabled, confirm your email and then log in.","success")}
 }
 async function login(e){
  e.preventDefault();clearMsg("loginMsg");
  const {data,error}=await db.auth.signInWithPassword({email:$("loginEmail").value.trim(),password:$("loginPassword").value});
  if(error){msg("loginMsg",error.message,"error");return}
- currentUser=data.user;setUI();await checkAdmin();await checkApproval();await loadCV();showPage("dashboardPage");showWelcome("login");msg("loginMsg","Login successful!","success");
+ currentUser=data.user;setUI();await checkAdmin();showPage("dashboardPage");showWelcome("login");msg("loginMsg","Login successful!","success");
 }
 async function logout(){
- await db.auth.signOut();currentUser=null;approvedForPDF=false;setUI();$("pdfBtn").disabled=true;$("adminButton").style.display="none";showPage("accountPage");
+ await db.auth.signOut();currentUser=null;approvedForPDF=false;setUI();if($("pdfBtn"))$("pdfBtn").disabled=true;$("adminButton").style.display="none";showPage("accountPage");
 }
 function showAuthForm(type){
  const registerCard=$("registerCard"),loginCard=$("loginCard");
