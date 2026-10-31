@@ -4,8 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f5f5f0">
-<title>Nexa Studio | Creative Workspace</title>
+<meta name="theme-color" content="#070b13">
+<title>NEXA Studio | Jobs, News, Live TV & Weather</title>\n<meta name="description" content="NEXA Studio brings Pakistan jobs, latest news, Live TV and district-wise weather together in one digital workspace.">\n<meta name="robots" content="index,follow">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js"></script>
 <style>
@@ -4355,6 +4355,17 @@ label{color:#d5e2ee;font-weight:700}
   });
   document.querySelectorAll("#applyCVLink").forEach(el=>{const field=el.closest(".field")||el.parentElement;if(field)field.remove();});
   document.querySelectorAll(".support-quick button").forEach(el=>{if(/create cv|europass|pdf\s*\/\s*payment/i.test(el.textContent||""))el.remove();});
-  document.querySelectorAll("a,button").forEach(el=>{if(/open (?:normal )?cv|europass cv|experience certificate|pdf access/i.test((el.textContent||"").trim()))el.remove();});
+  document.querySelectorAll("a,button").forEach(el=>{if(/open (?:normal )?cv|europass cv|experience certificate|pdf access|\bservices\b/i.test((el.textContent||"").trim()))el.remove();});
+  const policy=document.getElementById("privacyPolicyPage");
+  if(policy){
+    policy.querySelectorAll("p").forEach(p=>{
+      p.textContent=p.textContent
+        .replace(/,?\s*CV information/gi,"")
+        .replace(/provide CV and website features/gi,"provide website features")
+        .replace(/CV and website features/gi,"website features");
+    });
+  }
+  document.querySelectorAll("meta[name='theme-color']").forEach(m=>m.setAttribute("content","#070b13"));
+  document.title="NEXA Studio | Jobs, News, Live TV & Weather";
 })();
 </script>
