@@ -3678,7 +3678,7 @@ function hideNexaSystemScan(){
 }
 db.auth.onAuthStateChange((event,session)=>{
   currentUser=session&&session.user?session.user:null;setUI();
-  if(!currentUser){approvedForPDF=false;$("adminButton").style.display="none";$("pdfBtn").disabled=true}
+  if(!currentUser){approvedForPDF=false;$("adminButton").style.display="none";if($("pdfBtn"))$("pdfBtn").disabled=true}
   else{checkAdmin();}
   if(event==="PASSWORD_RECOVERY"){showPage("passwordRecoveryPage");clearMsg("recoveryMsg");}
   hideNexaSystemScan();
