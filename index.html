@@ -1669,6 +1669,19 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
 @media(prefers-reduced-motion:reduce){.nexa-scan-orbit:before,.nexa-scan-track:after{animation:none}}
 </style>
 
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NEXA Studio">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style id="nexa-pwa-install-styles">
+#installAppButton{display:none;align-items:center;gap:8px;margin-top:10px;padding:11px 16px;border:1px solid #65f3dc;border-radius:12px;background:#102b32;color:#eaffff;font-weight:800;cursor:pointer}
+#installAppButton.show{display:inline-flex}
+#installAppButton:focus-visible{outline:3px solid #65f3dc;outline-offset:3px}
+#installAppHint{display:none;margin:8px 0 0;color:#a9bdca;font-size:12px;line-height:1.5}
+#installAppHint.show{display:block}
+@media(max-width:600px){#installAppButton{width:100%;justify-content:center}}
+</style>
 </head>
 <body>
 <div id="nexaSystemScan" role="status" aria-live="polite">
@@ -1740,7 +1753,7 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
    <span class="studio-kicker"><span class="studio-live-dot"></span> YOUR ALL-IN-ONE DIGITAL HUB</span>
    <h1>EVERYTHING YOU NEED. <span>ONE WORKSPACE.</span></h1>
    <p>Welcome back, <strong id="dashboardName">Creator</strong>. Explore the latest jobs and news, watch Live TV, and access useful digital tools—all from NEXA STUDIO.</p>
-   <div class="studio-hero-actions"><button onclick="showPage('latestJobsPage')">✦ Explore Latest Jobs</button><button class="studio-light-button" onclick="showPage('latestNewsPage')">Read Latest News ↗</button></div>
+   <div class="studio-hero-actions"><button onclick="showPage('latestJobsPage')">✦ Explore Latest Jobs</button><button class="studio-light-button" onclick="showPage('latestNewsPage')">Read Latest News ↗</button></div><button id="installAppButton" type="button">＋ Install NEXA App</button><p id="installAppHint" role="status">Install option browser menu se bhi mil sakta hai: ⋮ → Install app / Add to Home screen.</p>
   </div>
   <div class="studio-art" aria-hidden="true">
    <div class="studio-orbit studio-orbit-one"></div><div class="studio-orbit studio-orbit-two"></div>
@@ -4002,6 +4015,37 @@ body:has(#welcomeNotice.show)::before{content:"";display:block;position:fixed;in
 </style>
 <style id="nexa-remove-document-services">/* Remove CV and document-creation service pages from the public interface. */ #servicesPage,#cvSectionPage,#builderPage,#europassPage,#voiceGeneratorPage,#writingAssistantPage,#experienceCertificatePage{display:none!important}</style>
 <style id="nexa-live-tv-flat-dropdown">#liveTVPage .field{margin-bottom:12px}#liveTVChannelSelect{font-weight:700}#liveTVChannelSelect option{background:#081626;color:#edf6ff}</style>
+<script id="nexa-pwa-setup">
+(function(){
+ const installButton=document.getElementById("installAppButton");
+ const installHint=document.getElementById("installAppHint");
+ let installPromptEvent=null;
+ const isStandalone=()=>window.matchMedia("(display-mode: standalone)").matches||window.navigator.standalone===true;
+ function showInstallButton(){if(installButton&&!isStandalone())installButton.classList.add("show")}
+ if("serviceWorker" in navigator){
+  window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js",{scope:"./"}).catch(()=>{}));
+ }
+ window.addEventListener("beforeinstallprompt",event=>{
+  event.preventDefault();installPromptEvent=event;showInstallButton();
+ });
+ window.addEventListener("appinstalled",()=>{
+  installPromptEvent=null;
+  if(installButton)installButton.classList.remove("show");
+  if(installHint){installHint.textContent="NEXA Studio app successfully install ho gayi.";installHint.classList.add("show");}
+ });
+ if(installButton){
+  installButton.addEventListener("click",async()=>{
+   if(installPromptEvent){
+    installPromptEvent.prompt();
+    const choice=await installPromptEvent.userChoice;
+    installPromptEvent=null;
+    if(choice&&choice.outcome==="accepted")installButton.classList.remove("show");
+   }else if(installHint){installHint.classList.toggle("show");}
+  });
+ }
+ if(!isStandalone())showInstallButton();
+})();
+</script>
 </body>
 </html>
 
