@@ -1641,8 +1641,36 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
 }
 
 </style>
+
+<style id="nexa-system-scan-style">
+#nexaSystemScan{position:fixed;inset:0;z-index:999999;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at center,#102a3a 0%,#07111e 48%,#03070d 100%);color:#eafcff;font-family:Arial,sans-serif;transition:opacity .35s ease,visibility .35s ease}
+#nexaSystemScan.done{opacity:0;visibility:hidden;pointer-events:none}
+.nexa-scan-content{width:min(88vw,390px);text-align:center;padding:30px 22px}
+.nexa-scan-ring{width:86px;height:86px;border:1px solid rgba(101,243,220,.28);border-radius:50%;margin:0 auto 24px;position:relative;box-shadow:0 0 28px rgba(101,243,220,.12),inset 0 0 22px rgba(101,243,220,.08)}
+.nexa-scan-ring:before{content:"";position:absolute;inset:10px;border:2px solid transparent;border-top-color:#65f3dc;border-right-color:#65f3dc;border-radius:50%;animation:nexaScanSpin 1.15s linear infinite}
+.nexa-scan-ring:after{content:"";position:absolute;width:7px;height:7px;background:#65f3dc;border-radius:50%;top:7px;left:39px;box-shadow:0 0 12px #65f3dc}
+.nexa-scan-title{font-size:22px;font-weight:800;letter-spacing:1.2px;margin:0 0 10px}
+.nexa-scan-title span{color:#65f3dc}
+.nexa-scan-sub{font-size:13px;color:#b5cad8;letter-spacing:.5px;margin:0 0 22px}
+.nexa-scan-track{height:3px;background:#1b3444;border-radius:9px;overflow:hidden}
+.nexa-scan-track:after{content:"";display:block;width:42%;height:100%;background:#65f3dc;box-shadow:0 0 12px #65f3dc;animation:nexaScanProgress 1.5s ease-in-out infinite}
+.nexa-scan-version{font-size:10px;color:#668596;letter-spacing:2px;margin-top:17px}
+@keyframes nexaScanSpin{to{transform:rotate(360deg)}}
+@keyframes nexaScanProgress{0%{transform:translateX(-110%)}100%{transform:translateX(260%)}}
+@media(prefers-reduced-motion:reduce){.nexa-scan-ring:before,.nexa-scan-track:after{animation:none}}
+</style>
+
 </head>
 <body>
+<div id="nexaSystemScan" role="status" aria-live="polite">
+ <div class="nexa-scan-content">
+  <div class="nexa-scan-ring" aria-hidden="true"></div>
+  <h1 class="nexa-scan-title">PLEASE <span>WAIT</span></h1>
+  <p class="nexa-scan-sub">System 1.0 is scanning...</p>
+  <div class="nexa-scan-track" aria-hidden="true"></div>
+  <div class="nexa-scan-version">NEXA STUDIO · SYSTEM 1.0</div>
+ </div>
+</div>
 <button id="settingsLauncher" type="button" aria-label="Open menu" title="Menu" aria-expanded="false" onclick="toggleMainMenu()">☰</button>
 <header>
  <div class="brand"><img class="brand-mark nexa-brand-logo" src="./nexa-logo.svg" alt="NEXA Studio logo" width="42" height="42"><span class="brand-word">NEXA<span>STUDIO</span><small>CREATE SOMETHING GREAT</small></span></div>
@@ -3420,10 +3448,17 @@ async function setStatus(id,status){
  if(error){msg("adminMsg",error.message,"error");return}
  msg("adminMsg","Request updated successfully.","success");await loadAdminOrders();await checkApproval();
 }
+function hideNexaSystemScan(){
+ const scan=document.getElementById("nexaSystemScan");
+ if(scan&&!scan.classList.contains("done")){scan.classList.add("done");setTimeout(()=>scan.remove(),450)}
+}
 db.auth.onAuthStateChange((_event,session)=>{
  currentUser=session&&session.user?session.user:null;setUI();
  if(!currentUser){approvedForPDF=false;$("adminButton").style.display="none";$("pdfBtn").disabled=true}
+ hideNexaSystemScan();
 });
+// Safety fallback: never leave the visitor stuck on the scan screen.
+setTimeout(hideNexaSystemScan,8000);
 
 function toggleSupport(open){
  const panel=$("supportPanel");
