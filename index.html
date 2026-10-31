@@ -2475,11 +2475,11 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
   <button id="supportClose" type="button" aria-label="Close support chat" onclick="toggleSupport(false)">✕</button>
  </div>
  <div id="supportMessages" aria-live="polite">
-  <div class="support-bubble bot">Assalam-o-Alaikum! Welcome to NEXA AI Support. 👋\nMain CV Builder, account/login, templates, PDF access, Jobs, News, Weather aur Live TV use karne mein guide kar sakta hoon. Password, OTP ya payment secrets kabhi share na karein.</div>
+  <div class="support-bubble bot">Assalam-o-Alaikum! Welcome to NEXA AI Support. 👋\nMain account/login, Jobs, News, Weather aur Live TV use karne mein guide kar sakta hoon. Password, OTP ya payment secrets kabhi share na karein.</div>
  </div>
  <div class="support-quick">
   <button type="button" onclick="askSupport('How do I create a CV?')">Create CV</button>
-  <button type="button" onclick="askSupport('Tell me about CV templates')">CV Templates</button>
+  
   <button type="button" onclick="askSupport('How does PDF payment work?')">PDF / Payment</button>
   <button type="button" onclick="askSupport('I cannot log in')">Login Help</button>
   <button type="button" onclick="askSupport('How do I find government jobs on NEXA?')">Jobs Help</button>
@@ -3718,14 +3718,14 @@ function supportReply(raw){
  if(/login|log in|sign in|password|account|register|registration|email/.test(q))
   return "Naya account banane ke liye Create Account form fill karein. Pehle se account hai to Login use karein. Email confirmation on ho to email confirm karke login karein. Password ya OTP kisi ke saath share na karein.";
  if(/create cv|make cv|build cv|cv builder|resume|education|experience|profile/.test(q))
-  return "CV banane ke liye login karein, Dashboard se Open CV Builder dabayein, apna naam aur details fill karein. Preview live update hota hai. Save CV Details se save karein. Photo optional hai aur 2 MB se chhoti honi chahiye.";
+  return "NEXA Studio ke available options use karne ke liye Dashboard aur neeche navigation bar dekhein.";
  if(/save|saved|data|details/.test(q))
-  return "CV Builder mein Save CV Details dabayein. Website database mein save karne ki koshish karegi aur browser mein local backup bhi rakhti hai. Shared/public device par apna account logout karna na bhoolen.";
+  return "Apni account settings aur activity ke liye Profile section kholein. Shared/public device par apna account logout karna na bhoolen.";
  if(/hello|hi|salam|assalam|aoa/.test(q))
   return "Wa-Alaikum-Assalam! 😊 Main NEXA AI Support hoon. CV, account/login, templates, PDF access, Jobs, News, Weather aur Live TV mein help ke liye apna sawal likhein ya quick options use karein.";
  if(/course|service|logo|poster|video|business hub/.test(q))
-  return "NEXA mein CV Builder, CV templates, account/login, PDF access, Jobs, News, Weather aur Live TV maujood hain. Kisi feature ka masla ho to apna sawal detail se likhein ya WhatsApp Support use karein.";
- return "Main CV Builder, templates, account/login, PDF access, Jobs, News, Weather aur Live TV mein guide kar sakta hoon. Apna sawal thora detail se likhein ya WhatsApp Support dabayein.";
+  return "NEXA Studio mein account/login, Jobs, News, Weather aur Live TV maujood hain. Kisi feature ka masla ho to apna sawal detail se likhein ya WhatsApp Support use karein.";
+ return "Main account/login, Jobs, News, Weather aur Live TV mein guide kar sakta hoon. Apna sawal thora detail se likhein ya WhatsApp Support dabayein.";
 }
 async function askSupport(text){
  const question=String(text||"").trim();
