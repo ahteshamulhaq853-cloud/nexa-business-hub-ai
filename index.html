@@ -2152,6 +2152,7 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
  <div class="card"><div id="adminMsg" class="message"></div><div class="preview-head"><h2>Payment Requests</h2><button onclick="loadAdminOrders()">Refresh Orders</button></div><div id="adminOrders" class="table-wrap">Loading...</div></div>
  <div class="card" style="margin-top:16px"><div class="preview-head"><h2>User Management</h2><button class="secondary" onclick="loadAdminUsers()">Refresh Users</button></div><p class="muted">Account controls are restricted to authorised admins. Admin accounts cannot be blocked here.</p><input id="adminUserSearch" type="search" placeholder="Search by email or user ID" oninput="renderAdminUsers()" aria-label="Search users"><div id="adminUsersStatus" class="message"></div><div id="adminUsers" class="table-wrap">Loading users...</div></div>
  <div class="card" style="margin-top:16px"><div class="preview-head"><h2>Security Activity</h2><button class="secondary" onclick="loadSecurityActivity()">Refresh Activity</button></div><p class="muted">Recent admin account-blocking and unblocking actions.</p><div id="adminSecurityActivity" class="table-wrap">Loading...</div></div>
+ <div class="card" style="margin-top:16px"><div class="preview-head"><h2>Login Security & Alerts</h2><button class="secondary" onclick="loadAuthSecurity()">Refresh Security</button></div><p class="muted">Recent failed password attempts and accounts with 5 or more failures in 24 hours. Password Verification Hook must be enabled in Supabase Auth settings for live capture.</p><div id="adminAuthSecurity" class="table-wrap">Loading login security...</div></div>
 </section>
 
 <section id="writingAssistantPage" class="page">
@@ -3491,30 +3492,39 @@ async function setStatus(id,status){
 }
 const NEXA_ADMIN_API=SUPABASE_URL+"/functions/v1/nexa-admin-users";
 let nexaAdminUsersCache=[];
+let nexaAdminUsersPage=1;
+let nexaAdminUsersHasMore=false;
 async function callNexaAdminApi(payload){
  const {data,error}=await db.auth.getSession();const token=data&&data.session&&data.session.access_token;
  if(error||!token)throw new Error("Please login as an authorised admin.");
  const response=await fetch(NEXA_ADMIN_API,{method:"POST",headers:{"Authorization":"Bearer "+token,"apikey":SUPABASE_KEY,"Content-Type":"application/json"},body:JSON.stringify(payload)});
  const result=await response.json().catch(()=>({error:"Invalid server response."}));if(!response.ok)throw new Error(result.error||"Admin request failed.");return result;
 }
-async function loadAdminUsers(){
- const box=$("adminUsers"),status=$("adminUsersStatus");if(!box)return;box.textContent="Loading users…";
- try{const result=await callNexaAdminApi({action:"list_users",page:1});nexaAdminUsersCache=result.users||[];renderAdminUsers();if(status){status.textContent="Showing first "+nexaAdminUsersCache.length+" accounts"+(result.has_more?" (more accounts available).":".");status.className="message show";}}
- catch(error){box.textContent=error.message;if(status){status.textContent=error.message;status.className="message show error";}}
+async function loadAdminUsers(page){
+ const box=$("adminUsers"),status=$("adminUsersStatus");if(!box)return;
+ const requestedPage=Math.max(1,Number(page)||1);box.textContent="Loading users…";
+ try{
+  const result=await callNexaAdminApi({action:"list_users",page:requestedPage});
+  nexaAdminUsersCache=result.users||[];nexaAdminUsersPage=result.page||requestedPage;nexaAdminUsersHasMore=!!result.has_more;
+  renderAdminUsers();
+  if(status){status.textContent="Page "+nexaAdminUsersPage+" · "+nexaAdminUsersCache.length+" accounts shown"+(nexaAdminUsersHasMore?" · More users available":" · Last page");status.className="message show";}
+ }catch(error){box.textContent=error.message;if(status){status.textContent=error.message;status.className="message show error";}}
 }
 function renderAdminUsers(){
  const box=$("adminUsers");if(!box)return;const q=String($("adminUserSearch")?.value||"").trim().toLowerCase();
  const users=nexaAdminUsersCache.filter(u=>(u.email+" "+u.id).toLowerCase().includes(q));
- if(!users.length){box.textContent=nexaAdminUsersCache.length?"No matching accounts.":"No user accounts loaded.";return;}
- box.innerHTML="<table><thead><tr><th>Email</th><th>Created</th><th>Last sign-in</th><th>Status</th><th>Action</th></tr></thead><tbody>"+users.map(u=>{
+ let table="";
+ if(!users.length)table="<p class='muted'>"+(nexaAdminUsersCache.length?"No matching accounts on this page.":"No user accounts loaded.")+"</p>";
+ else table="<table><thead><tr><th>Email</th><th>Created</th><th>Last sign-in</th><th>Status</th><th>Action</th></tr></thead><tbody>"+users.map(u=>{
   const blocked=!!(u.banned_until&&new Date(u.banned_until).getTime()>Date.now());
   const created=u.created_at?new Date(u.created_at).toLocaleDateString():"—",last=u.last_sign_in_at?new Date(u.last_sign_in_at).toLocaleDateString():"Never";
   return "<tr><td>"+esc(u.email||"No email")+"<br><small>"+esc(u.id.slice(0,8))+"…</small></td><td>"+esc(created)+"</td><td>"+esc(last)+"</td><td>"+(blocked?"Blocked":"Active")+"</td><td><button class='"+(blocked?"secondary":"danger")+"' onclick=\"setNexaUserBlock('"+esc(u.id)+"',"+(!blocked)+")\">"+(blocked?"Unblock":"Block")+"</button></td></tr>";
  }).join("")+"</tbody></table>";
+ box.innerHTML=table+"<div class='actions' style='padding:10px 0;justify-content:space-between'><button class='secondary' "+(nexaAdminUsersPage<=1?"disabled":"")+" onclick='loadAdminUsers("+(nexaAdminUsersPage-1)+")'>Previous</button><span class='muted'>Page "+nexaAdminUsersPage+"</span><button class='secondary' "+(!nexaAdminUsersHasMore?"disabled":"")+" onclick='loadAdminUsers("+(nexaAdminUsersPage+1)+")'>Next</button></div>";
 }
 async function setNexaUserBlock(userId,block){
  if(!confirm((block?"Block":"Unblock")+" this user account?"))return;
- try{await callNexaAdminApi({action:block?"block_user":"unblock_user",user_id:userId});msg("adminMsg",block?"User account blocked.":"User account unblocked.","success");await loadAdminUsers();await loadSecurityActivity();}
+ try{await callNexaAdminApi({action:block?"block_user":"unblock_user",user_id:userId});msg("adminMsg",block?"User account blocked.":"User account unblocked.","success");await loadAdminUsers(nexaAdminUsersPage);await loadSecurityActivity();}
  catch(error){msg("adminMsg",error.message,"error");}
 }
 async function loadSecurityActivity(){
@@ -3524,7 +3534,22 @@ async function loadSecurityActivity(){
   box.innerHTML="<table><thead><tr><th>Action</th><th>Target</th><th>Date</th></tr></thead><tbody>"+events.map(e=>"<tr><td>"+(e.action==="user_blocked"?"User blocked":"User unblocked")+"</td><td>"+esc(e.details?.target_email||e.target_user_id||"Account")+"</td><td>"+esc(e.created_at?new Date(e.created_at).toLocaleString():"")+"</td></tr>").join("")+"</tbody></table>";
  }catch(error){box.textContent=error.message;}
 }
-
+async function loadAuthSecurity(){
+ const box=$("adminAuthSecurity");if(!box)return;box.textContent="Loading login security…";
+ try{
+  const result=await callNexaAdminApi({action:"list_auth_security"});
+  let html="<div class='stat' style='margin-bottom:12px'><strong>"+Number(result.total_failed_24h||0)+"</strong><span>Failed password attempts in the last 24 hours</span></div>";
+  const alerts=result.alerts||[];
+  if(alerts.length)html+="<h3>Suspicious account alerts</h3><table><thead><tr><th>Account</th><th>Failed attempts (24h)</th><th>Latest</th></tr></thead><tbody>"+alerts.map(a=>"<tr><td>"+esc(a.email||a.user_id)+"</td><td>"+esc(a.failed_24h)+"</td><td>"+esc(a.latest_at?new Date(a.latest_at).toLocaleString():"")+"</td></tr>").join("")+"</tbody></table>";
+  else html+="<p class='muted'>No account reached the alert threshold (5 failed attempts in 24 hours).</p>";
+  const failures=result.recent_failures||[];
+  html+="<h3>Recent failed attempts (last 7 days)</h3>";
+  if(failures.length)html+="<table><thead><tr><th>Account ID</th><th>Time</th></tr></thead><tbody>"+failures.slice(0,30).map(a=>"<tr><td>"+esc(a.email||a.user_id)+"</td><td>"+esc(a.attempted_at?new Date(a.attempted_at).toLocaleString():"")+"</td></tr>").join("")+"</tbody></table>";
+  else html+="<p class='muted'>Abhi koi failed password attempt record nahi hai. Live monitoring ke liye Supabase Auth Hook enable karna zaroori hai.</p>";
+  html+="<p class='muted' style='margin-top:12px'>Monitoring data last 7 days se hai. Alert threshold: 5 failed password attempts per account within 24 hours. Password Verification Hook ko Supabase Dashboard → Authentication → Hooks mein enable karein.</p>";
+  box.innerHTML=html;
+ }catch(error){box.textContent=error.message;}
+}
 function hideNexaSystemScan(){
  const scan=document.getElementById("nexaSystemScan");
  if(scan&&!scan.classList.contains("done")){scan.classList.add("done");setTimeout(()=>scan.remove(),450)}
