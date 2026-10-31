@@ -1,6 +1,36 @@
 {
-  "updated": "2026-10-31T03:58:31.274294+00:00",
+  "updated": "2026-10-31T04:36:46.909673+00:00",
   "items": [
+    {
+      "title": "اسرائیلی اداروں کا ڈیٹا ہیک کرنے کا دعویٰ کرنے والا ’حنظلہ گروپ‘ کیا ہے اور اس کا ایران سے کیا تعلق ہے؟",
+      "link": "https://www.bbc.com/urdu/articles/cq99z5krjkl5o?at_medium=RSS&at_campaign=rss",
+      "summary": "ایرانی ذرائع ابلاغ میں شائع ہونے والی خبروں میں دعویٰ کیا گیا ہے کہ خود کو ’حنظلہ‘ کہنے والا ایک ہیکنگ گروپ اسرائیلی اداروں کے خلاف سائبر حملے کر رہا ہے اور اسے خفیہ ریکارڈنگز کے علاوہ اسرائیلی فوج کے ایک طبی یونٹ سے متعلق دستاویزات تک رسائی حاصل ہوئی ہے۔",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/966a/live/3caf9f30-d346-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-10-31T04:30:23+00:00",
+      "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Commuters risk life and limb as poles not removed from middle of road in Hyderabad",
+      "link": "https://www.dawn.com/news/2041058/commuters-risk-life-and-limb-as-poles-not-removed-from-middle-of-road-in-hyderabad",
+      "summary": "HYDERABAD: Carpeting of a new road and opening it for traffic, despite many electricity poles still standing in the middle of the dual carriageway, has triggered a heated debate on social media as travelers risk life and limb. Responding to the criticism from people, the Sindh government defended its decision to complete and open the road — connecting Alamda",
+      "image_url": "https://i.dawn.com/large/2026/10/31021559bc0dbaf.webp",
+      "published": "2026-10-31T03:59:58+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "SHC moved against construction on Karachi's Nehr-i-Khayyam",
+      "link": "https://www.dawn.com/news/2041072/shc-moved-against-construction-on-karachis-nehr-i-khayyam",
+      "summary": "KARACHI: The Jamaat-i-Islami, along with some Clifton residents, moved the Sindh High Court against the provincial government for carrying out construction and development activities on Nehr-i-Khayyam. Leader of the Opposition in the City Council Advocate Saifuddin and three others filed a petition, citing the chief secretary, local government secretary, Kar",
+      "image_url": "https://i.dawn.com/large/2020/02/5e3b1fcb23bca.jpg",
+      "published": "2026-10-31T03:56:43+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
     {
       "title": "The cost of injustice",
       "link": "https://www.dawn.com/news/2041137/the-cost-of-injustice",
@@ -232,6 +262,16 @@
       "language": "en"
     },
     {
+      "title": "بلوچستان میں سڑکوں کی تعمیر و بحالی کے لیے 12 ارب 29 کروڑ روپے کے منصوبے شامل",
+      "link": "https://www.express.pk/story/2841428/development-projects-balochistan-2841428",
+      "summary": "دور دراز علاقوں میں عوام کو آسان سفری سہولیات فراہم کرنے پر توجہ دی جارہی ہے",
+      "image_url": "",
+      "published": "2026-10-30T23:23:03+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Pakistan warns of Taliban repression as UN expert urges accountability",
       "link": "https://www.dawn.com/news/2041096/pakistan-warns-of-taliban-repression-as-un-expert-urges-accountability",
       "summary": "WASHINGTON: Pakistan has warned that the Taliban continue to allow terrorist groups to operate from Afghan soil, as a UN human rights expert urged member states not to normalise relations with the Kabul regime without verifiable improvements in human rights. Addressing the UN Human Rights Council’s interactive dialogue on Afghanistan on Thursday evening, Pak",
@@ -250,6 +290,66 @@
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "خیبرپختونخوا کی جامعات کے مسائل کا حل، وائس چانسلرز کانفرنس میں اہم فیصلے",
+      "link": "https://www.express.pk/story/2841427/kp-universities-vcs-conference-key-decisions-2841427",
+      "summary": "ورکنگ گروپس نے درپیش چیلنجز کے خاتمے کے لیے ٹھوس سفارشات بھی مرتب کر لیں",
+      "image_url": "",
+      "published": "2026-10-30T23:17:44+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "راولاکوٹ میں فسادی جتھے کے دھرنے اور سڑکوں کی بندش پر شدید عوامی ردعمل",
+      "link": "https://www.express.pk/story/2841426/rawalakot-public-reaction-protest-road-blocks-2841426",
+      "summary": "فسادی عناصر کی وجہ سے معمولات زندگی شدید متاثر اور روزگار کی سرگرمیاں تباہ ہو چکی ہیں، شہری",
+      "image_url": "",
+      "published": "2026-10-30T23:17:37+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "بھارت چین سرحدی جھڑپوں میں شدت، مودی حکومت کی دفاعی پالیسی عالمی تنقیدکی زد میں",
+      "link": "https://www.express.pk/story/2841424/intensification-of-india-china-border-skirmishes-modi-governments-defense-policy-faces-global-criticism-2841424",
+      "summary": "سرحدی ناکامی مودی حکومت کی کمزور دفاعی حکمتِ عملی کا منہ بولتا ثبوت ہے",
+      "image_url": "",
+      "published": "2026-10-30T23:13:23+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سعودی عرب میں حوثی حملوں کا خطرہ، امریکا نے اپنے غیر ہنگامی عملے کو ملک چھوڑنے کا حکم دے دیا",
+      "link": "https://www.express.pk/story/2841422/us-orders-non-emergency-staff-and-families-to-leave-saudi-arabia-2841422",
+      "summary": "انتباہ میں خبردار کیا گیا ہے کہ یہ کشیدگی اپنے موجودہ دائرے سے آگے تیزی سے پھیل سکتی ہے",
+      "image_url": "",
+      "published": "2026-10-30T23:02:35+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کراچی: لیاقت آباد میں ٹرالر کی ٹکر سے موٹر سائیکل سوار حاملہ خاتون جاں بحق، شوہر زخمی",
+      "link": "https://www.express.pk/story/2841421/liaquatabad-accident-2841421",
+      "summary": "واقعے کے بعد مشتعل شہریوں نے ٹرالر کو آگ لگا دی، ٹرالر ڈرائیور فرار ہوگیا",
+      "image_url": "",
+      "published": "2026-10-30T22:58:20+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "افغانستان میں طالبان رجیم کے خلاف مسلح مزاحمت جاری",
+      "link": "https://www.express.pk/story/2841420/armed-resistance-against-the-taliban-regime-continues-in-afghanistan-2841420",
+      "summary": "ٹارگٹڈ کارروائی کے دوران طالبان گروپ کا ایک رکن ہلاک کر دیا گیا",
+      "image_url": "",
+      "published": "2026-10-30T22:45:29+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "G20 'family photo' cancelled after protests over presence of Russian minister",
@@ -702,16 +802,6 @@
       "language": "en"
     },
     {
-      "title": "PPP delegation calls on Senate opposition leader, urges participation in proposed committee on electoral reforms",
-      "link": "https://www.dawn.com/news/2040948/ppp-delegation-calls-on-senate-opposition-leader-urges-participation-in-proposed-committee-on-electoral-reforms",
-      "summary": "ISLAMABAD: A PPP delegation called on Senate Opposition Leader Allama Raja Nasir Abbas on Friday and urged the opposition to join a proposed parliamentary committee on electoral reforms, Senator Sherry Rehman said. “He told us that he will respond [to the proposal] after consultation. We are hopeful that their response will be positive,” Rehman said in a vid",
-      "image_url": "https://i.dawn.com/large/2026/10/30145122f0dae6c.jpg",
-      "published": "2026-10-30T15:47:05+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
       "title": "Police Scotland carrying out 'active inquiries' into Andrew and Epstein Balmoral visits",
       "link": "https://www.bbc.co.uk/news/articles/cqglwp088532o?at_medium=RSS&at_campaign=rss",
       "summary": "The force said it had received information and stressed its inquiries were at \"an early stage\".",
@@ -907,96 +997,6 @@
       "summary": "",
       "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Online-taxi-fraud.jpg",
       "published": "2026-10-30T14:36:41+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Police watchdog to investigate Met over letter about Meghan's father",
-      "link": "https://www.bbc.co.uk/news/articles/c61m42pzplnzo?at_medium=RSS&at_campaign=rss",
-      "summary": "The police force faces probe over its handling of a letter containing allegations about Meghan's father.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/33d2/live/9dd14af0-d474-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-10-30T14:36:03+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Sophie Cunningham calls for unity as WNBA hits historic highs",
-      "link": "https://arynews.tv/sophie-cunningham-calls-for-unity-as-wnba-hits-historic-highs",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Sophie-Cunningham-26.jpg",
-      "published": "2026-10-30T14:34:21+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "NCCIA registers case over fake booking and delivery Scam",
-      "link": "https://arynews.tv/nccia-registers-case-over-fake-booking-and-delivery-scam",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/NCCIA-1-1.jpg",
-      "published": "2026-10-30T14:31:29+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Salman Ali Agha hopes Pakistan top-order turns up in tri-series final, seeks ‘perfect game’",
-      "link": "https://www.dawn.com/news/2040986/salman-ali-agha-hopes-pakistan-top-order-turns-up-in-tri-series-final-seeks-perfect-game",
-      "summary": "Pakistan batter Salman Ali Agha believes the the side have not yet displayed a complete team performance in the ongoing One-day International tri-nation series, and hopes the final against Sri Lanka in Lahore on Saturday is where it falls into place. The hosts’ top-order has been notably starved of runs for the series, underscoring Pakistan’s underwhelming c",
-      "image_url": "https://i.dawn.com/large/2025/11/11234825d327b63.webp",
-      "published": "2026-10-30T14:27:46+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Sophie Cunningham’s injury and free agency leave Indiana Fever return in limbo",
-      "link": "https://arynews.tv/sophie-cunninghams-injury-and-free-agency-leave-indiana-fever-return-in-limbo",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Sophie-Cunninghams-absence.jpg",
-      "published": "2026-10-30T14:24:50+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Karachi to get new food walk as traditional food street gets makeover",
-      "link": "https://arynews.tv/karachi-to-get-new-food-walk-as-traditional-food-street-gets-makeover",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/SMCHS.jpg",
-      "published": "2026-10-30T14:21:18+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "پاکستان ایران-امریکا ثالثی کے حوالے سے 'محتاط انداز میں پر امید' ہے، ڈی جی آئی ایس پی آر",
-      "link": "https://www.express.pk/story/2841409/dg-ispr-pakistan-cautiously-optimistic-on-iran-us-mediation-2841409",
-      "summary": "مکہ معاہدہ کسی ملک کو شامل ہونے سے نہیں روکتا، لیفٹننٹ جنرل احمد شریف چوہدری",
-      "image_url": "",
-      "published": "2026-10-30T14:20:24+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "CDF Munir, Singapore's FM discuss regional security and bilateral cooperation",
-      "link": "https://www.dawn.com/news/2040938/cdf-munir-singapores-fm-discuss-regional-security-and-bilateral-cooperation",
-      "summary": "Chief of Defence Forces and Chief of Army Staff Field Marshal Asim Munir met with Singapore’s Foreign Minister Dr Vivian Balakrishnan on Friday, where the two discussed regional security and avenues for bilateral cooperation, according to the military’s media wing. In a statement, Inter-Services Public Relations (ISPR) said the foreign minister, who is curre",
-      "image_url": "https://i.dawn.com/large/2026/10/30190653c13e939.webp",
-      "published": "2026-10-30T14:14:07+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "NHA directed to accelerate progress on M-6, M-25 and Quetta–Zhob Road",
-      "link": "https://arynews.tv/nha-directed-to-accelerate-progress-on-m-6-m-25-and-quetta-zhob-road",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/m-5.jpg",
-      "published": "2026-10-30T14:13:38+00:00",
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
