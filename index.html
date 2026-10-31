@@ -1682,6 +1682,140 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
 #installAppHint.show{display:block}
 @media(max-width:600px){#installAppButton{width:100%;justify-content:center}}
 </style>
+
+<style id="nexa-design-refresh-2026">
+/* NEXA Studio visual polish — presentation only; no app logic or page structure changed */
+:root{
+ --nexa-accent:#62d8ff;--nexa-accent-2:#7c9dff;--nexa-gold:#d9b978;
+ --nexa-surface:rgba(15,27,46,.88);--nexa-border:rgba(105,160,205,.2);
+}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{
+ background:
+  radial-gradient(ellipse at 12% 2%,rgba(34,104,164,.22),transparent 34%),
+  radial-gradient(ellipse at 90% 12%,rgba(19,145,155,.12),transparent 28%),
+  linear-gradient(180deg,#080e1b 0%,#070b14 62%,#090f1b 100%)!important;
+}
+body:after{
+ content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.16;
+ background-image:radial-gradient(rgba(135,190,230,.34) .7px,transparent .7px);
+ background-size:24px 24px;
+}
+header{
+ background:rgba(7,14,27,.88)!important;
+ border-bottom:1px solid rgba(102,178,220,.18)!important;
+ box-shadow:0 12px 38px rgba(0,0,0,.32)!important;
+ backdrop-filter:blur(22px) saturate(140%)!important;
+}
+header .brand-word{letter-spacing:clamp(1px,.42vw,4px)!important;text-shadow:0 4px 24px rgba(60,170,240,.14)}
+header .brand-word>span{background:linear-gradient(100deg,#74e4ff,#9bb6ff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+header .brand-word small{color:#91a9c8!important;letter-spacing:clamp(1px,.3vw,2.5px)!important}
+main{max-width:1240px!important}
+.page.active{animation:nexaPageEnter .24s ease-out}
+@keyframes nexaPageEnter{from{opacity:.72;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.hero,.card,.stat,.job-search-panel,.job-listing-card{
+ border-color:var(--nexa-border)!important;
+ box-shadow:0 12px 34px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.025)!important;
+}
+.card,.stat{backdrop-filter:blur(12px)}
+.card:hover{border-color:rgba(98,216,255,.34)!important}
+.hero{
+ background:
+  radial-gradient(ellipse at 100% 0%,rgba(34,121,176,.22),transparent 48%),
+  linear-gradient(135deg,rgba(19,39,65,.98),rgba(10,19,34,.98))!important;
+}
+.eyebrow,.studio-kicker{color:#7cddff!important}
+button,.button-link{
+ border-radius:11px!important;
+ transition:transform .18s ease,filter .18s ease,box-shadow .18s ease,border-color .18s ease!important;
+}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+ outline:2px solid var(--nexa-accent)!important;outline-offset:3px!important;
+}
+button:not(:disabled):active{transform:translateY(1px) scale(.99)}
+button:disabled{filter:saturate(.55)}
+input,select,textarea,.search-select-trigger{
+ box-shadow:inset 0 1px 2px rgba(0,0,0,.16);
+}
+input:hover,select:hover,textarea:hover,.search-select-trigger:hover{border-color:rgba(98,216,255,.42)!important}
+.studio-intro{
+ position:relative;isolation:isolate;overflow:hidden;
+ display:grid;grid-template-columns:minmax(0,1.1fr) minmax(250px,.9fr);
+ align-items:center;gap:clamp(18px,4vw,48px);
+ padding:clamp(22px,4vw,46px)!important;
+ margin:10px 0 18px!important;
+ border:1px solid rgba(91,171,215,.28)!important;border-radius:24px!important;
+ background:
+  radial-gradient(ellipse at 80% 15%,rgba(31,122,173,.2),transparent 42%),
+  linear-gradient(125deg,#12243d 0%,#0d1a2d 58%,#0b1726 100%)!important;
+ box-shadow:0 24px 60px rgba(0,0,0,.3),inset 0 1px rgba(255,255,255,.04)!important;
+}
+.studio-intro:before{
+ content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.2;
+ background:linear-gradient(115deg,transparent 35%,rgba(112,212,255,.12),transparent 70%);
+}
+.studio-intro h1{
+ max-width:680px!important;font-size:clamp(30px,4.3vw,56px)!important;
+ letter-spacing:-1.7px!important;line-height:1.08!important;
+ color:#f3f8ff!important;margin:14px 0!important;
+}
+.studio-intro h1 span{color:#71dcff!important}
+.studio-intro-copy>p,.studio-intro-copy>p strong{color:#b8cbe0!important}
+.studio-live-dot{background:#5ee2b1!important;box-shadow:0 0 0 4px rgba(94,226,177,.12),0 0 15px rgba(94,226,177,.4)!important}
+.studio-hero-actions{margin-top:20px!important}
+.studio-hero-actions button:first-child,#installAppButton{
+ background:linear-gradient(110deg,#1478d4,#21a9d4)!important;
+ border:1px solid rgba(122,218,255,.45)!important;
+ box-shadow:0 10px 26px rgba(20,137,211,.22)!important;
+}
+.studio-hero-actions .studio-light-button{
+ background:rgba(255,255,255,.055)!important;color:#d9edff!important;
+ border:1px solid rgba(150,190,225,.28)!important;
+}
+.studio-art{min-height:240px}
+.studio-orbit{border-color:rgba(100,207,255,.36)!important}
+.studio-art-tile{
+ background:linear-gradient(145deg,#1768a0,#123c65 62%,#0e2b4a)!important;
+ border:1px solid rgba(132,218,255,.34)!important;
+ box-shadow:0 24px 52px rgba(0,0,0,.34),0 0 40px rgba(36,164,220,.13)!important;
+}
+.studio-float{
+ background:rgba(16,34,55,.94)!important;color:#e8f5ff!important;
+ border:1px solid rgba(133,188,220,.25)!important;
+ box-shadow:0 12px 28px rgba(0,0,0,.24)!important;
+}
+.studio-float span{color:#c3d8ed!important}
+#bottomNav{
+ background:rgba(8,17,31,.92)!important;
+ border:1px solid rgba(100,171,215,.24)!important;
+ box-shadow:0 18px 48px rgba(0,0,0,.42)!important;
+ backdrop-filter:blur(22px) saturate(150%)!important;
+}
+#bottomNav button.active{background:linear-gradient(145deg,rgba(26,81,125,.5),rgba(17,45,74,.7))!important;color:#8ee6ff!important}
+#bottomNav button.active .bottom-icon{filter:drop-shadow(0 0 7px rgba(98,216,255,.42))}
+#settingsLauncher{background:rgba(12,27,46,.92)!important;border:1px solid rgba(110,180,220,.25)!important;box-shadow:0 8px 24px rgba(0,0,0,.28)!important}
+#mainNav.menu-open{
+ background:linear-gradient(160deg,#14243b,#091321 85%)!important;
+ border-right:1px solid rgba(217,185,120,.32)!important;
+}
+#supportLauncher{box-shadow:0 12px 30px rgba(0,119,255,.28),0 0 0 1px rgba(132,214,255,.15)!important}
+#supportPanel{border:1px solid rgba(108,185,225,.28)!important;box-shadow:0 24px 70px rgba(0,0,0,.55)!important}
+footer{color:#8298b5!important}
+footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
+@media(max-width:760px){
+ .studio-intro{grid-template-columns:minmax(0,1fr);gap:8px;padding:19px!important;border-radius:18px!important}
+ .studio-intro h1{font-size:clamp(29px,8vw,42px)!important;letter-spacing:-1.1px!important}
+ .studio-art{min-height:190px!important;max-height:220px!important;margin-top:0!important}
+ .studio-art-tile{width:145px;height:155px;padding:17px!important}
+ .studio-art-tile strong{font-size:23px!important}
+ .studio-float{font-size:11px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .page.active{animation:none}
+ *,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
+}
+</style>
 </head>
 <body>
 <div id="nexaSystemScan" role="status" aria-live="polite">
