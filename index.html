@@ -1722,10 +1722,10 @@ body.has-bottom-nav main{padding-bottom:calc(124px + env(safe-area-inset-bottom)
  <div class="card" style="max-width:900px;margin:0 auto 18px">
   <div class="field"><label for="liveTVSearch">🔎 Search channels</label><input id="liveTVSearch" type="search" placeholder="Channel name, language, or country…" autocomplete="off"></div><div class="field"><label for="liveTVChannelSelect">📺 Select a channel</label><select id="liveTVChannelSelect"><option value="">Loading worldwide channel list…</option></select></div>
   <p id="liveTVStatus" class="message" role="status" aria-live="polite">Channel select karein; video isi player mein load hogi.</p>
-  <div id="liveTVPlayerCard" style="display:none;margin-top:16px">
+  <p class="muted" style="font-size:12px;margin:8px 0">📉 Data Saver ON: direct HLS streams par 240p tak ya sab se kam available bitrate use hogi. YouTube/iframe aur broadcaster ki native streams ki quality website control nahi kar sakti.</p><div id="liveTVPlayerCard" style="display:none;margin-top:16px">
    <h3 id="liveTVSelectedTitle">Live TV Player</h3>
    <div style="position:relative;width:100%;aspect-ratio:16/9;background:#111827;border-radius:14px;overflow:hidden;border:1px solid #e5e7eb">
-    <video id="liveTVVideo" controls playsinline preload="metadata" style="display:none;width:100%;height:100%;background:#111827" aria-label="Live TV stream"></video>
+    <video id="liveTVVideo" controls playsinline preload="none" style="display:none;width:100%;height:100%;background:#111827" aria-label="Live TV stream"></video>
     <iframe id="liveTVFrame" title="Live TV Player" src="about:blank" style="display:none;width:100%;height:100%;border:0;background:#111827" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
    </div>
    <div class="actions" style="margin-top:12px"><button type="button" class="secondary" onclick="resetLiveTVPlayer()">Stop Player</button></div>
@@ -2806,28 +2806,29 @@ function playSelectedLiveTVChannel(){
   frame.style.display="none";video.style.display="block";
   if(status){status.className="message show";status.textContent=channel.name+" ki live stream load ho rahi hai…";}
   if(window.Hls&&Hls.isSupported()){
-   // Low-data default: start at 360p when the stream offers it, and cap
-   // adaptive quality at 360p. If 360p is unavailable, use the lowest rendition.
+   // Data Saver: conservative bandwidth estimate and a short buffer reduce
+   // initial data use. Quality is capped at 240p when the source provides it.
    liveTVHlsInstance=new Hls({
     enableWorker:true,
-    startLevel:-1,
-    capLevelToPlayerSize:true,
-    abrEwmaDefaultEstimate:250000,
-    abrEwmaDefaultEstimateMax:500000,
-    abrBandWidthFactor:0.8,
-    abrBandWidthUpFactor:0.5,
-    maxBufferLength:18,
-    maxMaxBufferLength:30,
-    maxBufferSize:20*1000*1000,
+    startLevel:0,
+    capLevelToPlayerSize:false,
+    abrEwmaDefaultEstimate:160000,
+    abrEwmaDefaultEstimateMax:240000,
+    abrBandWidthFactor:0.75,
+    abrBandWidthUpFactor:0.45,
+    maxBufferLength:8,
+    maxMaxBufferLength:12,
+    maxBufferSize:8*1000*1000,
     maxBufferHole:0.5,
-    backBufferLength:12,
+    backBufferLength:6,
+    maxFragLookUpTolerance:0.2,
     lowLatencyMode:false,
     manifestLoadingMaxRetry:5,
-    manifestLoadingRetryDelay:1000,
+    manifestLoadingRetryDelay:1200,
     levelLoadingMaxRetry:5,
-    levelLoadingRetryDelay:1000,
+    levelLoadingRetryDelay:1200,
     fragLoadingMaxRetry:8,
-    fragLoadingRetryDelay:1000,
+    fragLoadingRetryDelay:1200,
     fragLoadingMaxRetryTimeout:30000
    });
    video.onerror=()=>{removeUnavailableLiveTVChannel(channel,"Browser ne stream play nahi ki.");};
@@ -2836,15 +2837,18 @@ function playSelectedLiveTVChannel(){
    liveTVHlsInstance.on(Hls.Events.MANIFEST_PARSED,()=>{
     const levels=liveTVHlsInstance.levels||[];
     if(levels.length){
-     // Prefer 240p or lower for weak mobile networks; otherwise use the
-     // lowest available rendition and let HLS adapt conservatively.
-     let capIndex=-1;
-     levels.forEach((level,index)=>{if(Number(level.height)>0&&Number(level.height)<=240)capIndex=index;});
-     if(capIndex<0)capIndex=0;
+     // Choose the lowest bitrate rendition at or below 240p. If none exists,
+     // use the source's lowest-bitrate rendition rather than forcing HD.
+     const lowLevels=levels.map((level,index)=>({level,index}))
+      .filter(item=>Number(item.level.height)>0&&Number(item.level.height)<=240);
+     const candidates=lowLevels.length?lowLevels:levels.map((level,index)=>({level,index}));
+     candidates.sort((a,b)=>(Number(a.level.bitrate)||Number(a.level.maxBitrate)||0)-(Number(b.level.bitrate)||Number(b.level.maxBitrate)||0));
+     const capIndex=candidates[0].index;
      liveTVHlsInstance.autoLevelCapping=capIndex;
      liveTVHlsInstance.startLevel=capIndex;
      liveTVHlsInstance.loadLevel=capIndex;
-     if(status)status.textContent="Low Network Mode: 240p ya stream ki sab se kam available quality, buffering kam karne ke liye.";
+     liveTVHlsInstance.currentLevel=capIndex;
+     if(status)status.textContent="Data Saver ON: 240p tak, warna source ki sab se kam bitrate wali quality. Buffer chhota rakha gaya hai.";
     }
     video.play().catch(()=>{if(status)status.textContent="Low-data player tayyar hai — video par Play dabayein."});
    });
