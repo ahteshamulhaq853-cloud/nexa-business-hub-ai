@@ -3902,12 +3902,9 @@ async function init(){
  const {data,error}=await db.auth.getSession();
  if(error)console.warn("Session lookup:",error.message);
  currentUser=data&&data.session?data.session.user:null;setUI();
- let savedTemplate="classic";
- try{savedTemplate=localStorage.getItem("nexa_cv_template")||"classic"}catch(e){}
- applyTemplate(savedTemplate,false);
- if(currentUser){await loadCV();await checkApproval();await checkAdmin();showPage("dashboardPage")}
+ if(currentUser){await checkAdmin();showPage("dashboardPage")}
  else{showPage("accountPage")}
- preview();
+ if(typeof preview==="function"&&$("cvName"))preview();
 }
 init();
 </script>
