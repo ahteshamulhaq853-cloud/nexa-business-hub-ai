@@ -1,10 +1,26 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1020"><title>Nexa Social</title><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
-:root{--bg:#0b1020;--card:#141e32;--line:#283650;--txt:#f4f7ff;--muted:#9aa9c4;--blue:#5795ff;--pink:#df5da8}*{box-sizing:border-box}body{margin:0;background:radial-gradient(700px 400px at 75% -10%,#263d70,transparent 65%),var(--bg);color:var(--txt);font:15px/1.5 system-ui,Arial}button,input,textarea{font:inherit}button{cursor:pointer;color:inherit;border:0}.hidden{display:none!important}.brand{font-size:21px;font-weight:900;letter-spacing:.5px;display:flex;gap:10px;align-items:center}.logo{width:39px;height:39px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--pink));display:grid;place-items:center}.layout{max-width:1300px;margin:auto;padding:20px;display:grid;grid-template-columns:220px minmax(0,680px) 260px;gap:22px}.side,.right{position:sticky;top:20px;height:calc(100vh - 40px)}.card,.sidebox{background:linear-gradient(160deg,#17233b,#111a2c);border:1px solid var(--line);border-radius:19px;padding:16px}.sidebox{height:100%;display:flex;flex-direction:column}.nav{display:grid;gap:7px;margin-top:25px}.nav button{padding:12px;border-radius:12px;text-align:left;background:none;color:var(--muted);font-weight:700}.nav button.active,.nav button:hover{background:#293b5d;color:white}.foot{margin-top:auto;color:var(--muted);font-size:12px}.main{min-width:0}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.search,.field,input,textarea{background:#0c1527;border:1px solid var(--line);border-radius:12px;color:white;padding:11px;outline:none}.search{width:45%}.composer{margin-bottom:15px}.composer textarea{width:100%;min-height:75px;resize:vertical}.btn{background:#293c5f;padding:10px 14px;border-radius:11px;font-weight:750}.primary{background:linear-gradient(110deg,#397fe9,#925de7)}.muted{color:var(--muted)}.small{font-size:12px}.post{margin:14px 0}.head{display:flex;gap:10px;align-items:center}.avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#498fff,#d45ca7);font-weight:800;overflow:hidden;flex:none}.avatar img{width:100%;height:100%;object-fit:cover}.body{white-space:pre-wrap;overflow-wrap:anywhere;margin:13px 0}.media{width:100%;max-height:560px;object-fit:contain;background:#050913;border-radius:13px}.actions{display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:10px;margin-top:10px}.actions button{background:none;color:var(--muted);padding:7px}.actions button:hover{color:#ff83b8}.auth{min-height:100vh;display:grid;place-items:center;padding:20px}.authbox{width:min(430px,100%);padding:27px}.authbox h1{font-size:30px;margin-bottom:2px}.field{display:block;width:100%;margin:12px 0}.stories{display:flex;gap:14px;overflow:auto;margin:8px 0 17px}.story{text-align:center;color:var(--muted);font-size:12px;min-width:65px}.ring{width:58px;height:58px;padding:3px;border-radius:50%;background:linear-gradient(135deg,#5795ff,#df5da8);margin:0 auto 5px}.ring div{height:100%;border-radius:50%;background:#23324e;display:grid;place-items:center}.right .card{margin-bottom:14px}.stats{display:flex;gap:15px;margin:15px 0;color:var(--muted)}.stats b{display:block;color:white}.section{font-size:22px;margin:5px 0 15px}.row{display:flex;gap:8px}.row input{flex:1;min-width:0}.empty{text-align:center;padding:35px 12px;color:var(--muted)}.mobile{display:none}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#263b60;padding:12px 17px;border-radius:12px;z-index:9}
+:root{--bg:#0b1020;--card:#141e32;--line:#283650;--txt:#f4f7ff;--muted:#9aa9c4;--blue:#5795ff;--pink:#df5da8}*{box-sizing:border-box}body{margin:0;background:radial-gradient(700px 400px at 75% -10%,#263d70,transparent 65%),var(--bg);color:var(--txt);font:15px/1.5 system-ui,Arial}button,input,textarea{font:inherit}button{cursor:pointer;color:inherit;border:0}.hidden{display:none!important}.brand{font-size:21px;font-weight:900;letter-spacing:.5px;display:flex;gap:10px;align-items:center}.logo{width:39px;height:39px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--pink));display:grid;place-items:center}.layout{max-width:1300px;margin:auto;padding:20px;display:grid;grid-template-columns:220px minmax(0,680px) 260px;gap:22px}.side,.right{position:sticky;top:20px;height:calc(100vh - 40px)}.card,.sidebox{background:linear-gradient(160deg,#17233b,#111a2c);border:1px solid var(--line);border-radius:19px;padding:16px}.sidebox{height:100%;display:flex;flex-direction:column}.nav{display:grid;gap:7px;margin-top:25px}.nav button{padding:12px;border-radius:12px;text-align:left;background:none;color:var(--muted);font-weight:700}.nav button.active,.nav button:hover{background:#293b5d;color:white}.foot{margin-top:auto;color:var(--muted);font-size:12px}.main{min-width:0}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.search,.field,input,textarea{background:#0c1527;border:1px solid var(--line);border-radius:12px;color:white;padding:11px;outline:none}.search{width:45%}.composer{margin-bottom:15px}.composer textarea{width:100%;min-height:75px;resize:vertical}.btn{background:#293c5f;padding:10px 14px;border-radius:11px;font-weight:750}.primary{background:linear-gradient(110deg,#397fe9,#925de7)}.muted{color:var(--muted)}.small{font-size:12px}.post{margin:14px 0}.head{display:flex;gap:10px;align-items:center}.avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#498fff,#d45ca7);font-weight:800;overflow:hidden;flex:none}.avatar img{width:100%;height:100%;object-fit:cover}.body{white-space:pre-wrap;overflow-wrap:anywhere;margin:13px 0}.media{width:100%;max-height:560px;object-fit:contain;background:#050913;border-radius:13px}.actions{display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:10px;margin-top:10px}.actions button{background:none;color:var(--muted);padding:7px}.actions button:hover{color:#ff83b8}.auth{min-height:100vh;display:grid;place-items:center;padding:20px}.authbox{width:min(430px,100%);padding:27px}.authbox h1{font-size:30px;margin-bottom:2px}.authbox{max-width:460px}.authbox button:disabled{opacity:.6;cursor:wait}#authMessage:empty{display:none}.field{display:block;width:100%;margin:12px 0}.stories{display:flex;gap:14px;overflow:auto;margin:8px 0 17px}.story{text-align:center;color:var(--muted);font-size:12px;min-width:65px}.ring{width:58px;height:58px;padding:3px;border-radius:50%;background:linear-gradient(135deg,#5795ff,#df5da8);margin:0 auto 5px}.ring div{height:100%;border-radius:50%;background:#23324e;display:grid;place-items:center}.right .card{margin-bottom:14px}.stats{display:flex;gap:15px;margin:15px 0;color:var(--muted)}.stats b{display:block;color:white}.section{font-size:22px;margin:5px 0 15px}.row{display:flex;gap:8px}.row input{flex:1;min-width:0}.empty{text-align:center;padding:35px 12px;color:var(--muted)}.mobile{display:none}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#263b60;padding:12px 17px;border-radius:12px;z-index:9}
 @media(max-width:1000px){.layout{grid-template-columns:190px minmax(0,680px)}.right{display:none}}@media(max-width:680px){.layout{display:block;padding:12px 12px 80px}.side{display:none}.top .brand{font-size:18px}.search{width:42%}.mobile{display:flex;position:fixed;bottom:0;left:0;right:0;justify-content:space-around;background:#101a2cee;border-top:1px solid var(--line);padding:9px 3px calc(9px + env(safe-area-inset-bottom));z-index:5}.mobile button{background:none;color:var(--muted);font-size:11px}.mobile button.active{color:#9bc1ff}.card{padding:13px}.post{padding:13px}}
 </style></head><body>
-<div id="auth" class="auth"><div class="card authbox"><div class="brand"><div class="logo">N</div>NEXA SOCIAL</div><p class="muted">Connect · Share · Discover</p><h1 id="authTitle">Welcome back</h1><p class="muted" id="authSub">Sign in to your account.</p><div id="extra" class="hidden"><input class="field" id="display" placeholder="Display name"><input class="field" id="username" placeholder="Username (letters, numbers, _)"></div><input class="field" id="email" type="email" placeholder="Email address"><input class="field" id="password" type="password" placeholder="Password (at least 6 characters)"><button class="btn primary" style="width:100%" id="authGo">Sign in</button><p class="muted" style="text-align:center"><span id="switchLabel">New here?</span> <button id="switch" style="background:none;color:#91baff">Create account</button></p><p class="small muted">Please be respectful and protect your personal information.</p></div></div>
+<div id="auth" class="auth"><div class="card authbox">
+<div class="brand"><div class="logo">N</div>NEXA SOCIAL</div>
+<p class="muted">Connect · Share · Discover</p>
+<h1 id="authTitle">Welcome back</h1><p class="muted" id="authSub">Sign in to your account.</p>
+<div id="authMessage" class="small muted" role="status" aria-live="polite" style="margin:10px 0"></div>
+<div id="extra" class="hidden">
+<input class="field" id="display" type="text" maxlength="50" autocomplete="name" placeholder="Full name">
+<input class="field" id="username" type="text" maxlength="24" autocomplete="username" autocapitalize="none" placeholder="Username (3–24 letters, numbers or _)">
+</div>
+<input class="field" id="email" type="email" autocomplete="email" autocapitalize="none" placeholder="Email address">
+<input class="field" id="password" type="password" autocomplete="current-password" placeholder="Password (at least 8 characters)">
+<div id="confirmWrap" class="hidden"><input class="field" id="confirmPassword" type="password" autocomplete="new-password" placeholder="Confirm password"></div>
+<button class="btn primary" style="width:100%" id="authGo" type="button">Sign in</button>
+<button id="forgot" type="button" style="display:block;margin:12px auto;background:none;color:#91baff">Forgot password?</button>
+<p class="muted" style="text-align:center"><span id="switchLabel">New here?</span> <button id="switch" type="button" style="background:none;color:#91baff">Create account</button></p>
+<p class="small muted">Use your own email address and keep your password private.</p>
+</div></div>
 <div id="app" class="hidden"><div class="layout"><aside class="side"><div class="sidebox"><div class="brand"><div class="logo">N</div>NEXA SOCIAL</div><nav class="nav" id="nav"><button class="active" data-page="home">⌂　Home Feed</button><button data-page="reels">▷　Nexa Reels</button><button data-page="explore">⌕　Explore</button><button data-page="messages">✉　Messages</button><button data-page="alerts">♧　Notifications</button><button data-page="profile">◉　My Profile</button></nav><div class="foot">Nexa Social · Community first<br><button id="logout" style="background:none;color:#91baff;padding:10px 0">Log out</button></div></div></aside>
 <main class="main"><div class="top"><div class="brand"><div class="logo">N</div>NEXA SOCIAL</div><input class="search" id="search" placeholder="Find username"><div class="avatar" id="meAvatar">N</div></div>
 <section id="home"><div class="stories"><div class="story"><div class="ring"><div>＋</div></div>Share</div><div class="story"><div class="ring"><div>✨</div></div>Creators</div><div class="story"><div class="ring"><div>🎬</div></div>Videos</div><div class="story"><div class="ring"><div>🌍</div></div>Community</div></div><div class="card composer"><div class="row"><textarea id="postText" placeholder="What's happening in your world?" maxlength="5000"></textarea></div><div class="row" style="align-items:center;margin-top:10px"><label class="btn">＋ Photo / Video<input id="file" type="file" accept="image/*,video/mp4,video/webm" hidden></label><span class="small muted" id="fileName">No file selected</span><span style="flex:1"></span><button class="btn primary" id="publish">Share post</button></div></div><div id="feed"></div></section>
@@ -16,8 +32,77 @@
 const URL="https://xlyefzvpuayqrhwbcxfa.supabase.co",KEY="sb_publishable_cxBPD-LapgXOWzrfKF4U3g_pTLwohA7",db=supabase.createClient(URL,KEY);let user=null,profile=null,mode="login",file=null,page="home",chatUser=null;
 const $=x=>document.getElementById(x),esc=s=>String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])),initial=s=>(s||"N").split(/\s+/).slice(0,2).map(x=>x[0]||"").join("").toUpperCase();
 function say(s){$("toast").textContent=s;$("toast").classList.remove("hidden");setTimeout(()=>$("toast").classList.add("hidden"),3000)}
-function switchMode(){mode=mode==="login"?"signup":"login";$("extra").classList.toggle("hidden",mode!=="signup");$("authTitle").textContent=mode==="signup"?"Create account":"Welcome back";$("authSub").textContent=mode==="signup"?"Join the Nexa community.":"Sign in to your account.";$("authGo").textContent=mode==="signup"?"Create account":"Sign in";$("switchLabel").textContent=mode==="signup"?"Already registered?":"New here?";$("switch").textContent=mode==="signup"?"Sign in":"Create account"}
-$("switch").onclick=switchMode;$("authGo").onclick=async()=>{let email=$("email").value.trim(),password=$("password").value;try{if(mode==="signup"){let username=$("username").value.trim().toLowerCase().replace(/[^a-z0-9_]/g,"");if(username.length<3)throw Error("Username must be at least 3 characters.");let {data,error}=await db.auth.signUp({email,password,options:{data:{username,display_name:$("display").value.trim()||username}}});if(error)throw error;if(!data.session){say("Check your email to confirm your account, then sign in.");switchMode()}}else{let {error}=await db.auth.signInWithPassword({email,password});if(error)throw error}}catch(e){say(e.message)}};
+function authMessage(message,isError=false){const el=$("authMessage");el.textContent=message||"";el.style.color=isError?"#ff9caa":"#9aa9c4"}
+function renderAuth(){
+ const signup=mode==="signup",reset=mode==="reset";
+ $("extra").classList.toggle("hidden",!signup);
+ $("confirmWrap").classList.toggle("hidden",!(signup||reset));
+ $("email").classList.toggle("hidden",reset);
+ $("password").autocomplete=signup||reset?"new-password":"current-password";
+ $("authTitle").textContent=signup?"Create your account":reset?"Choose a new password":"Welcome back";
+ $("authSub").textContent=signup?"Join the Nexa community.":reset?"Set a new password for your account.":"Sign in to your Nexa Social account.";
+ $("authGo").textContent=signup?"Create account":reset?"Update password":"Sign in";
+ $("switchLabel").textContent=signup?"Already registered?":"New here?";
+ $("switch").textContent=signup?"Sign in":"Create account";
+ $("switch").classList.toggle("hidden",reset);
+ $("forgot").classList.toggle("hidden",signup||reset);
+ $("email").required=!reset;
+ $("password").placeholder=reset?"New password (at least 8 characters)":signup?"Password (at least 8 characters)":"Password";
+ $("confirmPassword").placeholder=reset?"Confirm new password":"Confirm password";
+}
+function switchMode(){mode=mode==="login"?"signup":"login";renderAuth();authMessage("")}
+$("switch").onclick=switchMode;
+$("authGo").onclick=async()=>{
+ const button=$("authGo");if(button.disabled)return;
+ const email=$("email").value.trim().toLowerCase(),password=$("password").value;
+ const confirm=$("confirmPassword").value;
+ button.disabled=true;button.textContent="Please wait…";authMessage("");
+ try{
+  if(mode==="signup"){
+   const username=$("username").value.trim().toLowerCase();
+   const displayName=$("display").value.trim();
+   if(!/^[a-z0-9_]{3,24}$/.test(username))throw Error("Username 3 se 24 characters ka ho: sirf a-z, 0-9 aur _ use karein.");
+   if(displayName.length<2)throw Error("Apna display name kam az kam 2 characters likhein.");
+   if(!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email))throw Error("Valid email address likhein.");
+   if(password.length<8)throw Error("Password kam az kam 8 characters ka hona chahiye.");
+   if(password!==confirm)throw Error("Password aur confirm password match nahi karte.");
+   const {data:existing,error:checkError}=await db.from("profiles").select("id").eq("username",username).maybeSingle();
+   if(checkError)throw checkError;
+   if(existing)throw Error("Ye username pehle se liya ja chuka hai. Doosra username choose karein.");
+   const {data,error}=await db.auth.signUp({email,password,options:{data:{username,display_name:displayName},emailRedirectTo:location.origin+location.pathname}});
+   if(error)throw error;
+   if(data.session&&data.user){authMessage("Account created. Opening Nexa Social…");await enter(data.user)}
+   else{authMessage("Registration request sent. Apni email inbox/spam folder mein confirmation link check karein. Confirm hone ke baad sign in karein.");mode="login";renderAuth();$("email").value=email}
+  }else if(mode==="reset"){
+   if(password.length<8)throw Error("New password kam az kam 8 characters ka hona chahiye.");
+   if(password!==confirm)throw Error("Dono passwords match nahi karte.");
+   const {error}=await db.auth.updateUser({password});
+   if(error)throw error;
+   await db.auth.signOut();mode="login";renderAuth();$("password").value="";$("confirmPassword").value="";
+   authMessage("Password update ho gaya. Ab naye password se login karein.");
+  }else{
+   if(!email||!password)throw Error("Email aur password dono enter karein.");
+   const {data,error}=await db.auth.signInWithPassword({email,password});
+   if(error)throw error;
+   if(data.user)await enter(data.user);
+  }
+ }catch(e){
+  let msg=e.message||"Something went wrong.";
+  if(/invalid login credentials/i.test(msg))msg="Email ya password ghalat hai. Dobara check karein.";
+  if(/email not confirmed/i.test(msg))msg="Pehle apni email confirm karein, phir login karein.";
+  authMessage(msg,true);
+ }finally{button.disabled=false;renderAuth()}
+};
+$("forgot").onclick=async()=>{
+ const email=$("email").value.trim().toLowerCase();
+ if(!email)return authMessage("Password reset link ke liye pehle apna email address likhein.",true);
+ try{
+  const {error}=await db.auth.resetPasswordForEmail(email,{redirectTo:location.origin+location.pathname});
+  if(error)throw error;
+  authMessage("Agar is email par account mojood hai to password reset link bhej diya gaya hai. Inbox aur spam folder check karein.");
+ }catch(e){authMessage(e.message,true)}
+};
+renderAuth();
 async function loadProfile(){let {data,error}=await db.from("profiles").select("*").eq("id",user.id).single();if(error)throw error;profile=data;let name=profile.display_name||profile.username;["meAvatar","rightAvatar"].forEach(id=>$(id).textContent=initial(name));$("rightName").textContent=name;$("rightHandle").textContent="@"+profile.username}
 function show(p){page=p;["home","reels","explore","messages","alerts","profile"].forEach(x=>$(x).classList.toggle("hidden",x!==p));document.querySelectorAll("[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===p));if(p==="home")feed("feed");if(p==="explore")feed("exploreList");if(p==="reels")reels();if(p==="profile")myProfile();if(p==="alerts")alerts();if(p==="messages")loadChat()}
 document.querySelectorAll("[data-page]").forEach(b=>b.onclick=()=>show(b.dataset.page));document.querySelectorAll("[data-goto]").forEach(b=>b.onclick=()=>show(b.dataset.goto));$("logout").onclick=()=>db.auth.signOut();
@@ -35,7 +120,11 @@ async function findUser(){let q=$("search").value.trim().replace(/^@/,"");if(!q)
 $("search").onkeydown=e=>{if(e.key==="Enter")findUser()};
 async function loadChat(){let uname=$("recipient").value.trim().replace(/^@/,"");if(!uname){$("chatList").innerHTML='<p class="muted small">Enter a username above, then press Enter to load the conversation.</p>';return}let {data:to,error}=await db.from("profiles").select("id,username").eq("username",uname).maybeSingle();if(error||!to){$("chatList").innerHTML='<p class="muted">User not found.</p>';return}chatUser=to;let {data:msgs,error:e}=await db.from("messages").select("*").or("and(sender_id.eq."+user.id+",recipient_id.eq."+to.id+"),and(sender_id.eq."+to.id+",recipient_id.eq."+user.id+")").order("created_at",{ascending:true}).limit(100);$("chatList").innerHTML=e?'<p>'+esc(e.message)+'</p>':msgs.map(m=>'<p style="text-align:'+(m.sender_id===user.id?"right":"left")+'"><span class="card" style="display:inline-block;padding:8px 12px">'+esc(m.body)+'</span></p>').join("")||'<p class="muted">No messages yet.</p>'}
 $("recipient").onkeydown=e=>{if(e.key==="Enter")loadChat()};$("sendMessage").onclick=async()=>{if(!chatUser)await loadChat();let body=$("messageText").value.trim();if(!chatUser||!body)return;let {error}=await db.from("messages").insert({sender_id:user.id,recipient_id:chatUser.id,body});if(error)say(error.message);else{$("messageText").value="";loadChat()}};
-async function enter(u){user=u;$("auth").classList.add("hidden");$("app").classList.remove("hidden");try{await loadProfile();await feed("feed")}catch(e){say("Profile setup pending: "+e.message)}}
-db.auth.onAuthStateChange((event,session)=>{if(session?.user)enter(session.user);else{user=null;$("app").classList.add("hidden");$("auth").classList.remove("hidden")}});
-(async()=>{let {data:{session}}=await db.auth.getSession();if(session?.user)await enter(session.user)})();
+async function enter(u){if(user?.id===u.id&&!$("app").classList.contains("hidden"))return;user=u;$("auth").classList.add("hidden");$("app").classList.remove("hidden");try{await loadProfile();await feed("feed")}catch(e){$("app").classList.add("hidden");$("auth").classList.remove("hidden");authMessage("Profile setup error: "+e.message,true)}}
+db.auth.onAuthStateChange((event,session)=>{
+ if(event==="PASSWORD_RECOVERY"){mode="reset";$("app").classList.add("hidden");$("auth").classList.remove("hidden");renderAuth();authMessage("Recovery link verified. Ab apna naya password set karein.");return}
+ if(session?.user){enter(session.user)}
+ else{user=null;profile=null;$("app").classList.add("hidden");$("auth").classList.remove("hidden");mode="login";renderAuth()}
+});
+(async()=>{const {data:{session},error}=await db.auth.getSession();if(error)authMessage(error.message,true);if(session?.user)await enter(session.user)})();
 </script></body></html>
