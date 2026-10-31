@@ -1,22 +1,42 @@
 {
-  "updated": "2026-10-31T21:57:38.746759+00:00",
+  "updated": "2026-10-31T22:27:15.749514+00:00",
   "items": [
+    {
+      "title": "Hamilton takes first pole for Ferrari at Mexico City Grand Prix",
+      "link": "https://www.bbc.co.uk/sport/formula1/articles/c6reyl8zp3jwo?at_medium=RSS&at_campaign=rss",
+      "summary": "Lewis Hamilton takes his first pole position for Ferrari and his first for more than three years at the Mexico City Grand Prix.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/57ee/live/6d77c180-d579-11f1-aae4-a751b3f56d67.jpg",
+      "published": "2026-10-31T22:26:11+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Crypto firm Binance covers 90% of losses after $6.3bn hack",
+      "link": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o?at_medium=RSS&at_campaign=rss",
+      "summary": "The Federal Bureau of Investigation (FBI) says North Korea was responsible for the hack.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2e52/live/ccbb9490-d53e-11f1-93de-81de9e959fac.jpg",
+      "published": "2026-10-31T22:11:45+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Why did this Korean content creator throw a divorce ceremony?",
+      "link": "https://www.bbc.co.uk/news/videos/c51kd2jyjr1eo?at_medium=RSS&at_campaign=rss",
+      "summary": "Cho Seung-yeon marked the end of her marriage by having a divorce ceremony - however not everyone online was happy about it.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c5b8/live/2b5b2bb0-d430-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-10-31T22:01:39+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Thousands demonstrate in Paris as protests spread across Europe",
       "link": "https://www.bbc.co.uk/news/videos/ck0j0y87j303o?at_medium=RSS&at_campaign=rss",
       "summary": "More than 320,000 people demonstrated across France against the rising cost of living and poor public services, with clashes between some protesters and police.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1d3a/live/6230e120-d570-11f1-93e1-3b657b665bcf.jpg",
       "published": "2026-10-31T21:29:01+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Are De Zerbi's Spurs finding elusive consistency?",
-      "link": "https://www.bbc.co.uk/sport/football/articles/c6n04v897qe4o?at_medium=RSS&at_campaign=rss",
-      "summary": "Are Spurs finally finding elusive consistency under Roberto de Zerbi after a third successive Premier League win, asks chief football writer Phil McNulty?",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9051/live/7b9bec80-d567-11f1-910b-9bd7c745c627.jpg",
-      "published": "2026-10-31T21:16:11+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -402,16 +422,6 @@
       "language": "ur"
     },
     {
-      "title": "Martinez's 'inexplicable' 83 seconds cost Man Utd and Carrick",
-      "link": "https://www.bbc.co.uk/sport/football/articles/ckvg64xp1e1eo?at_medium=RSS&at_campaign=rss",
-      "summary": "Manchester United defender Lisandro Martinez condemned for costly red card in 2-0 defeat to Chelsea at Stamford Bridge.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3453/live/944e8ae0-d53e-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-10-31T17:27:06+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "Laura Kuenssberg: Healey risks breaking minimum wage promise for younger workers",
       "link": "https://www.bbc.co.uk/news/articles/cv369266644lo?at_medium=RSS&at_campaign=rss",
       "summary": "The Chancellor has suggested that younger workers might not receive the same minimum wage as others before the next election.",
@@ -522,16 +532,6 @@
       "language": "ur"
     },
     {
-      "title": "Crypto firm Binance covers 90% of losses after $6.3bn hack",
-      "link": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o?at_medium=RSS&at_campaign=rss",
-      "summary": "Two analytics firms say they have robust intelligence pointing to a North Korean state-backed group as the likely culprit.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2e52/live/ccbb9490-d53e-11f1-93de-81de9e959fac.jpg",
-      "published": "2026-10-31T16:32:08+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "Fakhar hits ton as Pakistan sink Sri Lanka in tri-series final",
       "link": "https://arynews.tv/fakhar-hits-ton-as-pakistan-sink-sri-lanka-in-tri-series-final",
       "summary": "",
@@ -602,6 +602,56 @@
       "language": "ur"
     },
     {
+      "title": "Refineries to sell petrol 'below cost'",
+      "link": "https://tribune.com.pk/story/2637979/refineries-to-sell-petrol-below-cost",
+      "summary": "Will deposit Rs49 per litre in oil levy, argue policy changed without consultation",
+      "image_url": "",
+      "published": "2026-10-31T16:10:25+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "PSX sheds 3,560 points in October",
+      "link": "https://tribune.com.pk/story/2637987/psx-sheds-3560-points-in-october",
+      "summary": "Geopolitical uncertainty, foreign portfolio outflows drag KSE-100 down",
+      "image_url": "",
+      "published": "2026-10-31T16:10:25+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Pakistan, Saudi discuss early GCC FTA signing",
+      "link": "https://tribune.com.pk/story/2637986/pakistan-saudi-discuss-early-gcc-fta-signing",
+      "summary": "Commerce minister, Saudi envoy also take up Vision 2030 tie-up, agri and regional connectivity",
+      "image_url": "",
+      "published": "2026-10-31T16:10:25+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "S&P revises Meta outlook to 'negative'",
+      "link": "https://tribune.com.pk/story/2637983/sp-revises-meta-outlook-to-negative",
+      "summary": ".",
+      "image_url": "",
+      "published": "2026-10-31T16:10:25+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Chinese park courts Pakistani pine nuts, rice",
+      "link": "https://tribune.com.pk/story/2637982/chinese-park-courts-pakistani-pine-nuts-rice",
+      "summary": "Hulunbuir e-commerce hub offers beef processing expertise as boiled beef exports hit $14.52m",
+      "image_url": "",
+      "published": "2026-10-31T16:10:25+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "سیالکوٹ: سوشل میڈیا انفلوئنسر کی مہندی تقریب میں بھگدڑ، 1 شخص جاں بحق، 14 افراد شدید زخمی",
       "link": "https://jang.com.pk/news/1629435",
       "summary": "اسکرین گریب/ ایکس پنجاب کے شہر سیالکوٹ میں مہندی کی تقریب میں بھگدڑ مچنے سے ایک شخص جاں بحق اور 14 افراد شدید زخمی ہوگئے۔ریسکیو 1122 کے...",
@@ -652,7 +702,7 @@
       "language": "ur"
     },
     {
-      "title": "جی 20 وزرائے خارجہ اجلاس بغیر کسی نتیجے پر پہنچے بغیر ختم",
+      "title": "جی 20 وزرائے خارجہ اجلاس کسی نتیجے پر پہنچے بغیر ختم",
       "link": "https://www.express.pk/story/2841571/g20-summit-end-in-usa-2841571",
       "summary": "روس کی شرکت پر اختلافات کے باعث روایتی گروپ فوٹو بھی منسوخ کردیا گیا۔",
       "image_url": "",
@@ -948,56 +998,6 @@
       "image_url": "https://i.dawn.com/large/2014/11/54726eaf5bd07.jpg",
       "published": "2026-10-31T14:01:15+00:00",
       "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "پنجاب میں گندم کی کاشت شروع",
-      "link": "https://www.express.pk/story/2841555/wheat-cultivation-begins-in-punjab-2841555",
-      "summary": "حکومت نے پنجاب میں گندم کی کاشت کا ہدف ایک کروڑ 65 لاکھ ایکڑ مقرر کیا ہے",
-      "image_url": "",
-      "published": "2026-10-31T14:00:49+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ایف بی آر 4 ماہ کا ٹیکس وصولیوں کا ہدف حاصل کرنے میں ناکام، 96 ارب کمی کا انکشاف",
-      "link": "https://www.express.pk/story/2841554/fbr-fails-to-meet-four-month-tax-collection-target-records-rs96-billion-shortfall-2841554",
-      "summary": "ایف بی آر کو ٹیکس دہندگان کی طرف سے مجموعی طور پر77 لاکھ انکم ٹیکس گوشوارے موصول ہوئے ہیں، ذرائع",
-      "image_url": "",
-      "published": "2026-10-31T13:54:38+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "New Surface Laptop 13 challenges Apple MacBook Air with incredible battery life",
-      "link": "https://arynews.tv/new-surface-laptop-13-challenges-apple-macbook-air-with-incredible-battery-life",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Microsoft-Surface-13-.jpg",
-      "published": "2026-10-31T13:50:42+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Sophie Cunningham reflects on her journey from $28K salary to $665K contract",
-      "link": "https://arynews.tv/sophie-cunningham-reflects-on-her-journey-from-28k-salary-to-665k-contract",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/FotoJet-2026-10-31T183355.792.jpg",
-      "published": "2026-10-31T13:47:01+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Pakistan rebukes Afghan Taliban's 'deeply misguided approach' to resolving bilateral tensions",
-      "link": "https://tribune.com.pk/story/2637956/pakistan-rebukes-afghan-talibans-deeply-misguided-approach-to-resolving-bilateral-tensions",
-      "summary": "Warns that it will take all necessary measures under international law to eliminate threats to national security",
-      "image_url": "",
-      "published": "2026-10-31T13:46:43+00:00",
-      "source": "Express Tribune",
       "category": "Pakistan",
       "language": "en"
     }
