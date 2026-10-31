@@ -4288,3 +4288,58 @@ body:has(#accountPage.active) #bottomNav{display:none!important}
 body:has(#accountPage.active) #supportLauncher{display:none!important}
 body:has(#accountPage.active) main{padding-bottom:24px!important}
 </style>
+
+
+<style id="nexa-visual-refresh-oct2026">
+:root{--bg:#070b13;--panel:#101a2a;--panel2:#15243a;--line:rgba(119,174,205,.22);--cyan:#72f5df;--text:#f3f8ff;--muted:#a8b8ca;--gold:#e8c98c}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(ellipse at 12% 0%,rgba(39,107,130,.22),transparent 38%),radial-gradient(ellipse at 88% 12%,rgba(142,111,65,.13),transparent 32%),#070b13;color:var(--text);letter-spacing:.01em}
+main{width:min(1160px,100%);margin:0 auto;padding-left:clamp(13px,3vw,28px);padding-right:clamp(13px,3vw,28px)}
+header,.topbar{background:rgba(7,12,21,.88)!important;border-bottom:1px solid rgba(114,245,223,.13)!important;backdrop-filter:blur(18px)}
+.page{animation:nexaPageIn .28s ease both}
+@keyframes nexaPageIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.card,.studio-intro,.studio-section-heading,.hero,.welcome-notice{border:1px solid rgba(129,180,207,.19)!important;border-radius:20px!important;background:linear-gradient(145deg,rgba(19,34,53,.96),rgba(10,18,31,.97))!important;box-shadow:0 18px 48px rgba(0,0,0,.23)}
+.card{padding:clamp(16px,2.5vw,24px);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.card:hover{border-color:rgba(114,245,223,.36)!important;box-shadow:0 20px 54px rgba(0,0,0,.3)}
+.hero{padding:clamp(24px,5vw,48px)!important;margin:22px auto!important;max-width:1000px}
+.hero h1,.studio-intro h1{line-height:1.08;letter-spacing:-.045em}
+.eyebrow,.studio-kicker{color:var(--cyan)!important;letter-spacing:.13em;font-weight:800}
+button,.button-link{border-radius:12px;transition:transform .18s ease,filter .18s ease,box-shadow .18s ease}
+button:hover,.button-link:hover{transform:translateY(-1px);filter:brightness(1.08)}
+button:not(.secondary):not(.ghost){box-shadow:0 7px 20px rgba(75,223,205,.12)}
+button.secondary,.ghost{background:rgba(18,34,52,.88)!important;color:var(--text)!important;border:1px solid rgba(129,180,207,.24)!important}
+input,select,textarea{background:#091321!important;color:var(--text)!important;border:1px solid rgba(129,180,207,.28)!important;border-radius:12px!important;min-height:46px}
+input:focus,select:focus,textarea:focus{outline:2px solid rgba(114,245,223,.45)!important;border-color:var(--cyan)!important}
+label{color:#d5e2ee;font-weight:700}
+.studio-dashboard .studio-intro{padding:clamp(22px,4vw,42px)!important;overflow:hidden}
+.studio-dashboard .studio-intro p{max-width:680px;color:#b9c9d8}
+.studio-dashboard .studio-hero-actions{gap:10px}
+.studio-dashboard .studio-art{filter:drop-shadow(0 12px 30px rgba(67,227,207,.12))}
+.studio-section-heading{padding:20px 22px;margin:18px 0}
+#accountPage .hero{text-align:center}
+#authFormsGrid{max-width:900px;margin:0 auto;gap:18px}
+#registerCard,#loginCard{padding:clamp(18px,3vw,28px)!important}
+#liveTVPage .card,#latestNewsPage .card,#weatherPage .card{border-radius:18px!important}
+#liveTVChannelSelect,#weatherCountry,#weatherState,#weatherDistrict{width:100%;cursor:pointer}
+#liveTVPlayerCard{border-top:1px solid rgba(114,245,223,.2)!important}
+#liveTVVideo,#liveTVFrame{border-radius:14px}
+#newsCategoryCards .card{min-height:138px!important}
+#nexaNewsTab,#nexaWeatherTab{min-width:112px}
+#bottomNav{background:rgba(7,12,21,.9)!important;border:1px solid rgba(114,245,223,.18)!important;border-radius:18px 18px 0 0!important;box-shadow:0 -12px 35px rgba(0,0,0,.25)}
+#supportLauncher{box-shadow:0 8px 25px rgba(0,0,0,.35)}
+.muted{color:var(--muted)!important}
+@media(max-width:700px){
+ main{padding-bottom:100px}
+ .hero{margin:14px auto!important;padding:24px 17px!important}
+ .hero h1{font-size:clamp(28px,8vw,40px)}
+ .studio-dashboard .studio-intro{padding:22px 17px!important}
+ .studio-dashboard .studio-intro h1{font-size:clamp(27px,8vw,38px)}
+ .studio-dashboard .studio-hero-actions>*{width:100%;margin:3px 0}
+ #authFormsGrid{display:block}
+ #authFormsGrid>.card{margin-bottom:14px}
+ .studio-section-heading{padding:16px;margin:14px 0}
+ #liveTVPage .card,#latestNewsPage .card{padding:15px}
+ #newsCategoryCards{grid-template-columns:1fr!important}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
