@@ -1,16 +1,6 @@
 {
-  "updated": "2026-10-31T22:27:15.749514+00:00",
+  "updated": "2026-10-31T22:59:16.385890+00:00",
   "items": [
-    {
-      "title": "Hamilton takes first pole for Ferrari at Mexico City Grand Prix",
-      "link": "https://www.bbc.co.uk/sport/formula1/articles/c6reyl8zp3jwo?at_medium=RSS&at_campaign=rss",
-      "summary": "Lewis Hamilton takes his first pole position for Ferrari and his first for more than three years at the Mexico City Grand Prix.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/57ee/live/6d77c180-d579-11f1-aae4-a751b3f56d67.jpg",
-      "published": "2026-10-31T22:26:11+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
     {
       "title": "Crypto firm Binance covers 90% of losses after $6.3bn hack",
       "link": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o?at_medium=RSS&at_campaign=rss",
@@ -422,6 +412,16 @@
       "language": "ur"
     },
     {
+      "title": "Martinez's 'inexplicable' 83 seconds cost Man Utd and Carrick",
+      "link": "https://www.bbc.co.uk/sport/football/articles/ckvg64xp1e1eo?at_medium=RSS&at_campaign=rss",
+      "summary": "Manchester United defender Lisandro Martinez condemned for costly red card in 2-0 defeat to Chelsea at Stamford Bridge.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a0b8/live/ed87fc60-d578-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-10-31T17:27:06+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
       "title": "Laura Kuenssberg: Healey risks breaking minimum wage promise for younger workers",
       "link": "https://www.bbc.co.uk/news/articles/cv369266644lo?at_medium=RSS&at_campaign=rss",
       "summary": "The Chancellor has suggested that younger workers might not receive the same minimum wage as others before the next election.",
@@ -438,6 +438,16 @@
       "image_url": "",
       "published": "2026-10-31T17:24:01+00:00",
       "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "مذاکراتی پیشکش کے خط میں امریکا کا لہجہ اور مؤقف کافی نرم ہے؛ ایران",
+      "link": "https://www.express.pk/story/2841576/iran-says-us-has-changed-its-tone-in-vance-letter-2841576",
+      "summary": "ایران نے تاحال امریکی نائب صدر کے خط کا جواب نہیں دیا",
+      "image_url": "",
+      "published": "2026-10-31T17:21:38+00:00",
+      "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
     },
@@ -990,16 +1000,6 @@
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "Mansehra assistant commissioner injured as vehicle comes under attack in Nowshera",
-      "link": "https://www.dawn.com/news/2041197/mansehra-assistant-commissioner-injured-as-vehicle-comes-under-attack-in-nowshera",
-      "summary": "PESHAWAR: Mansehra Assistant Commissioner (AC) Adil Waseem was injured on Saturday when unknown gunmen opened fire at his official vehicle in Khyber Pakhtunkhwa’s Nowshera district, officials said. Muhammad Asim, the spokesperson of Peshawar’s Lady Reading Hospital, said Waseem was “stable” and was receiving medical treatment. Waseem came under attack in Now",
-      "image_url": "https://i.dawn.com/large/2014/11/54726eaf5bd07.jpg",
-      "published": "2026-10-31T14:01:15+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
     }
   ]
 }
