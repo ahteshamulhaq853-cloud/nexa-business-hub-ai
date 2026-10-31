@@ -4343,3 +4343,18 @@ label{color:#d5e2ee;font-weight:700}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 </style>
+
+
+<script id="nexa-feature-cleanup-phase1">
+(function(){
+  const retiredPages=["cvSectionPage","builderPage","europassPage","experienceCertificatePage","paymentPage","servicesPage"];
+  retiredPages.forEach(id=>{const el=document.getElementById(id);if(el)el.remove();});
+  document.querySelectorAll("[onclick]").forEach(el=>{
+    const action=el.getAttribute("onclick")||"";
+    if(/showPage\(['"](?:cvSectionPage|builderPage|europassPage|experienceCertificatePage|paymentPage|servicesPage)['"]\)/i.test(action))el.remove();
+  });
+  document.querySelectorAll("#applyCVLink").forEach(el=>{const field=el.closest(".field")||el.parentElement;if(field)field.remove();});
+  document.querySelectorAll(".support-quick button").forEach(el=>{if(/create cv|europass|pdf\s*\/\s*payment/i.test(el.textContent||""))el.remove();});
+  document.querySelectorAll("a,button").forEach(el=>{if(/open (?:normal )?cv|europass cv|experience certificate|pdf access/i.test((el.textContent||"").trim()))el.remove();});
+})();
+</script>
