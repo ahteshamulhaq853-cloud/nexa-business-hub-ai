@@ -63,7 +63,7 @@ $("authGo").onclick=async()=>{
    const displayName=$("display").value.trim();
    if(!/^[a-z0-9_]{3,24}$/.test(username))throw Error("Username 3 se 24 characters ka ho: sirf a-z, 0-9 aur _ use karein.");
    if(displayName.length<2)throw Error("Apna display name kam az kam 2 characters likhein.");
-   if(!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email))throw Error("Valid email address likhein.");
+   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))throw Error("Valid email address likhein.");
    if(password.length<8)throw Error("Password kam az kam 8 characters ka hona chahiye.");
    if(password!==confirm)throw Error("Password aur confirm password match nahi karte.");
    const {data:existing,error:checkError}=await db.from("profiles").select("id").eq("username",username).maybeSingle();
