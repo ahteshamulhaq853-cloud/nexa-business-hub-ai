@@ -2935,6 +2935,7 @@ function playSelectedLiveTVChannel(){
    liveTVHlsInstance.loadSource(channel.stream);
    liveTVHlsInstance.attachMedia(video);
    liveTVHlsInstance.on(Hls.Events.MANIFEST_PARSED,()=>{
+    clearTimeout(liveTVPlaybackWatchdog);
     const levels=liveTVHlsInstance.levels||[];
     if(levels.length){
      // Choose the lowest bitrate rendition at or below 240p. If none exists,
