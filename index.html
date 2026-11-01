@@ -4285,6 +4285,54 @@ body:has(#welcomeNotice.show)::before{content:"";display:block;position:fixed;in
 }
 </style>
 
+
+<style id="nexa-mobile-performance-optimization">
+/* Lightweight rendering profile for phones and low-power devices. */
+@media (max-width: 760px) {
+  html { scroll-behavior: auto; }
+  body {
+    background: #070b13 !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  header, .topbar, #bottomNav {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  .card, .hero, .studio-intro, .studio-section-heading,
+  .welcome-notice, .job-listing-card, .stat,
+  #mainNav.menu-open {
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  .card, .hero, .studio-intro, .studio-section-heading {
+    background-image: none !important;
+  }
+  .card:hover, .job-listing-card:hover,
+  button:hover, .button-link:hover, .service-row:hover {
+    transform: none !important;
+    filter: none !important;
+    box-shadow: none !important;
+  }
+  .card, .job-listing-card, .news-card, .news-item,
+  button, .button-link, .service-row {
+    transition: none !important;
+  }
+  .page { animation: none !important; }
+  #menuBackdrop { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+  #latestNewsPage .news-card, #latestNewsPage .news-item,
+  .job-listing-card {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 190px;
+  }
+  button, a, input, select { touch-action: manipulation; }
+}
+@media (max-width: 420px) {
+  .card, .hero, .studio-intro { border-radius: 13px !important; }
+  #bottomNav { box-shadow: none !important; }
+}
+</style>
+
 </body>
 </html>
 
