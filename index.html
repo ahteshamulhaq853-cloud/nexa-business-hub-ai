@@ -1907,18 +1907,18 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
 </section>
 <section id="liveTVPage" class="page">
- <div class="studio-section-heading"><div><span class="studio-kicker">NEXA ENTERTAINMENT</span><h2>📺 Live TV</h2><p class="muted">Country select karne ki zaroorat nahi — available channels seedha list mein hain. Channel choose karein aur isi player mein dekhein.</p></div></div>
+ <div class="studio-section-heading"><div><span class="studio-kicker">NEXA ENTERTAINMENT</span><h2>📺 Live TV</h2><p class="muted">Worldwide health-checked active channels ki list. Search karein aur channel isi player mein dekhein.</p></div></div>
  <div class="card" style="max-width:900px;margin:0 auto 18px">
   <div class="field"><label for="liveTVSearch">🔎 Search channels</label><input id="liveTVSearch" type="search" placeholder="Channel name, language, or country…" autocomplete="off"></div><div class="field"><label for="liveTVChannelSelect">📺 Select a channel</label><select id="liveTVChannelSelect"><option value="">Loading worldwide channel list…</option></select></div>
   <p id="liveTVStatus" class="message" role="status" aria-live="polite">Channel select karein; video isi player mein load hogi.</p>
-  <p class="muted" style="font-size:12px;margin:8px 0">📉 Data Saver ON: direct HLS streams par 240p tak ya sab se kam available bitrate use hogi. YouTube/iframe aur broadcaster ki native streams ki quality website control nahi kar sakti.</p><div id="liveTVPlayerCard" style="display:none;margin-top:16px">
+  <p class="muted" style="font-size:12px;margin:8px 0">📉 Data Saver ON: direct HLS streams par 240p tak ya source ki sab se kam available bitrate use hogi.</p><div id="liveTVPlayerCard" style="display:none;margin-top:16px">
    <h3 id="liveTVSelectedTitle">Live TV Player</h3>
    <div style="position:relative;width:100%;aspect-ratio:16/9;background:#111827;border-radius:14px;overflow:hidden;border:1px solid #e5e7eb">
     <video id="liveTVVideo" controls playsinline preload="none" style="display:none;width:100%;height:100%;background:#111827" aria-label="Live TV stream"></video>
     <iframe id="liveTVFrame" title="Live TV Player" src="about:blank" style="display:none;width:100%;height:100%;border:0;background:#111827" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
    </div>
    <div class="actions" style="margin-top:12px"><button type="button" class="secondary" onclick="resetLiveTVPlayer()">Stop Player</button></div>
-   <p class="muted" style="font-size:12px">Channels jo official embedded live player dete hain woh isi website ke andar chalenge. Agar broadcaster embedding band kare ya live feed offline ho, us channel ka player kaam nahi karega. Urdu captions speech recognition aur online translation par depend karte hain; har channel par perfect ya guaranteed nahi honge.</p>
+   <p class="muted" style="font-size:12px">Streams ki availability waqt aur mulk ke hisaab se badal sakti hai. Health-check pass hone ke bawajood kuch feeds aapke network ya region mein play na hon.</p>
   </div>
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button><button class="secondary" onclick="showPage('servicesPage')">Back to Services</button></div>
