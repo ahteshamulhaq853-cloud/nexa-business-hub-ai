@@ -2795,76 +2795,8 @@ async function submitNexaJobApplication(event){
  }catch(error){console.error("NEXA application submit error:",error);status.textContent="Application submit nahi hui. Supabase mein job_applications table aur insert policy configure karein. Details: "+(error.message||"connection error");}
  finally{button.disabled=false;}
 }
-// Strict allowlist: only a stream with a current, reputable live-playlist reference is shown.
-const liveTVFallbackChannels=[
-{name:"ARY News — Live",embed:"https://www.youtube.com/embed/RqUZ2Fv9l8w",country:"Pakistan",category:"News"},
-{name:"Express News — Live",embed:"https://www.youtube.com/embed/6i2L8XcQE1o",country:"Pakistan",category:"News"},
-{name:"PTV News — Live",embed:"https://www.youtube.com/embed/CGb02nb7Ni4",country:"Pakistan",category:"News"},
-{name:"Geo News",country:"Pakistan",category:"News",stream:"https://livecdn.live247stream.com/geonews/web/playlist.m3u8"},
-{name:"Dunya News",country:"Pakistan",category:"News",stream:"https://imob.dunyanews.tv/livehd/ngrp:dunyalivehd_2_all/playlist.m3u8"},
-{name:"Samaa TV",country:"Pakistan",category:"News",stream:"https://vodzong.mjunoon.tv:8087/streamtest/SAMAA-173/playlist.m3u8"},
-{name:"Aaj News",country:"Pakistan",category:"News"},
-{name:"Hum News",country:"Pakistan",category:"News"},
-{name:"92 News HD",country:"Pakistan",category:"News"},
-{name:"BOL News",country:"Pakistan",category:"News"},
-{name:"GNN",country:"Pakistan",category:"News"},
-{name:"Neo News",country:"Pakistan",category:"News"},
-{name:"Public News",country:"Pakistan",category:"News",stream:"http://103.250.28.74:8000/play/a04g/index.m3u8"},
-{name:"City 42",country:"Pakistan",category:"Regional"},
-{name:"Lahore News",country:"Pakistan",category:"Regional"},
-{name:"Khyber News",country:"Pakistan",category:"Regional"},
-{name:"Such TV",country:"Pakistan",category:"News",stream:"https://video.primexsports.com/suchnews/live/playlist.m3u8"},
-{name:"Channel 5",country:"Pakistan",category:"News"},
-{name:"Dawn News",country:"Pakistan",category:"News"},
-{name:"Suno News",country:"Pakistan",category:"News",stream:"http://103.250.28.74:8000/play/a02a/index.m3u8"},
-{name:"24 News HD",country:"Pakistan",category:"News"},
-{name:"Raftar",country:"Pakistan",category:"News"},
-{name:"HUM TV",country:"Pakistan",category:"Entertainment"},
-{name:"ARY Digital",country:"Pakistan",category:"Entertainment"},
-{name:"Geo Entertainment",country:"Pakistan",category:"Entertainment"},
-{name:"Green Entertainment",country:"Pakistan",category:"Entertainment"},
-{name:"Express Entertainment",country:"Pakistan",category:"Entertainment"},
-{name:"A-Plus",country:"Pakistan",category:"Entertainment"},
-{name:"TV One",country:"Pakistan",category:"Entertainment"},
-{name:"Urdu 1",country:"Pakistan",category:"Entertainment"},
-{name:"ATV",country:"Pakistan",category:"Entertainment"},
-{name:"Aan TV",country:"Pakistan",category:"Entertainment"},
-{name:"Play Entertainment",country:"Pakistan",category:"Entertainment",stream:"http://103.250.28.74:8000/play/a050/index.m3u8"},
-{name:"Filmazia",country:"Pakistan",category:"Entertainment"},
-{name:"See TV",country:"Pakistan",category:"Entertainment"},
-{name:"Sab TV",country:"Pakistan",category:"Entertainment"},
-{name:"Venus HD",country:"Pakistan",category:"Entertainment",stream:"http://103.250.28.74:8000/play/a04x/index.m3u8"},
-{name:"PTV Sports",country:"Pakistan",category:"Sports",stream:"https://trs1.aynaott.com/ptvsports/index.m3u8"},
-{name:"A Sports",country:"Pakistan",category:"Sports"},
-{name:"Geo Super",country:"Pakistan",category:"Sports"},
-{name:"Ten Sports",country:"Pakistan",category:"Sports"},
-{name:"Fast Sports HD",country:"Pakistan",category:"Sports"},
-{name:"Madani Channel",country:"Pakistan",category:"Islamic",stream:"http://tvsen7.aynascope.net/MadaniTV/index.m3u8"},
-{name:"ARY QTV",country:"Pakistan",category:"Islamic"},
-{name:"Noor TV",country:"Pakistan",category:"Islamic"},
-{name:"Hadi TV",country:"Pakistan",category:"Islamic"},
-{name:"8XM",country:"Pakistan",category:"Music"},
-{name:"The Musik",country:"Pakistan",category:"Music"},
-{name:"Play TV",country:"Pakistan",category:"Music"},
-{name:"Aag TV",country:"Pakistan",category:"Music"},
-{name:"PTV Home",country:"Pakistan",category:"Government",stream:"http://103.250.28.74:8000/play/a016/index.m3u8"},
-{name:"PTV World",country:"Pakistan",category:"Government",stream:"http://103.250.28.74:8000/play/a018/index.m3u8"},
-{name:"PTV National",country:"Pakistan",category:"Government"},
-{name:"PTV Bolan",country:"Pakistan",category:"Regional"},
-{name:"PTV Global",country:"Pakistan",category:"Government",stream:"http://103.250.28.74:8000/play/a018/index.m3u8"},
-{name:"PTV Parliament",country:"Pakistan",category:"Government"},
-{name:"AJK TV",country:"Pakistan",category:"Regional"},
-{name:"Mashriq TV",country:"Pakistan",category:"Regional"},
-{name:"Sindh TV",country:"Pakistan",category:"Regional",stream:"http://103.250.28.74:8000/play/a00u/index.m3u8"},
-{name:"Sindh TV News",country:"Pakistan",category:"Regional",stream:"http://103.250.28.74:8000/play/a00v/index.m3u8"},
-{name:"Awaz TV",country:"Pakistan",category:"Regional"},
-{name:"Mehran TV",country:"Pakistan",category:"Regional"},
-{name:"VSH News",country:"Pakistan",category:"Regional",stream:"http://103.250.28.74:8000/play/a00w/index.m3u8"},
-{name:"Waseb TV",country:"Pakistan",category:"Regional",stream:"http://103.250.28.74:8000/play/a04k/index.m3u8"},
-{name:"Time News",country:"Pakistan",category:"Regional"},
-{name:"Al Jazeera English — Live",stream:"https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",country:"Qatar",category:"News"},
-{name:"Al Jazeera Arabic — Live",stream:"https://live-hls-apps-aja-fa.getaj.net/AJA/index.m3u8",country:"Qatar",category:"News"}
-].filter(ch=>ch.embed||ch.stream);
+// No hard-coded or unverified fallback channels. The dropdown is populated only from the health-checked worldwide playlist.
+const liveTVFallbackChannels=[];
 let liveTVChannels=[...liveTVFallbackChannels];
 let liveTVAllChannels=[...liveTVFallbackChannels];
 let liveTVHlsInstance=null;
@@ -2932,23 +2864,25 @@ function filterLiveTVChannels(){
 }
 async function loadWorldwideLiveTVChannels(){
  const status=$("liveTVStatus");
- const cacheKey="nexa_live_tv_worldwide_v2";
- // Show saved worldwide channels immediately, then refresh playlist quietly.
+ // Versioned cache deliberately discards the old unverified worldwide dropdown.
+ const cacheKey="nexa_live_tv_verified_online_v3";
  try{
   const cached=JSON.parse(localStorage.getItem(cacheKey)||"null");
-  if(cached&&Array.isArray(cached.channels)&&Date.now()-cached.savedAt<86400000){
+  if(cached&&Array.isArray(cached.channels)&&Date.now()-cached.savedAt<21600000){
    liveTVAllChannels=keepOnlyUnfailedLiveTVChannels(cached.channels);
    liveTVChannels=liveTVAllChannels;
    filterLiveTVChannels();
-   if(status){status.className="message show";status.textContent=liveTVAllChannels.length.toLocaleString()+" channels ready (saved list). Updating in background…";}
+   if(status){status.className="message show";status.textContent=liveTVAllChannels.length.toLocaleString()+" recently health-checked channels loaded. List background mein refresh ho rahi hai…";}
   }else if(status){
+   liveTVAllChannels=[];liveTVChannels=[];renderLiveTVOptions([]);
    status.className="message show";
-   status.textContent="Basic channels ready — worldwide list background mein load ho rahi hai.";
+   status.textContent="Worldwide active channels ki health-checked list load ho rahi hai…";
   }
  }catch(e){}
  try{
-  const response=await fetch("https://iptv-org.github.io/iptv/index.m3u",{cache:"force-cache"});
-  if(!response.ok)throw new Error("Global playlist unavailable");
+  // This playlist contains streams that passed the provider's latest health checks.
+  const response=await fetch("https://dearbulut.github.io/iptv/playlists/online.m3u",{cache:"no-store"});
+  if(!response.ok)throw new Error("Health-checked worldwide playlist unavailable");
   const playlist=await response.text();
   const lines=playlist.split(/\r?\n/);
   const found=[];let meta="";
@@ -2956,26 +2890,42 @@ async function loadWorldwideLiveTVChannels(){
    const line=lineRaw.trim();if(!line)continue;
    if(line.startsWith("#EXTINF")){meta=line;continue;}
    if(line.startsWith("#"))continue;
-   if(!/^https?:\/\//i.test(line))continue;
+   if(!/^https?:\/\//i.test(line)){meta="";continue;}
+   // This player supports HLS only; skip non-HLS and streams flagged geo-blocked.
+   if(!/\.m3u8(\?|$)/i.test(line)||/geo[- ]?blocked/i.test(meta)){meta="";continue;}
    const nameMatch=meta.match(/,(.+)$/);
    const name=(nameMatch?nameMatch[1]:"Live channel").trim();
    const groupMatch=meta.match(/group-title="([^"]*)"/i);
    const countryMatch=meta.match(/tvg-country="([^"]*)"/i);
    const languageMatch=meta.match(/tvg-language="([^"]*)"/i);
    const category=groupMatch?groupMatch[1]:"";
-   if(!/\.m3u8(\?|$)/i.test(line)){meta="";continue;}
    found.push({name,stream:line,country:countryMatch?countryMatch[1]:"",language:languageMatch?languageMatch[1]:"",category});
    meta="";
   }
-  const seen=new Set();const unique=found.filter(ch=>{const key=ch.name.toLowerCase()+"|"+ch.stream;if(seen.has(key))return false;seen.add(key);return true;});
-  liveTVAllChannels=keepOnlyUnfailedLiveTVChannels([...liveTVFallbackChannels.map(f=>unique.find(ch=>ch.name.toLowerCase()===f.name.toLowerCase())||f),...unique.filter(ch=>!liveTVFallbackChannels.some(f=>f.name.toLowerCase()===ch.name.toLowerCase()))]);
+  // Keep only one health-checked HLS source per channel name to remove duplicate entries.
+  const seen=new Set();
+  const unique=found.filter(ch=>{
+   const key=(ch.name||"").toLowerCase().replace(/\s+/g," ").trim();
+   if(!key||seen.has(key))return false;
+   seen.add(key);return true;
+  });
+  liveTVAllChannels=keepOnlyUnfailedLiveTVChannels(unique);
   liveTVChannels=liveTVAllChannels;
   filterLiveTVChannels();
   try{localStorage.setItem(cacheKey,JSON.stringify({savedAt:Date.now(),channels:liveTVAllChannels}));}catch(e){}
-  if(status){status.className="message show";status.textContent=liveTVAllChannels.length.toLocaleString()+" worldwide channels ready. List next time saved cache se foran khulegi.";}
+  if(status){
+   status.className="message show";
+   status.textContent=liveTVAllChannels.length.toLocaleString()+" worldwide channels passed the latest health-check list. Duplicate and geo-blocked entries removed.";
+  }
+  if(!liveTVAllChannels.length&&status)status.textContent="Is waqt supported active HLS channels ki list available nahi mili. Baad mein refresh karein.";
  }catch(error){
-  if(!liveTVAllChannels.length){liveTVAllChannels=keepOnlyUnfailedLiveTVChannels(liveTVFallbackChannels);liveTVChannels=liveTVAllChannels;filterLiveTVChannels();}
-  if(status){status.className="message show";status.textContent="Saved/basic channel list available. Worldwide list abhi refresh nahi hui — internet milne par dobara try karein.";}
+  // Do not bring back old or unverified channels if the active list cannot be reached.
+  if(status){
+   status.className="message show";
+   status.textContent=liveTVAllChannels.length
+    ? "Saved health-checked list dikhayi ja rahi hai; latest refresh filhal unavailable hai."
+    : "Active worldwide channel list filhal load nahi hui. Internet connection check karke page reload karein.";
+  }
  }
 }
 function removeUnavailableLiveTVChannel(channel,reason){
