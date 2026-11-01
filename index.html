@@ -2802,9 +2802,15 @@ let liveTVAllChannels=[...liveTVFallbackChannels];
 let liveTVHlsInstance=null;
 // Persist channels that fail playback so they are not re-added by the worldwide refresh.
 const liveTVFailedKey="nexa_live_tv_failed_channels_v1";
+function getLiveTVChannelKey(ch){
+ return (ch?.name||"").toLowerCase()+"|"+(ch?.stream||ch?.embed||"");
+}
+function getLiveTVFailedSet(){
+ try{return new Set(JSON.parse(localStorage.getItem(liveTVFailedKey)||"[]"));}catch(e){return new Set();}
+}
 function keepOnlyUnfailedLiveTVChannels(channels){
- // Playback errors never delete or blacklist a channel.
- return channels.filter(ch=>ch&&(ch.embed||ch.stream));
+ const failed=getLiveTVFailedSet();
+ return channels.filter(ch=>ch&&(ch.embed||ch.stream)&&!failed.has(getLiveTVChannelKey(ch)));
 }
 document.addEventListener("click",function(event){
  const button=event.target.closest("#liveTVSections [data-channel-index]");
@@ -2916,7 +2922,7 @@ async function loadWorldwideLiveTVChannels(){
    if(!existing||(candidate.score||0)>(existing.score||0))byChannel.set(key,candidate);
    meta="";requiresHeaders=false;
   }
-  const existingChannels=Array.isArray(liveTVAllChannels)?liveTVAllChannels:[];\n  const mergedByKey=new Map();\n  [...existingChannels,...byChannel.values()].forEach(ch=>{if(!ch||!ch.name||!(ch.embed||ch.stream))return;const key=((ch.name||"")+"|"+(ch.stream||ch.embed||"")).toLowerCase();if(!mergedByKey.has(key))mergedByKey.set(key,ch);});\n  const cleaned=filterAndLimit([...mergedByKey.values()]);
+  const cleaned=filterAndLimit([...byChannel.values()]);
   liveTVAllChannels=cleaned;
   liveTVChannels=liveTVAllChannels;
   filterLiveTVChannels();
@@ -2936,14 +2942,17 @@ async function loadWorldwideLiveTVChannels(){
  }
 }
 function removeUnavailableLiveTVChannel(channel,reason){
- // Kept as a compatibility handler for existing player callbacks.
- // A slow, blocked, or failed stream must never remove the channel from the dropdown.
  if(!channel)return;
+ const key=getLiveTVChannelKey(channel);
+ const failed=getLiveTVFailedSet();failed.add(key);
+ try{localStorage.setItem(liveTVFailedKey,JSON.stringify([...failed]));}catch(e){}
+ const keep=ch=>getLiveTVChannelKey(ch)!==key;
+ liveTVAllChannels=liveTVAllChannels.filter(keep);
+ liveTVChannels=liveTVChannels.filter(keep);
+ try{localStorage.setItem("nexa_live_tv_worldwide_v2",JSON.stringify({savedAt:Date.now(),channels:liveTVAllChannels}));}catch(e){}
+ renderLiveTVOptions(liveTVChannels);
  const status=$("liveTVStatus");
- if(status){
-  status.className="message show";
-  status.textContent=channel.name+" abhi play nahi ho raha. Channel list mein mojood rahega — aap chahein to baad mein dobara Play karein. "+(reason||"");
- }
+ if(status){status.className="message show";status.textContent=channel.name+" ki stream kaam nahi kar rahi thi, is liye list se hata diya. "+(reason||"")+" Ab baqi available feeds dikh rahi hain.";}
 }
 function playSelectedLiveTVChannel(){
  const select=$("liveTVChannelSelect");
