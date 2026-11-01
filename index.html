@@ -7,7 +7,6 @@
 <meta name="theme-color" content="#070b13">
 <title>NEXA Studio | Jobs, News, Live TV & Weather</title>\n<meta name="description" content="NEXA Studio brings Pakistan jobs, latest news, Live TV and district-wise weather together in one digital workspace.">\n<meta name="robots" content="index,follow">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js"></script>
 <style>
 :root{--bg:#080c15;--panel:#0e1727;--panel2:#132238;--line:#294256;--cyan:#65f3dc;--text:#eff8ff;--muted:#9db2c7;--red:#ff91a2;--green:#83ffd0}
@@ -1816,7 +1815,6 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
  .page.active{animation:none}
  *,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
 }
-#nexaSystemScan{display:none!important;pointer-events:none!important}
 </style>
 </head>
 <body>
@@ -2498,7 +2496,7 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
 <script>
 const SUPABASE_URL="https://njfobttocvkjsrvlcjaj.supabase.co";
 const SUPABASE_KEY="sb_publishable_EkEFOVho4ryOYcIOVAqMhQ_z9yoD9TB";
-const db=window.supabase?.createClient ? window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY) : null;
+const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
 let currentUser=null,approvedForPDF=false,photoData="",currentTemplate="classic";
 const $=id=>document.getElementById(id);
 
@@ -3158,15 +3156,9 @@ async function register(e){
 }
 async function login(e){
  e.preventDefault();clearMsg("loginMsg");
- if(!db){msg("loginMsg","Login service load nahi hui. Internet check karke page reload karein.","error");return;}
- const button=$("loginForm")?.querySelector("button[type=submit]");
- if(button){button.disabled=true;button.textContent="Signing in...";}
- try{
-  const {data,error}=await db.auth.signInWithPassword({email:$("loginEmail").value.trim(),password:$("loginPassword").value});
-  if(error){msg("loginMsg",error.message,"error");return}
-  currentUser=data.user;setUI();await checkAdmin();showPage("dashboardPage");showWelcome("login");msg("loginMsg","Login successful!","success");
- }catch(error){msg("loginMsg",error?.message||"Login connect nahi ho saka. Internet check karke dobara try karein.","error");}
- finally{if(button){button.disabled=false;button.textContent="Login to Nexa →";}}
+ const {data,error}=await db.auth.signInWithPassword({email:$("loginEmail").value.trim(),password:$("loginPassword").value});
+ if(error){msg("loginMsg",error.message,"error");return}
+ currentUser=data.user;setUI();await checkAdmin();showPage("dashboardPage");showWelcome("login");msg("loginMsg","Login successful!","success");
 }
 async function logout(){
  await db.auth.signOut();currentUser=null;approvedForPDF=false;setUI();if($("pdfBtn"))$("pdfBtn").disabled=true;$("adminButton").style.display="none";showPage("accountPage");
@@ -3644,7 +3636,7 @@ function hideNexaSystemScan(){
  const scan=document.getElementById("nexaSystemScan");
  if(scan&&!scan.classList.contains("done")){scan.classList.add("done");setTimeout(()=>scan.remove(),450)}
 }
-if(db) db.auth.onAuthStateChange((event,session)=>{
+db.auth.onAuthStateChange((event,session)=>{
   currentUser=session&&session.user?session.user:null;setUI();
   if(!currentUser){approvedForPDF=false;$("adminButton").style.display="none";if($("pdfBtn"))$("pdfBtn").disabled=true}
   else{checkAdmin();}
@@ -3867,7 +3859,6 @@ refreshFreeVoices();
 initSearchableSelects();
 
 async function init(){
- if(!db){showPage("accountPage");msg("loginMsg","Login service load nahi hui. Internet check karke page reload karein.","error");return;}
  const {data,error}=await db.auth.getSession();
  if(error)console.warn("Session lookup:",error.message);
  currentUser=data&&data.session?data.session.user:null;setUI();
