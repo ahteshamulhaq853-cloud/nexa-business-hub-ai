@@ -2859,7 +2859,13 @@ function renderLiveTVOptions(channels){
 }
 function filterLiveTVChannels(){
  const q=($("liveTVSearch")?.value||"").trim().toLowerCase();
- const matches=liveTVAllChannels.filter(ch=>(ch.name+" "+(ch.country||"")+" "+(ch.language||"")+" "+(ch.category||"")).toLowerCase().includes(q));
+ const matches=liveTVAllChannels.filter(ch=>{
+  const country=(ch.country||"").trim().toLowerCase();
+  const countryMatch=q==="pk"
+   ?(country==="pk"||country==="pakistan"||country.includes("pakistan"))
+   :(country.includes(q));
+  return !q||countryMatch||(ch.name+" "+(ch.language||"")+" "+(ch.category||"")).toLowerCase().includes(q);
+ });
  renderLiveTVOptions(matches);
 }
 async function loadWorldwideLiveTVChannels(){
