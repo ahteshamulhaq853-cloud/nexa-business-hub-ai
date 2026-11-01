@@ -3016,27 +3016,15 @@ function playSelectedLiveTVChannel(){
     backBufferLength:6,
     maxFragLookUpTolerance:0.2,
     lowLatencyMode:false,
-    manifestLoadingMaxRetry:5,
-    manifestLoadingRetryDelay:1200,
-    levelLoadingMaxRetry:5,
-    levelLoadingRetryDelay:1200,
-    fragLoadingMaxRetry:8,
-    fragLoadingRetryDelay:1200,
-    fragLoadingMaxRetryTimeout:30000
+    // Automatic reconnect attempts disabled: failed feeds are handled once as unavailable.
+    manifestLoadingMaxRetry:0,
+    levelLoadingMaxRetry:0,
+    fragLoadingMaxRetry:0
    });
    video.onerror=()=>{removeUnavailableLiveTVChannel(channel,"Browser ne stream play nahi ki.");};
-   let liveTVPlaybackWatchdog=setTimeout(()=>{
-    if(video.readyState<2){
-     try{liveTVHlsInstance?.destroy();}catch(e){}
-     liveTVHlsInstance=null;
-     removeUnavailableLiveTVChannel(channel,"20 seconds mein live video start nahi hui.");
-    }
-   },20000);
-   video.addEventListener("playing",()=>clearTimeout(liveTVPlaybackWatchdog),{once:true});
    liveTVHlsInstance.loadSource(channel.stream);
    liveTVHlsInstance.attachMedia(video);
    liveTVHlsInstance.on(Hls.Events.MANIFEST_PARSED,()=>{
-    clearTimeout(liveTVPlaybackWatchdog);
     const levels=liveTVHlsInstance.levels||[];
     if(levels.length){
      // Choose the lowest bitrate rendition at or below 240p. If none exists,
@@ -3056,13 +3044,7 @@ function playSelectedLiveTVChannel(){
    });
    liveTVHlsInstance.on(Hls.Events.ERROR,(event,data)=>{
     if(!data||!data.fatal)return;
-    if(data.type===Hls.ErrorTypes.NETWORK_ERROR){
-     if(status)status.textContent=channel.name+" ka connection dobara try ho raha hai…";
-     try{liveTVHlsInstance.startLoad();return;}catch(e){}
-    }else if(data.type===Hls.ErrorTypes.MEDIA_ERROR){
-     if(status)status.textContent="Video playback recover ho rahi hai…";
-     try{liveTVHlsInstance.recoverMediaError();return;}catch(e){}
-    }
+    // No automatic retry/recovery loop. A fatal feed error marks this channel unavailable.
     try{liveTVHlsInstance.destroy();}catch(e){}liveTVHlsInstance=null;
     video.pause();video.removeAttribute("src");video.load();video.style.display="none";
     frame.src="about:blank";frame.style.display="none";
