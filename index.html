@@ -2868,6 +2868,18 @@ const liveTVFallbackChannels=[
 let liveTVChannels=[...liveTVFallbackChannels];
 let liveTVAllChannels=[...liveTVFallbackChannels];
 let liveTVHlsInstance=null;
+// Persist channels that fail playback so they are not re-added by the worldwide refresh.
+const liveTVFailedKey="nexa_live_tv_failed_channels_v1";
+function getLiveTVChannelKey(ch){
+ return (ch?.name||"").toLowerCase()+"|"+(ch?.stream||ch?.embed||"");
+}
+function getLiveTVFailedSet(){
+ try{return new Set(JSON.parse(localStorage.getItem(liveTVFailedKey)||"[]"));}catch(e){return new Set();}
+}
+function keepOnlyUnfailedLiveTVChannels(channels){
+ const failed=getLiveTVFailedSet();
+ return channels.filter(ch=>ch&&(ch.embed||ch.stream)&&!failed.has(getLiveTVChannelKey(ch)));
+}
 document.addEventListener("click",function(event){
  const button=event.target.closest("#liveTVSections [data-channel-index]");
  if(!button)return;
@@ -2925,7 +2937,7 @@ async function loadWorldwideLiveTVChannels(){
  try{
   const cached=JSON.parse(localStorage.getItem(cacheKey)||"null");
   if(cached&&Array.isArray(cached.channels)&&Date.now()-cached.savedAt<86400000){
-   liveTVAllChannels=cached.channels.filter(ch=>ch&&(ch.embed||ch.stream));
+   liveTVAllChannels=keepOnlyUnfailedLiveTVChannels(cached.channels);
    liveTVChannels=liveTVAllChannels;
    filterLiveTVChannels();
    if(status){status.className="message show";status.textContent=liveTVAllChannels.length.toLocaleString()+" channels ready (saved list). Updating in background…";}
@@ -2956,20 +2968,22 @@ async function loadWorldwideLiveTVChannels(){
    meta="";
   }
   const seen=new Set();const unique=found.filter(ch=>{const key=ch.name.toLowerCase()+"|"+ch.stream;if(seen.has(key))return false;seen.add(key);return true;});
-  liveTVAllChannels=[...liveTVFallbackChannels.map(f=>unique.find(ch=>ch.name.toLowerCase()===f.name.toLowerCase())||f),...unique.filter(ch=>!liveTVFallbackChannels.some(f=>f.name.toLowerCase()===ch.name.toLowerCase()))].filter(ch=>ch&&(ch.embed||ch.stream));
+  liveTVAllChannels=keepOnlyUnfailedLiveTVChannels([...liveTVFallbackChannels.map(f=>unique.find(ch=>ch.name.toLowerCase()===f.name.toLowerCase())||f),...unique.filter(ch=>!liveTVFallbackChannels.some(f=>f.name.toLowerCase()===ch.name.toLowerCase()))]);
   liveTVChannels=liveTVAllChannels;
   filterLiveTVChannels();
   try{localStorage.setItem(cacheKey,JSON.stringify({savedAt:Date.now(),channels:liveTVAllChannels}));}catch(e){}
   if(status){status.className="message show";status.textContent=liveTVAllChannels.length.toLocaleString()+" worldwide channels ready. List next time saved cache se foran khulegi.";}
  }catch(error){
-  if(!liveTVAllChannels.length){liveTVAllChannels=[...liveTVFallbackChannels];liveTVChannels=liveTVAllChannels;filterLiveTVChannels();}
+  if(!liveTVAllChannels.length){liveTVAllChannels=keepOnlyUnfailedLiveTVChannels(liveTVFallbackChannels);liveTVChannels=liveTVAllChannels;filterLiveTVChannels();}
   if(status){status.className="message show";status.textContent="Saved/basic channel list available. Worldwide list abhi refresh nahi hui — internet milne par dobara try karein.";}
  }
 }
 function removeUnavailableLiveTVChannel(channel,reason){
  if(!channel)return;
- const key=(channel.name||"").toLowerCase()+"|"+(channel.stream||channel.embed||"");
- const keep=ch=>((ch.name||"").toLowerCase()+"|"+(ch.stream||ch.embed||""))!==key;
+ const key=getLiveTVChannelKey(channel);
+ const failed=getLiveTVFailedSet();failed.add(key);
+ try{localStorage.setItem(liveTVFailedKey,JSON.stringify([...failed]));}catch(e){}
+ const keep=ch=>getLiveTVChannelKey(ch)!==key;
  liveTVAllChannels=liveTVAllChannels.filter(keep);
  liveTVChannels=liveTVChannels.filter(keep);
  try{localStorage.setItem("nexa_live_tv_worldwide_v2",JSON.stringify({savedAt:Date.now(),channels:liveTVAllChannels}));}catch(e){}
