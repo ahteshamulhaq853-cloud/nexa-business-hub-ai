@@ -1,14 +1,64 @@
 {
-  "updated": "2026-11-01T13:48:48.316538+00:00",
+  "updated": "2026-11-01T14:23:04.999804+00:00",
   "items": [
     {
       "title": "Second night of drone disruption at Jersey Airport",
       "link": "https://www.bbc.co.uk/news/articles/cqkgl4nmp8lyo?at_medium=RSS&at_campaign=rss",
       "summary": "Jersey Airport said it was \"experiencing disruption.... affecting inbound flights as a result of further drone activity\".",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1efa/live/218efa90-d57e-11f1-ab63-077ce6c8a12a.jpg",
-      "published": "2026-11-01T13:48:16+00:00",
+      "published": "2026-11-01T14:20:28+00:00",
       "source": "BBC News",
       "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Pakistan’s past and future make a bid for the present",
+      "link": "https://www.dawn.com/news/2041381/pakistans-past-and-future-make-a-bid-for-the-present",
+      "summary": "Whatever there is to be said about Fakhar Zaman has been said. And he has usually said it himself – first when he made his debut and steered Pakistan to their greatest triumph of the past decade, then countless times for Lahore Qalandars, then on that one rainy day in Bangalore, climbing a mountain no one had given him a shot at. Fakhar has had a long few ye",
+      "image_url": "https://i.dawn.com/large/2026/11/0116420250a3e2d.webp",
+      "published": "2026-11-01T14:16:23+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "KP government directs departments to stay within allocated budgets",
+      "link": "https://arynews.tv/kp-government-directs-departments-to-stay-within-allocated-budgets",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Khyber-Pakhtunkhwa-Apex-Committee.jpg",
+      "published": "2026-11-01T14:14:38+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "King to address slavery during Commonwealth speech in Antigua on final leg of Caribbean tour",
+      "link": "https://www.bbc.co.uk/news/articles/cq398y0zj9rpo?at_medium=RSS&at_campaign=rss",
+      "summary": "King Charles III will deliver a speech to the Commonwealth Heads of Government Meeting on Tuesday as he concludes his nine-day Caribbean tour.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1a11/live/9a9071c0-d57a-11f1-be5a-4bb1a466c469.jpg",
+      "published": "2026-11-01T14:11:35+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Surveillance drone crashes with CTD headquarters in Lahore",
+      "link": "https://arynews.tv/surveillance-drone-crashes-ctd-headquarters-lahore",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/09/drone.jpg",
+      "published": "2026-11-01T14:05:55+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "US hears Pakistan’s concerns over terrorism from Afghanistan, would play ‘productive role’ if there is one: Rubio",
+      "link": "https://www.dawn.com/news/2041358/us-hears-pakistans-concerns-over-terrorism-from-afghanistan-would-play-productive-role-if-there-is-one-rubio",
+      "summary": "US Secretary of State Marco Rubio on Saturday said that Washington has “heard” Pakistan’s concerns about terrorism emanating from Afghanistan and if “there’s a productive role for us to play, we would play it”. Rubio’s statement came in response to a question about tensions between Afghanistan and Pakistan at a press talks in Atlanta. “Pakistan is concerned ",
+      "image_url": "https://i.dawn.com/large/2026/11/01092349468579c.webp",
+      "published": "2026-11-01T14:03:30+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
       "language": "en"
     },
     {
@@ -16,9 +66,29 @@
       "link": "https://www.bbc.co.uk/news/articles/c6n4ed1l2pn1o?at_medium=RSS&at_campaign=rss",
       "summary": "Hampshire Police believes an unknown group gained entry to the party at an address in Chandler's Ford.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3090/live/bdf49670-d5eb-11f1-bfdd-73f39e6db31d.jpg",
-      "published": "2026-11-01T13:47:21+00:00",
+      "published": "2026-11-01T13:59:37+00:00",
       "source": "BBC News",
       "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "DRAP issues alert over counterfeit influenza vaccines in Pakistan",
+      "link": "https://arynews.tv/drap-issues-alert-over-counterfeit-influenza-vaccines-in-pakistan",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Influenza-virus.jpg",
+      "published": "2026-11-01T13:59:26+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "IESCO notifies power suspension programme",
+      "link": "https://arynews.tv/iesco-notifies-power-suspension-programme",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/FotoJet-2026-11-01T184047.534.jpg",
+      "published": "2026-11-01T13:49:06+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
       "language": "en"
     },
     {
@@ -312,6 +382,26 @@
       "language": "ur"
     },
     {
+      "title": "وزیراعظم کا بی آر ٹی سے متعلق بیان حقائق کے برعکس ہے: پرویز خٹک",
+      "link": "https://jang.com.pk/news/1629629",
+      "summary": "پرویز خٹک: فائل فوٹو وزیراعظم کے مشیر برائے داخلہ امور پرویز خٹک کا کہنا ہے کہ وزیراعظم شہباز شریف کا بی آر ٹی سے متعلق بیان حقائق...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-01/b_1629629_062047_updates.jpg\"/",
+      "published": "2026-11-01T13:11:58+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "پشاور: روڈ کے درمیان بجلی کھمبوں کی منتقلی سے متعلق پیسکو کی وضاحت",
+      "link": "https://jang.com.pk/news/1629630",
+      "summary": "پشاور کے دلہ ذاک روڈ کے درمیان بجلی کے کھمبے حادثات کا سبب بننے لگے، شہریوں نے سڑک سے کھمبے ہٹانے کا مطالبہ کیا ہے۔گورنر خیبر...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-01/b_1629630_064431_updates.jpg\"/",
+      "published": "2026-11-01T13:11:06+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Upper Dir police claim arresting 5 suspects over alleged assault of minor boy",
       "link": "https://www.dawn.com/news/2041376/upper-dir-police-claim-arresting-5-suspects-over-alleged-assault-of-minor-boy",
       "summary": "LOWER DIR: Police in Upper Dir said on Sunday they have arrested five of the six suspects over the alleged assault and intimidation of a teenage boy, a purported video of which was circulated on social media. Wari Circle Deputy Superintendent of Police (DSP) Fakhr-i-Alam confirmed the arrests to Dawn . The incident took place on Oct 25, according to a first ",
@@ -377,16 +467,6 @@
       "summary": "Pakistan International Airlines’ (PIA) first Boeing 787-9 Dreamliner, acquired on lease last month, arrived in Islamabad from London as flight PK786 on Sunday. A PIA spokesperson, in a statement, said that the carrier is the first Pakistani airline to have added a Boeing 787-9 to its fleet. PIA Chief Executive Aamir Hayat, accompanied by his team, welcomed t",
       "image_url": "https://i.dawn.com/large/2026/11/01143755b795754.webp",
       "published": "2026-11-01T12:04:34+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Pakistan’s past and future make a bid for the present",
-      "link": "https://www.dawn.com/news/2041381/pakistans-past-and-future-make-a-bid-for-the-present",
-      "summary": "Whatever there is to be said about Fakhar Zaman has been said. And he has usually said it himself – first when he made his debut and steered Pakistan to their greatest triumph of the past decade, then countless times for Lahore Qalandars, then on that one rainy day in Bangalore, climbing a mountain no one had given him a shot at. Fakhar has had a long few ye",
-      "image_url": "https://i.dawn.com/large/2026/11/0116420250a3e2d.webp",
-      "published": "2026-11-01T12:02:20+00:00",
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
@@ -582,6 +662,16 @@
       "language": "en"
     },
     {
+      "title": "پاکستان نے عمان کو شکست دے کر ہانگ کانگ سکسز کا پلیٹ فائنل جیت لیا",
+      "link": "https://www.express.pk/story/2841698/pakistan-defeated-oman-to-win-the-plate-final-of-the-hong-kong-sixes-2841698",
+      "summary": "کپتان عباس آفریدی نے 16 گیندوں پر ناقابلِ شکست 73 رنز کی دھواں دار اننگز کھیل کر ٹیم کی کامیابی میں اہم کردار ادا کیا",
+      "image_url": "",
+      "published": "2026-11-01T09:11:57+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "وزیراعظم آپ نے مایوس کیا، امید تھی خیبرپختونخوا کو بڑا پیکج دیں گے: شوکت یوسف زئی",
       "link": "https://jang.com.pk/news/1629619",
       "summary": "— فائل فوٹوپاکستان تحریک انصاف خیبرپختونخوا کے سیکریٹری اطلاعات شوکت یوسف زئی نے کہا ہے کہ وزیراعظم آپ نے مایوس کیا، توقع تھی کہ...",
@@ -622,6 +712,16 @@
       "language": "en"
     },
     {
+      "title": "پاکستان میں رواں برس کا آٹھواں پولیو کیس خیبر پختونخوا سے رپورٹ",
+      "link": "https://www.express.pk/story/2841697/eighth-polio-case-reported-in-pakistan-this-year-from-khyber-pakhtunkhwa-2841697",
+      "summary": "8 پولیو کیسز میں سے 6 خیبر پختونخوا اور 2 سندھ سے سامنے آئے ہیں",
+      "image_url": "",
+      "published": "2026-11-01T09:00:23+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "KP seeks Rs 40 billion funds from Islamabad for Police, says IG",
       "link": "https://arynews.tv/kp-seeks-rs-40-billion-funds-islamabad-police-ig",
       "summary": "",
@@ -632,12 +732,42 @@
       "language": "en"
     },
     {
+      "title": "ہاردک پانڈیا نے مسٹر بیسٹ کو بیس بال چیلنج میں ہرا کر ایک لاکھ ڈالر جیت لیے",
+      "link": "https://www.express.pk/story/2841696/hardik-pandya-defeated-mrbeast-in-a-baseball-challenge-and-won-100000-2841696",
+      "summary": "ہاردک پانڈیا نےجیتی گئی انعامی رقم فلاحی کاموں کے لیے عطیہ کرنے کا فیصلہ کیا",
+      "image_url": "",
+      "published": "2026-11-01T08:54:17+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Rubio says spoke to Lavrov about Trump-Putin interaction at APEC",
       "link": "https://arynews.tv/rubio-spoke-lavrov-trump-putin-interaction-apec",
       "summary": "",
       "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/07/Marco-Rubio-Iran-war-US-1.jpg",
       "published": "2026-11-01T08:50:23+00:00",
       "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "6 سالہ ولی محمد اور 18 ماہ کی بچی آئزل سے زیادتی، ملزمان کی گرفتاری کیلیے احتجاج",
+      "link": "https://www.express.pk/story/2841695/protest-held-demanding-the-arrest-of-suspects-involved-in-the-abuse-of-6-year-old-wali-muhammad-and-18-month-old-aizal-2841695",
+      "summary": "8 جولائی کو ولی محمد اور 12 اگست کو آئزل کے ساتھ زیادتی ہوئی اب تک انصاف نہیں ملا، مظاہرین",
+      "image_url": "",
+      "published": "2026-11-01T08:48:07+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Strike at industrial complex in Saudi Arabia's Dammam causes huge fire: Iranian state media",
+      "link": "https://tribune.com.pk/story/2638101/strike-at-industrial-complex-in-saudi-arabias-dammam-causes-huge-fire-iranian-state-media",
+      "summary": "Black smoke is seen rising from the industrial complex after the strike",
+      "image_url": "",
+      "published": "2026-11-01T08:39:55+00:00",
+      "source": "Express Tribune",
       "category": "Pakistan",
       "language": "en"
     },
@@ -682,6 +812,16 @@
       "language": "en"
     },
     {
+      "title": "Israeli strikes kill eight people in Gaza - medics say",
+      "link": "https://tribune.com.pk/story/2638097/israeli-strikes-kill-eight-people-in-gaza-medics-say",
+      "summary": "Hamas denies it is trying to carry out attacks and rebuild arsenal, accuses Israel of undermining Gaza peace deal",
+      "image_url": "",
+      "published": "2026-11-01T08:06:32+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "Broken record: constitution, commander, curfew.",
       "link": "https://www.dawn.com/news/2040748/broken-record-constitution-commander-curfew",
       "summary": "The issues of Dawn from Sept 1-7, 1947 chronicled the adoption of the Pakistan (Provisional Constitution) Order as the country’s working constitution, while the nation’s first commander-in-chief issued a stern call for order to control communal violence. Moreover, the city of Karachi — which has been no stranger to violence over the decades — saw its first c",
@@ -692,22 +832,22 @@
       "language": "en"
     },
     {
+      "title": "Russian strikes cut power to thousands in Ukraine as drones damage Russian facility",
+      "link": "https://tribune.com.pk/story/2638096/russian-strikes-cut-power-to-thousands-in-ukraine-as-drones-damage-russian-facility",
+      "summary": "Russia says 235 Ukrainian drones downed overnight, Kyiv says 371 of 433 Russian long-range drones shot down",
+      "image_url": "",
+      "published": "2026-11-01T07:57:20+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "Pakistan assumes Chairmanship of Intergovernmental G-24",
       "link": "https://arynews.tv/pakistan-assumes-chairmanship-of-intergovernmental-g-24",
       "summary": "",
       "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Muhammad-Aurangzeb.jpg",
       "published": "2026-11-01T07:54:38+00:00",
       "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "US hears Pakistan’s concerns over terrorism from Afghanistan, would play ‘productive role’ if there is one: Rubio",
-      "link": "https://www.dawn.com/news/2041358/us-hears-pakistans-concerns-over-terrorism-from-afghanistan-would-play-productive-role-if-there-is-one-rubio",
-      "summary": "US Secretary of State Marco Rubio on Saturday said that Washington has “heard” Pakistan’s concerns about terrorism emanating from Afghanistan and if “there’s a productive role for us to play, we would play it”. Rubio’s statement came in response to a question about tensions between Afghanistan and Pakistan at a press talks in Atlanta. “Pakistan is concerned ",
-      "image_url": "https://i.dawn.com/large/2026/11/01092349468579c.webp",
-      "published": "2026-11-01T07:52:04+00:00",
-      "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
     },
@@ -780,16 +920,6 @@
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "Five killed in fresh ethnic violence in India's Manipur state",
-      "link": "https://tribune.com.pk/story/2638089/five-killed-in-fresh-ethnic-violence-in-indias-manipur-state",
-      "summary": "Killings come amid mass protests demanding abrogation of ceasefire arrangement between Kuki armed groups, Indian state",
-      "image_url": "",
-      "published": "2026-11-01T07:26:32+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
     },
     {
       "title": "SNGPL imposes indefinite ban on new gas connections",
@@ -867,136 +997,6 @@
       "summary": "ملزم پر ایران اور ترکی کے راستے غیر قانونی ڈنکی روٹس کے ذریعے شہریوں کو یونان بھجوانے میں سہولت کاری کا الزام ہے",
       "image_url": "",
       "published": "2026-11-01T07:00:24+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Binance to resume withdrawals after covering bulk of stolen $6.3bn",
-      "link": "https://www.dawn.com/news/2041364/binance-to-resume-withdrawals-after-covering-bulk-of-stolen-63bn",
-      "summary": "Binance, the worlds biggest cryptocurrency exchange, said it would resume withdrawals on Sunday after covering 95 per cent of the $6.3 billion in tokens stolen from its platform in the world’s largest digital heist, which the FBI has tied to North Korea. The exchange, founded in China, said the first phase of withdrawals would start between 0600 and 0900 GMT",
-      "image_url": "https://i.dawn.com/large/2026/10/30170813b6e94a8.webp",
-      "published": "2026-11-01T06:54:08+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "وزیراعظم نے وہی الزامات لگائے جو ان کے وزرا صبح شام ٹی وی پر دہراتے ہیں, شوکت یوسف زئی",
-      "link": "https://www.express.pk/story/2841685/the-prime-minister-leveled-the-same-allegations-that-his-ministers-repeat-on-television-morning-and-evening-says-shaukat-yousafzai-2841685",
-      "summary": "شوکت یوسف زئی نے کہا کہ وزیراعظم نے مایوس کیا، توقع تھی کہ خیبرپختونخوا کے لیے بڑا پیکج دیں گے",
-      "image_url": "",
-      "published": "2026-11-01T06:51:24+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "One killed, eight injured in Lahore cylinder blast",
-      "link": "https://arynews.tv/one-killed-eight-injured-in-lahore-cylinder-blast",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Lahore-cylinder-blast.jpg",
-      "published": "2026-11-01T06:47:30+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "لاہور: نیدرلینڈر کے جعلی ویزا پر بیرون ملک جانے والے دو مسافر گرفتار",
-      "link": "https://www.express.pk/story/2841684/lahore-two-passengers-arrested-while-attempting-to-travel-abroad-on-fake-dutch-visas-2841684",
-      "summary": "دونوں مسافروں نے گجرات کے ایجنٹ چوہدری عدنان اکمل سے فی کس 40 لاکھ روپے میں ویزا حاصل کیے",
-      "image_url": "",
-      "published": "2026-11-01T06:42:25+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Indian authorities tighten security ahead of big opposition march in Delhi",
-      "link": "https://arynews.tv/indian-authorities-tighten-security-ahead-of-big-opposition-march-in-delhi",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/India.jpg",
-      "published": "2026-11-01T06:40:53+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "فِلِن کروز میزائل: ممکنہ طور پر سستے اور چھوٹے نئے روسی ہتھیار میں کیا خصوصیات ہیں؟",
-      "link": "https://www.bbc.com/urdu/articles/cxp8g560z237o?at_medium=RSS&at_campaign=rss",
-      "summary": "اس کی زیادہ سے زیادہ رفتار 800 کلومیٹر فی گھنٹہ تک بتائی جاتی ہے، جبکہ اس کی اندازاً مار 1,200 کلومیٹر ہے، اور یہ انتہائی کم بلندی (200 میٹر سے کم) سے لے کر 6 کلومیٹر تک کی بلندی پر پرواز کر سکتا ہے۔",
-      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/6bf0/live/78032580-d21e-11f1-b8e4-17c9744a7f8e.jpg",
-      "published": "2026-11-01T06:32:17+00:00",
-      "source": "BBC Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Spewing US election falsehoods, AI chatbots face scrutiny",
-      "link": "https://arynews.tv/spewing-us-election-falsehoods-ai-chatbots-scrutiny",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/AI.jpg",
-      "published": "2026-11-01T06:23:20+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Trump says US looking ‘closely’ at report Nvidia CEO target of China spy plot",
-      "link": "https://arynews.tv/trump-us-looking-closely-report-nvidia-ceo-target-china-spy-plot",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Nvidia-CEO-Jensen-Huang.png",
-      "published": "2026-11-01T06:19:22+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "وزیراعظم صاحب! وہ دودھ اور شہد کی نہریں کہاں ہیں جو آپ کو کے پی میں بہانی تھیں؟ شوکت یوسف زئی",
-      "link": "https://www.express.pk/story/2841682/mr-prime-minister-where-are-those-rivers-of-milk-and-honey-that-you-were-supposed-to-make-flow-in-kp-shaukat-yousafzai-2841682",
-      "summary": "شہزاد اکبر جیسے لوگوں نے پارٹی کو بہت نقصان پہنچایا، غیرت ہے تو پاکستان آئیں اور پارٹی کے ساتھ کھڑے ہو جائیں",
-      "image_url": "",
-      "published": "2026-11-01T06:19:06+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Israeli Democrats leader warns Netanyahu could use new attack on Iran to stay in power",
-      "link": "https://tribune.com.pk/story/2638083/israeli-democrats-leader-warns-netanyahu-could-use-new-attack-on-iran-to-stay-in-power",
-      "summary": "Yair Golan says Netanyahu 'lacks moral legitimacy' to manage another conflict, calls for formation of alternative govt",
-      "image_url": "",
-      "published": "2026-11-01T06:15:00+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "بھارتی گلوکار ہنی سنگھ کا بھانجا ٹریفک حادثے میں ہلاک",
-      "link": "https://www.express.pk/story/2841681/indian-singer-honey-singh-nephew-killed-in-traffic-accident-2841681",
-      "summary": "اس نقصان نے مجھے توڑ کر رکھ دیا ہے، ہنی سنگھ کا سوشل میڈیا پر ردعمل",
-      "image_url": "",
-      "published": "2026-11-01T06:11:27+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ٹیکسلا: مبینہ پولیس تشدد سے نوجوان کی ہلاکت کا مقدمہ 2 اہلکاروں کیخلاف درج",
-      "link": "https://jang.com.pk/news/1629603",
-      "summary": "—فائل فوٹوٹیکسلا میں مبینہ پولیس تشدد سے نوجوان کے جاں بحق ہونے کا مقدمہ درج کرلیا گیا۔پولیس حکام کے مطابق نوجوان کی ہلاکت کا مقدمہ 2...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-01/b_1629603_015017_updates.jpg\"/",
-      "published": "2026-11-01T06:11:02+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ایل این جی لے جانے والا قطری جہاز خلیج عرب میں نامعلوم اشیا سے متصادم",
-      "link": "https://www.express.pk/story/2841680/qatar-says-gas-tanker-struck-by-unidentified-objects-in-gulf-2841680",
-      "summary": "قطر نے فی الحال یہ نہیں بتایا کہ جہاز سے ٹکرانے والی اشیا کیا تھیں، کہاں سے آئیں یا واقعے کے پیچھے کون ذمہ دار ہے",
-      "image_url": "",
-      "published": "2026-11-01T06:10:16+00:00",
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
