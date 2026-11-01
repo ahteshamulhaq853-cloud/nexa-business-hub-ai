@@ -2864,67 +2864,80 @@ function filterLiveTVChannels(){
 }
 async function loadWorldwideLiveTVChannels(){
  const status=$("liveTVStatus");
- // Versioned cache deliberately discards the old unverified worldwide dropdown.
- const cacheKey="nexa_live_tv_verified_online_v3";
+ // Start from an empty list; only recent health-checked, browser-compatible HLS feeds are added.
+ const cacheKey="nexa_live_tv_verified_online_v4";
+ const maxChannels=500;
+ const filterAndLimit=channels=>keepOnlyUnfailedLiveTVChannels(channels)
+  .filter(ch=>ch&&ch.name&&ch.stream&&/^https?:\/\//i.test(ch.stream)&&/\.m3u8(?:$|[?#])/i.test(ch.stream))
+  .sort((a,b)=>(Number(b.score)||0)-(Number(a.score)||0)||getLiveTVPriority(a)-getLiveTVPriority(b)||(a.name||"").localeCompare(b.name||""))
+  .slice(0,maxChannels);
  try{
   const cached=JSON.parse(localStorage.getItem(cacheKey)||"null");
-  if(cached&&Array.isArray(cached.channels)&&Date.now()-cached.savedAt<21600000){
-   liveTVAllChannels=keepOnlyUnfailedLiveTVChannels(cached.channels);
+  if(cached&&Array.isArray(cached.channels)&&Date.now()-cached.savedAt<10800000){
+   liveTVAllChannels=filterAndLimit(cached.channels);
    liveTVChannels=liveTVAllChannels;
    filterLiveTVChannels();
-   if(status){status.className="message show";status.textContent=liveTVAllChannels.length.toLocaleString()+" recently health-checked channels loaded. List background mein refresh ho rahi hai…";}
-  }else if(status){
+   if(status){status.className="message show";status.textContent=liveTVAllChannels.length.toLocaleString()+" checked channels loaded. Worldwide list background mein refresh ho rahi hai…";}
+  }else{
    liveTVAllChannels=[];liveTVChannels=[];renderLiveTVOptions([]);
-   status.className="message show";
-   status.textContent="Worldwide active channels ki health-checked list load ho rahi hai…";
+   if(status){status.className="message show";status.textContent="Worldwide active aur browser-compatible channels load ho rahe hain…";}
   }
- }catch(e){}
+ }catch(e){
+  liveTVAllChannels=[];liveTVChannels=[];renderLiveTVOptions([]);
+ }
  try{
-  // This playlist contains streams that passed the provider's latest health checks.
   const response=await fetch("https://dearbulut.github.io/iptv/playlists/online.m3u",{cache:"no-store"});
-  if(!response.ok)throw new Error("Health-checked worldwide playlist unavailable");
+  if(!response.ok)throw new Error("Health-checked playlist unavailable");
   const playlist=await response.text();
   const lines=playlist.split(/\r?\n/);
-  const found=[];let meta="";
+  const byChannel=new Map();
+  let meta="",requiresHeaders=false;
+  const getAttr=(line,key)=>{
+   const match=line.match(new RegExp(key+'="([^"]*)"',"i"));
+   return match?match[1]:"";
+  };
   for(const lineRaw of lines){
    const line=lineRaw.trim();if(!line)continue;
-   if(line.startsWith("#EXTINF")){meta=line;continue;}
+   if(line.startsWith("#EXTINF")){meta=line;requiresHeaders=false;continue;}
+   if(line.startsWith("#EXTVLCOPT")||line.startsWith("#KODIPROP")){requiresHeaders=true;continue;}
    if(line.startsWith("#"))continue;
-   if(!/^https?:\/\//i.test(line)){meta="";continue;}
-   // This player supports HLS only; skip non-HLS and streams flagged geo-blocked.
-   if(!/\.m3u8(\?|$)/i.test(line)||/geo[- ]?blocked/i.test(meta)){meta="";continue;}
+   if(!/^https?:\/\//i.test(line)){meta="";requiresHeaders=false;continue;}
+   // Skip non-HLS, geo-blocked, and custom-header feeds that browser HLS playback cannot reliably use.
+   if(requiresHeaders||!/\.m3u8(?:$|[?#])/i.test(line)||/geo[- ]?blocked/i.test(meta)){meta="";requiresHeaders=false;continue;}
    const nameMatch=meta.match(/,(.+)$/);
-   const name=(nameMatch?nameMatch[1]:"Live channel").trim();
-   const groupMatch=meta.match(/group-title="([^"]*)"/i);
-   const countryMatch=meta.match(/tvg-country="([^"]*)"/i);
-   const languageMatch=meta.match(/tvg-language="([^"]*)"/i);
-   const category=groupMatch?groupMatch[1]:"";
-   found.push({name,stream:line,country:countryMatch?countryMatch[1]:"",language:languageMatch?languageMatch[1]:"",category});
-   meta="";
+   const name=(nameMatch?nameMatch[1]:"").trim();
+   const scoreRaw=getAttr(meta,"nexus-score");
+   const score=scoreRaw!==""?Number(scoreRaw):null;
+   if(!name||(score!==null&&Number.isFinite(score)&&score<50)){meta="";requiresHeaders=false;continue;}
+   const channelId=getAttr(meta,"tvg-id");
+   const key=(channelId||name).toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+   if(!key){meta="";requiresHeaders=false;continue;}
+   const candidate={
+    name,stream:line,score:Number.isFinite(score)?score:0,
+    country:getAttr(meta,"tvg-country"),
+    language:getAttr(meta,"tvg-language"),
+    category:getAttr(meta,"group-title")
+   };
+   const existing=byChannel.get(key);
+   if(!existing||(candidate.score||0)>(existing.score||0))byChannel.set(key,candidate);
+   meta="";requiresHeaders=false;
   }
-  // Keep only one health-checked HLS source per channel name to remove duplicate entries.
-  const seen=new Set();
-  const unique=found.filter(ch=>{
-   const key=(ch.name||"").toLowerCase().replace(/\s+/g," ").trim();
-   if(!key||seen.has(key))return false;
-   seen.add(key);return true;
-  });
-  liveTVAllChannels=keepOnlyUnfailedLiveTVChannels(unique);
+  const cleaned=filterAndLimit([...byChannel.values()]);
+  liveTVAllChannels=cleaned;
   liveTVChannels=liveTVAllChannels;
   filterLiveTVChannels();
   try{localStorage.setItem(cacheKey,JSON.stringify({savedAt:Date.now(),channels:liveTVAllChannels}));}catch(e){}
   if(status){
    status.className="message show";
-   status.textContent=liveTVAllChannels.length.toLocaleString()+" worldwide channels passed the latest health-check list. Duplicate and geo-blocked entries removed.";
+   status.textContent=liveTVAllChannels.length.toLocaleString()+" worldwide checked HLS channels loaded. Duplicate, low-score, geo-blocked aur browser-incompatible feeds removed.";
   }
-  if(!liveTVAllChannels.length&&status)status.textContent="Is waqt supported active HLS channels ki list available nahi mili. Baad mein refresh karein.";
+  if(!liveTVAllChannels.length&&status)status.textContent="Is waqt browser-compatible active channels nahi milay. Baad mein refresh karein.";
  }catch(error){
-  // Do not bring back old or unverified channels if the active list cannot be reached.
   if(status){
    status.className="message show";
    status.textContent=liveTVAllChannels.length
-    ? "Saved health-checked list dikhayi ja rahi hai; latest refresh filhal unavailable hai."
-    : "Active worldwide channel list filhal load nahi hui. Internet connection check karke page reload karein.";
+    ?"Saved checked channels dikhaye ja rahe hain; latest refresh filhal unavailable hai."
+    :"Worldwide active channel list load nahi hui. Internet connection check karke reload karein.";
   }
  }
 }
