@@ -3867,6 +3867,7 @@ refreshFreeVoices();
 initSearchableSelects();
 
 async function init(){
+ if(!db){showPage("accountPage");msg("loginMsg","Login service load nahi hui. Internet check karke page reload karein.","error");return;}
  const {data,error}=await db.auth.getSession();
  if(error)console.warn("Session lookup:",error.message);
  currentUser=data&&data.session?data.session.user:null;setUI();
