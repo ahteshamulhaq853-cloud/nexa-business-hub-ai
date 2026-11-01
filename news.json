@@ -1,6 +1,326 @@
 {
-  "updated": "2026-11-01T13:06:01.741958+00:00",
+  "updated": "2026-11-01T13:48:48.316538+00:00",
   "items": [
+    {
+      "title": "Second night of drone disruption at Jersey Airport",
+      "link": "https://www.bbc.co.uk/news/articles/cqkgl4nmp8lyo?at_medium=RSS&at_campaign=rss",
+      "summary": "Jersey Airport said it was \"experiencing disruption.... affecting inbound flights as a result of further drone activity\".",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1efa/live/218efa90-d57e-11f1-ab63-077ce6c8a12a.jpg",
+      "published": "2026-11-01T13:48:16+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Five teenagers stabbed at Halloween party",
+      "link": "https://www.bbc.co.uk/news/articles/c6n4ed1l2pn1o?at_medium=RSS&at_campaign=rss",
+      "summary": "Hampshire Police believes an unknown group gained entry to the party at an address in Chandler's Ford.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3090/live/bdf49670-d5eb-11f1-bfdd-73f39e6db31d.jpg",
+      "published": "2026-11-01T13:47:21+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "University of Cambridge scientist among those who died in Spanish train crash",
+      "link": "https://www.bbc.co.uk/news/articles/cq5ynzvkn1d8o?at_medium=RSS&at_campaign=rss",
+      "summary": "Marta Shahbazi was an \"inspiring, talented and passionate scientist\", says the laboratory where she worked.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ea05/live/c6f18070-d5ec-11f1-bfdd-73f39e6db31d.jpg",
+      "published": "2026-11-01T13:41:05+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "More than 300 arrests at Palestine Action support protest outside US embassy",
+      "link": "https://www.bbc.co.uk/news/articles/c98rz23ed781o?at_medium=RSS&at_campaign=rss",
+      "summary": "More than 4,000 people have been arrested for supporting the group since it was proscribed in July 2025.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c2da/live/12dda4f0-d5f7-11f1-a6a8-6dc45e4fc351.jpg",
+      "published": "2026-11-01T13:41:00+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "وفاقی اور صوبائی حکومتیں ناکام طرز حکمرانی کے باعث عوام میں نفرت کی علامت بن چکی جماعت اسلامی پیٹرول لیوی کے خاتمے،بجلی کی قیمتوں میں کمی،آئی پی پیز کے خاتمے کیلئے عملاً ... مزید",
+      "link": "https://urdupoint.com/n/4996533",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:35:50+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سی ٹی ڈی ہیڈکوارٹرز ڈرون ٹکرانے کا مقدمہ درج ... ض*کیمرے اور لائٹس والے ڈرون کی آمد کے واقعے کی مختلف پہلوؤں سے تحقیقات شروع",
+      "link": "https://urdupoint.com/n/4996532",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:35:47+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "آئی جی پنجاب عبدالکریم کی زیرصدارت انوسٹی گیشن امور بارے اجلاس ... خواتین اور بچوں کے ساتھ زیادتی و تشدد کے کیسز میں بروقت انصاف کی فراہمی ہماری ریڈ لائن ہے، آئی جی پنجاب ... مزید",
+      "link": "https://urdupoint.com/n/4996531",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:35:45+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ستمبر کے دوران ٹرینوں کی بروقت آمدورفت صرف 65 فیصدرہی ... ژ*ملک بھر میں فنی خرابیوں اور حادثات کے باعث ٹرینوں کے پندرہ سو گھنٹے ضائع ڑ*ستمبر میں چلنے والی 936 مسافر ٹرینوں ... مزید",
+      "link": "https://urdupoint.com/n/4996530",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:35:42+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "حرمین شریفین کے خلاف جارحیت کا عالمی برادری نوٹس لے ... ژ*حافظ عبد الوحید شاہد روپڑی کا حرمین شریفین کی حفاظت کیلئے اتحاد کا اعلان ش*حوثی باغیوں کے حملے عالمِ اسلام کیلئے ... مزید",
+      "link": "https://urdupoint.com/n/4996529",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:35:40+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "بیسک ڈیموکریٹک الائنس کی سات نومبر کو آل پارٹیز کانفرنس ہو گی ... گ*چوہدری اختر عباس کا آئین، جمہوریت اور باہمی مشاورت سے مسائل حل کرنے کا مطالبہ",
+      "link": "https://urdupoint.com/n/4996528",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:35:37+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ٴْ مرغابی کا اسمگلراور خرگوش،فالکن،مرغابی اور بٹیر کا غیر قانونی شکار کرنے پر 12ملزم گرفتار ... آ* 16 ژندہ مرغابیاں بازیاب،متعدد نیٹنگ گئیرز ضبط،5 ملزمان کو 2 لاکھ 57 ہزار ... مزید",
+      "link": "https://urdupoint.com/n/4996525",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:35:29+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "شاہدرہ میں مبینہ پولیس مقابلے کے دوران ملزم شاہ زیب ہلاک ... ظ*پولیس مقابلے اور فائرنگ کے تبادلے کے دوران زیرِ تفتیش ملزم شاہ زیب مارا گیا ژ*ملزم کے ساتھیوں کی فائرنگ سے ... مزید",
+      "link": "https://urdupoint.com/n/4996524",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:35:26+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "br /> g جعلی نمبر پلیٹس کے خلاف کریک ڈاؤن ،چار ہزار مقدمات ... ظ*لاہور پولیس کا جعلی نمبر پلیٹس پر کریک ڈاؤن، بلاامتیاز کارروائی کا حکم جاری پ*شناخت چھپانے کی اجازت کسی کو ... مزید",
+      "link": "https://urdupoint.com/n/4996523",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:35:24+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "وزیراعظم آپ نے مایوس کیا، امید تھی خیبرپختونخوا کو بڑا پیکج دیں گی: شوکت یوسف زئی ... [احتساب کرنا ہے تو بسم اللہ کریں، صرف الزامات نہ لگائیں، جس بی آر ٹی کو کرپشن کا شاہکار ... مزید",
+      "link": "https://urdupoint.com/n/4996522",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:35:21+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "بیرسٹر سیف کے راجا ناصر عباس اور محمود اچکزئی پر تابڑ توڑ الزامات ... ،راجہ ناصر عباس اسٹیبلشمنٹ کے اہم لوگوں سے رابطے میں ہیں مگر یہ رابطے عمران خان کی رہائی کے لیے نہیں،نجی ... مزید",
+      "link": "https://urdupoint.com/n/4996521",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:35:19+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "۱رحیم یارخان،ہیلمٹ کااستعمال نہ کرنے ’اشارہ کاٹنے’ غلط پارکنگ’ بغیرلائسنس’ سمیت ٹریفک قوانین کی خلاف ورزی ... : ٹریفک پولیس نے 10ماہ کے دوران شہریوں کے 95ہزارسے زائدچالان ... مزید",
+      "link": "https://urdupoint.com/n/4996520",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:35:16+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "رحیم یارخان،مسافرکوچ تیزرفتاری کے باعث اوورٹیک کرنے کے دوران کچرے سے لوڈٹریکٹرٹرالی سے ٹکراکردوکان میں جاگھسی’ ... #سڑک کراس کرنے والے معمرشخص کو نامعلوم تیزرفتارگاڑی ... مزید",
+      "link": "https://urdupoint.com/n/4996519",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:35:14+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "رحیم یارخان،والدین کی ڈانٹ سے دلبرداشتہ19سالہ بیٹے اور بیروزگاری سے تنگ 36سالہ نوجوان نے مال گاڑی کے سامنے کود کرخودکشی کرلی",
+      "link": "https://urdupoint.com/n/4996518",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:35:11+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "چاہ میراں میں مکھن پورہ روڈ پر کھلے گٹر،شہری پریشان ... ژ*علاقہ مکینوں کا متعلقہ حکام سے فوری نوٹس لے کر ڈھکن لگانے کا شدید مطالبہ",
+      "link": "https://urdupoint.com/n/4996517",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:35:08+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "جماعت اسلامی ضلع بدین کے نومنتخب امیر اللہ بچایو ہالیپوٹہ کی تقریبِ حلف برداری ... جامع مسجد اقصیٰ میں منعقدہ تقریب میں جماعتی رہنماؤں، معززینِ شہر اور کارکنان کی بڑی ... مزید",
+      "link": "https://urdupoint.com/n/4996515",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:31:26+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سٹی کورٹ کراچی میں پسند کی شادی کرنے والی اریبہ سلطان کا اہل خانہ سے تحفظ کا مطالبہ ... پسند کی شادی پر اہل خانہ سے خطرہ، سانگھڑ کی رہائشی لڑکی کا تحفظ کے لیے اعلیٰ حکام سے ... مزید",
+      "link": "https://urdupoint.com/n/4996514",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:31:24+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "حکومت فوری طور پر ویپ شاپس اور شیشہ کیفے بند کروائے، رفیع احمد ... ْوالدین اور اساتذہ بچوں کی کردار سازی اور رہنمائی پر خصوصی توجہ دیں، ڈپٹی کمشنر طحہٰ سلیم",
+      "link": "https://urdupoint.com/n/4996513",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:31:21+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کراچی میں ہیوی ٹریفک کا عوام کو روندنے کا سلسلہ بند کیا جائے، سڑکیں شہریوں کے لیے قبرستان بن چکی ہیں،محمدیوسف ... شہر میں ٹریفک حادثات کا بنیادی سبب تیز رفتاری، کم عمر ... مزید",
+      "link": "https://urdupoint.com/n/4996511",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:31:13+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "عباسی شہید اسپتال کا 150 بستروں پر مشتمل نیا بلاک آئندہ ہفتے فعال کردیا جائے گا، مرتضیٰ وہاب ... نئے بلاک میں کارڈیالوجی، پلمونولوجی، نیورولوجی اور ڈرماٹولوجی سمیت مختلف ... مزید",
+      "link": "https://urdupoint.com/n/4996510",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:31:11+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "تھر کول سے پیدا ہونے والی بجلی پر سندھ کو بھی نیٹ ہائیڈل پرافٹ جیسی مالی مراعات دی جائیں، سریندر ولاسائی ... پیپلز پارٹی کے رکنِ سندھ اسمبلی نے سندھ اسمبلی میں قرارداد جمع ... مزید",
+      "link": "https://urdupoint.com/n/4996509",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:31:08+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کے پی کی منتخب قیادت کی گمشدگی ظاہر کی جائے، احتساب سب کا یکساں اور آئین و قانون کی حکمرانی بحال کی جائے، حلیم عادل شیخ ... عمران خان، ان کے اہلِ خانہ اور سیاسی کارکنوں ... مزید",
+      "link": "https://urdupoint.com/n/4996506",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:30:57+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "عاصمہ جہانگیر اور خواتین کے خلاف توہین آمیز بیانات ناقابلِ قبول ہیں، کراچی کی سول سوسائٹی کا شدید احتجاج ... ریٹائرڈ کیپٹن صفدر کے بیانات کی مذمت، مسلم لیگ (ن) اور شریف ... مزید",
+      "link": "https://urdupoint.com/n/4996505",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:30:54+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "لیاری میں 18 گھنٹے کی غیر اعلانیہ بجلی اور گیس لوڈشیڈنگ کے خلاف پیپلز پارٹی کی احتجاجی ریلی ... نبیل گبول کا وزیراعلیٰ سندھ سے غیر اعلانیہ لوڈشیڈنگ بند کرانے کا مطالبہ، ... مزید",
+      "link": "https://urdupoint.com/n/4996504",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:30:51+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "گورنر سندھ کی گلگت بلتستان کے عوام کو 79ویں یومِ آزادی پر دلی مبارکباد ... ڈوگرہ راج کے خلاف جدوجہد اور پاکستان سے غیر متزلزل وابستگی قابلِ فخر ہے، سید محمد نہال ہاشمی",
+      "link": "https://urdupoint.com/n/4996503",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-01T13:30:48+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "India biggest sponsor of terrorism in Pakistan, says DG ISPR",
+      "link": "https://arynews.tv/india-biggest-sponsor-of-terrorism-in-pakistan-says-dg-ispr",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/ISPR-7.jpg",
+      "published": "2026-11-01T13:28:14+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "سہ فریقی سیریز میں غیر متاثر کُن کارکردگی: بابر اعظم کو ’آرام کرنے‘ اور ’آسٹریلیا یا انگلینڈ میں کوچنگ‘ لینے کے مشورے",
+      "link": "https://www.bbc.com/urdu/articles/c8e36ew0er90o?at_medium=RSS&at_campaign=rss",
+      "summary": "بابر اعظم کی حالیہ ون ڈے فارم پر سوالات اٹھ رہے ہیں، جنھوں نے سہ فریقی سیریز کی پانچ اننگز میں صرف 118 رنز بنائے۔ ان کی کارکردگی پر سابق کرکٹرز کی جانب سے تنقید کے ساتھ حمایت میں بھی آوازیں سامنے آئی ہیں۔ محمد یوسف نے تکنیکی خامیوں کی نشاندہی کی، جبکہ عماد وسیم اور دیگر سابق کھلاڑیوں نے بابر کی صلاحیتوں اور ماضی کی کارکردگی کا دفاع کیا۔",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/fc2a/live/4ba63c20-d5f7-11f1-a6a8-6dc45e4fc351.jpg",
+      "published": "2026-11-01T13:22:17+00:00",
+      "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Upper Dir police claim arresting 5 suspects over alleged assault of minor boy",
+      "link": "https://www.dawn.com/news/2041376/upper-dir-police-claim-arresting-5-suspects-over-alleged-assault-of-minor-boy",
+      "summary": "LOWER DIR: Police in Upper Dir said on Sunday they have arrested five of the six suspects over the alleged assault and intimidation of a teenage boy, a purported video of which was circulated on social media. Wari Circle Deputy Superintendent of Police (DSP) Fakhr-i-Alam confirmed the arrests to Dawn . The incident took place on Oct 25, according to a first ",
+      "image_url": "https://i.dawn.com/large/2026/11/011502509271a15.webp",
+      "published": "2026-11-01T13:08:39+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
     {
       "title": "President, PM extend felicitations to people of Gilgit-Baltistan on Independence Day",
       "link": "https://arynews.tv/president-pm-extend-felicitations-to-people-of-gilgit-baltistan-on-independence-day",
@@ -20,6 +340,36 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "لودھراں: رکن پور کے قریب مال گاڑی کی 4 بوگیاں ڈی ریل، لودھراں خانیوال ٹریک بلاک",
+      "link": "https://jang.com.pk/news/1629628",
+      "summary": "لودھراں میں رکن پور کے قریب مال گاڑی کی 4 بوگیاں ڈی ریل ہوگئیں۔کراچی سے ساہیوال آنے والی یوسف والا مال بردار کول ٹرین حادثے کے باعث...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-01/b_1629628_060749_updates.jpg\"/",
+      "published": "2026-11-01T12:11:19+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "بیرسٹر سیف کے راجا ناصر عباس اور محمود اچکزئی پر تابڑ توڑ الزامات",
+      "link": "https://jang.com.pk/news/1629624",
+      "summary": "پاکستان تحریک انصاف رہنما بیرسٹر محمد علی سیف نے اپوزیشن لیڈران راجا ناصر عباس اور محمود خان اچکزئی پر تابڑ توڑ الزامات لگادیے۔جیو...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-01/b_1629624_051645_updates.jpg\"/",
+      "published": "2026-11-01T12:11:09+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "طالبان رجیم دہشتگردی کے حوالے سے ہماری بات نہیں مانتا تو اسے سنگین قیمت چکانا پڑے گی: ڈی جی آئی ایس پی آر",
+      "link": "https://jang.com.pk/news/1629627",
+      "summary": "افغانستان کو اب بھی غیر ریاستی عناصر چلا رہے ہیں، لیفٹیننٹ جنرل احمد شریف چوہدری - فوٹو: رائٹرزڈائریکٹر جنرل انٹر سروسز پبلک...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-01/b_1629627_054521_updates.jpg\"/",
+      "published": "2026-11-01T12:11:00+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "PIA's first Boeing 787-9 Dreamliner arrives in Islamabad",
@@ -42,20 +392,10 @@
       "language": "en"
     },
     {
-      "title": "پاکستان میں آج سونے کی فی تولہ قیمت 4 لاکھ 9 ہزار 736 روپے",
-      "link": "https://urdupoint.com/n/4996321",
-      "summary": "",
-      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_8ec70_1791364050.jpg._3",
-      "published": "2026-11-01T12:00:40+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
       "title": "Shops looted as German cost of living protests turn violent",
       "link": "https://www.bbc.co.uk/news/articles/cqj34gnd3n30o?at_medium=RSS&at_campaign=rss",
       "summary": "The protests in cities across Germany - including Berlin, Hamburg and Frankfurt - came on the same day hundreds of thousands also protested in France.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0ace/live/3e4ef120-d5d4-11f1-8629-7b9503d639be.jpg",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/11b7/live/aefac8c0-d5f9-11f1-b441-2b33b063138f.jpg",
       "published": "2026-11-01T11:57:48+00:00",
       "source": "BBC News",
       "category": "World",
@@ -72,66 +412,6 @@
       "language": "en"
     },
     {
-      "title": "پیپلز پارٹی خیبر پختونخوا کے صدر سید محمد علی شاہ باچا کا عثمان غنی کے انتقال پر اظہارِ افسوس",
-      "link": "https://urdupoint.com/n/4996320",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:55:01+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "چیئرمین سی ڈی اے کا کشمیر چوک انڈر پاس منصوبے کا دورہ، جاری ترقیاتی کاموں کی تازہ ترین پیش رفت کا جائزہ",
-      "link": "https://urdupoint.com/n/4996319",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:54:16+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ٹنڈومحمدخان میں بینظیر بھٹو شہید انڈور گیمز کمپلیکس کا افتتاح",
-      "link": "https://urdupoint.com/n/4996318",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:54:13+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ممتاز شاعر اور فلمی نغمہ نگار تنویر نقوی کی برسی اتوار کو منائی گئی",
-      "link": "https://urdupoint.com/n/4996317",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:54:10+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "مجیب گوٹھ میں مبینہ پولیس مقابلہ،ایک ڈاکو ہلاک ، پولیس اہلکار زخمی",
-      "link": "https://urdupoint.com/n/4996316",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:54:07+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "چین کے نائب وزیر خارجہ ما زاؤ شو کی جی 20 وزرائے خارجہ کےاجلاس میں شرکت",
-      "link": "https://urdupoint.com/n/4996315",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:54:04+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
       "title": "Cyber safety",
       "link": "https://www.dawn.com/news/2041310/cyber-safety",
       "summary": "WHILE the state’s proposal to create a Cybersecurity and Social Media Awareness Council envisages needed interventions to protect children from online harm, the same body’s focus on ‘fake news’ — as described by the government — is cause for concern. Speaking at a recent seminar in Islamabad, the federal information minister said there is a need to raise awa",
@@ -140,186 +420,6 @@
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "گورنر سندھ سید محمد نہال ہاشمی کی گلگت بلتستان کے عوام کو 79 ویں یومِ آزادی پر مبارکباد",
-      "link": "https://urdupoint.com/n/4996314",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:54:01+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بھارت میں اپوزیشن جماعتوں کا احتجاج ، چیف الیکشن کمشنر کے استعفے کا مطالبہ",
-      "link": "https://urdupoint.com/n/4996313",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:53:11+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "چینی صدر کے خصوصی ایلچی گاؤ ژی دان کی چوتھے یوتھ اولمپک گیمز کی افتتاحی تقریب میں شرکت",
-      "link": "https://urdupoint.com/n/4996312",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:53:08+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "باغِ جناح میں ڈائنوسار سے بھی قدیم نسل کے ساگو پام درخت پر نئے پتے نکل آئے",
-      "link": "https://urdupoint.com/n/4996311",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:53:05+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "تھانہ قبولہ کی حدود میں نوجوان نے جواں سالہ دوشیزہ پرپٹرول چھڑک کر آگ لگادی",
-      "link": "https://urdupoint.com/n/4996309",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:40:52+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "نقاب پوش ڈاکوئوں نے گن پوائنٹ پر سویٹ سیلز مین سے اڑھائی لاکھ روپے نقدی اور موبائل فون چھین لیا",
-      "link": "https://urdupoint.com/n/4996308",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:40:50+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کرنٹ لگنے سے 36سالہ مستری جاںبحق",
-      "link": "https://urdupoint.com/n/4996307",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:40:47+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "شکر گڑھ ،ایل پی جی گیس کی قیمتوں میں ہوشربا اضافہ گھریلو سلنڈر کی قیمت 7 ہزار روپے تک جا پہنچی",
-      "link": "https://urdupoint.com/n/4996306",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:40:45+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "چادر چار دیواری کا تقد س پامال، چچا ،چچی، بھتیجا تین شدید زخمی ، ایک کی حالت نازک ، مقدمہ درج ،چھ گرفتار",
-      "link": "https://urdupoint.com/n/4996304",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:40:38+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ساہیوال ،نو سر با ز ریٹائرڈ ہیڈ کلرک، بیوپاری ، کاشتکار ... واٹر ٹینکی، کار 43لاکھ 35ہزار روپے نقدی کا چونا لگا کر فرار ہو گئے",
-      "link": "https://urdupoint.com/n/4996303",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:40:35+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ساہیوال ، جعلی کر نسی کا کاروبار کر نے والے گروہ کا انکشاف ... میڈیکل سٹو پر جعلی پانچ ہزار کا نوٹ چلا تے ایک رکن گرفتا ر",
-      "link": "https://urdupoint.com/n/4996302",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:40:32+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "تیز رفتار موٹر سائیکل بجلی کے پول سے ٹکرا گئی، نوجوان جاں بحق ... یوٹرن پر موٹر سائیکل بے قابو ہوکر اسٹریٹ لائٹ کے پول سے ٹکرا گئی، ساتھی زخمی",
-      "link": "https://urdupoint.com/n/4996301",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:40:29+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "جعلی نمبر پلیٹس کے خلاف کریک ڈائون اسٹریٹ کرائم کی روک تھام میں مددگار ثابت ہو رہا ہے، ڈی آئی جی ... جرم چھوٹا ہو یا بڑا، جرم ہی ہوتا ہے۔ قانون کی خلاف ورزی پر بلاامتیاز ... مزید",
-      "link": "https://urdupoint.com/n/4996300",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:40:27+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "لاہور،سکیورٹی چیک کرنے کیلئے ڈی آئی جی آپریشنز کاگرجا گھروں کی دورہ",
-      "link": "https://urdupoint.com/n/4996299",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:40:22+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "اپنا کسان بینک کے اعلان کا خیرمقدم ،حکومتی سرپرستی میں گودام بھی تعمیر کئے جائیں، ہمایوں اختر خان ... عوام دہائیوں سے سبز باغ دکھا نے والوںکے چہروں سے آشنا ،اب ان کے بہکاوے ... مزید",
-      "link": "https://urdupoint.com/n/4996298",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:40:18+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "حرمین شریفین ہماری ریڈ لائن ہے،پاکستان سعودی عر ب کیساتھ کھڑا ہے، حافظ عبد الکریم ... حوثیوں کے حملوں کو کسی صورت قبول نہیں کیا جا سکتا،سربراہ مرکزی جمعیت اہلحدیث کی میڈیا ... مزید",
-      "link": "https://urdupoint.com/n/4996297",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:40:14+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "لاہور میں سی ٹی دی کے ہیڈ کوارٹرز کی عمارت سے سرویلنس ڈرون ٹکرا گیا ... ْہیڈکوارٹرز کے اندرونی حصوں کی ریکی جاری تھی،بم ڈسپوزل اسکواڈ نے معائنے کے بعد کلیئرنس دی ْتمام پہلوئوں ... مزید",
-      "link": "https://urdupoint.com/n/4996295",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-01T11:40:07+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "مولانا فضل الرحمن کو حکومتی سطح پر مناسب حصہ نہ دے کر زیادتی کی گئی، طاہر محمود اشرفی ... کسی بڑی کمیٹی کا چیئرمین بنا کر وفاقی وزیر کے برابر عہدہ، منسٹرز انکلیو میں رہائش ... مزید",
-      "link": "https://urdupoint.com/n/4996294",
-      "summary": "",
-      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_ec755_1784476713.jpg._3",
-      "published": "2026-11-01T11:40:04+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
     },
     {
       "title": "والد کی وفات، بیٹے کی کینیڈا سے واپسی اور خاندان کے تین افراد کی خودکشی: ’کبھی خواب میں بھی نہیں سوچا کہ ایسا ہو سکتا ہے‘",
@@ -332,14 +432,24 @@
       "language": "ur"
     },
     {
-      "title": "Second night of drone disruption at Jersey Airport",
-      "link": "https://www.bbc.co.uk/news/articles/cqkgl4nmp8lyo?at_medium=RSS&at_campaign=rss",
-      "summary": "Jersey Airport said it was \"experiencing disruption.... affecting inbound flights as a result of further drone activity\".",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1efa/live/218efa90-d57e-11f1-ab63-077ce6c8a12a.jpg",
-      "published": "2026-11-01T11:27:24+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
+      "title": "پاکستان، چین کا آل ویدر اسٹریٹجک کوآپریٹو پارٹنرشپ مزید مضبوط بنانے کا عزم",
+      "link": "https://jang.com.pk/news/1629622",
+      "summary": "دفتر خارجہ کے ترجمان نے کہا ہے کہ پاکستان اور چین آل ویدر اسٹریٹجک کوآپریٹو پارٹنرشپ مزید مضبوط بنانے کےلیے پُرعزم ہیں۔ایک بیان...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-01/b_1629622_045327_updates.jpg\"/",
+      "published": "2026-11-01T11:11:51+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "وزیراعظم، وزیر خارجہ، فیلڈ مارشل کے عالمی کردار سے پاکستان کے وقار میں اضافہ ہوا: حافظ عبد الکریم",
+      "link": "https://jang.com.pk/news/1629623",
+      "summary": "سینیٹر حافظ عبدالکریم : فوٹو ایکس امیر مرکزی جمعیت اہلحدیث پاکستان سینیٹر حافظ عبدالکریم کا کہنا ہے کہ وزیراعظم شہباز شریف، وزیر...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-01/b_1629623_051947_updates.jpg\"/",
+      "published": "2026-11-01T11:11:17+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Healey risks breaking minimum wage promise for younger workers",
@@ -432,16 +542,6 @@
       "language": "en"
     },
     {
-      "title": "Northern Lights dance across UK sky on Halloween night",
-      "link": "https://www.bbc.co.uk/weather/articles/c3pwge119lnvo?at_medium=RSS&at_campaign=rss",
-      "summary": "Stargazers across the UK were treated to the vivid colours of the aurora borealis on Saturday night.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/69f4/live/7886c200-d5cf-11f1-82ae-81055b9ae1cd.jpg",
-      "published": "2026-11-01T10:16:27+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "پنجاب میں پہلا ماڈرن وڈ ورکنگ سینٹر آف ایکسی لینس قائم کرنے کا فیصلہ",
       "link": "https://jang.com.pk/news/1629620",
       "summary": "—فائل فوٹوپنجاب میں پہلا ماڈرن وڈ ورکنگ سینٹر آف ایکسی لینس قائم کرنے کا فیصلہ کیا گیا ہے۔لاہور میں وزیرِ اعلیٰ پنجاب مریم نواز کی...",
@@ -459,16 +559,6 @@
       "published": "2026-11-01T09:45:55+00:00",
       "source": "ARY News",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "University of Cambridge scientist among those who died in Spanish train crash",
-      "link": "https://www.bbc.co.uk/news/articles/cq5ynzvkn1d8o?at_medium=RSS&at_campaign=rss",
-      "summary": "A Spanish research centre has confirmed her death days after she was declared misisng.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/14d1/live/b405e550-d5dd-11f1-8fc6-43c59756914a.png",
-      "published": "2026-11-01T09:31:06+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     },
     {
@@ -552,6 +642,16 @@
       "language": "en"
     },
     {
+      "title": "راولپنڈی میں ڈینگی کے وار جاری، مریضوں کی تعداد 84 ہوگئی",
+      "link": "https://www.express.pk/story/2841694/rawalpindi-dengue-continues-to-spread-number-of-patients-reaching-84-2841694",
+      "summary": "اسپتالوں میں ڈینگی کے شبے میں مجموعی طور پر 6 ہزار 397 مریضوں کی اسکریننگ کی گئی، محکمہ صحت",
+      "image_url": "",
+      "published": "2026-11-01T08:19:46+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "اختلافات اپنی جگہ لیکن صوبے کے امن کیلئے متفق ہونا پڑے گا: فیصل کریم کنڈی",
       "link": "https://jang.com.pk/news/1629609",
       "summary": "گورنر خیبر پختونخوا فیصل کریم کنڈی—فائل فوٹوگورنر خیبر پختونخوا فیصل کریم کنڈی کا کہنا ہے کہ اختلافات اپنی جگہ لیکن صوبے کے امن کے...",
@@ -632,7 +732,7 @@
       "language": "ur"
     },
     {
-      "title": "ٹک ٹاکر مسٹر پتلو کی شادی پر ’کار اور موٹر سائیکلوں سمیت کروڑوں کے انعامات کا لالچ‘، بھگدڑ سے دو افراد ہلاک: ’لوگ سمجھے جو پہلے اندر جائے گا اسے انعام ملے گا‘",
+      "title": "ٹک ٹاکر مسٹر پتلو کی شادی پر ’کار اور موٹر سائیکلوں سمیت کروڑوں کے انعامات کا لالچ‘، بھگدڑ سے دو افراد ہلاک",
       "link": "https://www.bbc.com/urdu/articles/ckdd8l2vvpvyo?at_medium=RSS&at_campaign=rss",
       "summary": "ایف آئی آر کے متن میں کہا گیا ہے کہ مسٹر پتلو نے سٹیج پر آ کر اعلان کیا کہ تمام لوگ فوری طور پر گراؤنڈ میں آ جائیں، جس پر لوگوں نے یکدم اندر جانے کی کوشش کی جس سے بھگدڑ مچ گئی اور عقیل نامی شخص موقع پر جان کی بازی ہار گیا۔",
       "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/58fe/live/100128d0-d5be-11f1-b441-2b33b063138f.jpg",
@@ -680,6 +780,16 @@
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
+    },
+    {
+      "title": "Five killed in fresh ethnic violence in India's Manipur state",
+      "link": "https://tribune.com.pk/story/2638089/five-killed-in-fresh-ethnic-violence-in-indias-manipur-state",
+      "summary": "Killings come amid mass protests demanding abrogation of ceasefire arrangement between Kuki armed groups, Indian state",
+      "image_url": "",
+      "published": "2026-11-01T07:26:32+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
     },
     {
       "title": "SNGPL imposes indefinite ban on new gas connections",
@@ -770,6 +880,16 @@
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "وزیراعظم نے وہی الزامات لگائے جو ان کے وزرا صبح شام ٹی وی پر دہراتے ہیں, شوکت یوسف زئی",
+      "link": "https://www.express.pk/story/2841685/the-prime-minister-leveled-the-same-allegations-that-his-ministers-repeat-on-television-morning-and-evening-says-shaukat-yousafzai-2841685",
+      "summary": "شوکت یوسف زئی نے کہا کہ وزیراعظم نے مایوس کیا، توقع تھی کہ خیبرپختونخوا کے لیے بڑا پیکج دیں گے",
+      "image_url": "",
+      "published": "2026-11-01T06:51:24+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "One killed, eight injured in Lahore cylinder blast",
@@ -878,126 +998,6 @@
       "image_url": "",
       "published": "2026-11-01T06:10:16+00:00",
       "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Democrats are used to heartbreak in Texas - could Talarico turn the tide?",
-      "link": "https://www.bbc.co.uk/news/articles/cmy0r2y6zeddo?at_medium=RSS&at_campaign=rss",
-      "summary": "The state's $500m Senate race may be the most closely watched in the US midterms, and is about far more than control of Congress.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f303/live/84cce500-d54b-11f1-bcb7-8f812b44c2e5.jpg",
-      "published": "2026-11-01T06:03:57+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "لاہور سمیت پنجاب بھر میں سردی کا احساس ہونے لگا",
-      "link": "https://www.express.pk/story/2841679/cold-weather-begins-to-set-in-across-punjab-including-lahore-2841679",
-      "summary": "لاہور میں کم سے کم درجہ حرارت 19 اور زیادہ سے زیادہ 28 ڈگری تک جانے کا امکان ہے",
-      "image_url": "",
-      "published": "2026-11-01T05:58:19+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "جنگِ آزادی گلگت بلتستان کی کہانی ؛ غازیوں کی اپنی زبانی",
-      "link": "https://www.express.pk/story/2841677/the-story-of-gilgit-baltistans-war-of-independence-told-by-the-veterans-themselves-2841677",
-      "summary": "1947ء کی جنگِ آزادی میں حصہ لینے والے گلگت بلتستان کے شہدا اور غازیوں نے غیر متزلزل عزم کا مظاہرہ کیا",
-      "image_url": "",
-      "published": "2026-11-01T05:51:10+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کراچی: کورنگی میں گھر پر گیس لیکیج کے باعث آگ بھڑک اٹھنے سے ایک شخص جھلس کر زخمی",
-      "link": "https://www.express.pk/story/2841674/korangi-gas-leakage-fire-2841674",
-      "summary": "زخمی شخص سول برنس وارڈ منتقل، شناخت 42 سالہ منظور ولد خان محمد کے نام سے کی گئی",
-      "image_url": "",
-      "published": "2026-11-01T05:47:08+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Trump says US still has to ‘take care’ of one or two targets in Iran",
-      "link": "https://arynews.tv/trump-says-us-still-has-to-take-care-of-one-or-two-targets-in-iran",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Donald-Trump-1.jpg",
-      "published": "2026-11-01T05:46:06+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "ایران امریکا کشیدگی؛ پیٹرول کی قیمتوں کے تعین کا طریقہ کار تبدیل، نیا فارمولا جاری",
-      "link": "https://www.express.pk/story/2841672/petrol-price-determination-mechanism-changed-2841672",
-      "summary": "پیٹرولیم لیوی میں ردوبدل کا فائدہ صرف پیٹرول صارفین کو منتقل کیا جائے گا",
-      "image_url": "",
-      "published": "2026-11-01T05:39:07+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Watch: Heidi Klum as giant severed hand for Halloween bash",
-      "link": "https://www.bbc.co.uk/news/videos/cj040yd1xdrlo?at_medium=RSS&at_campaign=rss",
-      "summary": "The supermodel and TV host provided a gory new shock at her New York event.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/be5b/live/57cc5ff0-d5b3-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-11-01T05:26:02+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "سکول میں 8 سالہ بچے کا 6 سالہ بچی پر تشدد، اساتذہ اور عملے کے خلاف مقدمہ درج: ’ایک بچہ اتنا سفاک تشدد کیسے کرسکتا ہے؟‘",
-      "link": "https://www.bbc.com/urdu/articles/cmgelvg482d4o?at_medium=RSS&at_campaign=rss",
-      "summary": "ہریانہ کے شہر پنچکولا کے ایک سکول میں کلاس روم کے اندر 6 سالہ بچی کے ساتھ 8 سالہ بچے کی مبینہ مارپیٹ کے معاملے میں پولیس نے سکول کے پرنسپل سمیت تین افراد کے خلاف مقدمہ درج کر لیا ہے۔",
-      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/2f68/live/05b3c7d0-d5ae-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-11-01T05:24:16+00:00",
-      "source": "BBC Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پاکستان نے جی 24 کی سربراہی سنبھال لی، وزارت خزانہ",
-      "link": "https://www.express.pk/story/2841669/pakistan-takes-over-g24-presidency-says-finance-ministry-2841669",
-      "summary": "ترقی پذیر معیشتوں کا مستقبل عالمی معیشت کے مستقبل سے وابستہ نہیں ہے",
-      "image_url": "",
-      "published": "2026-11-01T05:18:50+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سرکاری رہائش کے نادہندہ ہزاروں ملازمین کی الاٹمنٹ منسوخ کرنے کی تیاری",
-      "link": "https://www.express.pk/story/2841668/preparation-underway-to-cancel-allotments-of-thousands-of-government-employees-in-default-on-official-residences-2841668",
-      "summary": "مختلف شہروں میں مجموعی طور پر 7 ہزار 973 وفاقی ملازمین کرایوں کے نادہندہ قرار پائے ہیں",
-      "image_url": "",
-      "published": "2026-11-01T05:13:56+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "خیبرپختونخوا کے 12 اضلاع کیلئے پولیس کو 30 سے 40 ارب روپے کی ضرورت ہے: آئی جی ذوالفقار حمید",
-      "link": "https://jang.com.pk/news/1629597",
-      "summary": "آئی جی خیبرپختونخوا ذوالفقار حمید نے کہا ہے کہ 12 اضلاع کے لیے پولیس کو 30 سے 40 ارب روپے کی ضرورت ہے، رقم کے حصول کے لیے وفاقی...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-01/b_1629597_105559_updates.jpg\"/",
-      "published": "2026-11-01T05:11:56+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "لاہور میں چلنے والی کمزور ہوا اور بھارت سے آنے والی ہوائیں فضائی معیار خراب کر رہی ہیں: مریم اورنگزیب",
-      "link": "https://jang.com.pk/news/1629598",
-      "summary": "مریم اورنگزیب—فائل فوٹوپنجاب کی سینئر وزیر مریم اورنگزیب نے کہا ہے کہ لاہور میں چلنے والی کمزور ہوا اور بھارت سے آنے والی ہوائیں...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-01/b_1629598_111340_updates.jpg\"/",
-      "published": "2026-11-01T05:11:42+00:00",
-      "source": "Jang",
       "category": "اردو",
       "language": "ur"
     }
