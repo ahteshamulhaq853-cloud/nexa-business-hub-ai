@@ -1,12 +1,42 @@
 {
-  "updated": "2026-11-02T00:33:52.769622+00:00",
+  "updated": "2026-11-02T01:44:07.466225+00:00",
   "items": [
     {
-      "title": "Binance users withdraw billions after record crypto hack",
+      "title": "Ukraine air raid app apparently hacked as users receive false radiation threat, Air Force says",
+      "link": "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo?at_medium=RSS&at_campaign=rss",
+      "summary": "Hours later Russian authorities said its app was also hacked, with fake warnings sent inside the country.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3608/live/1d2513e0-d646-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-11-02T01:18:27+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Binance users withdraw $3.6bn after record crypto hack",
       "link": "https://www.bbc.co.uk/news/articles/cwj34gdmnly4o?at_medium=RSS&at_campaign=rss",
       "summary": "The exchange froze transactions in the wake of the incident, which impacted $6.3bn worth of digital assets.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3a7f/live/ad865b20-d64f-11f1-a701-fddedf244c16.jpg",
-      "published": "2026-11-02T00:26:30+00:00",
+      "published": "2026-11-02T01:15:25+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "A&E warning system to flag sick children deteriorating quickly",
+      "link": "https://www.bbc.co.uk/news/articles/cw1m42zdnn3go?at_medium=RSS&at_campaign=rss",
+      "summary": "The initiative, in England, will help busy staff identify children who are deteriorating quickly as they wait for emergency care.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f122/live/44b1df60-d461-11f1-ab12-eb0c94f5b382.jpg",
+      "published": "2026-11-02T00:51:24+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Democrats have high hopes for midterms, but polls have let them down before",
+      "link": "https://www.bbc.co.uk/news/articles/cmg47p3edv4do?at_medium=RSS&at_campaign=rss",
+      "summary": "Polls have been predicting a Democratic surge, but last-minute deciders and sampling issues mean there's no guarantee.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ae1b/live/eaba2bb0-d48e-11f1-9a20-f717db279e3e.jpg",
+      "published": "2026-11-02T00:25:12+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -62,16 +92,6 @@
       "language": "en"
     },
     {
-      "title": "Ukraine air raid app apparently hacked as users receive false radiation threat, Air Force says",
-      "link": "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo?at_medium=RSS&at_campaign=rss",
-      "summary": "Authorities say there is no threat and have advised the public to stay calm and follow official channels for information.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3608/live/1d2513e0-d646-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-11-01T22:38:24+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire ends",
       "link": "https://www.bbc.co.uk/news/articles/c64g1y90p71eo?at_medium=RSS&at_campaign=rss",
       "summary": "A rare humanitarian ceasefire allowed civilians to evacuate the Russian-occupied city of Oleshky.",
@@ -92,6 +112,16 @@
       "language": "en"
     },
     {
+      "title": "خطے کے ایران مخالف ممالک ماضی کی غلطیاں نہ دہرائیں، عباس عراقچی",
+      "link": "https://www.express.pk/story/2841743/anti-iran-countries-in-the-region-should-not-repeat-the-mistakes-of-the-past-says-abbas-araghchi-2841743",
+      "summary": "سکیورٹی خدشات کے باعث سپریم لیڈر کی تصاویر منظرعام پر نہیں لائی جارہیں، ایرانی وزیر خارجہ",
+      "image_url": "",
+      "published": "2026-11-01T20:10:43+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Mohammad Yousuf urges Babar to seek specialized overseas coaching amid form slump",
       "link": "https://arynews.tv/mohammad-yousuf-urges-babar-to-seek-specialized-overseas-coaching-amid-form-slump",
       "summary": "",
@@ -100,6 +130,26 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "امریکی وسط مدتی انتخابات، 5 کروڑ سے زائد شہریوں کی پیشگی ووٹنگ",
+      "link": "https://www.express.pk/story/2841742/us-midterm-elections-over-50-million-citizens-vote-in-advance-2841742",
+      "summary": "انتخابات میں ری پبلکنز کو سینیٹ میں 53 کے مقابلے میں 47 نشستوں کی برتری کا دفاع درپیش ہے",
+      "image_url": "",
+      "published": "2026-11-01T19:59:29+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "امریکی ریاست فلوریڈا میں نجی مسافر طیارہ گر کر تباہ، تمام 9 افراد ہلاک",
+      "link": "https://www.express.pk/story/2841741/private-passenger-plane-crashes-in-the-us-state-of-florida-all-9-people-on-board-killed-2841741",
+      "summary": "طیارے نے ٹیکساس کے آسٹن برگسٹروم انٹرنیشنل ایئرپورٹ سے پرواز بھری تھی",
+      "image_url": "",
+      "published": "2026-11-01T19:40:13+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Shahzad Akbar targeting PTI from abroad, alleges Shaukat Yousafzai",
@@ -160,16 +210,6 @@
       "source": "UrduPoint",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "Peaceful protests in Germany spiral into violence and looting",
-      "link": "https://www.bbc.co.uk/news/videos/cqgm0der7zkmo?at_medium=RSS&at_campaign=rss",
-      "summary": "Thousands joined largely orderly demonstrations earlier in the day, before violence erupted in Frankfurt, Berlin, Cologne and Hamburg.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0c8f/live/e077e4c0-d61f-11f1-beec-49c9509fcdec.jpg",
-      "published": "2026-11-01T18:51:56+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
     },
     {
       "title": "Billy Sharp reverses retirement and joins eighth-tier AFC Rushden",
@@ -362,16 +402,6 @@
       "language": "ur"
     },
     {
-      "title": "Israeli strikes in Gaza kill eight including child, hospitals say",
-      "link": "https://www.bbc.co.uk/news/articles/cmqln14rrzxvo?at_medium=RSS&at_campaign=rss",
-      "summary": "Five officers from the Hamas-run police have been killed in Khan Younis and three people, including a child, killed in Gaza City, officials say.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c922/live/4fe4c8d0-d5fa-11f1-a701-fddedf244c16.jpg",
-      "published": "2026-11-01T17:06:32+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "University of Cambridge scientist among those who died in Spanish train crash",
       "link": "https://www.bbc.co.uk/news/articles/cq5ynzvkn1d8o?at_medium=RSS&at_campaign=rss",
       "summary": "Marta Shahbazi was an \"inspiring, talented and passionate scientist\", says the laboratory where she worked.",
@@ -500,6 +530,16 @@
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
+    },
+    {
+      "title": "‘My vote still matters’ - Americans weigh in on the power of their ballot",
+      "link": "https://www.bbc.co.uk/news/videos/cw62yd964e55o?at_medium=RSS&at_campaign=rss",
+      "summary": "The BBC asked voters from across the United States what voting means to them and whether they think it matters in the midterm elections.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ddba/live/33355510-d488-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-11-01T16:08:19+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
     },
     {
       "title": "آئینی عدالت، سپریم کورٹ کے فیصلے کی پابند نہیں، جسٹس عامر فاروق",
@@ -882,16 +922,6 @@
       "language": "en"
     },
     {
-      "title": "More than 300 arrests at Palestine Action support protest outside US embassy",
-      "link": "https://www.bbc.co.uk/news/articles/c98rz23ed781o?at_medium=RSS&at_campaign=rss",
-      "summary": "More than 4,000 people have been arrested for supporting the group since it was proscribed in July 2025.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c2da/live/12dda4f0-d5f7-11f1-a6a8-6dc45e4fc351.jpg",
-      "published": "2026-11-01T13:41:00+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "India biggest sponsor of terrorism in Pakistan, says DG ISPR",
       "link": "https://arynews.tv/india-biggest-sponsor-of-terrorism-in-pakistan-says-dg-ispr",
       "summary": "",
@@ -970,36 +1000,6 @@
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "President, PM extend felicitations to people of Gilgit-Baltistan on Independence Day",
-      "link": "https://arynews.tv/president-pm-extend-felicitations-to-people-of-gilgit-baltistan-on-independence-day",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/PPM.jpg",
-      "published": "2026-11-01T12:50:25+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "گلستان جوہر میں بائیک سوار کی فائرنگ سے پی آئی اے کا انجینئر قتل",
-      "link": "https://www.express.pk/story/2841718/pia-engineer-killed-by-gunfire-from-a-motorcyclist-in-gulistan-e-johar-2841718",
-      "summary": "ابراہیم حیدری جمعہ گوٹھ میں فرار ڈکیتوں کی فائرنگ سے شہری زخمی، ناظم آباد بلاک جے میں فائرنگ سے ایک شخص زخمی",
-      "image_url": "",
-      "published": "2026-11-01T12:49:12+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "گلگت بلتستان میں یوم آزادی جوش و جذبے سے منایا گیا",
-      "link": "https://www.express.pk/story/2841717/gilgit-baltistan-independence-day-celebrations-with-zeal-and-enthusiasm-2841717",
-      "summary": "گلگت میں لالک جان اسٹیڈیم پر شان دار آتش بازی کا مظاہرہ کیا گیا، جس میں وزیراعلیٰ امجد حسین نے بھی شرکت کی",
-      "image_url": "",
-      "published": "2026-11-01T12:47:30+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
     }
   ]
 }
