@@ -1847,6 +1847,48 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
 #interestingFactsPage #nexaFactsGrid article{text-align:right}
 #interestingFactsPage #nexaFactsGrid a{display:inline-block;margin-top:8px;line-height:2}
 </style>
+
+<style id="nexa-galaxy-j6-performance">
+/* Lightweight phone mode: tuned for Galaxy J6-class Android hardware. */
+@media (max-width: 760px) {
+  html { scroll-behavior: auto !important; }
+  body {
+    background: #070b13 !important;
+    background-image: none !important;
+  }
+  header, .topbar, #bottomNav {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  #menuBackdrop { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+  .card, .hero, .studio-intro, .studio-section-heading, .welcome-notice,
+  .job-listing-card, .stat, #liveTVPage .card, #latestNewsPage .card,
+  #weatherPage .card {
+    box-shadow: 0 2px 8px rgba(0,0,0,.18) !important;
+    background-image: none !important;
+    transition: none !important;
+  }
+  .card:hover, .job-listing-card:hover, button:hover, .button-link:hover,
+  .service-row:hover { transform: none !important; }
+  button, .button-link, .service-row, .page, *::before, *::after {
+    animation: none !important;
+    transition-duration: 0s !important;
+  }
+  input:focus, select:focus, textarea:focus {
+    box-shadow: none !important;
+  }
+  #bottomNav { box-shadow: 0 -3px 12px rgba(0,0,0,.18) !important; }
+  .studio-dashboard .studio-art { filter: none !important; }
+  .welcome-notice { box-shadow: 0 5px 18px rgba(0,0,0,.35) !important; }
+}
+@media (max-width: 420px) {
+  main { padding-left: 10px !important; padding-right: 10px !important; }
+  .grid, .grid.three { gap: 9px !important; }
+  .card { padding: 13px !important; }
+  #liveTVPage video, #liveTVPage iframe { max-width: 100%; }
+}
+</style>
+
 </head>
 <body>
 <div id="nexaSystemScan" role="status" aria-live="polite">
