@@ -2457,10 +2457,24 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
 </section>
 
 
+
+<section id="interestingFactsPage" class="page">
+ <div class="studio-section-heading"><div><span class="studio-kicker">NEXA KNOWLEDGE HUB</span><h2>🌟 دلچسپ معلومات</h2><p class="muted">دنیا، سائنس، خلا، جانوروں اور تاریخ کے حیران کن حقائق دریافت کریں۔</p></div></div>
+ <div class="card">
+  <div class="grid">
+   <div class="field"><label for="nexaFactCategory">موضوع منتخب کریں</label><select id="nexaFactCategory"><option value="all">تمام موضوعات</option><option value="world">دنیا</option><option value="science">سائنس</option><option value="space">خلا</option><option value="animals">جانور</option><option value="history">تاریخ</option><option value="daily">روزمرہ زندگی</option></select></div>
+   <div class="field" style="display:flex;align-items:end"><button type="button" id="nexaRandomFact" style="width:100%">🎲 کوئی ایک دلچسپ حقیقت</button></div>
+  </div>
+  <div id="nexaFactsGrid" class="grid three" aria-live="polite"></div><p class="muted" id="nexaFactsCount" style="font-size:12px;margin-top:14px"></p>
+ </div>
+ <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← واپس ڈیش بورڈ</button></div>
+</section>
+
 </main>
 <nav id="bottomNav" aria-label="Main navigation">
  <button type="button" onclick="bottomNavigate('dashboardPage',this)"><span class="bottom-icon">⌂</span><span>Dashboard</span></button>
  <button type="button" onclick="bottomNavigate('latestJobsPage',this)"><span class="bottom-icon">💼</span><span>Jobs</span></button>
+ <button type="button" onclick="bottomNavigate('interestingFactsPage',this)"><span class="bottom-icon">💡</span><span>Facts</span></button>
  <button type="button" onclick="bottomNavigate('latestNewsPage',this)"><span class="bottom-icon">📰</span><span>News</span></button>
 <button type="button" onclick="bottomNavigate('liveTVPage',this)"><span class="bottom-icon">📺</span><span>Live TV</span></button>
  <button type="button" onclick="bottomNavigate('settingsPage',this)"><span class="bottom-icon">♙</span><span>Profile</span></button>
@@ -4277,6 +4291,52 @@ body:has(#welcomeNotice.show)::before{content:"";display:block;position:fixed;in
  #liveTVPage .card,#latestNewsPage .card{padding:15px}
 }
 </style>
+
+
+<script id="nexa-interesting-facts">
+(function(){
+ const data=[
+ ["world","🌍","دنیا کا سب سے بڑا سمندر","بحرالکاہل زمین کا سب سے بڑا اور گہرا سمندر ہے۔"],
+ ["world","🏔️","بلند ترین پہاڑ","ماؤنٹ ایورسٹ سطح سمندر سے دنیا کی بلند ترین چوٹی ہے۔"],
+ ["world","🧊","سرد صحرا","انٹارکٹکا ایک سرد صحرا ہے کیونکہ وہاں بارش اور برف باری بہت کم ہوتی ہے۔"],
+ ["world","🌳","درختوں کا رابطہ","جنگلات میں درخت جڑوں اور فنگس کے تعلق سے غذائی اجزا اور کیمیائی اشاروں کا تبادلہ کر سکتے ہیں۔"],
+ ["world","🌋","آتش فشاں","آتش فشاں زمین کے اندر موجود پگھلے ہوئے مادے کو سطح تک پہنچا سکتے ہیں۔"],
+ ["science","🌈","قوسِ قزح","قوسِ قزح اس وقت بنتی ہے جب پانی کے قطرے سورج کی روشنی کو مختلف رنگوں میں بانٹتے ہیں۔"],
+ ["science","🧲","زمین کا مقناطیسی میدان","زمین کا مقناطیسی میدان قطب نما کی سوئی کو سمت دکھانے میں مدد دیتا ہے۔"],
+ ["science","💧","پانی کا نقطۂ ابال","عام فضائی دباؤ پر پانی تقریباً 100 ڈگری سیلسیس پر ابلتا ہے۔"],
+ ["science","⚡","آسمانی بجلی","بجلی کی چمک اپنے راستے کی ہوا کو بہت زیادہ گرم کرتی ہے، جس سے گرج پیدا ہوتی ہے۔"],
+ ["science","🧬","خلیے","انسانی جسم کھربوں خلیوں پر مشتمل ہے اور ہر خلیہ مخصوص کام انجام دیتا ہے۔"],
+ ["space","🌙","چاند کی روشنی","چاند اپنی روشنی خود پیدا نہیں کرتا بلکہ سورج کی روشنی منعکس کرتا ہے۔"],
+ ["space","☀️","سورج ایک ستارہ","سورج ہمارے نظامِ شمسی کا ستارہ اور زمین کے لیے توانائی کا بنیادی قدرتی ذریعہ ہے۔"],
+ ["space","🪐","زحل کے حلقے","زحل کے حلقے برف، پتھروں اور گرد کے بے شمار ذرات سے بنے ہیں۔"],
+ ["space","🔴","سرخ سیارہ","مریخ کی سطح پر آئرن آکسائیڈ موجود ہے، اسی لیے اسے سرخ سیارہ کہا جاتا ہے۔"],
+ ["space","✨","ستاروں کا ماضی","دور دراز ستاروں کی روشنی کو ہم تک پہنچنے میں کئی سال لگ سکتے ہیں۔"],
+ ["animals","🐙","آکٹوپس کے تین دل","آکٹوپس کے تین دل ہوتے ہیں؛ دو گلپھڑوں اور ایک باقی جسم کی طرف خون بھیجتا ہے۔"],
+ ["animals","🐘","ہاتھی کی سونڈ","ہاتھی اپنی سونڈ سے سونگھنے، پانی اٹھانے اور چیزیں پکڑنے جیسے کئی کام لیتا ہے۔"],
+ ["animals","🦋","تتلی کے پاؤں","تتلیاں اپنے پاؤں پر موجود حسّاس حصوں سے ذائقہ محسوس کر سکتی ہیں۔"],
+ ["animals","🐧","پینگوئن پرندے ہیں","پینگوئن اڑ نہیں سکتے، لیکن ان کے پر پانی میں تیرنے کے لیے فِن جیسے بن گئے ہیں۔"],
+ ["animals","🐬","ڈولفن کا رابطہ","ڈولفن آوازوں اور مخصوص سیٹیوں کے ذریعے ایک دوسرے سے رابطہ کرتی ہیں۔"],
+ ["history","🏛️","قدیم اہرام","مصر کے اہرام قدیم مصری تہذیب کی تعمیراتی مہارت کی مثال ہیں۔"],
+ ["history","📜","کاغذ کی تاریخ","کاغذ سازی کی قدیم تکنیک چین میں ہان خاندان کے دور میں ترقی پائی۔"],
+ ["history","🕌","بیت الحکمہ","بغداد کا بیت الحکمہ علم، ترجمے اور تحقیق کی تاریخ میں معروف مرکز تھا۔"],
+ ["history","🗿","موآئی مجسمے","ایسٹر جزیرے کے موآئی مجسمے وہاں کے قدیم باشندوں کی ثقافت کی یادگار ہیں۔"],
+ ["history","🧭","قطب نما","قطب نما نے سمندری سفر اور راستہ تلاش کرنے کے طریقوں میں اہم تبدیلی پیدا کی۔"],
+ ["daily","🍯","شہد کی حفاظت","مناسب طریقے سے بند اور محفوظ رکھا جائے تو شہد طویل عرصے تک خراب ہونے سے بچ سکتا ہے۔"],
+ ["daily","🥕","گاجروں کے رنگ","گاجریں نارنجی، جامنی، سفید اور پیلے سمیت کئی رنگوں میں پائی جاتی ہیں۔"],
+ ["daily","☕","کافی کی خوشبو","کافی کی خوشبو میں سینکڑوں مختلف خوشبودار مرکبات حصہ لیتے ہیں۔"],
+ ["daily","🌱","بیج سے پودا","بہت سے پودے بیج سے اگتے ہیں؛ پانی، ہوا، مناسب درجہ حرارت اور روشنی مدد دیتے ہیں۔"],
+ ["daily","📚","مطالعے کا فائدہ","مطالعہ نئی معلومات، الفاظ اور خیالات سیکھنے کا ایک اچھا ذریعہ ہے۔"]
+ ];
+ const labels={world:"دنیا",science:"سائنس",space:"خلا",animals:"جانور",history:"تاریخ",daily:"روزمرہ زندگی"};
+ const grid=document.getElementById("nexaFactsGrid"),cat=document.getElementById("nexaFactCategory"),count=document.getElementById("nexaFactsCount");
+ if(!grid||!cat)return;
+ function draw(items){grid.innerHTML=items.map(f=>'<article class="card" style="margin:0;padding:15px"><div style="font-size:27px">'+f[1]+'</div><span class="studio-kicker" style="font-size:10px">'+labels[f[0]]+'</span><h3 style="margin:8px 0">'+f[2]+'</h3><p class="muted" style="font-size:13px;line-height:1.65;margin:0">'+f[3]+'</p></article>').join("");count.textContent=items.length+" دلچسپ معلومات";}
+ function refresh(){const v=cat.value;draw(v==="all"?data:data.filter(x=>x[0]===v));}
+ cat.addEventListener("change",refresh);
+ document.getElementById("nexaRandomFact").addEventListener("click",()=>{const pool=cat.value==="all"?data:data.filter(x=>x[0]===cat.value);draw([pool[Math.floor(Math.random()*pool.length)]]);count.textContent="آپ کے لیے منتخب کردہ ایک دلچسپ حقیقت";});
+ refresh();
+})();
+</script>
 
 </body>
 </html>
