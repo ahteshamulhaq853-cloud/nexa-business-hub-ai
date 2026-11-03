@@ -2459,13 +2459,18 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
 
 
 <section id="interestingFactsPage" class="page">
- <div class="studio-section-heading"><div><span class="studio-kicker">NEXA KNOWLEDGE HUB</span><h2>🌟 دلچسپ معلومات</h2><p class="muted">دنیا، سائنس، خلا، جانوروں اور تاریخ کے حیران کن حقائق دریافت کریں۔</p></div></div>
+ <div class="studio-section-heading"><div><span class="studio-kicker">NEXA KNOWLEDGE HUB</span><h2>🌟 دلچسپ معلومات</h2><p class="muted">ہزاروں موضوعات پر تفصیلی معلومات تلاش کریں، پڑھیں اور نئی چیزیں سیکھیں۔</p></div></div>
  <div class="card">
-  <div class="grid">
-   <div class="field"><label for="nexaFactCategory">موضوع منتخب کریں</label><select id="nexaFactCategory"><option value="all">تمام موضوعات</option><option value="world">دنیا</option><option value="science">سائنس</option><option value="space">خلا</option><option value="animals">جانور</option><option value="history">تاریخ</option><option value="daily">روزمرہ زندگی</option></select></div>
-   <div class="field" style="display:flex;align-items:end"><button type="button" id="nexaRandomFact" style="width:100%">🎲 کوئی ایک دلچسپ حقیقت</button></div>
+  <div class="field"><label for="nexaFactSearch">اپنا موضوع یا سوال لکھیں</label><input id="nexaFactSearch" type="search" placeholder="مثلاً: بلیک ہول، انسانی دماغ، پاکستان کی تاریخ..." maxlength="120"></div>
+  <div class="grid two" style="gap:10px">
+   <div class="field"><label for="nexaFactLanguage">معلومات کی زبان</label><select id="nexaFactLanguage"><option value="ur">اردو</option><option value="en">English</option></select></div>
+   <div class="field"><label for="nexaFactCategory">موضوع منتخب کریں</label><select id="nexaFactCategory"><option value="all">تمام موضوعات</option><option value="world">دنیا</option><option value="science">سائنس</option><option value="space">خلا</option><option value="animals">جانور</option><option value="history">تاریخ</option><option value="technology">ٹیکنالوجی</option><option value="nature">قدرت</option><option value="health">انسانی جسم</option></select></div>
   </div>
-  <div id="nexaFactsGrid" class="grid three" aria-live="polite"></div><p class="muted" id="nexaFactsCount" style="font-size:12px;margin-top:14px"></p>
+  <div class="actions" style="margin:12px 0"><button type="button" id="nexaFactSearchBtn">🔎 معلومات تلاش کریں</button><button type="button" class="secondary" id="nexaRandomFact">🎲 کوئی دلچسپ حقیقت</button></div>
+  <p id="nexaFactStatus" class="muted" role="status">ابتدائی معلومات نیچے موجود ہیں۔ مزید معلومات کے لیے سرچ کریں۔</p>
+  <div id="nexaFactsGrid" class="grid three" aria-live="polite"></div>
+  <p class="muted" id="nexaFactsCount" style="font-size:12px;margin-top:14px"></p>
+  <p class="muted" style="font-size:11px;line-height:1.6">آن لائن تفصیلی مضامین Wikipedia سے حاصل کیے جاتے ہیں۔ ہر مضمون کے ساتھ اصل ماخذ کا لنک بھی دیا جائے گا۔</p>
  </div>
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← واپس ڈیش بورڈ</button></div>
 </section>
@@ -4296,45 +4301,68 @@ body:has(#welcomeNotice.show)::before{content:"";display:block;position:fixed;in
 <script id="nexa-interesting-facts">
 (function(){
  const data=[
- ["world","🌍","دنیا کا سب سے بڑا سمندر","بحرالکاہل زمین کا سب سے بڑا اور گہرا سمندر ہے۔"],
- ["world","🏔️","بلند ترین پہاڑ","ماؤنٹ ایورسٹ سطح سمندر سے دنیا کی بلند ترین چوٹی ہے۔"],
- ["world","🧊","سرد صحرا","انٹارکٹکا ایک سرد صحرا ہے کیونکہ وہاں بارش اور برف باری بہت کم ہوتی ہے۔"],
- ["world","🌳","درختوں کا رابطہ","جنگلات میں درخت جڑوں اور فنگس کے تعلق سے غذائی اجزا اور کیمیائی اشاروں کا تبادلہ کر سکتے ہیں۔"],
- ["world","🌋","آتش فشاں","آتش فشاں زمین کے اندر موجود پگھلے ہوئے مادے کو سطح تک پہنچا سکتے ہیں۔"],
- ["science","🌈","قوسِ قزح","قوسِ قزح اس وقت بنتی ہے جب پانی کے قطرے سورج کی روشنی کو مختلف رنگوں میں بانٹتے ہیں۔"],
- ["science","🧲","زمین کا مقناطیسی میدان","زمین کا مقناطیسی میدان قطب نما کی سوئی کو سمت دکھانے میں مدد دیتا ہے۔"],
- ["science","💧","پانی کا نقطۂ ابال","عام فضائی دباؤ پر پانی تقریباً 100 ڈگری سیلسیس پر ابلتا ہے۔"],
- ["science","⚡","آسمانی بجلی","بجلی کی چمک اپنے راستے کی ہوا کو بہت زیادہ گرم کرتی ہے، جس سے گرج پیدا ہوتی ہے۔"],
- ["science","🧬","خلیے","انسانی جسم کھربوں خلیوں پر مشتمل ہے اور ہر خلیہ مخصوص کام انجام دیتا ہے۔"],
- ["space","🌙","چاند کی روشنی","چاند اپنی روشنی خود پیدا نہیں کرتا بلکہ سورج کی روشنی منعکس کرتا ہے۔"],
- ["space","☀️","سورج ایک ستارہ","سورج ہمارے نظامِ شمسی کا ستارہ اور زمین کے لیے توانائی کا بنیادی قدرتی ذریعہ ہے۔"],
- ["space","🪐","زحل کے حلقے","زحل کے حلقے برف، پتھروں اور گرد کے بے شمار ذرات سے بنے ہیں۔"],
- ["space","🔴","سرخ سیارہ","مریخ کی سطح پر آئرن آکسائیڈ موجود ہے، اسی لیے اسے سرخ سیارہ کہا جاتا ہے۔"],
- ["space","✨","ستاروں کا ماضی","دور دراز ستاروں کی روشنی کو ہم تک پہنچنے میں کئی سال لگ سکتے ہیں۔"],
- ["animals","🐙","آکٹوپس کے تین دل","آکٹوپس کے تین دل ہوتے ہیں؛ دو گلپھڑوں اور ایک باقی جسم کی طرف خون بھیجتا ہے۔"],
- ["animals","🐘","ہاتھی کی سونڈ","ہاتھی اپنی سونڈ سے سونگھنے، پانی اٹھانے اور چیزیں پکڑنے جیسے کئی کام لیتا ہے۔"],
- ["animals","🦋","تتلی کے پاؤں","تتلیاں اپنے پاؤں پر موجود حسّاس حصوں سے ذائقہ محسوس کر سکتی ہیں۔"],
- ["animals","🐧","پینگوئن پرندے ہیں","پینگوئن اڑ نہیں سکتے، لیکن ان کے پر پانی میں تیرنے کے لیے فِن جیسے بن گئے ہیں۔"],
- ["animals","🐬","ڈولفن کا رابطہ","ڈولفن آوازوں اور مخصوص سیٹیوں کے ذریعے ایک دوسرے سے رابطہ کرتی ہیں۔"],
- ["history","🏛️","قدیم اہرام","مصر کے اہرام قدیم مصری تہذیب کی تعمیراتی مہارت کی مثال ہیں۔"],
- ["history","📜","کاغذ کی تاریخ","کاغذ سازی کی قدیم تکنیک چین میں ہان خاندان کے دور میں ترقی پائی۔"],
- ["history","🕌","بیت الحکمہ","بغداد کا بیت الحکمہ علم، ترجمے اور تحقیق کی تاریخ میں معروف مرکز تھا۔"],
- ["history","🗿","موآئی مجسمے","ایسٹر جزیرے کے موآئی مجسمے وہاں کے قدیم باشندوں کی ثقافت کی یادگار ہیں۔"],
- ["history","🧭","قطب نما","قطب نما نے سمندری سفر اور راستہ تلاش کرنے کے طریقوں میں اہم تبدیلی پیدا کی۔"],
- ["daily","🍯","شہد کی حفاظت","مناسب طریقے سے بند اور محفوظ رکھا جائے تو شہد طویل عرصے تک خراب ہونے سے بچ سکتا ہے۔"],
- ["daily","🥕","گاجروں کے رنگ","گاجریں نارنجی، جامنی، سفید اور پیلے سمیت کئی رنگوں میں پائی جاتی ہیں۔"],
- ["daily","☕","کافی کی خوشبو","کافی کی خوشبو میں سینکڑوں مختلف خوشبودار مرکبات حصہ لیتے ہیں۔"],
- ["daily","🌱","بیج سے پودا","بہت سے پودے بیج سے اگتے ہیں؛ پانی، ہوا، مناسب درجہ حرارت اور روشنی مدد دیتے ہیں۔"],
- ["daily","📚","مطالعے کا فائدہ","مطالعہ نئی معلومات، الفاظ اور خیالات سیکھنے کا ایک اچھا ذریعہ ہے۔"]
+ ["🌍","دنیا کا سب سے بڑا سمندر","بحرالکاہل زمین کا سب سے بڑا اور گہرا سمندر ہے۔"],
+ ["🏔️","بلند ترین پہاڑ","ماؤنٹ ایورسٹ سطح سمندر سے دنیا کی بلند ترین چوٹی ہے۔"],
+ ["🧊","سرد صحرا","انٹارکٹکا ایک سرد صحرا ہے کیونکہ وہاں بارش اور برف باری بہت کم ہوتی ہے۔"],
+ ["🌈","قوسِ قزح","پانی کے قطرے سورج کی روشنی کو مختلف رنگوں میں تقسیم کرتے ہیں، جس سے قوسِ قزح بنتی ہے۔"],
+ ["🧲","زمین کا مقناطیسی میدان","زمین کا مقناطیسی میدان قطب نما کو سمت دکھانے میں مدد دیتا ہے۔"],
+ ["💧","پانی کا نقطۂ ابال","عام فضائی دباؤ پر پانی تقریباً 100 ڈگری سیلسیس پر ابلتا ہے۔"],
+ ["🌙","چاند کی روشنی","چاند اپنی روشنی خود پیدا نہیں کرتا بلکہ سورج کی روشنی منعکس کرتا ہے۔"],
+ ["🪐","زحل کے حلقے","زحل کے حلقے برف، پتھروں اور گرد کے بے شمار ذرات سے بنے ہیں۔"],
+ ["🐙","آکٹوپس کے تین دل","آکٹوپس کے تین دل ہوتے ہیں اور ان کے خون کا رنگ نیلا ہوتا ہے۔"],
+ ["🐘","ہاتھی کی سونڈ","ہاتھی اپنی سونڈ سے سونگھنے، پانی اٹھانے اور چیزیں پکڑنے جیسے کام لیتا ہے۔"],
+ ["🦋","تتلی کے پاؤں","تتلیاں اپنے پاؤں پر موجود حسّاس حصوں سے ذائقہ محسوس کر سکتی ہیں۔"],
+ ["📜","کاغذ کی تاریخ","کاغذ سازی کی قدیم تکنیک چین میں ہان خاندان کے دور میں ترقی پائی۔"]
  ];
- const labels={world:"دنیا",science:"سائنس",space:"خلا",animals:"جانور",history:"تاریخ",daily:"روزمرہ زندگی"};
- const grid=document.getElementById("nexaFactsGrid"),cat=document.getElementById("nexaFactCategory"),count=document.getElementById("nexaFactsCount");
- if(!grid||!cat)return;
- function draw(items){grid.innerHTML=items.map(f=>'<article class="card" style="margin:0;padding:15px"><div style="font-size:27px">'+f[1]+'</div><span class="studio-kicker" style="font-size:10px">'+labels[f[0]]+'</span><h3 style="margin:8px 0">'+f[2]+'</h3><p class="muted" style="font-size:13px;line-height:1.65;margin:0">'+f[3]+'</p></article>').join("");count.textContent=items.length+" دلچسپ معلومات";}
- function refresh(){const v=cat.value;draw(v==="all"?data:data.filter(x=>x[0]===v));}
- cat.addEventListener("change",refresh);
- document.getElementById("nexaRandomFact").addEventListener("click",()=>{const pool=cat.value==="all"?data:data.filter(x=>x[0]===cat.value);draw([pool[Math.floor(Math.random()*pool.length)]]);count.textContent="آپ کے لیے منتخب کردہ ایک دلچسپ حقیقت";});
- refresh();
+ const grid=document.getElementById("nexaFactsGrid"),status=document.getElementById("nexaFactStatus"),count=document.getElementById("nexaFactsCount");
+ const search=document.getElementById("nexaFactSearch"),language=document.getElementById("nexaFactLanguage"),category=document.getElementById("nexaFactCategory");
+ if(!grid||!search||!language||!category)return;
+ function safe(v){return String(v||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+ function draw(items){
+  grid.innerHTML=items.map((f,i)=>'<article class="card" style="margin:0;padding:15px"><div style="font-size:25px">'+(f.icon||"📘")+'</div><h3 style="margin:8px 0">'+safe(f.title)+'</h3><p style="font-size:13px;line-height:1.75;white-space:pre-wrap">'+safe(f.text)+'</p>'+(f.url?'<a href="'+safe(f.url)+'" target="_blank" rel="noopener noreferrer">اصل مضمون / Source ↗</a>':"")+'</article>').join("");
+  count.textContent=items.length+" معلوماتی مضامین دکھائے جا رہے ہیں۔";
+ }
+ draw(data.map(x=>({icon:x[0],title:x[1],text:x[2]})));
+ async function searchOnline(){
+  const q=search.value.trim();
+  if(!q){status.textContent="براہِ کرم پہلے کوئی موضوع یا سوال لکھیں۔";return;}
+  status.textContent="Wikipedia پر متعلقہ مضامین تلاش ہو رہے ہیں…";grid.innerHTML="";
+  try{
+   const lang=language.value;
+   const params=new URLSearchParams({action:"query",format:"json",origin:"*",list:"search",srsearch:q,srlimit:"12",utf8:"1"});
+   const response=await fetch("https://"+lang+".wikipedia.org/w/api.php?"+params.toString());
+   if(!response.ok)throw new Error("Search request failed");
+   const result=await response.json();
+   const hits=result.query&&result.query.search||[];
+   if(!hits.length){status.textContent="اس موضوع پر نتیجہ نہیں ملا۔ دوسرا لفظ آزما کر دیکھیں۔";return;}
+   const ids=hits.map(x=>x.pageid).join("|");
+   const detailParams=new URLSearchParams({action:"query",format:"json",origin:"*",pageids:ids,prop:"extracts",explaintext:"1",exchars:"2600",redirects:"1"});
+   const detailResponse=await fetch("https://"+lang+".wikipedia.org/w/api.php?"+detailParams.toString());
+   if(!detailResponse.ok)throw new Error("Article request failed");
+   const detail=await detailResponse.json();
+   const pages=detail.query&&detail.query.pages||{};
+   const items=hits.map(hit=>{
+    const page=pages[hit.pageid]||{};
+    const plain=(page.extract||hit.snippet||"").replace(/<[^>]*>/g,"").replace(/&quot;/g,'"').replace(/&#39;/g,"'");
+    return {icon:"📚",title:page.title||hit.title,text:plain||"تفصیلی متن دستیاب نہیں۔ اصل مضمون کھولیں۔",url:"https://"+lang+".wikipedia.org/?curid="+hit.pageid};
+   }).filter(x=>x.text);
+   draw(items);
+   status.textContent=lang==="ur"?"آن لائن تلاش مکمل۔ مضمون کھولنے کے لیے Source پر دبائیں۔":"Online search complete. Open Source to read the original article.";
+  }catch(err){
+   status.textContent="آن لائن معلومات ابھی حاصل نہیں ہو سکیں۔ انٹرنیٹ چیک کریں اور دوبارہ کوشش کریں۔";
+  }
+ }
+ document.getElementById("nexaFactSearchBtn").addEventListener("click",searchOnline);
+ search.addEventListener("keydown",e=>{if(e.key==="Enter")searchOnline();});
+ document.getElementById("nexaRandomFact").addEventListener("click",()=>{
+  const item=data[Math.floor(Math.random()*data.length)];
+  draw([{icon:item[0],title:item[1],text:item[2]}]);
+  status.textContent="آپ کے لیے ایک دلچسپ حقیقت منتخب کی گئی ہے۔";
+ });
+ category.addEventListener("change",()=>{
+  const terms={world:"دنیا geography",science:"science",space:"astronomy space",animals:"animals",history:"history",technology:"technology",nature:"nature",health:"human body"};
+  if(category.value!=="all"){search.value=terms[category.value]||category.value;searchOnline();}
+ });
 })();
 </script>
 
