@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#070b13">
 <title>NEXA Studio | Jobs, News, Live TV & Weather</title>\n<meta name="description" content="NEXA Studio brings Pakistan jobs, latest news, Live TV and district-wise weather together in one digital workspace.">\n<meta name="robots" content="index,follow">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js" defer></script>
 <style>
 :root{--bg:#080c15;--panel:#0e1727;--panel2:#132238;--line:#294256;--cyan:#65f3dc;--text:#eff8ff;--muted:#9db2c7;--red:#ff91a2;--green:#83ffd0}
 *{box-sizing:border-box}
@@ -2932,7 +2932,13 @@ function initLiveTVCountries(){
  if(select.dataset.ready==="yes")return;
  select.dataset.ready="yes";
  select.addEventListener("change",playSelectedLiveTVChannel);
- if(search)search.addEventListener("input",filterLiveTVChannels);
+ if(search){
+  let filterTimer;
+  search.addEventListener("input",()=>{
+   clearTimeout(filterTimer);
+   filterTimer=setTimeout(filterLiveTVChannels,160);
+  });
+ }
  renderLiveTVOptions(liveTVChannels);
  loadWorldwideLiveTVChannels();
 }
@@ -2946,9 +2952,12 @@ function getLiveTVPriority(ch){
 function renderLiveTVOptions(channels){
  const select=$("liveTVChannelSelect");if(!select)return;
  const previousChannel=liveTVChannels[Number(select.value)];
- liveTVChannels=[...channels].sort((a,b)=>getLiveTVPriority(a)-getLiveTVPriority(b)||(a.name||"").localeCompare(b.name||""));
+ liveTVChannels=[...channels];
  select.innerHTML="";
- liveTVChannels.forEach((channel,index)=>{
+ // Keep the complete channel catalogue searchable, but avoid creating thousands
+ // of DOM option nodes on mobile. Search narrows the full list before rendering.
+ const visibleLimit=250;
+ liveTVChannels.slice(0,visibleLimit).forEach((channel,index)=>{
   const option=document.createElement("option");
   option.value=String(index);
   option.textContent=channel.country?channel.name+" — "+channel.country:channel.name;
@@ -2961,7 +2970,11 @@ function renderLiveTVOptions(channels){
   return;
  }
  const previousIndex=liveTVChannels.indexOf(previousChannel);
- select.value=String(previousIndex>=0?previousIndex:0);
+ select.value=String(previousIndex>=0&&previousIndex<visibleLimit?previousIndex:0);
+ const status=$("liveTVStatus");
+ if(status&&liveTVChannels.length>visibleLimit){
+  status.textContent=""+liveTVChannels.length.toLocaleString()+" channels match. Dropdown mein pehle "+visibleLimit+" dikhaye ja rahe hain — mazeed channels ke liye search karein.";
+ }
 }
 function filterLiveTVChannels(){
  const q=($("liveTVSearch")?.value||"").trim().toLowerCase();
@@ -2996,12 +3009,13 @@ async function loadWorldwideLiveTVChannels(){
    meta="";
   }
   const seen=new Set();const unique=found.filter(ch=>{const key=ch.name.toLowerCase()+"|"+ch.stream;if(seen.has(key))return false;seen.add(key);return true;});
-  liveTVAllChannels=[...liveTVFallbackChannels.map(f=>unique.find(ch=>ch.name.toLowerCase()===f.name.toLowerCase())||f),...unique.filter(ch=>!liveTVFallbackChannels.some(f=>f.name.toLowerCase()===ch.name.toLowerCase()))];
+  liveTVAllChannels=[...liveTVFallbackChannels.map(f=>unique.find(ch=>ch.name.toLowerCase()===f.name.toLowerCase())||f),...unique.filter(ch=>!liveTVFallbackChannels.some(f=>f.name.toLowerCase()===ch.name.toLowerCase()))]
+   .sort((a,b)=>getLiveTVPriority(a)-getLiveTVPriority(b)||(a.name||"").localeCompare(b.name||""));
   liveTVChannels=liveTVAllChannels;
   filterLiveTVChannels();
   if(status){status.className="message show";status.textContent=liveTVAllChannels.length.toLocaleString()+" worldwide channel entries loaded. Select a channel to try playback; some sources may be offline, region-restricted, or not embeddable.";}
  }catch(error){
-  liveTVAllChannels=[...liveTVFallbackChannels];liveTVChannels=liveTVAllChannels;filterLiveTVChannels();
+  liveTVAllChannels=[...liveTVFallbackChannels].sort((a,b)=>getLiveTVPriority(a)-getLiveTVPriority(b)||(a.name||"").localeCompare(b.name||""));liveTVChannels=liveTVAllChannels;filterLiveTVChannels();
   if(status){status.className="message show";status.textContent="Worldwide list abhi load nahi ho saki. Basic channels list dikh rahi hai; internet ya source baad mein dobara try karein.";}
  }
 }
@@ -4325,6 +4339,14 @@ body:has(#welcomeNotice.show)::before{content:"";display:block;position:fixed;in
  .studio-dashboard .studio-intro{padding:22px 17px}
  .studio-dashboard .studio-hero-actions>*{flex:1 1 100%}
  #liveTVPage .card,#latestNewsPage .card{padding:15px}
+}
+
+/* Keep long feeds responsive on phones by deferring off-screen card rendering. */
+#latestNewsPage .nexa-news-card,
+#latestJobsPage .job-listing-card,
+#interestingFactsPage #nexaFactsGrid article{
+ content-visibility:auto;
+ contain-intrinsic-size:auto 260px;
 }
 </style>
 
