@@ -1,12 +1,32 @@
 {
-  "updated": "2026-11-04T22:29:33.949981+00:00",
+  "updated": "2026-11-04T23:15:45.916294+00:00",
   "items": [
     {
       "title": "Pound rises to its highest level since the Brexit referendum",
       "link": "https://www.bbc.co.uk/news/articles/c6lykq2qjn2vo?at_medium=RSS&at_campaign=rss",
       "summary": "Pound reaches highest level against a basket of currencies since the Brexit referendum a decade ago",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d226/live/51085d40-d897-11f1-bffe-b94c467713ac.jpg",
-      "published": "2026-11-04T21:35:50+00:00",
+      "published": "2026-11-04T23:02:24+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Police in Scotland to escort fire crews in latest crackdown on Bonfire Night disorder",
+      "link": "https://www.bbc.co.uk/news/articles/cj93zv4dv9rro?at_medium=RSS&at_campaign=rss",
+      "summary": "As many as 1,700 officers could be deployed in the biggest Police Scotland operation since last year's visit by President Trump.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1cf9/live/b4ad07b0-d883-11f1-a364-a1fce50dd192.jpg",
+      "published": "2026-11-04T22:53:26+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Ukraine says bodycam video shows deadly Russian double-tap bombing",
+      "link": "https://www.bbc.co.uk/news/articles/c98rz6penv86o?at_medium=RSS&at_campaign=rss",
+      "summary": "At least 40 people were killed and another 30 may still be under the rubble after Monday's attack on a Ukrainian village, Kyiv says.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3f23/live/c9877cb0-d8a1-11f1-93e1-3b657b665bcf.png",
+      "published": "2026-11-04T22:48:43+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -219,16 +239,6 @@
       "published": "2026-11-04T20:34:26+00:00",
       "source": "Dawn",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Ukraine says bodycam video shows deadly Russian double-tap bombing",
-      "link": "https://www.bbc.co.uk/news/articles/c98rz6penv86o?at_medium=RSS&at_campaign=rss",
-      "summary": "At least 40 people were killed and another 30 may still be under the rubble after Monday's attack on a Ukrainian village, Kyiv says.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6512/live/e94a10e0-d873-11f1-a364-a1fce50dd192.png",
-      "published": "2026-11-04T20:22:40+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     },
     {
@@ -582,11 +592,41 @@
       "language": "en"
     },
     {
-      "title": "Mugabe's son arrested over 'assault' during luxury car smuggling probe",
-      "link": "https://www.bbc.co.uk/news/articles/cqd098d471ppo?at_medium=RSS&at_campaign=rss",
-      "summary": "The son of Zimbabwe's late former President Robert Mugabe will appear in court on 5 November with four other men.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/320e/live/4774cb60-3a4f-11f1-a5de-8146db4c6e12.jpg",
-      "published": "2026-11-04T17:50:00+00:00",
+      "title": "Spotify's innovative audiobooks arrive in Pakistan",
+      "link": "https://tribune.com.pk/story/2638708/spotifys-innovative-audiobooks-arrive-in-pakistan",
+      "summary": "New subscription service will allow users to listen to over 100,000 English-language titles",
+      "image_url": "",
+      "published": "2026-11-04T17:48:33+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Nighat Chaudhry urges preservation of traditional dance forms",
+      "link": "https://tribune.com.pk/story/2638711/nighat-chaudhry-urges-preservation-of-traditional-dance-forms",
+      "summary": "Famed classical dancer commends social media platforms for changing people's attitudes towards art form",
+      "image_url": "",
+      "published": "2026-11-04T17:48:33+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "امریکی الیکشن نتائج خود ڈیموکریٹس کیلیے بھی غیر متوقع",
+      "link": "https://www.express.pk/story/2842386/the-us-election-results-were-unexpected-even-for-the-democrats-themselves-2842386",
+      "summary": "ڈیموکریٹس چند ماہ قبل ایسی حیران کن کامیابی کا سوج بھی نہیں سکتے تھے",
+      "image_url": "",
+      "published": "2026-11-04T17:27:00+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Tributes paid to drummer with dozens of number ones",
+      "link": "https://www.bbc.co.uk/news/articles/c317kjwj18wzo?at_medium=RSS&at_campaign=rss",
+      "summary": "Amarillo singer Tony Christie says Clem Cattini was a \"world class\" musician and gentleman.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f086/live/2a22f6e0-d86f-11f1-85ab-b3cc3b5498c6.jpg",
+      "published": "2026-11-04T17:23:26+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -762,18 +802,8 @@
       "language": "en"
     },
     {
-      "title": "AI, Gulf policy shifts threaten migrant jobs",
-      "link": "https://tribune.com.pk/story/2638700/ai-gulf-policy-shifts-threaten-migrant-jobs",
-      "summary": "Conflicts reshape labour market of region; experts flag risks to Pakistan's outlook",
-      "image_url": "",
-      "published": "2026-11-04T16:40:33+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Super tax to be abolished: FBR chief",
-      "link": "https://tribune.com.pk/story/2638701/super-tax-to-be-abolished-fbr-chief",
+      "title": "Ethiopia invites Pakistani investors",
+      "link": "https://tribune.com.pk/story/2638707/ethiopia-invites-pakistani-investors",
       "summary": ".",
       "image_url": "",
       "published": "2026-11-04T16:40:33+00:00",
@@ -782,9 +812,29 @@
       "language": "en"
     },
     {
-      "title": "EDF decides to invest in govt securities",
-      "link": "https://tribune.com.pk/story/2638698/edf-decides-to-invest-in-govt-securities",
-      "summary": "By getting returns, fund wants to offset inflationary impact on resources",
+      "title": "PSX soars nearly 4,000 points in euphoric rally",
+      "link": "https://tribune.com.pk/story/2638706/psx-soars-nearly-4000-points-in-euphoric-rally",
+      "summary": "Buying frenzy sparked by US midterm polls that lift hopes of ME peace",
+      "image_url": "",
+      "published": "2026-11-04T16:40:33+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Türkiye to help produce FMD vaccine",
+      "link": "https://tribune.com.pk/story/2638705/turkiye-to-help-produce-fmd-vaccine",
+      "summary": "Technical delegation to visit after PM Sharif sought support for domestic production",
+      "image_url": "",
+      "published": "2026-11-04T16:40:33+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Oil dips 9%, Wall Street rallies as Democrats sweep midterms",
+      "link": "https://tribune.com.pk/story/2638704/oil-dips-9-wall-street-rallies-as-democrats-sweep-midterms",
+      "summary": ".",
       "image_url": "",
       "published": "2026-11-04T16:40:33+00:00",
       "source": "Express Tribune",
@@ -950,56 +1000,6 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "انتخابی اصلاحات",
-      "link": "https://www.express.pk/story/2842378/intikhabi-islahat-2842378",
-      "summary": "سیاستدانوں کی جانب سے الزام لگایا جاتا رہا ہے کہ پارلیمنٹ،سیاسی جماعتیں،ارکان اسمبلی اور الیکشن کمیشن شفاف انتخابات اور اصلاحات پر عملدرآمد نہیں کر سکے۔",
-      "image_url": "",
-      "published": "2026-11-04T15:49:06+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "رنج ہو یا غم",
-      "link": "https://www.express.pk/story/2842377/ranj-ho-ya-gham-2842377",
-      "summary": "کہہ رہا ہے شورِدریا سے سمندر کا سکوت جس کا جتنا ظرف ہے اتنا ہی وہ خاموش ہے",
-      "image_url": "",
-      "published": "2026-11-04T15:49:05+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "جمہوریت ناکام نہیں ہوئی",
-      "link": "https://www.express.pk/story/2842376/jamhooriyat-nakaam-nahi-hui-2842376",
-      "summary": "بابر ایاز نے اس کتاب میں لکھا ہے کہ کیا پاکستان میں جمہوریت ناکام رہی ہے ؟ اس سوال کا فوری اور مکمل جواب ’ہاں‘ یا ’ناں‘ میں ہو گا۔",
-      "image_url": "",
-      "published": "2026-11-04T15:49:05+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "مہنگائی اور عوام کے مسائل",
-      "link": "https://www.express.pk/story/2842375/mehangai-aur-awam-ke-masail-2842375",
-      "summary": "موجودہ حالات میں ہر شخص غریب ہو یا امیر خصوصاً متوسط طبقے سے تعلق رکھنے والے بھی پریشان ہیں۔",
-      "image_url": "",
-      "published": "2026-11-04T15:49:05+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "جی 24گروپ کی سربراہی اور ترجیحات",
-      "link": "https://www.express.pk/story/2842374/g24-group-ki-sarbarahi-aur-tarjeehat-2842374",
-      "summary": "معاشی دنیا کی تاریخ میں ایک ایسا لمحہ آیا ہے جب کسی کمزور معیشت کو ایک ایسا منصب ملا ہے جس کے ذریعے وہ اپنے معاشی کرب کا اظہار عالمی فورم پر کرسکتا ہے۔",
-      "image_url": "",
-      "published": "2026-11-04T15:49:04+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
     }
   ]
 }
