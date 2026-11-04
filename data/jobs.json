@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-04T09:08:57.993049+00:00",
+  "updated_at": "2026-11-04T10:17:22.268808+00:00",
   "sources": [
     "https://www.njp.gov.pk/index.php/jobs/live",
     "https://jobs.gov.pk/?pageid=602",
@@ -1518,6 +1518,18 @@
       "source_url": "https://etea.online/",
       "project_code": "858",
       "fetched_at": "2026-11-04T09:08:47.111144+00:00"
+    },
+    {
+      "title": "Business Development Executive",
+      "company": "",
+      "location": "Islamabad, PK",
+      "category": "Private",
+      "employment_type": "",
+      "description": "Vacancy listing imported from Mustakbil. Open the official listing for full requirements and application instructions.",
+      "url": "https://www.mustakbil.com/jobs/job/1437413",
+      "source": "Mustakbil",
+      "source_url": "https://www.mustakbil.com/",
+      "fetched_at": "2026-11-04T10:17:15.697302+00:00"
     }
   ]
 }
