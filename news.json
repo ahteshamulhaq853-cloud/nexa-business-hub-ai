@@ -1,12 +1,22 @@
 {
-  "updated": "2026-11-05T21:49:21.473237+00:00",
+  "updated": "2026-11-05T22:30:38.007425+00:00",
   "items": [
     {
-      "title": "Major tech and AI stocks plummet as Nasdaq loses $2.5tn in value",
+      "title": "Major tech stocks plunge as US midterms add to fears of AI slowdown",
       "link": "https://www.bbc.co.uk/news/articles/cmn04705rd8jo?at_medium=RSS&at_campaign=rss",
-      "summary": "The market has been reacting to possible tougher scrutiny of data centre construction and the AI industry following the US mid-terms",
+      "summary": "The market has been reacting to possible tougher scrutiny of data centre construction and the AI industry following the US midterms",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6e01/live/e1c54f70-d958-11f1-a800-d9dce9e5aa21.jpg",
-      "published": "2026-11-05T21:43:39+00:00",
+      "published": "2026-11-05T22:13:38+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "King relishes 'politically charged' deployments, Palace aide says",
+      "link": "https://www.bbc.co.uk/news/articles/c8n5vvr906dvo?at_medium=RSS&at_campaign=rss",
+      "summary": "The monarch faced questions on the UK's involvement in the slave trade during his Caribbean tour.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/33c2/live/26341c80-d94b-11f1-a701-fddedf244c16.jpg",
+      "published": "2026-11-05T22:04:44+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -402,16 +412,6 @@
       "language": "en"
     },
     {
-      "title": "Hoax bomb threats target European airlines and airports for second time in a week",
-      "link": "https://www.bbc.co.uk/news/articles/cmpqg08nz3pqo?at_medium=RSS&at_campaign=rss",
-      "summary": "At least 21 flights across Europe are affected in what the UK government calls a \"malicious hoax threat\".",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7423/live/1976bf00-d911-11f1-94c6-3f8050561bf5.jpg",
-      "published": "2026-11-05T17:39:48+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "Pakistan and Russia move technology cooperation from dialogue to deals",
       "link": "https://arynews.tv/pakistan-and-russia-move-technology-cooperation-from-dialogue-to-deals",
       "summary": "",
@@ -598,6 +598,36 @@
       "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Nawaz.jpg",
       "published": "2026-11-05T16:46:09+00:00",
       "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Govt weighs reprieve for 1.2m traders",
+      "link": "https://tribune.com.pk/story/2638872/govt-weighs-reprieve-for-12m-traders",
+      "summary": "Three-month extension proposed; enforcement could trigger Rs175,000 penalty",
+      "image_url": "",
+      "published": "2026-11-05T16:44:47+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Chamber drafts changes to PERA, EPA laws",
+      "link": "https://tribune.com.pk/story/2638874/chamber-drafts-changes-to-pera-epa-laws",
+      "summary": "Gillani assures business a hearing before finance, commerce and industry committees",
+      "image_url": "",
+      "published": "2026-11-05T16:44:47+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "SBP reserves increase further by $39m to $21.56b",
+      "link": "https://tribune.com.pk/story/2638873/sbp-reserves-increase-further-by-39m-to-2156b",
+      "summary": "Total FX stands at $26.86b; gold jumps Rs9,600 to Rs435,636/tola",
+      "image_url": "",
+      "published": "2026-11-05T16:44:47+00:00",
+      "source": "Express Tribune",
       "category": "Pakistan",
       "language": "en"
     },
@@ -970,36 +1000,6 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "برآمد کنندہ ایس ایم ایز کیلئے بڑی مراعات، وزیراعظم نے 80 فیصد برآمدات کی شرط ختم کردی",
-      "link": "https://jang.com.pk/news/1630802",
-      "summary": "وزیراعظم شہباز شریف کی زیرِ صدارت برآمدات سے وابستہ چھوٹے اور درمیانے درجے کے کاروباری اداروں کو سہولتوں کی فراہمی سے متعلق ایک...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-05/b_1630802_091614_updates.jpg\"/",
-      "published": "2026-11-05T15:11:07+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "تھرپارکر ایمبولینس دھماکا، تحقیقاتی رپورٹ پر حکومت کا عدم اطمینان، دوبارہ انکوائری کا حکم",
-      "link": "https://jang.com.pk/news/1630798",
-      "summary": "فوٹو: اسکرین گریبحکومت سندھ نے تھرپارکر کے علاقے ڈانو دھاندل میں ہوئے ایمبولینس دھماکے کی تحقیقاتی رپورٹ پر عدم اطمینان کا اظہار...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-05/b_1630798_085322_updates.jpg\"/",
-      "published": "2026-11-05T15:11:07+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پاکستان میں ٹیکس آمدن بڑھانے کا سلسلہ جاری رہنا چاہیے، کنٹری ڈائریکٹر آئی ایم ایف",
-      "link": "https://jang.com.pk/news/1630796",
-      "summary": "انٹرنیشنل مانیٹری فنڈ کے کنٹری ڈائریکٹر ماہر بنیجی نے زور دیا ہے کہ پاکستان میں ٹیکس آمدن بڑھانے کا سلسلہ جاری رہنا چاہیے تاکہ ٹیکس...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-05/b_1630796_081940_updates.jpg\"/",
-      "published": "2026-11-05T15:11:04+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
     }
   ]
 }
