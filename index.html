@@ -3416,7 +3416,7 @@ function addEducationOption(qualification){
  const field=$("cvEducation");
  if(qualification==="Other"){ $("eduSubject").focus(); return; }
  if(!field.value.trim())field.value=qualification+" — ";
- else if(!field.value.split("\\n").some(line=>line.trim().startsWith(qualification+" —")))field.value+="\\n"+qualification+" — ";
+ else if(!field.value.split("\n").some(line=>line.trim().startsWith(qualification+" —")))field.value+="\n"+qualification+" — ";
  preview();
 }
 function searchSelectOptions(selectId,query){
@@ -3508,7 +3508,7 @@ function addEducationRecord(){
  const parts=[qualification,institute,province,subject,year?"Year: "+year:"",marks?"Marks Obtained: "+marks:"",totalMarks?"Total Marks: "+totalMarks:"",board?"Board / University / Organization: "+board:"",result?"Result: "+result:""].filter(Boolean);
  const line=parts.join(" — ");
  const field=$("cvEducation");
- field.value+=(field.value.trim()?"\\n":"")+line;
+ field.value+=(field.value.trim()?"\n":"")+line;
  preview();
  $("educationLevel").value="";$("eduSubject").value="";$("eduYear").value="";$("eduResult").value="";$("eduMarks").value="";$("eduTotalMarks").value="";$("eduBoard").value="";
 }
@@ -3543,9 +3543,9 @@ function addSkillRecord(){
  const entry="• "+skill+(level?" ("+level+")":"");
  const field=$("cvSkills");
  const normalized=entry.replace(/^•\s*/,"").trim().toLowerCase();
- const existing=field.value.split("\\n").map(x=>x.replace(/^•\s*/,"").trim().toLowerCase());
+ const existing=field.value.split("\n").map(x=>x.replace(/^•\s*/,"").trim().toLowerCase());
  if(existing.includes(normalized)){alert("This skill is already added.");return}
- field.value+=(field.value.trim()?"\\n":"")+entry;
+ field.value+=(field.value.trim()?"\n":"")+entry;
  preview();
  $("skillOption").value="";$("skillLevel").value="";$("customSkill").value="";
 }
@@ -3557,9 +3557,9 @@ function addLanguageRecord(){
  if(!language){alert("Please choose a language or type your own language.");return}
  const entry=language+(level?" ("+level+")":"");
  const field=$("cvLanguages");
- const existing=field.value.split("\\n").map(x=>x.trim().toLowerCase());
+ const existing=field.value.split("\n").map(x=>x.trim().toLowerCase());
  if(existing.includes(entry.toLowerCase())){alert("This language is already added.");return}
- field.value+=(field.value.trim()?"\\n":"")+entry;
+ field.value+=(field.value.trim()?"\n":"")+entry;
  preview();
  $("languageOption").value="";$("languageLevel").value="";$("customLanguage").value="";
 }
@@ -3585,7 +3585,7 @@ function addExperienceRecord(){
  if(duties) parts.push("where the main duties and achievements included: "+duties);
  const line=parts.join(" ")+(parts.length?".":"");
  const field=$("cvExperience");
- field.value+=(field.value.trim()?"\\n":"")+line;
+ field.value+=(field.value.trim()?"\n":"")+line;
  preview();
  $("expRole").value="";$("expIndustry").value="";$("expType").value="";$("expProvince").value="";
  $("expCompany").value="";$("expStart").value="";$("expEnd").value="";$("expLocation").value="";$("expDuties").value="";
@@ -3616,9 +3616,9 @@ function preview(){
  $("pPersonal").textContent=[v("cvFather")?"Father's Name: "+v("cvFather"):"",v("cvDob")?"Date of Birth: "+v("cvDob"):""].filter(Boolean).join(" | ");
  $("pSummary").textContent=v("cvSummary");
  const escapeHTML=s=>String(s).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
- $("pEducation").innerHTML=v("cvEducation")?v("cvEducation").split("\\n").map(line=>{const parts=line.split(" — ").filter(Boolean);const degree=parts.shift()||"";const meta=parts.filter(part=>/^(Year:|Marks:|Marks Obtained:|Total Marks:|Board \/ University \/ Organization:|Result:)/i.test(part));const details=parts.filter(part=>!meta.includes(part));return "<div class=\"education-entry\"><strong>"+escapeHTML(degree)+"</strong>"+(details.length?"<div class=\"education-details\">"+details.map(escapeHTML).join(" · ")+"</div>":"")+(meta.length?"<div class=\"education-meta\">"+meta.map(part=>escapeHTML(part.replace("Board / University / Organization:","Board:"))).join(" · ")+"</div>":"")+"</div>"}).join(""):"Add education details.";
+ $("pEducation").innerHTML=v("cvEducation")?v("cvEducation").split("\n").map(line=>{const parts=line.split(" — ").filter(Boolean);const degree=parts.shift()||"";const meta=parts.filter(part=>/^(Year:|Marks:|Marks Obtained:|Total Marks:|Board \/ University \/ Organization:|Result:)/i.test(part));const details=parts.filter(part=>!meta.includes(part));return "<div class=\"education-entry\"><strong>"+escapeHTML(degree)+"</strong>"+(details.length?"<div class=\"education-details\">"+details.map(escapeHTML).join(" · ")+"</div>":"")+(meta.length?"<div class=\"education-meta\">"+meta.map(part=>escapeHTML(part.replace("Board / University / Organization:","Board:"))).join(" · ")+"</div>":"")+"</div>"}).join(""):"Add education details.";
  $("pExperience").textContent=v("cvExperience")||"Add work experience.";
- $("pSkills").innerHTML=v("cvSkills")?v("cvSkills").split("\\n").filter(Boolean).map(skill=>"<div>"+escapeHTML(skill.replace(/^•\s*/,""))+"</div>").join(""):"Add your skills";
+ $("pSkills").innerHTML=v("cvSkills")?v("cvSkills").split("\n").filter(Boolean).map(skill=>"<div>"+escapeHTML(skill.replace(/^•\s*/,""))+"</div>").join(""):"Add your skills";
  $("pLanguages").textContent=v("cvLanguages")||"Add your languages";$("pReferences").textContent=v("cvReferences");
 }
 $("cvPhoto").addEventListener("change",e=>{
