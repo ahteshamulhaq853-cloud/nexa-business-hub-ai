@@ -5,7 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#070b13">
-<title>NEXA Studio | Jobs, News, Live TV & Weather</title>\n<meta name="description" content="NEXA Studio brings Pakistan jobs, latest news, Live TV and district-wise weather together in one digital workspace.">\n<meta name="robots" content="index,follow">
+<title>NEXA Studio | Jobs, News, Live TV & Weather</title>
+<meta name="description" content="NEXA Studio brings Pakistan jobs, latest news, Live TV and district-wise weather together in one digital workspace.">
+<meta name="robots" content="index,follow">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js" defer></script>
 <style>
@@ -2567,7 +2569,7 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
   <button id="supportClose" type="button" aria-label="Close support chat" onclick="toggleSupport(false)">✕</button>
  </div>
  <div id="supportMessages" aria-live="polite">
-  <div class="support-bubble bot">Assalam-o-Alaikum! Welcome to NEXA AI Support. 👋\nMain account/login, Jobs, News, Weather aur Live TV use karne mein guide kar sakta hoon. Password, OTP ya payment secrets kabhi share na karein.</div>
+  <div class="support-bubble bot">Assalam-o-Alaikum! Welcome to NEXA AI Support. 👋<br><br>Main account/login, Jobs, News, Weather aur Live TV use karne mein guide kar sakta hoon. Password, OTP ya payment secrets kabhi share na karein.</div>
  </div>
  <div class="support-quick">
   <button type="button" onclick="askSupport('How do I create a CV?')">Create CV</button>
@@ -4524,6 +4526,65 @@ label{color:#d5e2ee;font-weight:700}
  #newsCategoryCards{grid-template-columns:1fr!important}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* Desktop refinement: cleaner spacing, consistent content width and balanced panels */
+@media (min-width: 1100px) {
+  body.has-bottom-nav main {
+    max-width: 1500px !important;
+    margin: 28px auto !important;
+    padding-left: 116px !important;
+    padding-right: 38px !important;
+  }
+  .studio-section-heading {
+    max-width: 1320px;
+    margin: 0 auto 22px;
+    align-items: end;
+  }
+  .studio-section-heading h2 {
+    font-size: clamp(28px, 2.2vw, 36px);
+    letter-spacing: -.7px;
+  }
+  .studio-section-heading p { max-width: 760px; }
+  #latestJobsPage, #latestNewsPage, #liveTVPage, #weatherPage,
+  #dashboardPage, #servicesPage {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #latestJobsPage .job-search-panel,
+  #latestJobsPage .job-listing-card,
+  #liveTVPage > .card {
+    border-radius: 18px !important;
+  }
+  #latestJobsPage #nexaJobsList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  #latestJobsPage .job-listing-card {
+    padding: 20px;
+    min-height: 190px;
+  }
+  #liveTVPage > .card {
+    max-width: 1080px !important;
+    padding: 26px !important;
+  }
+  #liveTVPage #liveTVSearch,
+  #liveTVPage #liveTVChannelSelect {
+    min-height: 48px;
+  }
+  .studio-intro {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: clamp(34px, 4vw, 58px) !important;
+  }
+}
+@media (min-width: 851px) and (max-width: 1099px) {
+  body.has-bottom-nav main {
+    padding-left: 102px !important;
+    padding-right: 24px !important;
+  }
+}
 </style>
 
 
