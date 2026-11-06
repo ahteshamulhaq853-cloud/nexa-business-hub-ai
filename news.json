@@ -1,6 +1,16 @@
 {
-  "updated": "2026-11-06T20:23:26.269325+00:00",
+  "updated": "2026-11-06T21:08:11.452723+00:00",
   "items": [
+    {
+      "title": "AI stocks climb after trillions wiped from market values",
+      "link": "https://www.bbc.co.uk/news/articles/c35ynnpzdq51o?at_medium=RSS&at_campaign=rss",
+      "summary": "Investors had been selling off tech shares in part due to concerns the Democrat election victory would mean slower AI development.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fdde/live/9036f7e0-da01-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-11-06T21:06:25+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Trump promotes Stephen Miller to chief of staff, replacing Susie Wiles",
       "link": "https://www.dawn.com/news/2042647/trump-promotes-stephen-miller-to-chief-of-staff-replacing-susie-wiles",
@@ -52,20 +62,10 @@
       "language": "en"
     },
     {
-      "title": "AI stocks climb after trillions wiped from market values",
-      "link": "https://www.bbc.co.uk/news/articles/c35ynnpzdq51o?at_medium=RSS&at_campaign=rss",
-      "summary": "Investors had been selling off tech shares in part due to concerns the Democrat election victory would mean slower AI development.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fdde/live/9036f7e0-da01-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-11-06T19:37:10+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "متحدہ عرب امارات میں منشیات کی اسمگلنگ کا بڑا منصوبہ ناکام، 2 لاکھ نشہ آور گولیاں اور 30 کلو سے زائد منشیات ضبط، 20 ملزمان گرفتار ... عراق سے ملنے والی خفیہ اطلاعات پر اماراتی ... مزید",
       "link": "https://urdupoint.com/n/5002582",
       "summary": "",
-      "image_url": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2021/125x125/pic_91e95_1637869824.jpg._3",
       "published": "2026-11-06T19:29:15+00:00",
       "source": "UrduPoint",
       "category": "اردو",
@@ -388,6 +388,86 @@
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-06/b_1631101_100655_updates.jpg\"/",
       "published": "2026-11-06T16:11:32+00:00",
       "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "خرچے ساڈے تے نخرے اے آئی دے",
+      "link": "https://www.express.pk/story/2842807/kharchay-saday-tay-nakhre-ai-de-2842807",
+      "summary": "نوبیل انعام یافتہ کمپیوٹنگ سائنسداں اور کوگنیٹو نفسیات کے ماہر جیفری ہنٹن کو ’’ فادر آف اے آئی ‘‘ کہا جاتا ہے۔",
+      "image_url": "",
+      "published": "2026-11-06T16:03:06+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "بھارتی طلبہ کی جدوجہد",
+      "link": "https://www.express.pk/story/2842806/bharati-talaba-ki-jadd-o-jehad-2842806",
+      "summary": "بھارت میں نوجوان اپنے حقوق کے لیے مسلسل جدوجہد کرکے کامیابی حاصل کررہے ہیں۔",
+      "image_url": "",
+      "published": "2026-11-06T15:59:33+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ایران کو جوہری ہتھیار بنانے سے نہ روکتا تو اسرائیل اور پورا مشرق وسطیٰ آج موجود نہ ہوتا: ٹرمپ",
+      "link": "https://www.express.pk/story/2842805/if-iran-had-not-been-stopped-from-developing-nuclear-weapons-israel-and-the-entire-middle-east-would-not-exist-today-trump-2842805",
+      "summary": "ٹروتھ سوشل پر بیان میں ٹرمپ نے کہا کہ کوئی اس بات کا اعتراف نہیں کرنا چاہتا، تاہم سب جانتے ہیں کہ یہ سچ ہے",
+      "image_url": "",
+      "published": "2026-11-06T15:57:54+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "رجیم چینج",
+      "link": "https://www.express.pk/story/2842804/regime-change-2842804",
+      "summary": "رجیم چینج کی اصطلاح عام طور پر بین الاقوامی سیاست اور جغرافیائی سیاسی مباحثوں میں استعمال ہوتی ہے۔",
+      "image_url": "",
+      "published": "2026-11-06T15:53:27+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "عالمی تبلیغی اجتماع رائے ونڈ",
+      "link": "https://www.express.pk/story/2842803/alami-tablighi-ijtima-raiwind-2842803",
+      "summary": "بانی تبلیغی جماعت حضرت مولانا محمد الیاس کاندھلوی کا گھرانہ ان خوش قسمت خاندانوں میں سے ہے جن کو اللہ تعالیٰ نے مقبولیت و محبوبیت سے خوب نوازا تھا",
+      "image_url": "",
+      "published": "2026-11-06T15:48:53+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "پیٹرولیم قیمتوں میں کمی، عوامی مشکلات کب کم ہوں گی؟",
+      "link": "https://www.express.pk/story/2842802/petroleum-qeematon-mein-kami-awami-mushkilat-kab-kam-hongi-2842802",
+      "summary": "ملک میں مہنگائی کے بوجھ تلے دبے عوام کے لیے پیٹرولیم مصنوعات کی قیمتوں میں کمی یقیناً ایک خوش آئند پیش رفت ہے",
+      "image_url": "",
+      "published": "2026-11-06T15:45:29+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کراچی: اسلحہ نمائش پر عائد پابندی کی خلاف ورزی پر 5 سیکیورٹی گارڈ گرفتار، اسلحہ برآمد",
+      "link": "https://www.express.pk/story/2842801/karachi-5-security-guards-arrested-for-violating-ban-on-arms-exhibition-weapons-recovered-2842801",
+      "summary": "حکومت سندھ کی جانب سے دفعہ 144 کے تحت اسلحہ کی نمائش پر عائد پابندی ہے",
+      "image_url": "",
+      "published": "2026-11-06T15:40:00+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "نیتن یاہو کا زوال، امریکی پالیسی کا امتحان",
+      "link": "https://www.express.pk/story/2842800/netanyahu-ka-zawal-amreeki-policy-ka-imtihan-2842800",
+      "summary": "اسرائیل میں نیتن یاہو کی سیاسی مشکلات میں اضافہ ان کے طویل اقتدار کے لیے بڑا دھچکا ہے۔",
+      "image_url": "",
+      "published": "2026-11-06T15:34:52+00:00",
+      "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
     },
@@ -918,86 +998,6 @@
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-06/b_1631066_050428_updates.jpg\"/",
       "published": "2026-11-06T11:11:35+00:00",
       "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پاکستان سوڈان کی خودمختاری، علاقائی سالمیت کی حمایت جاری رکھے گا: اسحاق ڈار",
-      "link": "https://jang.com.pk/news/1631062",
-      "summary": "نائب وزیراعظم اسحاق ڈار سے سوڈان کے وفاقی وزیر داخلہ بابیکر سامرا مصطفیٰ علی نے ملاقات کی ہے۔ ترجمان دفتر خارجہ کے مطابق دفتر خارجہ...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-06/b_1631062_044803_updates.jpg\"/",
-      "published": "2026-11-06T11:11:28+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کیش لیس معیشت کا فروغ اہم ترین ترجیح ہے، وزیراعظم",
-      "link": "https://jang.com.pk/news/1631063",
-      "summary": "ویڈیو گریب۔ وزیراعظم شہباز شریف نے کہا ہے کہ کیش لیس معیشت کا فروغ حکومت کی اہم ترین ترجیحات میں سے ایک ہے، کیش لیس معیشت کے مثبت...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-06/b_1631063_045802_updates.jpg\"/",
-      "published": "2026-11-06T11:11:25+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Kenyan cult leader sentenced to 200 years in prison for mass starvation murders of children",
-      "link": "https://tribune.com.pk/story/2639013/kenyan-cult-leader-sentenced-to-200-years-in-prison-for-mass-starvation-murders-of-children",
-      "summary": "Paul Mackenzie handed 200-year prison term; Prosecutors say victims were buried alive or dumped in latrines",
-      "image_url": "",
-      "published": "2026-11-06T11:08:09+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "سعود شکیل کا سینئرز سے ذمہ داری دکھانے کا مطالبہ",
-      "link": "https://www.express.pk/story/2842779/saud-demands-to-senior-for-performance-2842779",
-      "summary": "ٹیم میں نئے کھلاڑی شامل ہونے کے بعد اب سینئرز پر ذمہ داری ہے وہ ذمہ داری اور مثالی کارکردگی کا مظاہرہ کریں",
-      "image_url": "",
-      "published": "2026-11-06T10:55:14+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کراچی؛ نایاب اسپرم وہیل کی موجودگی، سندھ کے سمندر میں پہلی مرتبہ دیوہیکل آبی حیات کا مشاہدہ",
-      "link": "https://www.express.pk/story/2842778/karachi-rare-sperm-whale-spotted-in-sindhs-waters-for-the-first-time-marking-the-first-ever-sighting-of-the-giant-marine-mammal-in-the-region-2842778",
-      "summary": "سمندری مہم کے دوران کراچی سے تقریبا 40 ناٹیکل میل جنوب مغرب میں اسپرم وہیل کودیکھا، بورڈ ممبر ڈبلیو ڈبلیو ایف پاکستان",
-      "image_url": "",
-      "published": "2026-11-06T10:43:14+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "وادی سندھ کی تاریخ پر 15ویں عالمی تھاپ کانفرنس کا آغاز",
-      "link": "https://www.express.pk/story/2842777/15th-international-thaap-conference-on-the-history-of-the-indus-valley-begins-2842777",
-      "summary": "دو روزہ کانفرنس میں پاکستان بھر سے ممتاز ماہرین تعلیم، محققین اور نوجوان اسکالرز شرکت کر رہے ہیں",
-      "image_url": "",
-      "published": "2026-11-06T10:41:33+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سندھ کی جامعات اور کراچی یونیورسٹی کی داخلہ پالیسی پر سوشل میڈیا پر بحث چھڑ گئی",
-      "link": "https://www.express.pk/story/2842776/a-debate-has-erupted-on-social-media-regarding-the-admission-policies-of-universities-in-sindh-and-the-university-of-karachi-2842776",
-      "summary": "سال 2026ء میں سندھ کے دیگر اضلاع کے 1018 طلبہ کو داخلے ملے جبکہ الزام ہے کہ اندرون سندھ طلبا کو داخلے نہیں ملتے",
-      "image_url": "",
-      "published": "2026-11-06T10:30:51+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "جناح اسپتال میں معدہ، آنتوں کے کینسر کی تشخیص و علاج کیلئے جدید اینڈوسکوپک الٹراساؤنڈ کی سہولت",
-      "link": "https://www.express.pk/story/2842775/jinnah-hospital-advanced-endoscopic-ultrasound-facility-diagnosis-and-treatment-of-stomach-intestinal-and-pancreatic-cancers-2842775",
-      "summary": "ایسے پیچیدہ تشخیصی اور علاج کے پروسیجرز بھی کیے جاسکیں گے جن پر نجی اسپتالوں میں 3 سے 4 لاکھ اخراجات آتے ہیں، رپورٹ",
-      "image_url": "",
-      "published": "2026-11-06T10:27:18+00:00",
-      "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
     }
