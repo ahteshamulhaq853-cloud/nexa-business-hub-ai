@@ -2606,7 +2606,7 @@ button { padding:12px 20px; border:0; border-radius:10px; background:#1769d2; co
  function setStatus(t){byId("cpStatus").textContent=t;}
  function makeDocument(x){
   const safeJS=x.js.replace(/<\/script/gi,"<\\/script");
-  return '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>'+x.css+'</style></head><body>'+x.html+'<script>'+safeJS+'<\\/script></body></html>';
+  return '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>'+x.css+'</style></head><body>'+x.html+'<scr'+'ipt>'+safeJS+'</scr'+'ipt></body></html>';
  }
  window.cpRun=function(){byId("cpPreview").srcdoc=makeDocument(getSource());byId("cpPreviewState").textContent="Updated";setStatus("Preview updated successfully.");};
  window.cpSave=function(){try{localStorage.setItem(key,JSON.stringify(getSource()));setStatus("Project saved on this device.");}catch(e){setStatus("Browser storage is unavailable.");}};
