@@ -1892,6 +1892,15 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
 </style>
 
 
+
+<style id="nexa-google-auth-style">
+.nexa-auth-divider{display:flex;align-items:center;gap:12px;margin:15px 0;color:var(--muted,#9aa9bb);font-size:11px;font-weight:800;letter-spacing:1px}
+.nexa-auth-divider:before,.nexa-auth-divider:after{content:"";height:1px;flex:1;background:var(--line,rgba(150,170,190,.25))}
+.nexa-google-button{width:100%;min-height:46px;display:flex;align-items:center;justify-content:center;gap:11px;border:1px solid #d6dbe2!important;border-radius:10px!important;background:#fff!important;color:#202124!important;font-weight:700;cursor:pointer;box-shadow:0 1px 2px #0001}
+.nexa-google-button:hover{background:#f7f9fc!important}
+.nexa-google-button svg{width:19px;height:19px;flex:0 0 19px}
+.nexa-google-button:disabled{opacity:.65;cursor:wait}
+</style>
 </head>
 <body>
 <div id="nexaSystemScan" role="status" aria-live="polite">
@@ -1951,6 +1960,9 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
     <div class="field"><label for="loginPassword">Password</label><input id="loginPassword" type="password" autocomplete="current-password" required></div>
     <button type="submit" style="width:100%">Login to Nexa →</button>
    </form>
+   <div class="nexa-auth-divider"><span>OR</span></div>
+    <button id="googleLoginButton" type="button" class="nexa-google-button" onclick="loginWithGoogle()"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.76 7.18l7.73 6C44.42 37.94 46.98 31.83 46.98 24.55z"/><path fill="#FBBC05" d="M10.53 28.59A14.4 14.4 0 0 1 9.75 24c0-1.59.27-3.13.76-4.59l-7.98-6.19A23.9 23.9 0 0 0 0 24c0 3.87.93 7.52 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.91-5.8l-7.73-6c-2.14 1.44-4.89 2.3-8.18 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg><span>Continue with Google</span></button>
+
    <p class="muted">Your workspace keeps your account and activity together.</p>
    <p class="muted auth-switch">Don't have an account? <button type="button" class="auth-link" onclick="showAuthForm('register')">Register</button></p>
   </div>
@@ -3328,6 +3340,21 @@ async function register(e){
   currentUser=data.user;setUI();await checkAdmin();showPage("dashboardPage");showWelcome("register");msg("regMsg","Registration successful!","success");
  }else{msg("regMsg","Registration submitted. If email confirmation is enabled, confirm your email and then log in.","success")}
 }
+async function loginWithGoogle(){
+ const button=$("googleLoginButton");
+ if(button){button.disabled=true;button.querySelector("span").textContent="Connecting to Google…";}
+ clearMsg("loginMsg");
+ try{
+  const {error}=await db.auth.signInWithOAuth({
+   provider:"google",
+   options:{redirectTo:window.location.origin+window.location.pathname}
+  });
+  if(error)throw error;
+ }catch(error){
+  msg("loginMsg",error.message||"Google sign-in could not start. Please try again.","error");
+  if(button){button.disabled=false;button.querySelector("span").textContent="Continue with Google";}
+ }
+}
 async function login(e){
  e.preventDefault();clearMsg("loginMsg");
  const {data,error}=await db.auth.signInWithPassword({email:$("loginEmail").value.trim(),password:$("loginPassword").value});
@@ -3814,6 +3841,7 @@ db.auth.onAuthStateChange((event,session)=>{
   currentUser=session&&session.user?session.user:null;setUI();
   if(!currentUser){approvedForPDF=false;$("adminButton").style.display="none";if($("pdfBtn"))$("pdfBtn").disabled=true}
   else{checkAdmin();}
+  if(event==="SIGNED_IN"&&session&&session.user){showPage("dashboardPage");showWelcome("login");}
   if(event==="PASSWORD_RECOVERY"){showPage("passwordRecoveryPage");clearMsg("recoveryMsg");}
   hideNexaSystemScan();
  });
