@@ -1891,6 +1891,23 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
 }
 </style>
 
+<style id="nexa-coding-playground-style">
+#codingPlaygroundPage .cp-shell{display:grid;gap:16px}
+#codingPlaygroundPage .cp-toolbar{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+#codingPlaygroundPage .cp-toolbar input{flex:1;min-width:180px}
+#codingPlaygroundPage .cp-editors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+#codingPlaygroundPage .cp-editor{min-width:0;border:1px solid var(--line,rgba(120,160,190,.25));border-radius:14px;overflow:hidden;background:#091321}
+#codingPlaygroundPage .cp-editor-head{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;color:#dff7ff;font-weight:800;font-size:13px;background:#122238}
+#codingPlaygroundPage .cp-editor textarea{display:block;width:100%;min-height:260px;resize:vertical;border:0;border-radius:0;background:#08111e;color:#d8e8f7;padding:13px;font:12px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;tab-size:2;outline:none;white-space:pre;overflow:auto}
+#codingPlaygroundPage .cp-editor textarea:focus{box-shadow:inset 0 0 0 2px #65f3dc}
+#codingPlaygroundPage .cp-preview-wrap{border:1px solid var(--line,rgba(120,160,190,.25));border-radius:16px;overflow:hidden;background:#fff}
+#codingPlaygroundPage .cp-preview-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 14px;background:#122238;color:#e8f7ff;font-weight:800}
+#codingPlaygroundPage #cpPreview{display:block;width:100%;height:390px;border:0;background:white}
+#codingPlaygroundPage .cp-hint{font-size:12px;color:var(--muted,#9fb0c3);line-height:1.6}
+#codingPlaygroundPage .cp-status{font-size:12px;color:#65f3dc;min-height:18px}
+@media(max-width:850px){#codingPlaygroundPage .cp-editors{grid-template-columns:1fr}#codingPlaygroundPage .cp-editor textarea{min-height:190px}#codingPlaygroundPage #cpPreview{height:330px}}
+@media(max-width:420px){#codingPlaygroundPage .cp-toolbar button{flex:1}#codingPlaygroundPage .cp-toolbar input{flex-basis:100%}#codingPlaygroundPage #cpPreview{height:290px}}
+</style>
 </head>
 <body>
 <div id="nexaSystemScan" role="status" aria-live="polite">
@@ -2550,10 +2567,61 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
  <div class="actions"><button class="secondary" onclick="showPage('dashboardPage')">← واپس ڈیش بورڈ</button></div>
 </section>
 
+<section id="codingPlaygroundPage" class="page">
+ <div class="studio-section-heading"><span class="eyebrow">NEXA CREATIVE WORKSPACE</span><h1>⌨️ Coding Playground</h1><p class="muted">Write HTML, CSS and JavaScript, then test your work in a safe live preview.</p></div>
+ <div class="cp-shell">
+  <div class="card">
+   <div class="cp-toolbar"><input id="cpProjectName" type="text" value="My First Website" aria-label="Project name" placeholder="Project name"><button type="button" onclick="cpRun()">▶ Run Code</button><button type="button" class="secondary" onclick="cpSave()">Save Project</button><button type="button" class="secondary" onclick="cpDownload()">⬇ Download HTML</button><button type="button" class="secondary" onclick="cpReset()">Reset</button></div>
+   <p id="cpStatus" class="cp-status" role="status" aria-live="polite">Ready — start editing your code.</p>
+   <p class="cp-hint">Your work is saved in this browser on this device. The preview runs in an isolated frame; do not enter passwords or private information into code from unknown sources.</p>
+  </div>
+  <div class="cp-editors">
+   <div class="cp-editor"><div class="cp-editor-head"><span>🟠 HTML</span><span>Structure</span></div><textarea id="cpHTML" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="HTML code editor"><main class="welcome">
+  <h1>Hello, NEXA!</h1>
+  <p>My first webpage is working.</p>
+  <button id="helloBtn">Click me</button>
+  <p id="message"></p>
+</main></textarea></div>
+   <div class="cp-editor"><div class="cp-editor-head"><span>🔵 CSS</span><span>Design</span></div><textarea id="cpCSS" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="CSS code editor">body { margin:0; padding:30px; font-family:Arial,sans-serif; background:#eef4ff; color:#183153; }
+.welcome { max-width:600px; margin:30px auto; padding:28px; border-radius:18px; background:white; text-align:center; box-shadow:0 12px 35px #18315320; }
+button { padding:12px 20px; border:0; border-radius:10px; background:#1769d2; color:white; cursor:pointer; }</textarea></div>
+   <div class="cp-editor"><div class="cp-editor-head"><span>🟡 JavaScript</span><span>Behaviour</span></div><textarea id="cpJS" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="JavaScript code editor">document.getElementById("helloBtn").addEventListener("click", function () {
+  document.getElementById("message").textContent = "Great work! Your JavaScript is running.";
+});</textarea></div>
+  </div>
+  <div class="cp-preview-wrap"><div class="cp-preview-head"><span>🌐 Live Preview</span><span id="cpPreviewState">Preview ready</span></div><iframe id="cpPreview" title="Coding Playground live preview" sandbox="allow-scripts" referrerpolicy="no-referrer"></iframe></div>
+ </div>
+ <div class="actions"><button class="secondary" type="button" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
+</section>
+<script id="nexa-coding-playground-script">
+(function(){
+ const byId=id=>document.getElementById(id), key="nexa_coding_playground_v1";
+ const defaults={
+  cpProjectName:"My First Website",
+  cpHTML:'<main class="welcome">\n  <h1>Hello, NEXA!</h1>\n  <p>My first webpage is working.</p>\n  <button id="helloBtn">Click me</button>\n  <p id="message"></p>\n</main>',
+  cpCSS:'body { margin:0; padding:30px; font-family:Arial,sans-serif; background:#eef4ff; color:#183153; }\n.welcome { max-width:600px; margin:30px auto; padding:28px; border-radius:18px; background:white; text-align:center; box-shadow:0 12px 35px #18315320; }\nbutton { padding:12px 20px; border:0; border-radius:10px; background:#1769d2; color:white; cursor:pointer; }',
+  cpJS:'document.getElementById("helloBtn").addEventListener("click", function () {\n  document.getElementById("message").textContent = "Great work! Your JavaScript is running.";\n});'
+ };
+ function getSource(){return {name:byId("cpProjectName").value||"My Website",html:byId("cpHTML").value,css:byId("cpCSS").value,js:byId("cpJS").value};}
+ function setStatus(t){byId("cpStatus").textContent=t;}
+ function makeDocument(x){
+  const safeJS=x.js.replace(/<\/script/gi,"<\\/script");
+  return '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>'+x.css+'</style></head><body>'+x.html+'<script>'+safeJS+'<\\/script></body></html>';
+ }
+ window.cpRun=function(){byId("cpPreview").srcdoc=makeDocument(getSource());byId("cpPreviewState").textContent="Updated";setStatus("Preview updated successfully.");};
+ window.cpSave=function(){try{localStorage.setItem(key,JSON.stringify(getSource()));setStatus("Project saved on this device.");}catch(e){setStatus("Browser storage is unavailable.");}};
+ window.cpReset=function(){if(!confirm("Reset the editors to the starter example?"))return;byId("cpProjectName").value=defaults.cpProjectName;byId("cpHTML").value=defaults.cpHTML;byId("cpCSS").value=defaults.cpCSS;byId("cpJS").value=defaults.cpJS;cpSave();cpRun();};
+ window.cpDownload=function(){const x=getSource(),doc=makeDocument(x),blob=new Blob([doc],{type:"text/html;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=(x.name.replace(/[^a-z0-9-_ ]/gi,"").trim().replace(/\s+/g,"-")||"nexa-project")+".html";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);setStatus("HTML project download started.");};
+ try{const saved=JSON.parse(localStorage.getItem(key)||"null");if(saved){byId("cpProjectName").value=saved.name||defaults.cpProjectName;byId("cpHTML").value=saved.html??defaults.cpHTML;byId("cpCSS").value=saved.css??defaults.cpCSS;byId("cpJS").value=saved.js??defaults.cpJS;}}catch(e){}
+ let timer;["cpHTML","cpCSS","cpJS"].forEach(id=>byId(id).addEventListener("input",()=>{clearTimeout(timer);timer=setTimeout(cpRun,450);}));
+ byId("cpProjectName").addEventListener("input",()=>{clearTimeout(timer);timer=setTimeout(cpSave,700);});cpRun();
+})();
+</script>
 </main>
 <nav id="bottomNav" aria-label="Main navigation">
  <button type="button" onclick="bottomNavigate('dashboardPage',this)"><span class="bottom-icon">⌂</span><span>Dashboard</span></button>
  <button type="button" onclick="bottomNavigate('latestJobsPage',this)"><span class="bottom-icon">💼</span><span>Jobs</span></button>
+ <button type="button" onclick="bottomNavigate('codingPlaygroundPage',this)"><span class="bottom-icon">⌨️</span><span>Code</span></button>
  <button type="button" onclick="bottomNavigate('interestingFactsPage',this)"><span class="bottom-icon">💡</span><span>Facts</span></button>
  <button type="button" onclick="bottomNavigate('latestNewsPage',this)"><span class="bottom-icon">📰</span><span>News</span></button>
 <button type="button" onclick="bottomNavigate('liveTVPage',this)"><span class="bottom-icon">📺</span><span>Live TV</span></button>
