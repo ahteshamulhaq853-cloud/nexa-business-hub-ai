@@ -1,6 +1,256 @@
 {
-  "updated": "2026-11-07T15:26:28.554978+00:00",
+  "updated": "2026-11-07T16:03:29.111701+00:00",
   "items": [
+    {
+      "title": "No clear winner after tight New Zealand general election",
+      "link": "https://www.bbc.co.uk/news/articles/c3ewev11g1e0o?at_medium=RSS&at_campaign=rss",
+      "summary": "Weeks of coalition talks could follow after preliminary results pointed to a highly divided national parliament.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3578/live/a76cb0d0-dab5-11f1-a701-fddedf244c16.jpg",
+      "published": "2026-11-07T15:56:28+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "سعودی عرب میں مقامی لکڑی کی اسمگلنگ میں ملوث غیرملکی شہری گرفتار ... حکام نے ملزم کو گرفتار کرکے ان کے خلاف تحقیقات کا آغاز کردیا،ضبط شدہ لکڑی متعلقہ حکام کے حوالے کردی ... مزید",
+      "link": "https://urdupoint.com/n/5003230",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_a3fec_1794066419.jpg._3",
+      "published": "2026-11-07T15:45:15+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سی ای او جی ڈبلیو ایم سی/ایم ڈی ستھرا پنجاب ایجنسی گوجرانوالہ کا شہر کے مختلف علاقوں کا دورہ",
+      "link": "https://urdupoint.com/n/5003229",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:42:06+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ڈپٹی کمشنر راولپنڈی سے مرکزی انجمن تاجران کینٹ کے وفد کی ملاقات",
+      "link": "https://urdupoint.com/n/5003228",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:42:02+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "گورنر سندھ سے صنعتکاروں، ڈی جی نیفٹیک سندھ اور پی ایم یوتھ پروگرام کے کوآرڈینیٹرکی ملاقات",
+      "link": "https://urdupoint.com/n/5003227",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:37:24+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "اے جی ایم ٹریفک پاکستان ریلوے کا لاہور اسٹیشن کا دورہ، قراقرم ایکسپریس میں سہولیات کا جائزہ",
+      "link": "https://urdupoint.com/n/5003226",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:37:20+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "صدرِ آصف علی زرداری کا سابق صدر آزاد جموں و کشمیر راجہ محمد ذوالقرنین خان کے انتقال پر اظہارِ افسوس",
+      "link": "https://urdupoint.com/n/5003225",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:37:17+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ڈپٹی کمشنر لاہور کی زیر صدارت انسدادِ پولیو مہم کا جائزہ اجلاس",
+      "link": "https://urdupoint.com/n/5003224",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:37:14+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "بھٹو زرداری کی پاکستان کی ہندو برادری سمیت دنیا بھر میں دیوالی منانے والوں کو دلی مبارکباد ، نیک تمناؤں کا اظہار",
+      "link": "https://urdupoint.com/n/5003223",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:37:11+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "چیف سیکریٹری سندھ کی بس اڈوں، ریلوے اسٹیشنوں اور ٹرانزٹ پوائنٹس پر بچوں کی پولیو ویکسینیشن یقینی بنانے کی ہدایت",
+      "link": "https://urdupoint.com/n/5003222",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:37:08+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سید نیئر حسین بخاری کا سینئر صحافی سرفراز راجہ کی والدہ کے انتقال پرگہرے دکھ اور افسوس کا اظہار",
+      "link": "https://urdupoint.com/n/5003221",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:37:05+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ڈپٹی کمشنر لاہور کا رائیونڈعالمی اجتماع گاہ کا دورہ ، انتظامات کا جائزہ لیا",
+      "link": "https://urdupoint.com/n/5003220",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:37:01+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "پاکستان میں نئی آٹو پالیسی کی منظوری، مڈل اور اپر کلاس کے لیے گاڑیوں کی قیمتوں میں بتدریج کمی آئے گی ... آٹو سیکٹر کی برآمدات کو 20 کروڑ ڈالر سے بڑھا کر 6 ارب ڈالر تک کرنے ... مزید",
+      "link": "https://urdupoint.com/n/5003219",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:28:37+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ملاکنڈ ڈویژن کو جدید اسلحہ، بکتر بند گاڑیاں اور دیگر وسائل فراہم کیے، امن پر کوئی سمجھوتہ نہیں ہوگا، آئی جی کے پی",
+      "link": "https://urdupoint.com/n/5003218",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:20:54+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "چیئرمین سینیٹ کا سابق صدر آزاد کشمیر راجہ ذوالقرنین خان کے انتقال پر افسوس کا اظہار",
+      "link": "https://urdupoint.com/n/5003216",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:20:48+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "صنعتی اور زرعی صارفین کو اضافی بجلی کے استعمال پر 43.5 ارب روپے کا ریلیف فراہم کیا گیا، پاور ڈویژن",
+      "link": "https://urdupoint.com/n/5003215",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:20:45+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "نائب وزیراعظم پاکستان کی حضرت داتا گنج بخشؒ کے مزار پر حاضری، جاری کاموں پر اظہار اطمینان",
+      "link": "https://urdupoint.com/n/5003214",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:20:42+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "وفاقی وزیر داخلہ اور وزیرمملکت طلال چوہدری سے سوڈان کے وزیر داخلہ کی ملاقات ... سکیورٹی، داخلی امور، سائبر کرائم، پولیس ٹریننگ، ادارہ جاتی تعاون، نادرا اور مختلف شعبوں ... مزید",
+      "link": "https://urdupoint.com/n/5003213",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:20:39+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ایل پی جی کی شفاف نیلامی کے طریقہ کار پر عملدرآمد کے لیے کمیٹی کا پہلا اجلاس، ہر کمپنی کے لیے یومیہ زیادہ سے زیادہ 20 میٹرک ٹن کوٹہ مقرر",
+      "link": "https://urdupoint.com/n/5003212",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:20:37+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "پاکستان کا پہلا خلا باز چینی خلائی اسٹیشن پر قدم رکھے گا ... شین ژو24 انسان بردار خلائی مشن میں پاکستانی خلا باز بطور پے لوڈ اسپیشلسٹ شامل ہوگا",
+      "link": "https://urdupoint.com/n/5003211",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:20:34+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "معاشرے میں متنوع ثقافتی اور مذہبی روایات قابل قدر معاشرتی اثاثہ ہیں،شہباز شریف ... پاکستان کی ہندو برادری ہمارے قومی تشخص کا قابل قدر حصہ ، ملکی ترقی میں خدمات لائق تحسین ... مزید",
+      "link": "https://urdupoint.com/n/5003210",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:20:31+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "پاکستانی سفیر ڈاکٹر سید علی اسد گیلانی نے پاکستان ایمبیسی کالج بیجنگ میں سالانہ انٹرنیشنل کلچر ڈے کا افتتاح کردیا",
+      "link": "https://urdupoint.com/n/5003209",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:20:28+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "وزیر مملکت نیشنل فوڈ سکیورٹی اینڈ ریسرچ ملک رشید احمد خان ایڈووکیٹ کی زیرصدارت اجلاس ... پائیدار ترقیاتی اہداف کے حصول کے پروگرام کے تحت شروع کی جانیوالی ترقیاتی سکیموں ... مزید",
+      "link": "https://urdupoint.com/n/5003208",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:20:26+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "پاکستان ،سوڈان کے درمیان سرکاری و سفارتی پاسپورٹس پر ویزا فری سہولت کا معاہدہ طے پا گیا ... دونوں ممالک کے درمیان سائبر کرائم کے شعبے میں تعاون بڑھانے کے لیے ایم او یو پر ... مزید",
+      "link": "https://urdupoint.com/n/5003206",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:20:19+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "چیئرمین سینیٹ سید یوسف رضا گیلانی کا سابق صدر آزاد جموں و کشمیر راجہ ذوالقرنین خان کے انتقال پر گہرے دکھ اور افسوس کا اظہار",
+      "link": "https://urdupoint.com/n/5003205",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:20:16+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
     {
       "title": "UK cannot 'cherry pick' EU single market deal, Barnier tells BBC",
       "link": "https://www.bbc.co.uk/news/articles/c9kgjj206nzpo?at_medium=RSS&at_campaign=rss",
@@ -10,6 +260,26 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "تعلیمی بورڈ فیصل آباد کے زیر اہتمام پنجاب کالج آف کامرس سائیکلنگ اور کراس کنٹری چیمپئن کا انعقاد",
+      "link": "https://urdupoint.com/n/5003203",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-07T15:19:05+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "فضل الرحمان کی وجہ سے کام نہیں چھوڑ سکتے، گورنر فیصل کریم کنڈی",
+      "link": "https://jang.com.pk/news/1631335",
+      "summary": "گورنر خیبر پختونخوا فیصل کریم کنڈی نے کہا ہے کہ ریاست کے خلاف جنگ کرنے والوں کے خلاف جنگ ہوگی،‏ مرکز سے صوبہ کے وسائل حاصل کرنے کے...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-07/b_1631335_080605_updates.jpg\"/",
+      "published": "2026-11-07T15:11:07+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Two men arrested after boy injured in sword attack",
@@ -22,21 +292,11 @@
       "language": "en"
     },
     {
-      "title": "Verstappen, Hamilton and Leclerc to have penalties",
+      "title": "Hamilton, Leclerc and Verstappen to have penalties",
       "link": "https://www.bbc.co.uk/sport/formula1/articles/c574p28devp4o?at_medium=RSS&at_campaign=rss",
       "summary": "Red Bull's Max Verstappen and Ferrari drivers Lewis Hamilton and Charles Leclerc will all have grid penalties at the Sao Paulo Grand Prix.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/7855/live/74e37800-dabb-11f1-8c3b-f3c0d6bd7c4f.jpg",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0c32/live/d1e82420-daba-11f1-8c3b-f3c0d6bd7c4f.jpg",
       "published": "2026-11-07T15:01:59+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "No clear winner after tight New Zealand general election",
-      "link": "https://www.bbc.co.uk/news/articles/c3ewev11g1e0o?at_medium=RSS&at_campaign=rss",
-      "summary": "Weeks of coalition talks could follow after preliminary results pointed to a highly divided national parliament.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3578/live/a76cb0d0-dab5-11f1-a701-fddedf244c16.jpg",
-      "published": "2026-11-07T15:00:10+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -50,256 +310,6 @@
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "سرگودھا،محکمہ ریونیو میں کرپشن مالی غبن اور ریکارڈ میں ردوبدل میں ملوث 6 پٹواریوں کو برخاست کر دیا گیا",
-      "link": "https://urdupoint.com/n/5003175",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:56:25+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ایس پی سلیم چغتائی محکمہ پولیس میں مدتِ ملازمت مکمل ہونے پر ریٹائر ہو گئے ... سنٹرل پولیس آفس میں پروقار الوداعی تقریب، آئی جی پنجاب عبدالکریم نے اعزازی شیلڈ اور تحائف ... مزید",
-      "link": "https://urdupoint.com/n/5003174",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:56:23+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "لاہور میں طالبہ سے نازیبا حرکات کرنے والا ملزم گرفتار",
-      "link": "https://urdupoint.com/n/5003173",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:56:21+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "این اے 77کا ضمنی انتخاب،چوہدری سالک حسین کا قاضی ابراہیم گجر کی حمایت کا اعلان",
-      "link": "https://urdupoint.com/n/5003172",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:56:18+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پاکستان میں سیٹلائٹ انٹرنیٹ سروسز فراہم کرنے کے لیے 6کمپنیاں رجسٹرڈ ... ایس ای سی پی نے سیٹلائٹ انٹرنیٹ کمپنیوں کی رجسٹریشن سے متعلق رپورٹ سینیٹ کی قائمہ کمیٹی میں پیش ... مزید",
-      "link": "https://urdupoint.com/n/5003171",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:56:15+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "لیوی پر معاملات حتمی مرحلے میں، ریلیف نہ ملا تو فیصلے سڑکوں پر ہوں گے،حافظ نعیم الرحمن ... ملک میں سیاسی افراتفری جاری، مرکزی و چاروں صوبائی حکومتیں عوام کی نمائندہ نہیں وسط ... مزید",
-      "link": "https://urdupoint.com/n/5003169",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:56:10+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پاکستان ہاکی فیڈریشن اور سپورٹس بورڈ پنجاب کے اشتراک سے 930 کھلاڑیوں میں ہاکی کٹس اور کھیلوں کا سامان تقسیم ... ڈی جی سپورٹس طارق قریشی تقریب کے مہمان خصوصی تھے،930 کھلاڑیوں ... مزید",
-      "link": "https://urdupoint.com/n/5003168",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:56:06+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ویان مولڈر کو برائن لارا کا عالمی ریکارڈ توڑنے سے کیوں روکا جنوبی افریقی کوچ نے وجہ بتا دی ... 367 رنز ناٹ آئوٹ پر اننگز ڈیکلیئر کرنے کا فیصلہ ذہنی دبائو سے بچانے کے لیے کیا، ... مزید",
-      "link": "https://urdupoint.com/n/5003166",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:56:00+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سپارکو نے پاک ایس بی اے ایس متعارف کرا دیا، تھل ڈیزرٹ ریلی محفوظ بنانے میں معاون",
-      "link": "https://urdupoint.com/n/5003165",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:55:58+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "گیارہویں تھل جیپ ریلی، سٹاک کیٹیگری کے مقابلے بھی اختتام پذیر ... سٹاک اے کیٹیگری میں آصف امام نے 200کلومیٹر کا ٹریک 2گھنٹے 35منٹ میں مکمل کیا",
-      "link": "https://urdupoint.com/n/5003164",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:55:55+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پاکستان بیڈمنٹن فیڈریشن کے انتخابات غیر قانونی قرار ... اسلام آباد ہائیکورٹ کا 90روز میں نئے انتخابات کرانے کا حکم",
-      "link": "https://urdupoint.com/n/5003163",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:55:53+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پاکستان کی جنوبی کوریا کو شکست، ایشین ٹیم سکواش چمپئن شپ کا ٹائٹل جیت لیا",
-      "link": "https://urdupoint.com/n/5003162",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:55:50+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سری لنکا کیخلاف ٹیسٹ سیریز: پاکستانی اسکواڈ میں مزید 4کھلاڑی شامل ... پاکستان اور سری لنکا کے مابین پہلا ٹیسٹ میچ 9نومبر سے راولپنڈی کرکٹ اسٹیڈیم میں ہو گا",
-      "link": "https://urdupoint.com/n/5003161",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:55:47+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ضمنی انتخاب این اے 77 گوجرانوالہ؛ الیکشن کمیشن کا وفاقی وزیرعطا اللہ تارڑ کی ضابطہ اخلاق کی مبینہ خلاف ورزی کا نوٹس ... میڈیا رپورٹس کے مطابق وفاقی وزیر نے ہیلی کاپٹر کے ... مزید",
-      "link": "https://urdupoint.com/n/5003160",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:53:18+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "وفاقی وزیر انجینئر امیر مقام کا سابق صدر آزاد جموں و کشمیر راجہ ذوالقرنین خان کے انتقال پر اظہار افسوس",
-      "link": "https://urdupoint.com/n/5003159",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:52:09+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سہولت بازار ملت روڈ ہفتے کے ساتوں دن فعال بنانے کا فیصلہ",
-      "link": "https://urdupoint.com/n/5003158",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:52:04+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "اسپیکر قومی اسمبلی سردار ایاز صادق کا سابق صدر آزاد جموں و کشمیر راجہ ذوالقرنین خان کے انتقال پر اظہار تعزیت",
-      "link": "https://urdupoint.com/n/5003157",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:52:02+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سی ایم پنجاب کرکٹ چیمپئنز لیگ،مینز فائنل میں لاہور،ومینز فائنل میں پوٹھوہار پرائیڈ نے میدان مار لیا",
-      "link": "https://urdupoint.com/n/5003156",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:51:05+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "فیصل آباد میں تجاوزات کے خاتمے اور شہری سہولیات کی بہتری کے لیے میونسپل کارپوریشن کا انفورسمنٹ ونگ جدید مشینری اور نئی گاڑیوں سے لیس کر دیا",
-      "link": "https://urdupoint.com/n/5003155",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:51:01+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "وائلڈ لائف رینجرز کی کارروائیاں، معصوم جنگلی پرندوں کا غیر قانونی شکار اور فالکن کی نیٹنگ کرنے والے 3ملزمان گرفتار",
-      "link": "https://urdupoint.com/n/5003154",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:44:02+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ڈپٹی کمشنر راولپنڈی کی زیر صدارت اجلاس ، سڑکوں اور گلیوں کی بحالی، تعمیر و مرمت اور نکاسی آب کے منصوبوں کا تفصیلی جائزہ",
-      "link": "https://urdupoint.com/n/5003153",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:43:18+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ملکی مارکیٹ میں سونے کی قیمتیں مستحکم، چاندی مزید سستی ہو گئی",
-      "link": "https://urdupoint.com/n/5003152",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:43:16+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "آئی جی پنجاب کی زیر صدارت کرائم کنٹرول سے متعلق دوسرا فالو اپ اجلاس",
-      "link": "https://urdupoint.com/n/5003151",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:43:13+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بلوچستان کے ایک ایک انچ پر صوبائی حکومت کی رٹ برقرار ہے ، معاون برائے داخلہ بلوچستان",
-      "link": "https://urdupoint.com/n/5003150",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:43:08+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پی ایچ ایف و ایس بی پی کے اشتراک سے کھلاڑیوں میں ہاکی کٹس و کھیلوں کا سامان تقسیم",
-      "link": "https://urdupoint.com/n/5003149",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-07T14:43:04+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
     },
     {
       "title": "چین اور پاکستان کی بڑھتی فضائی طاقت کا مقابلہ: انڈیا ففتھ جنریشن لڑاکا طیارے کیسے حاصل کرنا چاہتا ہے؟",
@@ -622,6 +632,16 @@
       "language": "en"
     },
     {
+      "title": "واٹس ایپ پر بغیر اجازت دوسرے صارف کا نمبر دیکھنے والے ہوجائیں ہوشیار!",
+      "link": "https://www.express.pk/story/2842915/whatsapp-is-testing-a-feature-2842915",
+      "summary": "واٹس ایپ کا صارفین کی پرائیوسی یقینی بنانے کے لیے اعلان کیا گیا فیچر ابھی تیاری کے مراحل میں ہے",
+      "image_url": "",
+      "published": "2026-11-07T10:41:47+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "PCB adds Aamir Jamal, three uncapped players to Pakistan squad for Sri Lanka Tests",
       "link": "https://www.dawn.com/news/2042821/pcb-adds-aamir-jamal-three-uncapped-players-to-pakistan-squad-for-sri-lanka-tests",
       "summary": "The Pakistan Cricket Board (PCB) on Saturday added pace-bowling all-rounder Aamir Jamal and three uncapped players to the Test squad for the two-match series against Sri Lanka , taking the strength of the team to 16. Batter Mohammad Tayyab Arif, fast bowlers Ali Shabbir and Saqib Khan have earned their maiden call-ups following impressive performances in dom",
@@ -630,6 +650,16 @@
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "پاکستان کا سری لنکا کے خلاف سیریز کیلیے ٹیسٹ اسکواڈ کا اعلان، بابراعظم کپتان مقرر",
+      "link": "https://www.express.pk/story/2842913/pakistan-announces-test-squad-for-series-against-sri-lanka-2842913",
+      "summary": "طیب عارف، علی شبیر اور ثاقب خان پہلی مرتبہ پاکستان کی ٹیسٹ ٹیم میں شامل ہوئے ہیں",
+      "image_url": "",
+      "published": "2026-11-07T10:30:39+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "اسلام آباد؛ مولانا فضل الرحمان سے منسلک مدارس کو نوٹس، قانونی کارروائی کا انتباہ جاری",
@@ -968,36 +998,6 @@
       "image_url": "",
       "published": "2026-11-07T07:13:38+00:00",
       "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "وزیرِ داخلہ محسن نقوی سے سوڈانی ہم منصب کی ملاقات، سیکیورٹی تعاون بڑھانے پر اتفاق",
-      "link": "https://jang.com.pk/news/1631277",
-      "summary": "---فوٹو بشکریہ سوشل میڈیا وفاقی وزیرِ داخلہ محسن نقوی اور وزیرِ مملکت طلال چوہدری سے سوڈان کے وزیرِ داخلہ نے ملاقات کی جس میں...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-07/b_1631277_011157_updates.jpg\"/",
-      "published": "2026-11-07T07:11:44+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "مولانا صاحب کو حصہ نہیں ملا، وہ ناراض ہیں: فیصل کریم کنڈی",
-      "link": "https://jang.com.pk/news/1631274",
-      "summary": "گورنر خیبر پختون خوا فیصل کریم کنڈی—فائل فوٹوگورنر خیبر پختون خوا فیصل کریم کنڈی نے کہا ہے کہ مولانا صاحب کو حصہ نہیں ملا اس لیے وہ...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-07/b_1631274_123608_updates.jpg\"/",
-      "published": "2026-11-07T07:11:12+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بنوں میں سیکیورٹی فورسز کی کارروائی، 4 دہشتگرد ہلاک",
-      "link": "https://jang.com.pk/news/1631278",
-      "summary": "—ویڈیو گریبخیبر پختون خوا میں عزمِ استحکام وژن کے تحت فتنۃ الخوارج کے خلاف سیکیورٹی فورسز کی مؤثر کارروائیاں جاری ہیں۔سیکیورٹی...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-07/b_1631278_013614_updates.jpg\"/",
-      "published": "2026-11-07T07:11:09+00:00",
-      "source": "Jang",
       "category": "اردو",
       "language": "ur"
     }
