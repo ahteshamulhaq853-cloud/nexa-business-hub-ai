@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T01:47:37.319624+00:00",
+  "updated": "2026-11-08T02:33:53.175110+00:00",
   "items": [
     {
       "title": "Royal Family join veterans and families at Festival of Remembrance",
@@ -94,7 +94,7 @@
     {
       "title": "'Dana, please take the job!' - Trump asks UFC boss to be White House press secretary",
       "link": "https://www.bbc.co.uk/news/articles/cvze47p9jeexo?at_medium=RSS&at_campaign=rss",
-      "summary": "It was unclear whether the president's public job offer was genuine, although White said later on Saturday: \"I got a lot of jobs already.\"",
+      "summary": "It was unclear how genuine the president's offer was, although White later said he would travel to Washington for them to meet.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8536/live/2fdfe760-dafd-11f1-b441-2b33b063138f.jpg",
       "published": "2026-11-08T00:31:53+00:00",
       "source": "BBC News",
@@ -172,6 +172,16 @@
       "language": "en"
     },
     {
+      "title": "اسموگ کے خاتمے کے لیے لاہور میں 13 کلومیٹر سائیکل ریلی، خواتین اور بچوں کی بھی شرکت",
+      "link": "https://www.express.pk/story/2842974/13-kilometer-cycle-rally-held-in-lahore-to-combat-smog-women-and-children-also-participated-2842974",
+      "summary": "سائیکلنگ کو فروغ دے کر نہ صرف فضائی آلودگی پر قابو پانے میں مدد مل سکتی ہے، سی ٹی او لاہور",
+      "image_url": "",
+      "published": "2026-11-07T21:07:29+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Israeli president picks Netanyahu's rival Gadi Eisenkot to try to form government",
       "link": "https://www.dawn.com/news/2042866/israeli-president-picks-netanyahus-rival-gadi-eisenkot-to-try-to-form-government",
       "summary": "Israel’s president on Saturday chose Gadi Eisenkot, Prime Minister Benjamin Netanyahu’s strongest rival, to try to form a new government following a deadlocked election that left neither man with a clear path to power. Netanyahu, Israel’s longest-serving leader, is fighting to stay in office after his religious-nationalist coalition lost its majority in an O",
@@ -180,6 +190,26 @@
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "ٹرمپ نے سیاسی انتقام لینے اور دھمکیاں دینے پر ڈیموکریٹس کے خلاف تحقیقات کا حکم دے دیا",
+      "link": "https://www.express.pk/story/2842973/trump-has-ordered-an-investigation-into-the-democrats-for-seeking-political-revenge-and-issuing-threats-2842973",
+      "summary": "ڈیموکریٹک رہنماؤں نے بے گناہ افراد کو دھمکی آمیز خطوط بھیجے ہیں، امریکی صدر کا الزام",
+      "image_url": "",
+      "published": "2026-11-07T20:54:46+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کراچی، سرجانی ٹاؤن میں پولیس مقابلہ، زخمی سمیت 2 ملزمان گرفتار",
+      "link": "https://www.express.pk/story/2842972/police-encounter-in-karachis-surjani-town-2-suspects-arrested-including-one-who-was-wounded-2842972",
+      "summary": "زخمی ملزم کو طبی امداد کے لیے اسپتال منتقل کر دیا گیا",
+      "image_url": "",
+      "published": "2026-11-07T20:47:49+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "'Please take the job': Trump asks UFC chief Dana White to be White House press secretary",
@@ -960,36 +990,6 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "امریکی انتخابات: نیا منظر، نئے اندیشے",
-      "link": "https://www.express.pk/story/2842946/us-elections-a-new-landscape-new-concerns-2842946",
-      "summary": "امریکی ووٹر نہ تو اچانک ’’صلح جو‘‘ بنا ہے اور نہ ہی اسے بین الاقوامی تنازعات سے کوئی جذباتی ہمدردی ہے",
-      "image_url": "",
-      "published": "2026-11-07T13:22:13+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "نیتن یاہو مشکل میں؟",
-      "link": "https://www.express.pk/story/2842944/netanyahu-in-trouble-2842944",
-      "summary": "ان انتخابات کے نتائج سے صاف پتا چلتا ہے کہ عوام نے نیتن یاہو کی کارکردگی کو قومی مفاد میں نہیں سمجھا",
-      "image_url": "",
-      "published": "2026-11-07T13:17:54+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ممنوعہ راستے سے آبنائے ہرمز عبور کرنے والا آئل ٹینکر بارودی سرنگ سے ٹکرا گیا؛ ایران",
-      "link": "https://www.express.pk/story/2842943/oil-tanker-hit-ied-caught-fire-says-iran-2842943",
-      "summary": "جہاز کو پہلے ہی خبردار کیا گیا تھا کہ مذکورہ سمندری راستہ ممنوعہ اور غیر محفوظ ہے",
-      "image_url": "",
-      "published": "2026-11-07T13:12:48+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
     },
     {
       "title": "کراچی: جام صادق پل پر کار کھمبے سے ٹکراکر دوسری سڑک پر جاگری، کھمبا بھی زمین پر گرگیا",
