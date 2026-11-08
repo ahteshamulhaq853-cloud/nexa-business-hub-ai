@@ -1,12 +1,22 @@
 {
-  "updated": "2026-11-08T21:09:36.107995+00:00",
+  "updated": "2026-11-08T21:41:37.249633+00:00",
   "items": [
     {
       "title": "Nvidia launches investigation into CEO's affair with suspected Chinese spy",
       "link": "https://www.bbc.co.uk/news/articles/c3dxw10rjn9no?at_medium=RSS&at_campaign=rss",
-      "summary": "Jensen Huang also admitted to having been \"unfaithful \"to his wife and apologised for hurting her and their children.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1a2d/live/537ff930-6139-11ee-b101-6f93d6dfbcc2.png",
-      "published": "2026-11-08T21:01:33+00:00",
+      "summary": "Jensen Huang also admitted to having been \"unfaithful\" to his wife and says he will cooperate with a security investigation.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4981/live/81f74f50-dbb8-11f1-86cb-c1d83392da32.jpg",
+      "published": "2026-11-08T21:40:46+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Aramco Tower hit in heart of Saudi capital as Houthis launch fresh strikes",
+      "link": "https://www.bbc.co.uk/news/articles/c6ly3mjx958eo?at_medium=RSS&at_campaign=rss",
+      "summary": "Footage authenticated by BBC Verify shows damage to the building in the capital's central financial district.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ea80/live/2b11cc30-dbbb-11f1-93e1-3b657b665bcf.png",
+      "published": "2026-11-08T21:37:36+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -16,10 +26,20 @@
       "link": "https://www.bbc.co.uk/news/articles/cwzrd5jj47ndo?at_medium=RSS&at_campaign=rss",
       "summary": "The presenter tells fans it is \"time to throw myself into something new\" after recent Celebrity Traitors success.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2f2c/live/327b8220-dbb3-11f1-b35d-8ff000e4934a.jpg",
-      "published": "2026-11-08T20:51:50+00:00",
+      "published": "2026-11-08T21:19:48+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "گوجرانوالہ کے ضمنی انتخاب میں جعلی ووٹ کاسٹنگ",
+      "link": "https://jang.com.pk/news/1631602",
+      "summary": "اسکرین گریبالیکشن کمشنر پنجاب نے این اے 77 گوجرانوالہ کے ضمنی انتخاب میں جعلی ووٹ کاسٹنگ پر ریٹرننگ افسر سے رپورٹ طلب کرلی۔ وزیر...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-09/b_1631602_021218_updates.jpg\"/",
+      "published": "2026-11-08T21:11:09+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "White House vows to keep up immigration crackdown after midterms defeat",
@@ -30,6 +50,36 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "فیصل آباد: چچی نے بھتیجی پر مبینہ طور پر پیٹرول چھڑک کر آگ لگا دی",
+      "link": "https://jang.com.pk/news/1631598",
+      "summary": "فیصل آباد کے علاقے تاندلیانوالہ میں چچی نے اپنی 10 سالہ بھتیجی پر مبینہ طور پر پیٹرول چھڑک کر آگ لگا دی۔واقعہ کے بعد بچی کو فوری طور پر...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-09/b_1631598_012606_updates.jpg\"/",
+      "published": "2026-11-08T20:11:57+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سرحد پار آتش بازی کے باریک ذرات فضائی آلودگی میں اضافہ کر سکتے ہیں، مریم اورنگزیب",
+      "link": "https://jang.com.pk/news/1631599",
+      "summary": "سینئر وزیر پنجاب مریم اورنگزیب نے کہا ہے کہ آئندہ چند دنوں میں پنجاب میں اسموگ کی شدت بڑھنے کا خدشہ ہے، سرحد پار آتش بازی کے باریک...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-09/b_1631599_011539_updates.jpg\"/",
+      "published": "2026-11-08T20:11:55+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کے پی کے فیصلے کابل یا قندھار سے نہیں ہوں گے، کنڈی",
+      "link": "https://jang.com.pk/news/1631601",
+      "summary": "گورنر خیبر پختونخوا نے کہا ہے کہ خیبر پختونخوا کے فیصلے اسلام آباد سے ہوں گے، کابل یا قندھار سے نہیں، آئین اور قانون کو نہ ماننے...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-09/b_1631601_015315_updates.jpg\"/",
+      "published": "2026-11-08T20:11:48+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "$28K To Millions: Sophie Cunningham and WNBA’s big change",
@@ -632,6 +682,46 @@
       "language": "en"
     },
     {
+      "title": "مگرمچھ کا حملہ",
+      "link": "https://www.express.pk/story/2843104/magarmachh-ka-hamla-2843104",
+      "summary": "دہشت کی علامت سے لوک دانش وثقافت تک",
+      "image_url": "",
+      "published": "2026-11-08T16:28:16+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سندھ، پہلی بار نومبر کے دوسرے ہفتے میں کپاس کی کاشت شروع",
+      "link": "https://www.express.pk/story/2843103/sindh-for-the-first-time-cotton-cultivation-begins-in-the-second-week-of-november-2843103",
+      "summary": "ٹھٹھہ اور سجاول کے ساحلی علاقوں میں کپاس کی ریکارڈ کاشت ہونے کی اطلاعات",
+      "image_url": "",
+      "published": "2026-11-08T16:24:22+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "پنجاب، تعلیم سمیت کئی محکموں میں 75 ہزار اسامیاں ختم، سالانہ 40 ارب روپے کی بچت",
+      "link": "https://www.express.pk/story/2843102/punjab-eliminates-75000-posts-in-many-departments-including-education-saving-rs-40-billion-annually-2843102",
+      "summary": "26 ہزار نئی اسامیوں کی منظوری کے باوجود اسکول ایجوکیشن میں بھرتی نہ ہوسکی",
+      "image_url": "",
+      "published": "2026-11-08T16:16:10+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ہائبرڈ لائٹس کا طوفان",
+      "link": "https://www.express.pk/story/2843101/hybrid-lights-ka-toofan-2843101",
+      "summary": "سڑکوں پر رات کا سفر یا موت کا سامنا؟",
+      "image_url": "",
+      "published": "2026-11-08T16:14:16+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "5 نومبر کے فیصلے سے کئی پیچیدگیاں پیدا ہوئیں: بیرسٹر گوہر",
       "link": "https://jang.com.pk/news/1631582",
       "summary": "چیئرمین پاکستان تحریک انصاف بیرسٹر گوہر نے کہا ہے کہ 5 نومبر کے فیصلے سے کئی پیچیدگیاں پیدا ہوئی ہیں، فیصلے سے سیاسی شخصیات کے ساتھ...",
@@ -672,6 +762,16 @@
       "language": "ur"
     },
     {
+      "title": "روس، چین اور بھارت کا گھن چکر",
+      "link": "https://www.express.pk/story/2843100/russia-china-aur-bharat-ka-ghan-chakkar-2843100",
+      "summary": "تینوں ممالک ایک دلچسپ وعجیب کھیل کا حصّہ بن چکے …وسطی ایشیا میں نئی انوکھی گریٹ گیم",
+      "image_url": "",
+      "published": "2026-11-08T16:10:25+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "اسرائیل کی داخلی سیاست",
       "link": "https://www.express.pk/story/2843098/israel-ki-dakhli-siyasat-2843098",
       "summary": "پوری اسلامی دنیا بشمول پاکستان‘ کے پاس عام انتخابات کرانے کا غیر متنازعہ ادارہ موجود نہیں ہے",
@@ -680,6 +780,26 @@
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
+    },
+    {
+      "title": "Tax net: time for enforcement",
+      "link": "https://tribune.com.pk/story/2639331/tax-net-time-for-enforcement",
+      "summary": "With relief for documented taxpayers, undeclared incomes must be taxed",
+      "image_url": "",
+      "published": "2026-11-08T15:56:53+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Rising debt distress sparks calls for structural overhaul",
+      "link": "https://tribune.com.pk/story/2639332/rising-debt-distress-sparks-calls-for-structural-overhaul",
+      "summary": "Debt burdens growing faster than capacity to manage, shrinking fiscal space for development",
+      "image_url": "",
+      "published": "2026-11-08T15:56:53+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
     },
     {
       "title": "Trump says elections were 'giant step back in history' for US",
@@ -877,126 +997,6 @@
       "summary": "جاں بحق ہونے والی لڑکی گڈاپ سٹی تھانے لے جائی گئی جہاں سے قانونی کارروائی کے بعد لاش جناح اسپتال منتقل کی گئی",
       "image_url": "",
       "published": "2026-11-08T15:06:30+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "OpenAI launches restricted GPT-6 Cyber penetration testing software tool",
-      "link": "https://arynews.tv/openai-launches-restricted-gpt-6-cyber-penetration-testing-software-tool",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/GPT-6-Cyber.jpg",
-      "published": "2026-11-08T14:58:55+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "اینکر پرسن ربیعہ احسن کے قتل کا مقدمہ ان کے شوہر کے خلاف درج",
-      "link": "https://www.express.pk/story/2843088/anchor-person-rabia-ahsan-murder-case-register-against-her-husband-2843088",
-      "summary": "مقتولہ کے بھائی خرم احمد کی مدعیت میں احسن طاہر کے خلاف راولپنڈی تھانہ صدر بیرونی کے خلاف درج کیا گیا",
-      "image_url": "",
-      "published": "2026-11-08T14:56:05+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "CMU renews nationwide campaign to promote HIV awareness",
-      "link": "https://arynews.tv/cmu-renews-nationwide-campaign-to-promote-hiv-awareness",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/FotoJet-2026-11-08T193924.900.jpg",
-      "published": "2026-11-08T14:51:52+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Homes and temples glow across India to mark Diwali",
-      "link": "https://www.bbc.co.uk/news/articles/cm70pdwz122ro?at_medium=RSS&at_campaign=rss",
-      "summary": "Millions of Indians are marking the festival of lights with glowing lamps, fireworks and traditional sweets.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8b73/live/64aba5a0-db85-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-11-08T14:42:09+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Aramco skyscraper damaged as Houthis target Riyadh financial district",
-      "link": "https://www.dawn.com/news/2043061/aramco-skyscraper-damaged-as-houthis-target-riyadh-financial-district",
-      "summary": "An Aramco building in Riyadh was targeted in an “attempted attack”, the Saudi energy ministry said on Sunday, with eyewitnesses telling AFP the skyscraper sustained damage, after the Saudi-led coalition fighting Houthis said it had intercepted missiles launched by the group. Houthis claimed responsibility for the attack. Aramco facilities and infrastructure ",
-      "image_url": "https://i.dawn.com/large/2026/11/08141739d8ceb1d.webp",
-      "published": "2026-11-08T14:40:08+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "ایران کے نیچے ٹیکٹونک پلیٹ میں دو بڑی دراڑوں کا انکشاف",
-      "link": "https://www.express.pk/story/2843087/scientists-discover-two-enormous-tears-2843087",
-      "summary": "یہ دراڑیں عربین پلیٹ میں موجود ہیں اور ان کی بنیادی وجہ مختلف اقسام کی چٹانوں کی کثافت اور ساخت میں فرق ہے",
-      "image_url": "",
-      "published": "2026-11-08T14:38:28+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "لاہور میں نومبر کے پہلے ہفتے فضائی آلودگی خطرناک درجے تک برقرار",
-      "link": "https://www.express.pk/story/2843086/air-pollution-in-lahore-remains-at-dangerous-levels-during-the-first-week-of-november-2843086",
-      "summary": "یکم سے 7 نومبر تک شہر کا اوسط ایئر کوالٹی انڈیکس 268 ریکارڈ کیا گیا، پاکستان ایئرکوالٹی انیشی ایٹو",
-      "image_url": "",
-      "published": "2026-11-08T14:32:21+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "انڈیا کے خلاف سنچری بنانے والے حمزہ ظہور کا میچ سے قبل خود کو لکھا گیا پیغام وائرل",
-      "link": "https://www.bbc.com/urdu/articles/crd6d1z69wn8o?at_medium=RSS&at_campaign=rss",
-      "summary": "انڈیا کے خلاف میچ سے قبل حمزہ ظہور نے خود کو ایک نوٹ لکھا تھا۔ وہ جب بیٹنگ کرنے پہنچے تو پاکستانی ٹیم 61 رنز پر پانچ وکٹیں گنوا چکی تھی۔",
-      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/1e62/live/3121e330-db7f-11f1-ab1c-6b6075dcdfe1.jpg",
-      "published": "2026-11-08T14:30:37+00:00",
-      "source": "BBC Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پاکستان نے تیل کے ذخائر کے بغیر فی کس حقیقی آمدنی میں 5.4 گنا اضافہ کیا: چیئرمین ایف بی آر",
-      "link": "https://jang.com.pk/news/1631569",
-      "summary": "راشد لنگڑیال : فائل فوٹو چیئرمین فیڈرل بورڈ آف ریونیو راشد لنگڑیال کا کہنا ہے کہ پاکستان نے تیل کے ذخائر کے بغیر فی کس حقیقی آمدنی...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-08/b_1631569_071117_updates.jpg\"/",
-      "published": "2026-11-08T14:11:34+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سیکیورٹی کے نام پر شہریوں کی آمد ورفت پر پابندی نہ لگائی جائے: مریم نواز",
-      "link": "https://jang.com.pk/news/1631572",
-      "summary": "MaryamNawaz2 وزیراعلیٰ پنجاب مریم نواز نے کہا ہے کہ سیکیورٹی کے نام پر شہریوں کی آمد ورفت پر پابندی نہ لگائی جائے۔لاہور سے جاری بیان میں...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-08/b_1631572_091344_updates.jpg\"/",
-      "published": "2026-11-08T14:11:22+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "KP plans to set up faceless ATCs, spend Rs70bn on CTD and police in a year as part of counterterrorism initiatives",
-      "link": "https://www.dawn.com/news/2043052/kp-plans-to-set-up-faceless-atcs-spend-rs70bn-on-ctd-and-police-in-a-year-as-part-of-counterterrorism-initiatives",
-      "summary": "The administrative setup in Khyber Pakhtunkhwa plans to establish faceless anti-terrorism courts in the province as part of its initiatives to strengthen the fight against terrorism, according to a briefing by the officials televised on Sunday. KP Governor Faisal Karim Kundi was also present at the briefing, where KP Secretary Home Amjad Ali Khan outlined se",
-      "image_url": "https://i.dawn.com/large/2026/01/13101826e7c71c5.webp",
-      "published": "2026-11-08T13:57:40+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "مریخ کی 4 ارب برس قدیم چٹان زمین پر دریافت",
-      "link": "https://www.express.pk/story/2843085/meteorite-found-in-the-sahara-2843085",
-      "summary": "اس نایاب شہابی پتھر کو ٹیغزا 001 کا نام دیا گیا ہے",
-      "image_url": "",
-      "published": "2026-11-08T13:51:08+00:00",
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
