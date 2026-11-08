@@ -1,12 +1,22 @@
 {
-  "updated": "2026-11-08T22:18:14.713453+00:00",
+  "updated": "2026-11-08T22:54:07.075520+00:00",
   "items": [
+    {
+      "title": "Top House Democrat 'a hard yes' on impeaching Pete Hegseth",
+      "link": "https://www.bbc.co.uk/news/articles/cj4g1nwx39wno?at_medium=RSS&at_campaign=rss",
+      "summary": "But the Pentagon said the defence secretary would not be deterred by \"phony investigations\".",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c025/live/b24c5e80-dbbc-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-11-08T22:49:53+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Nvidia launches investigation into CEO's affair with suspected Chinese spy",
       "link": "https://www.bbc.co.uk/news/articles/c3dxw10rjn9no?at_medium=RSS&at_campaign=rss",
       "summary": "Jensen Huang also admitted to having been \"unfaithful\" to his wife and says he will cooperate with a security investigation.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4981/live/81f74f50-dbb8-11f1-86cb-c1d83392da32.jpg",
-      "published": "2026-11-08T21:40:46+00:00",
+      "published": "2026-11-08T22:42:41+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -40,16 +50,6 @@
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "Top House Democrat 'a hard yes' on impeaching Pete Hegseth",
-      "link": "https://www.bbc.co.uk/news/articles/cj4g1nwx39wno?at_medium=RSS&at_campaign=rss",
-      "summary": "But the Pentagon said the defence secretary would not be deterred by \"phony investigations\".",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c025/live/b24c5e80-dbbc-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-11-08T20:49:32+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
     },
     {
       "title": "White House vows to keep up immigration crackdown after midterms defeat",
@@ -522,6 +522,16 @@
       "language": "en"
     },
     {
+      "title": "فکرِ اقبال نوجوان نسل کی ذہنی و فکری بالیدگی کا ذریعہ ہے، وزیراعظم",
+      "link": "https://www.express.pk/story/2843111/iqbals-thought-is-a-means-for-the-mental-and-intellectual-development-of-the-younger-generation-says-the-prime-minister-2843111",
+      "summary": "علامہ اقبال اعلیٰ اوصاف کے حامل عظیم فلسفی، مفکر اور مدبر تھے، شہباز شریف",
+      "image_url": "",
+      "published": "2026-11-08T17:36:09+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "PP-203 Sahiwal by-election official result announced",
       "link": "https://arynews.tv/pp-203-sahiwal-by-election-official-result-announced",
       "summary": "",
@@ -648,6 +658,16 @@
       "image_url": "",
       "published": "2026-11-08T17:16:11+00:00",
       "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "بھیک کے کم پیسے لانے پر 10 سالہ بھتیجی کو پیٹرول چھڑک کر آگ لگانے والا درندہ صف چچا گرفتار",
+      "link": "https://www.express.pk/story/2843110/heartless-uncle-arrested-for-dousing-10-year-old-niece-with-petrol-and-setting-her-on-fire-after-she-brought-back-too-little-money-from-begging-2843110",
+      "summary": "ملزم عامر مشتاق نے اپنی بیوی سونیا کے ساتھ مل کر بچی کو پیٹرول چھڑک کر آگ لگائی تھی، پولیس",
+      "image_url": "",
+      "published": "2026-11-08T17:15:49+00:00",
+      "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
     },
@@ -980,26 +1000,6 @@
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "نیتن یاہو کا زوال، عالمی سیاست میں تبدیلیاں",
-      "link": "https://www.express.pk/story/2843091/netanyahu-ka-zawal-alami-siyasat-mein-tabdeeliyan-2843091",
-      "summary": "اسرائیل میں نیتن یاہو کی سیاسی گرفت کمزور ہونا ایک غیر معمولی پیش رفت ہے۔",
-      "image_url": "",
-      "published": "2026-11-08T15:31:22+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Leaked GTA 6 trophies reveal 55 solo objectives for console players",
-      "link": "https://arynews.tv/leaked-gta-6-trophies-reveal-55-solo-objectives-for-console-players",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/GTA-6-map.jpg",
-      "published": "2026-11-08T15:30:26+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
     }
   ]
 }
