@@ -1984,7 +1984,7 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
    <div class="studio-float studio-float-bottom"><span class="studio-mini-check">✓</span><span>Everything in one place</span></div>
   </div>
  </div>
- <!-- Dashboard tool cards and account-access promo removed as requested. -->
+<div class="card" style="max-width:1320px;margin:18px auto;border:1px solid rgba(114,245,223,.22)"><div class="studio-section-heading" style="margin:0;padding:4px 0"><div><span class="studio-kicker">LEARN • PLAY • IMPROVE</span><h2>🧠 NEXA QUIZ ZONE</h2><p class="muted">Apni maloomat check karein, naye sawalat seekhein aur apna score dekhein.</p></div></div><button type="button" onclick="showPage('nexaQuizPage')">Start Quiz →</button></div> <!-- Dashboard tool cards and account-access promo removed as requested. -->
  </section>
 <section id="cvSectionPage" class="page">
  
@@ -2564,6 +2564,19 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
 </section>
 
 
+<section id="nexaQuizPage" class="page">
+ <div class="studio-section-heading"><div><span class="studio-kicker">LEARN • PLAY • IMPROVE</span><h2>🧠 NEXA QUIZ ZONE</h2><p class="muted">Mukhtalif topics par chhote quizzes dein aur apna score check karein.</p></div></div>
+ <div class="card" style="max-width:850px;margin:0 auto 18px">
+  <div class="field"><label for="nexaQuizCategory">Quiz category</label><select id="nexaQuizCategory"><option value="general">General Knowledge</option><option value="science">Science</option><option value="computer">Computer Basics</option><option value="english">English Basics</option></select></div>
+  <div class="actions" style="margin:12px 0"><button type="button" onclick="startNexaQuiz()">Start 5-question Quiz</button></div>
+  <div id="nexaQuizArea" hidden>
+   <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:10px 0"><strong id="nexaQuizProgress">Question 1 of 5</strong><span id="nexaQuizScore" class="muted">Score: 0</span></div>
+   <div style="height:7px;background:var(--line);border-radius:20px;overflow:hidden;margin-bottom:18px"><div id="nexaQuizProgressBar" style="height:100%;width:0;background:var(--cyan)"></div></div>
+   <h3 id="nexaQuizQuestion" style="line-height:1.5"></h3><div id="nexaQuizOptions" class="grid" style="gap:10px;margin:16px 0"></div>
+   <p id="nexaQuizFeedback" role="status" aria-live="polite" class="muted"></p><div class="actions"><button type="button" id="nexaQuizNext" onclick="nextNexaQuizQuestion()" disabled>Next Question →</button></div>
+  </div><div id="nexaQuizResult" hidden aria-live="polite"></div>
+ </div><div class="actions"><button type="button" class="secondary" onclick="showPage('dashboardPage')">← Back to Dashboard</button></div>
+</section>
 <script id="nexa-coding-playground-script">
 (function(){
  const byId=id=>document.getElementById(id), key="nexa_coding_playground_v1";
@@ -2588,6 +2601,42 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
  byId("cpProjectName").addEventListener("input",()=>{clearTimeout(timer);timer=setTimeout(cpSave,700);});cpRun();
 })();
 </script>
+<script id="nexa-quiz-script">
+(function(){
+const banks={
+general:[
+["پاکستان کا دارالحکومت کون سا شہر ہے؟",["کراچی","اسلام آباد","لاہور","کوئٹہ"],1,"پاکستان کا دارالحکومت اسلام آباد ہے۔"],
+["دنیا کا سب سے بڑا سمندر کون سا ہے؟",["بحرِ اوقیانوس","بحرِ ہند","بحرالکاہل","بحیرۂ روم"],2,"بحرالکاہل رقبے کے لحاظ سے سب سے بڑا سمندر ہے۔"],
+["ایک ہفتے میں کتنے دن ہوتے ہیں؟",["پانچ","چھ","سات","آٹھ"],2,"ایک ہفتے میں سات دن ہوتے ہیں۔"],
+["پاکستان کی قومی زبان کون سی ہے؟",["پنجابی","اردو","سندھی","پشتو"],1,"پاکستان کی قومی زبان اردو ہے۔"],
+["زمین کے قدرتی سیارچے کا نام کیا ہے؟",["مریخ","چاند","زہرہ","سورج"],1,"چاند زمین کا قدرتی سیارچہ ہے۔"]],
+science:[
+["پودے اپنی خوراک بنانے کے عمل کو کیا کہتے ہیں؟",["تبخیر","ضیائی تالیف","تنفس","ہضم"],1,"پودے روشنی کی مدد سے ضیائی تالیف کے ذریعے خوراک بناتے ہیں۔"],
+["پانی کا کیمیائی فارمولا کیا ہے؟",["CO₂","O₂","H₂O","NaCl"],2,"پانی دو ہائیڈروجن اور ایک آکسیجن ایٹم پر مشتمل ہے۔"],
+["انسان سانس لینے کے لیے بنیادی طور پر کون سی گیس استعمال کرتا ہے؟",["آکسیجن","نائٹروجن","کاربن ڈائی آکسائیڈ","ہیلیم"],0,"انسانی جسم خلیاتی تنفس کے لیے آکسیجن استعمال کرتا ہے۔"],
+["سورج کے سب سے قریب کون سا سیارہ ہے؟",["زہرہ","زمین","عطارد","مریخ"],2,"عطارد سورج کے سب سے قریب سیارہ ہے۔"],
+["عام فضائی دباؤ پر پانی کتنے ڈگری سیلسیس پر ابلتا ہے؟",["50°C","75°C","100°C","120°C"],2,"عام فضائی دباؤ پر پانی 100°C پر ابلتا ہے۔"]],
+computer:[
+["CPU کا بنیادی کام کیا ہے؟",["پرنٹ کرنا","ہدایات پر عمل اور ڈیٹا پراسیس کرنا","اسکرین صاف کرنا","آواز ریکارڈ کرنا"],1,"CPU کمپیوٹر کی ہدایات پر عمل کرتا اور ڈیٹا پراسیس کرتا ہے۔"],
+["HTML بنیادی طور پر کس کام کے لیے استعمال ہوتی ہے؟",["ویب پیج کا ڈھانچہ بنانے","ویڈیو ایڈیٹنگ","اینٹی وائرس چلانے","فائل کمپریس کرنے"],0,"HTML ویب پیج کے مواد اور ساخت کی وضاحت کرتی ہے۔"],
+["ان میں سے کون سا ویب براؤزر ہے؟",["Windows","Google Chrome","Excel","Bluetooth"],1,"Google Chrome ایک ویب براؤزر ہے۔"],
+["RAM کس قسم کی میموری ہے؟",["عارضی میموری","صرف مستقل میموری","آپٹیکل ڈسک","پرنٹر میموری"],0,"RAM عارضی میموری ہے؛ بجلی بند ہونے پر اس کا ڈیٹا برقرار نہیں رہتا۔"],
+["محفوظ پاس ورڈ کی بہتر مثال کون سی ہے؟",["12345678","password","اپنا نام","حروف، اعداد اور علامات کا منفرد مجموعہ"],3,"منفرد اور مشکل پاس ورڈ زیادہ محفوظ ہوتا ہے۔"]],
+english:[
+["Choose the correct plural of “child”.",["childs","children","childes","childrens"],1,"The standard plural form of child is children."],
+["Choose the correct past tense of “go”.",["goed","gone","went","going"],2,"The simple past tense of go is went."],
+["Which word is a noun?",["quickly","beautiful","teacher","run"],2,"Teacher is a noun because it names a person or occupation."],
+["Choose the correct article: “___ apple”.",["A","An","Thee","No article"],1,"An is used before a vowel sound; apple begins with a vowel sound."],
+["What is the opposite of “ancient”?",["old","historic","modern","past"],2,"Modern is the opposite of ancient."]]
+};
+let items=[],pos=0,score=0,locked=false;
+const el=id=>document.getElementById(id);
+window.startNexaQuiz=function(){items=banks[el("nexaQuizCategory").value].slice().sort(()=>Math.random()-.5);pos=0;score=0;locked=false;el("nexaQuizResult").hidden=true;el("nexaQuizArea").hidden=false;el("nexaQuizScore").textContent="Score: 0";render();};
+function render(){const q=items[pos];locked=false;el("nexaQuizProgress").textContent="Question "+(pos+1)+" of "+items.length;el("nexaQuizProgressBar").style.width=(pos/items.length*100)+"%";el("nexaQuizQuestion").textContent=q[0];el("nexaQuizFeedback").textContent="";el("nexaQuizNext").disabled=true;el("nexaQuizNext").textContent=pos===items.length-1?"See Result":"Next Question →";const area=el("nexaQuizOptions");area.replaceChildren();q[1].forEach((v,i)=>{const b=document.createElement("button");b.type="button";b.className="secondary";b.style.textAlign="left";b.style.width="100%";b.textContent=String.fromCharCode(65+i)+". "+v;b.addEventListener("click",()=>answer(i));area.appendChild(b);});}
+function answer(choice){if(locked)return;locked=true;const q=items[pos];el("nexaQuizOptions").querySelectorAll("button").forEach((b,i)=>{b.disabled=true;if(i===q[2])b.style.borderColor="#16a34a";else if(i===choice)b.style.borderColor="#dc6b6b";});if(choice===q[2]){score++;el("nexaQuizFeedback").textContent="درست جواب! "+q[3];}else{el("nexaQuizFeedback").textContent="درست جواب: "+q[1][q[2]]+". "+q[3];}el("nexaQuizScore").textContent="Score: "+score;}
+window.nextNexaQuizQuestion=function(){if(!locked)return;if(pos<items.length-1){pos++;render();return;}el("nexaQuizArea").hidden=true;const result=el("nexaQuizResult");result.hidden=false;const pct=Math.round(score/items.length*100);const h=document.createElement("h3");h.textContent="Quiz Complete!";const p=document.createElement("p");p.textContent="آپ کا اسکور: "+score+" / "+items.length+" ("+pct+"%)";const note=document.createElement("p");note.className="muted";note.textContent=pct===100?"زبردست! تمام جوابات درست ہیں۔":pct>=60?"اچھی کوشش! مزید مشق سے اسکور بہتر ہوگا۔":"اچھی کوشش! دوبارہ کوئز دے کر سیکھتے رہیں۔";const again=document.createElement("button");again.type="button";again.textContent="Try Again";again.addEventListener("click",startNexaQuiz);result.replaceChildren(h,p,note,again);};
+})();
+</script>
 </main>
 <nav id="bottomNav" aria-label="Main navigation">
  <button type="button" onclick="bottomNavigate('dashboardPage',this)"><span class="bottom-icon">⌂</span><span>Dashboard</span></button>
@@ -2595,7 +2644,8 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
  
  <button type="button" onclick="bottomNavigate('interestingFactsPage',this)"><span class="bottom-icon">💡</span><span>Facts</span></button>
  <button type="button" onclick="bottomNavigate('latestNewsPage',this)"><span class="bottom-icon">📰</span><span>News</span></button>
-<button type="button" onclick="bottomNavigate('liveTVPage',this)"><span class="bottom-icon">📺</span><span>Live TV</span></button>
+<button type="button" onclick="bottomNavigate('nexaQuizPage',this)"><span class="bottom-icon">🧠</span><span>Quiz</span></button>
+ <button type="button" onclick="bottomNavigate('liveTVPage',this)"><span class="bottom-icon">📺</span><span>Live TV</span></button>
  <button type="button" onclick="bottomNavigate('settingsPage',this)"><span class="bottom-icon">♙</span><span>Profile</span></button>
 </nav>
 
