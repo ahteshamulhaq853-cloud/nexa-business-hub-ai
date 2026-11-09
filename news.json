@@ -1,6 +1,86 @@
 {
-  "updated": "2026-11-09T05:43:57.115420+00:00",
+  "updated": "2026-11-09T06:48:50.666765+00:00",
   "items": [
+    {
+      "title": "Nvidia’s out-of-hour shares fall as firm probes CEO Jensen Huang",
+      "link": "https://arynews.tv/nvidias-out-of-hour-shares-fall-as-firm-probes-ceo-jensen-huang",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Nvidia.jpg",
+      "published": "2026-11-09T06:46:34+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Krakow shooting suspect has died in hospital, police say",
+      "link": "https://www.bbc.co.uk/news/articles/c6y434dw8319o?at_medium=RSS&at_campaign=rss",
+      "summary": "At least six people were killed in the shooting and a dozen more were injured.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b131/live/b7c6ce50-dc06-11f1-b6f4-7b86d13131ad.jpg",
+      "published": "2026-11-09T06:39:25+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "PM Shehbaz Sharif’s message on Iqbal Day, 149th birth anniversary of Allama Muhammad Iqbal",
+      "link": "https://arynews.tv/pm-shehbaz-sharifs-message-on-iqbal-day-149th-birth-anniversary-of-allama-muhammad-iqbal",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Shehbaz-Sharif-1.jpg",
+      "published": "2026-11-09T06:31:54+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Dense fog threatens Monday morning rush-hour disruption",
+      "link": "https://www.bbc.co.uk/weather/articles/cj75p29nz6e6o?at_medium=RSS&at_campaign=rss",
+      "summary": "Fog could disrupt Monday morning’s commute",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bc6f/live/5ab3d5e0-dbfd-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-11-09T06:17:34+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "The Silicon Valley superstar engulfed by personal scandal",
+      "link": "https://www.bbc.co.uk/news/articles/ckgel338xql3o?at_medium=RSS&at_campaign=rss",
+      "summary": "Once lauded as the \"Taylor Swift of tech\", Huang is mired in scandal after an affair with a suspected Chinese spy.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2521/live/6ba67640-dc03-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-11-09T06:01:52+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "The Papers: 'There are more like Brand' and 'Steep cuts to EV targets'",
+      "link": "https://www.bbc.co.uk/news/articles/cx30eg5593gmo?at_medium=RSS&at_campaign=rss",
+      "summary": "A minister warns \"there are more like [Russell] Brand\" and the government plans \"cuts to EV targets\" - some of Monday's headlines.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9d7a/live/5feb5110-dbca-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-11-09T06:01:37+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Bahawalpur college principal booked for raping teenager",
+      "link": "https://www.dawn.com/news/2043122/bahawalpur-college-principal-booked-for-raping-teenager",
+      "summary": "BAHAWALPUR: The Musafirkhana police booked the principal of a private college for the alleged rape of a first-year student in mauza Khanpur Mirchan. No arrest has been made so far in the case. According to the complaint, the father of the victim (17), she was waiting at the college gate to leave for home on Nov 3 when the principal took her into the office a",
+      "image_url": "https://i.dawn.com/large/2026/11/091000442f28c8f.jpg",
+      "published": "2026-11-09T06:01:25+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Inside the French drug gangs recruiting children to kill",
+      "link": "https://www.bbc.co.uk/news/articles/cq62y01r2313o?at_medium=RSS&at_campaign=rss",
+      "summary": "The BBC enters Marseille's dangerous underworld, where young people are trapped, brutalised and exploited.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5447/live/ec9efd90-d9fa-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-11-09T06:00:26+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "’میں نے اپنی بیوی سے بے وفائی کی‘: مبینہ چینی جاسوس سے تعلق پر اینویڈیا کے سربراہ کے خلاف تحقیقات شروع",
       "link": "https://www.bbc.com/urdu/articles/ck8dzvdm0y8vo?at_medium=RSS&at_campaign=rss",
@@ -32,14 +112,24 @@
       "language": "en"
     },
     {
-      "title": "Dense fog threatens Monday morning rush-hour disruption",
-      "link": "https://www.bbc.co.uk/weather/articles/cj75p29nz6e6o?at_medium=RSS&at_campaign=rss",
-      "summary": "Fog could disrupt Monday morning’s commute",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/bc6f/live/5ab3d5e0-dbfd-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-11-09T05:22:03+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
+      "title": "علامہ محمد اقبال کو نوجوان نسل پر غیر معمولی اعتماد تھا: وزیرِ اعظم",
+      "link": "https://jang.com.pk/news/1631743",
+      "summary": "وزیرِ اعظم شہباز شریف—فائل فوٹووزیرِ اعظم شہباز شریف نے کہا ہے کہ علامہ محمد اقبال کو نوجوان نسل پر غیر معمولی اعتماد تھا اور وہ...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-09/b_1631743_105151_updates.jpg\"/",
+      "published": "2026-11-09T05:11:35+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "بنوں: پرانی دشمنی کی بنا پر فائرنگ، 3 افراد جاں بحق",
+      "link": "https://jang.com.pk/news/1631751",
+      "summary": "—فائل فوٹوبنوں کے علاقے جھنڈوخیل میں پرانی دشمنی کی بنا پر فریقین کے درمیان فائرنگ سے 3 افراد جاں بحق ہو گئے۔اس حوالے سے پولیس کا...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-09/b_1631751_104335_updates.jpg\"/",
+      "published": "2026-11-09T05:11:14+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Bumpy road to export-led growth",
@@ -59,6 +149,16 @@
       "published": "2026-11-09T05:00:43+00:00",
       "source": "BBC News",
       "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Historical gurdwara on Lahore's Temple Road reopens first time since Partition",
+      "link": "https://www.dawn.com/news/2043123/historical-gurdwara-on-lahores-temple-road-reopens-first-time-since-partition",
+      "summary": "LAHORE: The historical Gurdwara Chhevin Patshahi Sri Guru Hargobind Sahib on Temple Road, Mozang, which had been closed since the Partition, was reopened here on Sunday after completion of its restoration. The Evacuee Trust Property Board, Pakistan Sikh Gurdwara Parbandhak Committee (PSGPC) and the Punjab government held a joint ceremony to mark its reopenin",
+      "image_url": "https://i.dawn.com/large/2026/11/09043311c6102f3.webp",
+      "published": "2026-11-09T04:59:37+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
       "language": "en"
     },
     {
@@ -102,16 +202,6 @@
       "language": "ur"
     },
     {
-      "title": "Hitler’s ‘retreat’ sparks debate over Germany’s past and present",
-      "link": "https://www.dawn.com/news/2043132/hitlers-retreat-sparks-debate-over-germanys-past-and-present",
-      "summary": "PERCHED on a ridge high in the German Alps lie the burned-out ruins of a mountain house frequented by Adolf Hitler, which is now at the heart of an intense debate about Germany’s Nazi past. Called The Eagle’s Nest, or Kehlsteinhaus in German, the retreat was built by the Nazis in 1938. After World War II it was classified as a historical monument. But after ",
-      "image_url": "https://i.dawn.com/large/2026/11/09083305cfb5551.webp",
-      "published": "2026-11-09T03:35:10+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
       "title": "پاکستانی بحریہ کے پہلے مقامی سربراہ جنھیں ایوب خان سے ’تلخ ملاقات‘ کے بعد مستعفی ہونا پڑا",
       "link": "https://www.bbc.com/urdu/articles/c680z82225lvo?at_medium=RSS&at_campaign=rss",
       "summary": "ایڈمرل چودھری کو اس لیے استعفی دینا پڑا کیونکہ انھوں نے ’جنرل ایوب خان کی جانب سے بحریہ کی توسیع میں رکاوٹیں ڈالنے کی کوششوں کی مخالفت کی تھی۔‘",
@@ -120,16 +210,6 @@
       "source": "BBC Urdu",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "Antalya agenda",
-      "link": "https://www.dawn.com/news/2043207/antalya-agenda",
-      "summary": "WHEN COP31 opens in Antalya today, governments will have to show that years of climate negotiations have produced more than ambitious targets and promises of financial help. Geopolitical tensions, an energy crisis, and strained finances in rich countries have dampened hopes of a breakthrough. The absence of an official US delegation after Washington’s withdr",
-      "image_url": "",
-      "published": "2026-11-09T03:21:28+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
     },
     {
       "title": "علامہ اقبال نے برصغیر کے مسلمانوں کی امنگوں کو فکری رہنمائی دی: صدر آصف زرداری",
@@ -222,16 +302,6 @@
       "language": "ur"
     },
     {
-      "title": "Top House Democrat 'a hard yes' on impeaching Pete Hegseth",
-      "link": "https://www.bbc.co.uk/news/articles/cj4g1nwx39wno?at_medium=RSS&at_campaign=rss",
-      "summary": "But the Pentagon said the US defence secretary would not be deterred by \"phony investigations\".",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c025/live/b24c5e80-dbbc-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-11-09T01:53:48+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "Society needs to act to help white working-class pupils, inquiry says",
       "link": "https://www.bbc.co.uk/news/articles/cmwyqql26xe8o?at_medium=RSS&at_campaign=rss",
       "summary": "The education secretary says she is backing the inquiry to \"get to the heart of the barriers holding children back\".",
@@ -257,6 +327,16 @@
       "summary": "FLORIDA: Pope Leo XIV told men to treat their wives with respect, as he concluded the first leg of his tour of Latin America, which is plagued by gender-based violence. “Dear fathers and grandfathers… treat your wives with respect, ask for forgiveness and live with integrity, even when doing so requires sacrifice,” the head of the Catholic Church said during",
       "image_url": "https://i.dawn.com/large/2026/10/131417419a3257b.webp",
       "published": "2026-11-09T01:38:07+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Rawalpindi’s historic buildings crumble amid official apathy",
+      "link": "https://www.dawn.com/news/2043220/rawalpindis-historic-buildings-crumble-amid-official-apathy",
+      "summary": "Old buildings, temples and Gurdwaras in Rawalpindi tell the story of the garrison city’s majestic past, when Hindus and Sikhs made up a dominant share of its population before the partition of the Indian subcontinent. However, these buildings are now in a state of disrepair, as little has been done to preserve them over the past 79 years. Jamia Masjid in Raw",
+      "image_url": "https://i.dawn.com/large/2026/11/09060047961a0d2.webp",
+      "published": "2026-11-09T01:36:47+00:00",
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
@@ -312,6 +392,46 @@
       "language": "en"
     },
     {
+      "title": "نک جونس کا ذیابیطس کے ساتھ 21 سالہ جدوجہد سے متعلق جذباتی انکشاف",
+      "link": "https://www.express.pk/story/2843172/nick-jonass-emotional-revelation-regarding-his-21-year-struggle-with-diabetes-2843172",
+      "summary": "انہوں نے کہا کہ وہ اپنی کہانی اس لیے شیئر کرتے ہیں تاکہ اس بیماری میں مبتلا بچے خود کو تنہا نہ سمجھیں",
+      "image_url": "",
+      "published": "2026-11-09T01:29:01+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "اداکارہ میرا کی چھوٹی بہن شائستہ عباس کینسر کے باعث انتقال کر گئیں",
+      "link": "https://www.express.pk/story/2843169/actress-meeras-younger-sister-shaista-abbas-has-passed-away-due-to-cancer-2843169",
+      "summary": "شائستہ عباس کے انتقال پر شوبز شخصیات اور مداحوں نے گہرے دکھ کا اظہار کرتے ہوئے اہلِ خانہ سے تعزیت کی ہے۔",
+      "image_url": "",
+      "published": "2026-11-09T01:18:40+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "حوثیوں کا ریاض پر حملہ، سعودی تیل کمپنی آرامکو کی بلند عمارت کو نقصان",
+      "link": "https://www.express.pk/story/2843168/houthi-attack-damages-aramco-building-in-riyadhs-financial-district-2843168",
+      "summary": "عمارت کی متعدد منزلوں کے شیشے ٹوٹ گئے",
+      "image_url": "",
+      "published": "2026-11-09T01:17:46+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "لاہور ایئرپورٹ سے ریاض، ابوظہبی اور استنبول جانے والی 3 پروازیں منسوخ",
+      "link": "https://www.express.pk/story/2843163/lahore-flights-canceled-2843163",
+      "summary": "پروازیں سیکیورٹی خدشات اور تکنیکی خرابیوں کی وجہ سے منسوخ کی گئیں",
+      "image_url": "",
+      "published": "2026-11-09T01:04:39+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Woman says Al Fayed's brother drugged and sexually abused her at Highland estate",
       "link": "https://www.bbc.co.uk/news/articles/cm2d6kk0wzw4o?at_medium=RSS&at_campaign=rss",
       "summary": "The woman says she was flown to the Fayed family's Balnagown estate, where she was repeatedly assaulted.",
@@ -342,14 +462,74 @@
       "language": "en"
     },
     {
-      "title": "The Papers: 'There are more like Brand' and 'Steep cuts to EV targets'",
-      "link": "https://www.bbc.co.uk/news/articles/cx30eg5593gmo?at_medium=RSS&at_campaign=rss",
-      "summary": "A minister warns \"there are more like [Russell] Brand\" and the government plans \"cuts to EV targets\" - some of Monday's headlines.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9d7a/live/5feb5110-dbca-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-11-09T00:31:03+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
+      "title": "جماعت اسلامی نے خیبرپختونخوا میں گورنر راج، ایمرجنسی نفاذ کو آمرانہ اقدام قرار دے دیا",
+      "link": "https://www.express.pk/story/2843157/jamaat-e-islami-has-termed-the-imposition-of-governors-rule-and-a-state-of-emergency-in-khyber-pakhtunkhwa-as-an-authoritarian-move-2843157",
+      "summary": "خیبرپختونخوا کے عوام، پی ٹی آئی ورکرز نے حکومت کی معطلی پر سکھ کا سانس لیا، نائب امیر جماعت اسلامی پاکستان لیاقت بلوچ",
+      "image_url": "",
+      "published": "2026-11-09T00:46:20+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "لاہور: عوامی مقام پر جوا کھیلتے ہوئے 9 ملزمان گرفتار",
+      "link": "https://www.express.pk/story/2843156/9-suspects-arrested-for-gambling-in-a-public-place-2843156",
+      "summary": "ایس پی ماڈل ٹاؤن اسد علی نے کہا کہ پبلک پلیس پر جواء بچوں کو جرائم کی طرف راغب کرنا ہے۔",
+      "image_url": "",
+      "published": "2026-11-09T00:46:18+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "غزہ کے مناظر المناک، خیمے ڈوب چکے، بچے سردی اور بھوک کا شکار ہیں، وزیراعظم کا اظہار تشویش",
+      "link": "https://www.express.pk/story/2843155/prime-minister-expresses-concern-over-depriving-the-people-of-gaza-of-humanitarian-aid-2843155",
+      "summary": "وزارتِ خارجہ کو انسانی امداد میں فوری اضافے کے لیے تمام ممکنہ ذرائع بروئے کار لانے کی ہدایت",
+      "image_url": "",
+      "published": "2026-11-09T00:44:59+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "خیبرپختونخوا میں گورنرراج کے بعد واضح تبدیلی؛ بنوں کے عوامی مسائل حل",
+      "link": "https://www.express.pk/story/2843154/clear-change-after-governors-rule-in-khyber-pakhtunkhwa-bannus-public-problems-resolved-2843154",
+      "summary": "پی ٹی آئی دور میں طویل عرصہ تک التوا کا شکار رہنے والے ترقیاتی کام دوبارہ شروع ہوگئے ہیں، شہری",
+      "image_url": "",
+      "published": "2026-11-09T00:44:09+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "وینا ملک وزن بڑھنے پر طنزیہ تبصروں سے پریشان، ناقدین کو کھری کھری سنا دی",
+      "link": "https://www.express.pk/story/2843153/veena-malik-troubled-by-sarcastic-remarks-regarding-her-weight-gain-hits-back-hard-at-critics-2843153",
+      "summary": "وینا ملک کے بیان پر متعدد صارفین نے ان کی حمایت کرتے ہوئے جسمانی ساخت پر طنز کرنے کے رجحان کو تنقید کا نشانہ بنایا",
+      "image_url": "",
+      "published": "2026-11-09T00:40:21+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "بلوچستان اسپیشل ڈویلپمنٹ انیشی ایٹو کے تحت ضلع کچھی میں 125 ترقیاتی منصوبے قبل از وقت مکمل",
+      "link": "https://www.express.pk/story/2843152/balochistan-development-projects-2843152",
+      "summary": "ترقیاتی کاموں میں سڑکوں کی تعمیر، سولرائزیشن، واٹر سپلائی، سیوریج سسٹم اور تعلیمی اداروں کے منصوبے شامل ہیں",
+      "image_url": "",
+      "published": "2026-11-09T00:31:15+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "یوم اقبال پربوسنیا کے حیات ٹی وی کا علامہ اقبال کو منفرد خراجِ عقیدت",
+      "link": "https://www.express.pk/story/2843147/bosnias-hayat-tv-pays-unique-tribute-to-allama-iqbal-on-iqbal-day-2843147",
+      "summary": "دستاویزی فلم میں شاعر مشرق علامہ اقبال کی ابتدائی زندگی، تعلیم اور فکری ارتقا کے مختلف مراحل پر تفصیلی روشنی ڈالی گئی",
+      "image_url": "",
+      "published": "2026-11-09T00:30:29+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "یوٹیوبر معاذ صفدر کے ہاں بیٹی کی پیدائش، خوبصورت تصاویر بھی شیئر کر دیں",
@@ -357,6 +537,16 @@
       "summary": "معاذ صفدر اور صبا معاذ اپنی فیملی وی لاگنگ کے باعث سوشل میڈیا پر خاصی مقبولیت رکھتے ہیں۔",
       "image_url": "",
       "published": "2026-11-09T00:25:24+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ایران پر ممکنہ حملوں سے متعلق ٹرمپ کے محتاط بیان کے بعد عالمی منڈی میں تیل کی قیمتیں مستحکم",
+      "link": "https://www.express.pk/story/2843145/oil-prices-steady-as-trump-signals-restraint-on-iran-hormuz-risks-persist-2843145",
+      "summary": "یہ کورونا وبا کے آغاز کے بعد کسی ایک ہفتے کے دوران ہونے والی سب سے بڑی کمی تھی",
+      "image_url": "",
+      "published": "2026-11-09T00:24:58+00:00",
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
@@ -388,6 +578,16 @@
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-09/b_1631698_053126_updates.jpg\"/",
       "published": "2026-11-09T00:11:35+00:00",
       "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "اسرائیل سفارتی بحران کا شکار، نئی حکومت بنانے کے لیے گادی آئزنکوٹ کو 28 دن کی مہلت",
+      "link": "https://www.express.pk/story/2843142/gadi-eisenkot-gets-28-days-to-form-israeli-government-warns-of-diplomatic-crisis-2843142",
+      "summary": "اسرائیلی صدر اسحاق ہرزوگ نے اتوار کو آئزنکوٹ کو حکومت بنانے کا باضابطہ مینڈیٹ دے دیا",
+      "image_url": "",
+      "published": "2026-11-09T00:10:23+00:00",
+      "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
     },
@@ -432,6 +632,16 @@
       "language": "en"
     },
     {
+      "title": "PM Shehbaz directs MoFA to step up humanitarian aid to Gaza",
+      "link": "https://tribune.com.pk/story/2639406/pm-shehbaz-directs-mofa-to-step-up-humanitarian-aid-to-gaza",
+      "summary": "Condemns Israel’s continued illegal actions to deny basic humanitarian assistance to Palestinians",
+      "image_url": "",
+      "published": "2026-11-08T23:55:04+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "راولپنڈی: این سی سی آئی اے کی آن لائن اور سرمایہ کاری فراڈ میں ملوث ملزمان کے خلاف کارروائیاں",
       "link": "https://www.express.pk/story/2843136/nccia-opreations-against-online-fraud-2843136",
       "summary": "شہریوں سے مجموعی طور پر 2 کروڑ 39 لاکھ روپے سے زائد کا فراڈ کرنے کا انکشاف، 32 لاکھ روپے برآمد",
@@ -452,6 +662,16 @@
       "language": "en"
     },
     {
+      "title": "پختونخوا گورنر راج؛ ٹانک میں شہری شکایات کے اندراج کیلیے خصوصی ایپ",
+      "link": "https://www.express.pk/story/2843134/governors-rule-in-pakhtunkhwa-special-app-launched-in-tank-for-registering-citizen-complaints-2843134",
+      "summary": "نئی صوبائی حکومت عوام کی زندگیوں میں آسانی لانے کے لیے انقلابی اقدامات کررہی ہے",
+      "image_url": "",
+      "published": "2026-11-08T23:40:12+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "امریکی صدارتی دوڑ کے ممکنہ امیدوار کرس وان ہولن کراچی میں پیدا ہوئے، پاکستان سے خصوصی تعلق کا اعتراف",
       "link": "https://www.express.pk/story/2843133/us-senator-chris-van-hollen-exploring-2028-presidential-bid-was-born-in-karachi-2843133",
       "summary": "وہ جنوری 2017 سے امریکی سینیٹ کے رکن ہیں۔ اس سے قبل 2003 سے 2017 تک ایوانِ نمائندگان کے رکن بھی رہ چکے ہیں",
@@ -467,6 +687,16 @@
       "summary": "امریکی انٹیلیجنس حکام کو شبہ ہے کہ مذکورہ خاتون بیجنگ کے لیے معلومات جمع کر رہی تھیں",
       "image_url": "",
       "published": "2026-11-08T23:39:33+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "قدرتی دولت سے مالا مال پاکستان عالمی سرمایہ کاری کی نئی راہیں کھولنے کو تیار",
+      "link": "https://www.express.pk/story/2843131/endowed-with-natural-wealth-pakistan-is-ready-to-open-new-avenues-for-global-investment-2843131",
+      "summary": "پاکستان منرلز انویسٹمنٹ فورم 12 اور 13 نومبر کو اسلام آباد میں منعقد ہو گا",
+      "image_url": "",
+      "published": "2026-11-08T23:25:04+00:00",
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
@@ -492,31 +722,11 @@
       "language": "ur"
     },
     {
-      "title": "راولپنڈی ٹیسٹ؛ پاکستان کی سری لنکا کے خلاف بیٹنگ جاری",
+      "title": "راولپنڈی ٹیسٹ؛ پاکستان کی سری لنکا کے خلاف بیٹنگ جاری، طیب عارف کی ڈیبیو پر نصف سنچری",
       "link": "https://www.express.pk/story/2843129/pakistan-vs-sri-lanka-first-test-in-rawalpindi-2843129",
-      "summary": "پاکستان کی جانب سے ٹیسٹ ٹیم میں 4 کھلاڑی ڈیبیو کر رہے ہیں",
+      "summary": "قومی ٹیم کے دو کھلاڑی 90 رنز پر آؤٹ ہوگئے، پہلی وکٹ کی شراکت میں 86 رنز بنائے گئے",
       "image_url": "",
       "published": "2026-11-08T23:09:55+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ہنگو میں پولیس پوسٹ پر دہشتگردوں کا حملہ، 3 اہلکار اغوا، ایک شہید",
-      "link": "https://www.express.pk/story/2843127/terrorists-attack-police-post-in-hangu-3-personnel-abducted-one-martyred-2843127",
-      "summary": "مقابلے کے بعد پوسٹ کا کنٹرول واپس سنبھال لیا گیا، فرار دہشت گردوں کا تعاقب جاری ہے، حکام",
-      "image_url": "",
-      "published": "2026-11-08T23:09:52+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "نئے صوبے: خواجہ آصف کی صوبائی دارالحکومتوں کے اختیارات تقسیم کرنے کی تجویز",
-      "link": "https://www.express.pk/story/2843126/new-provinces-khawaja-asifs-proposal-to-devolve-the-powers-of-provincial-capitals-2843126",
-      "summary": "شہریوں کو سہولیات کی فراہمی یقینی بنانے کے لیے انتظامی اختیارات کی تقسیم ضروری ہے، وزیر دفاع",
-      "image_url": "",
-      "published": "2026-11-08T23:09:30+00:00",
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
@@ -537,46 +747,6 @@
       "summary": "Residents cite shortages of medicines, basic facilities and treatment as governor vows review of Sehat Card and hospit",
       "image_url": "",
       "published": "2026-11-08T23:07:58+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "ایران جنگ ختم کرانے کے لیے ٹرمپ کی نئی سفارتی کوشش، شی جن پنگ اور پیوٹن سے ملاقات متوقع",
-      "link": "https://www.express.pk/story/2843125/trump-expects-to-meet-xi-jinping-and-vladimir-putin-at-china-apec-summit-2843125",
-      "summary": "امریکی صدر کے مطابق مجوزہ ملاقاتوں میں مختلف عالمی مسائل پر بات چیت کا موقع ملے گا",
-      "image_url": "",
-      "published": "2026-11-08T22:59:03+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ایران جنگ کے خاتمے کی کوششیں، ٹرمپ اور قطری وزیراعظم آج وائٹ ہاؤس میں ملیں گے",
-      "link": "https://www.express.pk/story/2843124/trump-to-meet-qatar-prime-minister-at-white-house-amid-iran-conflict-2843124",
-      "summary": "ملاقات ایسے وقت میں ہو رہی ہے جب ایران کے ساتھ جاری تنازع ختم کرانے کی سفارتی کوششوں کو اہم رکاوٹوں کا سامنا ہے",
-      "image_url": "",
-      "published": "2026-11-08T22:58:44+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ٹرمپ نے مشکل فیصلے کرکے وہ کام کیے جو سابق حکومتیں نہ کرسکیں، مارکو روبیو",
-      "link": "https://www.express.pk/story/2843123/marco-rubio-defends-trumps-decision-to-tackle-difficult-issues-ignored-by-previous-administrations-2843123",
-      "summary": "یہ بیان ایسے وقت میں سامنے آیا جب ٹرمپ انتظامیہ کی خارجہ اور داخلی پالیسیوں اور ایران سے متعلق اقدامات، پر بحث جاری ہے",
-      "image_url": "",
-      "published": "2026-11-08T22:58:20+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Sub-provincial schools dept secretariats planned",
-      "link": "https://tribune.com.pk/story/2639385/sub-provincial-schools-dept-secretariats-planned",
-      "summary": "South, central, north Punjab to have own secretaries",
-      "image_url": "",
-      "published": "2026-11-08T22:12:13+00:00",
       "source": "Express Tribune",
       "category": "Pakistan",
       "language": "en"
@@ -632,36 +802,6 @@
       "language": "ur"
     },
     {
-      "title": "مصر میں دو ٹرینوں کے درمیان خوفناک تصادم، 7 افراد ہلاک، درجنوں زخمی",
-      "link": "https://www.express.pk/story/2843120/horrific-collision-between-two-trains-in-egypt-7-people-killed-dozens-injured-2843120",
-      "summary": "حادثے کے بعد کئی بوگیاں پٹری سے اتر کر الٹ گئیں",
-      "image_url": "",
-      "published": "2026-11-08T21:09:53+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "امریکا نے جنگ چھیڑی تو ایران خاموش نہیں بیٹھے گا، عباس عراقچی کی سخت وارننگ",
-      "link": "https://www.express.pk/story/2843119/if-the-us-starts-a-war-iran-will-not-remain-silentabbas-araghchis-stern-warning-2843119",
-      "summary": "امریکی ووٹرز اپنا فیصلہ سنا چکے ہیں، اب وائٹ ہاؤس کی باری ہے، ایرانی وزیر خارجہ",
-      "image_url": "",
-      "published": "2026-11-08T20:58:05+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کراچی، شہر کے مختلف علاقوں میں پولیس مقابلے، 2 زخمیوں سمیت 7 ملزمان گرفتار",
-      "link": "https://www.express.pk/story/2843118/karachi-police-encounters-in-various-parts-of-the-city-7-suspects-arrested-including-2-who-sustained-injuries-2843118",
-      "summary": "ملزمان کے قبضے سے اسلحہ، موبائل فونز، نقدی اور موٹر سائیکلیں برآمد کرلی گئیں",
-      "image_url": "",
-      "published": "2026-11-08T20:14:34+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
       "title": "فیصل آباد: چچی نے بھتیجی پر مبینہ طور پر پیٹرول چھڑک کر آگ لگا دی",
       "link": "https://jang.com.pk/news/1631598",
       "summary": "فیصل آباد کے علاقے تاندلیانوالہ میں چچی نے اپنی 10 سالہ بھتیجی پر مبینہ طور پر پیٹرول چھڑک کر آگ لگا دی۔واقعہ کے بعد بچی کو فوری طور پر...",
@@ -688,16 +828,6 @@
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-09/b_1631601_015315_updates.jpg\"/",
       "published": "2026-11-08T20:11:48+00:00",
       "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "اورنگی ٹاؤن میں پراسرار فائرنگ کی زد میں آ کر 24 سالہ نوجوان زخمی",
-      "link": "https://www.express.pk/story/2843117/24-year-old-man-injured-in-mysterious-firing-incident-in-orangi-town-2843117",
-      "summary": "زخمی نوجوان کو طبی امداد کے لیے عباسی شہید اسپتال منتقل کردیا گیا",
-      "image_url": "",
-      "published": "2026-11-08T20:10:24+00:00",
-      "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
     },
@@ -760,16 +890,6 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "معاہدہ نہ کیا تو فوجی آپشن موجود ہے، ایران کے 38 پُل نشانے پر ہیں، ٹرمپ",
-      "link": "https://www.express.pk/story/2843116/if-no-agreement-is-reached-the-military-option-remains-on-the-table-38-iranian-bridges-are-targeted-says-trump-2843116",
-      "summary": "تین امریکی طیارہ بردار بحری جہاز مکمل طور پر ہتھیاروں سے لیس ہیں، امریکی صدر",
-      "image_url": "",
-      "published": "2026-11-08T19:24:07+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
     },
     {
       "title": "IESCO introduces 24/7 QR code payment facility for consumers",
@@ -880,126 +1000,6 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "عراق میں اہم گیس فیلڈ پر ڈرون حملہ، بجلی کا بڑا بحران پیدا ہونے کا خدشہ",
-      "link": "https://www.express.pk/story/2843115/drone-attack-on-a-major-gas-field-in-iraq-fears-of-a-major-electricity-crisis-2843115",
-      "summary": "ڈرون حملے میں گیس ذخیرہ کرنے والے حصے کو نشانہ بنایا گیا، انجینئر",
-      "image_url": "",
-      "published": "2026-11-08T18:40:13+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "NCCIA returns Rs 2.94 million to online fraud victim",
-      "link": "https://arynews.tv/nccia-returns-rs-2-94-million-to-online-fraud-victim",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/FotoJet-2026-11-08T232344.293.jpg",
-      "published": "2026-11-08T18:29:45+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "اسرائیل کو سانس لینے کیلئے ہوا کی طرح نئی قیادت کی ضرورت ہے، حکومت سازی کا اختیار ملنے کے بعد گادی آئزنکوٹ کا اعلان ... اسرائیلی صدر نے سابق آرمی چیف کو نئی حکومت بنانے ... مزید",
-      "link": "https://urdupoint.com/n/5004122",
-      "summary": "",
-      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_65b0c_1794162966.jpg._3",
-      "published": "2026-11-08T18:29:20+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سندھ کے مختلف شہروں میں دیوالی کی رونقیں، ہندو برادری کا بھرپور جشن، مسلمان بھی خوشیوں میں شریک",
-      "link": "https://www.express.pk/story/2843114/diwali-celebrations-in-various-cities-of-sindh-hindu-community-celebrates-in-full-swing-muslims-also-join-in-the-joy-2843114",
-      "summary": "خصوصی پوجا پاٹ کے دوران ملک کی سلامتی، استحکام، ترقی اور خوشحالی کے لیے دعائیں مانگی گئیں",
-      "image_url": "",
-      "published": "2026-11-08T18:29:08+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "وفاقی وزیر ریلوے محمد حنیف عباسی کا راولپنڈی میں خاتون اینکرپرسن ربیعہ احسن کے قتل پر گہرے دکھ اور افسوس کا اظہار",
-      "link": "https://urdupoint.com/n/5004121",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-08T18:27:01+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "No marital dispute reported between Rabia Ahsan and husband, family tells police",
-      "link": "https://arynews.tv/no-marital-dispute-reported-between-rabia-ahsan-and-husband-family-tells-police",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Rabia-Ahasan.jpg",
-      "published": "2026-11-08T18:22:04+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "اقتصادی تعاون تنظیم وزرائے خارجہ اجلاس، علاقائی کشیدگی پر زیادہ توجہ متوقع",
-      "link": "https://www.express.pk/story/2843113/economic-cooperation-organization-foreign-ministers-meeting-greater-focus-on-regional-tensions-expected-2843113",
-      "summary": "ایرانی وزیر خارجہ کی ممکنہ شرکت اہم، شہباز شریف اور اسحق ڈار سے ملاقاتیں متوقع",
-      "image_url": "",
-      "published": "2026-11-08T18:12:44+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "خاتونِ اول بی بی آصفہ بھٹو زرداری کا صحافی ربیعہ احسن کے قتل پر گہرے دکھ اور افسوس کا اظہار",
-      "link": "https://urdupoint.com/n/5004120",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-08T18:12:06+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پیپلز پارٹی ہیومن رائٹس سیل کا ربیعہ احسن کے قتل پر اظہارِ تشویش، خواتین کے قتل اور تشدد کے خلاف قومی ایمرجنسی نافذ کرنے کا مطالبہ",
-      "link": "https://urdupoint.com/n/5004119",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-08T18:12:02+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پہلے ایلیویٹڈ یوٹرن پر شہریوں کی تنقید، ٹرانس کراچی کی وضاحت",
-      "link": "https://jang.com.pk/news/1631594",
-      "summary": "یونیورسٹی روڈ پر بی آر ٹی لائن کے پہلے ایلیویٹڈ یوٹرن کی چوڑائی پر شہریوں کی تنقید کے بعد ٹرانس کراچی کی ڈیزائن سے متعلق وضاحت سامنے...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-08/b_1631594_120144_updates.jpg\"/",
-      "published": "2026-11-08T18:11:37+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "جیل میں بانی پی ٹی آئی، بشریٰ بی بی کا مکمل طبی معائنہ، میڈیکل ٹیم واپس روانہ",
-      "link": "https://jang.com.pk/news/1631590",
-      "summary": "اڈیالہ جیل راولپنڈی میں بانی پی ٹی آئی اور اُن کی اہلیہ بشریٰ بی بی کا طبی معائنہ مکمل ہوگیا، میڈیکل ٹیم جیل سے روانہ ہوگئی۔جیل...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-08/b_1631590_111941_updates.jpg\"/",
-      "published": "2026-11-08T18:11:30+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "علامہ اقبال کا 149 واں یوم ولادت، مزار پر تبدیلی گارڈز کی پرُوقار تقریب",
-      "link": "https://www.express.pk/story/2843112/the-149th-birth-anniversary-of-the-poet-of-the-east-allama-muhammad-iqbal-is-being-celebrated-today-2843112",
-      "summary": "علامہ محمد اقبال نے اپنی شاعری کے ذریعے فکری اور سیاسی طور پرمنتشر مسلمانوں کو خواب غفلت سے جگایا",
-      "image_url": "",
-      "published": "2026-11-08T18:09:43+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
     }
   ]
 }
