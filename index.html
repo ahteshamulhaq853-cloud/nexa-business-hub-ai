@@ -2578,43 +2578,7 @@ footer strong{color:#8bdfff!important;letter-spacing:1.1px!important}
  function makeDocument(x){
   const safeJS=x.js.replace(/<\/script/gi,"<\\/script");
   return '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>'+x.css+'</style></head><body>'+x.html+'<scr'+'ipt>'+safeJS+'</scr'+'ipt>
-<!-- NEXA section cleanup: Jobs, News and Interesting Facts removed; Weather retained separately. -->
-<script id="nexa-section-cleanup">
-(function(){
-  const jobs = document.getElementById("latestJobsPage");
-  const news = document.getElementById("latestNewsPage");
-  const facts = document.getElementById("interestingFactsPage");
-  const weatherPanel = document.getElementById("weatherPanel");
-
-  if (weatherPanel) {
-    const weatherPage = document.createElement("section");
-    weatherPage.id = "weatherPage";
-    weatherPage.className = "page";
-    weatherPanel.style.display = "block";
-    weatherPanel.style.marginTop = "0";
-    weatherPage.appendChild(weatherPanel);
-    if (news && news.parentNode) news.parentNode.insertBefore(weatherPage, news);
-  }
-
-  [jobs, news, facts].forEach(function(section){
-    if (section && section.parentNode) section.remove();
-  });
-
-  const removedTargets = ["latestJobsPage", "latestNewsPage", "interestingFactsPage"];
-  document.querySelectorAll("[onclick]").forEach(function(el){
-    const action = el.getAttribute("onclick") || "";
-    if (removedTargets.some(function(id){ return action.includes(id); })) el.remove();
-  });
-  document.querySelectorAll('a[href*="latestJobsPage"],a[href*="latestNewsPage"],a[href*="interestingFactsPage"]').forEach(function(el){el.remove();});
-
-  document.title = "NEXA Studio | Live TV & Weather";
-  const description = document.querySelector('meta[name="description"]');
-  if (description) description.setAttribute("content", "NEXA Studio brings Live TV, district-wise weather and useful digital services together in one digital workspace.");
-})();
-</script>
-
 </body></html>';
- }
  window.cpRun=function(){byId("cpPreview").srcdoc=makeDocument(getSource());byId("cpPreviewState").textContent="Updated";setStatus("Preview updated successfully.");};
  window.cpSave=function(){try{localStorage.setItem(key,JSON.stringify(getSource()));setStatus("Project saved on this device.");}catch(e){setStatus("Browser storage is unavailable.");}};
  window.cpReset=function(){if(!confirm("Reset the editors to the starter example?"))return;byId("cpProjectName").value=defaults.cpProjectName;byId("cpHTML").value=defaults.cpHTML;byId("cpCSS").value=defaults.cpCSS;byId("cpJS").value=defaults.cpJS;cpSave();cpRun();};
@@ -4703,3 +4667,37 @@ label{color:#d5e2ee;font-weight:700}
   document.title="NEXA Studio | Jobs, News, Live TV & Weather";
 })();
 </script>
+
+<script id="nexa-section-cleanup">
+(function(){
+  const jobs=document.getElementById("latestJobsPage");
+  const news=document.getElementById("latestNewsPage");
+  const facts=document.getElementById("interestingFactsPage");
+  const weather=document.getElementById("weatherPanel");
+  if(weather){
+    const page=document.createElement("section");
+    page.id="weatherPage";
+    page.className="page";
+    weather.style.display="block";
+    weather.style.marginTop="0";
+    page.appendChild(weather);
+    if(news&&news.parentNode)news.parentNode.insertBefore(page,news);
+  }
+  [jobs,news,facts].forEach(el=>{if(el)el.remove();});
+  const removed=["latestJobsPage","latestNewsPage","interestingFactsPage"];
+  document.querySelectorAll("#bottomNav button,[onclick]").forEach(el=>{
+    const action=el.getAttribute("onclick")||"";
+    if(removed.some(id=>action.includes(id)))el.remove();
+  });
+  document.querySelectorAll("a[href]").forEach(el=>{
+    if(removed.some(id=>(el.getAttribute("href")||"").includes(id)))el.remove();
+  });
+  document.querySelectorAll(".studio-hero-actions button").forEach(el=>{
+    if(/jobs|news/i.test(el.textContent||""))el.remove();
+  });
+  document.title="NEXA Studio | Live TV & Weather";
+  const desc=document.querySelector('meta[name="description"]');
+  if(desc)desc.content="NEXA Studio brings Live TV, district-wise weather and useful digital services together in one digital workspace.";
+})();
+</script>
+</body></html>
