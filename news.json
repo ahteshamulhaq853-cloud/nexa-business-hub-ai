@@ -1,6 +1,76 @@
 {
-  "updated": "2026-11-10T04:23:59.413337+00:00",
+  "updated": "2026-11-10T05:20:59.695326+00:00",
   "items": [
+    {
+      "title": "Trump tells Reuters that Qatar, Saudi Arabia want peaceful Iran deal, US ready for strikes if needed",
+      "link": "https://arynews.tv/donald-trump-says-qatar-saudi-arabia-want-peaceful-iran-deal",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Donald-Trump-Iran-war.jpg",
+      "published": "2026-11-10T05:15:19+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "13-year-old girl’s rukhsati foiled in Lahore, groom among six arrested",
+      "link": "https://arynews.tv/13-year-old-girls-rukhsati-foiled-in-lahore-groom-six-arrested",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Underage-marriage-Lahore-police-foiled.jpg",
+      "published": "2026-11-10T05:00:31+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Anthropic unveils new Fable, Mythos models as competition heats up ahead of IPO",
+      "link": "https://www.dawn.com/news/2043474/anthropic-unveils-new-fable-mythos-models-as-competition-heats-up-ahead-of-ipo",
+      "summary": "Anthropic on Monday unveiled two new artificial intelligence models, Claude Fable 5.2 and Claude Mythos 5.2, as the OpenAI rival seeks to strengthen its position in the fast-growing AI market ahead of its planned initial public offering (IPO). The company said Claude Fable 5.2 was designed for coding, reasoning and AI agent tasks, while Claude Mythos 5.2 was",
+      "image_url": "https://i.dawn.com/large/2026/11/100939527b291cd.webp",
+      "published": "2026-11-10T04:45:56+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "The Papers: 'Brand jailed for 10 years' and 'shamed star caged'",
+      "link": "https://www.bbc.co.uk/news/articles/c69vzv7llen7o?at_medium=RSS&at_campaign=rss",
+      "summary": "Russell Brand's sentencing after being convicted of rape and sexual assault dominates Tuesday's front pages.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/564d/live/2d734ee0-dc97-11f1-a701-fddedf244c16.jpg",
+      "published": "2026-11-10T04:45:06+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Shehbaz Sharif faces greater constraints than Nawaz Sharif, claims Sardar Yaqoob Nasir",
+      "link": "https://arynews.tv/shehbaz-sharif-faces-huge-constraints-than-nawaz-yaqoob-nasir",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Sardar-Yakoob-Shehbaz-Sharif-Nawaz-Sharif.jpg",
+      "published": "2026-11-10T04:41:39+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Economic ills",
+      "link": "https://www.dawn.com/news/2043440/economic-ills",
+      "summary": "DESPITE an oversold stabilisation, many of our economy’s vital signs continue to falter. The economy resembles a patient out of the ICU but still in hospital. Since 2024, our per capita GDP growth has been near zero — sadly, South Asia’s slowest recorded pace. Even our recent growth spurts, brief and import-led, have given way to longer busts, draining reser",
+      "image_url": "https://i.dawn.com/large/2025/04/67fdcea354cd2.jpg",
+      "published": "2026-11-10T04:38:01+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "فیصل آباد میں سیلز گرل پر تشدد کا واقعہ اور مریم نواز کا سخت موقف: ’تھپڑ کے جواب میں تھپڑ‘ زیرِ بحث کیوں؟",
+      "link": "https://www.bbc.com/urdu/articles/cmy0e09wew9no?at_medium=RSS&at_campaign=rss",
+      "summary": "پنجاب کی وزیرِ اعلیٰ مریم نواز کی جانب سے شیئر کی گئی ایک ویڈیو، جس میں فیصل آباد میں تشدد کا نشانہ بننے والی دکان کی ملازمہ کو زیرِ حراست ملزم پر تھپڑ مارتے دکھایا گیا، سوشل میڈیا پر بحث کا موضوع بن گئی ہے۔ مریم نواز نے اس اقدام کو کمزور اور مظلوم افراد کے تحفظ سے جوڑا، جبکہ ناقدین نے سوال اٹھایا کہ آیا پولیس حراست میں کسی ملزم کی عوامی تذلیل قانون کی حکمرا",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/3693/live/b2633cd0-dcb7-11f1-b4e8-ffbfa67cb310.jpg",
+      "published": "2026-11-10T04:27:52+00:00",
+      "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
     {
       "title": "China denies espionage allegations amid Nvidia CEO controversy",
       "link": "https://arynews.tv/china-denies-espionage-allegations-amid-nvidia-ceo-controversy",
@@ -14,8 +84,8 @@
     {
       "title": "Trump says more US attacks on Iran 'highly unlikely'",
       "link": "https://www.bbc.co.uk/news/articles/cq5yny4nl2d3o?at_medium=RSS&at_campaign=rss",
-      "summary": "The president says the US is keeping \"status quo\" with Iran but remains “locked and loaded” should the situation in the Middle East change.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6017/live/b94816e0-dca5-11f1-b441-2b33b063138f.jpg",
+      "summary": "The president says the US is keeping \"status quo\" with Iran but remains “locked and loaded” should the situation change.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/90ba/live/c14e2220-dcc4-11f1-95c4-d138862af378.jpg",
       "published": "2026-11-10T04:09:16+00:00",
       "source": "BBC News",
       "category": "World",
@@ -122,6 +192,16 @@
       "language": "en"
     },
     {
+      "title": "Hegseth likely to face impeachment vote this week",
+      "link": "https://www.dawn.com/news/2043446/hegseth-likely-to-face-impeachment-vote-this-week",
+      "summary": "WASHINGTON: Repres­­­entative Thomas Massie, a Kentucky Republican, introduced articles of impeachment against US Defence Secretary Pete Hegseth on Monday, setting off a two-day clock for an expected House vote on Wednesday on charges including waging war against Iran without congressional approval and other abuses of power. Hegseth, who calls himself the “s",
+      "image_url": "https://i.dawn.com/large/2026/11/10074520de7ae29.webp",
+      "published": "2026-11-10T02:38:21+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "شیخ حسینہ کی بنگلہ دیش واپسی کے لیے پاسپورٹ کے اجرا کی درخواست: وہ معاملہ جو ڈھاکہ اور نئی دہلی کے لیے دردِ سر بنا ہوا ہے",
       "link": "https://www.bbc.com/urdu/articles/cw62y2nx334jo?at_medium=RSS&at_campaign=rss",
       "summary": "بنگلہ دیش کی معزول وزیر اعظم شیخ حسینہ واجد نے انڈیا میں خود ساختہ جلاوطنی ختم کر کے ڈھاکہ واپس آنے کے لیے نئے پاسپورٹ اور قومی شناختی کارڈ کے اجرا کی درخواست دی ہے۔ مبصرین کا کہنا ہے کہ اس صورتحال نے شیخ حسینہ کے ساتھ ساتھ بنگلہ دیش کی حکومت کے لیے بھی پیچیدگی پیدا کر دی ہے۔",
@@ -130,6 +210,36 @@
       "source": "BBC Urdu",
       "category": "اردو",
       "language": "ur"
+    },
+    {
+      "title": "LPG strike postponed after talks",
+      "link": "https://www.dawn.com/news/2043371/lpg-strike-postponed-after-talks",
+      "summary": "KARACHI: The Pakistan LPG Marketers Association has postponed its planned strike after a meeting with Sindh Governor Syed Nehal Hashmi on Monday. The PLPGMA had annou­nced a strike for Nov 16 over the lack of consultation on the LPG policy. The meeting discussed LPG supply and related policy matters in the context of the evolving Middle East situation and pr",
+      "image_url": "https://i.dawn.com/large/2026/11/1004113908d5c6f.webp",
+      "published": "2026-11-10T02:03:58+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "High returns lure foreign investors",
+      "link": "https://www.dawn.com/news/2043374/high-returns-lure-foreign-investors",
+      "summary": "KARACHI: Foreign investment in Pakistan Investment Bonds (PIBs) exceeded $500 million in the first four months of 2026-27, reflecting growing interest in the higher returns offered by domestic bonds. Additionally, inflows in the treasury bills (T-bills) totalled $238 million in the July-October period of FY27. Returns on domestic bonds were already the highe",
+      "image_url": "https://i.dawn.com/large/2022/08/221420587f9b1c5.jpg",
+      "published": "2026-11-10T02:03:58+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Used car imports under gift scheme persist despite tough restrictions, say vendors",
+      "link": "https://www.dawn.com/news/2043373/used-car-imports-under-gift-scheme-persist-despite-tough-restrictions-say-vendors",
+      "summary": "KARACHI: Imports of used cars under the gift scheme have continued, with more than 2,000 units arriving in the country during October despite tough import restrictions by the government, according to auto vendors. While used car imports continue, vendors are also unhappy with the new auto policy announced by the government last week, which they believe will ",
+      "image_url": "https://i.dawn.com/large/2026/09/240730572a9417d.webp",
+      "published": "2026-11-10T02:03:58+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
     },
     {
       "title": "Opposition demands ‘return to talks’ in AJK",
@@ -144,7 +254,7 @@
     {
       "title": "'Cruise for life' ship seized in Singapore",
       "link": "https://www.bbc.co.uk/news/articles/cqr7y7myer53o?at_medium=RSS&at_campaign=rss",
-      "summary": "It comes weeks after the cruise came to a sudden end, leaving 200 guests stranded in Cambodia.",
+      "summary": "The ship was meant to take guests around the world, but the trip was cut short after its operator ran out of money.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/54ec/live/78680920-dca3-11f1-93a0-e3acb3757eea.jpg",
       "published": "2026-11-10T01:49:06+00:00",
       "source": "BBC News",
@@ -177,16 +287,6 @@
       "summary": "At least 1,350 offenders have been released from jail early under the scheme so far.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d41e/live/421e5c00-dca0-11f1-9c8c-05853c802f05.jpg",
       "published": "2026-11-10T01:06:37+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "The Papers: 'Brand jailed for 10 years' and 'shamed star caged'",
-      "link": "https://www.bbc.co.uk/news/articles/c69vzv7llen7o?at_medium=RSS&at_campaign=rss",
-      "summary": "Russell Brand's sentencing after being convicted of rape and sexual assault dominates Tuesday's front pages.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/564d/live/2d734ee0-dc97-11f1-a701-fddedf244c16.jpg",
-      "published": "2026-11-10T00:51:54+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -252,6 +352,86 @@
       "language": "en"
     },
     {
+      "title": "علامہ اقبال کے یوم ولادت کے موقع پر واشنگٹن ڈی سی میں خصوصی تقریب",
+      "link": "https://www.express.pk/story/2843319/iqbal-day-ceremony-washington-dc-2843319",
+      "summary": "ہماری قومی زندگی کی فکری اساس اقبال کی بصیرت سے وابستہ ہے، رضوان سعید شیخ",
+      "image_url": "",
+      "published": "2026-11-09T23:58:04+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "حماس کا بورڈ آف پیس پر غزہ کے سیلابی بحران کو مسخ اور اسرائیلی کردار نظرانداز کرنے کا الزام",
+      "link": "https://www.express.pk/story/2843318/hamas-says-board-of-peace-distorts-gaza-flood-crisis-overlooks-israels-role-2843318",
+      "summary": "خیمے زیرِ آب آنے اور امدادی سامان کی شدید قلت کی بنیادی وجوہات میں اسرائیلی ناکہ بندی ہے, حماس",
+      "image_url": "",
+      "published": "2026-11-09T23:53:50+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Trump says Qatar, Saudi prefer peace in Iran conflict",
+      "link": "https://tribune.com.pk/story/2639559/trump-says-qatar-saudi-prefer-peace-in-iran-conflict",
+      "summary": "Qatari prime minister welcomes ‘positive discussions’ with Trump and Vance on US-Iran deal",
+      "image_url": "",
+      "published": "2026-11-09T23:53:33+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "کراچی؛ کپڑوں کی فیکٹری میں آتشزدگی، سامان جل کر خاکستر",
+      "link": "https://www.express.pk/story/2843317/karachi-fire-breaks-out-at-garment-factory-goods-reduced-to-ashes-2843317",
+      "summary": "واقعے میں کسی جانے نقصان کی اطلاع نہیں ملی، ریسکیو 1122",
+      "image_url": "",
+      "published": "2026-11-09T23:45:34+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "خاتون کا قیمت ادائیگی کے باوجود پلاٹ نہ ملنے پر بلڈر کے خلاف عدالت سے رجوع",
+      "link": "https://www.express.pk/story/2843314/woman-moves-court-against-builder-for-not-getting-plot-despite-paying-price-2843314",
+      "summary": "بلڈر کی جانب سے دیے گئے چیک باؤنس ہو گئے، عدالت میں مؤقف",
+      "image_url": "",
+      "published": "2026-11-09T23:43:39+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "فرانس نے سپر مارکیٹوں کے ریفریجریٹرز ہیک کرنے کا الزام ایران پر عائد کردیا، جوابی کارروائی کا اعلان",
+      "link": "https://www.express.pk/story/2843313/french-officials-blame-iran-for-refrigerator-hacks-vow-retaliation-2843313",
+      "summary": "سینکڑوں کاروباری مراکز کے فریج اور فریزرز کا درجہ حرارت تبدیل کرکے بڑے پیمانے پر مالی نقصان پہنچایا گیا",
+      "image_url": "",
+      "published": "2026-11-09T23:41:27+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "اسلام آباد ایئرپورٹ سے لاپتا امریکی خاتون کا معمہ حل، اڈیالہ جیل منتقل ہونے کا انکشاف",
+      "link": "https://www.express.pk/story/2843312/missing-us-woman-found-adiala-jail-2843312",
+      "summary": "فرحانہ رفیق کو ریاست مخالف مواد سوشل میڈیا پر پھیلانے کے الزام میں گرفتار کیا گیا ہے",
+      "image_url": "",
+      "published": "2026-11-09T23:37:51+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "امریکا کے سامنے ایران کی سات شرائط ، محسن رضائی نے ہتھیار ڈالنے کا مطالبہ کردیا",
+      "link": "https://www.express.pk/story/2843311/irans-mohsen-rezaei-tells-us-to-accept-tehrans-seven-conditions-to-end-war-2843311",
+      "summary": "واشنگٹن ایک مایوس جواری کی طرح مسلسل کوششیں کر رہا ہے، سیکریٹر نشنل سکیورٹی کونسل",
+      "image_url": "",
+      "published": "2026-11-09T23:21:54+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Man Utd expected to sack head coach Carrick",
       "link": "https://www.bbc.co.uk/sport/football/articles/cmy0r041ed0po?at_medium=RSS&at_campaign=rss",
       "summary": "Michael Carrick's Manchester United reign appears close to an end following the club's worst start to a domestic campaign in 40 years.",
@@ -260,6 +440,16 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "گھر کا بھیدی لنکا ڈھائے؛ کروڑوں کی چوری میں ڈرائیور ہی ملوث نکلا",
+      "link": "https://www.express.pk/story/2843308/an-insider-brings-about-the-downfall-the-driver-himself-turned-out-to-be-involved-in-a-multi-million-theft-2843308",
+      "summary": "گرفتار ملزمان کی شناخت ندیم اکبر اور سہیل کے نام سے ہوئی ہے، پولیس حکام",
+      "image_url": "",
+      "published": "2026-11-09T22:58:54+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Phones to be banned from pupils' bags or pockets under stricter rules for schools in England",
@@ -289,6 +479,36 @@
       "published": "2026-11-09T22:16:37+00:00",
       "source": "BBC News",
       "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Tribal district literacy schemes face collapse",
+      "link": "https://tribune.com.pk/story/2639554/tribal-district-literacy-schemes-face-collapse",
+      "summary": "Unpaid teachers and political interference jeopardise education for 40,000 children",
+      "image_url": "",
+      "published": "2026-11-09T22:09:03+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Ninety-four Balochistan teachers abscond abroad",
+      "link": "https://tribune.com.pk/story/2639555/ninety-four-balochistan-teachers-abscond-abroad",
+      "summary": "Universities spent more than Rs268 million on scholarships for these faculty members",
+      "image_url": "",
+      "published": "2026-11-09T22:09:03+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Kundi vows public university support",
+      "link": "https://tribune.com.pk/story/2639556/kundi-vows-public-university-support",
+      "summary": "No administrative interference and VCs to get freedom",
+      "image_url": "",
+      "published": "2026-11-09T22:09:03+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
       "language": "en"
     },
     {
@@ -352,6 +572,26 @@
       "language": "ur"
     },
     {
+      "title": "Winter still away, but gas woes already in Hyd",
+      "link": "https://tribune.com.pk/story/2639541/winter-still-away-but-gas-woes-already-in-hyd",
+      "summary": "Supply cut to 8 hours, but residents say they receive barely 7 and a half, with shutdowns",
+      "image_url": "",
+      "published": "2026-11-09T20:50:49+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "A childhood cut short by a kite",
+      "link": "https://tribune.com.pk/story/2639535/a-childhood-cut-short-by-a-kite",
+      "summary": "Five-year-old Sanaya buried; family demands total ban on killer string",
+      "image_url": "",
+      "published": "2026-11-09T20:50:49+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "کراچی، اورنگی ٹاؤن میں پولیس مقابلہ، زخمی سمیت 2 ڈاکو گرفتار",
       "link": "https://www.express.pk/story/2843303/police-encounter-in-orangi-town-karachi-2-robbers-arrested-including-one-who-was-wounded-2843303",
       "summary": "زخمی ملزم کی شناخت محمد شہباز کے نام سے ہوئی ہے",
@@ -390,6 +630,16 @@
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
+    },
+    {
+      "title": "Laiba case exposes official apathy",
+      "link": "https://tribune.com.pk/story/2639533/laiba-case-exposes-official-apathy",
+      "summary": "Other victims accuse LEAs of ignoring repeated complaints, evidence against accused",
+      "image_url": "",
+      "published": "2026-11-09T20:11:28+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
     },
     {
       "title": "تربیلا ڈیم سے دریائے سندھ میں مزید اضافی پانی آج رات چھوڑا جاسکتا ہے",
@@ -622,6 +872,16 @@
       "language": "en"
     },
     {
+      "title": "Sindh farmers sue German climate polluters",
+      "link": "https://tribune.com.pk/story/2639509/sindh-farmers-sue-german-climate-polluters",
+      "summary": "Flood-devastated peasants demand historic compensation for emissions",
+      "image_url": "",
+      "published": "2026-11-09T17:48:59+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "SC urges courts to deal civil cases on merit",
       "link": "https://tribune.com.pk/story/2639503/sc-urges-courts-to-deal-civil-cases-on-merit",
       "summary": "Restores two petitions, says litigants should not suffer for lawyers' genuine mistakes",
@@ -738,266 +998,6 @@
       "image_url": "",
       "published": "2026-11-09T16:49:27+00:00",
       "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کراچی، پی آئی اے نے شفافیت کے لیے تمام ملازمین کو ڈسکلوزر فارم جمع کرانے کی ہدایت کر دی",
-      "link": "https://www.express.pk/story/2843290/karachi-pia-has-directed-all-employees-to-submit-disclosure-forms-to-ensure-transparency-2843290",
-      "summary": "انتظامیہ نے ڈسکلوژر فارم جمع کرانے کے لیے 9 نومبر آخری تاریخ مقرر کی تھی",
-      "image_url": "",
-      "published": "2026-11-09T16:41:57+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کراچی، قتل کی واردات میں ملوث ملزم گرفتار، مقتول سے چھینے گئے 2 لاکھ روپے اور آئی فونز برآمد",
-      "link": "https://www.express.pk/story/2843289/karachi-suspect-involved-in-a-murder-case-arrested-200000-rupees-and-iphones-snatched-from-the-victim-recovered-2843289",
-      "summary": "پولیس نے تکنیکی حکمت عملی سے ملزم کو گرفتار کر لیا",
-      "image_url": "",
-      "published": "2026-11-09T16:31:28+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Nintendo executives promise new gaming experiences for upcoming Switch 2 console",
-      "link": "https://arynews.tv/nintendo-executives-promise-new-gaming-experiences-for-upcoming-switch-2-console",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/09/ARY-1200-x-675-px-2026-09-07T200834.910.jpg",
-      "published": "2026-11-09T16:28:52+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "عزیز آباد میں پانی کی قلت کے خلاف شہری سڑکوں پر نکل آئے، متعلقہ ادارے کے خلاف احتجاج",
-      "link": "https://www.express.pk/story/2843288/residents-in-azizabad-took-to-the-streets-over-water-shortages-protesting-against-the-relevant-authority-2843288",
-      "summary": "شہریوں کا کہنا تھا کہ علاقے میں پانی کی قلت نے ٹینکر مافیا کی چاندی کر دی",
-      "image_url": "",
-      "published": "2026-11-09T16:26:44+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Punjab CM says those who 'raise their hand against a helpless woman' will suffer the same fate",
-      "link": "https://www.dawn.com/news/2043302/punjab-cm-says-those-who-raise-their-hand-against-a-helpless-woman-will-suffer-the-same-fate",
-      "summary": "Punjab Chief Minister Maryam Nawaz said on Monday that those who dared to “raise their hand against a helpless woman” would suffer the same fate. “Dare to raise your hand against a helpless woman who leaves her home every day to earn an honest living, and be prepared to face the same humiliation. She will have the right and the opportunity to slap you back,”",
-      "image_url": "https://i.dawn.com/large/2026/02/15122752501c74c.webp",
-      "published": "2026-11-09T16:25:01+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "فیڈرل بی ایریا میں اے ٹی ایم سے رقم نکلوانے سے فراڈ کرنے والے پر علاقہ مکینوں کا بدترین تشدد",
-      "link": "https://www.express.pk/story/2843287/residents-of-the-area-severely-beat-a-fraudster-who-was-withdrawing-money-from-an-atm-in-federal-b-area-2843287",
-      "summary": "ملزم کے پرس میں مختلف شہریوں کے اے ٹی ایم اور کریڈٹ کارڈ موجود تھے",
-      "image_url": "",
-      "published": "2026-11-09T16:13:44+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "فیصل آباد: منشیات سپلائی معاملہ، ایس ایچ او سمیت 6 اہلکار ملازمت سے برخاست",
-      "link": "https://jang.com.pk/news/1631833",
-      "summary": "فیصل آباد پولیس نے منشیات سپلائی میں مبینہ طور پر ملوث ایس ایچ او سمیت 6 اہلکاروں کو ملازمت سے برخاست کردیا۔ترجمان فیصل آباد پولیس...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-09/b_1631833_092755_updates.jpg\"/",
-      "published": "2026-11-09T16:11:46+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "شرپسندوں کی فائرنگ سے زخمی نائک بوستان خان دم توڑ گئے: اے جے کے پولیس",
-      "link": "https://jang.com.pk/news/1631831",
-      "summary": "آزاد جموں و کشمیر پولیس نے کہا ہے کہ شرپسندوں کی فائرنگ سے زخمی سندھ رینجرز کے نائک بوستان خان آج دم توڑ گئے ہیں۔راولاکوٹ میں 5...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-09/b_1631831_092143_updates.jpg\"/",
-      "published": "2026-11-09T16:11:25+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "نورین نیازی اور عظمیٰ خان کی 48 گھنٹوں میں طبی بنیادوں پر رہائی کا امکان، ذرائع",
-      "link": "https://jang.com.pk/news/1631836",
-      "summary": "بانی پی ٹی آئی کی بہنوں نورین نیازی اور عظمیٰ خان کی 48 گھنٹوں میں طبی بنیادوں پر رہائی کا امکان ہے۔لاہور سے ذرائع کے مطابق نورین نیازی...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-09/b_1631836_100154_updates.jpg\"/",
-      "published": "2026-11-09T16:11:16+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "لاڑکانہ میں زہریلا دودھ پینے سے ایک ہی خاندان کے 12 سے زائد افراد بے ہوش",
-      "link": "https://www.express.pk/story/2843285/more-than-12-members-of-the-same-family-faint-after-drinking-poisoned-milk-in-larkana-2843285",
-      "summary": "متاثرین کوفوری طور پر چانڈکا اسپتال کی ایمرجنسی منتقل کردیا گیا",
-      "image_url": "",
-      "published": "2026-11-09T16:04:39+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Govt seeks $1.7b despite breaches",
-      "link": "https://tribune.com.pk/story/2639486/govt-seeks-17b-despite-breaches",
-      "summary": "WB rated $600m tranche 'moderately satisfactory' on tariff, fiscal pact breaches",
-      "image_url": "",
-      "published": "2026-11-09T16:02:20+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "ABHI public offering oversubscribed 1.6 times",
-      "link": "https://tribune.com.pk/story/2639495/abhi-public-offering-oversubscribed-16-times",
-      "summary": "Retail subscription opens Nov 12 and 13 at Rs15 to Rs22.50 per share; draws institutional interest",
-      "image_url": "",
-      "published": "2026-11-09T16:02:20+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Farmers pay for climate shift alone",
-      "link": "https://tribune.com.pk/story/2639494/farmers-pay-for-climate-shift-alone",
-      "summary": "Turkey's cotton output set to fall 38% as drought cuts acreage by 60% in the Soke region",
-      "image_url": "",
-      "published": "2026-11-09T16:02:20+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Working group set up for Ring Road estate",
-      "link": "https://tribune.com.pk/story/2639492/working-group-set-up-for-ring-road-estate",
-      "summary": "Rawalpindi, Islamabad chamber to sit with officials, notification due shortly",
-      "image_url": "",
-      "published": "2026-11-09T16:02:20+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Gold jumps Rs3,200 on weaker dollar",
-      "link": "https://tribune.com.pk/story/2639488/gold-jumps-rs3200-on-weaker-dollar",
-      "summary": "Safe-haven asset advances ahead of US inflation data",
-      "image_url": "",
-      "published": "2026-11-09T16:02:20+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Who is Alice Huang, the Chinese executive accused of spying on Nvidia CEO Jensen Huang?",
-      "link": "https://www.dawn.com/news/2043301/who-is-alice-huang-the-chinese-executive-accused-of-spying-on-nvidia-ceo-jensen-huang",
-      "summary": "Tech executive Alice Huang is the woman accused of spying for China during an affair with Jensen Huang, head of US artificial intelligence chip titan Nvidia, according to media reports. Public details are sparse about the woman, also known as Huang Le, who had reportedly been a top figure at a Singapore-based data centre company called Megaspeed Internationa",
-      "image_url": "https://i.dawn.com/large/2026/11/092043405fef669.webp",
-      "published": "2026-11-09T16:01:50+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "پاکستان ایک بہترین ثالث",
-      "link": "https://www.express.pk/story/2843284/pakistan-aik-behtareen-saalis-2843284",
-      "summary": "پاکستان بلا شک دنیائے اسلام کا ایک عظیم اور اہم ملک ہے۔ ایٹمی قوت ہونے کی وجہ سے اس کی اہمیت مزید بڑھ جاتی ہے",
-      "image_url": "",
-      "published": "2026-11-09T15:59:17+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ڈونلڈ ٹرمپ کی شکست پر ممکنہ اثرات",
-      "link": "https://www.express.pk/story/2843283/donald-trump-ki-shikast-par-mumkinah-asraat-2843283",
-      "summary": "خلیجی ممالک اور ان کے حکمرانوںکے امریکا اور ٹرمپ کے ساتھ کیے ہوئے کئی تجارتی معاہدے متاثر ہوسکتے ہیں",
-      "image_url": "",
-      "published": "2026-11-09T15:56:57+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "تیزی سے بوڑھا ہوتا جاپان",
-      "link": "https://www.express.pk/story/2843282/tezi-se-boorha-hota-japan-2843282",
-      "summary": "جاپان میں اوسط عمر چوراسی برس ہے اور سو برس سے اوپر کے انسانوں کی تعداد ایک لاکھ سے اوپر ہے",
-      "image_url": "",
-      "published": "2026-11-09T15:51:24+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "گندم آٹا سیاست ! کوٹہ سسٹم اورقومی خزانے کا ضیاع",
-      "link": "https://www.express.pk/story/2843281/gandum-aata-siyasat-quota-system-aur-qaumi-khazane-ka-ziya-2843281",
-      "summary": "پنجاب کی فلور ملنگ انڈسٹری میں سرکاری گندم کوٹہ سسٹم طویل عرصے سے اختلافات کا مرکز رہا ہے",
-      "image_url": "",
-      "published": "2026-11-09T15:51:24+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "مرد کا بھروسہ",
-      "link": "https://www.express.pk/story/2843280/mard-ka-bharosa-2843280",
-      "summary": "’’دو کچوریاں، ایک سموسہ، ان مردوں کا کیا بھروسہ!‘‘ ’’ایک آلو، دو پیاز، بھاڑ میں جائے مرد سماج!‘‘",
-      "image_url": "",
-      "published": "2026-11-09T15:51:23+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "PTI founder’s cousin released from jail",
-      "link": "https://arynews.tv/pti-founders-cousin-released-from-jail",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2025/08/Opposition-Leader-post.jpg.jpeg",
-      "published": "2026-11-09T15:35:52+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Foundayo meets main goal in late-stage sleep apnea study",
-      "link": "https://arynews.tv/foundayo-meets-main-goal-in-late-stage-sleep-apnea-study",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Foubdayo-.jpg",
-      "published": "2026-11-09T15:32:01+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Ground Force and Homes Under the Hammer star Tommy Walsh dies aged 69",
-      "link": "https://www.bbc.co.uk/news/articles/ck0e0elq4ndpo?at_medium=RSS&at_campaign=rss",
-      "summary": "The building and DIY expert also appeared on TV shows like Challenge Tommy Walsh and Clean It, Fix It.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5b38/live/d00f14e0-dc5b-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-11-09T15:27:00+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "UK's Russell Brand sentenced to 10-and-a-half years in jail for rape, sexual assault",
-      "link": "https://www.dawn.com/news/2043298/uks-russell-brand-sentenced-to-10-and-a-half-years-in-jail-for-rape-sexual-assault",
-      "summary": "Comedian Russell Brand, once one of Britain’s most high-profile broadcasters and a Hollywood star, was jailed for 10-and-a-half years on Monday after he was convicted of raping one woman and sexually assaulting three more around two decades ago. Brand — the former husband of US pop singer Katy Perry who in recent years moved away from the mainstream — was co",
-      "image_url": "https://i.dawn.com/large/2026/11/092015082365cd4.webp",
-      "published": "2026-11-09T15:18:44+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "مختلف اہم عہدوں پر رہنے کے باوجود آپ گجرات کی حالت نہیں بدل سکے: عظمٰی بخاری",
-      "link": "https://jang.com.pk/news/1631825",
-      "summary": "وزیر اطلاعات پنجاب عظمٰی بخاری۔وزیر اطلاعات پنجاب عظمٰی بخاری نے کہا کہ کئی سال سے مختلف عہدوں پر رہنے کے باوجود آپ گجرات کی حالت تو...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-09/b_1631825_081952_updates.jpg\"/",
-      "published": "2026-11-09T15:11:59+00:00",
-      "source": "Jang",
       "category": "اردو",
       "language": "ur"
     }
