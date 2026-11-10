@@ -1,25 +1,105 @@
 {
-  "updated": "2026-11-10T03:28:51.061275+00:00",
+  "updated": "2026-11-10T04:23:59.413337+00:00",
   "items": [
     {
-      "title": "’کیا آپ کو پتا تھا کہ وہ جاسوس ہیں؟‘: ٹرمپ کا اینویڈیا کے سربراہ سے سوال",
-      "link": "https://www.bbc.com/urdu/articles/ck8dzvdm0y8vo?at_medium=RSS&at_campaign=rss",
-      "summary": "اینویڈیا نے اپنے چیف ایگزیکٹو جینسن ہوانگ کے ایک مبینہ چینی جاسوس کے ساتھ تعلق کی تحقیقات شروع کر دی ہیں۔ ہوانگ نے اعتراف کیا کہ انھوں نے اپنی بیوی سے بے وفائی کی ہے۔",
-      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/5aa8/live/e1250da0-dc12-11f1-a631-078d47c5aafb.jpg",
-      "published": "2026-11-10T03:27:55+00:00",
-      "source": "BBC Urdu",
-      "category": "اردو",
-      "language": "ur"
+      "title": "China denies espionage allegations amid Nvidia CEO controversy",
+      "link": "https://arynews.tv/china-denies-espionage-allegations-amid-nvidia-ceo-controversy",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/China-Nvidia-fiasco-reject.jpg",
+      "published": "2026-11-10T04:16:38+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Trump says more US attacks on Iran 'highly unlikely'",
+      "link": "https://www.bbc.co.uk/news/articles/cq5yny4nl2d3o?at_medium=RSS&at_campaign=rss",
+      "summary": "The president says the US is keeping \"status quo\" with Iran but remains “locked and loaded” should the situation in the Middle East change.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6017/live/b94816e0-dca5-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-11-10T04:09:16+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Trump says FBI probing Nvidia CEO Huang as China controversy deepens",
+      "link": "https://arynews.tv/nvidia-fiasco-trump-says-fbi-probing-jensen-huang",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/NIVIDIA-PROBE.jpg",
+      "published": "2026-11-10T04:07:49+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Served by the court",
+      "link": "https://www.dawn.com/news/2043442/served-by-the-court",
+      "summary": "LAST week, the newly established Federal Constitutional Court (FCC) gave two noteworthy judgements. Both concerned legal issues of a political nature — the kind that perhaps would have taken up considerable time and energy in the Supreme Court of the olden days, along with detailed coverage by the media. But those were different times; at present, the cases ",
+      "image_url": "https://i.dawn.com/large/2025/08/689aabc23470b.png",
+      "published": "2026-11-10T04:02:38+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "FBI investigating Nvidia boss's affair with alleged Chinese spy, Trump says",
+      "link": "https://www.bbc.co.uk/news/articles/cqg7x7dpvym8o?at_medium=RSS&at_campaign=rss",
+      "summary": "The US president said he spoke with Jensen Huang on Monday and asked him about the affair with the alleged spy.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f773/live/9c28e680-dc95-11f1-a701-fddedf244c16.jpg",
+      "published": "2026-11-10T03:58:13+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Pete Hegseth likely to face impeachment vote this week",
+      "link": "https://arynews.tv/pete-hegseth-likely-to-face-impeachment-vote-this-week",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Pete-Hegseth-impeachment.jpg",
+      "published": "2026-11-10T03:56:36+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Rs3.2m recovered in online scams; child exploiter held",
+      "link": "https://www.dawn.com/news/2043386/rs32m-recovered-in-online-scams-child-exploiter-held",
+      "summary": "ISLAMABAD: Continuing its zero-tolerance policy against cybercrime, the National Cyber Crime Investigation Agency (NCCIA) recovered Rs3.2 million in two separate online investment and trading fraud cases and arrested a suspect involved in child exploitation and blackmailing of a minor during an intensified crackdown in Rawalpindi. In the first case, the NCCI",
+      "image_url": "https://i.dawn.com/large/2025/09/21113153af1245c.webp",
+      "published": "2026-11-10T03:38:06+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
     },
     {
       "title": "Californians reject wealth tax for billionaires",
       "link": "https://www.bbc.co.uk/news/articles/cq398em3032wo?at_medium=RSS&at_campaign=rss",
       "summary": "Proposition 40 targeted Californian billionaires with a 5% tax on their total wealth, including assets such as shares as well as income.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8df3/live/53f86970-d7b4-11f1-9092-abeae3cab3b1.jpg",
-      "published": "2026-11-10T03:10:10+00:00",
+      "published": "2026-11-10T03:34:46+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "Another Chaudhry slams Maryam over ‘development bias’",
+      "link": "https://www.dawn.com/news/2043389/another-chaudhry-slams-maryam-over-development-bias",
+      "summary": "• Hussain Elahi seemingly backs cousin Salik’s allegations against Punjab CM • Azma Bokhari says CM’s hard work causing ‘considerable discomfort to certain political elements’ • Moonis’ jibe against Chaudhry Shujaat and Chaudhry Wajahat dispels impression ‘family reunion’ is in the offing GUJRAT: What began as a tiff between a federal minister and a provinci",
+      "image_url": "https://i.dawn.com/large/2026/11/100831356499935.webp",
+      "published": "2026-11-10T03:28:11+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "’کیا آپ کو پتا تھا کہ وہ جاسوس ہیں؟‘: ٹرمپ کا اینویڈیا کے سربراہ سے سوال",
+      "link": "https://www.bbc.com/urdu/articles/ck8dzvdm0y8vo?at_medium=RSS&at_campaign=rss",
+      "summary": "اینویڈیا نے اپنے چیف ایگزیکٹو جینسن ہوانگ کے ایک مبینہ چینی جاسوس کے ساتھ تعلق کی تحقیقات شروع کر دی ہیں۔ ہوانگ نے اعتراف کیا کہ انھوں نے اپنی بیوی سے بے وفائی کی ہے۔",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/1399/live/5a1939f0-dcb5-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-11-10T03:27:55+00:00",
+      "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Restructuring plans",
@@ -37,16 +117,6 @@
       "summary": "Goldsmith accuses the disgraced entertainer of \"violence, coercive control and abuse\" while the two were together.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fc6f/live/9dd1bab0-dc78-11f1-b23d-9526db010e6c.jpg",
       "published": "2026-11-10T02:59:42+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Trump says Iran war is 'effectively over' militarily with further strikes unlikely",
-      "link": "https://www.bbc.co.uk/news/articles/cq5yny4nl2d3o?at_medium=RSS&at_campaign=rss",
-      "summary": "The president says the US is keeping \"status quo\" with Iran but remains “locked and loaded” should the situation in the Middle East change.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6017/live/b94816e0-dca5-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-11-10T02:38:00+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -77,16 +147,6 @@
       "summary": "It comes weeks after the cruise came to a sudden end, leaving 200 guests stranded in Cambodia.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/54ec/live/78680920-dca3-11f1-93a0-e3acb3757eea.jpg",
       "published": "2026-11-10T01:49:06+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "FBI investigating Nvidia boss's affair with alleged Chinese spy, Trump says",
-      "link": "https://www.bbc.co.uk/news/articles/cqg7x7dpvym8o?at_medium=RSS&at_campaign=rss",
-      "summary": "The US president said he spoke with Jensen Huang on Monday and asked him about the affair with the alleged spy.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f773/live/9c28e680-dc95-11f1-a701-fddedf244c16.jpg",
-      "published": "2026-11-10T01:44:53+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -210,6 +270,16 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "ایران جنگ کے خاتمے کی جانب مثبت پیش رفت ہورہی ہے، قطری وزیراعظم سے ملاقات کے بعد ٹرمپ کا اہم بیان",
+      "link": "https://www.express.pk/story/2843307/trump-sees-positive-momentum-toward-ending-iran-war-after-meeting-qatar-pm-2843307",
+      "summary": "قطر ایران اور امریکا کے درمیان کشیدگی کم کرنے اور ممکنہ معاہدے کے لیے سفارتی رابطوں میں اہم کردار ادا کر رہا ہے",
+      "image_url": "",
+      "published": "2026-11-09T22:41:03+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "'Baffling but brilliant' post-apocalyptic novel The End of Everything wins Booker Prize",
@@ -392,6 +462,16 @@
       "language": "en"
     },
     {
+      "title": "Makkah Defence Alliance set for Islamabad huddle",
+      "link": "https://tribune.com.pk/story/2639516/makkah-defence-alliance-set-for-islamabad-huddle",
+      "summary": "Three nations coordinate regional security amid rising tensions",
+      "image_url": "",
+      "published": "2026-11-09T19:11:51+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "ڈی ایٹ سیکرٹری جنرل سہیل محمود کی ٹی آر ٹی ورلڈ فورم میں شرکت، ملائیشیا کے نائب وزیراعظم سے ملاقات، اقتصادی تعاون بڑھانے پر تبادلہ خیال",
       "link": "https://urdupoint.com/n/5004898",
       "summary": "",
@@ -472,7 +552,7 @@
       "language": "en"
     },
     {
-      "title": "پاکستان کا عالمی بینک سے 1.7 ارب ڈالر قرض لینے کا منصوبہ",
+      "title": "پاکستان کا عالمی بینک سے 1.7 ارب ڈالر قرض لینے کا فیصلہ",
       "link": "https://www.express.pk/story/2843298/pakistans-plan-to-borrow-17-billion-from-the-world-bank-2843298",
       "summary": "پبلک ریسورسز فار انکلوسیوڈیولپمنٹ سے پروگرام کے تحت وفاق اور صوبائی حکومتیں مستفید ہونگی",
       "image_url": "",
@@ -530,6 +610,26 @@
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
+    },
+    {
+      "title": "Justice Mandokhail bows out",
+      "link": "https://tribune.com.pk/story/2639514/justice-mandokhail-bows-out",
+      "summary": "SC judge's career marked by high-profile verdicts, judicial controversies",
+      "image_url": "",
+      "published": "2026-11-09T17:48:59+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "SC urges courts to deal civil cases on merit",
+      "link": "https://tribune.com.pk/story/2639503/sc-urges-courts-to-deal-civil-cases-on-merit",
+      "summary": "Restores two petitions, says litigants should not suffer for lawyers' genuine mistakes",
+      "image_url": "",
+      "published": "2026-11-09T17:48:58+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
     },
     {
       "title": "گرینڈ بلوچستان کرکٹ لیگ کا ٹائٹل کوئٹہ بیئرز نے اپنے نام کر لیا",
@@ -852,16 +952,6 @@
       "language": "ur"
     },
     {
-      "title": "پراجیکٹ نمبس اور اڈانی",
-      "link": "https://www.express.pk/story/2843279/project-nimbus-aur-adani-2843279",
-      "summary": "اڈانی کا اسرائیل سے تعلق صرف دفاعی صنعت تک محدود نہیں۔ جولائی 2022 میں اڈانی اور اسرائیلی گاڈوت گروپ کے کنسورشیم نے حیفا کی بندرگاہ کے حصول کے حقوق حاصل کیے",
-      "image_url": "",
-      "published": "2026-11-09T15:48:23+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
       "title": "PTI founder’s cousin released from jail",
       "link": "https://arynews.tv/pti-founders-cousin-released-from-jail",
       "summary": "",
@@ -907,96 +997,6 @@
       "summary": "وزیر اطلاعات پنجاب عظمٰی بخاری۔وزیر اطلاعات پنجاب عظمٰی بخاری نے کہا کہ کئی سال سے مختلف عہدوں پر رہنے کے باوجود آپ گجرات کی حالت تو...",
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-09/b_1631825_081952_updates.jpg\"/",
       "published": "2026-11-09T15:11:59+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Pakistan condemns attempted Houthi attack on Saudi Aramco building",
-      "link": "https://arynews.tv/pakistan-condemns-attempted-houthi-attack-on-saudi-aramco-building",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/FO.jpg",
-      "published": "2026-11-09T15:06:08+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Team formed to probe suspected targeted killing of Karachi inspector Javed Abro",
-      "link": "https://www.dawn.com/news/2043292/team-formed-to-probe-suspected-targeted-killing-of-karachi-inspector-javed-abro",
-      "summary": "KARACHI: A high-level police team has been formed to probe the suspected targeted killing of inspector Javed Abro, who was gunned down by armed pillion riders in Karachi’s Steel Town a day earlier, officials said on Monday. The 55-year-old inspector was shot dead, while his wife was wounded in the Sunday evening attack. Officials said the two were having tea",
-      "image_url": "https://i.dawn.com/large/2026/11/09192002e961821.webp",
-      "published": "2026-11-09T15:04:49+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Trump says 'great dislike' for Israel contributed to Republican rout in midterms",
-      "link": "https://www.dawn.com/news/2043269/trump-says-great-dislike-for-israel-contributed-to-republican-rout-in-midterms",
-      "summary": "US President Donald Trump has said that a “great dislike” for Israel was one of the contributing factors for the Republicans suffering a defeat in the midterm elections, alongside the war on Iran and gasoline prices. “I think if I was on the ballot, it would’ve been a much different situation because you saw the level of popularity and love,” he said on CBS ",
-      "image_url": "https://i.dawn.com/large/2026/01/301244551fce73d.webp",
-      "published": "2026-11-09T15:03:20+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Pakistan condemns targeting of Aramco building, demands Houthis cease all attacks against Saudi Arabia",
-      "link": "https://www.dawn.com/news/2043294/pakistan-condemns-targeting-of-aramco-building-demands-houthis-cease-all-attacks-against-saudi-arabia",
-      "summary": "Pakistan on Monday condemned the Houthi attack on Saudi oil giant Aramco’s corporate office in Riyadh, demanding that the rebel group “immediately and unconditionally” cease all attacks against Saudi Arabia, the Foreign Office (FO) said. On Sunday, an Aramco building in Riyadh was tar­geted in an “attempted attack”, the Saudi energy ministry said, which dama",
-      "image_url": "https://i.dawn.com/large/2026/11/08141739d8ceb1d.webp",
-      "published": "2026-11-09T14:45:08+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Meta expands AI age checks for Instagram teens as lawsuits mount",
-      "link": "https://arynews.tv/meta-expands-ai-age-checks-for-instagram-teens-as-lawsuits-mount",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Instagram-.jpg",
-      "published": "2026-11-09T14:20:12+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "محمد الفائد کے بھائی نے مجھے نشہ آور ادویات دیں اور جنسی حملوں کا نشانہ بنایا، خاتون کا دعویٰ",
-      "link": "https://www.bbc.com/urdu/articles/cwj3435vdk6mo?at_medium=RSS&at_campaign=rss",
-      "summary": "سکاٹ لینڈ میں ہونے والی زیادتیوں کے بارے میں پہلی بار گفتگو کرتے ہوئے جل نے بتایا کہ انھیں فائد خاندان کے نجی طیارے کے ذریعے بالناگاؤن، جو ایسٹر راس میں ان کی جاگیر ہے، لے جایا گیا، جہاں ان پر بار بار حملے کیے گئے۔",
-      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/4c24/live/f91b8bd0-d863-11f1-85ab-b3cc3b5498c6.jpg",
-      "published": "2026-11-09T14:13:02+00:00",
-      "source": "BBC Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "خیبر: ایک ہی خاندان کے 5 بچے بےہوش، اسپتال منتقلی کے دوران جاں بحق",
-      "link": "https://jang.com.pk/news/1631820",
-      "summary": "فائل فوٹوضلع خیبر کے علاقے بازار ذخہ خیل کے گاؤں قاضیانو کلے میں ایک ہی خاندان کے 5 بچے اسپتال منتقل کیے جانے کے دوران جاں بحق ہوگئے،...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-09/b_1631820_075337_updates.jpg\"/",
-      "published": "2026-11-09T14:11:37+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "حکومت ایل پی جی مافیا کو لگام نہ دے سکی",
-      "link": "https://jang.com.pk/news/1631828",
-      "summary": "حکومت ایل پی جی مافیا کو لگام نہ دے سکی، آج بھی سرکاری نرخ سے دوگنی قیمت فروخت جاری رہی۔ایل پی جی کا سرکاری نرخ 294 روپے فی کلو ہے، لیکن...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-09/b_1631828_083250_updates.jpg\"/",
-      "published": "2026-11-09T14:11:02+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "آزادی اظہار کا مطلب کسی پر جھوٹے الزامات لگانا نہیں: پشاور ہائیکورٹ",
-      "link": "https://jang.com.pk/news/1631822",
-      "summary": "پشاور ہائیکورٹ نے آزادی اظہار اور ہتک عزت کے مقدمے میں افضل خان کی اپیل مسترد کرتے ہوئے ضلعی عدالت کا فیصلہ برقرار رکھا ہے۔ جسٹس...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-09/b_1631822_075148_updates.jpg\"/",
-      "published": "2026-11-09T14:11:01+00:00",
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
