@@ -1,6 +1,56 @@
 {
-  "updated": "2026-11-10T02:40:05.121503+00:00",
+  "updated": "2026-11-10T03:28:51.061275+00:00",
   "items": [
+    {
+      "title": "’کیا آپ کو پتا تھا کہ وہ جاسوس ہیں؟‘: ٹرمپ کا اینویڈیا کے سربراہ سے سوال",
+      "link": "https://www.bbc.com/urdu/articles/ck8dzvdm0y8vo?at_medium=RSS&at_campaign=rss",
+      "summary": "اینویڈیا نے اپنے چیف ایگزیکٹو جینسن ہوانگ کے ایک مبینہ چینی جاسوس کے ساتھ تعلق کی تحقیقات شروع کر دی ہیں۔ ہوانگ نے اعتراف کیا کہ انھوں نے اپنی بیوی سے بے وفائی کی ہے۔",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/5aa8/live/e1250da0-dc12-11f1-a631-078d47c5aafb.jpg",
+      "published": "2026-11-10T03:27:55+00:00",
+      "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Californians reject wealth tax for billionaires",
+      "link": "https://www.bbc.co.uk/news/articles/cq398em3032wo?at_medium=RSS&at_campaign=rss",
+      "summary": "Proposition 40 targeted Californian billionaires with a 5% tax on their total wealth, including assets such as shares as well as income.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8df3/live/53f86970-d7b4-11f1-9092-abeae3cab3b1.jpg",
+      "published": "2026-11-10T03:10:10+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Restructuring plans",
+      "link": "https://www.dawn.com/news/2043438/restructuring-plans",
+      "summary": "NO matter how strongly the PPP, a key coalition partner, wishes to see it buried , the push for new administrative units and provinces seems to be picking up steam once again. Defence Minister Khawaja Asif brought the issue into the limelight on Sunday, telling an interviewer that the country could have as many as 12 new provinces if the exercise were driven",
+      "image_url": "",
+      "published": "2026-11-10T03:06:42+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Russell Brand's ex Jemima Goldsmith accuses him of violence and abuse against her",
+      "link": "https://www.bbc.co.uk/news/articles/c95ynylr8j6xo?at_medium=RSS&at_campaign=rss",
+      "summary": "Goldsmith accuses the disgraced entertainer of \"violence, coercive control and abuse\" while the two were together.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fc6f/live/9dd1bab0-dc78-11f1-b23d-9526db010e6c.jpg",
+      "published": "2026-11-10T02:59:42+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Trump says Iran war is 'effectively over' militarily with further strikes unlikely",
+      "link": "https://www.bbc.co.uk/news/articles/cq5yny4nl2d3o?at_medium=RSS&at_campaign=rss",
+      "summary": "The president says the US is keeping \"status quo\" with Iran but remains “locked and loaded” should the situation in the Middle East change.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6017/live/b94816e0-dca5-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-11-10T02:38:00+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "شیخ حسینہ کی بنگلہ دیش واپسی کے لیے پاسپورٹ کے اجرا کی درخواست: وہ معاملہ جو ڈھاکہ اور نئی دہلی کے لیے دردِ سر بنا ہوا ہے",
       "link": "https://www.bbc.com/urdu/articles/cw62y2nx334jo?at_medium=RSS&at_campaign=rss",
@@ -10,6 +60,16 @@
       "source": "BBC Urdu",
       "category": "اردو",
       "language": "ur"
+    },
+    {
+      "title": "Opposition demands ‘return to talks’ in AJK",
+      "link": "https://www.dawn.com/news/2043421/opposition-demands-return-to-talks-in-ajk",
+      "summary": "ISLAMABAD: Calling for immediate talks with the Joint Awami Action Committee, the main opposition alliance claimed on Monday that a delegation of the Tehreek-i-Tahafuz Ayin-i-Pakistan (TTAP) was stopped from travelling to Azad Jammu and Kashmir. The delegation was travelling to AJK to meet protesters, express solidarity, and assess the situation, but was sto",
+      "image_url": "https://i.dawn.com/large/2026/06/1112145514a0a13.webp",
+      "published": "2026-11-10T02:02:51+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
     },
     {
       "title": "'Cruise for life' ship seized in Singapore",
@@ -22,7 +82,7 @@
       "language": "en"
     },
     {
-      "title": "Trump says FBI investigating Nvidia boss's affair with alleged Chinese spy",
+      "title": "FBI investigating Nvidia boss's affair with alleged Chinese spy, Trump says",
       "link": "https://www.bbc.co.uk/news/articles/cqg7x7dpvym8o?at_medium=RSS&at_campaign=rss",
       "summary": "The US president said he spoke with Jensen Huang on Monday and asked him about the affair with the alleged spy.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f773/live/9c28e680-dc95-11f1-a701-fddedf244c16.jpg",
@@ -40,6 +100,16 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "سعودیہ کی بحری شعبے میں سرمایہ کاری میں دلچسپی، شہزادہ منصور بن السعود کا کراچی بندرگاہ کا دورہ",
+      "link": "https://jang.com.pk/news/1632164",
+      "summary": "سعودی عرب کی پاکستان کے بحری شعبے میں سرمایہ کاری میں دلچسپی، سعودی، پاکستانی مشترکہ کاروباری کونسل کے چیئرمین شہزادہ منصور بن محمد...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-10/b_1632164_065811_updates.jpg\"/",
+      "published": "2026-11-10T01:11:15+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Hundreds more offenders to leave jail on Tuesday",
@@ -152,16 +222,6 @@
       "language": "en"
     },
     {
-      "title": "Brand's ex Jemima Goldsmith accuses him of violence and abuse against her",
-      "link": "https://www.bbc.co.uk/news/articles/c95ynylr8j6xo?at_medium=RSS&at_campaign=rss",
-      "summary": "She accuses the disgraced performer of \"violence, coercive control and abuse\" while the two were together.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fc6f/live/9dd1bab0-dc78-11f1-b23d-9526db010e6c.jpg",
-      "published": "2026-11-09T22:06:29+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "Zoe Kleinman: Nvidia CEO's affair will cause ripples across US and beyond",
       "link": "https://www.bbc.co.uk/news/articles/cj3vqv3nee72o?at_medium=RSS&at_campaign=rss",
       "summary": "Jensen Huang is being investigated by his own company over an extramarital affair with a woman alleged to be a Chinese spy.",
@@ -170,6 +230,16 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "فضائی آلودگی کی خطرناک صورتحال، لاہور سمیت پنجاب کے متعدد شہر زہریلی دھند کی لپیٹ میں",
+      "link": "https://www.express.pk/story/2843306/dangerous-air-pollution-situation-many-cities-of-punjab-including-lahore-are-engulfed-in-toxic-smog-2843306",
+      "summary": "لاہور کے مختلف علاقوں میں بھی فضائی آلودگی کی بلند شرح ریکارڈ کی گئی",
+      "image_url": "",
+      "published": "2026-11-09T21:29:06+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "سانگھڑ، خواجہ سراؤں میں جھگڑا، ایک خواجہ سرا جاں بحق",
@@ -202,14 +272,24 @@
       "language": "en"
     },
     {
-      "title": "France accuses Iran of supermarket fridge hacking",
-      "link": "https://www.bbc.co.uk/news/articles/cmg474vk6dyqo?at_medium=RSS&at_campaign=rss",
-      "summary": "Tons of chilled and frozen food was spoiled last month as fridges and freezers in hundreds of supermarkets heated up.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f0bc/live/eec149b0-dc5d-11f1-8fe6-5becaee5408f.jpg",
-      "published": "2026-11-09T20:20:08+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
+      "title": "ترکیہ کی اسٹیل فیکٹری میں خوفناک دھماکا اور آتشزدگی، 17 مزدور ہلاک، 12 زخمی",
+      "link": "https://www.express.pk/story/2843305/terrifying-explosion-and-fire-at-a-steel-factory-in-turkey-17-workers-killed-12-injured-2843305",
+      "summary": "حادثہ پلانٹ کی الیکٹرک آرک فرنس کی طے شدہ مرمت کے دوران پیش آیا، فیکٹری انتظامیہ",
+      "image_url": "",
+      "published": "2026-11-09T21:09:11+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کراچی، اورنگی ٹاؤن میں پولیس مقابلہ، زخمی سمیت 2 ڈاکو گرفتار",
+      "link": "https://www.express.pk/story/2843303/police-encounter-in-orangi-town-karachi-2-robbers-arrested-including-one-who-was-wounded-2843303",
+      "summary": "زخمی ملزم کی شناخت محمد شہباز کے نام سے ہوئی ہے",
+      "image_url": "",
+      "published": "2026-11-09T20:31:20+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "ایئر بس کے طیارے نے مسلسل 24 گھنٹے سے زائد 23 ہزار کلومیٹر سفر کا عالمی ریکارڈ بنا ڈالا",
@@ -392,6 +472,16 @@
       "language": "en"
     },
     {
+      "title": "پاکستان کا عالمی بینک سے 1.7 ارب ڈالر قرض لینے کا منصوبہ",
+      "link": "https://www.express.pk/story/2843298/pakistans-plan-to-borrow-17-billion-from-the-world-bank-2843298",
+      "summary": "پبلک ریسورسز فار انکلوسیوڈیولپمنٹ سے پروگرام کے تحت وفاق اور صوبائی حکومتیں مستفید ہونگی",
+      "image_url": "",
+      "published": "2026-11-09T18:28:30+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Turkey steel factory blast kills 16, probe launched",
       "link": "https://arynews.tv/turkey-steel-factory-blast-kills-16-probe-launched",
       "summary": "",
@@ -450,16 +540,6 @@
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "Russell Brand sentenced to 10-and-a-half years in prison for rape and sexual assault",
-      "link": "https://www.bbc.co.uk/news/articles/ckzd6dl18dmyo?at_medium=RSS&at_campaign=rss",
-      "summary": "The disgraced entertainer was sentenced on Monday following a four-week trial at Southwark Crown Court.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a7f6/live/fa928860-dc69-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-11-09T17:31:08+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
     },
     {
       "title": "مولانا فضل الرحمٰن کی زیرصدارت جے یو آئی کور کمیٹی کا اجلاس، ملکی سیاسی صورتحال پر غور",
@@ -792,16 +872,6 @@
       "language": "en"
     },
     {
-      "title": "ایران امریکا کشیدگی کا سفارتی حل",
-      "link": "https://www.express.pk/story/2843278/iran-america-kashidagi-ka-safarti-hal-2843278",
-      "summary": "امریکا اور ایران کے درمیان کشیدگی کی جڑیں محض حالیہ واقعات تک محدود نہیں",
-      "image_url": "",
-      "published": "2026-11-09T15:35:48+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
       "title": "Foundayo meets main goal in late-stage sleep apnea study",
       "link": "https://arynews.tv/foundayo-meets-main-goal-in-late-stage-sleep-apnea-study",
       "summary": "",
@@ -810,16 +880,6 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "ماہرہ خان کا حاملہ خواتین کے ساتھ برا سلوک کرنے والوں کیلیے اہم پیغام",
-      "link": "https://www.express.pk/story/2843277/mahira-khans-important-message-for-those-who-mistreat-pregnant-women-2843277",
-      "summary": "ایک عورت حمل اور بچے کی پیدائش کے بعد اس کے ساتھ کیے گئے سلوک کو کبھی نہیں بھولتی",
-      "image_url": "",
-      "published": "2026-11-09T15:28:19+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
     },
     {
       "title": "Ground Force and Homes Under the Hammer star Tommy Walsh dies aged 69",
@@ -852,16 +912,6 @@
       "language": "ur"
     },
     {
-      "title": "’اردو باغ‘ میں کِھلا ’قومی زبان کانفرنس‘ کا پھول!",
-      "link": "https://www.express.pk/story/2843276/urdu-bagh-main-khila-qaumi-zubaan-conference-ka-phool-2843276",
-      "summary": "بابائے اردو کے چمن سے پھیلنے والی یہ خوش بو اردو کے عشاق کو تادیر یاد رہے گی",
-      "image_url": "",
-      "published": "2026-11-09T15:11:27+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
       "title": "Pakistan condemns attempted Houthi attack on Saudi Aramco building",
       "link": "https://arynews.tv/pakistan-condemns-attempted-houthi-attack-on-saudi-aramco-building",
       "summary": "",
@@ -880,16 +930,6 @@
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "سانپ: موت کا پیام بر یا فطرت کا محافظ؟",
-      "link": "https://www.express.pk/story/2843275/saanp-maut-ka-paigham-ya-fitraat-ka-muhafiz-2843275",
-      "summary": "سائنسی حقائق، انسانی صحت، ماحولیاتی توازن اور شاہ عبداللطیف بھٹائی کے کلام میں سانپوں کا تذکرہ",
-      "image_url": "",
-      "published": "2026-11-09T15:03:24+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
     },
     {
       "title": "Trump says 'great dislike' for Israel contributed to Republican rout in midterms",
@@ -960,46 +1000,6 @@
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "Five things to know about 'Grand Theft Auto'",
-      "link": "https://tribune.com.pk/story/2639474/five-things-to-know-about-grand-theft-auto",
-      "summary": "GTA has become a cultural institution despite criticism, with its content spawning countless online memes",
-      "image_url": "",
-      "published": "2026-11-09T14:10:25+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Lahore remains world’s most polluted major city as AQI crosses 600",
-      "link": "https://www.dawn.com/news/2043255/lahore-remains-worlds-most-polluted-major-city-as-aqi-crosses-600",
-      "summary": "LAHORE: Lahore was ranked the world’s most polluted major city on Monday as its Air Quality Index (AQI) reached 590, according to IQAir. A separate historical reading on the platform, however, showed an hourly index of 647, placing the city in the hazardous category. The IQAir live global major city ranking for 9am to 10am on Nov 9 placed Lahore at the top, ",
-      "image_url": "https://i.dawn.com/large/2026/11/09115406f5b52da.webp",
-      "published": "2026-11-09T14:07:27+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "US was left exposed to the flesh-eating screwworm",
-      "link": "https://arynews.tv/us-was-left-exposed-to-the-flesh-eating-screwworm",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Livestock-1.jpg",
-      "published": "2026-11-09T14:05:45+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Sialkot police arrest TikToker for allegedly threatening family of stampede victim",
-      "link": "https://www.dawn.com/news/2043291/sialkot-police-arrest-tiktoker-for-allegedly-threatening-family-of-stampede-victim",
-      "summary": "NAROWAL: Sialkot police said on Monday they have arrested TikToker Muhammad Ansar Jatt, alias “Mr Pattlo”, for allegedly threatening the family of a man who died in a stampede at an event in connection with his wedding. Jatt had announced holding a mehndi event and prize-distribution ceremony at Faraz Cricket Ground on Daska Road on Oct 30. However, with hun",
-      "image_url": "https://i.dawn.com/large/2026/11/01192807a94129b.webp",
-      "published": "2026-11-09T13:53:25+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
     }
   ]
 }
