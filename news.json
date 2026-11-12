@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T21:05:34.565261+00:00",
+  "updated": "2026-11-12T21:48:31.278423+00:00",
   "items": [
     {
       "title": "US envoys head to meet Zelensky after talks with Putin in Moscow",
@@ -224,7 +224,7 @@
     {
       "title": "Hegseth awards medal to war memorial guard who reprimanded him and group",
       "link": "https://www.bbc.co.uk/news/articles/cmvg2r3dq7xno?at_medium=RSS&at_campaign=rss",
-      "summary": "Specialist Thomas Iglesias was given a Joint Service Commendation Medal for the execution of his duties after Wednesday's incident.",
+      "summary": "Specialist Thomas Iglesias had shouted at Hegseth's group to be quiet after they could be heard talking and laughing at the Tomb of the Unknown Soldier.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9916/live/a7c0bac0-dec7-11f1-a701-fddedf244c16.jpg",
       "published": "2026-11-12T18:47:35+00:00",
       "source": "BBC News",
@@ -265,7 +265,7 @@
       "title": "'How does a building just fall?' Neighbours grieve after deadly Brooklyn building collapse",
       "link": "https://www.bbc.co.uk/news/articles/cm4gn5qddqqxo?at_medium=RSS&at_campaign=rss",
       "summary": "The accident rattled the usually calm immigrant neighbourhood of Flatbush, New York. At least eight residents, including two children, died in the rubble.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b059/live/2165cd50-deb6-11f1-8fb5-a771a656a227.jpg",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5648/live/95089da0-deb6-11f1-8fb5-a771a656a227.jpg",
       "published": "2026-11-12T18:36:15+00:00",
       "source": "BBC News",
       "category": "World",
@@ -682,7 +682,7 @@
       "language": "en"
     },
     {
-      "title": "Zoe Kleinman: How AI visionary Jensen Huang was undone by his own bad decisions",
+      "title": "How AI visionary Jensen Huang was undone by his own bad decisions",
       "link": "https://www.bbc.co.uk/news/articles/cq5y13819gpjo?at_medium=RSS&at_campaign=rss",
       "summary": "Zoe Kleinman explains how the man who built Nvidia from the ground up lost everything in a matter of days.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1cb2/live/0d989b10-dec3-11f1-a701-fddedf244c16.jpg",
@@ -690,6 +690,16 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "لاہور میں شیر کے حملے سے نوجوان کی ہلاکت، اندرنی کہانی سامنے آ گئی",
+      "link": "https://www.express.pk/story/2843946/young-man-killed-in-lion-attack-in-lahore-the-inside-story-has-emerged-2843946",
+      "summary": "فارم ہاؤس کے سی سی ٹی وی کیمرے اور ڈی وی آر غائب تھے",
+      "image_url": "",
+      "published": "2026-11-12T16:31:38+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Kuwait issues an important alert for bank account holders",
@@ -722,12 +732,32 @@
       "language": "en"
     },
     {
+      "title": "رشوت کی لعنت سے بچیے۔۔۔ !",
+      "link": "https://www.express.pk/story/2843945/rishwat-ki-laanat-se-bachiye-2843945",
+      "summary": "یہ ایک ایسا ناسور ہے جس سے اخلاقی اقدار برباد ہوجاتی ہیں، ایک دوسرے کا احترام دلوں سے نکل جاتا اور نفرت، کدورت، کینہ اور بغض جیسی برائیاں عام ہوجاتی ہیں",
+      "image_url": "",
+      "published": "2026-11-12T16:22:01+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "’15 دن پہلے شیراز کی شادی میں شرکت کی اور آج اُس کے جنازے میں اکھٹے ہیں‘",
       "link": "https://www.bbc.com/urdu/articles/c94gnvprmkxeo?at_medium=RSS&at_campaign=rss",
       "summary": "پاکستان میں صوبہ خیبر پختونخوا کے شہر کوہاٹ کی پولیس اور سرکاری ہسپتال کے سربراہ نے تصدیق کی ہے کہ دربوکچ کے علاقے میں شدت پسندوں کی جانب سے پولیس ٹیم پر کیے گئے ایک حملے میں ڈی ایس پی سمیت 10 پولیس اہلکار ہلاک جبکہ متعدد زخمی ہوئے ہیں۔",
       "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/520d/live/46071ea0-deb3-11f1-8fb5-a771a656a227.jpg",
       "published": "2026-11-12T16:16:11+00:00",
       "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "بندۂ مومن کے لیے آداب خور و نوش",
+      "link": "https://www.express.pk/story/2843944/banda-e-momin-ke-liye-aadaab-e-khor-o-nosh-2843944",
+      "summary": "آپؐ نے پیٹ بھر کر کھانے سے سختی سے منع فرمایا اور یہ سنہری اصول عطا کیا کہ انسان کے لیے چند لقمے ہی کافی ہیں جو اس کی کمر کو سیدھا رکھیں",
+      "image_url": "",
+      "published": "2026-11-12T16:15:48+00:00",
+      "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
     },
@@ -740,6 +770,16 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "صبر و شُکر: مشکل حالات میں مومن کا رویّہ",
+      "link": "https://www.express.pk/story/2843943/sabr-o-shukar-mushkil-halaat-mein-momin-ka-rawaiya-2843943",
+      "summary": "’’اور ہم ضرور تمھیں کچھ خوف، بھوک اور مالوں، جانوں اور پھلوں کی کمی سے آزمائیں گے، اور صبر کرنے والوں کو خوش خبری سنا دو۔‘‘",
+      "image_url": "",
+      "published": "2026-11-12T16:12:13+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Sophie Cunningham fulfils podcast commitment",
@@ -802,6 +842,26 @@
       "language": "en"
     },
     {
+      "title": "تعفن زدہ سیاست (دوسرا اور آخری حصہ)",
+      "link": "https://www.express.pk/story/2843942/taaffun-zada-siyasat-doosra-aur-aakhri-hissa-2843942",
+      "summary": "سیاست اختلافات کو مکالمے سے حل کرنے کا نام ہے۔ خاص کر ایسے حالات میں جب ملک کے دو صوبوں میں حالات خراب ہیں۔",
+      "image_url": "",
+      "published": "2026-11-12T16:09:56+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "معاشرتی مسائل",
+      "link": "https://www.express.pk/story/2843941/muashrati-masail-2843941",
+      "summary": "ماحولیاتی مسائل کے باعث اس وقت صورتِ حال کچھ ایسی ہے کہ ہر گھر میں کوئی نہ کوئی فرد بیمار نظر آتا ہے",
+      "image_url": "",
+      "published": "2026-11-12T16:06:51+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Anmol Pinky, accomplices indicted in another drug case",
       "link": "https://arynews.tv/anmol-pinky-accomplices-indicted-drug-case-karachi",
       "summary": "",
@@ -810,6 +870,26 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "ایک کتاب دوست کی مجلس میں!",
+      "link": "https://www.express.pk/story/2843940/aik-kitab-dost-ki-majlis-mein-2843940",
+      "summary": "اسلام آباد کے اُس خوبصورت سیکٹر کے اس دلنشیں گھر میں موجود یہ عظیم الشان لائبریری جناب محمد سلیم بیگ صاحب کی ملکیت ہے",
+      "image_url": "",
+      "published": "2026-11-12T16:03:41+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کراچی، شہر میں فائرنگ کے مختلف واقعات میں 2 افراد زخمی",
+      "link": "https://www.express.pk/story/2843938/karachi-two-people-injured-in-separate-firing-incidents-in-the-city-2843938",
+      "summary": "زخمیوں کو طبی امداد کے لیے اسپتال منتقل کر دیا گیا",
+      "image_url": "",
+      "published": "2026-11-12T16:03:03+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "کلینیکل موت (دوسرا اور آخری حصہ)",
@@ -917,86 +997,6 @@
       "summary": "",
       "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Pakistan-population.jpg",
       "published": "2026-11-12T15:20:42+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "طالب علم روشم کی موت کے کیس میں پیش نہ ہونے پر عدالت کا پولیس افسران کو گرفتار کرنے کا حکم",
-      "link": "https://jang.com.pk/news/1632891",
-      "summary": "منگھوپیر میں ڈکیتی کے دوران طالبعلم روشم کی ہلاکت کے کیس میں شوکاز نوٹس کے باوجود پیش نہ ہونے پر عدالت نے پولیس افسران کے وارنٹ...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-12/b_1632891_083536_updates.jpg\"/",
-      "published": "2026-11-12T15:11:55+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "این ڈی ایم اے کا ملک کے مختلف علاقوں میں آئندہ 12 گھنٹوں کیلئے بارش کا الرٹ جاری",
-      "link": "https://jang.com.pk/news/1632887",
-      "summary": "فائل فوٹو۔نیشنل ڈیزاسٹر منیجمنٹ اتھارٹی نے ملک کے مختلف علاقوں میں بارش سے متعلق آئندہ 12 گھنٹے کے لیے الرٹ جاری کردیا ہے۔ اسلام...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-12/b_1632887_081031_updates.jpg\"/",
-      "published": "2026-11-12T15:11:38+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بلوچستان: ٹرین آپریشن ایک دن کیلئے معطل کردیا گیا",
-      "link": "https://jang.com.pk/news/1632892",
-      "summary": "فوٹو: فائلبلوچستان میں ٹرین آپریشن کل ایک دن کے لیے معطل کردیا گیا ہے۔ ریلوے حکام کا کہنا ہے کہ پشاور کے لیے جعفر ایکسپریس کل روانہ...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-12/b_1632892_084123_updates.jpg\"/",
-      "published": "2026-11-12T15:11:27+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بیٹی کے ساتھ زیادتی کے مقدمے میں ملزم کی رہائی پر دلبرداشتہ باپ نے خود کو آگ لگا کر خودکشی کرلی",
-      "link": "https://jang.com.pk/news/1632893",
-      "summary": "فائل فوٹو مظفرگڑھ میں بیٹی کے ساتھ زیادتی کے مقدمے میں ملزم کی رہائی پر دلبرداشتہ باپ نے خود کو آگ لگا کر خودکشی کرلی۔پولیس کا کہنا...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-12/b_1632893_084409_updates.jpg\"/",
-      "published": "2026-11-12T15:11:22+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "وزیراعظم کی ترک صدر سے ملاقات، دو طرفہ تعلقات مثبت سمت میں آگے بڑھنے پر اظہار اطمینان",
-      "link": "https://jang.com.pk/news/1632889",
-      "summary": "تصویر سوشل میڈیا۔وزیراعظم شہباز شریف نے ترکیہ کے صدر رجب طیب اردوان سے ملاقات کی۔ دونوں رہنماؤں نے دو طرفہ تعلقات کے مثبت سمت میں...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-12/b_1632889_082204_updates.jpg\"/",
-      "published": "2026-11-12T15:11:22+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Inspection team reviews beautification work at Sialkot model bazaar",
-      "link": "https://arynews.tv/inspection-team-reviews-beautification-work-at-sialkot-model-bazaar",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Sialkot-model-bazar.jpg",
-      "published": "2026-11-12T15:07:58+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "جاسوسی کردار سے عالمی شہرت حاصل کرنے والے امریکی اداکار 85 سال کی عمر میں چل بسے",
-      "link": "https://www.express.pk/story/2843933/stacy-keach-mike-hammer-actor-dies-at-85-2843933",
-      "summary": "لندن کے ہیتھرو ایئرپورٹ پر سامان میں چھپائی گئی کوکین برآمد ہونے کے بعد انہیں گرفتار کرلیا گیا تھا",
-      "image_url": "",
-      "published": "2026-11-12T15:06:59+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "F1 champ Antonelli ‘still hungry’ for success",
-      "link": "https://arynews.tv/f1-champ-antonelli-still-hungry-for-success",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/PG13-Lead.jpg",
-      "published": "2026-11-12T15:02:52+00:00",
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
