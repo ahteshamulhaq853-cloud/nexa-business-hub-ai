@@ -1,6 +1,26 @@
 {
-  "updated": "2026-11-12T23:14:03.495484+00:00",
+  "updated": "2026-11-12T23:56:20.903395+00:00",
   "items": [
+    {
+      "title": "US doctor kills building manager after long-running dispute over mould, police say",
+      "link": "https://www.bbc.co.uk/news/articles/crgqx2qqnwpjo?at_medium=RSS&at_campaign=rss",
+      "summary": "Authorities say the shooting in Washington DC left four people injured, with the suspect dying of a self-inflicted gunshot wound.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/146e/live/0c9f92e0-deb4-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-11-12T23:39:04+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Scandal-hit Nvidia CEO Jensen Huang quits, plunging AI chipmaking giant into turmoil",
+      "link": "https://www.bbc.co.uk/news/articles/cmq5vd1wdgz6o?at_medium=RSS&at_campaign=rss",
+      "summary": "US lawmakers now want to question Huang over whether one of his alleged relationships was with a Chinese spy.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f66c/live/4f0358a0-def1-11f1-bb80-c5cef03337ce.jpg",
+      "published": "2026-11-12T23:34:05+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Some under-25s should get fewer benefits, Milburn review to say",
       "link": "https://www.bbc.co.uk/news/articles/cwn70l1628l0o?at_medium=RSS&at_campaign=rss",
@@ -22,19 +42,9 @@
       "language": "en"
     },
     {
-      "title": "Police identify gunman in Washington DC shooting that left one dead and four injured",
-      "link": "https://www.bbc.co.uk/news/articles/crgqx2qqnwpjo?at_medium=RSS&at_campaign=rss",
-      "summary": "One victim is in a critical condition and three others have non life-threatening injuries, officials say.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/146e/live/0c9f92e0-deb4-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-11-12T21:52:58+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "ہم سے اداروں کی دوری نہ ہوئی ہے اور نہ کبھی ہوسکے گی، رانا ثنا",
       "link": "https://jang.com.pk/news/1632917",
-      "summary": "وزیر اعظم کے مشیر برائے سیاسی امور رانا ثنا اللّٰہ نے کہا ہے کہ یہ سازشی تھیوری غلط ہے کہ 28 ویں ترمیم کیلئے ملاقات کروائی گئی ہے۔ جیو...",
+      "summary": "وزیر اعظم کے مشیر برائے سیاسی امور رانا ثنا اللّٰہ نے کہا ہے کہ یہ سازشی تھیوری غلط ہے کہ 28 ویں ترمیم کیلئے بانی پی ٹی آئی سے ملاقات...",
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-13/b_1632917_123807_updates.jpg\"/",
       "published": "2026-11-12T21:11:35+00:00",
       "source": "Jang",
@@ -230,6 +240,16 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "پاکستان اور برطانیہ میں تجارت بڑھانے کے وسیع مواقع ہیں، ہائی کمشنر",
+      "link": "https://www.express.pk/story/2843950/there-are-vast-opportunities-to-increase-trade-between-pakistan-and-britain-says-high-commissioner-2843950",
+      "summary": "پاکستان اور برطانیہ کے درمیان سالانہ تجارت کا حجم 6 ارب پاؤنڈ تک پہنچ چکا ہے، ٹیپو عثمان",
+      "image_url": "",
+      "published": "2026-11-12T18:49:11+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Punjab announces vacancies with salaries up to Rs. 950,000",
@@ -812,39 +832,39 @@
       "language": "en"
     },
     {
+      "title": "PSX retreats again from 180,000 mark",
+      "link": "https://tribune.com.pk/story/2640001/psx-retreats-again-from-180000-mark",
+      "summary": "Profit-taking pulls KSE-100 down by 1,710 points",
+      "image_url": "",
+      "published": "2026-11-12T16:12:45+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Nvidia crisis wipes $1tr off market value",
+      "link": "https://tribune.com.pk/story/2640000/nvidia-crisis-wipes-1tr-off-market-value",
+      "summary": "Shares plunge 14.3% as Huang's exit rattles AI stocks, funding concerns mount",
+      "image_url": "",
+      "published": "2026-11-12T16:12:45+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Hormuz disruptions lift oil prices",
+      "link": "https://tribune.com.pk/story/2640002/hormuz-disruptions-lift-oil-prices",
+      "summary": "Tanker attacks offset rising OPEC+ output and weekly price decline",
+      "image_url": "",
+      "published": "2026-11-12T16:12:45+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "Safe AI use in everyday lives urged",
       "link": "https://tribune.com.pk/story/2639999/safe-ai-use-in-everyday-lives-urged",
       "summary": ".",
-      "image_url": "",
-      "published": "2026-11-12T16:12:45+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Business Year chief eyes Pakistan investment",
-      "link": "https://tribune.com.pk/story/2639998/business-year-chief-eyes-pakistan-investment",
-      "summary": "Expresses interest at Geneva meetings as BOI minister highlights emerging opportunities",
-      "image_url": "",
-      "published": "2026-11-12T16:12:45+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "GMO cotton research explored",
-      "link": "https://tribune.com.pk/story/2639997/gmo-cotton-research-explored",
-      "summary": "Food minister also seeks delivery, not pledges, of climate finance at COP31",
-      "image_url": "",
-      "published": "2026-11-12T16:12:45+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Wood Mackenzie explores investment opportunities",
-      "link": "https://tribune.com.pk/story/2639993/wood-mackenzie-explores-investment-opportunities",
-      "summary": "Minister advocates investor-friendly policies, lower duties on mining equipment",
       "image_url": "",
       "published": "2026-11-12T16:12:45+00:00",
       "source": "Express Tribune",
@@ -977,26 +997,6 @@
       "summary": "زخمیوں کو طبی امداد کے لیے اسپتال منتقل کر دیا گیا",
       "image_url": "",
       "published": "2026-11-12T16:03:03+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کلینیکل موت (دوسرا اور آخری حصہ)",
-      "link": "https://www.express.pk/story/2843937/clinical-maut-doosra-aur-aakhri-hissa-2843937",
-      "summary": "1970 میں فزیشن ریمنڈ موڈی نے ایک ہزار سے کچھ اوپر کلینیکل موت سے دوچار ہوئے لوگوںسے رابطہ کر کے ان کے بیانات اکٹھے کیے۔",
-      "image_url": "",
-      "published": "2026-11-12T16:01:25+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "مسلم برادرہڈ",
-      "link": "https://www.express.pk/story/2843936/muslim-brotherhood-2843936",
-      "summary": "اسلامی تاریخ میں خلافت، سلطنت، شریعت اور سیاسی اقتدار کے باہمی تعلق کو بھی نظرانداز نہیں کیا جاسکتا",
-      "image_url": "",
-      "published": "2026-11-12T15:59:29+00:00",
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
