@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-13T21:26:19.738773+00:00",
+  "updated": "2026-11-13T22:10:59.740261+00:00",
   "items": [
     {
-      "title": "Dept Q crew member dies after being injured at Edinburgh film studio",
-      "link": "https://www.bbc.co.uk/news/articles/cqr7g5l4z9zeo?at_medium=RSS&at_campaign=rss",
-      "summary": "Emergency crews were called to reports of an incident at FirstStage in Leith.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0f46/live/9a3c9120-df59-11f1-9172-871e44a840d8.png",
-      "published": "2026-11-13T21:23:46+00:00",
+      "title": "New campaign against EU membership launches ahead of UK-EU summit",
+      "link": "https://www.bbc.co.uk/news/articles/c6174l2q99ejo?at_medium=RSS&at_campaign=rss",
+      "summary": "The launch of Stay Out comes as Andy Burnham prepares for talks with European leaders next week.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0b01/live/7a54b2f0-c723-11f1-b881-4391ac746e04.jpg",
+      "published": "2026-11-13T21:39:46+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -16,7 +16,17 @@
       "link": "https://www.bbc.co.uk/news/articles/c6jd75geegzyo?at_medium=RSS&at_campaign=rss",
       "summary": "The American military says there were no injuries or damage after \"suspected unauthorised drone activity\" this evening.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d291/live/9c151020-dfa5-11f1-ab35-8541e0a03fdd.jpg",
-      "published": "2026-11-13T21:18:15+00:00",
+      "published": "2026-11-13T21:32:39+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Dept Q crew member dies after being injured at Edinburgh film studio",
+      "link": "https://www.bbc.co.uk/news/articles/cqr7g5l4z9zeo?at_medium=RSS&at_campaign=rss",
+      "summary": "Emergency crews were called to reports of an incident at FirstStage in Leith.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0f46/live/9a3c9120-df59-11f1-9172-871e44a840d8.png",
+      "published": "2026-11-13T21:23:46+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -672,6 +682,16 @@
       "language": "ur"
     },
     {
+      "title": "Mossad chief visits Washington as Israel presses Trump to resume Iran war: Report",
+      "link": "https://tribune.com.pk/story/2640178/mossad-chief-visits-washington-as-israel-presses-trump-to-resume-iran-war-report",
+      "summary": "Roman Gofman meets CIA Director Ratcliffe, expected to hold talks with US envoy Witkoff in Miami, Axios reports",
+      "image_url": "",
+      "published": "2026-11-13T15:59:56+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "US confirms six measles-related deaths in 2026",
       "link": "https://arynews.tv/us-confirms-six-measles-related-deaths-in-2026",
       "summary": "",
@@ -978,26 +998,6 @@
       "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/07/Sharjeel-Inam-Memon.jpg",
       "published": "2026-11-13T14:07:02+00:00",
       "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Nvidia fallout throws spotlight on Southeast Asia’s AI boom",
-      "link": "https://www.dawn.com/news/2044305/nvidia-fallout-throws-spotlight-on-southeast-asias-ai-boom",
-      "summary": "Southeast Asia’s chip and data centre industries expect greater scrutiny after news of former Nvidia CEO Jensen Huang’s affair with a suspected Chinese spy put the spotlight on Singapore and Malaysia, executives and analysts said. US lawmakers from both parties are pushing for tougher restrictions on China’s access to advanced artificial intelligence chips a",
-      "image_url": "https://i.dawn.com/large/2026/11/13183043d756588.webp",
-      "published": "2026-11-13T14:06:01+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Pakistan aiming to become competitive destination for long-term investment, CDF Munir tells minerals moot",
-      "link": "https://www.dawn.com/news/2044267/pakistan-aiming-to-become-competitive-destination-for-long-term-investment-cdf-munir-tells-minerals-moot",
-      "summary": "Chief of Defence Forces and Chief of Army Staff Field Marshal Asim Munir said on Friday that Pakistan was aiming to become a competitive destination for long-term mineral investment. He made the remarks while addressing the participants of the Pakistan Minerals Investment Forum 2026 in Islamabad, according to state-run Radio Pakistan . Delegations, exhibitor",
-      "image_url": "https://i.dawn.com/large/2026/11/13164655b9bd7d1.webp",
-      "published": "2026-11-13T13:37:23+00:00",
-      "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
     }
