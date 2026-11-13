@@ -1,22 +1,22 @@
 {
-  "updated": "2026-11-13T22:10:59.740261+00:00",
+  "updated": "2026-11-13T22:56:40.363186+00:00",
   "items": [
+    {
+      "title": "US Air Force says it responded to 'suspected drones' over RAF Lakenheath",
+      "link": "https://www.bbc.co.uk/news/articles/c6jd75geegzyo?at_medium=RSS&at_campaign=rss",
+      "summary": "The American military says there were no injuries or damage after \"suspected unauthorised drone activity\" this evening.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d291/live/9c151020-dfa5-11f1-ab35-8541e0a03fdd.jpg",
+      "published": "2026-11-13T22:12:33+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "New campaign against EU membership launches ahead of UK-EU summit",
       "link": "https://www.bbc.co.uk/news/articles/c6174l2q99ejo?at_medium=RSS&at_campaign=rss",
       "summary": "The launch of Stay Out comes as Andy Burnham prepares for talks with European leaders next week.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0b01/live/7a54b2f0-c723-11f1-b881-4391ac746e04.jpg",
       "published": "2026-11-13T21:39:46+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "US Air Force says it responded to 'suspected drones' over RAF Lakenheath",
-      "link": "https://www.bbc.co.uk/news/articles/c6jd75geegzyo?at_medium=RSS&at_campaign=rss",
-      "summary": "The American military says there were no injuries or damage after \"suspected unauthorised drone activity\" this evening.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d291/live/9c151020-dfa5-11f1-ab35-8541e0a03fdd.jpg",
-      "published": "2026-11-13T21:32:39+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -50,6 +50,16 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "نئے صوبوں پر بغیر اتفاق رائے فائدہ نہیں ہوگا، گورنر پنجاب",
+      "link": "https://jang.com.pk/news/1633206",
+      "summary": "گورنر پنجاب سردار سلیم حیدر خان نے کہا ہے کہ صوبوں کے قیام پر بغیر بات چیت اور اتفاق رائے کچھ فائدہ نہیں ہوگا۔ میڈیا سے گفتگو میں...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-14/b_1633206_021554_updates.jpg\"/",
+      "published": "2026-11-13T21:11:29+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "کراچی یونیورسٹی روڈ حسن اسکوائر سے نیپا تک بند",
@@ -452,6 +462,16 @@
       "language": "ur"
     },
     {
+      "title": "کراچی: یونیورسٹی روڈ پر ترقیاتی کاموں کے باعث حسن اسکوائر برج سے نیپا جانیوالی سڑک بند",
+      "link": "https://www.express.pk/story/2844114/karachi-road-from-hassan-square-bridge-towards-nipa-closed-due-to-development-work-on-university-road-2844114",
+      "summary": "سڑک 14 نومبر بروز ہفتہ صبح 7 بجے سے ٹریفک کے لیے بند رہے گی",
+      "image_url": "",
+      "published": "2026-11-13T17:23:20+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "فیصل آباد پولیس میں خود احتسابی کا عمل جاری، رواں سال 4235 اہلکاروں کو سزائیں، اچھی کارکردگی پر 18 لاکھ 87 ہزار روپے کے نقد انعامات تقسیم",
       "link": "https://urdupoint.com/n/5009730",
       "summary": "",
@@ -582,6 +602,46 @@
       "language": "en"
     },
     {
+      "title": "Govt to levy up to 10% ADL on ICE vehicles",
+      "link": "https://tribune.com.pk/story/2640182/govt-to-levy-up-to-10-adl-on-ice-vehicles",
+      "summary": "NEVs retain lower sales tax, while SBP may raise vehicle financing limit to Rs10m",
+      "image_url": "",
+      "published": "2026-11-13T16:37:23+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Govt meets IMF fiscal conditions",
+      "link": "https://tribune.com.pk/story/2640179/govt-meets-imf-fiscal-conditions",
+      "summary": "Centre receives only Rs57.5b, or 6% of annual provincial grant",
+      "image_url": "",
+      "published": "2026-11-13T16:37:23+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "SPI inflation stays in double digits at 11.21%",
+      "link": "https://tribune.com.pk/story/2640181/spi-inflation-stays-in-double-digits-at-1121",
+      "summary": "LPG prices surge 111.35%, tomatoes 78.94% YoY",
+      "image_url": "",
+      "published": "2026-11-13T16:37:23+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Debt pile climbs to Rs98.881tr",
+      "link": "https://tribune.com.pk/story/2640180/debt-pile-climbs-to-rs98881tr",
+      "summary": "Q1FY27 debt servicing hits Rs2.9tr, up 33%, on higher principal repayments, interest",
+      "image_url": "",
+      "published": "2026-11-13T16:37:23+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "Federal govt transfers senior Sindh police officers without provincial consultation: sources",
       "link": "https://arynews.tv/federal-govt-transfers-senior-sindh-police-officers-without-provincial-consultation-sources",
       "summary": "",
@@ -670,6 +730,16 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "چین میں ٹرمپ، شی جن پنگ اور پیوٹن کی ملاقات متوقع؛ نیویارک پوسٹ کا دعویٰ",
+      "link": "https://www.express.pk/story/2844113/meeting-between-trump-xi-jinping-and-putin-expected-in-china-new-york-post-claims-2844113",
+      "summary": "تینوں رہنماؤں کی ملاقات میں جوہری ہتھیاروں، شمالی کوریا، یوکرین اور ایران سے متعلق امور پر بات چیت کا امکان ہے",
+      "image_url": "",
+      "published": "2026-11-13T16:07:35+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "نظریاتی صحافت کا سرخیل",
@@ -929,76 +999,6 @@
       "published": "2026-11-13T14:34:21+00:00",
       "source": "BBC News",
       "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Lillah-Jhelum Road project completed after five years",
-      "link": "https://arynews.tv/lillah-jhelum-road-project-completed-after-five-years",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/FotoJet-8.jpg",
-      "published": "2026-11-13T14:26:26+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "ترکیہ، قطر کا دفاعی معاہدہ، دونوں ممالک کے سربراہان کے دستخط",
-      "link": "https://www.express.pk/story/2844103/turkiye-qatar-defence-agreement-both-countries-heads-signed-2844103",
-      "summary": "ترکیہ اور قطر کے درمیان دفاع کے ساتھ ساتھ تعلیم، امن، سفارت کاری، تجارت کے معاہدوں پر بھی دستخط ہوئے ہیں، رپورٹ",
-      "image_url": "",
-      "published": "2026-11-13T14:19:11+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "COP has a guest-list problem",
-      "link": "https://www.dawn.com/news/2044280/cop-has-a-guest-list-problem",
-      "summary": "“The entire conversation around climate change was, ‘Pakistan…it’s Pakistan now, but the world next,’ 23-year-old Maryam Jamali recalls. “But no one from those communities was present at COP.” Co-founder of Madat Balochistan, a women and indigenous-led grassroots organisation dedicated to rehabilitating communities affected by climate change, Jamali became a",
-      "image_url": "https://i.dawn.com/large/2026/11/131426536d0f97d.webp",
-      "published": "2026-11-13T14:18:56+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "SHC reserves verdict in Rs24bn black scorpions sale proceeds case",
-      "link": "https://arynews.tv/shc-reserves-verdict-in-rs24bn-black-scorpions-sale-proceeds-case",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Black-Scorpio.jpg",
-      "published": "2026-11-13T14:15:16+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "اسلام آباد بلدیاتی انتخابات کے الیکشن پروگرام کی معطلی کا نوٹیفکیشن جاری",
-      "link": "https://jang.com.pk/news/1633162",
-      "summary": "فائل فوٹو الیکشن کمیشن نے اسلام آباد بلدیاتی انتخابات کا الیکشن پروگرام اسلام آباد ہائیکورٹ میں اگلی سماعت تک معطل کردیا۔اس سے...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-13/b_1633162_074117_updates.jpg\"/",
-      "published": "2026-11-13T14:11:57+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پی ٹی آئی میں سنجیدہ، باصلاحیت اور اہل رہنما نظر انداز کیے گئے، بیرسٹر سیف",
-      "link": "https://jang.com.pk/news/1633163",
-      "summary": "سابق مشیر اطلاعات خیبر پختونخوا حکومت بیرسٹر سیف نے کہا ہے کہ پی ٹی آئی میں سنجیدہ، باصلاحیت اور اہل رہنماؤں کو نظر انداز کیا گیا...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-13/b_1633163_075052_updates.jpg\"/",
-      "published": "2026-11-13T14:11:12+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Sindh government plans to prioritize EVs to cut costs",
-      "link": "https://arynews.tv/sindh-government-plans-to-prioritize-evs-to-cut-costs",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/07/Sharjeel-Inam-Memon.jpg",
-      "published": "2026-11-13T14:07:02+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
       "language": "en"
     }
   ]
