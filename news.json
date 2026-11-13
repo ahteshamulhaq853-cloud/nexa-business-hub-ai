@@ -1,6 +1,326 @@
 {
-  "updated": "2026-11-13T16:18:20.696366+00:00",
+  "updated": "2026-11-13T17:15:32.688808+00:00",
   "items": [
+    {
+      "title": "Why is Microsoft's outage lasting so long and will emails be lost?",
+      "link": "https://www.bbc.co.uk/news/articles/cwvg238zrnm5o?at_medium=RSS&at_campaign=rss",
+      "summary": "Microsoft says it is continuing to restore services including Outlook and Teams following a global outage.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dddf/live/8578f720-df49-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-11-13T17:12:46+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Police investigating David Walliams over reports alleging serious sexual offences",
+      "link": "https://www.bbc.co.uk/news/articles/cwx2emg4xe72o?at_medium=RSS&at_campaign=rss",
+      "summary": "The Met Police said the allegations are separate from those reported by ITV and the Guardian earlier this week.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c7f8/live/38cb0fd0-df13-11f0-8db4-97f4d263443d.jpg",
+      "published": "2026-11-13T16:53:50+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "میرواعظ کاگھر میں اپنی باربار نظر بند ی پر اظہار تشویش، پابندیاں مذہبی فرائص کی ادائیگی میں صریح مداخلت ہے،نماز جمعہ کے اجتماع سے خطاب",
+      "link": "https://urdupoint.com/n/5009645",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:52:26+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "زرغام جبوآنہ سیال چیئرمین سینیٹ کے پرنسپل سٹاف آفیسر تعینات",
+      "link": "https://urdupoint.com/n/5009644",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:52:24+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کوئٹہ پولیس نے خواتین کوہراساں کرنے والا ملزم گرفتارکرلیا",
+      "link": "https://urdupoint.com/n/5009643",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:52:21+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "راولپنڈی انسٹیٹیوٹ آف کارڈیالوجی (آر آئی سی) میں دل کے آپریشنز کی سہولیات بلا تعطل جاری ہیں ، ترجمان",
+      "link": "https://urdupoint.com/n/5009642",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:52:18+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "مقبوضہ جموں وکشمیر :بھارتی حکام نے ایک اور کشمیری کی جائیداد ضبط کر لی",
+      "link": "https://urdupoint.com/n/5009641",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:52:15+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "مقبوضہ کشمیر: تلاشی آپریشن جاری، مزید کئی نوجوان گرفتار کر لیے",
+      "link": "https://urdupoint.com/n/5009640",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:52:12+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سرداری نظام کے خاتمے کی قرارداد بلوچستان اسمبلی میں 5 کے مقابلے میں 6 ووٹوں سے مسترد",
+      "link": "https://urdupoint.com/n/5009639",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:52:09+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "مقبوضہ کشمیر میں طبی تعلیم کے خواہشمند 100 سے زائد طلباءکامستقبل خطرے میں",
+      "link": "https://urdupoint.com/n/5009638",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:52:06+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "تحصیل ہیڈکوارٹر ہسپتال اُستامحمد میں دوروزہ مفت آئی میڈیکل کیمپ کامیابی کے ساتھ اختتام پذیر ہو گیا",
+      "link": "https://urdupoint.com/n/5009637",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:52:03+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "بھارتی حکومت نے ڈاکٹر ذاکر نائیک کی تنظیم آئی آر ایف پر عائد پابندی میں توسیع کر دی",
+      "link": "https://urdupoint.com/n/5009636",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:52:01+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Pfizer to stop selling Premarin in Canada",
+      "link": "https://arynews.tv/pfizer-to-stop-selling-premarin-in-canada",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Permarin.jpg",
+      "published": "2026-11-13T16:51:08+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "صدرِ مملکت سے وفاقی وزیر داخلہ کی ملاقات میں صوبوں سے متعلق امور پر گفتگو سے متعلق میڈیا رپورٹس میں کوئی صداقت نہیں ، ترجمان ایوان صدر",
+      "link": "https://urdupoint.com/n/5009634",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:51:01+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "اسلام آبادکو ملک کا پہلا مکمل کیش لیس شہر بنانے کا فیصلہ، 31 دسمبر کی حتمی ڈیڈ لائن مقرر ... ریڑھی بانوں سے بڑےکاروباری مراکز تک ڈیجیٹل ادائیگیوں کی سہولت فراہم کی جائےگی.وزیرمملکت ... مزید",
+      "link": "https://urdupoint.com/n/5009633",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_1793695320_695426.jpg._3",
+      "published": "2026-11-13T16:48:44+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ملک میں ہفتہ وار مہنگائی کی شرح میں 0.46فیصد کمی، سالانہ شرح 11.21فیصد ریکارڈ ... 19 اشیائے ضروریہ کی قیمتوں میں اضافہ9اشیا سستی ہوئیں جبکہ 23اشیا کی قیمتیں مستحکم رہیں.رپورٹ",
+      "link": "https://urdupoint.com/n/5009632",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_29ba8_1770221356.jpg._3",
+      "published": "2026-11-13T16:46:29+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "پاکستان اور ترکیہ کا دوطرفہ تجارت کا حجم 5 ارب ڈالر تک بڑھانے کے عزم کا اعادہ، وزیر مملکت بلال اظہر کیانی اور ترک سفیر کی ملاقات ... سیاسی تعلقات کو عملی معاشی تعاون میں ... مزید",
+      "link": "https://urdupoint.com/n/5009631",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:41:28+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "صدرِ مملکت اور وزیر داخلہ کی ملاقات میں صوبوں سے متعلق امور پر گفتگو کی خبریں بے بنیاد ہیں، ترجمان ... :ملاقات کے دوران قومی سلامتی اور خطے کی صورتحال پر تبادلہ خیال کیا ... مزید",
+      "link": "https://urdupoint.com/n/5009630",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:41:25+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "راولپنڈی تعلیمی بورڈ کی اپوائنٹمنٹ اینڈ پروموشن کمیٹی کا اجلاس، مختلف کیڈرز کے 40 افسران و ملازمین کی ترقیوں کی سفارش ... ترقیاتی امور اور سروس معاملات میں شفافیت اور میرٹ ... مزید",
+      "link": "https://urdupoint.com/n/5009629",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:41:23+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سرکاری ملازمین کے اثاثوں کے ڈیجیٹل گوشوارے جمع کرانے کی تاریخ میں توسیع، وزیراعظم کی منظوری سے نئی تاریخ 30 نومبر 2026 مقرر ... ؒگوشواروں میں تصحیح کی آخری تاریخ 31 دسمبر ... مزید",
+      "link": "https://urdupoint.com/n/5009628",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:41:20+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "۱اسلام آباد میں سیاسی سرگرمیاں تیز، چیئرمین پیپلز پارٹی بلاول بھٹو زرداری کراچی سے اسلا م آباسد پہنچ گئے ... پارلیمنٹ میں پیش کیے جانے والے قانونی مسودات اور مجوزہ بلز ... مزید",
+      "link": "https://urdupoint.com/n/5009627",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_1793695094_561167.jpg._3",
+      "published": "2026-11-13T16:41:17+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ایف بی آر افسران کے اہلیت امتحان میں تشویش ناک نتائج ... کراچی میں تعینات کوئی سیلز ٹیکس افسر 60 فیصد نمبر حاصل نہ کرسکا، انکم ٹیکس میں صرف چار افسران مقررہ معیار پر پورے ... مزید",
+      "link": "https://urdupoint.com/n/5009625",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:41:10+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سرکاری ویکسین کے مبینہ غیر قانونی استعمال پر دو ویکسی نیٹرز معطل ... نجی اسپتال سے سرکاری ای پی آئی ویکسین برآمد ہونے کے بعد انکوائری کمیٹی قائم، ذمہ داروں کے تعین کے ... مزید",
+      "link": "https://urdupoint.com/n/5009624",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:41:07+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "قرآنی وظائف کے نام پر فراڈ، این سی سی آئی اے نے 25 لاکھ روپے واپس دلوا دیے ... فیس بک پر جعلی پیرنی کے جھانسے میں آکر خاتون نے رقم منتقل کی، فراڈ میں استعمال ہونے والے بینک ... مزید",
+      "link": "https://urdupoint.com/n/5009623",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:41:03+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "پاکستان ریلوے کا کرایہ واپسی کے لیے نیا ڈیجیٹل نظام نافذ ... ٹرین منسوخی، کوچ نہ لگنے اور اے سی خراب ہونے پر مسافروں کو کرایہ واپس ملے گا، نئے ایس او پیز پر فوری عمل درآمد ... مزید",
+      "link": "https://urdupoint.com/n/5009622",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_1793765376_535566.jpg._3",
+      "published": "2026-11-13T16:41:00+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ٹنڈوالہیار کے اسکول میں سائنس، ٹیکنالوجی اور روبوٹکس کے ماڈلز کی نمائش ... سائنسی اسٹیم فیسٹیول 2026 میں طلبہ نے تخلیقی صلاحیتوں کا مظاہرہ کیا، تعلیمی افسران نے منصوبوں ... مزید",
+      "link": "https://urdupoint.com/n/5009621",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:40:57+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ٹنڈوالہیار میں تیز رفتار ڈمپر کی ٹکر سے ماں اور بیٹا جاں بحق ... گوٹھ جمع خان لونڈ کے قریب حادثہ، ڈرائیور فرار؛ پولیس نے ڈمپر تحویل میں لے لیا",
+      "link": "https://urdupoint.com/n/5009620",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:40:55+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سندھ کے صرف 8 فیصد سرکاری اسکولوں میں تمام بنیادی سہولیات دستیاب ... 73 فیصد اسکول بنیادی سہولیات سے محروم، 45 فیصد پرائمری اسکولوں میں تدریسی عمل صرف ایک استاد کے ذریعے جاری",
+      "link": "https://urdupoint.com/n/5009619",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-13T16:40:52+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Rosenberg: Uncompromising Putin ups demands for peace with Ukraine",
+      "link": "https://www.bbc.co.uk/news/articles/cq39glwprknjo?at_medium=RSS&at_campaign=rss",
+      "summary": "The fact the question of European security now features in discussions is viewed in Moscow as a victory, BBC Russia Editor Steve Rosenberg says.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/69b4/live/54139cb0-df82-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-11-13T16:40:31+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Turkiye, Qatar sign defence agreement: Turkish presidency",
+      "link": "https://www.dawn.com/news/2044322/turkiye-qatar-sign-defence-agreement-turkish-presidency",
+      "summary": "Turkiye and Qatar signed a defence agreement on Friday that President Recep Tayyip Erdogan said would further strengthen ties between the regional allies, his office said. The announcement came after Erdogan met Qatari Emir Sheikh Tamim bin Hamad Al Thani in Istanbul. Qatar’s ruler travelled to Istanbul after attending the United Nations COP31 climate summit",
+      "image_url": "https://i.dawn.com/large/2026/11/132203320ab4e71.webp",
+      "published": "2026-11-13T16:38:42+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Federal govt transfers senior Sindh police officers without provincial consultation: sources",
+      "link": "https://arynews.tv/federal-govt-transfers-senior-sindh-police-officers-without-provincial-consultation-sources",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Missing-girls-Punjab-recovered-Karachi.jpg",
+      "published": "2026-11-13T16:35:56+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Balochistan Assembly rejects resolution seeking abolition of tribal system",
+      "link": "https://arynews.tv/balochistan-assembly-rejects-resolution-seeking-abolition-of-tribal-system",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/balochistan-assembly.jpg",
+      "published": "2026-11-13T16:32:30+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
     {
       "title": "Kuwait announces power cut in nine districts, could yours be next?",
       "link": "https://arynews.tv/kuwait-announces-power-cut-in-nine-districts-could-yours-be-next",
@@ -12,11 +332,51 @@
       "language": "en"
     },
     {
+      "title": "میر رضا، احمد بھاردے کے الیکٹرانک آلات کا لائیو فرانزک لیب سے معائنہ کروانے کیلئے 10 دن کی مہلت",
+      "link": "https://jang.com.pk/news/1633172",
+      "summary": "میر رضا: فائل فوٹو کراچی کی جوڈیشل عدالت نے میر رضا کیس میں میر رضا اور ان کے بزنس پارٹنر احمد بھاردے کے الیکٹرانک آلات کا لائیو...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-13/b_1633172_093117_updates.jpg\"/",
+      "published": "2026-11-13T16:11:49+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "بس میں خاتون کو دھکا دینے والے کنڈیکٹر نے معافی مانگ لی",
+      "link": "https://jang.com.pk/news/1633174",
+      "summary": "بس کے کنڈیکٹر نے خاتون کو دھکا دینے کے معاملے پر معافی مانگ لی ہے۔وزیراعلیٰ پنجاب مریم نواز نے بس کنڈیکٹر کی معافی کی ویڈیو شیئر کردی...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-13/b_1633174_094157_updates.jpg\"/",
+      "published": "2026-11-13T16:11:48+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "ایوان صدر کی صدر زرداری، محسن نقوی ملاقات پر وضاحت",
       "link": "https://jang.com.pk/news/1633169",
       "summary": "صدر مملکت آصف علی زرداری اور وزیر داخلہ محسن نقوی کی ملاقات سے متلق ایوان صدر کی وضاحت سامنے آگئی۔ترجمان ایوان صدر کے مطابق گزشتہ...",
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-13/b_1633169_090211_updates.jpg\"/",
       "published": "2026-11-13T16:11:42+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "وزیراعلیٰ پنجاب نے بس کنڈیکٹر کے خاتون کو دھکے دینے کا نوٹس لے لیا",
+      "link": "https://jang.com.pk/news/1633170",
+      "summary": "وزیر اعلیٰ پنجاب مریم نواز نے بس میں کنڈیکٹر کے خاتون کو دھکے دینے کا واقعے کا نوٹس لے لیا ہے۔اس معاملے پر مریم نواز نے کہا کہ کنڈیکٹر...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-13/b_1633170_090644_updates.jpg\"/",
+      "published": "2026-11-13T16:11:36+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سونا، تانبہ اور لیتھیم سمیت دیگر معدنیات کی تلاش کیلئے جیولوجیکل میپنگ پروگرام شروع، علی پروزیر ملک",
+      "link": "https://jang.com.pk/news/1633175",
+      "summary": "وزیر پیٹرولیم علی پرویز ملک پاکستان منرلز انویسٹمنٹ فورم سے خطاب میں وزیر پیٹرولیم علی پرویز ملک نے کہا کہ چاغی اور خضدار میں منرلز...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-13/b_1633175_095150_updates.jpg\"/",
+      "published": "2026-11-13T16:11:06+00:00",
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
@@ -52,16 +412,6 @@
       "language": "en"
     },
     {
-      "title": "مشیر کی صوبائی چائلڈ پروٹیکشن اینڈ ویلفیئر کمیشن کے چیف کی عرصہ دراز سے خالی آسامی کو جلد از جلد پر کرنے کی ہدایت",
-      "link": "https://urdupoint.com/n/5009593",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:54:01+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
       "title": "JI condemns suspension of local government elections in capital",
       "link": "https://arynews.tv/ji-condemns-suspension-of-local-government-elections-in-capital",
       "summary": "",
@@ -70,16 +420,6 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "ابوظبی کے ہوٹل میں جھگڑے پر 8 افراد کو 6 ماہ قید اور بھاری جرمانے، ویڈیو بنانے والے بھی سزا سے نہ بچ سکے ... عدالت نے 6 افراد کو لڑائی اور 2 کو ویڈیو بنا کر پھیلانے پر قید، فی ... مزید",
-      "link": "https://urdupoint.com/n/5009592",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:52:32+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
     },
     {
       "title": "Former Hamas bodyguard guilty of UK knife attack",
@@ -92,121 +432,21 @@
       "language": "en"
     },
     {
-      "title": "سرحدی تجارت بلوچستان کے عوام کے لیے روزگار کا اہم ذریعہ ہے،شاہدہ رئوف",
-      "link": "https://urdupoint.com/n/5009591",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:50:17+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "گورنمنٹ جناح اسلامیہ گریجویٹ کالج سیالکوٹ میں پروفیسرز اینڈ لیکچررز ایسوسی ایشن کے انتخابات مکمل، تمام عہدیداران بلا مقابلہ منتخب",
-      "link": "https://urdupoint.com/n/5009590",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:50:15+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "اسسٹنٹ کمشنر چمن مس آئیڈا جوڈتھ گل کا شہر کے مختلف بازاروں اور تجارتی مراکز کا تفصیلی دورہ",
-      "link": "https://urdupoint.com/n/5009589",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:50:11+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پنجگور کی ترقیاتی سکیموں سے متعلق توجہ دلائونوٹس، فنڈز کیلئے محکمہ خزانہ کو لکھ دیا ہے، میرسلیم کھوسہ",
-      "link": "https://urdupoint.com/n/5009588",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:50:09+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ضلع چمن میں آباد تمام مذاہب اور برادریوں کے افراد معاشرے کا اہم حصہ ہیں اور ہم سب ایک ہی گلدستے کے پھول ہیں،ڈپٹی کمشنر چمن",
-      "link": "https://urdupoint.com/n/5009587",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:50:07+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "صوبائی مشیر بلدیات کادہشتگردی کی کوشش ناکام بنانے پر سکیورٹی فورسز کو خراجِ تحسین",
-      "link": "https://urdupoint.com/n/5009586",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:50:04+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پشاور کے علاقےجمیل چوک کے قریب کھدائی کے دوران ملبہ گرنے سے ایک مزدور جاں بحق جبکہ دو مزدور زخمی ہو گئے",
-      "link": "https://urdupoint.com/n/5009585",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:50:01+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کیسکو میں خالی آسامیوں پر بھرتیوں کےلئے انٹرویوز 16 سے 20 نومبر تک ہونگے",
-      "link": "https://urdupoint.com/n/5009584",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:49:06+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "الیکشن کمیشن نے اسلام آباد ہائیکورٹ کے فیصلے کی روشنی میں وفاقی دارالحکومت میں بلدیاتی انتخابات کا عمل معطل کر دیا",
-      "link": "https://urdupoint.com/n/5009583",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:49:03+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بلوچستان اسمبلی میں وزیراعلیٰ میرسرفرازبگٹی کی چچی کیلئے فاتحہ خوانی",
-      "link": "https://urdupoint.com/n/5009582",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:49:01+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "دبئی میں سالک کی آمدن اور منافع میں کمی، ٹریفک جرمانوں سے 22 کروڑ درہم وصول ... 2026 کے پہلے 9 ماہ میں سالک کا خالص منافع 8.6 فیصد گھٹ گیا، تاہم خلاف ورزیوں سے حاصل آمدن میں 6.5 ... مزید",
-      "link": "https://urdupoint.com/n/5009581",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:48:34+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
       "title": "Courts, spies and MPs: How the Microsoft outage has been felt around the world",
       "link": "https://www.bbc.co.uk/news/articles/cqp9d58eldlro?at_medium=RSS&at_campaign=rss",
       "summary": "From city governments in the US to spy agencies in Australia, the Microsoft outage is being felt around the world.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ece6/live/20d43a70-df60-11f1-a701-fddedf244c16.jpg",
       "published": "2026-11-13T15:44:48+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Nvidia scandal fallout widens as Trump's treasury secretary blames cabinet colleague",
+      "link": "https://www.bbc.co.uk/news/articles/cqvg2d1eg7zro?at_medium=RSS&at_campaign=rss",
+      "summary": "Scott Bessent told CNBC that several government agencies \"were in favour of putting Megaspeed on the entity list for months\".",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2783/live/a5cdb560-df6c-11f1-9892-87464bbcc2b8.jpg",
+      "published": "2026-11-13T15:40:08+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -222,16 +462,6 @@
       "language": "en"
     },
     {
-      "title": "وزیراعظم کا خام معدنی وسائل کی برآمد کے بجائے ملک میں پراسیسنگ اور مینوفیکچرنگ انڈسٹریز کی طرف منتقلی پر زور ، معدنی دولت کو اندرون ملک زیادہ سے زیادہ معاشی مواقع ... مزید",
-      "link": "https://urdupoint.com/n/5009580",
-      "summary": "",
-      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_1793695090_708173.jpg._3",
-      "published": "2026-11-13T15:35:01+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
       "title": "Tearful Pochettino on 'difficult' decision to leave USA for Man Utd",
       "link": "https://www.bbc.co.uk/sport/football/articles/cmd61qne8352o?at_medium=RSS&at_campaign=rss",
       "summary": "An emotional Mauricio Pochettino broke down as he explained why he was leaving the USA to take the Manchester United job.",
@@ -240,56 +470,6 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
-    },
-    {
-      "title": "عمران خان کو اپنی خیبرپختونخوا حکومت گرنے کا نہ کوئی غم ہے نہ کوئی فکر ہے، عزاز سید ... بانی پی ٹی آئی اور ان کے پیروکاروں کیلئے کےپی حکومت ایک دردِ سر اور بوجھ بن چکی تھی، ... مزید",
-      "link": "https://urdupoint.com/n/5009579",
-      "summary": "",
-      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2025/125x125/pic_ef5b6_1758110061.jpg._3",
-      "published": "2026-11-13T15:24:57+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کوپ 31 میں صرف وعدے نہیں بلکہ ماحولیاتی انصاف اور متاثرہ ممالک کے لیے عملی اقدامات ہونے چاہئیں، سینیٹر شیری رحمان",
-      "link": "https://urdupoint.com/n/5009578",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:22:11+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بلاول بھٹو زرداری کا محمد قاسم دشتی کی والدہ کے انتقال پر افسوس کا اظہار",
-      "link": "https://urdupoint.com/n/5009577",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:22:09+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سینیٹر شیری رحمان کا خیبر پختونخوا اور بلوچستان میں 74 دہشت گردوں کی ہلاکت پر سکیورٹی فورسز کو خراج تحسین",
-      "link": "https://urdupoint.com/n/5009576",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:22:06+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سیالکوٹ پولیس میں احتساب کے دوران 74ملازمین برطرف، 46 کی سروس ضبط،ترجمان",
-      "link": "https://urdupoint.com/n/5009575",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:22:03+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
     },
     {
       "title": "US Treasury chief blames Commerce Dept for failure in Nvidia scandal",
@@ -322,72 +502,22 @@
       "language": "en"
     },
     {
+      "title": "ریکوڈک سے بلوچستان کے عوام کیلئے روزگار اور معاشی ترقی کے مواقع پیدا ہوں گے، وزیراعظم",
+      "link": "https://jang.com.pk/news/1633168",
+      "summary": "تصویر سوشل میڈیا۔وزیراعظم شہباز شریف سے غیرملکی مائننگ کمپنی کے چیئرمین کی سربراہی میں وفد نے ملاقات کی۔اس موقع پر وزیراعظم نے کہا...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-13/b_1633168_085448_updates.jpg\"/",
+      "published": "2026-11-13T15:11:36+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "غیر قانونی بھرتیوں کا کیس: اسعد محمود نیب کے دوسرے نوٹس پر بھی پیش نہیں ہوئے",
       "link": "https://jang.com.pk/news/1633166",
       "summary": "پاکستان پوسٹ میں غیر قانونی بھرتیوں کے کیس میں نیب کی طلبی پر سابق وفاقی وزیر اسعد محمود دوسرے کال اپ نوٹس پر بھی پیش نہیں...",
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-13/b_1633166_081750_updates.jpg\"/",
       "published": "2026-11-13T15:11:08+00:00",
       "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ثمر ہارون بلور کا صوبے میں آپریشن کے دوران دہشت گردوں کی ہلاکت پر سکیورٹی فورسز کو خراجِ تحسین ... خیبر پختونخوا میں دہشت گردوں کے خلاف کامیاب انٹیلی جنس بیسڈ آپریشن سکیورٹی ... مزید",
-      "link": "https://urdupoint.com/n/5009573",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:10:58+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "یو اے ای کا ورک ویزا حاصل کرنے کے خواہشمند پاکستانیوں کی بڑی مشکل آسان ہوگئی",
-      "link": "https://urdupoint.com/n/5009571",
-      "summary": "",
-      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2022/125x125/pic_0d4d8_1659596827.jpg._3",
-      "published": "2026-11-13T15:10:52+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "گوادر میں پہلی مرتبہ خصوصی افراد کیلئے نادرا کی موبائل رجسٹریشن سروس کا آغاز",
-      "link": "https://urdupoint.com/n/5009570",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:10:49+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بیرون ملک ملازمت کے لیے جانے والے پاکستانیوں کی تعداد میں ایک سال کے دوران 25 فیصد کمی ... رواں سال جنوری سے اکتوبرتک 4 لاکھ 76 ہزار 240 افراد ملازمت کیلئے بیرون ملک جاسکے",
-      "link": "https://urdupoint.com/n/5009569",
-      "summary": "",
-      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2020/125x125/pic_6683b_1581340341.jpg._3",
-      "published": "2026-11-13T15:10:47+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "خانیوال،پولیس اور ڈاکوں کے درمیان مبینہ مقابلے میں ایک ڈاکو ہلاک",
-      "link": "https://urdupoint.com/n/5009568",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:10:44+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سلامتی کونسل میں پاکستان کی سعودیہ پر حوثی ملیشیا کے حملوں کی مذمت ... سعودی عرب کے خلاف حوثی دہشت گرد حملوں کے فوری اور غیر مشروط خاتمے کا مطالبہ",
-      "link": "https://urdupoint.com/n/5009567",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-13T15:10:42+00:00",
-      "source": "UrduPoint",
       "category": "اردو",
       "language": "ur"
     },
@@ -469,16 +599,6 @@
       "published": "2026-11-13T14:26:26+00:00",
       "source": "ARY News",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Why is the Microsoft outage lasting so long?",
-      "link": "https://www.bbc.co.uk/news/articles/cwvg238zrnm5o?at_medium=RSS&at_campaign=rss",
-      "summary": "Microsoft says it is seeing \"improvements\" following a global outage but efforts to fully resume services are ongoing.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dddf/live/8578f720-df49-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-11-13T14:21:26+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     },
     {
@@ -692,16 +812,6 @@
       "language": "en"
     },
     {
-      "title": "UN watchdog 'increasingly concerned' over uninspected Iran nuclear site",
-      "link": "https://www.bbc.co.uk/news/articles/cm75261e3pdko?at_medium=RSS&at_campaign=rss",
-      "summary": "It says it has never been able to visit a uranium enrichment plant at Isfahan which Iran announced over a year ago.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d06a/live/954609a0-df57-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-11-13T12:28:28+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "’کل کا بچہ اور ایسا رویہ‘: انڈیا کو ون ڈے کرکٹ میں دوسری بڑی شکست اور گرنور برار کے جارحانہ رویے پر تنقید",
       "link": "https://www.bbc.com/urdu/articles/c699ev7rv5klo?at_medium=RSS&at_campaign=rss",
       "summary": "نیوزی لینڈ کے ہاتھوں ہونے والی شکست انڈیا کی ون ڈے میں اب تک کی سب سے بڑی شکست سے محض ایک رن کم ہے۔ سنہ 2000 میں سری لنکا نے شارجہ میں کھیلے گئے میچ کے دوران انڈیا کو 245 سے شکست دی تھی۔",
@@ -792,6 +902,16 @@
       "language": "ur"
     },
     {
+      "title": "Eleanor Donaldson given supervision order and placed on sex offenders' register",
+      "link": "https://www.bbc.co.uk/news/articles/cme87dnngnwjo?at_medium=RSS&at_campaign=rss",
+      "summary": "Eleanor Donaldson was found to have done the acts in relation to five charges, including four of aiding and abetting his offending, in a 'trial of the facts'.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d10e/live/3584ba10-df4e-11f1-8364-2717a13d3b08.jpg",
+      "published": "2026-11-13T12:09:54+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
       "title": "Pakistan, bad weather hold Sri Lanka to draw in first Test",
       "link": "https://arynews.tv/pakistan-bad-weather-hold-sri-lanka-to-draw-in-first-test",
       "summary": "",
@@ -800,6 +920,16 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "پاکستان آئندہ سال ایف آئی ایچ نیشنز کپ کی میزبانی کرے گا",
+      "link": "https://www.express.pk/story/2844085/hockey-nations-cup-in-pakistan-2844085",
+      "summary": "پاکستان میں 22 سال بعد کسی بڑے عالمی ہاکی ایونٹ کا انعقاد ہوگا",
+      "image_url": "",
+      "published": "2026-11-13T11:59:01+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "سعود شکیل کی اُدھوری خواہش اور ڈریسنگ روم میں سکتہ، راولپنڈی ٹیسٹ بغیر نتیجہ ختم",
@@ -842,16 +972,6 @@
       "language": "en"
     },
     {
-      "title": "Rosalía scoops historic third best album award at Latin Grammys",
-      "link": "https://www.bbc.co.uk/news/articles/cr3eg97eqde1o?at_medium=RSS&at_campaign=rss",
-      "summary": "The Spanish singer is recognised for her fourth album Lux which was released last year to rave reviews.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/09dd/live/69ef2110-df6b-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-11-13T11:38:54+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "چینی محققین کا ’برقی کنگھی‘ کی مدد سے موروثی گنج پن کا ’مؤثر علاج‘ دریافت کرنے کا دعویٰ",
       "link": "https://www.bbc.com/urdu/articles/cwx2emnggejpo?at_medium=RSS&at_campaign=rss",
       "summary": "چینی محققین نے ’ڈی ٹینگل‘ نامی ایک برقی کنگھی تیار کی ہے، دعوے کے مطابق یہ موروثی گنج پن کے علاج میں مدد دے سکتی ہے",
@@ -880,126 +1000,6 @@
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "جادو ٹونے سے حکومتیں چلتی ہیں نہ جھوٹ اور پروپیگنڈے سے حکومتیں گرتی ہیں، عظمیٰ بخاری",
-      "link": "https://jang.com.pk/news/1633139",
-      "summary": "وزیر اطلاعات پنجاب عظمیٰ بخاری : فائل فوٹو وزیر اطلاعات پنجاب عظمیٰ بخاری کا کہنا ہے کہ جادو ٹونے سے حکومتیں چلتی ہیں نہ جھوٹ اور...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-13/b_1633139_050138_updates.jpg\"/",
-      "published": "2026-11-13T11:11:45+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کراچی: چینی انجینئرز کی گاڑی پر حملہ کیس، مجرم کو 48 برس قید کی سزا سنادی گئی",
-      "link": "https://jang.com.pk/news/1633137",
-      "summary": "فائل فوٹو انسداد دہشتگردی عدالت کراچی نے گل بائی کے قریب چینی انجینئرز کی گاڑی پر حملے کے کیس میں جرم ثابت ہونے پر ملزم داد بخش کو...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-13/b_1633137_044621_updates.jpg\"/",
-      "published": "2026-11-13T11:11:14+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ایرانی فورسز نے جنوبی ساحل پر امریکی ایم کیو-1 ڈرون مار گرایا",
-      "link": "https://www.express.pk/story/2844084/irani-forces-down-us-mq1-drone-2844084",
-      "summary": "ایران کے دفاعی نیٹ ورک کے تحت فضائی دفاعی نظام نے امریکی ڈرون کا سراغ لگایا، رپورٹ",
-      "image_url": "",
-      "published": "2026-11-13T11:10:07+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "آئی ٹی مصنوعات کی برآمدات بڑھانے کے لیے نئے منصوبے شروع کرنے کا فیصلہ",
-      "link": "https://www.express.pk/story/2844083/decision-taken-to-launch-new-initiatives-to-increase-exports-of-it-products-2844083",
-      "summary": "ملک میں فائبر کنکشنز اور ہاوٴس پاسز کی تعداد بڑھانے کے لیے فائبرائزیشن کے منصوبے پر عمل شروع ہوگیا، سی ای او اگنائنٹ",
-      "image_url": "",
-      "published": "2026-11-13T11:05:15+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Petrol, diesel price cuts push weekly inflation down 0.46%",
-      "link": "https://arynews.tv/petrol-diesel-price-cuts-push-weekly-inflation-down-0-46",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/07/Petrol-price-in-Pakistan-Heres-how-much-goes-to-taxes-levies.jpg",
-      "published": "2026-11-13T10:56:36+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Water firm pleads guilty after four killed in blast",
-      "link": "https://www.bbc.co.uk/news/articles/cm8x0l0jp150o?at_medium=RSS&at_campaign=rss",
-      "summary": "Wessex Water admits failing to ensure employee safety over an explosion at its Bristol site.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/305e/live/4854ecc0-de93-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-11-13T10:44:00+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Sophie Cunningham opens up about her 2026 performance",
-      "link": "https://arynews.tv/sophie-cunningham-opens-up-about-her-2026-performance",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Sophie-Cunningham-opens-up-about-her-2026-performance.jpg",
-      "published": "2026-11-13T10:35:49+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Nine-month-old baby dies of cold in Gaza",
-      "link": "https://arynews.tv/nine-month-old-baby-dies-of-cold-in-gaza",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/gaza-cold.jpg",
-      "published": "2026-11-13T10:34:44+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Mari Energies announces copper-gold discovery in Balochistan’s Chagai",
-      "link": "https://arynews.tv/mari-energies-announces-copper-gold-discovery-in-balochistans-chagai",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Chagai.jpg",
-      "published": "2026-11-13T10:33:40+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "ریلوے کے کرایہ واپسی قوانین میں اہم تبدیلی، ڈیجیٹل نظام نافذ",
-      "link": "https://www.express.pk/story/2844081/railways-fare-refund-laws-important-changes-digital-system-introduced-2844081",
-      "summary": "پاکستان ریلوے کے چیف کمرشل منیجر آفس کی جانب سے تمام ریلوے ڈویژنز کو نئے احکامات پر فوری عمل درآمد کی ہدایت کی گئی ہے",
-      "image_url": "",
-      "published": "2026-11-13T10:26:54+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Islamabad to become country's first fully cashless city by year-end",
-      "link": "https://www.dawn.com/news/2044285/islamabad-to-become-countrys-first-fully-cashless-city-by-year-end",
-      "summary": "ISLAMABAD: The government has decided to make the federal capital the country’s first fully cashless city, setting Dec 31 as the deadline for the transition. The decision was taken at an important meeting on the Cashless Capital project chaired by State Minister for Interior Tallal Chaudry, in Islamabad on Friday, according to an official statement by the Mi",
-      "image_url": "https://i.dawn.com/large/2026/11/1314570851c4af4.webp",
-      "published": "2026-11-13T10:19:43+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Copper, gold deposits identified at eight sites in Balochistan’s Chagai district: mining company",
-      "link": "https://www.dawn.com/news/2044284/copper-gold-deposits-identified-at-eight-sites-in-balochistans-chagai-district-mining-company",
-      "summary": "ISLAMABAD: Mining company National Resources Limited (NRL) on Friday announced that it had identified copper and gold deposits at eight sites in Balochistan’s Chagai district, following nearly 25,000 metres of drilling that yielded encouraging results. The company is now moving towards its first estimate of the area’s mineral resources. One of the drill hole",
-      "image_url": "https://i.dawn.com/large/2015/01/54c1a8b8d57a5.jpg",
-      "published": "2026-11-13T10:19:26+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
     }
   ]
 }
