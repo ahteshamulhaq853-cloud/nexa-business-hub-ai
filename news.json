@@ -1,12 +1,62 @@
 {
-  "updated": "2026-11-13T01:53:17.433129+00:00",
+  "updated": "2026-11-13T02:37:53.730166+00:00",
   "items": [
     {
-      "title": "Microsoft struggling to restore service as global outage affects Outlook and Teams",
-      "link": "https://www.bbc.co.uk/news/articles/c5gm3g9ldz8xo?at_medium=RSS&at_campaign=rss",
-      "summary": "Microsoft said the outage was caused by servers unexpected becoming unavailable, straining other systems.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2fa9/live/70d26730-deda-11f1-a701-fddedf244c16.jpg",
-      "published": "2026-11-13T01:39:32+00:00",
+      "title": "US doctor kills building manager after long-running dispute over mould, police say",
+      "link": "https://www.bbc.co.uk/news/articles/crgqx2qqnwpjo?at_medium=RSS&at_campaign=rss",
+      "summary": "Authorities say the shooting in Washington DC left four people injured, with the suspect dying of a self-inflicted gunshot wound.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/146e/live/0c9f92e0-deb4-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-11-13T02:35:34+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Military base asylum plans granted planning approval",
+      "link": "https://www.bbc.co.uk/news/articles/c58j4798874go?at_medium=RSS&at_campaign=rss",
+      "summary": "The Home Office's application to house up to 1,256 men at the site near Bicester was fast-tracked.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/62a7/live/8843d9c0-df03-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-11-13T02:31:02+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Can the Eurovision Song Contest succeed in Asia?",
+      "link": "https://www.bbc.co.uk/news/videos/cxvg23n59y1ro?at_medium=RSS&at_campaign=rss",
+      "summary": "The world’s biggest and longest-running song contest is coming to Asia, with eleven countries competing in Bangkok, Thailand on Saturday.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1f20/live/af01cfe0-df08-11f1-a701-fddedf244c16.jpg",
+      "published": "2026-11-13T02:24:11+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Work in full swing to plug crater at Tarbela project site",
+      "link": "https://www.dawn.com/news/2044133/work-in-full-swing-to-plug-crater-at-tarbela-project-site",
+      "summary": "HARIPUR: The civil work, meant to plug the crater caused by the collapse of a weak rock mass in the intake pit area of the Tarbela Dam 5th Extension Hydropower Project (T-5), is in full swing. Engineers and project workers are busy round the clock to ensure the project is commissioned according to schedule, according to an official source at the project site",
+      "image_url": "https://i.dawn.com/large/2026/11/1303105555fbace.webp",
+      "published": "2026-11-13T02:21:36+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "How could the Nvidia CEO’s affair threaten US national security?",
+      "link": "https://www.bbc.co.uk/news/videos/cm7526d2qeg4o?at_medium=RSS&at_campaign=rss",
+      "summary": "BBC's Asma Khalid explains how the Nvidia affair could threaten US national security and risk sensitive US technology getting into China.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3919/live/4f545cd0-df07-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-11-13T02:15:59+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Zelensky welcomes US bringing Europe into Russia-Ukraine peace talks",
+      "link": "https://www.bbc.co.uk/news/articles/ckn80j9jv3jxo?at_medium=RSS&at_campaign=rss",
+      "summary": "The Ukrainian president says it makes sense for European leaders to be involved as Ukraine hopes to eventually join the EU.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f44f/live/57b45570-df06-11f1-9f71-7d0084202c8a.jpg",
+      "published": "2026-11-13T02:01:35+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -112,16 +162,6 @@
       "language": "en"
     },
     {
-      "title": "US doctor kills building manager after long-running dispute over mould, police say",
-      "link": "https://www.bbc.co.uk/news/articles/crgqx2qqnwpjo?at_medium=RSS&at_campaign=rss",
-      "summary": "Authorities say the shooting in Washington DC left four people injured, with the suspect dying of a self-inflicted gunshot wound.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/146e/live/0c9f92e0-deb4-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-11-12T23:39:04+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "Scandal-hit Nvidia CEO Jensen Huang quits, plunging AI chipmaking giant into turmoil",
       "link": "https://www.bbc.co.uk/news/articles/cmq5vd1wdgz6o?at_medium=RSS&at_campaign=rss",
       "summary": "US lawmakers now want to question him over whether one of his alleged relationships was with a Chinese spy.",
@@ -142,16 +182,6 @@
       "language": "en"
     },
     {
-      "title": "Military base asylum plans granted planning approval",
-      "link": "https://www.bbc.co.uk/news/articles/c58j4798874go?at_medium=RSS&at_campaign=rss",
-      "summary": "The Home Office's application to house up to 1,256 men at the site near Bicester was fast-tracked.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a2e2/live/dca13800-aae2-11f1-aa35-df10e5ff32f4.jpg",
-      "published": "2026-11-12T22:16:34+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "ہم سے اداروں کی دوری نہ ہوئی ہے اور نہ کبھی ہوسکے گی، رانا ثناء",
       "link": "https://jang.com.pk/news/1632917",
       "summary": "وزیر اعظم کے مشیر برائے سیاسی امور رانا ثناء اللّٰہ نے کہا ہے کہ یہ سازشی تھیوری غلط ہے کہ 28 ویں ترمیم کیلئے بانی پی ٹی آئی سے ملاقات...",
@@ -160,16 +190,6 @@
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "US envoys meet Zelensky in Dublin after talks with Putin in Moscow",
-      "link": "https://www.bbc.co.uk/news/articles/cwrkgmymk55zo?at_medium=RSS&at_campaign=rss",
-      "summary": "US envoy Steve Witkoff says President Putin has agreed to European negotiators joining the next round of Ukraine talks.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0196/live/ef110310-de9c-11f1-a701-fddedf244c16.jpg",
-      "published": "2026-11-12T21:00:42+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
     },
     {
       "title": "کراچی، مختلف علاقوں میں پولیس مقابلے، 3 زخمیوں اور دو خواتین سمیت 3 ملزمان گرفتار",
@@ -977,26 +997,6 @@
       "summary": "وزیر اعلیٰ سندھ مراد علی شاہ نے آئی بی اے سکھر کے وائس چانسلر ڈاکٹر آصف شیخ کی مدت ملازمت میں مزید 4 برس کی توسیع کردی ہے۔ ڈاکٹر آصف...",
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-12/b_1632894_092751_updates.jpg\"/",
       "published": "2026-11-12T16:11:50+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "میر رضا کیس کی مشترکہ تحقیقات میں پیشرفت، احمد بھاردے کا پستول فرانزک کیلئے بھجوا دیا گیا",
-      "link": "https://jang.com.pk/news/1632898",
-      "summary": "کراچی کے نوجوان تاجر میر رضا کیس کی مشترکہ تحقیقات میں پیش رفت ہوئی ہے۔ جے آئی ٹی نے کارروائی کے دوران میر رضا کے پارٹنر احمد...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-12/b_1632898_094925_updates.jpg\"/",
-      "published": "2026-11-12T16:11:36+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ڈیرہ اسماعیل کے بند کورائی تھانے پر حملے کا مقدمہ درج کرلیا گیا",
-      "link": "https://jang.com.pk/news/1632897",
-      "summary": "ڈیرہ اسماعیل کے بند کورائی تھانے پر حملے کی ایف آئی آر سی ٹی ڈی تھانے میں پولیس کی مدعیت میں درج کر لی گئی ہے۔ مقدمے کے متن کے...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-12/b_1632897_102033_updates.jpg\"/",
-      "published": "2026-11-12T16:11:14+00:00",
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
