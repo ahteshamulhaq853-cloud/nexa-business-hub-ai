@@ -1,6 +1,26 @@
 {
-  "updated": "2026-11-14T21:55:56.275232+00:00",
+  "updated": "2026-11-14T22:26:06.813233+00:00",
   "items": [
+    {
+      "title": "How Mississippi's new senator won in Trump's heartland and what he will do next",
+      "link": "https://www.bbc.co.uk/news/videos/crpdwve24398o?at_medium=RSS&at_campaign=rss",
+      "summary": "Scott Colom tells the BBC that Democrats can build on his historic election win - and appeal to frustrated Republicans - by focusing on policies to help all Americans.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dc6c/live/2f1f4eb0-e05c-11f1-a701-fddedf244c16.jpg",
+      "published": "2026-11-14T22:17:13+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "'Can you believe it?': SpaceX catches part of its Starship rocket on return to Earth",
+      "link": "https://www.bbc.co.uk/news/videos/cwlym2gy3y3eo?at_medium=RSS&at_campaign=rss",
+      "summary": "SpaceX has performed the historic catch using mechanical arms nicknamed \"chopsticks\".",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/aeb5/live/e1baf430-e074-11f1-a701-fddedf244c16.jpg",
+      "published": "2026-11-14T22:09:40+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "UK ethics watchdog chief steps back from role over sexual misconduct claims",
       "link": "https://www.bbc.co.uk/news/articles/cmewv2kzq2e5o?at_medium=RSS&at_campaign=rss",
@@ -109,16 +129,6 @@
       "published": "2026-11-14T19:02:11+00:00",
       "source": "Dawn",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "How Mississippi's new senator won in Trump's heartland and what he will do next",
-      "link": "https://www.bbc.co.uk/news/videos/crpdwve24398o?at_medium=RSS&at_campaign=rss",
-      "summary": "Scott Colom tells the BBC that Democrats can build on his historic election win - and appeal to frustrated Republicans - by focusing on policies to help all Americans.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dc6c/live/2f1f4eb0-e05c-11f1-a701-fddedf244c16.jpg",
-      "published": "2026-11-14T18:51:30+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     },
     {
@@ -290,6 +300,16 @@
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "ہر دوسرا شخص شوگر میں مبتلا، 33 فی صد افراد کو مرض کا پتہ ہی نہیں، ایکسپریس سیمینار",
+      "link": "https://www.express.pk/story/2844280/every-second-person-suffers-from-diabetes-33-percent-are-unaware-they-have-the-condition-express-seminar-2844280",
+      "summary": "یہی مرض اموات کی اصل وجہ، بہانہ فالج اور ہارٹ اٹیک کا باعث بنتا ہے",
+      "image_url": "",
+      "published": "2026-11-14T16:59:05+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Pakistan stun Bangladesh to reach SAFF final",
@@ -852,16 +872,6 @@
       "language": "ur"
     },
     {
-      "title": "ساف فٹبال چیمپئن شپ: پاکستان بنگلا دیش کو ہرا کر پہلی بار فائنل میں پہنچ گیا",
-      "link": "https://www.express.pk/story/2844253/saff-football-championship-pakistan-defeats-bangladesh-to-reach-the-final-for-the-first-time-2844253",
-      "summary": "پاکستان اور بھارت کے درمیان فائنل 17 نومبر کو کھیلا جائے گا",
-      "image_url": "",
-      "published": "2026-11-14T12:50:45+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
       "title": "Achakzai, Abbas move FCC for release of Sohail Afridi, detained lawmakers",
       "link": "https://www.dawn.com/news/2044493/achakzai-abbas-move-fcc-for-release-of-sohail-afridi-detained-lawmakers",
       "summary": "ISLAMABAD: The leaders of the opposition in both Houses of Parliament on Saturday approached the Federal Constitutional Court (FCC), seeking the immediate release of Sohail Afridi, the non-functional Khyber Pakhtunkhwa chief minister, along with eight other elected members of the provincial assembly and six members of the National Assembly. Afridi has not be",
@@ -990,16 +1000,6 @@
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "CSP officer suspended over immodest campaign against lady police offier",
-      "link": "https://arynews.tv/csp-officer-suspended-immodest-campaign-lady-police-official",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2025/11/13-more-NCCIA-officials-under-radar-in-multi-million-extortion-from-call-centers.jpg.jpeg",
-      "published": "2026-11-14T11:54:11+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
     }
   ]
 }
