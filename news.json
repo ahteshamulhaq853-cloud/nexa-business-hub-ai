@@ -1,6 +1,66 @@
 {
-  "updated": "2026-11-14T14:57:47.490745+00:00",
+  "updated": "2026-11-14T15:29:49.196277+00:00",
   "items": [
+    {
+      "title": "Mir Raza murder case: Ex-SHO dismissed over misconduct, mishandling of evidence",
+      "link": "https://www.dawn.com/news/2044503/mir-raza-murder-case-ex-sho-dismissed-over-misconduct-mishandling-of-evidence",
+      "summary": "Former Gulistan-i-Jauhar station house officer (SHO), Kamran Qureshi, was dismissed from service on Saturday over charges of misconduct in the Mir Raza Ali murder case. Last month, a joint investigation team (JIT) constituted by the Sindh government recommended an inquiry against Qureshi, who was suspended from duty, over the possible facilitation of the des",
+      "image_url": "https://i.dawn.com/large/2026/09/2119342355faaa8.webp",
+      "published": "2026-11-14T15:21:28+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
+      "link": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo?at_medium=RSS&at_campaign=rss",
+      "summary": "The Ukrainian president says US envoys touted the exchange as part of efforts to end the war with Russia.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d028/live/47c10ab0-e013-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-11-14T15:15:57+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Pakistan to host 30th ECO Council of Ministers meeting on Nov 15-16",
+      "link": "https://www.dawn.com/news/2044472/pakistan-to-host-30th-eco-council-of-ministers-meeting-on-nov-15-16",
+      "summary": "The 30th meeting of the Economic Cooperation Organisation (ECO) Council of Ministers will be held in Islamabad on Nov 15 and 16, the Foreign Office (FO) said on Saturday. The meeting will be chaired by Deputy Prime Minister and Foreign Minister Ishaq Dar and attended by foreign ministers and heads of delegations from ECO member states, along with representat",
+      "image_url": "https://i.dawn.com/large/2026/11/14103758e89ce60.webp",
+      "published": "2026-11-14T15:10:51+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "ایران کا ’نیا میزائل سٹی‘: کون سے نئے میزائل دکھائے گئے ہیں اور ’دشمنوں کو حیران‘ کرنے کا دعویٰ کیوں کیا جا رہا ہے؟",
+      "link": "https://www.bbc.com/urdu/articles/c6808lv1lxp2o?at_medium=RSS&at_campaign=rss",
+      "summary": "ماضی میں جاری ہونے والی میزائل سٹی کی تصاویر کی طرح اس زیرِ زمین تنصیب میں بھی متعدد بیلسٹک اور کروز میزائل اور ان کے لانچ سسٹمز دکھائے گئے ہیں۔ یہ تصاویر ایک ایسے وقت میں جاری کی گئی ہیں جب 40 روزہ جنگ کے دوران امریکہ اور اسرائیل نے ایران کے میزائل انفراسٹرکچر کے کئی حصوں بشمول میزائل اڈے اور میزائلوں کی تیاری و پیداوار کی تنصیبات کو وسیع پیمانے پر نشانہ بن",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/c463/live/d3cbc1f0-df80-11f1-b844-3146c4983677.jpg",
+      "published": "2026-11-14T15:06:10+00:00",
+      "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Major among 4 troops martyred, 24 terrorists killed during operations in KP and Balochistan: ISPR",
+      "link": "https://www.dawn.com/news/2044488/major-among-4-troops-martyred-24-terrorists-killed-during-operations-in-kp-and-balochistan-ispr",
+      "summary": "Four troops, including a major, were martyred while 24 terrorists were killed in multiple intelligence-based operations (IBOs) in Balochistan and Khyber Pakhtunkhwa’s North Waziristan, the military’s media wing said on Saturday. In a statement , Inter-Services Public Relations (ISPR) said that since Nov 13, armed forces have been conducting multiple IBOs “ar",
+      "image_url": "https://i.dawn.com/large/2026/11/14200150bdaf7ec.webp",
+      "published": "2026-11-14T15:04:34+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "PMML sends legal notice to Maryam Nawaz over defamatory remarks",
+      "link": "https://arynews.tv/pmml-sends-legal-notice-to-maryam-nawaz-over-defamatory-remarks",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Maryam-Nawaz-rural-women-jobs-Punjab.jpg",
+      "published": "2026-11-14T15:00:22+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
     {
       "title": "Mir Raza Ali case: SHO Gulistan-e-Johar dismissed over negligence",
       "link": "https://arynews.tv/mir-raza-ali-case-sho-gulistan-e-johar-dismissed-over-negligence",
@@ -22,6 +82,16 @@
       "language": "en"
     },
     {
+      "title": "پرویز الٰہی سے لطیف کھوسہ کی ملاقات، آئندہ حکمت عملی پر تبادلہ خیال ... عمران خان سے ہونے والی حالیہ ملاقات کے حوالے سے آگاہ کیا. نجی ٹی وی کی رپورٹ",
+      "link": "https://urdupoint.com/n/5010555",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_365e4_1794667303.jpg._3",
+      "published": "2026-11-14T14:42:45+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Man dies after being stabbed by gang of masked men",
       "link": "https://www.bbc.co.uk/news/articles/cm4gn7pp5r85o?at_medium=RSS&at_campaign=rss",
       "summary": "Police say a 27-year-old man died after being stabbed in the \"shocking and tragic attack\" in Crumpsall.",
@@ -32,14 +102,44 @@
       "language": "en"
     },
     {
-      "title": "Major among 4 troops martyred, 24 terrorists killed during operations in KP and Balochistan: ISPR",
-      "link": "https://www.dawn.com/news/2044488/major-among-4-troops-martyred-24-terrorists-killed-during-operations-in-kp-and-balochistan-ispr",
-      "summary": "Four soldiers, including a major, were martyred while 24 terrorists were killed in multiple intelligence-based operations (IBOs) in Balochistan and Khyber Pakhtunkhwa’s North Waziristan, the military’s media wing said on Saturday. In a statement, Inter-Services Public Relations (ISPR) said that since Nov 13, armed forces have been conducting multiple IBOs “a",
-      "image_url": "https://i.dawn.com/large/2025/10/03110026f7bf7c7.webp",
-      "published": "2026-11-14T14:31:02+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
+      "title": "پنجاب حکومت کے مطابق اسموگ سے نمٹنے کے لیے پاکستان میں اپنی نوعیت کی پہلی فورس تیار کی گئی ہے، جو خاص طور پر فضائی آلودگی سے نمٹے گی۔",
+      "link": "https://urdupoint.com/n/5010554",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_1794667203_63647.jpg._3",
+      "published": "2026-11-14T14:40:04+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "بینکوں میں کیش ٹرانزیکشن قوانین میں بڑی تبدیلی‘نئی حد مقرر ... وفاقی حکومت نے اینٹی منی لانڈرنگ ایکٹ کے تحت بینکوں اوردیگرمالیاتی اداروں کے لیے نقد لین دین کی رپورٹنگ ... مزید",
+      "link": "https://urdupoint.com/n/5010553",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2020/125x125/pic_59c75_1586590310.jpg._3",
+      "published": "2026-11-14T14:33:19+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "اٹلی نے میٹا پر 805 ملین یورو جرمانہ عائد کردیا ... اینڈرائیڈ صارفین کی پرائیویسی کی خلاف ورزی پر میٹا پر جرمانہ کیا گیاہے.رپورٹ",
+      "link": "https://urdupoint.com/n/5010552",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_63fa9_1784450646.jpg._3",
+      "published": "2026-11-14T14:26:11+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ڈیمنشیا بڑھنے کا خطرہ روزانہ پی جانے والی سگریٹ کی تعداد سے منسلک ہے.تحقیق ... سگریٹ نوشی ڈیمنشیا، الزائمر اور دماغی شریانوں کی بیماری کے باعث ہونے والے ڈیمنشیا کے خطرات ... مزید",
+      "link": "https://urdupoint.com/n/5010551",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2021/125x125/pic_e384a_1637743085.jpg._3",
+      "published": "2026-11-14T14:21:00+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Eight militants neutralized in security operation in Balochistan, 2 soldiers martyred: ISPR",
@@ -62,12 +162,242 @@
       "language": "en"
     },
     {
+      "title": "ةبلوچستان میں دہشت گردوں کے خلاف کامیاب کارروائیاں، وزیراعظم کا سیکیورٹی فورسز کو خراجِ تحسین ... %کولپور، کردگاپ اور نوشکی میں انٹیلی جنس بنیادوں پر آپریشنز کے دوران ... مزید",
+      "link": "https://urdupoint.com/n/5010549",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-14T14:16:06+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ًاسلام آباد کے بلیو ایریا میں پہلا جدید ڈیجیٹل پارکنگ پلازہ فعال، 1200 سے زائد گاڑیوں کی گنجائش فراہم ... شہریوں کو ہفتے کے ساتوں دن 24 گھنٹے پارکنگ کی سہولت میسر ہوگی، ابتدائی ... مزید",
+      "link": "https://urdupoint.com/n/5010548",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-14T14:16:02+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "بلوچستان میں دہشت گردوں کے خلاف کامیاب کارروائیاں، صدر مملکت کا سیکیورٹی فورسز کو خراجِ تحسین ... ت*بھارتی سرپرستی میں سرگرم فتنہ الہندوستان کے 8 دہشت گردوں کی ہلاکت پر ... مزید",
+      "link": "https://urdupoint.com/n/5010547",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-14T14:15:59+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سوشل میڈیا پر بڑھتا ہوا خود نمائی کا رجحان خود فریبی ہے : ڈاکٹر حسین قادری ... ں*صدر منہاج القرآن انٹرنیشنل کا ’’ سوشل میڈیا اخلاقیات‘‘ کے موضوع پر نشست سے خطاب",
+      "link": "https://urdupoint.com/n/5010544",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-14T14:15:49+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "محنت کشوں کو ان کی دہلیز پر معیاری طبی سہولیات کی فراہمی کیلئے اہم اقدام ... ًصوبائی وزیر لیبر محمد منشاء اللہ بٹ نے سیالکوٹ میں سوشل سکیورٹی موبائل ہیلتھ سروسز کا افتتاح ... مزید",
+      "link": "https://urdupoint.com/n/5010541",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-14T14:15:39+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "تقریباتِ یوم اقبال: طلبہ و طالبات کے مابین حسن تقریر کے مقابلوں کا انعقاد ... ٴْاہتمام تحریک پاکستان ورکرز ٹرسٹ کے اشتراک سے کیا گیا، طلبہ وطالبات کی کثیر تعداد کی شرکت",
+      "link": "https://urdupoint.com/n/5010540",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-14T14:15:36+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "تاریخی عمارتوں کی بحالی اور خوبصورتی حکومت کی ترجیح ہی: ذیشان رفیق ... ٓمشیر وزیر اعلیٰ پنجاب کی صدارت میں لکشمی چوک کی تاریخی عمارتوں کی فساڈ اپ لفٹنگ پر اجلاس",
+      "link": "https://urdupoint.com/n/5010539",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-14T14:15:32+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "گورنر پنجاب سردار سلیم حیدر خان کی پیپلزپارٹی وسطی پنجاب سیکرٹریٹ آمد ... ٰفریال تالپور، راجہ پرویزاشرف،نیئربخاری اور حسن مرتضی سمیت عہدیداروں اور جیالوں سے ملاقاتیں ... مزید",
+      "link": "https://urdupoint.com/n/5010537",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2024/125x125/pic_ea6c2_1731317214.jpg._3",
+      "published": "2026-11-14T14:15:25+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سوشل سکیورٹی محنت کشوں کو شوگر کو کنٹرول کرنے کی بہترین سہولیات دینے کیلئے سرگرم ... ۸سوشل سکیورٹی ہسپتالوں سے اس سال شوگر میں مبتلا محنت کشوں کو 95.77 ملین کی انسولین و شوگر ... مزید",
+      "link": "https://urdupoint.com/n/5010536",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-14T14:15:22+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کمشنر لاہور محمد جہانزیب اعوان کا رائے ونڈ تبلیغی اجتماع پنڈال ومرکز کا دورہ ... ریسکیو۔ستھرا پنجاب۔ایم سی ایل۔ماحولیات و دیگر انتظامیہ کے قائم کردہ کیمپس کا فرداً فرداً ... مزید",
+      "link": "https://urdupoint.com/n/5010535",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-14T14:15:18+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کمشنر لاہور کی تمام اضلاع زیر التواء ریونیو کیسز کو جلد از جلد مکمل کرنے کی ہدایت ... ۳کمشنر لاہور نے پوری ڈویژن میں ستھرا پنجاب کے تحت صفائی، ریونیو و شہری خدمات اہداف ... مزید",
+      "link": "https://urdupoint.com/n/5010534",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-14T14:15:14+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "وزیر اعلیٰ مریم نواز شریف کا شمالی وزیرستان میں دہشت گردوں کیخلاف آپریشن میں ... گ*جام شہادت نوش کرنیوالے حوالدار عصمت علی اور نائیک آفتاب علی کیلئے خراج عقیدت",
+      "link": "https://urdupoint.com/n/5010533",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_1793716751_227680.jpg._3",
+      "published": "2026-11-14T14:15:11+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سی ایم انسپکشن ٹیم کا ڈی ایچ کیو ہسپتال حافظ آباد کا اچانک دورہ، مختلف شعبوں کا معائنہ ... ۱ ڈسٹرکٹ ہیڈکوارٹر ہسپتال میں موجود طبی آلات کی فعالیت ، ادویات کی فراہمی اور ... مزید",
+      "link": "https://urdupoint.com/n/5010532",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-14T14:15:08+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "صحت عوام کا بنیادی حق ہے ، حکومت پنجاب یہ حق ہر دروازے تک پہنچا رہی ہی:مریم نوازشریف ... ھ*ذیابیطس سمیت دیگر امراض کے لاکھوں میڈیسن باکس مریضوں کے گھروں میں پہنچائے جارہے ... مزید",
+      "link": "https://urdupoint.com/n/5010531",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_1793716751_208439.jpg._3",
+      "published": "2026-11-14T14:15:05+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "خیبرپختون خوا میں 3 ایم پی او حراست کیس، اختر مینگل اور راجہ ناصر عباس فریق بننے کی درخواستیں دائرکردیں ... مقدمے میں فریق بنایا جائے اور دلائل دینے سمیت تحریری معروضات ... مزید",
+      "link": "https://urdupoint.com/n/5010530",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_12330_1794665657.jpg._3",
+      "published": "2026-11-14T14:14:27+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "راولپنڈی میں زیر زمین لائن سے کروڑوں مالیت کے خام تیل کی چوری کا انکشاف",
+      "link": "https://jang.com.pk/news/1633421",
+      "summary": "راولپنڈی کے علاقے رنیال میں آئل فیلڈ کی زیرِ زمین سپلائی لائن سے دو کروڑ 32 لاکھ روپے سے زائد مالیت کے خام تیل کی چوری کا انکشاف...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-14/b_1633421_072534_updates.jpg\"/",
+      "published": "2026-11-14T14:11:57+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "اپر چترال: گاڑی پر اچانک پہاڑ سے پتھر گرنے لگے، مسافروں نے بھاگ کر جان بچائی",
+      "link": "https://jang.com.pk/news/1633426",
+      "summary": "اپر چترال میں کوراغ کے مقام پر لینڈ سلائیڈنگ سے کار میں سوار 4 خواتین اور 2 مرد خوش قسمتی سے محفوظ رہے۔کوراغ کے مقام پر پھنسی...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-14/b_1633426_074432_updates.jpg\"/",
+      "published": "2026-11-14T14:11:41+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "کوٹ لکھپت جیل میں قید یاسمین راشد کی اسپتال منتقلی کیلئے درخواست دائر",
       "link": "https://jang.com.pk/news/1633420",
       "summary": "یاسمین راشد: فائل فوٹو لاہور کی کوٹ لکھپت جیل میں قید پی ٹی آئی رہنما ڈاکٹر یاسمین راشد کی اسپتال منتقلی کےلیے انسداد دہشت گردی کی...",
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-14/b_1633420_071208_updates.jpg\"/",
       "published": "2026-11-14T14:11:27+00:00",
       "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "عالمی بینک نے سندھ کیلئے 300 ملین ڈالرز کی منظوری دیدی",
+      "link": "https://jang.com.pk/news/1633428",
+      "summary": "عالمی بینک نے سندھ میں صاف پانی، صفائی اور حفظان صحت کے منصوبوں کے لیے 300 ملین ڈالرز کی منظوری دے دی۔اعلامیے کے مطابق عالمی بینک کی...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-14/b_1633428_081319_updates.jpg\"/",
+      "published": "2026-11-14T14:11:26+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "محسن نقوی کی ملاقات کے بعد صدر آصف زرداری کی ماڈل ٹاؤن آمد، وزیراعظم شہباز شریف سے اہم ملاقات ... ملاقات میں ملک کی مجموعی سیاسی، معاشی اور سیکیورٹی صورتحال پر تفصیلی ... مزید",
+      "link": "https://urdupoint.com/n/5010529",
+      "summary": "",
+      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_61810_1794666483.jpg._3",
+      "published": "2026-11-14T14:11:03+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سرسید گرلز کالج میں کھیلوں کی سہولتیں بہتر بنانے کا فیصلہ ... باسکٹ بال کورٹ کی تزئین و آرائش، جمنازیم کی بہتری اور اسپورٹس ہاسٹل کالج انتظامیہ کے حوالے کرنے کی ہدایت",
+      "link": "https://urdupoint.com/n/5010528",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-14T14:06:41+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "میرپورخاص میں سالانہ مجلسِ عزا، علامہ ضیاء حیدر نقوی کا خطاب ... حضرت فاطمہ زہراؓکی سیرت خواتینِ عالم کے لیے مشعلِ راہ ہے، آپ کی حیاتِ مبارکہ میں ہدایت اور نجات کا راستہ ... مزید",
+      "link": "https://urdupoint.com/n/5010527",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-14T14:06:38+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "میرپورخاص ملک ویلفیئر ایسوسی ایشن کے انتخابی نتائج کا اعلان پیر کو متوقع ... عرفان چندیجہ اور ملک محمود صابری کے درمیان کانٹے کا مقابلہ، مسترد ووٹوں کی جانچ پڑتال کے باعث ... مزید",
+      "link": "https://urdupoint.com/n/5010526",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-14T14:06:34+00:00",
+      "source": "UrduPoint",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ڈسٹرکٹ ویسٹ پولیس کی ہفتہ وار کارروائیاں، 73 ملزمان گرفتار ... اسٹریٹ کرائم، منشیات فروشی اور گٹکا ماوا کے خلاف کارروائیاں، اسلحہ، منشیات، 966 کلو گٹکا ماوا اور دیگر سامان ... مزید",
+      "link": "https://urdupoint.com/n/5010525",
+      "summary": "",
+      "image_url": "",
+      "published": "2026-11-14T14:06:32+00:00",
+      "source": "UrduPoint",
       "category": "اردو",
       "language": "ur"
     },
@@ -92,106 +422,6 @@
       "language": "en"
     },
     {
-      "title": "br /> ۷ مولانا فضل الرحمٰن کے خلاف مبینہ پروپیگنڈا مسترد، جمعیت کسی دباؤ میں نہیں آئے گی، مولانا عبدالرحمٰن رفیق ... fجمعیت علمائ اسلام کوئٹہ کی مجلس عاملہ کا اجلاس، قائد ... مزید",
-      "link": "https://urdupoint.com/n/5010475",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:50:39+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "وزیراعلیٰ بلوچستان کی چچی کی نماز جنازہ شمالی ڈیرہ بگٹی میں ادا، ہزاروں افراد کی شرکت ... میر سرفراز بگٹی سمیت قبائلی عمائدین، سرکاری افسران اور شہریوں نے مرحومہ کے لیے ... مزید",
-      "link": "https://urdupoint.com/n/5010474",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:50:37+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "اوستہ محمد پولیس میں 144 مرد اور 16 خواتین امیدوار کامیاب، کانسٹیبل بھرتی کی حتمی فہرست جاری ... ایس ایس پی معاذالرحمان کے مطابق تمام مراحل شفاف اور میرٹ کی بنیاد پر مکمل ... مزید",
-      "link": "https://urdupoint.com/n/5010473",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:50:34+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "جھالاوان میں امن و ترقی کے لیے اقدامات جاری ہیں، سیاسی کارکنوں کو تنہا نہیں چھوڑیں گے، امیر حمزہ زہری ... صوبائی مشیر بلدیات سے سردار علی محمد جتک سمیت خضدار اور زہری کے ... مزید",
-      "link": "https://urdupoint.com/n/5010472",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:50:31+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "رحیم یار خان،چڑیا گھر میں سیر کیلئے آنیوالے بچوں پر شہد کی مکھیوں کا حملہ 6بچوں کوکاٹ کر زخمی کردیا ... ٓاطلاع پاکر ریسکیو ٹیم نے موقع پر پہنچ کر متاثرہ بچوں کوطبی امداد ... مزید",
-      "link": "https://urdupoint.com/n/5010471",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:50:29+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "رحیم یار خان،ٹرین کی زد میں آکر 56 سالہ شخص جاں بحق، ریسکیو اہلکاروں نے نعش ہسپتال منتقل کردی",
-      "link": "https://urdupoint.com/n/5010470",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:50:26+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "نوجوان بے پناہ صلاحیتوں کے مالک، ترقی کے لیے ان کی صلاحیتوں سے فائدہ اٹھانا ہوگا، مولانا طیب قریشی ... ض*نوجوان امن، رواداری اور قومی یکجہتی کے فروغ میں کردار ادا کریں، ... مزید",
-      "link": "https://urdupoint.com/n/5010469",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:50:23+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ایمرجنسی سروسز اکیڈمی لاہور میں بیسک ریسکیو کورس-49 کی پاسنگ آؤٹ تقریب ... لله*صوبائی وزیر خواجہ سلمان رفیق کی پاس آؤٹ ہونیوالے ریسکیورز کو مبارکباد ، مہارتوں اور پریڈ ... مزید",
-      "link": "https://urdupoint.com/n/5010467",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:50:16+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بنگلہ دیش کے 34 رکنی اعلیٰ سطحی وفد کا بادشاہی مسجد لاہور کا دورہ ... ً تاریخی مقامات کی بحالی اور صوفیانہ روایات کے فروغ کیلئے کاوشوں کو بھرپور خراجِ تحسین",
-      "link": "https://urdupoint.com/n/5010466",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:50:12+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "میرے خلاف نیب کی کارروائی سیاسی انتقام ہے، اپنے دفاع کیلئے تمام قانونی وعدالتی راستے اختیار کروں گا، اسد قیصر ... میڈیا رپورٹس کے ذریعے معلوم ہوا ہے کہ نیب نے میرے خلاف ... مزید",
-      "link": "https://urdupoint.com/n/5010464",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:50:07+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
       "title": "Young people should have legal guarantee of job or training, Milburn tells BBC",
       "link": "https://www.bbc.co.uk/news/articles/c69vwp09d7vvo?at_medium=RSS&at_campaign=rss",
       "summary": "The author of a major review on youth unemployment, due next week, acknowledges the change would mean some young people losing out on benefits.",
@@ -202,162 +432,12 @@
       "language": "en"
     },
     {
-      "title": "راولپنڈی پولیس کے زیر اہتمام ویپ اور منشیات کے نقصانات سے متعلق شہریوں، بالخصوص نوجوان نسل میں آگاہی پیدا کرنے کے لیے شہر کے مختلف علاقوں میں واکس کا انعقاد کیا گیا",
-      "link": "https://urdupoint.com/n/5010463",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:47:10+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سید نیر حسین بخاری کاسوشل میڈیا کوآرڈینیٹر بشارت علی سے انکے چھوٹے بھائی کے انتقال پر گہرے دکھ اورافسوس کا اظہار",
-      "link": "https://urdupoint.com/n/5010462",
-      "summary": "",
-      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2019/125x125/pic_77420_1549448030.jpg._3",
-      "published": "2026-11-14T13:47:07+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "شمالی وزیرستان میں سیکیورٹی فورسز کے کامیاب انٹیلی جنس بیسڈ آپریشنز میں16 دہشت گردوں کا خاتمہ قابلِ تحسین ہے،بیرسٹر دانیال چوہدری",
-      "link": "https://urdupoint.com/n/5010460",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:47:01+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
       "title": "ایشیا کپ فائنل: انڈیا انڈر 19 نے پاکستان کو آخری گیند پر شکست دے دی، ’دسویں نمبر پر آنے والے کھلاڑی نے میچ کا پانسہ پلٹ دیا‘",
       "link": "https://www.bbc.com/urdu/articles/c69q8lvrg3j8o?at_medium=RSS&at_campaign=rss",
       "summary": "میچ کی آخری گیند پر انڈیا انڈر 19 کو ایک گیند پر تین رنز درکار تھے، جس پر موہت الووا نے چوکا مار کر انڈیا انڈر 19 کو کامیابی دلوا دی۔",
       "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/7d15/live/2e2cdc60-e030-11f1-9ca9-b3b288fceb81.jpg",
       "published": "2026-11-14T13:44:25+00:00",
       "source": "BBC Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "راولپنڈی، اسلام آباد میں غیر قانونی کال سینٹرز پر چھاپے، خواتین سمیت 154 افراد گرفتار ... ملزمان جنوبی ایشیائی ممالک کے شہریوں کو ٹرانس نیشنل فراڈ کا نشانہ بناتے تھے اور ... مزید",
-      "link": "https://urdupoint.com/n/5010459",
-      "summary": "",
-      "image_url": "https://data.urdupoint.com/show_img_new/daily/todayNewsLive/2026/125x125/pic_9bfb0_1793532784.jpg._3",
-      "published": "2026-11-14T13:44:19+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "مندرہ پولیس نے 17 سالہ لڑکی کو ہراساں کرنے، نازیبا حرکات کرنے اور ویڈیو بنا کر بلیک میل کرنے کے الزام میں دو نامزد ملزمان کو گرفتار کر لیا",
-      "link": "https://urdupoint.com/n/5010458",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:43:09+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "راولپنڈی کی عدالت نے منشیات فروشی کے مقدمے میں جرم ثابت ہونے پر ملزم پرویز کو 9 سال قید اور 80 ہزار روپے جرمانے کی سزا سنا دی",
-      "link": "https://urdupoint.com/n/5010457",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:43:06+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بلاول بھٹو زرداری کا سوشل میڈیا کوآرڈینیٹر بشارت علی سے انکے چھوٹے بھائی کے انتقال پر اظہار تعزیت",
-      "link": "https://urdupoint.com/n/5010456",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:43:03+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بوسن روڈ کے قریب صدیق آباد میں ٹوکا مشین پر چارہ کاٹنے کے دوران کرنٹ لگنے سے 17 سالہ نوجوان جاں بحق",
-      "link": "https://urdupoint.com/n/5010455",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:43:01+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "اسلام آباد کے پہلے جدید اور ڈیجیٹل بلیو ایریا پارکنگ پلازہ کو مکمل طور پر فعال کردیا گیا",
-      "link": "https://urdupoint.com/n/5010454",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:39:26+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "وزیر داخلہ محسن نقوی کی بنوں میں پولیس چیک پوسٹ پر حملہ ناکام بنانے اور چار دہشت گردوں کو ہلاک کرنے پر خیبرپختونخوا پولیس اور سی ٹی ڈی کی تعریف",
-      "link": "https://urdupoint.com/n/5010453",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:39:23+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "چیئرمین سینیٹ سید یوسف رضا گیلانی کی مخدوم سید علی رضا گیلانی مرحوم کے ایصالِ ثواب کے لیے فاتحہ خوانی کی تقریب میں شرکت",
-      "link": "https://urdupoint.com/n/5010452",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:39:20+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ملکی معیشت کی مضبوطی اور صنعتی ترقی و برآمدات بڑھانے کیلئے پیداواری صلاحیت میں اضافہ اور سازگار ماحول پیدا کرنا ضروری ہے،ماہرین اقتصادیات",
-      "link": "https://urdupoint.com/n/5010451",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:39:17+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ایس ایس پی انویسٹی گیشن کا پولیس لائنز ہیڈکوارٹرز میں کھلی کچہری کا انعقاد",
-      "link": "https://urdupoint.com/n/5010450",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:39:14+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ایڈیشنل ڈپٹی کمشنر ریونیو کی زیرِ صدارت ریونیو امور کے جائزہ کے حوالے سے اجلاس",
-      "link": "https://urdupoint.com/n/5010449",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:39:12+00:00",
-      "source": "UrduPoint",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ذیابیطس سے بچاؤ کیلئے بروقت تشخیص، متوازن غذا اور ورزش ناگزیر ہیں،طبی ماہرین",
-      "link": "https://urdupoint.com/n/5010448",
-      "summary": "",
-      "image_url": "",
-      "published": "2026-11-14T13:39:09+00:00",
-      "source": "UrduPoint",
       "category": "اردو",
       "language": "ur"
     },
@@ -632,16 +712,6 @@
       "language": "en"
     },
     {
-      "title": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
-      "link": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Ukrainian president says US envoys touted the exchange as part of efforts to end the war with Russia.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d028/live/47c10ab0-e013-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-11-14T11:41:20+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "Watch: Cruise ship overturns after collision with tanker in New Orleans",
       "link": "https://www.bbc.co.uk/news/videos/ck4gn4y77m40o?at_medium=RSS&at_campaign=rss",
       "summary": "Around 130 people were rescued from a cruise ship after it was struck by a tanker while docked in New Orleans, Louisiana on Friday.",
@@ -792,16 +862,6 @@
       "language": "en"
     },
     {
-      "title": "Pakistan to host 30th ECO Council of Ministers meeting on Nov 15-16",
-      "link": "https://www.dawn.com/news/2044472/pakistan-to-host-30th-eco-council-of-ministers-meeting-on-nov-15-16",
-      "summary": "The 30th meeting of the Economic Cooperation Organization (ECO) Council of Ministers will be held in Islamabad on Nov 15 and 16, the Foreign Office (FO) said on Saturday. The meeting will be chaired by Deputy Prime Minister and Foreign Minister Ishaq Dar and attended by foreign ministers and heads of delegations from ECO member states, along with representat",
-      "image_url": "https://i.dawn.com/large/2026/11/14103758e89ce60.webp",
-      "published": "2026-11-14T10:42:56+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
       "title": "’ای میل ٹریفک معمول پر واپس آ رہی ہے‘: مائیکروسافٹ کی سروسز معطلی پر معذرت اور بتدریج بحالی کا دعویٰ",
       "link": "https://www.bbc.com/urdu/articles/cmvg2l16kg40o?at_medium=RSS&at_campaign=rss",
       "summary": "تعطل کے 24 گھنٹے بعد جمعے کی دوپہر تک سروسز عمومی طور پر بحال ہو رہی تھیں۔ مائیکروسافٹ نے ’حوصلہ افزا پیش رفت‘ کی اطلاع دیتے ہوئے کہا کہ ای میل ٹریفک معمول کی سطح پر واپس آ رہی ہے۔",
@@ -862,6 +922,16 @@
       "language": "ur"
     },
     {
+      "title": "لبنان: 100 برس سے زائد عرصے سے فلافل فروخت کرنیوالا خاندان، چوتھی نسل کاروبار سنبھالنے کو تیار",
+      "link": "https://www.express.pk/story/2844238/this-beirut-family-has-sold-falafel-for-100-years-2844238",
+      "summary": "غیر ملکی خبر رساں ادارے کے مطابق طبارہ خاندان کا فلافل کا کاروبار لبنان کے قیام سے بھی پہلے شروع ہوا تھا",
+      "image_url": "",
+      "published": "2026-11-14T10:07:00+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Kuwait security campaign in Kabd nets 19 wanted persons, 7 residency violators",
       "link": "https://arynews.tv/kuwait-security-campaign-in-kabd-nets-19-wanted-persons-7-residency-violators",
       "summary": "",
@@ -882,14 +952,14 @@
       "language": "en"
     },
     {
-      "title": "Tesla invites select customers to buy Cybercab for personal use",
-      "link": "https://arynews.tv/tesla-invites-select-customers-to-buy-cybercab-for-personal-use",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Tesla-Cybercab.jpg",
-      "published": "2026-11-14T10:00:39+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
+      "title": "نوشہرہ؛ بکری چوری کے تنازع پر فائرنگ، دو افراد جاں بحق",
+      "link": "https://www.express.pk/story/2844237/noshehra-goat-theft-dispute-firing-two-killed-2844237",
+      "summary": "پولیس نے واقعے کا مقدمہ مقتول کے بھائی کی مدعیت میں درج کرلیا",
+      "image_url": "",
+      "published": "2026-11-14T09:55:07+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "اسلام آباد؛ پہلا جدید ڈیجیٹل پارکنگ پلازہ فعال، عوام کو مفت سہولت",
@@ -930,76 +1000,6 @@
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "میئر کراچی کا پمپنگ اسٹیشن کی بحالی و جدید پمپس کی تنصیب کا افتتاح",
-      "link": "https://jang.com.pk/news/1633395",
-      "summary": "—تصویر بشکریہ سوشل میڈیامیئر کراچی بیرسٹر مرتضیٰ وہاب نے کیماڑی میں پی آر سی ٹاور واٹر پمپنگ اسٹیشن کی بحالی اور جدید پمپس کی تنصیب...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-14/b_1633395_032246_updates.jpg\"/",
-      "published": "2026-11-14T09:11:44+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "وزیرِ خارجہ شمالی قبرصی ترک جمہوریہ تحسین ارطغرل اوغلو اسلام آباد پہنچ گئے",
-      "link": "https://jang.com.pk/news/1633393",
-      "summary": "— تصویر بشکریہ سوشل میڈیاشمالی قبرصی ترک جمہوریہ کے وزیرِ خارجہ تحسین ارطغرل اوغلو اسلام آباد پہنچ گئے۔وزیرِ خارجہ تحسین ارطغرل...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-14/b_1633393_024259_updates.jpg\"/",
-      "published": "2026-11-14T09:11:22+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سیکیورٹی فورسز کی کولپور میں کارروائی، 8 دہشتگرد ہلاک، پاک فوج کا میجر اور حوالدار شہید",
-      "link": "https://www.express.pk/story/2844231/security-forces-kolpur-operation-8-terrorists-killed-pak-army-major-and-hawaldar-martyred-2844231",
-      "summary": "ہلاک دہشت گردوں میں ایک خودکش بمباربھی شامل تھا، آپریشن کے دوران اسلحے اورگولہ بارود کا ذخیرہ برآمد ہوا، آئی ایس پی آر",
-      "image_url": "",
-      "published": "2026-11-14T09:08:47+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "انڈر 19 ایشیا کپ: بھارت کیخلاف فائنل میں عثمان خان کی سنچری، عبدالقادر اور فرحان کی نصف سنچریاں",
-      "link": "https://www.express.pk/story/2844230/under-19-asia-cup-usman-khan-scores-a-century-while-abdul-qadir-and-farhan-hit-half-centuries-in-the-final-against-india-2844230",
-      "summary": "پاکستان کے عثمان خان نے 111 گیندوں پر 107 رنز بنائے",
-      "image_url": "",
-      "published": "2026-11-14T09:08:30+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "’سب کو واضح ہونا چاہیے کہ پہلگام واقعے کے بعد ہم کہاں کھڑے ہیں‘: وزیرِ اعلیٰ بھگونت مان کو دورۂ لاہور کی دعوت پر انڈین وزارتِ خارجہ کا ردِعمل",
-      "link": "https://www.bbc.com/urdu/articles/cw8dzy3qr2p0o?at_medium=RSS&at_campaign=rss",
-      "summary": "انڈیا کے مؤقف کو دہراتے ہوئے رندھیر جیسوال نے کہا کہ 'پہلگام میں ہونے والے دہشت گردانہ حملے کے بعد پاکستان کے سلسلے میں ہمارا جو مؤقف ہے، وہ سب پر بالکل عیاں ہونا چاہیے کہ ہم کہاں کھڑے ہیں۔'",
-      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/472e/live/39f26e40-df6b-11f1-9892-87464bbcc2b8.jpg",
-      "published": "2026-11-14T08:55:32+00:00",
-      "source": "BBC Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "‘A moral red line’? World on cusp of autonomous weapons revolution",
-      "link": "https://www.dawn.com/news/2044483/a-moral-red-line-world-on-cusp-of-autonomous-weapons-revolution",
-      "summary": "Lethal autonomous weapons powered by artificial intelligence are set to revolutionise warfare, but there is no proper regulatory or legal framework governing the new technology. A conference starting Monday at the United Nations in Geneva will discuss how to establish curbs and prohibitions on such weapons, called killer robots by some. But some analysts dou",
-      "image_url": "https://i.dawn.com/large/2026/11/14132603c8588cc.webp",
-      "published": "2026-11-14T08:30:24+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Widespread frost and freezing fog as cold health alerts continue",
-      "link": "https://www.bbc.co.uk/weather/articles/cqlyml59mdj0o?at_medium=RSS&at_campaign=rss",
-      "summary": "It's a weekend of two halves with a cold start on Saturday giving way to wetter and milder day on Sunday.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/41dd/live/a0b39380-e01e-11f1-ad34-45f8f10f7c55.png",
-      "published": "2026-11-14T08:28:50+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
     }
   ]
 }
