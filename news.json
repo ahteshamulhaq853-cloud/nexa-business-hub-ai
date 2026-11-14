@@ -1,6 +1,16 @@
 {
-  "updated": "2026-11-14T01:20:53.987966+00:00",
+  "updated": "2026-11-14T02:18:38.838800+00:00",
   "items": [
+    {
+      "title": "Trump, Putin and Xi plan historic joint meeting in China next week, White House says",
+      "link": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do?at_medium=RSS&at_campaign=rss",
+      "summary": "Trump will discuss the \"reduction of nuclear weapons\" during the unprecedented talks, a spokeswoman says.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/172e/live/be162960-dfc9-11f1-81be-1f9bcd2a4214.jpg",
+      "published": "2026-11-14T02:05:55+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "When to put up a real Christmas tree - according to an expert",
       "link": "https://www.bbc.co.uk/news/articles/cq5y1k48k2v7o?at_medium=RSS&at_campaign=rss",
@@ -182,16 +192,6 @@
       "language": "en"
     },
     {
-      "title": "Microsoft outage 'stark reminder' of how much we rely on tech",
-      "link": "https://www.bbc.co.uk/news/articles/cxzd9171m51qo?at_medium=RSS&at_campaign=rss",
-      "summary": "Microsoft has apologised for the issue, which it said was due to a technical failure.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9359/live/2eb34280-dfc4-11f1-93e1-3b657b665bcf.jpg",
-      "published": "2026-11-13T21:15:41+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "Microsoft 'deeply sorry' for global outage after almost 24 hours of disruption",
       "link": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss",
       "summary": "Experts say the event is a \"stark reminder\" of how heavily the world relies on a small group of big tech providers.",
@@ -222,6 +222,16 @@
       "language": "ur"
     },
     {
+      "title": "پاکستان نے آئی ایم ایف کی چار میں سے تین اہم مالیاتی شرائط پوری کر لیں",
+      "link": "https://www.express.pk/story/2844116/pakistan-has-met-three-out-of-the-four-key-financial-conditions-set-by-the-imf-2844116",
+      "summary": "چاروں صوبے ٹیکس وصولیوں کاآئی ایم ایف ہدف حاصل کرنے میں ناکام رہے",
+      "image_url": "",
+      "published": "2026-11-13T20:44:57+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "پشاور پولیس کا نجی جرگوں پر پابندی کا فیصلہ",
       "link": "https://jang.com.pk/news/1633193",
       "summary": "پشاور پولیس نے نجی جرگوں پر پابندی کا فیصلہ کرلیا۔سی سی پی او پشاور کا کہنا ہے کہ نجی جرگے کسی صورت برداشت نہیں کیے جائیں گے۔ انہوں نے...",
@@ -230,6 +240,16 @@
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
+    },
+    {
+      "title": "Nvidia scandal fallout widens as Trump's treasury secretary blames colleague's cabinet",
+      "link": "https://www.bbc.co.uk/news/articles/cqvg2d1eg7zro?at_medium=RSS&at_campaign=rss",
+      "summary": "Scott Bessent told CNBC that several government agencies \"were in favour of putting Megaspeed on the entity list for months\".",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2783/live/a5cdb560-df6c-11f1-9892-87464bbcc2b8.jpg",
+      "published": "2026-11-13T19:53:57+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
     },
     {
       "title": "Apple expands smart ecosystem with HomeView display and powerhouse Apple TV 4K",
@@ -332,9 +352,9 @@
       "language": "en"
     },
     {
-      "title": "امریکا میں تکنیکی خرابی کے باعث فضائی آپریشن معطل، ہزاروں پروازیں متاثر",
+      "title": "امریکی فضائی نظام میں خرابی؛ 13 ہزار سے زائد پروازیں، 22 ایئر ٹریفک کنٹرول مراکز متاثر",
       "link": "https://www.express.pk/story/2844115/air-operations-suspended-in-the-us-due-to-technical-failure-thousands-of-flights-affected-2844115",
-      "summary": "خرابی سے ریڈار اور ایئر ٹریفک کنٹرول کی صلاحیت متاثر ہوئی",
+      "summary": "ایف اے اے کے تکنیکی ماہرین خرابی کی تحقیقات کر رہے ہیں",
       "image_url": "",
       "published": "2026-11-13T18:16:43+00:00",
       "source": "Express Urdu",
@@ -872,7 +892,7 @@
       "language": "en"
     },
     {
-      "title": "چین میں ٹرمپ، شی جن پنگ اور پیوٹن کی ملاقات متوقع؛ نیویارک پوسٹ کا دعویٰ",
+      "title": "چین میں ٹرمپ، شی جن پنگ اور پیوٹن ملاقات کرینگے؛ وائٹ ہاؤس نے تصدیق کر دی",
       "link": "https://www.express.pk/story/2844113/meeting-between-trump-xi-jinping-and-putin-expected-in-china-new-york-post-claims-2844113",
       "summary": "تینوں رہنماؤں کی ملاقات میں جوہری ہتھیاروں، شمالی کوریا، یوکرین اور ایران سے متعلق امور پر بات چیت کا امکان ہے",
       "image_url": "",
@@ -980,26 +1000,6 @@
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "ہارنا بھی سیکھنا چاہیے",
-      "link": "https://www.express.pk/story/2844106/haarna-bhi-seekhna-chahiye-2844106",
-      "summary": "جھپٹنا، پلٹنا، پلٹ کر جھپٹنا لہو گرم رکھنے کا ہے اک بہانہ",
-      "image_url": "",
-      "published": "2026-11-13T15:42:56+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "SC plans to appoint ad hoc judges to clear case backlog",
-      "link": "https://arynews.tv/sc-plans-to-appoint-ad-hoc-judges-to-clear-case-backlog",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/08/Supreme-Court.jpg",
-      "published": "2026-11-13T15:38:46+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
     }
   ]
 }
