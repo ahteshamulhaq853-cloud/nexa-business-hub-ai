@@ -1,6 +1,26 @@
 {
-  "updated": "2026-11-14T20:40:33.798979+00:00",
+  "updated": "2026-11-14T21:19:57.499416+00:00",
   "items": [
+    {
+      "title": "UK ethics watchdog chief steps back from role over sexual misconduct claims",
+      "link": "https://www.bbc.co.uk/news/articles/cmewv2kzq2e5o?at_medium=RSS&at_campaign=rss",
+      "summary": "The government says Stuart Sterling has stepped back from his role after claims made during the early 2000s emerged.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6404/live/de282290-e04a-11f1-88e1-eb4e155225b3.jpg",
+      "published": "2026-11-14T21:14:52+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
+      "link": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo?at_medium=RSS&at_campaign=rss",
+      "summary": "The US has not confirmed the Ukrainian president's comments which follow meetings US envoys had with him and Russia's Vladimir Putin.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d028/live/47c10ab0-e013-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-11-14T20:41:45+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Ex-Nvidia CEO misled top lawyer on affair with Chinese businesswoman",
       "link": "https://arynews.tv/ex-nvidia-ceo-misled-top-lawyer-on-affair-with-chinese-businesswoman",
@@ -39,16 +59,6 @@
       "published": "2026-11-14T19:24:42+00:00",
       "source": "ARY News",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
-      "link": "https://www.bbc.co.uk/news/articles/cwvg2l312ylqo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Ukrainian president says US envoys touted the exchange as part of efforts to end the war with Russia.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d028/live/47c10ab0-e013-11f1-b441-2b33b063138f.jpg",
-      "published": "2026-11-14T19:21:10+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     },
     {
@@ -112,16 +122,6 @@
       "language": "en"
     },
     {
-      "title": "Italy fines Meta €805m over accessing users' photos",
-      "link": "https://www.bbc.co.uk/news/articles/cwn83gxemk35o?at_medium=RSS&at_campaign=rss",
-      "summary": "The social media giant is accused of not informing 20 million users it had access to their photos.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d6be/live/f51842e0-e041-11f1-88e1-eb4e155225b3.jpg",
-      "published": "2026-11-14T18:28:06+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "Philippines wins first Eurovision Song Contest Asia",
       "link": "https://www.bbc.co.uk/news/articles/cqrlgnx9dx6eo?at_medium=RSS&at_campaign=rss",
       "summary": "Front-runner Carmelle emerges victorious with her women's empowerment anthem Sobra-Sobra.",
@@ -160,6 +160,16 @@
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
+    },
+    {
+      "title": "Sotheby's auction of $180m Van Gogh challenged over claims it was 'sold under duress'",
+      "link": "https://www.bbc.co.uk/news/articles/cmwy05gg75lvo?at_medium=RSS&at_campaign=rss",
+      "summary": "Sotheby's says it will work with the heirs of a family who had previously owned the artwork to try and reach a solution.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4bff/live/0bb4d910-e046-11f1-88e1-eb4e155225b3.jpg",
+      "published": "2026-11-14T18:00:10+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
     },
     {
       "title": "Abdul Samad’s late strike sends Pakistan into historic SAFF Championship final",
@@ -332,6 +342,26 @@
       "language": "ur"
     },
     {
+      "title": "نیتن یاہو کے اقتدار کا سورج غروب ہوگیا؛ اتحاد کے نام پر بیوقوف نہ بنائیں؛ متوقع وزیراعظم",
+      "link": "https://www.express.pk/story/2844279/israel-netanyahu-isac-election-2026-2844279",
+      "summary": "نیتن یاہو کی ان سیاسی چالوں سے متاثر نہیں ہوں گے۔ یہ چالیں مجھ پر کام نہیں کرتیں; آئزن کوٹ",
+      "image_url": "",
+      "published": "2026-11-14T15:54:36+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "آبنائے ہرمز میں تیل بردار جہازوں کا تحفظ: سمندری حدود میں امریکی ایف 16 طیاروں کا گشت",
+      "link": "https://www.express.pk/story/2844278/us-plan-over-strait-of-hurmuz-2844278",
+      "summary": "امریکی تحفظ میں آبنائے ہرمز کے راستے ایک ارب 70 کروڑ بیرل سے زائد خام تیل منتقل کیا جاچکا ہے۔",
+      "image_url": "",
+      "published": "2026-11-14T15:37:33+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Sophie Cunningham responds to Matt Rife’s special jersey tribute",
       "link": "https://arynews.tv/sophie-cunningham-responds-to-matt-rifes-special-jersey-tribute",
       "summary": "",
@@ -440,16 +470,6 @@
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "Man dies after being stabbed by gang of masked men",
-      "link": "https://www.bbc.co.uk/news/articles/cm4gn7pp5r85o?at_medium=RSS&at_campaign=rss",
-      "summary": "Police say a 27-year-old man died after being stabbed in the \"shocking and tragic attack\" in Crumpsall.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b5d0/live/97d14980-e035-11f1-9ca9-b3b288fceb81.png",
-      "published": "2026-11-14T14:40:04+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
     },
     {
       "title": "معدنیات اور پاکستان کی ترقی",
@@ -812,16 +832,6 @@
       "language": "ur"
     },
     {
-      "title": "یورپ میں کمیونزم کی واپسی کا سوال",
-      "link": "https://www.express.pk/story/2844252/the-question-of-the-return-of-communism-in-europe-2844252",
-      "summary": "عراق کے مذہبی عالم باقر الصدر نے تو کارل مارکس کی قدر زائد پر ہی پی ایچ ڈی کی",
-      "image_url": "",
-      "published": "2026-11-14T12:46:32+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
       "title": "Achakzai, Abbas move FCC for release of Sohail Afridi, detained lawmakers",
       "link": "https://www.dawn.com/news/2044493/achakzai-abbas-move-fcc-for-release-of-sohail-afridi-detained-lawmakers",
       "summary": "ISLAMABAD: The leaders of the opposition in both Houses of Parliament on Saturday approached the Federal Constitutional Court (FCC), seeking the immediate release of Sohail Afridi, the non-functional Khyber Pakhtunkhwa chief minister, along with eight other elected members of the provincial assembly and six members of the National Assembly. Afridi has not be",
@@ -830,26 +840,6 @@
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "Body found on French beach after attempted Channel crossing",
-      "link": "https://www.bbc.co.uk/news/articles/cxj05jr299n6o?at_medium=RSS&at_campaign=rss",
-      "summary": "The man was found after authorities stopped and overloaded dinghy leaving the beach overnight.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f5fc/live/34b33400-e024-11f1-8e3e-7509d123e9f4.jpg",
-      "published": "2026-11-14T12:44:27+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "جواب",
-      "link": "https://www.express.pk/story/2844251/answer-2844251",
-      "summary": "بحیثیت قوم پاکستانی عوام کو بھی باہمی اتحاد اور پُرامن جدوجہد کا آغاز کرنا ہوگا",
-      "image_url": "",
-      "published": "2026-11-14T12:43:30+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
     },
     {
       "title": "Mineral wealth",
@@ -998,6 +988,16 @@
       "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/1-63.jpg",
       "published": "2026-11-14T11:42:53+00:00",
       "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "A new 'Yalta'? Trump and Putin push for a meeting that Xi is wary of hosting",
+      "link": "https://tribune.com.pk/story/2640315/a-new-yalta-trump-and-putin-push-for-a-meeting-that-xi-is-wary-of-hosting",
+      "summary": "US-China-Russia summit plans remain unsettled, but leaders may meet at the APEC forum in Shenzhen",
+      "image_url": "",
+      "published": "2026-11-14T11:24:16+00:00",
+      "source": "Express Tribune",
       "category": "Pakistan",
       "language": "en"
     }
