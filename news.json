@@ -1,6 +1,16 @@
 {
-  "updated": "2026-11-15T22:41:56.433020+00:00",
+  "updated": "2026-11-15T23:28:24.221750+00:00",
   "items": [
+    {
+      "title": "'Steering casualty' preceded New Orleans cruise ship collision, says NTSB",
+      "link": "https://www.bbc.co.uk/news/articles/c65y131w1534o?at_medium=RSS&at_campaign=rss",
+      "summary": "Preliminary findings by National Transportation Safety Board investigators suggest the tanker suffered a steering failure before colliding with the cruise ship on Friday.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f55e/live/4bc0f750-e140-11f1-859a-418a418deb7d.jpg",
+      "published": "2026-11-15T22:57:27+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Cut national insurance for under-25s to create jobs, Milburn report to say",
       "link": "https://www.bbc.co.uk/news/articles/c6p9dzmj514ko?at_medium=RSS&at_campaign=rss",
@@ -990,16 +1000,6 @@
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "FIA books 8 deportees from Türkiye over violations",
-      "link": "https://arynews.tv/fia-books-8-deportees-from-turkiye-over-violations",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/FotoJet-17.jpg",
-      "published": "2026-11-15T14:31:14+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
     }
   ]
 }
