@@ -1,12 +1,82 @@
 {
-  "updated": "2026-11-16T22:03:12.923796+00:00",
+  "updated": "2026-11-16T22:49:37.650954+00:00",
   "items": [
+    {
+      "title": "Pocognoli wants patience but Scotland 'don't have time' says Robertson",
+      "link": "https://www.bbc.co.uk/sport/football/articles/cwnv432qy0l1o?at_medium=RSS&at_campaign=rss",
+      "summary": "Angry captain Andy Robertson says Scotland do not have time to turn things around after a brutal 4-0 defeat by Switzerland consigns them to a third-place finish in their Nations League group.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9cdd/live/1fc24180-e20e-11f1-99b6-a35a62fa4264.jpg",
+      "published": "2026-11-16T22:36:26+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "'Complete system reset' needed to get 440,000 young people into work, says major review",
+      "link": "https://www.bbc.co.uk/news/articles/c38xzy980924o?at_medium=RSS&at_campaign=rss",
+      "summary": "Alan Milburn's review will call for sweeping reforms to the education, work and welfare systems.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1a76/live/fbd49eb0-e1e2-11f1-9f14-b33806cfd783.jpg",
+      "published": "2026-11-16T22:32:47+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Nvidia dismisses 'Bring Jensen Back' campaign as Trump backs effort to reinstate ex CEO",
+      "link": "https://www.bbc.co.uk/news/articles/cry49plv8v3go?at_medium=RSS&at_campaign=rss",
+      "summary": "A number of tech figures have backed an effort asking the AI chip giant to give Jensen Huang his job back.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/78e4/live/4bc24280-e1d2-11f1-b8c8-67fa35f5afdb.jpg",
+      "published": "2026-11-16T22:21:27+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "UK lost more than it gained from Brexit, Burnham says ahead of EU summit",
+      "link": "https://www.bbc.co.uk/news/articles/crp3e1n5kezpo?at_medium=RSS&at_campaign=rss",
+      "summary": "The prime minister tells an audience at the Lord Mayor's Banquet that the \"Brexit we were given has not worked\".",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dc0f/live/f8a1dcb0-e1df-11f1-99a1-253766e7ad8b.jpg",
+      "published": "2026-11-16T22:10:26+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Cass report author says she does not support draft conversion practices bill",
+      "link": "https://www.bbc.co.uk/news/articles/c6m25vd2yxgdo?at_medium=RSS&at_campaign=rss",
+      "summary": "The gender care review author says the bill’s wording risks \"serious unintended consequences\" for parents and therapists.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/67e4/live/e4fbabb0-e1f2-11f1-99b6-a35a62fa4264.jpg",
+      "published": "2026-11-16T22:08:03+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "بلاول بھٹو کو وزیراعظم بنتا دیکھ رہی ہوں، فریال تالپور",
       "link": "https://jang.com.pk/news/1634016",
       "summary": "فائل فوٹوپاکستان پیپلزپارٹی کی رہنما فریال تالپور نے کہا ہے کہ بلاول بھٹو کو وزیراعظم بنتا دیکھ رہی ہوں۔لاہور میں صحافیوں سے گفتگو...",
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634016_020642_updates.jpg\"/",
       "published": "2026-11-16T21:11:48+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "وزیراعلیٰ پنجاب کا اسپیڈی کورٹ قائم کرنے کا فیصلہ",
+      "link": "https://jang.com.pk/news/1634042",
+      "summary": "وزیراعلیٰ پنجاب مریم نواز نے بچوں اور خواتین کے خلاف جرائم کے مقدمات کی فوری سماعت کے لیے اسپیڈی کورٹ قائم کرنے کا فیصلہ کیا ...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634042_023700_updates.jpg\"/",
+      "published": "2026-11-16T21:11:31+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "عارف والا میں ٹریفک حادثہ، جاں بحق افراد کی تعداد 8 ہوگئی",
+      "link": "https://jang.com.pk/news/1634062",
+      "summary": "ملتان سے پاک پتن جانے والی کوسٹر اور آئل ٹینکر کے درمیان عارف والا میں تصادم کے نتیجے میں جاں بحق افراد کی تعداد 8 ہو گئی۔جاں بحق...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634062_030318_updates.jpg\"/",
+      "published": "2026-11-16T21:11:19+00:00",
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
@@ -85,18 +155,8 @@
       "title": "Robert Pattinson to replace Daniel Craig as James Bond",
       "link": "https://www.bbc.co.uk/news/articles/cwx2ev0pxmvjo?at_medium=RSS&at_campaign=rss",
       "summary": "The 40-year old is best known for his role in films including Twilight, The Batman and The Odyssey.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2657/live/f59bc570-e1db-11f1-a094-5fdc692f3e33.jpg",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6cce/live/ac752f20-e209-11f1-99a1-253766e7ad8b.jpg",
       "published": "2026-11-16T19:43:58+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Robertson eclipses Dalglish to become Scotland's most capped man",
-      "link": "https://www.bbc.co.uk/sport/football/articles/cjp3v5r9enp1o?at_medium=RSS&at_campaign=rss",
-      "summary": "Andy Robertson has taken over from Kenny Dalglish as Scotland's most-capped player, making his 103rd appearance in Monday's Nations League game against Switzerland.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/131e/live/7321ccd0-e1f8-11f1-ac6e-e9777cdcbb4f.jpg",
-      "published": "2026-11-16T19:43:33+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -140,16 +200,6 @@
       "source": "UrduPoint",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "Trump backs return of ex-Nvidia boss after 'Bring Jensen Back' campaign launched",
-      "link": "https://www.bbc.co.uk/news/articles/cry49plv8v3go?at_medium=RSS&at_campaign=rss",
-      "summary": "A number of tech figures want the board of the AI chip giant to give Jensen Huang his job back.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/78e4/live/4bc24280-e1d2-11f1-b8c8-67fa35f5afdb.jpg",
-      "published": "2026-11-16T19:16:52+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
     },
     {
       "title": "آسیان کانفرنس میں گوتیرش کا تعاون اور میانمار بحران کے حل پر زور",
@@ -349,16 +399,6 @@
       "published": "2026-11-16T17:30:11+00:00",
       "source": "Dawn",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "When will we see Robert Pattinson as Bond in cinemas?",
-      "link": "https://www.bbc.co.uk/news/videos/cmd91xjd9zk2o?at_medium=RSS&at_campaign=rss",
-      "summary": "Robert Pattinson has been announced as the next James Bond, becoming the seventh actor to take up the mantle of 007.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6849/live/22d15940-e1ed-11f1-99a1-253766e7ad8b.jpg",
-      "published": "2026-11-16T17:18:54+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     },
     {
@@ -632,6 +672,36 @@
       "language": "ur"
     },
     {
+      "title": "Gold falls as upcoming Fed rate hike weighs",
+      "link": "https://tribune.com.pk/story/2640682/gold-falls-as-upcoming-fed-rate-hike-weighs",
+      "summary": "Loses Rs2,000/tola on global price slide; rupee inches up",
+      "image_url": "",
+      "published": "2026-11-16T15:47:55+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Steps taken to expedite industrial uplift",
+      "link": "https://tribune.com.pk/story/2640680/steps-taken-to-expedite-industrial-uplift",
+      "summary": "Minister says decades-old practice of using industrial zones for realty business discontinued",
+      "image_url": "",
+      "published": "2026-11-16T15:47:55+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "PSX rally fizzles as index rises just 309 points",
+      "link": "https://tribune.com.pk/story/2640681/psx-rally-fizzles-as-index-rises-just-309-points",
+      "summary": "Market gives up bulk of early gains over investor caution",
+      "image_url": "",
+      "published": "2026-11-16T15:47:55+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "Pakistan eager to extend CASA-1,000",
       "link": "https://tribune.com.pk/story/2640678/pakistan-eager-to-extend-casa-1000",
       "summary": "Invites Turkmenistan to join Central Asia-South Asia power transmission project",
@@ -645,36 +715,6 @@
       "title": "Centre signs Rs157b deal with K-P",
       "link": "https://tribune.com.pk/story/2640674/centre-signs-rs157b-deal-with-k-p",
       "summary": "Pact covers Rs17.8b deducted from NFC share; provinces give Rs107b in grants",
-      "image_url": "",
-      "published": "2026-11-16T15:47:54+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "SBP warns of premature deindustrialisation",
-      "link": "https://tribune.com.pk/story/2640677/sbp-warns-of-premature-deindustrialisation",
-      "summary": "Manufacturing value added stagnant since 1960s; investment falls to 12.6% of GDP",
-      "image_url": "",
-      "published": "2026-11-16T15:47:54+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Masud's tenure as BOP President extended",
-      "link": "https://tribune.com.pk/story/2640676/masuds-tenure-as-bop-president-extended",
-      "summary": "Board approves fresh term from April 2027, subject to Punjab Finance Dept notification",
-      "image_url": "",
-      "published": "2026-11-16T15:47:54+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Rs300b earmarked for short-term export finance",
-      "link": "https://tribune.com.pk/story/2640675/rs300b-earmarked-for-short-term-export-finance",
-      "summary": "FinMin emphasises funds must reach wider business segment, especially SMEs",
       "image_url": "",
       "published": "2026-11-16T15:47:54+00:00",
       "source": "Express Tribune",
@@ -959,46 +999,6 @@
       "published": "2026-11-16T13:54:40+00:00",
       "source": "Dawn",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "ٹارگٹ کلنگ میں زخمی ٹائیگر شیروف پھر ایکشن میں؛ کس اداکارہ کیساتھ شوٹنگ مکمل کروالی؟",
-      "link": "https://www.express.pk/story/2844603/tiger-shroff-returns-to-work-janhvi-kapoor-lag-jaa-gale-2844603",
-      "summary": "یہ پہلی بار ہے جب ٹائیگر شیروف 18 اکتوبر کو ممبئی کے علاقے جوہو میں فائرنگ کے واقعے کے بعد منظرعام پر آئے ہی",
-      "image_url": "",
-      "published": "2026-11-16T13:48:45+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "IHC directs petitioner to prove ownership of Bari Imam House to CDA",
-      "link": "https://www.dawn.com/news/2044945/ihc-directs-petitioner-to-prove-ownership-of-bari-imam-house-to-cda",
-      "summary": "ISLAMABAD: The Islamabad High Court (IHC) on Monday disposed of a writ petition challenging the sealing of Bari Imam House in Nurpur Shahan, directing the petitioner to approach the Capital Development Authority (CDA) with documented proof of ownership, while leaving the authority free to proceed in accordance with law if he failed to do so. Justice Ayyaz Sh",
-      "image_url": "https://i.dawn.com/large/2019/10/5d9fb5bf90906.jpg",
-      "published": "2026-11-16T13:48:33+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "GTA 6 hacker pleads guilty after release from secure hospital",
-      "link": "https://www.bbc.co.uk/news/articles/cq99exy89dngo?at_medium=RSS&at_campaign=rss",
-      "summary": "21-year-old Arion Kurtaj pleaded guilty to the Rockstar Games hack and others he carried out when he was a teenager.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/30e7/live/e63476a0-e1ee-11f1-99b6-a35a62fa4264.jpg",
-      "published": "2026-11-16T13:34:22+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Barristers must stop using rape myths in trials, justice secretary says",
-      "link": "https://www.bbc.co.uk/news/articles/cj04w7n74gqno?at_medium=RSS&at_campaign=rss",
-      "summary": "Russell Brand's barrister has been accused of peddling rape myths while defending the comedian.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1dd3/live/4146e090-e1aa-11f1-8ee3-23d0d09d2796.jpg",
-      "published": "2026-11-16T13:28:44+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     }
   ]
