@@ -1,12 +1,72 @@
 {
-  "updated": "2026-11-16T00:14:26.781081+00:00",
+  "updated": "2026-11-16T01:41:23.935233+00:00",
   "items": [
+    {
+      "title": "Brand moved from Wandsworth to category C prison, his wife confirms on podcast",
+      "link": "https://www.bbc.co.uk/news/articles/cm7024p1ded3o?at_medium=RSS&at_campaign=rss",
+      "summary": "The convicted rapist has been moved to HMP Littlehey, which houses sex offenders.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/17c7/live/710dd010-e12b-11f1-a2d0-ff163dc3689d.jpg",
+      "published": "2026-11-16T01:22:50+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Clothing factories shut in Bangladesh as workers strike over pay",
+      "link": "https://www.bbc.co.uk/news/articles/cx5y1pzr9604o?at_medium=RSS&at_campaign=rss",
+      "summary": "Workers are striking over demands for a minimum wage of 30,000 taka (£182) a month.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6da5/live/b3273710-e0ff-11f1-bf0e-b9e6941e1cc7.jpg",
+      "published": "2026-11-16T01:05:44+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Black Friday and tax return scams - don't fall for these",
+      "link": "https://www.bbc.co.uk/news/articles/cm4gnlz2p61ko?at_medium=RSS&at_campaign=rss",
+      "summary": "Tens of thousands of scams are reported to HMRC - so it has advice on how to spot a fake request and refund.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ab33/live/9ed5ff60-dea9-11f1-98eb-79ee6ea9ba56.jpg",
+      "published": "2026-11-16T00:50:39+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Cancer 'sponge' tests could be offered to more people with bad indigestion",
+      "link": "https://www.bbc.co.uk/news/articles/cm5y13q0gx97o?at_medium=RSS&at_campaign=rss",
+      "summary": "The \"sponge on a string\" tests can be done in GP surgeries, rather than hospitals, unlike endoscopy checks that use a small camera.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/07cd/live/8214d800-df5e-11f1-a8af-15d7a25dc0d1.png",
+      "published": "2026-11-16T00:47:04+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Russia's mega-rich are already imagining a future after Putin",
+      "link": "https://www.bbc.co.uk/news/articles/c60733mxm0x0o?at_medium=RSS&at_campaign=rss",
+      "summary": "Some Russian tycoons are pining after a return to a 1990s system of oligarchy, when businessmen enjoyed power",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0d12/live/ba3084e0-de83-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-11-16T00:13:14+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Thousands of US flights still cancelled or delayed two days after grounding of planes nationwide",
       "link": "https://www.bbc.co.uk/news/articles/cw1mdlv0k2r4o?at_medium=RSS&at_campaign=rss",
       "summary": "The US transport secretary says that normal air-traffic operations may not be restored until Monday.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1b00/live/90c0ff50-e11b-11f1-a7a2-7bb21fac8f0b.jpg",
       "published": "2026-11-16T00:03:29+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "60 minutes of perfection, 30 minutes of chaos - an England win for the ages",
+      "link": "https://www.bbc.co.uk/sport/football/articles/c933ge310n33o?at_medium=RSS&at_campaign=rss",
+      "summary": "England's stunning win in Spain had everything - and was their best under Thomas Tuchel, writes Phil McNulty.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b361/live/48cfe320-e146-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-11-15T23:52:43+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -47,16 +107,6 @@
       "summary": "The Nvidia scandal has raised questions over whether advanced AI chips ended up in China, despite US restrictions.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fa43/live/e2a9a870-e10d-11f1-93e1-3b657b665bcf.jpg",
       "published": "2026-11-15T22:24:20+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Brand moved from Wandsworth to category C prison, his wife confirms on podcast",
-      "link": "https://www.bbc.co.uk/news/articles/cm7024p1ded3o?at_medium=RSS&at_campaign=rss",
-      "summary": "The convicted rapist has been moved to HMP Littlehey, which houses sex offenders.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/17c7/live/710dd010-e12b-11f1-a2d0-ff163dc3689d.jpg",
-      "published": "2026-11-15T22:23:57+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -162,6 +212,36 @@
       "language": "ur"
     },
     {
+      "title": "بیوی کی ناک کاٹنے والا ملزم پولیس مقابلے میں زخمی حالت میں گرفتار",
+      "link": "https://www.express.pk/story/2844446/man-who-cut-off-his-wifes-nose-arrested-in-injured-condition-following-a-police-encounter-2844446",
+      "summary": "زخمی ملزم کو گرفتار کرکے اس کے قبضے سے اسلحہ برآمد کرلیا",
+      "image_url": "",
+      "published": "2026-11-15T20:10:27+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "خلیج میں دوبارہ جنگ کا خدشہ؟ امریکا کا تیسرا طیارہ بردار بحری جہاز مشرق وسطیٰ پہنچ گیا",
+      "link": "https://www.express.pk/story/2844445/fear-of-renewed-war-in-the-gulf-a-third-us-aircraft-carrier-has-arrived-in-the-middle-east-2844445",
+      "summary": "امریکی عہدیدار نے برطانوی اخبار کو روزویلٹ کی آمد کی تصدیق کی ہے",
+      "image_url": "",
+      "published": "2026-11-15T19:49:57+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "موٹر وے پر شدید دھند کا راج، مختلف سیکشنز ٹریفک کے لیے بند",
+      "link": "https://www.express.pk/story/2844444/heavy-fog-reigns-on-the-motorway-various-sections-of-the-m4-closed-to-traffic-2844444",
+      "summary": "دھند کے موسم میں صبح 10 بجے سے شام 6 بجے تک سفر زیادہ محفوظ رہتا ہے، ترجمان موٹر وے",
+      "image_url": "",
+      "published": "2026-11-15T19:40:19+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Zelensky urges US and Musk to lift Starlink restrictions and be on 'right side of history'",
       "link": "https://www.bbc.co.uk/news/articles/c6m25zg88k45o?at_medium=RSS&at_campaign=rss",
       "summary": "The Ukrainian president says the slowed-down internet is making it difficult to stop Russian attacks.",
@@ -192,6 +272,16 @@
       "language": "en"
     },
     {
+      "title": "ٹرمپ انتظامیہ نے فضائی سفر کے بحران کا مزید ایک روز جاری رہنے کا خدشہ ظاہر کر دیا",
+      "link": "https://www.express.pk/story/2844443/the-trump-administration-has-expressed-concern-that-the-air-travel-crisis-could-continue-for-another-day-2844443",
+      "summary": "فضائی آپریشن مکمل معمول پر آنے میں پیر تک کا وقت لگ سکتا ہے، وزیر ٹرانسپورٹیشن",
+      "image_url": "",
+      "published": "2026-11-15T19:24:08+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Authorities ban gatherings in five districts of KP for 30 days, citing law and order situation",
       "link": "https://www.dawn.com/news/2044702/authorities-ban-gatherings-in-five-districts-of-kp-for-30-days-citing-law-and-order-situation",
       "summary": "BANNU/BAJAUR/LAKKI MARWAT/SWABI: The district administrations of Khyber Pakhtunkhwa’s Bannu, Bajaur, Lakki Marwat, Swabi and Tank on Sunday imposed Section 144 of the Code of Criminal Procedure (CrPC) for a month, banning public gatherings and several other activities amid the prevailing law and order situation. Three of the five districts — Bannu, Bajaur an",
@@ -200,6 +290,16 @@
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "پیرس کے 15 تعلیمی اداروں کے قریب احتجاج پر پابندی عائد کر دی گئی",
+      "link": "https://www.express.pk/story/2844442/a-ban-on-protests-has-been-imposed-near-15-educational-institutions-in-paris-2844442",
+      "summary": "تعلیمی اداروں کے 100 میٹر کے دائرے میں بغیر اجازت احتجاج ممنوع قرار دے دیا گیا",
+      "image_url": "",
+      "published": "2026-11-15T19:09:56+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Leaked GTA 6 review details reveal 50 hour main story length",
@@ -732,16 +832,6 @@
       "language": "en"
     },
     {
-      "title": "Clothing factories shut in Bangladesh as workers strike over pay",
-      "link": "https://www.bbc.co.uk/news/articles/cx5y1pzr9604o?at_medium=RSS&at_campaign=rss",
-      "summary": "Workers are striking over demands for a minimum wage of 30,000 taka (£182) a month.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/6da5/live/b3273710-e0ff-11f1-bf0e-b9e6941e1cc7.jpg",
-      "published": "2026-11-15T16:15:20+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "ممتاز صحافی حامد میر دنیا کی 500 بااثر مسلم شخصیات کی فہرست میں شامل",
       "link": "https://jang.com.pk/news/1633646",
       "summary": "حامد میر - فوٹو: اسکرین گریبجیو نیوز کے پروگرام ’کیپیٹل ٹاک‘ کے میزبان ممتاز پاکستانی صحافی و کالم نگار حامد میر کو ’دا مسلم فائیو...",
@@ -907,96 +997,6 @@
       "summary": "",
       "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/CHaudhry-Salik.jpg",
       "published": "2026-11-15T15:31:35+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Maryam Nawaz: Punjab Climate Observatory to monitor environment in real time",
-      "link": "https://arynews.tv/maryam-nawaz-punjab-climate-observatory-to-monitor-environment-in-real-time",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/08/Image-shared-by-Maryam-Nawaz-Facebook-page.jpg",
-      "published": "2026-11-15T15:27:31+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Karachi water supply fully restored after Dhabeji maintenance work completed",
-      "link": "https://arynews.tv/karachi-water-supply-fully-restored-after-dhabeji-maintenance-work-completed",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/09/Dhabeji.jpg",
-      "published": "2026-11-15T15:24:31+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Megaspeed says Alice Huang left the company in August 2025",
-      "link": "https://arynews.tv/megaspeed-says-alice-huang-left-the-company-in-august-2025",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Jansen-Huang-.jpg",
-      "published": "2026-11-15T15:20:48+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "کراچی، شہر بھر میں ٹریفک حادثات، 4 افراد جاں بحق",
-      "link": "https://www.express.pk/story/2844429/traffic-accidents-across-karachi-4-people-killed-2844429",
-      "summary": "جاں بحق ہونے والوں میں 3 افراد کی شناخت ہوگئی جبکہ ایک شخص کی شناخت نہیں ہوسکی",
-      "image_url": "",
-      "published": "2026-11-15T15:16:36+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "صوبوں پر بہت جلد سیاسی اتفاق رائے ہوجائے گا: خواجہ آصف",
-      "link": "https://jang.com.pk/news/1633644",
-      "summary": "پاکستان کا سیاسی منظرنامہ جلد بدلنے جارہا ہے، خواجہ آصف - فوٹو: فائلوزیر دفاع خواجہ محمد آصف نے کہا ہے کہ صوبوں کے معاملے پر بہت جلد...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-15/b_1633644_081340_updates.jpg\"/",
-      "published": "2026-11-15T15:11:07+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کراچی: گلشن اقبال میں گزشتہ روز فائرنگ سے تاجر کے قتل کا مقدمہ درج کرلیا گیا",
-      "link": "https://jang.com.pk/news/1633645",
-      "summary": "فائل فوٹو کراچی گلشن اقبال یاسین آباد میں گزشتہ روز فائرنگ سے کپڑے کے تاجر کے قتل کا مقدمہ مقتول کے بھائی کی مدعیت میں تھانا گلشن...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-15/b_1633645_082738_updates.jpg\"/",
-      "published": "2026-11-15T15:11:05+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "چین نے ہوابازی کی دنیا میں نئی تاریخ رقم کر دی، پہلے الیکٹرک طیارے کی کامیاب آزمائشی پرواز",
-      "link": "https://www.express.pk/story/2844428/china-creates-new-history-in-the-world-of-aviation-with-successful-test-flight-of-first-electric-aircraft-2844428",
-      "summary": "طیارے میں پروں پر نصب 10 الیکٹرک ڈکٹڈ پنکھے استعمال کیے گئے ہیں",
-      "image_url": "",
-      "published": "2026-11-15T15:04:23+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "میر علی مراد خان تالپور دوم",
-      "link": "https://www.express.pk/story/2844427/mir-ali-murad-khan-talpur-doyam-2844427",
-      "summary": "تاریخ کے امین اور روایات کے پاس دار",
-      "image_url": "",
-      "published": "2026-11-15T15:03:37+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Additional Commissioner Karachi Atif Jalib leads meeting on army recruitment",
-      "link": "https://arynews.tv/additional-commissioner-karachi-atif-jalib-leads-meeting-on-army-recruitment",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/FotoJet-18.jpg",
-      "published": "2026-11-15T14:50:18+00:00",
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
