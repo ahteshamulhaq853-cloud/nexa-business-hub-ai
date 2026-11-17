@@ -1,6 +1,16 @@
 {
-  "updated": "2026-11-16T23:28:13.393809+00:00",
+  "updated": "2026-11-17T00:11:36.491438+00:00",
   "items": [
+    {
+      "title": "The young people caught up in Britain's Neets crisis",
+      "link": "https://www.bbc.co.uk/news/articles/cj75pkgrv151o?at_medium=RSS&at_campaign=rss",
+      "summary": "BBC News speaks to four of the million young people aged 16 to 24 who are not in work, education or training.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c942/live/82d4fd40-dcf9-11f1-a701-fddedf244c16.png",
+      "published": "2026-11-17T00:06:34+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Five EU countries announce migrant deportation centre in Rwanda",
       "link": "https://www.bbc.co.uk/news/articles/cw987343352go?at_medium=RSS&at_campaign=rss",
@@ -990,16 +1000,6 @@
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "Fact check: Viral image of UAE president attending religious ceremony at Abu Dhabi’s Hindu temple is doctored",
-      "link": "https://tribune.com.pk/story/2640657/viral-image-of-uae-president-attending-religious-ceremony-at-abu-dhabis-hindu-temple-is-doctored",
-      "summary": "The image is doctored, and the original one dates back to April 2019",
-      "image_url": "",
-      "published": "2026-11-16T14:06:08+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
     }
   ]
 }
