@@ -1,6 +1,46 @@
 {
-  "updated": "2026-11-17T22:20:32.665521+00:00",
+  "updated": "2026-11-17T23:18:09.640355+00:00",
   "items": [
+    {
+      "title": "Nvidia reports bumper results as firm says it not reinstating Huang",
+      "link": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss",
+      "summary": "Nvidia reported strong quarterly earnings on Tuesday amid the dramatic exit of ex-CEO Jensen Huang.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2e48/live/58880030-e2d7-11f1-99a1-253766e7ad8b.jpg",
+      "published": "2026-11-17T23:03:39+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "'It's hard to keep going': Neets speak to BBC about struggling to get a job",
+      "link": "https://www.bbc.co.uk/news/videos/cm0l3z8gn67eo?at_medium=RSS&at_campaign=rss",
+      "summary": "A government-backed review has proposed wide-ranging measures to help get young people into work - but what do young people think?",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0f50/live/c11d31f0-e2b5-11f1-a094-5fdc692f3e33.jpg",
+      "published": "2026-11-17T22:51:15+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "American soldier arrested by UK police on suspicion of spying taken into US military custody",
+      "link": "https://www.bbc.co.uk/news/articles/c6x284ez38vdo?at_medium=RSS&at_campaign=rss",
+      "summary": "The Metropolitan Police say he has been taken into custody by the US Military over suspected national security and espionage allegations.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/26d1/live/31a610b0-e2b9-11f1-bee0-ef418afc697f.jpg",
+      "published": "2026-11-17T22:46:30+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Thomas Markle charged over child sex abuse material in Philippines",
+      "link": "https://www.bbc.co.uk/news/articles/ckg5ry8m49ggo?at_medium=RSS&at_campaign=rss",
+      "summary": "Markle is being held in prison in the US on a separate charge and has previously denied all of the allegations.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5b0e/live/040fc640-dd79-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-11-17T22:44:15+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Henry Nowak killer applies to appeal against conviction",
       "link": "https://www.bbc.co.uk/news/articles/cm93080xj8xgo?at_medium=RSS&at_campaign=rss",
@@ -22,21 +62,21 @@
       "language": "en"
     },
     {
-      "title": "Russian military plane crashes killing all 19 on board",
+      "title": "کراچی، شاہراہ فیصل پر گاڑی کی ٹکر سے کار الٹ گئی",
+      "link": "https://jang.com.pk/news/1634428",
+      "summary": "فوٹو: اسکرین گریبکراچی میں شاہراہ فیصل پاکستان پوسٹ آفس کے قریب تیز رفتار کار نے دوسری گاڑی کو ٹکر مار دی جس سے گاڑی قلابازیاں کھاتی...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-18/b_1634428_030901_updates.jpg\"/",
+      "published": "2026-11-17T21:11:32+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Russian military plane crashes, killing all 19 on board",
       "link": "https://www.bbc.co.uk/news/articles/cw8085rykkmgo?at_medium=RSS&at_campaign=rss",
       "summary": "Russia's defence ministry says it preliminarily believes a technical malfunction was the cause of the crash in the Kemerovo region.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3ead/live/4d71a050-e2bb-11f1-b083-69f1e69220f8.jpg",
       "published": "2026-11-17T21:06:11+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "American soldier arrested by UK police on suspicion of spying taken into US military custody",
-      "link": "https://www.bbc.co.uk/news/articles/c6x284ez38vdo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Metropolitan Police say he has been taken into custody by the US Military over suspected national security and espionage allegations.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/26d1/live/31a610b0-e2b9-11f1-bee0-ef418afc697f.jpg",
-      "published": "2026-11-17T20:44:54+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -282,16 +322,6 @@
       "language": "en"
     },
     {
-      "title": "Jensen Huang says he would be 'honoured' to return as Nvidia CEO if board asked him",
-      "link": "https://www.bbc.co.uk/news/articles/cwx2en2vrxmdo?at_medium=RSS&at_campaign=rss",
-      "summary": "Huang says he has had an \"outpouring\" of calls from investors and others calling for him to return.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/40ef/live/51fc1a30-e2aa-11f1-99a1-253766e7ad8b.jpg",
-      "published": "2026-11-17T18:24:21+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "نئے صوبوں کے قیام کے لیے ریفرنڈم کی شرط آئین میں موجود نہیں، شرجیل میمن ... اگر حکومت سمجھتی ہے کہ ریفرنڈم ضروری ہے تو پہلے آئین میں ترمیم کرے، بصورت دیگر پیپلزپارٹی اس ... مزید",
       "link": "https://urdupoint.com/n/5013983",
       "summary": "",
@@ -422,16 +452,6 @@
       "language": "ur"
     },
     {
-      "title": "Trump says US taking 'very seriously' any Iranian plot against Washington",
-      "link": "https://www.bbc.co.uk/news/articles/cq808vzd3nnpo?at_medium=RSS&at_campaign=rss",
-      "summary": "Tehran rejects any suggestion it was plotting a so-called dirty bomb attack on the US capital as \"baseless\".",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a331/live/4e364d80-e287-11f1-b166-176de21e2352.jpg",
-      "published": "2026-11-17T17:37:04+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "Pakistan fall to India in SAFF final after late heartbreak",
       "link": "https://www.dawn.com/news/2045209/pakistan-fall-to-india-in-saff-final-after-late-heartbreak",
       "summary": "Pakistan’s hopes of lifting their maiden SAFF Championship title ended in heartbreak on Tuesday as defending champions India came from behind to secure a 2-1 victory in the final at the National Stadium, extending their record to 10 titles and completing an unprecedented hat-trick of consecutive triumphs. The Shaheens produced an impressive first-half displa",
@@ -439,16 +459,6 @@
       "published": "2026-11-17T17:36:16+00:00",
       "source": "Dawn",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "'Can I really do this?': Neets speak to BBC about struggling to get a job",
-      "link": "https://www.bbc.co.uk/news/videos/cm0l3z8gn67eo?at_medium=RSS&at_campaign=rss",
-      "summary": "A government-backed review has proposed wide-ranging measures to help get young people into work - but what do young people think?",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0f50/live/c11d31f0-e2b5-11f1-a094-5fdc692f3e33.jpg",
-      "published": "2026-11-17T17:35:22+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     },
     {
@@ -752,6 +762,56 @@
       "language": "ur"
     },
     {
+      "title": "Farming leads PM's youth loan drive",
+      "link": "https://tribune.com.pk/story/2640881/farming-leads-pms-youth-loan-drive",
+      "summary": "Maximum loan size raised to Rs25m; Rs292b target set",
+      "image_url": "",
+      "published": "2026-11-17T16:42:29+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "UK, Pakistan plan joint geological surveys",
+      "link": "https://tribune.com.pk/story/2640890/uk-pakistan-plan-joint-geological-surveys",
+      "summary": "Will aid minerals investment; GSP staff gets 16 weeks of training",
+      "image_url": "",
+      "published": "2026-11-17T16:42:29+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Pakistan eyes G20 membership",
+      "link": "https://tribune.com.pk/story/2640888/pakistan-eyes-g20-membership",
+      "summary": "BOI minister highlights lessons from China's development model",
+      "image_url": "",
+      "published": "2026-11-17T16:42:29+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Despite shocks, economic resilience strengthens",
+      "link": "https://tribune.com.pk/story/2640887/despite-shocks-economic-resilience-strengthens",
+      "summary": "SBP governor cites average inflation within medium-term range, FX reserves above target",
+      "image_url": "",
+      "published": "2026-11-17T16:42:29+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Rs1.34-per-unit tariff hike likely",
+      "link": "https://tribune.com.pk/story/2640886/rs134-per-unit-tariff-hike-likely",
+      "summary": "Power companies seek to recover Rs23b in additional costs from consumers",
+      "image_url": "",
+      "published": "2026-11-17T16:42:29+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "'Everyone's talking about it' - GTA 6 generates huge hype ahead of release",
       "link": "https://www.bbc.co.uk/news/videos/c6gqx1qkdy9do?at_medium=RSS&at_campaign=rss",
       "summary": "Gamers can hardly contain their excitement as the release of Grand Theft Auto 6 approaches, ending a 13-year wait and fuelling extraordinary anticipation.",
@@ -937,66 +997,6 @@
       "summary": "کراچی میں کوڑے کے ڈھیر ایک عالمی خبر تھی۔ سندھ حکومت نے کوڑا اٹھانے کے لیے ایک کارپوریشن قائم کی ہے",
       "image_url": "",
       "published": "2026-11-17T15:59:34+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "We can't afford to hire under-25s, say firms. Will Milburn plans help?",
-      "link": "https://www.bbc.co.uk/news/articles/c6d01e8m15mko?at_medium=RSS&at_campaign=rss",
-      "summary": "The proposal to cut employers' National Insurance costs is \"essential\" to tackling the Neet problem, one business group says.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1236/live/f4363760-e29e-11f1-a094-5fdc692f3e33.png",
-      "published": "2026-11-17T15:56:04+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "BBC reports from Kyiv bridge hit by Russian attack",
-      "link": "https://www.bbc.co.uk/news/videos/cmlywvww3pzlo?at_medium=RSS&at_campaign=rss",
-      "summary": "The BBC's Sarah Rainsford spoke to residents near the site of the overnight strike.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5a20/live/d8ac30b0-e2b4-11f1-a094-5fdc692f3e33.jpg",
-      "published": "2026-11-17T15:54:15+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "کراچی کے غیر محفوظ فلائی اوور",
-      "link": "https://www.express.pk/story/2844781/karachi-ke-ghair-mehfooz-flyovers-2844781",
-      "summary": "ہر مسروقہ سامان کی خرید و فروخت قانونی طور پر جرم ہے مگر سریے بھی اسی طرح چوری ہو رہے ہیں جس طرح موبائل چھین کر فروخت باآسانی ہو جاتے ہیں",
-      "image_url": "",
-      "published": "2026-11-17T15:53:59+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "اناج",
-      "link": "https://www.express.pk/story/2844780/anaaj-2844780",
-      "summary": "اقوام متحدہ نے باقاعدہ طور پر سال 2023 کو ’’موٹے اناجوں کا عالمی سال‘‘ قرار دیا۔",
-      "image_url": "",
-      "published": "2026-11-17T15:48:22+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "How the attack on Putin's prized Crimean Bridge unfolded",
-      "link": "https://www.bbc.co.uk/news/articles/crz9dgz28zwdo?at_medium=RSS&at_campaign=rss",
-      "summary": "One of the key symbols of Russia's occupation of Ukraine has suffered major damage after a seven-stage attack by Kyiv.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/82dd/live/f7995500-e29d-11f1-99a1-253766e7ad8b.jpg",
-      "published": "2026-11-17T15:38:10+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "ای سی او اعلامیہ، مسلم دنیا کا مشترکہ مستقبل",
-      "link": "https://www.express.pk/story/2844779/eco-eilamiya-muslim-duniya-ka-mushtarka-mustaqbil-2844779",
-      "summary": "ایران اور امریکا کے مابین اختلافات کی نوعیت پیچیدہ ہے",
-      "image_url": "",
-      "published": "2026-11-17T15:37:30+00:00",
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
