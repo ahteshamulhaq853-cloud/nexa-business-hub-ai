@@ -1,6 +1,176 @@
 {
-  "updated": "2026-11-17T18:30:24.814449+00:00",
+  "updated": "2026-11-17T19:39:26.130186+00:00",
   "items": [
+    {
+      "title": "Russian military plane crashes killing all 19 on board",
+      "link": "https://www.bbc.co.uk/news/articles/cw8085rykkmgo?at_medium=RSS&at_campaign=rss",
+      "summary": "Russia's defence ministry says a technical malfunction was the likely cause of the crash in the Kemerovo region.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1a2d/live/537ff930-6139-11ee-b101-6f93d6dfbcc2.png",
+      "published": "2026-11-17T19:33:55+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Church of England should protect 'every belief', King says",
+      "link": "https://www.bbc.co.uk/news/articles/cwy80x44vxk7o?at_medium=RSS&at_campaign=rss",
+      "summary": "King Charles III was speaking at the opening of General Synod, the Church of England's national assembly",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/54d5/live/44d27670-e2a9-11f1-8226-87dfa5049e9a.jpg",
+      "published": "2026-11-17T19:29:44+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Pakistan seeks stronger partnership with Bangladesh: Jam Kamal",
+      "link": "https://arynews.tv/pakistan-seeks-stronger-partnership-with-bangladesh-jam-kamal",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/09/FotoJet-15-2.jpg",
+      "published": "2026-11-17T19:25:29+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Former Nvidia CEO to appear before Congress in December",
+      "link": "https://arynews.tv/former-nvidia-ceo-to-appear-before-congress-in-december",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Founder.jpg",
+      "published": "2026-11-17T19:13:26+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Former KP minister Jhagra among 3 PTI leaders taken into custody despite bail from PHC",
+      "link": "https://www.dawn.com/news/2045217/former-kp-minister-jhagra-among-3-pti-leaders-taken-into-custody-despite-bail-from-phc",
+      "summary": "PESHAWAR: Former Khyber Pakhtunkhwa ministers Taimoor Saleem Jhagra and Kamran Bangash were among three PTI leaders taken into “preventative” custody by police shortly after they were granted interim bail by the high court. Jhagra, Bangash and PTI’s Peshawar president Irfan Saleem had been granted bail until Nov 17 (today) by an anti-terrorism court (ATC) in",
+      "image_url": "https://i.dawn.com/large/2026/11/1800043799e2635.webp",
+      "published": "2026-11-17T19:09:19+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "American soldier arrested by UK police on suspicion of spying taken into US military custody",
+      "link": "https://www.bbc.co.uk/news/articles/c6x284ez38vdo?at_medium=RSS&at_campaign=rss",
+      "summary": "The Metropolitan Police say he has been taken into custody by the US Military over suspected national security and espionage allegations.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/26d1/live/31a610b0-e2b9-11f1-bee0-ef418afc697f.jpg",
+      "published": "2026-11-17T19:08:25+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "GM plans 20 percent boost in robotics as factory costs rise",
+      "link": "https://arynews.tv/gm-plans-20-percent-boost-in-robotics-as-factory-costs-rise",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Genral-motors.jpg",
+      "published": "2026-11-17T19:05:46+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Over 170 major websites hit by attack, including BBC, Ikea and Air France: report",
+      "link": "https://www.dawn.com/news/2045214/over-170-major-websites-hit-by-attack-including-bbc-ikea-and-air-france-report",
+      "summary": "Nearly 200 major websites, including those of the BBC , HSBC UAE bank, Air France and Ikea were targeted by a malicious cyber attack seeking to steal financial information and infect Apple devices, specialist media reported on Tuesday. Hackers injected corrupted JavaScript code into tools hosted by Optimizely, a digital platform used by major companies to cu",
+      "image_url": "https://i.dawn.com/large/2020/08/5f34ae543a7bf.jpg",
+      "published": "2026-11-17T19:00:17+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Kuwait power cut alert: Full schedule and affected blocks for Wednesday maintenance",
+      "link": "https://arynews.tv/kuwait-power-cut-alert-full-schedule-and-affected-blocks-for-wednesday-maintenance",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Kuwait-Power-outage.jpg",
+      "published": "2026-11-17T18:55:41+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Makkah Clock Tower secures two Guinness World Records for highest museum and observation deck",
+      "link": "https://arynews.tv/makkah-clock-tower-secures-two-guinness-world-records-for-highest-museum-and-observation-deck",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Makkah-Clock-Tower.jpg",
+      "published": "2026-11-17T18:48:40+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Mir Raza case: JIT chief meets family as investigation progresses",
+      "link": "https://arynews.tv/mir-raza-case-jit-chief-meets-family-as-investigation-progresses",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/08/Mir-Raza-Ali-9.jpg",
+      "published": "2026-11-17T18:46:34+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "British Airways plane veers off Heathrow taxiway",
+      "link": "https://www.bbc.co.uk/news/articles/cqx2wnwzmd8mo?at_medium=RSS&at_campaign=rss",
+      "summary": "The Boeing 787 Dreamliner bound for Lagos is delayed after its front wheel becomes stuck in grass.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d30e/live/19104290-e2b5-11f1-bee0-ef418afc697f.jpg",
+      "published": "2026-11-17T18:43:13+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Government backs welfare shake-up to prevent 'lost generation'",
+      "link": "https://www.bbc.co.uk/news/articles/ck79210y125xo?at_medium=RSS&at_campaign=rss",
+      "summary": "Ex-minister Alan Milburn has set out plans to divert spending from benefits towards job support.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cf5e/live/7e3d3ce0-e2b0-11f1-8226-87dfa5049e9a.jpg",
+      "published": "2026-11-17T18:43:05+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Construction of Long-Awaited connecting roads of Layyah–Taunsa bridge begins",
+      "link": "https://arynews.tv/construction-of-long-awaited-connecting-roads-of-layyah-taunsa-bridge-begins",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Layyah.jpg",
+      "published": "2026-11-17T18:42:06+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "CM Punjab approves ‘Apna Gaon Programme’ through cooperative societies",
+      "link": "https://arynews.tv/cm-punjab-approves-apna-gaon-programme-through-cooperative-societies",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/FotoJet-36.jpg",
+      "published": "2026-11-17T18:39:39+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Tarar says referendum 'legal and constitutional' method of gauging public opinion on new provinces",
+      "link": "https://www.dawn.com/news/2045201/tarar-says-referendum-legal-and-constitutional-method-of-gauging-public-opinion-on-new-provinces",
+      "summary": "Information Minister Attaullah Tarar said on Tuesday that a referendum was a legal and constitutional method of gauging public opinion on new provinces, adding that no political party should have reservations regarding it. He made the comments in televised remarks following a hard-hitting speech by PPP Chairman Bilawal Bhutto-Zardari. The minister said that ",
+      "image_url": "https://i.dawn.com/large/2026/11/17201431388a2da.webp",
+      "published": "2026-11-17T18:38:32+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "8 Pakistan Bar Council members call on judiciary to take note of Imran's plea for medical treatment",
+      "link": "https://www.dawn.com/news/2045191/8-pakistan-bar-council-members-call-on-judiciary-to-take-note-of-imrans-plea-for-medical-treatment",
+      "summary": "ISLAMABAD: Eight members of the Pakistan Bar Council (PBC) on Tuesday called upon the judiciary to ensure implementation of the Supreme Court’s (SC) order directing incarcerated ex-premier Imran Khan’s transfer to Shifa International Hospital for medical treatment. On Aug 18 , a three-member SC bench had directed the government to shift Imran to SIH within t",
+      "image_url": "https://i.dawn.com/large/2026/11/171834353317941.webp",
+      "published": "2026-11-17T18:33:10+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
     {
       "title": "UK sanctions firms over Israeli West Bank settlements",
       "link": "https://www.bbc.co.uk/news/articles/cvglr977x3z0o?at_medium=RSS&at_campaign=rss",
@@ -22,7 +192,7 @@
       "language": "en"
     },
     {
-      "title": "Jensen Huang pushes Nvidia comeback after board rejects pressure to reinstate ex-boss",
+      "title": "Jensen Huang says he would be 'honoured' to return as Nvidia CEO if board asked him",
       "link": "https://www.bbc.co.uk/news/articles/cwx2en2vrxmdo?at_medium=RSS&at_campaign=rss",
       "summary": "Huang says he has had an \"outpouring\" of calls from investors and others calling for him to return.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/40ef/live/51fc1a30-e2aa-11f1-99a1-253766e7ad8b.jpg",
@@ -42,14 +212,24 @@
       "language": "en"
     },
     {
-      "title": "Ex-Reform Wales leader Dan Thomas faces no further police action after assault arrest",
-      "link": "https://www.bbc.co.uk/news/articles/cq98xl8jgp0go?at_medium=RSS&at_campaign=rss",
-      "summary": "Gwent Police says Reform MS faces no further action for arrest that led to him standing down as leader.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dba7/live/8b3a5ac0-e2a3-11f1-a094-5fdc692f3e33.jpg",
-      "published": "2026-11-17T18:13:27+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
+      "title": "بلاول بھٹو 18 سالہ حکمرانی کی کارکردگی کا جواب دیں: وسیم اختر",
+      "link": "https://jang.com.pk/news/1634365",
+      "summary": "رہنما ایم کیو ایم وسیم اختر۔فوٹو: فائلمتحدہ قومی موومنٹ کے رہنما اور سابق میئر کراچی وسیم اختر نے کہا ہے کہ بلاول بھٹو زرداری 18 سال...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634365_114340_updates.jpg\"/",
+      "published": "2026-11-17T18:11:56+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "بلاول بھٹو کی باتوں کا جواب عطا تارڑ نہیں وزیراعظم دیں، شرجیل میمن",
+      "link": "https://jang.com.pk/news/1634363",
+      "summary": "سینئر وزیر سندھ شرجیل میمن نے کہا ہے کہ بلاول بھٹو کی باتوں کا جواب عطا تارڑ کے بجائے وزیرعظم شہباز شریف دیں۔جیو نیوز کے پروگرام آج...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634363_111608_updates.jpg\"/",
+      "published": "2026-11-17T18:11:47+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "بھارتی اداکار سلمان خان کا اپنی پروڈیکشن ہاﺅس عملے کے لیے قیمتی گھڑیوں کا تحفہ ... ٹیم کو فلم کی تشہیری منصوبہ بندی کا کہہ کربلایا گیا ‘بالی ووڈ سپر اسٹار ٹیم کو لگژری ... مزید",
@@ -69,6 +249,16 @@
       "published": "2026-11-17T17:59:00+00:00",
       "source": "ARY News",
       "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Hunger Games prequel splits opinion: 'Surreally awful' or 'surprisingly strong'",
+      "link": "https://www.bbc.co.uk/news/articles/c9vg2xgn0xe5o?at_medium=RSS&at_campaign=rss",
+      "summary": "Sunrise on the Reaping, the franchise's sixth film, is both criticised and praised by film critics.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/22ee/live/daa8b410-e2a0-11f1-8dda-8925a81c3da5.jpg",
+      "published": "2026-11-17T17:57:56+00:00",
+      "source": "BBC News",
+      "category": "World",
       "language": "en"
     },
     {
@@ -145,7 +335,7 @@
       "title": "'Can I really do this?': Neets speak to BBC about struggling to get a job",
       "link": "https://www.bbc.co.uk/news/videos/cm0l3z8gn67eo?at_medium=RSS&at_campaign=rss",
       "summary": "A government-backed review has proposed wide-ranging measures to help get young people into work - but what do young people think?",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a527/live/9e04d950-e2b2-11f1-99a1-253766e7ad8b.jpg",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0f50/live/c11d31f0-e2b5-11f1-a094-5fdc692f3e33.jpg",
       "published": "2026-11-17T17:35:22+00:00",
       "source": "BBC News",
       "category": "World",
@@ -242,6 +432,26 @@
       "language": "ur"
     },
     {
+      "title": "اگر آپ دو خاندانوں کو دباؤ میں لا کر کوئی منصوبہ بندی کریں گے تو یہ بد دیانتی ہے: جاوید لطیف",
+      "link": "https://jang.com.pk/news/1634364",
+      "summary": "فوٹو: فائلپاکستان مسلم لیگ کے رہنما جاوید لطیف نے کہا ہے کہ اگر آپ دو خاندانوں کو دباؤ میں لا کر کوئی منصوبہ بندی کریں گے تو یہ بد...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634364_110344_updates.jpg\"/",
+      "published": "2026-11-17T17:11:35+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کرپشن پورے ملک میں ہو رہی ہے، شافع حسین",
+      "link": "https://jang.com.pk/news/1634360",
+      "summary": "پنجاب کے وزیر شافع حسین نے کہا ہے کرپشن پورے ملک میں ہورہی ہے، نگراں حکومت سے پہلے جتنی کرپشن ہوئی پہلے کبھی نہیں ہوئی۔ایک بیان میں...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634360_104039_updates.jpg\"/",
+      "published": "2026-11-17T17:11:31+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "پاکستان اور سعودی کمپنی میں گیس پائپ لائن کے 30 ارب ڈالر کے ایم او یو پر دستخط",
       "link": "https://jang.com.pk/news/1634338",
       "summary": "تصویر سوشل میڈیا۔پاکستان اور سعودی عرب کی کمپنی کے درمیان گیس پائپ لائن کے 30 ارب ڈالر تک کے ایم او یو پر دستخط ہوگئے۔ دستخط کی تقریب...",
@@ -252,9 +462,29 @@
       "language": "ur"
     },
     {
+      "title": "ایئر چیف سے ترک فضائیہ کے کمانڈر کی ملاقات، پاک فضائیہ کے آپریشنل تجربے سے استفادہ میں اظہار دلچسپی",
+      "link": "https://jang.com.pk/news/1634357",
+      "summary": "تصویر سوشل میڈیا۔پاک فضائیہ کے سربراہ ایئر چیف مارشل ظہیر احمد بابر سدھو سے ترک فضائیہ کے کمانڈر جنرل رافت دالکیران کی سربراہی میں...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634357_103523_updates.jpg\"/",
+      "published": "2026-11-17T17:11:18+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "پاکستان ، ترکمانستان نے 2030 تعاون پروگرام پر دستخط کردیے",
+      "link": "https://jang.com.pk/news/1634362",
+      "summary": "پاکستان اور ترکمانستان نے 2030ء تک تعاون کے پروگرام پر دستخط کردیے۔پاکستان کے وزیر خارجہ سینیٹر اسحاق ڈار اور ترکمان وزیر خارجہ...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634362_104730_updates.jpg\"/",
+      "published": "2026-11-17T17:11:13+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "بانی پی ٹی آئی سے وکلا کی اڈیالہ جیل میں ملاقات کی اندرونی کہانی سامنے آ گئی",
       "link": "https://jang.com.pk/news/1634337",
-      "summary": "بانی پاکستان تحریک انصاف سے وکلاء کی اڈیالہ جیل میں ملاقات کی اندرونی کہانی سامنے آ گئی۔حکومتی ذرائع کے مطابق بانی پی ٹی آئی نے ...",
+      "summary": "بانی پاکستان تحریک انصاف سے وکلاء کی اڈیالہ جیل میں ملاقات کی اندرونی کہانی سامنے آ گئی۔حکومتی ذرائع کے مطابق بانی پی ٹی آئی...",
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634337_100828_updates.jpg\"/",
       "published": "2026-11-17T17:11:09+00:00",
       "source": "Jang",
@@ -330,16 +560,6 @@
       "source": "UrduPoint",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "British Airways plane veers off Heathrow taxiway",
-      "link": "https://www.bbc.co.uk/news/articles/cqx2wnwzmd8mo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Boeing 787 Dreamliner bound for Lagos is delayed after its front wheel becomes stuck in grass.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9fbe/live/836c9330-e2a8-11f1-8226-87dfa5049e9a.png",
-      "published": "2026-11-17T17:04:48+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
     },
     {
       "title": "پاکستان میں تعلیمی ایمرجنسی نافذ کرنے اور ہنگامی بنیادوں پر سرمایہ کاری کی ضرورت ہے،ملک محمد احمد خان",
@@ -422,16 +642,6 @@
       "language": "en"
     },
     {
-      "title": "Tarar says referendum 'legal and constitutional' method of gauging public opinion on new provinces",
-      "link": "https://www.dawn.com/news/2045201/tarar-says-referendum-legal-and-constitutional-method-of-gauging-public-opinion-on-new-provinces",
-      "summary": "Information Minister Attaullah Tarar said on Tuesday that a referendum was a legal and constitutional method of gauging public opinion on new provinces, adding that no political party should have reservations regarding it. He made the comments in televised remarks following a hard-hitting speech by PPP Chairman Bilawal Bhutto-Zardari. The minister said that ",
-      "image_url": "https://i.dawn.com/large/2026/11/17201431388a2da.webp",
-      "published": "2026-11-17T16:46:32+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
       "title": "پاکستان کو ملنے والا ریڈ کارڈ جس کے بعد انڈیا نے سیف چیمپیئن شپ کا فائنل جیت لیا",
       "link": "https://www.bbc.com/urdu/articles/c6m2lemydp3zo?at_medium=RSS&at_campaign=rss",
       "summary": "ڈھاکہ کے نیشنل سٹیڈیم میں کھیلے گئے سیف چیمپیئن شپ کے فائنل میں انڈیا نے پاکستان کو ایک کے مقابلے میں دو گول سے شکست دے کر ٹائٹل اپنے نام کر لیا ہے۔",
@@ -440,16 +650,6 @@
       "source": "BBC Urdu",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "Brad Pitt and Florence Pugh pitch for James Bond villain role",
-      "link": "https://www.bbc.co.uk/news/articles/cq4gnpgl0zkxo?at_medium=RSS&at_campaign=rss",
-      "summary": "The two A-list stars throw their hats into the ring to be the villain facing Robert Pattinson's 007.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/cca1/live/480e0780-e2ab-11f1-a094-5fdc692f3e33.png",
-      "published": "2026-11-17T16:42:49+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
     },
     {
       "title": "Rs24bn additional QTA proposed by Discos draws protest from industrial consumers",
@@ -572,9 +772,9 @@
       "language": "en"
     },
     {
-      "title": "27ویں ترمیم کی جبری اکثریت سے منظوری کے بیان پر بلاول کی نااہلی کا خطرہ پیدا ہوگیا، رانا ثناء",
+      "title": "بلاول 27ویں ترمیم کے تحت بنے جوڈیشل کمیشن کے بینیفشری ہیں، رانا ثناء",
       "link": "https://jang.com.pk/news/1634330",
-      "summary": "وزیراعظم کے مشیر برائے سیاسی امور رانا ثناء اللّٰہ نے کہا ہے کہ بلاول بھٹو کے اس بیان پر کہ 27ویں ترمیم جبری اکثریت سے منظور کی گئی، ان...",
+      "summary": "وزیراعظم کے مشیر برائے سیاسی امور رانا ثناء اللّٰہ نے کہا ہے کہ اگر ایک پارٹی کا لیڈر یہ کہے کہ میں نے دباؤ میں آکر آئینی ترمیم...",
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634330_093815_updates.jpg\"/",
       "published": "2026-11-17T16:11:19+00:00",
       "source": "Jang",
@@ -684,7 +884,7 @@
     {
       "title": "آئین بحالی اور پارلیمان کی مضبوط کیلئے بیٹھنے کو تیار ہیں، راجا ناصر عباس",
       "link": "https://jang.com.pk/news/1634319",
-      "summary": "سینیٹ میں اپوزیشن لیڈر سینیٹر علامہ راجا ناصر عباس نے آئین کی بحالی اور پارلیمان کی مضبوط کےلیے بیٹھنے پر آمادگی ظاہر کردی۔جیو...",
+      "summary": "سینیٹ میں اپوزیشن لیڈر سینیٹر علامہ راجا ناصر عباس نے آئین کی بحالی اور پارلیمان کی مضبوط کےلیے بیٹھنے پر آمادگی ظاہر...",
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634319_080848_updates.jpg\"/",
       "published": "2026-11-17T15:11:31+00:00",
       "source": "Jang",
@@ -694,7 +894,7 @@
     {
       "title": "بلاول کا بیان حقیقت پسندانہ، قدر کی نگاہ سے دیکھتے ہیں، ترجمان جے یو آئی",
       "link": "https://jang.com.pk/news/1634328",
-      "summary": "جمعیت علماء اسلام کے ترجمان اسلم غوری نے کہا ہے کہ بلاول بھٹو زرداری کا بیان حقیقت پسندانہ ہے، جسے قدر کی نگاہ سے دیکھتے ہیں۔ایک بیان...",
+      "summary": "جمعیت علماء اسلام کے ترجمان اسلم غوری نے کہا ہے کہ بلاول بھٹو زرداری کا بیان حقیقت پسندانہ ہے، جسے قدر کی نگاہ سے دیکھتے...",
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634328_090000_updates.jpg\"/",
       "published": "2026-11-17T15:11:20+00:00",
       "source": "Jang",
@@ -704,7 +904,7 @@
     {
       "title": "نئے صوبے کے آئینی تقاضے پر آگ بگولا ہونا سمجھ سے بالاتر ہے، ایم کیو ایم",
       "link": "https://jang.com.pk/news/1634323",
-      "summary": "متحدہ قومی موومنٹ ترجمان نے کہا ہے کہ نئے صوبوں کا قیام آئینی تقاضا ہے اس پر گفتگو کرنے پر آگ بگولا ہونا سمجھ سے بالاتر ہے۔کراچی سے...",
+      "summary": "متحدہ قومی موومنٹ ترجمان نے کہا ہے کہ نئے صوبوں کا قیام آئینی تقاضا ہے اس پر گفتگو کرنے پر آگ بگولا ہونا سمجھ سے بالاتر...",
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634323_083627_updates.jpg\"/",
       "published": "2026-11-17T15:11:10+00:00",
       "source": "Jang",
@@ -732,32 +932,12 @@
       "language": "en"
     },
     {
-      "title": "Speed camera fault may have allowed drivers to escape fines",
-      "link": "https://www.bbc.co.uk/news/articles/c5y4j7z373kzo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Home Office has revoked approval that allowed footage from speed cameras to be used in evidence.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a189/live/29535f50-e28a-11f1-b166-176de21e2352.jpg",
-      "published": "2026-11-17T15:08:48+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "CDA develops new multi-facility park in Islamabad",
       "link": "https://arynews.tv/cda-develops-new-multi-facility-park-in-islamabad",
       "summary": "",
       "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/FotoJet-34.jpg",
       "published": "2026-11-17T15:04:20+00:00",
       "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "8 Pakistan Bar Council members call on judiciary to take note of Imran's plea for medical treatment",
-      "link": "https://www.dawn.com/news/2045191/8-pakistan-bar-council-members-call-on-judiciary-to-take-note-of-imrans-plea-for-medical-treatment",
-      "summary": "ISLAMABAD: Eight members of the Pakistan Bar Council (PBC) on Tuesday called upon the judiciary to ensure implementation of the Supreme Court’s (SC) order directing incarcerated ex-premier Imran Khan’s transfer to Shifa International Hospital for medical treatment. On Aug 18 , a three-member SC bench had directed the government to shift Imran to SIH within t",
-      "image_url": "https://i.dawn.com/large/2026/11/171834353317941.webp",
-      "published": "2026-11-17T14:59:21+00:00",
-      "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
     },
@@ -812,194 +992,14 @@
       "language": "en"
     },
     {
-      "title": "Tarar slams Bilawal over ‘Bloodshed’ warning on new provinces debate",
-      "link": "https://arynews.tv/tarar-slams-bilawal-over-bloodshed-warning-on-new-provinces-debate",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/09/Tarar.jpg",
-      "published": "2026-11-17T14:27:35+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Local govt polls in Punjab to be held in two phases",
-      "link": "https://www.dawn.com/news/2045194/local-govt-polls-in-punjab-to-be-held-in-two-phases",
-      "summary": "ISLAMABAD: Local government polls in Punjab, which are scheduled for February 2027, will be held in two phases, it emerged on Tuesday. In a letter to the Punjab chief secretary, the Election Commission of Pakistan (ECP) said it had accepted the proposal conveyed by the province’s Local Government and Community Development Department secretary, in his letter ",
-      "image_url": "https://i.dawn.com/large/2021/09/6136d68eeca81.png",
-      "published": "2026-11-17T14:20:26+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Vehicles without fitness, emission tests to be barred from Islamabad to curb smog",
-      "link": "https://www.dawn.com/news/2045192/vehicles-without-fitness-emission-tests-to-be-barred-from-islamabad-to-curb-smog",
-      "summary": "ISLAMABAD: The government on Tuesday decided to bar vehicles without fitness and emission testing from entering Islamabad, as part of measures to curb smog and air pollution in the capital. The decision was taken at a meeting chaired by Minister of State for Interior Tallal Chaudhry to review steps for smog prevention and reduction of air pollution. The meet",
-      "image_url": "https://i.dawn.com/large/2024/11/171409504dc61eb.jpg",
-      "published": "2026-11-17T14:12:25+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "کاروبار بڑھانے، معاشی ترقی کیلئے بندرگاہوں کا انتہائی اہم کردار ہے، وزیراعظم شہباز شریف",
-      "link": "https://jang.com.pk/news/1634315",
-      "summary": "تصویر سوشل میڈیا۔وزیراعظم شہباز شریف نے کہا ہے کہ کاروبار بڑھانے اور معاشی ترقی کے لیے ہماری بندرگاہوں کا انتہائی اہم کردار ہے،...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634315_074036_updates.jpg\"/",
-      "published": "2026-11-17T14:11:09+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "الیکشن کمیشن نے پنجاب میں 2 مراحل میں بلدیاتی الیکشن کی تجویز قبول کرلی",
-      "link": "https://jang.com.pk/news/1634317",
-      "summary": "الیکشن کمیشن آف پاکستان نے صوبہ پنجاب میں 2 مراحل میں بلدیاتی انتخابات کرانے کی تجویز قبول کرلی۔ایڈیشنل ڈائریکٹر جنرل لوکل...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634317_075206_updates.jpg\"/",
-      "published": "2026-11-17T14:11:07+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Rooney says he considered taking his own life at Man Utd",
-      "link": "https://www.bbc.co.uk/sport/football/articles/cx1l0n3v003eo?at_medium=RSS&at_campaign=rss",
-      "summary": "Wayne Rooney says he considered taking his own life during his playing days at Manchester United and was \"speaking to a therapist to try and figure out what was up\".",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8374/live/62be97f0-e2b2-11f1-99b6-a35a62fa4264.jpg",
-      "published": "2026-11-17T14:09:19+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Channel 4 admits it doesn't know number of Married At First Sight UK sex abuse complaints",
-      "link": "https://www.bbc.co.uk/news/articles/cqvg2xvdpy2ro?at_medium=RSS&at_campaign=rss",
-      "summary": "C4's chief executive is questioned by MPs after a string of allegations were made about the show.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0a4e/live/c621a3a0-5603-11f1-ad45-8ffb2d2085e2.jpg",
-      "published": "2026-11-17T13:43:49+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "No casualties reported as huge blaze engulfs industrial unit in Karachi's Baldia Town",
-      "link": "https://www.dawn.com/news/2045174/no-casualties-reported-as-huge-blaze-engulfs-industrial-unit-in-karachis-baldia-town",
-      "summary": "KARACHI: A massive fire broke out at an industrial unit in Karachi’s Baldia Town on Tuesday morning, reportedly during the refilling of an underground oil tank by a tanker, rescue officials said. The fire that erupted in the morning was controlled in the afternoon by over a dozen fire tenders after hectic efforts, lasting for several hours; however, no casua",
-      "image_url": "https://i.dawn.com/large/2026/11/17152749570cbca.webp",
-      "published": "2026-11-17T13:41:29+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "ECP decides to hold Punjab local government elections in two phases",
-      "link": "https://arynews.tv/ecp-decides-to-hold-punjab-local-government-elections-in-two-phases",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/07/AJK-election-2026-CEC-phase-wise.jpg",
-      "published": "2026-11-17T13:32:33+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "UK sanctions Israeli firms helping build West Bank settlements",
-      "link": "https://www.dawn.com/news/2045188/uk-sanctions-israeli-firms-helping-build-west-bank-settlements",
-      "summary": "Britain on Tuesday announced a slew of sanctions against eight Israeli companies helping to plan and build West Bank settlements, in a bid to halt new construction. “Do not bid, do not build, and do not profit from the destruction of the two-state solution,” foreign minister Ed Miliband urged Israeli companies. European leaders have already condemned plans t",
-      "image_url": "https://i.dawn.com/large/2026/11/171823486aafb46.webp",
-      "published": "2026-11-17T13:26:46+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "راولپنڈی میں ڈمپر کی ٹکر سے بائیک سوار باپ بیٹی جاں بحق، نواسہ زخمی",
-      "link": "https://www.express.pk/story/2844764/father-and-daughter-on-a-motorcycle-killed-after-being-hit-by-a-dumper-truck-in-rawalpindi-grandson-injured-2844764",
-      "summary": "واقعہ روات کے علاقے کھڑکن کے ڈیرہ گاؤں کے قریب پیش آیا جس میں 49 سالہ جہانزیب خان، 28 سالہ سحرش حسیب جاں بحق ہوئے",
+      "title": "امریکی بینکوں کا نظام بحال؛ کیا صارفین کے اکاؤنٹس سے’سائبر لوٹ مار‘ہوئی؟",
+      "link": "https://www.express.pk/story/2844771/us-major-banks-outage-chase-software-bug-services-restored-2844771",
+      "summary": "ہزاروں صارفین کو اکاؤنٹس تک رسائی، رقم کی منتقلی اور دیگر بینکاری معاملات میں مشکلات کا سامنا کرنا پڑا تھا",
       "image_url": "",
-      "published": "2026-11-17T13:22:59+00:00",
+      "published": "2026-11-17T14:24:33+00:00",
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "Pakistan discusses avenues for enhancing bilateral defence cooperation with UK, Turkiye",
-      "link": "https://www.dawn.com/news/2045178/pakistan-discusses-avenues-for-enhancing-bilateral-defence-cooperation-with-uk-turkiye",
-      "summary": "Chief of Defence Forces (CDF) and Chief of the Army Staff Field Marshal Asim Munir discussed avenues for enhancing defence cooperation with both the United Kingdom and Turkiye, in separate meetings with the British army chief and the Turkish air chief in Rawalpindi, Inter-Services Public Relations (ISPR) said on Tuesday. According to the military’s media win",
-      "image_url": "https://i.dawn.com/large/2026/11/171618332b7f8f7.webp",
-      "published": "2026-11-17T13:16:41+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Why Milburn's Neets reforms will only save £200m a year by 2036",
-      "link": "https://www.bbc.co.uk/news/articles/c6205wlz8vn0o?at_medium=RSS&at_campaign=rss",
-      "summary": "Milburn's plan to help young people promises to save money from the UK's welfare bill. BBC Verify has taken a look at the numbers.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d54c/live/80759b20-e278-11f1-a094-5fdc692f3e33.jpg",
-      "published": "2026-11-17T13:15:59+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Batman to James Bond: The clues about what to expect from Robert Pattinson's 007",
-      "link": "https://www.bbc.co.uk/news/articles/c8x2r6gyy2pzo?at_medium=RSS&at_campaign=rss",
-      "summary": "What can Robert Pattinson's past movie roles tell us about what he might be like as James Bond?",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/457e/live/091e9740-e28a-11f1-99b6-a35a62fa4264.png",
-      "published": "2026-11-17T13:15:38+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "حکومت میں مزے لینا اور اپوزیشن کرنا کھلا تضاد ہے، عطا تارڑ کی بلاول پر تنقید",
-      "link": "https://jang.com.pk/news/1634312",
-      "summary": "وفاقی وزیر اطلاعات و نشریات عطا تارڑ نے کہا ہے کہ بیک وقت حکومت میں مزے لینا اور اپوزیشن کرنا کھلا تضاد ہے۔اسلام آباد سے جاری بیان...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634312_065130_updates.jpg\"/",
-      "published": "2026-11-17T13:11:58+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پیپلز پارٹی کہتی کچھ، عملاً کرتی کچھ اور ہے، ترجمان اپوزیشن اتحاد",
-      "link": "https://jang.com.pk/news/1634311",
-      "summary": "اپوزیشن اتحاد کے ترجمان اخونزادہ حسین یوسفزئی نے کہا ہے کہ بلاول بھٹو زرداری نے قیدیوں اور اکائیوں پر جو بات کی ہے اپوزیشن بھی...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634311_064212_updates.jpg\"/",
-      "published": "2026-11-17T13:11:27+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پشاور: ریڈیو پاکستان حملہ کیس، ضمانت خارج ہونے پر تیمور جھگڑا، کامران بنگش اور عرفان سلیم زیرحراست",
-      "link": "https://jang.com.pk/news/1634310",
-      "summary": "فائل فوٹو۔پولیس نے پاکستان تحریک انصاف کے رہنما تیمور سلیم جھگڑا، کامران بنگش اور عرفان سلیم کو حراست میں لے لیا۔ پشاور سے پولیس کے...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634310_064514_updates.jpg\"/",
-      "published": "2026-11-17T13:11:14+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بانی پی ٹی آئی خط میں این آر او نہیں صرف اپنا حق مانگ رہے ہیں: بیرسٹر گوہر",
-      "link": "https://jang.com.pk/news/1634307",
-      "summary": "بانی پی ٹی آئی نے کہا میں انصاف مانگتا ہوں، یہ ان کا حق ہے، بیرسٹر گوہر - فوٹو: فائلچیئرمین پاکستان تحریک انصاف بیرسٹر گوہر خان نے کہا...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634307_063549_updates.jpg\"/",
-      "published": "2026-11-17T13:11:01+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Electricity prices likely to rise across Pakistan",
-      "link": "https://arynews.tv/electricity-prices-likely-to-rise-across-pakistan",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/09/NEPRA-1.jpg",
-      "published": "2026-11-17T13:05:56+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
     }
   ]
 }
