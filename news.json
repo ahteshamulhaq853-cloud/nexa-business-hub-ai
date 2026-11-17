@@ -1,6 +1,46 @@
 {
-  "updated": "2026-11-17T02:31:48.422057+00:00",
+  "updated": "2026-11-17T03:25:41.417973+00:00",
   "items": [
+    {
+      "title": "Vance says he will decide 'sometime next year' about 2028 US presidential run",
+      "link": "https://www.bbc.co.uk/news/articles/cwkgr9m41engo?at_medium=RSS&at_campaign=rss",
+      "summary": "The US vice-president tells Fox News that when he makes a decision to run or otherwise, he will \"be all in on whatever that decision is\".",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/aaf2/live/c1118580-e22e-11f1-a930-0d0ddd22a84e.jpg",
+      "published": "2026-11-17T03:07:23+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "بحرین میں 47 شیعہ علما کو عمر قید کی سزا کیوں سنائی گئی؟",
+      "link": "https://www.bbc.com/urdu/articles/cqx2evgrj3r7o?at_medium=RSS&at_campaign=rss",
+      "summary": "47 شیعہ مذہبی رہنماؤں میں شیخ محمد سنقور اور شیخ علی السعدادی بھی شامل ہیں۔ بی آئی آر ڈی کے ڈائریکٹر سید احمد الوداعی نے ان فیصلوں کو ’انتہائی غیر منصفانہ‘ قرار دیتے ہوئے کہا کہ یہ بحرین کی شیعہ برادری کے عقیدے اور شناخت پر حملہ ہیں۔",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/20ff/live/3beb85e0-e22e-11f1-99b6-a35a62fa4264.jpg",
+      "published": "2026-11-17T03:04:11+00:00",
+      "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Trump says Alaska voters chose the wrong Dan Sullivan. What does the data show?",
+      "link": "https://www.bbc.co.uk/news/articles/cxnv4jlr269eo?at_medium=RSS&at_campaign=rss",
+      "summary": "Votes are still being counted in the Alaska Senate race, with Democrat Mary Peltola ahead of Republican incumbent Senator Dan S Sullivan.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8eff/live/0fbc83f0-e11d-11f1-93e1-3b657b665bcf.jpg",
+      "published": "2026-11-17T02:38:08+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Nvidia dismisses 'Bring Jensen Back' campaign as Trump backs effort to reinstate ex CEO",
+      "link": "https://www.bbc.co.uk/news/articles/cry49plv8v3go?at_medium=RSS&at_campaign=rss",
+      "summary": "A number of tech figures have backed an effort asking the AI chip giant to give Jensen Huang his job back.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/78e4/live/4bc24280-e1d2-11f1-b8c8-67fa35f5afdb.jpg",
+      "published": "2026-11-17T02:37:53+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Flour gets costlier as imports stay insufficient",
       "link": "https://www.dawn.com/news/2045051/flour-gets-costlier-as-imports-stay-insufficient",
@@ -22,13 +62,13 @@
       "language": "en"
     },
     {
-      "title": "Nvidia dismisses 'Bring Jensen Back' campaign as Trump backs effort to reinstate ex CEO",
-      "link": "https://www.bbc.co.uk/news/articles/cry49plv8v3go?at_medium=RSS&at_campaign=rss",
-      "summary": "A number of tech figures have backed an effort asking the AI chip giant to give Jensen Huang his job back.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/78e4/live/4bc24280-e1d2-11f1-b8c8-67fa35f5afdb.jpg",
-      "published": "2026-11-17T01:49:26+00:00",
-      "source": "BBC News",
-      "category": "World",
+      "title": "Punjab govt plans anti-rape legislation, speedy courts",
+      "link": "https://www.dawn.com/news/2045071/punjab-govt-plans-anti-rape-legislation-speedy-courts",
+      "summary": "LAHORE: The Punjab government on Monday announced plans to introduce an anti-rape law and set up “fast-track courts” to ensure speedy trials of cases involving violence against women and children, with a clear timeframe for their disposal. The decision was taken at a meeting chaired by Chief Minister Maryam Nawaz to review measures for the protection of wome",
+      "image_url": "https://i.dawn.com/large/2026/11/17074506760f7a6.webp",
+      "published": "2026-11-17T01:53:17+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
       "language": "en"
     },
     {
@@ -39,6 +79,36 @@
       "published": "2026-11-17T01:48:58+00:00",
       "source": "BBC News",
       "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Tensions ease after PPP man prevails in Diamer re-polling",
+      "link": "https://www.dawn.com/news/2045059/tensions-ease-after-ppp-man-prevails-in-diamer-re-polling",
+      "summary": "• Consolidated results finally issued after over 24-hour delay • PPP, IPP supporters blocked KKH in Diamer for 10 hours GILGIT: A controversy over re-polling in Gilgit-Baltistan Assem­bly constituency GBA-16 Diamer-II was finally put to rest on Monday night, after the GB Election Commission declared PPP candidate Attaullah Shah as victorious, with a margin o",
+      "image_url": "https://i.dawn.com/large/2026/11/17081532260ac53.webp",
+      "published": "2026-11-17T01:39:14+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "796 Afghans arrested in first week of November",
+      "link": "https://www.dawn.com/news/2045061/796-afghans-arrested-in-first-week-of-november",
+      "summary": "ISLAMABAD: Law-en­forcement agencies arres­ted 796 Afghan nationals during the first week of November from Balochis­tan, Khyber Pakhtun­kh­­wa, Punjab and Islamabad. According to the latest update released jointly by UNHCR and IOM, the UN Migration Agency, out of all arrests and detentions, Afghan Citizen Card (ACC) holders and undocumented Afghans represent",
+      "image_url": "https://i.dawn.com/large/2024/06/111206195ebb7a9.jpg",
+      "published": "2026-11-17T01:39:14+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Iran refuses to let nuclear inspectors in until war ends",
+      "link": "https://www.dawn.com/news/2045066/iran-refuses-to-let-nuclear-inspectors-in-until-war-ends",
+      "summary": "• Gharibabadi says IAEA request aims to gauge US weapon impact • Oil tanker set ablaze by projectile in Hormuz; IRGC says six tankers have sunk since Sunday • Third US aircraft carrier group arrives in Middle East TEHRAN: Iran will not let UN inspectors visit its damaged nuclear facilities until the Middle East war ends and the United States meets its condit",
+      "image_url": "https://i.dawn.com/large/2026/11/17063836c108663.webp",
+      "published": "2026-11-17T01:38:52+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
       "language": "en"
     },
     {
@@ -132,6 +202,16 @@
       "language": "ur"
     },
     {
+      "title": "China is hosting the world's leaders in its AI wonderland. Here's what they won't see",
+      "link": "https://www.bbc.co.uk/news/articles/cm3eg3v9jkk8o?at_medium=RSS&at_campaign=rss",
+      "summary": "Drive away from Shenzhen's tech-flecked skyline and you will run into the challenges confronting Xi's China.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c637/live/5938bed0-e1b4-11f1-9a3f-99aca912798e.jpg",
+      "published": "2026-11-16T23:07:20+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
       "title": "'Complete system reset' needed to get 440,000 young people into work, says major review",
       "link": "https://www.bbc.co.uk/news/articles/c38xzy980924o?at_medium=RSS&at_campaign=rss",
       "summary": "Alan Milburn's review will call for sweeping reforms to the education, work and welfare systems.",
@@ -170,6 +250,16 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "امریکا شرائط تسلیم کرتا ہے تو دو دن میں آبنائے ہرمز کھول سکتے ہیں، عباس عراقچی",
+      "link": "https://www.express.pk/story/2844629/if-the-us-accepts-the-conditions-we-can-open-the-strait-of-hormuz-within-two-days-says-abbas-araghchi-2844629",
+      "summary": "تہران سفارتی حل کے لیے تیار ہے، ایرانی وزیر خارجہ",
+      "image_url": "",
+      "published": "2026-11-16T21:44:22+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "شدید دھند کے باعث موٹروے ایم 4 پنڈی بھٹیاں سے عبدالحکیم تک بند",
@@ -332,16 +422,6 @@
       "language": "ur"
     },
     {
-      "title": "Lindsay Clancy to face retrial next year for deaths of her three children",
-      "link": "https://www.bbc.co.uk/news/articles/cw5y1v8de35go?at_medium=RSS&at_campaign=rss",
-      "summary": "The 36-year-old's first trial this year fell apart when a 12-person jury failed to reach a verdict.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0f3a/live/c50f43d0-e1dd-11f1-99a1-253766e7ad8b.jpg",
-      "published": "2026-11-16T19:30:30+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "عالمی منڈی میں خام تیل کی قیمتوں میں ساڑھے 3 فیصد تک کمی",
       "link": "https://www.express.pk/story/2844624/crude-oil-prices-in-the-global-market-fell-by-35-percent-2844624",
       "summary": "۔ دونوں اہم بینچ مارک خام تیل کی قیمتوں میں مسلسل دوسرے ہفتے بھی کمی ریکارڈ کی گئی",
@@ -362,9 +442,9 @@
       "language": "ur"
     },
     {
-      "title": "کراچی، ابراہیم حیدری میں فائرنگ سے 28 سالہ نوجوان قتل",
+      "title": "کراچی میں حجام کو تین گولیاں مار کر قتل کردیا گیا، ذاتی رنجش کا شبہ",
       "link": "https://www.express.pk/story/2844623/28-year-old-youth-shot-dead-in-ibrahim-hyderi-karachi-2844623",
-      "summary": "مقتول کی لاش جناح اسپتال منتقل کردی گئی",
+      "summary": "مقتول نے دو سال قبل کورٹ میرج کی تھی",
       "image_url": "",
       "published": "2026-11-16T19:16:58+00:00",
       "source": "Express Urdu",
@@ -439,16 +519,6 @@
       "published": "2026-11-16T18:39:35+00:00",
       "source": "ARY News",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Russell Brand prison message 'appalling' and being investigated, No 10 says",
-      "link": "https://www.bbc.co.uk/news/articles/cm9d7pe8y559o?at_medium=RSS&at_campaign=rss",
-      "summary": "Brand's wife read out comments from the comedian on their podcast in which the convicted rapist said he was \"not guilty of the offences I have been jailed for\".",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/a6a9/live/58ecf9b0-e1bd-11f1-99b6-a35a62fa4264.jpg",
-      "published": "2026-11-16T18:22:22+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     },
     {
@@ -930,76 +1000,6 @@
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "سلمان اکرم راجا کی بات کو کوئی اہمیت نہیں دیتا: لطیف کھوسہ",
-      "link": "https://jang.com.pk/news/1633991",
-      "summary": "پاکستان تحریک انصاف کے رہنما سردار لطیف کھوسہ نے کہا ہے کہ سلمان اکرم راجا کی بات کو کوئی اہمیت نہیں دیتا۔وفاقی آئینی عدالت کے باہر...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-16/b_1633991_084712_updates.jpg\"/",
-      "published": "2026-11-16T15:11:30+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ن لیگی رکن پنجاب اسمبلی نعیم اعجاز اور بھائی کے وارنٹ گرفتاری جاری",
-      "link": "https://jang.com.pk/news/1633989",
-      "summary": "فوٹو: فائلپاکستان مسلم لیگ کے رکن پنجاب اسمبلی نعیم اعجاز اور ان کے بھائی کے وارنٹ گرفتاری جاری کردیے گئے۔ عدالت نے ملزمان کو گرفتار...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-16/b_1633989_081401_updates.jpg\"/",
-      "published": "2026-11-16T15:11:23+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Street cricket with a legend then metro ride as William and Kate begin India visit",
-      "link": "https://www.bbc.co.uk/news/videos/crkgvnl51w1vo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Prince and Princess of Wales are visiting Mumbai for the Earthshot Prize this week, but started their trip with some fun outings.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/890e/live/2da1ec70-e1db-11f1-a094-5fdc692f3e33.jpg",
-      "published": "2026-11-16T15:08:59+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "From Batman to Bond - how Robert Pattinson landed the role of 007",
-      "link": "https://www.bbc.co.uk/news/articles/c574290jvk8wo?at_medium=RSS&at_campaign=rss",
-      "summary": "The Twilight, Batman and Odyssey star's profile will go even more stellar when he plays James Bond.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5f95/live/31a7c6d0-e1e7-11f1-9f14-b33806cfd783.jpg",
-      "published": "2026-11-16T15:02:41+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "PM approves district-level SME facilitation centres to boost exports",
-      "link": "https://arynews.tv/pm-approves-district-level-sme-facilitation-centres-to-boost-exports",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/FotoJet-24.jpg",
-      "published": "2026-11-16T15:02:19+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "لاہور ریلوے اسٹیشن کی 1860 سے 1902 تک کی تاریخی جھلکیاں دوبارہ زندہ کرنے کا فیصلہ",
-      "link": "https://www.express.pk/story/2844609/decision-taken-to-revive-historical-glimpses-of-lahore-railway-station-from-1860-to-1902-2844609",
-      "summary": "آرکیالوجی ڈیپارٹمنٹ کی مدد سے اس کی اصلی حالت میں لانے کا کام پلیٹ فارم نمبر پانچ سے شروع کر دیا گیا",
-      "image_url": "",
-      "published": "2026-11-16T15:00:40+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Landmark Crimea bridge hit as Russia reports biggest Ukrainian drone attack of war",
-      "link": "https://www.bbc.co.uk/news/articles/ckx27v6dpjz0o?at_medium=RSS&at_campaign=rss",
-      "summary": "Russia said Ukraine had launched over 2,000 drones over the course of a day, while Kyiv came under a record 17 air raid alerts.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f174/live/bc6fa8f0-e1c4-11f1-a094-5fdc692f3e33.jpg",
-      "published": "2026-11-16T14:58:12+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
     }
   ]
 }
