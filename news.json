@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-17T23:18:09.640355+00:00",
+  "updated": "2026-11-18T00:05:36.054799+00:00",
   "items": [
     {
-      "title": "Nvidia reports bumper results as firm says it not reinstating Huang",
+      "title": "Nvidia reports bumper results as firm says it's not reinstating Huang",
       "link": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss",
       "summary": "Nvidia reported strong quarterly earnings on Tuesday amid the dramatic exit of ex-CEO Jensen Huang.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2e48/live/58880030-e2d7-11f1-99a1-253766e7ad8b.jpg",
@@ -25,7 +25,7 @@
       "title": "American soldier arrested by UK police on suspicion of spying taken into US military custody",
       "link": "https://www.bbc.co.uk/news/articles/c6x284ez38vdo?at_medium=RSS&at_campaign=rss",
       "summary": "The Metropolitan Police say he has been taken into custody by the US Military over suspected national security and espionage allegations.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/26d1/live/31a610b0-e2b9-11f1-bee0-ef418afc697f.jpg",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/42be/live/81981920-e2db-11f1-950d-ffe0c8f51f90.png",
       "published": "2026-11-17T22:46:30+00:00",
       "source": "BBC News",
       "category": "World",
@@ -350,6 +350,16 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "امریکا میں فضائی نظام کی خرابی سائبر حملہ نہیں تھا، ڈائریکٹر نیشنل انٹیلی جنس",
+      "link": "https://www.express.pk/story/2844790/us-airspace-failure-was-not-a-cyber-attack-says-director-of-national-intelligence-2844790",
+      "summary": "ایئر ٹریفک کنٹرول سسٹم میں خرابی کی اصل وجہ تاحال معلوم نہیں ہوسکی، امریکی وزیر ٹرانسپورٹ",
+      "image_url": "",
+      "published": "2026-11-17T18:13:08+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "بلاول بھٹو 18 سالہ حکمرانی کی کارکردگی کا جواب دیں: وسیم اختر",
@@ -987,16 +997,6 @@
       "summary": "یہ کہنا درست نہیں کہ مصنوعی ذہانت تمام انسانوں کو بے روزگار کر دے گی",
       "image_url": "",
       "published": "2026-11-17T16:03:04+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کراچی مسائل کی آماجگاہ",
-      "link": "https://www.express.pk/story/2844782/karachi-masail-ki-amajgah-2844782",
-      "summary": "کراچی میں کوڑے کے ڈھیر ایک عالمی خبر تھی۔ سندھ حکومت نے کوڑا اٹھانے کے لیے ایک کارپوریشن قائم کی ہے",
-      "image_url": "",
-      "published": "2026-11-17T15:59:34+00:00",
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
