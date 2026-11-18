@@ -1,6 +1,16 @@
 {
-  "updated": "2026-11-18T22:20:34.379052+00:00",
+  "updated": "2026-11-18T23:16:17.132845+00:00",
   "items": [
+    {
+      "title": "Israeli military launches rare ground operation in Gaza beyond Yellow Line",
+      "link": "https://www.bbc.co.uk/news/articles/cw8r7510degno?at_medium=RSS&at_campaign=rss",
+      "summary": "Hamas condemns the incursion, which the Israeli military says is dismantling a \"terror tunnel\", as a \"flagrant\" ceasefire violation.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ee79/live/56061990-e382-11f1-a094-5fdc692f3e33.jpg",
+      "published": "2026-11-18T22:34:56+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Can Anthropic's record-breaking IPO stop the AI bubble bursting?",
       "link": "https://www.bbc.co.uk/news/articles/cj4gnpzll020o?at_medium=RSS&at_campaign=rss",
@@ -69,16 +79,6 @@
       "published": "2026-11-18T20:24:55+00:00",
       "source": "ARY News",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Israeli military launches rare ground operation in Gaza beyond Yellow Line",
-      "link": "https://www.bbc.co.uk/news/articles/cw8r7510degno?at_medium=RSS&at_campaign=rss",
-      "summary": "Hamas condemns the incursion, which the Israeli military says is dismantling a \"terror tunnel\", as a \"flagrant\" ceasefire violation.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ee79/live/56061990-e382-11f1-a094-5fdc692f3e33.jpg",
-      "published": "2026-11-18T20:14:57+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     },
     {
@@ -422,6 +422,16 @@
       "language": "en"
     },
     {
+      "title": "قومی بچت کی بعض اسکیموں پر منافع کی شرح میں ردوبدل",
+      "link": "https://www.express.pk/story/2844988/adjustment-in-profit-rates-on-certain-national-savings-schemes-2844988",
+      "summary": "اسپیشل سیونگز سرٹیفکیٹ کے پہلے 5 منافعوں کی شرح 11.8 فیصد کر دی گئی",
+      "image_url": "",
+      "published": "2026-11-18T17:21:57+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "New video shows explosions moments before part of Crimea Bridge collapses",
       "link": "https://www.bbc.co.uk/news/videos/ckvg28jy77z5o?at_medium=RSS&at_campaign=rss",
       "summary": "BBC Verify analyses footage showing the final moments before part of the bridge fell and videos showing the scale of destruction.",
@@ -492,9 +502,49 @@
       "language": "en"
     },
     {
-      "title": "Investors prefer Pakistan under IMF",
-      "link": "https://tribune.com.pk/story/2641059/investors-prefer-pakistan-under-imf",
-      "summary": "Favour continued programme for policy continuity; flag risks to energy markets",
+      "title": "'SME financing targeted at Rs2tr by 2028'",
+      "link": "https://tribune.com.pk/story/2641065/sme-financing-targeted-at-rs2tr-by-2028",
+      "summary": "Aurangzeb stresses tech-enabled lending, private investment at Singapore forum",
+      "image_url": "",
+      "published": "2026-11-18T16:25:03+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Thar coal mining to shift to national grid",
+      "link": "https://tribune.com.pk/story/2641069/thar-coal-mining-to-shift-to-national-grid",
+      "summary": "Contract awarded; electrification to save $30m a year",
+      "image_url": "",
+      "published": "2026-11-18T16:25:03+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Govt drafts marble policy to curb wastage",
+      "link": "https://tribune.com.pk/story/2641067/govt-drafts-marble-policy-to-curb-wastage",
+      "summary": "Committee formed to propose international marble expo",
+      "image_url": "",
+      "published": "2026-11-18T16:25:03+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "PSX slides 1,223 points over political noise",
+      "link": "https://tribune.com.pk/story/2641068/psx-slides-1223-points-over-political-noise",
+      "summary": "Heavyweight stocks drag KSE-100 down; ME tensions also weigh",
+      "image_url": "",
+      "published": "2026-11-18T16:25:03+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Delegation expected to visit Brazil in Jan",
+      "link": "https://tribune.com.pk/story/2641066/delegation-expected-to-visit-brazil-in-jan",
+      "summary": ".",
       "image_url": "",
       "published": "2026-11-18T16:25:03+00:00",
       "source": "Express Tribune",
@@ -527,6 +577,16 @@
       "summary": "As Cameron Bancroft's explosive allegations raise more questions about the sandpaper scandal, BBC Sport looks at who was there and what they have said since.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f5ea/live/792a2740-e35f-11f1-a898-e7da1c1ebbf0.jpg",
       "published": "2026-11-18T16:13:04+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "The tightest survival scrap for years? Why it's not too early to worry",
+      "link": "https://www.bbc.co.uk/sport/football/articles/cj3vgp36z063o?at_medium=RSS&at_campaign=rss",
+      "summary": "The Premier League resumes on Saturday with Crystal Palace, Sunderland and Man Utd in the relegation zone. But is it too early to be worried?",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5f51/live/09641460-e33d-11f1-a094-5fdc692f3e33.png",
+      "published": "2026-11-18T16:09:55+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -939,66 +999,6 @@
       "published": "2026-11-18T13:55:14+00:00",
       "source": "BBC News",
       "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Road closure announced in Karachi due to development work",
-      "link": "https://arynews.tv/road-closure-announced-in-karachi-due-to-development-work",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/09/Karachi-BRT.jpg",
-      "published": "2026-11-18T13:42:46+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Untenable stalemate",
-      "link": "https://www.dawn.com/news/2045358/untenable-stalemate",
-      "summary": "NEARLY nine months into a conflict of choice that has rattled economies from Europe to Asia, there seem to be few agreeable options for the US where ending the Iran war is concerned. No one — perhaps apart from Israel and some hawks in Washington — wants an escalation, while coming to an agreement on Iran’s terms would result in considerable embarrassment fo",
-      "image_url": "https://i.dawn.com/large/2026/11/181838190fb3964.webp",
-      "published": "2026-11-18T13:39:28+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "’کمنز کی پریس کانفرنس نے مجھے غصہ دلایا‘: سینڈ پیپر سکینڈل پر سزا پانے والے بینکرافٹ کے نئے انکشافات",
-      "link": "https://www.bbc.com/urdu/articles/c6vg2409r5n9o?at_medium=RSS&at_campaign=rss",
-      "summary": "آسٹریلوی کرکٹر کیمرون بینکرافٹ نے دعویٰ کیا ہے کہ سنہ 2018 کے متنازع ’سینڈ پیپر‘ منصوبے سے آسٹریلیا کی پوری ٹیم آگاہ تھی اور ان کے اس انکشاف سے ٹیم کے موجودہ کپتان پیٹ کمنز پر دباؤ بڑھنے کا امکان ہے۔",
-      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/fb1d/live/c5d2fbf0-e330-11f1-9c56-6ffaf0e1e706.jpg",
-      "published": "2026-11-18T13:38:01+00:00",
-      "source": "BBC Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بھارتی گلوکار کے گانے پر ہانیہ عامر کی موج مستیاں؛ کیپشن نے میلہ لوٹ لیا",
-      "link": "https://www.express.pk/story/2844964/hania-aamir-karan-aujla-ashke-video-viral-2844964",
-      "summary": "ہانیہ عامر کی میوزک کنسرٹ سے گلوکار بادشاہ اور کرن اوجلا کیساتھ تصاویر بھی وائرل ہوئی تھیں",
-      "image_url": "",
-      "published": "2026-11-18T13:37:16+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "15,000-tonne LPG cargo arrives from Abu Dhabi under new policy to ease shortages",
-      "link": "https://www.dawn.com/news/2045423/15000-tonne-lpg-cargo-arrives-from-abu-dhabi-under-new-policy-to-ease-shortages",
-      "summary": "ISLAMABAD: The government on Wednesday said it received the first cargo of 15,000 tonnes of liquefied petroleum gas (LPG) from Abu Dhabi after it introduced policy changes earlier this month to arrange imports through state-owned enterprises (SOEs) to ease supply constraints and contain rising prices in winter. In a statement, the Petroleum Division said tha",
-      "image_url": "https://i.dawn.com/large/2026/11/181837428855383.webp",
-      "published": "2026-11-18T13:33:03+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Pakistan eye series win after Sri Lanka slump in second Test",
-      "link": "https://arynews.tv/pakistan-eye-series-win-after-sri-lanka-slump-in-second-test",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/1-91.jpg",
-      "published": "2026-11-18T13:32:12+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
       "language": "en"
     }
   ]
