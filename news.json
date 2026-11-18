@@ -1,12 +1,72 @@
 {
-  "updated": "2026-11-18T00:05:36.054799+00:00",
+  "updated": "2026-11-18T01:15:38.775800+00:00",
   "items": [
     {
-      "title": "Nvidia reports bumper results as firm says it's not reinstating Huang",
+      "title": "Is there any more snow on the way for England and Scotland?",
+      "link": "https://www.bbc.co.uk/weather/articles/cmvg2p9qlkz9o?at_medium=RSS&at_campaign=rss",
+      "summary": "After snow fell across northern England and southern Scotland on Tuesday, is there more on the way?",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2af1/live/d7685720-e295-11f1-8dda-8925a81c3da5.jpg",
+      "published": "2026-11-18T01:13:16+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Voy at-home test kit adverts banned over low testosterone claims",
+      "link": "https://www.bbc.co.uk/news/articles/c6pw42ldpgn1o?at_medium=RSS&at_campaign=rss",
+      "summary": "The Advertising Standards Authority says the adverts by online healthcare provider Voy made misleading claims.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b4b0/live/d8c4a540-e2b5-11f1-bee0-ef418afc697f.jpg",
+      "published": "2026-11-18T01:11:07+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Largest British study to check social media ban's effect on youth mental health",
+      "link": "https://www.bbc.co.uk/news/articles/cm0evw0d2wq4o?at_medium=RSS&at_campaign=rss",
+      "summary": "Ten different research teams will look at how well teenagers are coping without social media.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/02cd/live/6ddfb5f0-e2bd-11f1-a094-5fdc692f3e33.jpg",
+      "published": "2026-11-18T00:49:31+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Government risks missing climate targets if EV rules weakened, adviser warns",
+      "link": "https://www.bbc.co.uk/news/articles/c63rgqg5l9l2o?at_medium=RSS&at_campaign=rss",
+      "summary": "The UK could miss legally binding climate targets if EV targets are cut, an adviser warns",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/36bf/live/43e4a6f0-e29c-11f1-8dda-8925a81c3da5.jpg",
+      "published": "2026-11-18T00:44:48+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "The EU that Burnham is eyeing up is very different to the one Britain left",
+      "link": "https://www.bbc.co.uk/news/articles/cq4gn3109pzgo?at_medium=RSS&at_campaign=rss",
+      "summary": "Andy Burnham wants \"steps\" towards a closer EU alignment. But the bloc has changed considerably since the UK left it",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0152/live/8197ef80-e282-11f1-99a1-253766e7ad8b.jpg",
+      "published": "2026-11-18T00:39:06+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Nvidia says it won't reinstate Huang as firm reports bumper results",
       "link": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss",
-      "summary": "Nvidia reported strong quarterly earnings on Tuesday amid the dramatic exit of ex-CEO Jensen Huang.",
+      "summary": "The AI chip giant reported strong quarterly earnings on Tuesday after the dramatic exit of Jensen Huang.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/2e48/live/58880030-e2d7-11f1-99a1-253766e7ad8b.jpg",
-      "published": "2026-11-17T23:03:39+00:00",
+      "published": "2026-11-18T00:28:01+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "As Trump and Xi meet, China's AI dreams face an unexpected hurdle: the Nvidia spy scandal",
+      "link": "https://www.bbc.co.uk/news/articles/c5vg23g92rj4o?at_medium=RSS&at_campaign=rss",
+      "summary": "China worries the scandal could ramp up pressure on the US to further restrict the sale of advanced chips.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ec0d/live/1061d030-dea2-11f1-b441-2b33b063138f.jpg",
+      "published": "2026-11-17T23:02:12+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -34,7 +94,7 @@
     {
       "title": "Thomas Markle charged over child sex abuse material in Philippines",
       "link": "https://www.bbc.co.uk/news/articles/ckg5ry8m49ggo?at_medium=RSS&at_campaign=rss",
-      "summary": "Markle is being held in prison in the US on a separate charge and has previously denied all of the allegations.",
+      "summary": "Markle is being held in custody in the US after one charge and has previously denied all of the allegations.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5b0e/live/040fc640-dd79-11f1-93e1-3b657b665bcf.jpg",
       "published": "2026-11-17T22:44:15+00:00",
       "source": "BBC News",
@@ -42,11 +102,11 @@
       "language": "en"
     },
     {
-      "title": "Henry Nowak killer applies to appeal against conviction",
-      "link": "https://www.bbc.co.uk/news/articles/cm93080xj8xgo?at_medium=RSS&at_campaign=rss",
-      "summary": "Vicrum Digwa, who fatally stabbed Nowak in Southampton in 2015, is also seeking a sentence review.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ac27/live/51d20e90-5dc4-11f1-ae8d-59e8183471b2.jpg",
-      "published": "2026-11-17T22:17:47+00:00",
+      "title": "US National Security Agency's classified internal network reportedly goes offline",
+      "link": "https://www.bbc.co.uk/news/articles/cqvg2mg8g0pyo?at_medium=RSS&at_campaign=rss",
+      "summary": "The National Security Agency says a \"temporary degradation\" affected some internal systems but that \"mission-critical capabilities\" were not affected.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/db6e/live/1044c2a0-e2d1-11f1-99ed-7de3e5932968.jpg",
+      "published": "2026-11-17T21:59:53+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -62,7 +122,7 @@
       "language": "en"
     },
     {
-      "title": "کراچی، شاہراہ فیصل پر گاڑی کی ٹکر سے کار الٹ گئی",
+      "title": "9کراچی، شاہراہ فیصل پر گاڑی کی ٹکر سے کار الٹ گئی",
       "link": "https://jang.com.pk/news/1634428",
       "summary": "فوٹو: اسکرین گریبکراچی میں شاہراہ فیصل پاکستان پوسٹ آفس کے قریب تیز رفتار کار نے دوسری گاڑی کو ٹکر مار دی جس سے گاڑی قلابازیاں کھاتی...",
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-18/b_1634428_030901_updates.jpg\"/",
@@ -70,16 +130,6 @@
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "Russian military plane crashes, killing all 19 on board",
-      "link": "https://www.bbc.co.uk/news/articles/cw8085rykkmgo?at_medium=RSS&at_campaign=rss",
-      "summary": "Russia's defence ministry says it preliminarily believes a technical malfunction was the cause of the crash in the Kemerovo region.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3ead/live/4d71a050-e2bb-11f1-b083-69f1e69220f8.jpg",
-      "published": "2026-11-17T21:06:11+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
     },
     {
       "title": "Former KP ministers Jhagra, Bangash among 3 PTI leaders held under MPO despite bail from PHC",
@@ -102,14 +152,14 @@
       "language": "en"
     },
     {
-      "title": "Protest against talk by academic who made Arday plagiarism claim",
-      "link": "https://www.bbc.co.uk/news/articles/c61md50k8vx4o?at_medium=RSS&at_campaign=rss",
-      "summary": "Nathan Cofnas accused late Cambridge professor Jason Arday of plagiarism.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9251/live/1bc07800-e2c1-11f1-a9da-01a195e70ea0.jpg",
-      "published": "2026-11-17T20:09:03+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
+      "title": "ٹرمپ انتظامیہ کا فضائی نظام کی اپ گریڈیشن کے لیے 50 ارب ڈالر کا مطالبہ، ریپبلکن سینیٹرز کی مخالفت",
+      "link": "https://www.express.pk/story/2844793/trump-administration-seeks-50-billion-for-air-traffic-system-upgrade-republican-senators-oppose-the-move-2844793",
+      "summary": "ڈیموکریٹس کا مزید فنڈز کی منظوری سے قبل حالیہ فضائی تعطل کی وجوہات سامنے لانے کا مطالبہ",
+      "image_url": "",
+      "published": "2026-11-17T20:05:19+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Major Apple outage brings App Store, iCloud, Apple Music, and Apple Pay to a halt worldwide",
@@ -122,6 +172,16 @@
       "language": "en"
     },
     {
+      "title": "تھائی لینڈ نے امریکی برآمدات پر عائد تمام تجارتی ٹیکس ختم کر دیا",
+      "link": "https://www.express.pk/story/2844792/thailand-has-abolished-all-trade-taxes-imposed-on-american-exports-2844792",
+      "summary": "دونوں ممالک کے درمیان تجارتی تعلقات مزید مضبوط ہوں گے، صدر ٹرمپ",
+      "image_url": "",
+      "published": "2026-11-17T19:56:21+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "US loses measles elimination status after nearly three decades",
       "link": "https://arynews.tv/us-loses-measles-elimination-status-after-nearly-three-decades",
       "summary": "",
@@ -129,16 +189,6 @@
       "published": "2026-11-17T19:44:00+00:00",
       "source": "ARY News",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Church of England should protect 'every belief', King says",
-      "link": "https://www.bbc.co.uk/news/articles/cwy80x44vxk7o?at_medium=RSS&at_campaign=rss",
-      "summary": "King Charles III was speaking at the opening of General Synod, the Church of England's national assembly",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/54d5/live/44d27670-e2a9-11f1-8226-87dfa5049e9a.jpg",
-      "published": "2026-11-17T19:29:44+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     },
     {
@@ -150,6 +200,16 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "کراچی، مختلف پرتشدد واقعات میں خاتون سمیت دو افراد جاں بحق، ایک زخمی",
+      "link": "https://www.express.pk/story/2844791/karachi-two-people-including-a-woman-killed-and-one-injured-in-various-violent-incidents-2844791",
+      "summary": "لاش اور زخمی کو اسپتال منتقل کردیا گیا",
+      "image_url": "",
+      "published": "2026-11-17T19:15:22+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Former Nvidia CEO to appear before Congress in December",
@@ -940,66 +1000,6 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
-    },
-    {
-      "title": "لاہور کی مصروفیات اور تقریبات (آخری قسط)",
-      "link": "https://www.express.pk/story/2844785/lahore-ki-masroofiyat-aur-taqreebat-aakhri-qist-2844785",
-      "summary": "جمہوریت کے ثمرات عوام تک تب پہنچیں گے جب ملک میں قانون کی حکمرانی ہوگی",
-      "image_url": "",
-      "published": "2026-11-17T16:12:30+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بلاول 27ویں ترمیم کے تحت بنے جوڈیشل کمیشن کے بینیفشری ہیں، رانا ثناء",
-      "link": "https://jang.com.pk/news/1634330",
-      "summary": "وزیراعظم کے مشیر برائے سیاسی امور رانا ثناء اللّٰہ نے کہا ہے کہ اگر ایک پارٹی کا لیڈر یہ کہے کہ میں نے دباؤ میں آکر آئینی ترمیم...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634330_093815_updates.jpg\"/",
-      "published": "2026-11-17T16:11:19+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پی پی چیئرمین کی بات کے بعد 27ویں ترمیم کی کیا حیثیت رہ جاتی ہے؟ عمیر نیازی",
-      "link": "https://jang.com.pk/news/1634334",
-      "summary": "پاکستان تحریک انصاف کے رکن قومی اسمبلی بیرسٹر عمیر نیازی نے استفسار کیا ہے کہ اتنی بڑی بات ایک پارٹی چیف کررہا ہے تو 27 ویں ترمیم کیا...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634334_094418_updates.jpg\"/",
-      "published": "2026-11-17T16:11:13+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پیٹرول کی قیمت میں مزید کمی کردی گئی، ڈیزل برقرار",
-      "link": "https://jang.com.pk/news/1634333",
-      "summary": "حکومت کی جانب سے پیٹرول کی قیمت میں آج پھر کمی کردی گئی جبکہ ڈیزل کی قیمت برقرار ہے۔ اس حوالے سے جاری نوٹیفکیشن کے مطابق پیٹرول کی فی...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-17/b_1634333_094327_updates.jpg\"/",
-      "published": "2026-11-17T16:11:08+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سوشل میڈیائی ’’ شہسوار‘‘",
-      "link": "https://www.express.pk/story/2844784/social-mediai-shahsawar-2844784",
-      "summary": "جب ہم پاکستان میں پی ٹی وی اور ریڈیو پاکستان کی تاریخ دیکھتے ہیں تو معلوم ہوتا ہے کہ ادارے وفاقی حکومت کے زیر انتظام کام کر رہے تھے",
-      "image_url": "",
-      "published": "2026-11-17T16:08:04+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کیا انسان مشین کا غلام بن جائے گا",
-      "link": "https://www.express.pk/story/2844783/kya-insan-machine-ka-ghulam-ban-jayega-2844783",
-      "summary": "یہ کہنا درست نہیں کہ مصنوعی ذہانت تمام انسانوں کو بے روزگار کر دے گی",
-      "image_url": "",
-      "published": "2026-11-17T16:03:04+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
     }
   ]
 }
