@@ -1,6 +1,16 @@
 {
-  "updated": "2026-11-19T23:03:50.855789+00:00",
+  "updated": "2026-11-19T23:45:49.979721+00:00",
   "items": [
+    {
+      "title": "Anthropic becomes one of world's most valuable public companies in stock market debut",
+      "link": "https://www.bbc.co.uk/news/articles/c3x29ggenz12o?at_medium=RSS&at_campaign=rss",
+      "summary": "Anthropic is the first purely AI company to be publicly listed, creating a test for the entire industry.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9b7d/live/94082910-e452-11f1-a094-5fdc692f3e33.jpg",
+      "published": "2026-11-19T23:33:51+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Judge finds Thomas Markle mentally fit to stand trial on child abuse charges",
       "link": "https://www.bbc.co.uk/news/articles/crgj35ldz2zxo?at_medium=RSS&at_campaign=rss",
@@ -37,16 +47,6 @@
       "summary": "Prince William's most senior advisor described the royal couple as \"very much a team\".",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5916/live/037d4680-e459-11f1-9431-9fe383d2f2c7.jpg",
       "published": "2026-11-19T22:02:06+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Anthropic becomes one of world's most valuable public companies in stock market debut",
-      "link": "https://www.bbc.co.uk/news/articles/c3x29ggenz12o?at_medium=RSS&at_campaign=rss",
-      "summary": "Anthropic is the first purely AI company to be publicly listed, creating a test for the entire industry.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/9b7d/live/94082910-e452-11f1-a094-5fdc692f3e33.jpg",
-      "published": "2026-11-19T21:38:42+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -442,6 +442,16 @@
       "language": "ur"
     },
     {
+      "title": "روہنگیا مسلمانوں کی نسل کشی ثابت، عالمی عدالت نے میانمار کو مجرم قرار دے دیا",
+      "link": "https://www.express.pk/story/2845202/genocide-of-rohingya-muslims-proven-international-court-declares-myanmar-guilty-2845202",
+      "summary": "میانمار نے روہنگیا آبادی کے ایک بڑے حصے کو ختم کرنے کی نیت سے کارروائیاں کیں، عالمی عدالت",
+      "image_url": "",
+      "published": "2026-11-19T17:31:01+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "سابق وفاقی وزیر لیاقت عباس بھٹی کا قتل، ابتدائی پولیس رپورٹ سامنے آ گئی ... گن مین علی خان ،محمد خان قتل کر کے گاڑیاں اور اسلحہ بھی ساتھ لے گئے ، بھتیجا اظہر عباس",
       "link": "https://urdupoint.com/n/5016527",
       "summary": "",
@@ -782,6 +792,26 @@
       "language": "en"
     },
     {
+      "title": "Minister warns fertiliser dealers over profiteering",
+      "link": "https://tribune.com.pk/story/2641250/minister-warns-fertiliser-dealers-over-profiteering",
+      "summary": "Says DAP supplies adequate; artificial price hikes won't be tolerated",
+      "image_url": "",
+      "published": "2026-11-19T16:02:50+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Joint trade group with Maldives planned",
+      "link": "https://tribune.com.pk/story/2641258/joint-trade-group-with-maldives-planned",
+      "summary": "Pakistani delegation to visit in December as both sides target $200m in trade",
+      "image_url": "",
+      "published": "2026-11-19T16:02:50+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "German importers look to Pakistan amid China shift",
       "link": "https://tribune.com.pk/story/2641257/german-importers-look-to-pakistan-amid-china-shift",
       "summary": ".",
@@ -795,26 +825,6 @@
       "title": "Fin Min meets World Bank, IFC officials",
       "link": "https://tribune.com.pk/story/2641256/fin-min-meets-world-bank-ifc-officials",
       "summary": "Explores cooperation on data infrastructure, digital invoicing and fast payment systems",
-      "image_url": "",
-      "published": "2026-11-19T16:02:50+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "IMF warns of fiscal strain",
-      "link": "https://tribune.com.pk/story/2641249/imf-warns-of-fiscal-strain",
-      "summary": "Economists dub IMF 'anti-growth' as Binici dodges difficult questions",
-      "image_url": "",
-      "published": "2026-11-19T16:02:50+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "EY to advise on airport outsourcing",
-      "link": "https://tribune.com.pk/story/2641254/ey-to-advise-on-airport-outsourcing",
-      "summary": ".",
       "image_url": "",
       "published": "2026-11-19T16:02:50+00:00",
       "source": "Express Tribune",
@@ -987,16 +997,6 @@
       "summary": "چیف آف ڈیفنس فورسز اور آرمی چیف فیلڈ مارشل سید عاصم منیر سے قطر کے وزیر داخلہ شیخ خلیفہ بن حمد بن خلیفہ الثانی نے جی ایچ کیو...",
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-19/b_1634941_082054_updates.jpg\"/",
       "published": "2026-11-19T15:11:46+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پاکستان اور قطر کا پولیس آفیسرز ایکسچینج پروگرام کا دائرہ کار بڑھانے پر اتفاق",
-      "link": "https://jang.com.pk/news/1634940",
-      "summary": "وفاقی وزیر داخلہ محسن نقوی سے قطر کے وزیر داخلہ شیخ خلیفہ بن حمد نے ملاقات کی ہے جہاں دونوں وزرائے داخلہ نے پولیس آفیسرز...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-19/b_1634940_081159_updates.jpg\"/",
-      "published": "2026-11-19T15:11:00+00:00",
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
