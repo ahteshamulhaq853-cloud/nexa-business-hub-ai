@@ -1,6 +1,86 @@
 {
-  "updated": "2026-11-19T04:22:10.772131+00:00",
+  "updated": "2026-11-19T05:29:16.662042+00:00",
   "items": [
+    {
+      "title": "US judge blocks trump policy restricting internship and work opportunities on student visa",
+      "link": "https://arynews.tv/us-judge-blocks-trump-policy-restricting-internship-and-work-opportunities-on-student-visa",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/student.jpg",
+      "published": "2026-11-19T05:24:26+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Musk says he feels ‘pretty foolish’ for failed US election spending",
+      "link": "https://arynews.tv/musk-feels-pretty-foolish-failed-us-election-spending",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2025/11/Elon-Musk-says-work.jpg.jpeg",
+      "published": "2026-11-19T05:20:23+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Punjab announces recruitment at 23 medical institutions",
+      "link": "https://arynews.tv/punjab-announces-recruitment-at-23-medical-institutions",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Karachi-doctors-protest.jpg",
+      "published": "2026-11-19T04:59:47+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "GTA 6 launch leaves players unable to replay missions; Here’s why",
+      "link": "https://arynews.tv/gta-6-launch-leaves-players-unable-to-replay-missions-heres-why",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/GTA-1.jpg",
+      "published": "2026-11-19T04:53:44+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "This is a remarkable diplomatic moment for China's Xi - but it comes with pitfalls",
+      "link": "https://www.bbc.co.uk/news/articles/cr9d75we51j1o?at_medium=RSS&at_campaign=rss",
+      "summary": "The meeting comes with challenges as there are things Xi does not appear keen to discuss with Putin and Trump.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/07ac/live/bcaff6a0-e3cf-11f1-a266-6b47da5e73cc.jpg",
+      "published": "2026-11-19T04:42:52+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Crimean Bridge attacked again, Russian official says",
+      "link": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&at_campaign=rss",
+      "summary": "The head of Crimea said traffic was suspended after another attack on the link between Russia and the occupied territory.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e29a/live/4b7210d0-e3ad-11f1-b942-5da5bfac5a5a.jpg",
+      "published": "2026-11-19T04:37:17+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "‘Malicious’ activity not behind US tech outages: security officials",
+      "link": "https://arynews.tv/malicious-activity-not-behind-us-tech-outages-security-officials",
+      "summary": "",
+      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/US-tech-outage-security-officials.jpg",
+      "published": "2026-11-19T04:29:18+00:00",
+      "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "’جی ٹی اے 6‘ کی ریلیز اور پاکستان سمیت دنیا بھر میں گیمرز کا جنون: کسی نے چھٹی لی تو کسی نے نیا پلے سٹیشن خرید لیا",
+      "link": "https://www.bbc.com/urdu/articles/ckpqrl119plyo?at_medium=RSS&at_campaign=rss",
+      "summary": "13 سال کے انتظار کے بعد ’جی ٹی اے 6‘ ریلیز ہو گئی، پاکستان سمیت دنیا بھر میں گیمرز کا جنون عروج پر ہے۔ کسی نے چھٹی لی تو کسی نے نیا پلے اسٹیشن خریدا، جبکہ گیم کے ابتدائی ریویوز بھی شاندار رہے۔",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/3027/live/8272e850-e355-11f1-99a1-253766e7ad8b.jpg",
+      "published": "2026-11-19T04:24:34+00:00",
+      "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
     {
       "title": "Field Marshal Asim Munir visits Turbat, reviews security situation and operational preparedness",
       "link": "https://arynews.tv/asim-munir-field-marshal-visits-turbat-balochistan-ispr",
@@ -14,22 +94,12 @@
     {
       "title": "‎ری جینریٹو فارمنگ: اسلام آباد کا زرعی فارم چھوٹے کسانوں کے لیے ’امید کی ایک کرن‘ کیسے بنا",
       "link": "https://www.bbc.com/urdu/articles/c8r4g6522ey2o?at_medium=RSS&at_campaign=rss",
-      "summary": "ریجینیریٹو یا قدرتی طریقہ زراعت کو کسی بھی قسم کا کسان اپنا سکتا ہے تاہم ڈاکٹر عظیم اس بات سے اتفاق کرتے ہیں کہ خاص طور چھوٹے کسانوں کے اس قسم کا ماڈل زیادہ مستفید ہے کیونکہ وہ کم زمین سے زیادہ آمدن لے سکتے ہیں۔",
+      "summary": "ری جینریٹو یا قدرتی طریقہ زراعت کو کسی بھی قسم کا کسان اپنا سکتا ہے تاہم ڈاکٹر عظیم اس بات سے اتفاق کرتے ہیں کہ خاص طور چھوٹے کسانوں کے اس قسم کا ماڈل زیادہ مستفید ہے کیونکہ وہ کم زمین سے زیادہ آمدن لے سکتے ہیں۔",
       "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/2468/live/f0124670-e37e-11f1-a094-5fdc692f3e33.png",
       "published": "2026-11-19T04:17:26+00:00",
       "source": "BBC Urdu",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "Exchange rate & other protections",
-      "link": "https://www.dawn.com/news/2045585/exchange-rate-amp-other-protections",
-      "summary": "THERE is always something a little off when economists and other experts say that a given course of action is beneficial for industrial growth in the country, but those industries directly connected with that course of action or policy direction are silent on the matter. Normally, industry is very vocal about preserving its interests and either takes the lea",
-      "image_url": "https://i.dawn.com/large/2025/10/68e721ad5d940.jpg",
-      "published": "2026-11-19T03:56:20+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
     },
     {
       "title": "Pat Cummins defiant as ‘Sandpapergate’ roils Australian cricket",
@@ -42,32 +112,12 @@
       "language": "en"
     },
     {
-      "title": "Leveraging the solar revolution",
-      "link": "https://www.dawn.com/news/2045586/leveraging-the-solar-revolution",
-      "summary": "AT COP31, Prime Minister Shehbaz Sharif told a high-level dialogue on electrification that “an extraordinary transition has already taken place” in Pakistan: nearly 22 gigawatts of rooftop solar in two years, “a quiet revolution by ordinary citizens seeking affordable power and a cleaner, more predictable future”. More than one in 10 motorcycles sold this ye",
-      "image_url": "https://i.dawn.com/large/2025/01/67887cfdadf3a.jpg",
-      "published": "2026-11-19T03:44:09+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
       "title": "Trump says historic summit with Xi, Putin already a ‘win’ before event",
       "link": "https://arynews.tv/donald-trump-says-historic-summit-with-xi-putin-already-a-win",
       "summary": "",
       "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/Donald-Trump-summit-XI-Jinping-Putin.jpg",
       "published": "2026-11-19T03:40:51+00:00",
       "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Hardening lines",
-      "link": "https://www.dawn.com/news/2045582/hardening-lines",
-      "summary": "THE battle lines are being drawn over the creation of new provinces, as the two main partners in the ruling coalition experience a democratic reawakening. Both have recently taken to extolling the virtues of democracy — but each with their own spin. On one side, PPP Chairman Bilawal Bhutto-Zardari is taking a hard stand against a division of the provinces “i",
-      "image_url": "",
-      "published": "2026-11-19T03:33:12+00:00",
-      "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
     },
@@ -92,16 +142,6 @@
       "language": "en"
     },
     {
-      "title": "Suparco warns of worsening smog across Punjab",
-      "link": "https://www.dawn.com/news/2045563/suparco-warns-of-worsening-smog-across-punjab",
-      "summary": "LAHORE: The Pakistan Space and Upper Atmosphere Research Commission (Suparco) has warned of worsening smog conditions across Punjab over the next three days, with satellite observations detecting 690 active fire incidents in Punjab and adjoining transboundary areas, while Lahore on Wednesday topped the list of the world’s most polluted major cities. Accordin",
-      "image_url": "https://i.dawn.com/large/2025/10/31094052e337196.webp",
-      "published": "2026-11-19T02:44:08+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
       "title": "AI giant Anthropic valued at up to $1.5tn ahead of stock market debut",
       "link": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
       "summary": "The firm started just five years ago and is now one of the biggest names in artificial intelligence.",
@@ -110,16 +150,6 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
-    },
-    {
-      "title": "کراچی، ریگل چوک کے قریب دکانوں میں آتشزدگی",
-      "link": "https://jang.com.pk/news/1634793",
-      "summary": "فوٹو: اسکرین گریبکراچی میں ریگل چوک کے قریب دکانوں میں آگ لگ گئی۔فائر بریگیڈ حکام کے مطابق 3 فائر ٹینڈر اور ایک واٹر باوزر آگ بجھانے...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-19/b_1634793_074752_updates.jpg\"/",
-      "published": "2026-11-19T02:11:08+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
     },
     {
       "title": "'Feudal' leasehold system set to be scrapped in England and Wales",
@@ -132,71 +162,11 @@
       "language": "en"
     },
     {
-      "title": "Blanket ban on AJK regional, refugee job quotas abolished",
-      "link": "https://www.dawn.com/news/2045518/blanket-ban-on-ajk-regional-refugee-job-quotas-abolished",
-      "summary": "• Region’s SC sets aside high court’s ruling, directs government to review allocations • Orders PSC to resume and complete all pending recruitment processes • Observes refugee quotas cannot be treated as perpetual entitlements without legal justification MUZAFFARABAD: The Supreme Court of Azad Jammu and Kashmir (AJK) has set aside the blanket abolition of re",
-      "image_url": "https://i.dawn.com/large/2021/05/60add5e2ab2c2.jpg",
-      "published": "2026-11-19T01:55:26+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "FBR unveils proposed rules for faceless tax appeals",
-      "link": "https://www.dawn.com/news/2045500/fbr-unveils-proposed-rules-for-faceless-tax-appeals",
-      "summary": "ISLAMABAD: The Federal Board of Revenue (FBR) unveiled draft rules on Wednesday for its faceless income tax appeals system, eliminating the need for physical interaction between taxpayers and appellate authorities. The new system will also conceal the identity of officers responsible for deciding tax disputes. The rules are expected to be finalised this week",
-      "image_url": "https://i.dawn.com/large/2026/08/01073835a15dc31.webp",
-      "published": "2026-11-19T01:55:08+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Israel forces kill 3 Palestinians in fresh Gaza push",
-      "link": "https://www.dawn.com/news/2045504/israel-forces-kill-3-palestinians-in-fresh-gaza-push",
-      "summary": "• Board of Peace report blames both Israel and Hamas for failure to end war • Hamas dismisses report, accuses board of ‘protecting Israel’ CAIRO: Israeli tanks advanced in an area of the central Gaza Strip on Wednesday and the Israeli military said its forces were targeting Hamas infrastructure outside areas that Israel controls in the enclave. Witnesses sai",
-      "image_url": "https://i.dawn.com/large/2026/11/1908020706bbc48.webp",
-      "published": "2026-11-19T01:55:08+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "PTI’s legal eagles ‘shake and make up’",
-      "link": "https://www.dawn.com/news/2045549/ptis-legal-eagles-shake-and-make-up",
-      "summary": "• Raja, Khosa deny internal rifts; Gohar maintains all decisions taken on Imran’s directions • PTI warns Adiala authorities against violating SC orders on ex-PM’s medical treatment • IHC directs proper medical care, hygienic living conditions for Bushra Bibi as per prison rules ISLAMABAD: PTI Sec­r­e­tary General Salman Akram Raja and senior lawyer Sardar La",
-      "image_url": "https://i.dawn.com/large/2026/11/190802047409bea.webp",
-      "published": "2026-11-19T01:53:58+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
       "title": "Who are the investors ready to jump on Anthropic?",
       "link": "https://www.bbc.co.uk/news/videos/c6y0x84xx22wo?at_medium=RSS&at_campaign=rss",
       "summary": "The BBC's Samira Hussain speaks to a retail investor eagerly waiting for the AI company's stock to go live on Thursday.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/8d1a/live/8e8f8740-e3b6-11f1-a094-5fdc692f3e33.jpg",
       "published": "2026-11-19T01:22:38+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "پہلا پاکستانی خلا باز 25 نومبر کو خلا کیلئے روانہ ہوگا",
-      "link": "https://jang.com.pk/news/1634774",
-      "summary": "خلائی تاریخ میں پاکستان ایک نئی منزل کی جانب گامزن، پہلا پاکستانی خلا باز 25 نومبر کو چین کے شین ژو 24 مشن کے ذریعے خلا میں روانہ...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-19/b_1634774_061159_updates.jpg\"/",
-      "published": "2026-11-19T01:11:33+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Crimean Bridge attacked again, Russian official says",
-      "link": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&at_campaign=rss",
-      "summary": "The head of Crimea said traffic was suspended after another attack on the link between Russia and the occupied territory.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e29a/live/4b7210d0-e3ad-11f1-b942-5da5bfac5a5a.jpg",
-      "published": "2026-11-19T01:05:03+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -212,6 +182,36 @@
       "language": "en"
     },
     {
+      "title": "افغانستان سے منشیات اسمگلنگ کا بڑھتا خطرہ",
+      "link": "https://www.express.pk/story/2845020/the-growing-threat-of-drug-smuggling-from-afghanistan-2845020",
+      "summary": "ایرانی فورسز نے کارروائی کے دوران افغان اسمگلروں سے55 کلوگرام سے زائد منشیات اور اسلحہ برآمد کرلیا",
+      "image_url": "",
+      "published": "2026-11-19T00:21:35+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "چترال؛ پاک فوج اور فرنٹیئر کور کے زیر اہتمام فری میڈیکل کیمپ کا انعقاد",
+      "link": "https://www.express.pk/story/2845018/chitral-free-medical-camp-organized-by-pakistan-army-and-frontier-corps-2845018",
+      "summary": "مقامی آبادی نے پاک فوج اور فرنٹیئر کور کے اس اقدام کو صحتِ عامہ اور عوامی فلاح کے لیے قابلِ ستائش قرار دیا ہے",
+      "image_url": "",
+      "published": "2026-11-19T00:16:10+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کواڈ اجلاس؛ مودی ٹرمپ سے براہ راست ملاقات سے محروم",
+      "link": "https://www.express.pk/story/2845017/quad-summit-modi-misses-out-on-direct-meeting-with-trump-2845017",
+      "summary": "امریکی صدر نے مودی سے براہ راست ملاقات کے بجائے محض رسمی ملاقات اور بات چیت تک ہی اکتفا کی",
+      "image_url": "",
+      "published": "2026-11-19T00:13:22+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Is your child lying to you? That might not be a bad thing",
       "link": "https://www.bbc.co.uk/news/articles/cwvg2mp0de2jo?at_medium=RSS&at_campaign=rss",
       "summary": "Parents may be annoyed when their kids lie but experts explain why it is part of their development.",
@@ -220,6 +220,16 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "شہزادہ ہیری کی روس کے خلاف جنگ میں دوبارہ فوج میں شمولیت کی پیشکش",
+      "link": "https://www.express.pk/story/2845016/prince-harry-says-he-would-rejoin-the-military-if-needed-in-a-war-against-russia-2845016",
+      "summary": "یہ بیان انہوں نے یوکرین کے دورے کے دوران برطانوی اخبار دی ٹیلی گراف کو انٹرویو دیتے ہوئے دیا",
+      "image_url": "",
+      "published": "2026-11-19T00:09:28+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Crew unaware of risks before Bayesian yacht accident, say investigators",
@@ -242,6 +252,46 @@
       "language": "en"
     },
     {
+      "title": "لاہور کو 2027 کے لیے ای سی او ٹورازم کیپیٹل کا اعزاز مل گیا",
+      "link": "https://www.express.pk/story/2845014/lahore-named-eco-tourism-capital-for-2027-2845014",
+      "summary": "مختلف علاقائی اجلاسوں اور ثقافتی تقریبات کی میزبانی کرے گا",
+      "image_url": "",
+      "published": "2026-11-18T23:59:23+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "راولپنڈی ٹیسٹ: پاکستان کو میچ کے دوران بڑا دھچکا لگ گیا، اہم بولر انجری کے باعث باہر",
+      "link": "https://www.express.pk/story/2845013/rawalpindi-test-pakistan-suffers-a-major-blow-during-match-saqib-khan-ruled-out-due-to-injury-2845013",
+      "summary": "پاکستان ٹیم میچ جیتنے کی پوزیشن میں ہے تاہم ایک اہم بولر کی کمی قومی ٹیم کے لیے مشکلات پیدا کر سکتی ہیں",
+      "image_url": "",
+      "published": "2026-11-18T23:56:53+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "راولاکوٹ مسلح حملے میں شہید ڈپٹی سپرنٹنڈنٹ رینجرز کی نمازِ جنازہ کراچی میں ادا",
+      "link": "https://www.express.pk/story/2845012/funeral-prayers-of-deputy-superintendent-rangers-martyred-in-rawalakot-armed-attack-held-in-karachi-2845012",
+      "summary": "ملک کے امن و استحکام کے لیے قانون نافذ کرنے والے اداروں کی قربانیاں ناقابلِ فراموش ہیں",
+      "image_url": "",
+      "published": "2026-11-18T23:56:48+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ایران کے ساتھ ایسا دیرپا معاہدہ چاہتا ہوں جو کمزور امریکی صدر بھی ختم نہ کرسکے، ٹرمپ",
+      "link": "https://www.express.pk/story/2845010/trump-seeks-lasting-iran-deal-that-future-us-presidents-cannot-reverse-2845010",
+      "summary": "ٹرمپ کے مطابق امریکی فوجی اس وقت تک ایران میں موجود رہیں گے جب تک ایسا معاہدہ حاصل نہیں ہوجاتا",
+      "image_url": "",
+      "published": "2026-11-18T23:52:45+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Why has Waymo pulled all its driverless cars from US freeways?",
       "link": "https://www.bbc.co.uk/news/videos/cmx2ryw97x4go?at_medium=RSS&at_campaign=rss",
       "summary": "The vehicles currently operate in 15 US cities, though freeway rides are only offered in a handful, including San Francisco and Los Angeles.",
@@ -252,6 +302,36 @@
       "language": "en"
     },
     {
+      "title": "ملک بھر کے عوام مسائل سے نجات کیلیے نئے انتظامی یونٹس کے قیام کے حامی",
+      "link": "https://www.express.pk/story/2845009/people-across-the-country-support-the-establishment-of-new-administrative-units-to-solve-problems-2845009",
+      "summary": "امن و امان کی صورتحال بہتر بنانے کے ساتھ ملک کے مختلف علاقوں میں یکساں ترقی کے مواقع بھی پیدا ہو سکیں گے، عوام",
+      "image_url": "",
+      "published": "2026-11-18T23:46:52+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "1971ء کی جنگ میں دہشتگرد مکتی باہنی کے ہاتھوں مشرقی پاکستان میں قتل عام ایک بار پھر بے نقاب",
+      "link": "https://www.express.pk/story/2845007/the-massacre-in-east-pakistan-at-the-hands-of-the-terrorist-mukti-bahini-during-the-1971-war-has-been-exposed-once-again-2845007",
+      "summary": "بھارتی افواج اور مکتی باہنی کے دہشت گردوں کے ہاتھوں دو سے ڈھائی لاکھ بنگالیوں کا قتل عام کیا گیا، کرنل (ر) ظفر اقبال فرخ",
+      "image_url": "",
+      "published": "2026-11-18T23:45:56+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کاپ 31 کانفرنس میں شرکت کے نام پر ترکیہ جانے کی کوشش ناکام، مسافر آف لوڈ",
+      "link": "https://www.express.pk/story/2845006/attempt-to-travel-to-turkey-in-the-name-of-attending-cop31-conference-fails-passengers-offload-2845006",
+      "summary": "مسافر سے COP31 کانفرنس سے متعلق استفسار کیا گیا تو وہ سوالات کے جوابات دینے میں ناکام رہا",
+      "image_url": "",
+      "published": "2026-11-18T23:44:42+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Google rejects UK request for Russell Brand YouTube video to be removed, sources say",
       "link": "https://www.bbc.co.uk/news/articles/cmgrenln8p29o?at_medium=RSS&at_campaign=rss",
       "summary": "This comes after Brand's wife shared a message from him in which he claimed his innocence.",
@@ -260,6 +340,26 @@
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "بھارتی پنجاب کے وزیراعلیٰ کی انٹرنیشنل پنجابی کانفرنس میں شرکت غیر یقینی ہوگئی",
+      "link": "https://www.express.pk/story/2845005/indian-punjab-chief-ministers-participation-in-international-punjabi-conference-uncertain-2845005",
+      "summary": "کانفرنس کے منتظمین کو امید ہے کہ وہ شرکت کی کوشش جاری رکھیں گے",
+      "image_url": "",
+      "published": "2026-11-18T23:27:53+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "آبنائے ہرمز میں نامعلوم چیز سے آئل ٹینکر کے انجن روم پر حملہ، عملہ محفوظ",
+      "link": "https://www.express.pk/story/2845004/tanker-hit-by-unknown-projectile-near-oman-in-latest-strait-of-hormuz-incident-2845004",
+      "summary": "ادارے کے مطابق جہاز کے عملے کے تمام ارکان محفوظ ہیں اور ان کی موجودگی کی تصدیق کرلی گئی ہے",
+      "image_url": "",
+      "published": "2026-11-18T23:15:57+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Myanmar faces historic genocide verdict at UN court over Rohingya massacres",
@@ -332,16 +432,6 @@
       "language": "en"
     },
     {
-      "title": "مخالفین بھی مان رہے ہیں بانی سیاسی قیدی ہیں، بیرسٹر گوہر",
-      "link": "https://jang.com.pk/news/1634698",
-      "summary": "چیئرمین تحریک انصاف بیرسٹر گوہر نے کہا ہے کہ ہمارے سیاسی مخالفین بھی تسلیم کررہے ہیں کہ بانی ایک سیاسی قیدی ہیں۔ میڈیا سے گفتگو میں...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-19/b_1634698_025241_updates.jpg\"/",
-      "published": "2026-11-18T21:11:05+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
       "title": "کراچی، مختلف علاقوں میں پولیس مقابلے، 3 زخمیوں سمیت 4 ملزمان گرفتار",
       "link": "https://www.express.pk/story/2844999/karachi-police-encounters-in-various-areas-4-suspects-arrested-including-3-who-sustained-injuries-2844999",
       "summary": "زخمیوں کو طبی امداد کے لیے اسپتال منتقل کر دیا گیا",
@@ -392,6 +482,26 @@
       "language": "en"
     },
     {
+      "title": "Musadik Malik set for Delhi visit",
+      "link": "https://tribune.com.pk/story/2641093/musadik-malik-set-for-delhi-visit",
+      "summary": "The visit will be the first by a Pakistani federal minister to India since May 2023",
+      "image_url": "",
+      "published": "2026-11-18T20:16:53+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Large LPG shipment arrives under new policy",
+      "link": "https://tribune.com.pk/story/2641096/large-lpg-shipment-arrives-under-new-policy",
+      "summary": "SLL imports 15,000 tonnes to strengthen supply chain",
+      "image_url": "",
+      "published": "2026-11-18T20:16:53+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "شدید دھند کے باعث موٹروے ایم 4 مختلف مقامات سے ٹریفک کے لیے بند",
       "link": "https://www.express.pk/story/2844997/motorway-m4-closed-to-traffic-from-various-locations-due-to-heavy-fog-2844997",
       "summary": "صبح 10 بجے سے شام 6 بجے کے درمیان سفر زیادہ موزوں ہے، ترجمان موٹر وے",
@@ -432,16 +542,6 @@
       "language": "en"
     },
     {
-      "title": "Pakistan's mango exports fall 36pc amid US-Iran war: exporters' association",
-      "link": "https://www.dawn.com/news/2045456/pakistans-mango-exports-fall-36pc-amid-us-iran-war-exporters-association",
-      "summary": "Pakistan’s mango exports fell 36 per cent this year as the US-Iran war disrupted shipping routes and drove up freight costs, industry figures showed on Wednesday. According to All Pakistan Fruit and Vegetables Exporters Association, the country exported 78,000 tonnes of mangoes this year, compared with 123,000 tons last year. Exports to the Middle East, a ma",
-      "image_url": "https://i.dawn.com/large/2021/05/60adac988055a.jpg",
-      "published": "2026-11-18T19:54:28+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
       "title": "مولانا فضل الرحمن کے قریبی ساتھی مفتی ابرار کے ناقابل ضمانت وارنٹ گرفتاری جاری، پولیس کے چھاپے",
       "link": "https://www.express.pk/story/2844995/non-bailable-arrest-warrants-issued-for-mufti-abrar-a-close-associate-of-maulana-fazl-ur-rehman-police-conduct-raids-2844995",
       "summary": "گرفتاری کے لیے اسلام آباد پولیس نے چھاپے شروع کردیے ہیں",
@@ -450,16 +550,6 @@
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "‘Have the courage to listen to the debate you started’: Bilawal sticks to his guns after speaking his ‘truth’",
-      "link": "https://www.dawn.com/news/2045449/have-the-courage-to-listen-to-the-debate-you-started-bilawal-sticks-to-his-guns-after-speaking-his-truth",
-      "summary": "PPP Chairman Bilawal Bhutto-Zardari on Wednesday maintained that his recent remarks on the country’s political situation were the “truth”, urging government representatives to have the “courage” to listen to his point of view. Speaking in an interview on Hum News programme ‘Faisla Aap Ka’, Bilawal reiterated his stance from his Tuesday’s speech, cautioning a",
-      "image_url": "https://i.dawn.com/large/2026/11/18212519159b268.webp",
-      "published": "2026-11-18T19:41:11+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
     },
     {
       "title": "Iran fires at Kuwait after US strike on Iranian island",
@@ -502,16 +592,6 @@
       "language": "en"
     },
     {
-      "title": "بلاول بھٹو کا 6 ماہ میں عام انتخابات کرانے کا مطالبہ",
-      "link": "https://jang.com.pk/news/1634676",
-      "summary": "پاکستان پیپلز پارٹی کے چیئرمین بلاول بھٹو زرداری کا 6 ماہ میں عام انتخابات کرانے کا مطالبہ، کہا کہ سسٹم کولپس، سسٹم ری سیٹ اور...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-19/b_1634676_010330_updates.jpg\"/",
-      "published": "2026-11-18T19:11:09+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
       "title": "PM Shehbaz Sharif postpones Karachi visit, sources",
       "link": "https://arynews.tv/pm-shehbaz-sharif-postpones-karachi-visit-sources",
       "summary": "",
@@ -532,22 +612,32 @@
       "language": "ur"
     },
     {
-      "title": "PTA says submarine cable fault may cause internet connectivity issues",
-      "link": "https://www.dawn.com/news/2045448/pta-says-submarine-cable-fault-may-cause-internet-connectivity-issues",
-      "summary": "The Pakistan Telecommunication Authority (PTA) said on Wednesday that a fault in one of the international submarine cable systems may result in users experiencing internet connectivity issues. “One of the international submarine cable systems, the SEA-ME-WE 5 (SMW5), has reported a fault at about 11km from Pakistan’s shore, which may cause some internet user",
-      "image_url": "https://i.dawn.com/large/2021/06/60da9ad6696e0.jpg",
-      "published": "2026-11-18T18:50:57+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
       "title": "Punjab to introduce panchayat system for grassroots dispute resolution",
       "link": "https://arynews.tv/punjab-to-introduce-panchayat-system-for-grassroots-dispute-resolution",
       "summary": "",
       "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/FotoJet-41.jpg",
       "published": "2026-11-18T18:30:15+00:00",
       "source": "ARY News",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "FCC upholds cousin's inheritance right",
+      "link": "https://tribune.com.pk/story/2641089/fcc-upholds-cousins-inheritance-right",
+      "summary": "Says paternal uncle's son may inherit as an 'Asabah bi-Nafsihi'",
+      "image_url": "",
+      "published": "2026-11-18T18:27:54+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "China seeks closer ties with Pakistan",
+      "link": "https://tribune.com.pk/story/2641078/china-seeks-closer-ties-with-pakistan",
+      "summary": "Beijing says party-building experience can offer lessons",
+      "image_url": "",
+      "published": "2026-11-18T18:27:53+00:00",
+      "source": "Express Tribune",
       "category": "Pakistan",
       "language": "en"
     },
@@ -592,106 +682,6 @@
       "language": "en"
     },
     {
-      "title": "KP governor forms 8-member commission to probe illegal placer gold mining",
-      "link": "https://www.dawn.com/news/2045455/kp-governor-forms-8-member-commission-to-probe-illegal-placer-gold-mining",
-      "summary": "PESHAWAR: Khyber Pakhtunkhwa Governor Faisal Karim Kundi on Wednesday constituted an eight-member inquiry commission to probe illegal placer gold mining in the province. The commission, according to a notification issued by the provincial home and tribal affairs department, will be headed by retired Justice Asadullah Khan Chamkani. It will also include as me",
-      "image_url": "https://i.dawn.com/large/2026/01/24095113b740e1d.webp",
-      "published": "2026-11-18T18:11:54+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "جس ملک میں 5 تعلیمی نظام چل رہے ہوں وہاں ایک قوم کیسے بن سکتی ہے: حافظ نعیم الرحمان",
-      "link": "https://jang.com.pk/news/1634670",
-      "summary": "امیر جماعت اسلامی پاکستان حافظ نعیم الرحمان نے کہا ہے کہ جس ملک میں 5 تعلیمی نظام چل رہے ہوں وہاں ایک قوم کیسے بن سکتی ہے۔اپنے ایک...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-18/b_1634670_114532_updates.jpg\"/",
-      "published": "2026-11-18T18:11:54+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "میر رضا کیس ، وکیل جبران ناصر نے وزیر داخلہ ضیاء لنجار کو خط لکھ دیا",
-      "link": "https://jang.com.pk/news/1634672",
-      "summary": "فوٹو: فائلکراچی کے نوجوان تاجر میر رضا کیس میں والدین کے وکیل جبران ناصر نے صوبائی وزیر داخلہ ضیاء الحسن لنجار کو خط لکھ دیا۔خط کے متن...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-18/b_1634672_120124_updates.jpg\"/",
-      "published": "2026-11-18T18:11:49+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "مضبوط پاکستان ہی کشمیریوں کی آزادی کا ضامن ہے: وزیراعظم آزاد کشمیر",
-      "link": "https://jang.com.pk/news/1634667",
-      "summary": "وزیراعظم آزاد کشمیر افتخار گیلانی نے کہا ہے کہ ایک مضبوط پاکستان ہی کشمیریوں کی آزادی کا ضامن ہے۔ منصوبوں پر فوراً عمل درآمد...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-18/b_1634667_112755_updates.jpg\"/",
-      "published": "2026-11-18T18:11:46+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "اسلام آباد میں گدھے اور کتوں کا 800 کلو گوشت برآمد",
-      "link": "https://jang.com.pk/news/1634665",
-      "summary": "اسلام آباد کے علاقے ڈی 14 کے مکان سے گدھے اور کتوں کا 800 کلو گوشت برآمد ہوا ہے۔گدھے اور کتوں کے گوشت برآمدگی پر فوڈ اتھارٹی کی مدعیت...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-18/b_1634665_111858_updates.jpg\"/",
-      "published": "2026-11-18T18:11:34+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "آزادکشمیر کا ماضی دردناک، حکومتوں نے ناقص کارکردگی دکھائی: نواز شریف",
-      "link": "https://jang.com.pk/news/1634664",
-      "summary": "حکمران جماعت مسلم لیگ کے قائد نواز شریف نے کہا ہے کہ آزاد کشمیر کا ماضی درد ناک ہے، یہاں حکومتوں نے ناقص کارکردگی دکھائی۔مظفرآباد...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-18/b_1634664_110913_updates.jpg\"/",
-      "published": "2026-11-18T18:11:23+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "آزاد کشمیر کو جو چاہیے حاضر کریں گے: وزیراعظم شہباز شریف",
-      "link": "https://jang.com.pk/news/1634666",
-      "summary": "وزیراعظم شہباز شریف نے کہا ہے کہ آزاد کشمیر کو جو چاہیے حاضر کریں گے۔مظفر آباد میں اجلاس کے دوران وزیراعظم نے آزاد کشمیر میں...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-18/b_1634666_113224_updates.jpg\"/",
-      "published": "2026-11-18T18:11:17+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "فلار ملز ایسوسی ایشن کا پاسکو سے گندم لینے سے انکار",
-      "link": "https://jang.com.pk/news/1634669",
-      "summary": "اسکرین گریب سوشل میڈیافلار ملز ایسوسی ایشن نے پاسکو سے فراہم کی جانے والی گندم لینے سے انکار کردیا ہے۔مارکیٹ میں گندم کی قیمت بڑھنے...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-18/b_1634669_113605_updates.jpg\"/",
-      "published": "2026-11-18T18:11:13+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "پاکستانی معیشت میں ایس ایم ایز کا کردار بڑھایا جاسکتا ہے: وزیر خزانہ محمد اورنگزیب",
-      "link": "https://jang.com.pk/news/1634668",
-      "summary": "فوٹو: پی آئی ڈیوفاقی وزیر خزانہ سینیٹر محمد اورنگزیب نے کہا ہے کہ پاکستانی معیشت میں ایس ایم ایز کا کردار مزید بڑھایا جاسکتا...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-18/b_1634668_113059_updates.jpg\"/",
-      "published": "2026-11-18T18:11:12+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "عالمی منڈی میں کمی سے پاکستان میں بھی پیٹرولیم مصنوعات کی قیمتیں کم ہوچکیں: اسحاق ڈار",
-      "link": "https://jang.com.pk/news/1634671",
-      "summary": "فوٹو: فائلنائب وزیراعظم اسحاق ڈار نے کہا ہے کہ عالمی منڈی میں قیمتوں میں کمی سے پاکستان میں بھی پیٹرولیم مصنوعات کی قیمتیں کم ہوچکی...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-18/b_1634671_115242_updates.jpg\"/",
-      "published": "2026-11-18T18:11:02+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
       "title": "OGRA reduces petrol and diesel prices",
       "link": "https://arynews.tv/ogra-reduces-petrol-and-diesel-prices",
       "summary": "",
@@ -699,16 +689,6 @@
       "published": "2026-11-18T17:57:19+00:00",
       "source": "ARY News",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Regulator mistakenly sent complaints about doctors to newspaper",
-      "link": "https://www.bbc.co.uk/news/articles/c8wy5erexq0ko?at_medium=RSS&at_campaign=rss",
-      "summary": "Information sent to the Times newspaper by the General Medical Council included summaries of complaints alleging antisemitism and Islamophobia against doctors.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/73cb/live/11eb1800-e373-11f1-9f51-4bfc31543510.jpg",
-      "published": "2026-11-18T17:48:10+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     },
     {
@@ -729,16 +709,6 @@
       "published": "2026-11-18T17:34:25+00:00",
       "source": "BBC News",
       "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "Petrol and diesel prices reduced by Rs3 per litre each",
-      "link": "https://www.dawn.com/news/2045444/petrol-and-diesel-prices-reduced-by-rs3-per-litre-each",
-      "summary": "The government on Wednesday reduced the prices of both petrol and diesel by Rs3 per litre, marking the twelfth consecutive decrease in the rate of petrol. Following the revision, petrol will retail at Rs322 per litre, while HSD will remain at Rs355 on Nov 19 (Thursday), according to a notification by the Oil and Gas Regulatory Authority (Ogra). Following Tue",
-      "image_url": "https://i.dawn.com/large/2021/09/6142c0a4d1dc0.jpg",
-      "published": "2026-11-18T17:32:16+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
       "language": "en"
     },
     {
@@ -872,16 +842,6 @@
       "language": "ur"
     },
     {
-      "title": "ICJ report sees 'judicial capture' in Pakistan after 26th, 27th Constitutional Amendments",
-      "link": "https://www.dawn.com/news/2045441/icj-report-sees-judicial-capture-in-pakistan-after-26th-27th-constitutional-amendments",
-      "summary": "A report released by the International Commission of Jurists (ICJ) on Wednesday said that the 26th and 27th Constitutional Amendments led to a “systemic judicial capture” in Pakistan. The 26th Amendment , passed in October 2024, carved constitutional benches out of the Supreme Court, with their members chosen by a reconstituted Judicial Commission of Pakista",
-      "image_url": "https://i.dawn.com/large/2025/11/13230312748df31.webp",
-      "published": "2026-11-18T16:18:54+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
       "title": "Pakistan, Singapore discuss stronger trade and investment ties",
       "link": "https://arynews.tv/pakistan-singapore-discuss-stronger-trade-and-investment-ties",
       "summary": "",
@@ -892,114 +852,154 @@
       "language": "en"
     },
     {
-      "title": "ملیر کالا بورڈ کے قریب ٹرین کی زد میں آکر ایک شخص جاں بحق",
-      "link": "https://www.express.pk/story/2844986/a-man-died-after-being-struck-by-a-train-near-malir-kala-board-2844986",
-      "summary": "جاں بحق ہونے والے شخص کی شناخت 37 سالہ امجد کے نام سے کی گئی",
+      "title": "جوڑوں کے درد سے پیٹ کی ضدی چربی تک: جنوبی ایشیائی خواتین میں پیری مینوپاز کی وہ علامات جنھیں اکثر نظرانداز کر دیا جاتا ہے",
+      "link": "https://www.bbc.com/urdu/articles/ck1ewz08p88go?at_medium=RSS&at_campaign=rss",
+      "summary": "توجہ مرکوز کرنے میں دشواری، گفتگو کے دوران الفاظ بھول جانا یا چیزیں یاد رکھنے میں مشکل پیش آنا پیری مینوپاز کی عام ذہنی علامات میں شامل ہیں۔ تاہم جنوبی ایشیائی خواتین میں ان علامات کو اکثر ذہنی دباؤ، مصروف طرز زندگی یا بڑھتی عمر کا حصہ سمجھ کر نظرانداز کر دیا جاتا ہے۔",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/fd3c/live/f3e2b760-e326-11f1-baab-4b3b35d174b7.jpg",
+      "published": "2026-11-18T14:36:49+00:00",
+      "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ICJ report deplores judicial independence in Pakistan after 26th, 27th Constitutional Amendments",
+      "link": "https://tribune.com.pk/story/2641046/icj-report-deplores-judicial-independence-in-pakistan-after-26th-27th-constitutional-amendments",
+      "summary": "Report says structural problems identified require 'substantial constitutional and statutory amendments'",
       "image_url": "",
-      "published": "2026-11-18T16:04:49+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "NCCIA arrests suspect in Lahore over online sexual exploitation of US minor",
-      "link": "https://arynews.tv/nccia-arrests-suspect-in-lahore-over-online-sexual-exploitation-of-us-minor",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/NCCIA-2.jpg",
-      "published": "2026-11-18T16:02:12+00:00",
-      "source": "ARY News",
+      "published": "2026-11-18T14:30:53+00:00",
+      "source": "Express Tribune",
       "category": "Pakistan",
       "language": "en"
     },
     {
-      "title": "کپاس کی پیداوار میں محدوداضافہ ریکارڈ، معیار بری طرح متاثر",
-      "link": "https://www.express.pk/story/2844985/limited-increase-in-cotton-production-recorded-quality-severely-affected-2844985",
-      "summary": "پنجاب میں اس وقت 203 اورسندھ میں 207 جننگ فیکٹریاں فعال ہیں",
+      "title": "’کمنز کی پریس کانفرنس نے مجھے غصہ دلایا‘: سینڈ پیپر سکینڈل پر سزا پانے والے بینکرافٹ کے نئے انکشافات",
+      "link": "https://www.bbc.com/urdu/articles/c6vg2409r5n9o?at_medium=RSS&at_campaign=rss",
+      "summary": "آسٹریلوی کرکٹر کیمرون بینکرافٹ نے دعویٰ کیا ہے کہ سنہ 2018 کے متنازع ’سینڈ پیپر‘ منصوبے سے آسٹریلیا کی پوری ٹیم آگاہ تھی اور ان کے اس انکشاف سے ٹیم کے موجودہ کپتان پیٹ کمنز پر دباؤ بڑھنے کا امکان ہے۔",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/fb1d/live/c5d2fbf0-e330-11f1-9c56-6ffaf0e1e706.jpg",
+      "published": "2026-11-18T13:38:01+00:00",
+      "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "زمین سے ایک نوری دن کا فاصلہ مکمل کرنے والا جہاز جس میں خلائی مخلوق کے لیے اردو میں بھی پیغام ہے",
+      "link": "https://www.bbc.com/urdu/articles/cqrmg7wkyldgo?at_medium=RSS&at_campaign=rss",
+      "summary": "اس سپیس کرافٹ کی خاص بات یہ ہے کہ اس میں 12 انچ قطر کی سونے سے ملمع شدہ ایک ڈسک نصب ہے، جس میں زمین کے مختلف باشندوں کی جانب سے اردو سمیت 55 زبانوں میں پیغامات شامل ہیں۔ یہ پیغامات زمین سے باہر موجود مخلوق کے لیے ریکارڈ گئے ہیں۔",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/8d16/live/3fcb94e0-ddbd-11f1-93e1-3b657b665bcf.png",
+      "published": "2026-11-18T11:47:40+00:00",
+      "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "'Come to your senses': Bilawal advises govt to 'calm down' and hold a 'debate you started' on provinces",
+      "link": "https://tribune.com.pk/story/2641037/come-to-your-senses-bilawal-advises-govt-to-calm-down-and-hold-a-debate-you-started-on-provinces",
+      "summary": "Bilawal responds to criticism from Defence Minister Khawaja Asif",
       "image_url": "",
-      "published": "2026-11-18T16:00:22+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Bilawal Bhutto warns Mohsin Naqvi he will be helpless if tensions over new provinces spread",
-      "link": "https://arynews.tv/bilawal-bhutto-exclusive-interview-on-new-provinces",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Bilawal.jpg",
-      "published": "2026-11-18T15:59:33+00:00",
-      "source": "ARY News",
+      "published": "2026-11-18T11:09:36+00:00",
+      "source": "Express Tribune",
       "category": "Pakistan",
       "language": "en"
     },
     {
-      "title": "US Democrats nominate Hakeem Jeffries to be first Black House speaker",
-      "link": "https://www.dawn.com/news/2045446/us-democrats-nominate-hakeem-jeffries-to-be-first-black-house-speaker",
-      "summary": "Hakeem Jeffries is on the cusp of becoming the first Black speaker of the US House of Representatives after Democrats elected him their leader Wednesday following a sweeping midterm election triumph . The 56-year-old New Yorker secured 251 votes in a closed-door, secret ballot, with 11 cast against his nomination, according to US media. Jeffries faced no dec",
-      "image_url": "https://i.dawn.com/large/2026/11/18204128047748e.webp",
-      "published": "2026-11-18T15:47:45+00:00",
-      "source": "Dawn",
+      "title": "Joanna Page says male actor made 'awful' and 'inappropriate' comments to her on set",
+      "link": "https://www.bbc.co.uk/news/articles/cqj3kelenm0do?at_medium=RSS&at_campaign=rss",
+      "summary": "Page spoke of the comments during Tuesday's episode of I'm a Celebrity... Get Me Out Of Here!",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ca06/live/582be290-e33c-11f1-99a1-253766e7ad8b.jpg",
+      "published": "2026-11-18T11:00:05+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Steve Rosenberg: Historic talks with Xi and Trump are a coup for Putin",
+      "link": "https://www.bbc.co.uk/news/articles/c9n70gd320mpo?at_medium=RSS&at_campaign=rss",
+      "summary": "Thursday's meeting between the leaders of US, China and Russia will give Vladimir Putin a big stage - but it does not bring him closer to winning the war in Ukraine.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/17b2/live/72c78770-e36f-11f1-a094-5fdc692f3e33.jpg",
+      "published": "2026-11-18T10:53:21+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Analysis: Big Three converge in Shenzhen for 'mini Yalta'",
+      "link": "https://tribune.com.pk/story/2641034/big-three-converge-for-mini-yalta",
+      "summary": "Xi, Trump and Putin are set for an unprecedented trilateral summit amid global turmoil",
+      "image_url": "",
+      "published": "2026-11-18T10:42:38+00:00",
+      "source": "Express Tribune",
       "category": "Pakistan",
       "language": "en"
     },
     {
-      "title": "Pakistan conducts successful launch of Fatah-3 supersonic cruise missile: ISPR",
-      "link": "https://www.dawn.com/news/2045425/pakistan-conducts-successful-launch-of-fatah-3-supersonic-cruise-missile-ispr",
-      "summary": "The Pakistan Army on Wednesday successfully launched the Fatah-3 supersonic cruise missile, according to the military’s media wing. In a statement, Inter-Services Public Relations (ISPR) said, “The Pakistan Army successfully conducted the launch of the Fatah-3 supersonic cruise missile, marking another significant milestone in strengthening Pakistan’s nation",
-      "image_url": "https://i.dawn.com/large/2026/11/1817435584441b3.webp",
-      "published": "2026-11-18T15:35:41+00:00",
-      "source": "Dawn",
+      "title": "’اب لوگ جہیز میں بھی سولر پینل دیتے ہیں‘: پاکستان میں شمسی توانائی کا انقلاب جس نے حکومت کو مشکل میں ڈال دیا",
+      "link": "https://www.bbc.com/urdu/articles/cr5y16pez9j0o?at_medium=RSS&at_campaign=rss",
+      "summary": "اپنے گھروں میں شمسی پینل نصب کرنے والے صارفین نے پاکستان میں بجلی کی پیداوار میں شمسی توانائی کا حصہ ایک فیصد سے بڑھا کر 28 فیصد تک پہنچانے میں اہم کردار ادا کیا ہے۔",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/7f9b/live/9d67ed20-e29e-11f1-8dda-8925a81c3da5.jpg",
+      "published": "2026-11-18T10:42:04+00:00",
+      "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ASEAN sec gen to visit Pakistan for first time in over two decades from Nov 18 to 20: FO",
+      "link": "https://tribune.com.pk/story/2641031/asean-sec-gen-to-visit-pakistan-for-first-time-in-over-two-decades-from-nov-18-to-20-fo",
+      "summary": "Kao Kim Hourn's visit to focus on strengthening Pakistan-ASEAN ties, exploring avenues for enhanced cooperation",
+      "image_url": "",
+      "published": "2026-11-18T10:07:09+00:00",
+      "source": "Express Tribune",
       "category": "Pakistan",
       "language": "en"
     },
     {
-      "title": "Finance minister shares Pakistan’s SME reforms at Global Forum 2026",
-      "link": "https://arynews.tv/finance-minister-shares-pakistans-sme-reforms-at-global-forum-2026",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/07/Finance-Minister.jpg",
-      "published": "2026-11-18T15:19:47+00:00",
-      "source": "ARY News",
+      "title": "وہ قدیم زیرِ زمین شہر جو شدید گرمی میں ٹھنڈا اور سردی میں گرم رہتا ہے",
+      "link": "https://www.bbc.com/urdu/articles/c61k9m84rkl0o?at_medium=RSS&at_campaign=rss",
+      "summary": "یہ قدیم شہر اتفاق سے دریافت ہوا تھا لیکن آج اس بات پر غور ہو رہا ہے کہ کیا زیرزمین شہر ہی شدید موسمی حالات سے تحفظ کا ذریعہ ہیں؟ لیکن یہ قدیم شہر کس نے اور کیوں بنایا تھا؟",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/4113/live/ca99f050-e324-11f1-a094-5fdc692f3e33.png",
+      "published": "2026-11-18T08:04:21+00:00",
+      "source": "BBC Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "Military successfully tests launch of Fatah-3 supersonic cruise missile",
+      "link": "https://tribune.com.pk/story/2641020/military-successfully-tests-launch-of-fatah-3-supersonic-cruise-missile",
+      "summary": "President, the prime minister and the chief of defence forces congratulate the armed forces and the teams involved",
+      "image_url": "",
+      "published": "2026-11-18T07:25:48+00:00",
+      "source": "Express Tribune",
       "category": "Pakistan",
       "language": "en"
     },
     {
-      "title": "سب میرین کیبل میں فالٹ آگیا، صارفین کو انٹرنیٹ تک رسائی میں مشکلات کا سامنا",
-      "link": "https://jang.com.pk/news/1634658",
-      "summary": "پاکستان ٹیلی کمیونیکیشن اتھارٹی نے کہا ہے کہ سب میرین کیبل ایس ایم ڈبلیو 5 میں فالٹ آگیا۔پی ٹی اے کے مطابق خرابی پاکستان کے ساحل...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-18/b_1634658_090113_updates.jpg\"/",
-      "published": "2026-11-18T15:11:55+00:00",
-      "source": "Jang",
+      "title": "Xi, Trump, Putin exchange first greetings in China",
+      "link": "https://tribune.com.pk/story/2641015/chinas-xi-greets-trump-on-arrival-at-shenzhen-airport",
+      "summary": "Trilateral has triggered fears the three powerful men can make decisions on fate of Ukraine over heads of Kyiv, Europe",
+      "image_url": "",
+      "published": "2026-11-18T06:36:38+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "انڈیا کو مختصر عرصے کے لیے بھرتی کیے گئے فوجی اہلکاروں کی مدت ملازمت بڑھانے کی ضرورت کیوں پڑی؟",
+      "link": "https://www.bbc.com/urdu/articles/ck5y1g4jp011o?at_medium=RSS&at_campaign=rss",
+      "summary": "چیف آف ڈیفنس سٹاف جنرل این ایس راجا سبرامنی نے حال میں اعلان کیا کہ اگنی پتھ پروگرام کے تحت مستقل ملازمت حاصل نہ کر سکنے والے افراد کو مزید دو سال تک خدمات انجام دینے کی پیشکش کی جائے گی۔ لیکن اس فیصلے کی وجہ کیا ہے اور اس پروگرام پر تنقید کیوں ہوتی ہے؟",
+      "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/cc56/live/ce11ba80-de59-11f1-9b47-0919bf7329d1.jpg",
+      "published": "2026-11-18T06:02:58+00:00",
+      "source": "BBC Urdu",
       "category": "اردو",
       "language": "ur"
     },
     {
-      "title": "کیا پی سی بی چیئرمین کو یہ حق ہے وہ کہے کہ سسٹم گرچکا ہے، بلاول بھٹو زرداری",
-      "link": "https://jang.com.pk/news/1634655",
-      "summary": "بلاول بھٹو زرداری : فوٹو ایکس پیپلز پارٹی پاکستان پیپلز پارٹی کے چیئرمین بلاول بھٹو زرداری کا کہنا ہے کہ سسٹم گرچکا ہے تو کیا صرف...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-18/b_1634655_083651_updates.jpg\"/",
-      "published": "2026-11-18T15:11:46+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "احسن اقبال پہلے سندھ اسمبلی کے رکن منتخب ہوں اور پھر صوبہ بنا کر دکھائیں، مراد علی شاہ",
-      "link": "https://jang.com.pk/news/1634653",
-      "summary": "فائل فوٹو۔وزیر اعلیٰ سندھ سید مراد علی شاہ نے کہا ہے کہ احسن اقبال پہلے سندھ اسمبلی کے رکن منتخب ہوں اور پھر صوبہ بنا کر...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-18/b_1634653_081539_updates.jpg\"/",
-      "published": "2026-11-18T15:11:07+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ایک سے زائد انسداد دہشتگردی عدالتوں والےعلاقوں میں انچارج جج نامزد کیا جائے گا، ترمیمی بل منظور",
-      "link": "https://jang.com.pk/news/1634654",
-      "summary": "سندھ اسمبلی : فائل فوٹو سندھ اسمبلی نے انسداد دہشتگردی ایکٹ ترمیمی بل منظور کرلیا، جس کے مطابق ایک سے زائد انسداد دہشتگردی عدالتوں...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-18/b_1634654_082333_updates.jpg\"/",
-      "published": "2026-11-18T15:11:03+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
+      "title": "Ainy Jaffri says kindness, not criticism, is the key to changing minds",
+      "link": "https://tribune.com.pk/story/2641001/ainy-jaffri-says-kindness-not-criticism-is-the-key-to-changing-minds",
+      "summary": "Actor discusses religious questioning, women's choices, marriage & importance of understanding differing perspectives",
+      "image_url": "",
+      "published": "2026-11-18T05:43:23+00:00",
+      "source": "Express Tribune",
+      "category": "Pakistan",
+      "language": "en"
     }
   ]
 }
