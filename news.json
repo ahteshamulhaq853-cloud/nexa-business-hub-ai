@@ -1,6 +1,46 @@
 {
-  "updated": "2026-11-18T23:16:17.132845+00:00",
+  "updated": "2026-11-19T00:04:35.538090+00:00",
   "items": [
+    {
+      "title": "McDonald's sex abuse: 'They were waiting for the younger girls to turn 18'",
+      "link": "https://www.bbc.co.uk/news/articles/c6x2eve321jno?at_medium=RSS&at_campaign=rss",
+      "summary": "A former McDonald's worker calls on the firm to “change the way they treat younger employees” as a judge rules a legal case against the chain can go ahead.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/decb/live/a6ef9570-e364-11f1-99a1-253766e7ad8b.jpg",
+      "published": "2026-11-19T00:00:59+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Claude-maker Anthropic poised for $1.4tn stock market debut",
+      "link": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
+      "summary": "Anthropic started just five years ago an is now one of the biggest names in artificial intelligence.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3a11/live/4dfcb420-e37d-11f1-b879-03485a55c082.jpg",
+      "published": "2026-11-18T23:44:27+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Seven Anthropic founders who are about to become multi-billionaires",
+      "link": "https://www.bbc.co.uk/news/articles/cmd7159vlr85o?at_medium=RSS&at_campaign=rss",
+      "summary": "The AI company behind Claude is about to sell its shares on the US stock market - making its founders very rich.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f70c/live/7ee6d930-e346-11f1-99aa-0f40b013ad11.jpg",
+      "published": "2026-11-18T23:42:07+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Google rejects UK request for Russell Brand YouTube video to be removed, sources say",
+      "link": "https://www.bbc.co.uk/news/articles/cmgrenln8p29o?at_medium=RSS&at_campaign=rss",
+      "summary": "This comes after Brand's wife shared a message from him in which he claimed his innocence.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c05a/live/ff349a00-e38c-11f1-bc86-33d7d6275eba.jpg",
+      "published": "2026-11-18T23:29:14+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
     {
       "title": "Israeli military launches rare ground operation in Gaza beyond Yellow Line",
       "link": "https://www.bbc.co.uk/news/articles/cw8r7510degno?at_medium=RSS&at_campaign=rss",
@@ -17,16 +57,6 @@
       "summary": "Anthropic's hotly anticipated IPO is expected to put it in the top 10 most valuable US companies, but the future is uncertain.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/dcc1/live/0bb55690-e36d-11f1-99a1-253766e7ad8b.jpg",
       "published": "2026-11-18T21:28:08+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
-      "title": "UK government asks for Russell Brand's YouTube account to be removed",
-      "link": "https://www.bbc.co.uk/news/articles/cmgrenln8p29o?at_medium=RSS&at_campaign=rss",
-      "summary": "This comes after Brand's wife shared a message from him in which he claimed his innocence.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/c05a/live/ff349a00-e38c-11f1-bc86-33d7d6275eba.jpg",
-      "published": "2026-11-18T21:17:50+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
@@ -212,16 +242,6 @@
       "language": "en"
     },
     {
-      "title": "'Lip King unbothered' when mum collapsed after BBL",
-      "link": "https://www.bbc.co.uk/news/articles/cmrrg02nkpjeo?at_medium=RSS&at_campaign=rss",
-      "summary": "Alice Webb died in 2024 after having a procedure known as a Brazilian Butt Lift, an inquest hears.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/73b9/live/4333c410-e379-11f1-99b6-a35a62fa4264.jpg",
-      "published": "2026-11-18T18:49:35+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "Punjab to introduce panchayat system for grassroots dispute resolution",
       "link": "https://arynews.tv/punjab-to-introduce-panchayat-system-for-grassroots-dispute-resolution",
       "summary": "",
@@ -240,6 +260,16 @@
       "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "آئی ایم ایف پروگرام میں موجودگی سرمایہ کاروں کیلیے باعث اطمینان",
+      "link": "https://www.express.pk/story/2844994/presence-in-imf-program-brings-satisfaction-to-investors-2844994",
+      "summary": "معاشی استحکام کے لیے پالیسیوں میں تسلسل اور مالیاتی نظم و ضبط ناگزیر، ماہرین",
+      "image_url": "",
+      "published": "2026-11-18T18:21:31+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Council wins legal fight against flags on lamp-posts",
@@ -970,36 +1000,6 @@
       "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
-    },
-    {
-      "title": "بڑھتی گداگری",
-      "link": "https://www.express.pk/story/2844966/rising-beggary-2844966",
-      "summary": "خیرات مانگنے کے عادیوں کو نہ مہنگائی کی فکر ہے نہ وہ بے روزگار ہیں",
-      "image_url": "",
-      "published": "2026-11-18T14:07:59+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "سندھ: فورتھ شیڈول میں شامل افراد کی تعداد 149 ہوگئی",
-      "link": "https://www.express.pk/story/2844965/sindh-number-of-individuals-included-in-the-fourth-schedule-has-reached-149-2844965",
-      "summary": "مزید 16 افراد کے نام فہرست میں شامل کرنے کی سفارش، 6 افراد تاحال گرفت میں نہ آسکے",
-      "image_url": "",
-      "published": "2026-11-18T14:04:32+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "Seven Anthropic founders who are about to become multi-billionaires",
-      "link": "https://www.bbc.co.uk/news/articles/cmd7159vlr85o?at_medium=RSS&at_campaign=rss",
-      "summary": "The AI company behind Claude is about to sell its shares on the US stock market - making its founders very rich.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f70c/live/7ee6d930-e346-11f1-99aa-0f40b013ad11.jpg",
-      "published": "2026-11-18T13:55:14+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
     }
   ]
 }
