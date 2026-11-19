@@ -1,6 +1,26 @@
 {
-  "updated": "2026-11-19T20:36:32.596713+00:00",
+  "updated": "2026-11-19T21:26:05.173218+00:00",
   "items": [
+    {
+      "title": "Europe ready for talks with Russia on ending war in Ukraine, leaders say",
+      "link": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go?at_medium=RSS&at_campaign=rss",
+      "summary": "European allies of Ukraine say they have a \"united\" negotiating position at a summit in Berlin.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1fd8/live/5c168a90-e44a-11f1-a094-5fdc692f3e33.jpg",
+      "published": "2026-11-19T21:21:43+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "ملک کے مفاد میں بہتر فیصلہ سامنے آئے گا، طارق فضل",
+      "link": "https://jang.com.pk/news/1634966",
+      "summary": "وفاقی وزیر برائے پارلیمانی امور ڈاکٹر طارق فضل چودھری نے کہا ہے کہ صدر آصف زرداری اور وزیر اعظم شہباز شریف کی ملاقات کے بعد مثبت...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-20/b_1634966_020228_updates.jpg\"/",
+      "published": "2026-11-19T21:11:00+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
     {
       "title": "Anthropic’s meteoric rise from AI startup to $2 trillion market debut",
       "link": "https://arynews.tv/anthropics-meteoric-rise-from-ai-startup-to-2-trillion-market-debut",
@@ -99,16 +119,6 @@
       "published": "2026-11-19T19:18:45+00:00",
       "source": "ARY News",
       "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Europe ready for talks with Russia on ending war in Ukraine, leaders say",
-      "link": "https://www.bbc.co.uk/news/articles/ckzd9nln5e6go?at_medium=RSS&at_campaign=rss",
-      "summary": "European allies of Ukraine say they have a \"united\" negotiating position at a summit in Berlin.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/1fd8/live/5c168a90-e44a-11f1-a094-5fdc692f3e33.jpg",
-      "published": "2026-11-19T19:16:21+00:00",
-      "source": "BBC News",
-      "category": "World",
       "language": "en"
     },
     {
@@ -325,7 +335,7 @@
       "title": "Men guilty of abusing woman drugged and advertised for sex by husband",
       "link": "https://www.bbc.co.uk/news/articles/crq5n5pe935no?at_medium=RSS&at_campaign=rss",
       "summary": "Philip Young, 50, drugged and raped his wife, Joanne Young, over a 13-year period.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/b94e/live/32a0c210-e432-11f1-99a1-253766e7ad8b.jpg",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/94c7/live/863da8e0-e43a-11f1-8346-933d3547e297.jpg",
       "published": "2026-11-19T17:42:25+00:00",
       "source": "BBC News",
       "category": "World",
@@ -652,6 +662,16 @@
       "language": "ur"
     },
     {
+      "title": "نظام کی ری سیٹنگ کی تکرار",
+      "link": "https://www.express.pk/story/2845192/nizam-ki-resetting-ki-takrar-2845192",
+      "summary": "بچپن میں ہم گلیوں اور محلوں کی سطح پر برتن کلی کروالو یا نئے کروالوکی سیاسی گونج سنا کرتے تھے۔",
+      "image_url": "",
+      "published": "2026-11-19T16:10:34+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "ATC issues non-bailable arrest warrants for Fazal ur Rehman’s aide Mufti Abrar",
       "link": "https://arynews.tv/atc-issues-non-bailable-arrest-warrants-for-fazal-ur-rehmans-aide-mufti-abrar",
       "summary": "",
@@ -670,6 +690,66 @@
       "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
+    },
+    {
+      "title": "مرجھاتی کلیاں",
+      "link": "https://www.express.pk/story/2845191/murjhati-kaliyan-2845191",
+      "summary": "ستم ظریفی یہ ہے کہ ہمارے معاشرے میں بچوں کے خلاف تشدد اور جنسی استحصال کا عفریت روز بروز بے قابو ہوتا جا رہا ہے",
+      "image_url": "",
+      "published": "2026-11-19T15:51:01+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "دو انتہائی خطرناک فلیش پوائنٹس",
+      "link": "https://www.express.pk/story/2845190/do-intehai-khatarnak-flashpoints-2845190",
+      "summary": "اس وقت دنیا میں کئی فلیش پوائنٹس ہیں لیکن ان سب میں دو جنگیں پھیل کر بڑی تباہی کا پیش خیمہ بن سکتی ہیں",
+      "image_url": "",
+      "published": "2026-11-19T15:51:01+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "خدشات",
+      "link": "https://www.express.pk/story/2845189/khudshat-2845189",
+      "summary": "آئین، قانون، انصاف، جمہوری اصولوں کی روگردانی اور ہر مسئلے کے حل کے لیے محض طاقت کا استعمال عام آدمی کو فائدہ پہنچا سکتا ہے",
+      "image_url": "",
+      "published": "2026-11-19T15:51:00+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "سرمایہ داری نظام",
+      "link": "https://www.express.pk/story/2845188/sarmayadari-nizam-2845188",
+      "summary": "حقیقی اسلامی معیشت بینکوں کی عمارتوں سے نہیں بلکہ مسجد، خانقاہ اور باہمی مواخات پر مبنی اس معاشرتی ڈھانچے سے جنم لے گی",
+      "image_url": "",
+      "published": "2026-11-19T15:51:00+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "ریٹائرمنٹ کے بعد کا سچ",
+      "link": "https://www.express.pk/story/2845187/retirement-ke-baad-ka-sach-2845187",
+      "summary": "’’آپ تو پاگل ہیں، ہم پاگل تھوڑی ہیں کہ نوکری کے دوران سچ بول کر خود اپنے پاؤں پر کلہاڑی ماریں۔‘‘",
+      "image_url": "",
+      "published": "2026-11-19T15:50:59+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "تین بڑی طاقتیں، امن کا امتحان",
+      "link": "https://www.express.pk/story/2845186/teen-bari-taqatein-aman-ka-imtihan-2845186",
+      "summary": "جوہری ہتھیاروں کا معاملہ اس اجلاس کی سب سے سنگین عالمی ذمے داری ہے۔",
+      "image_url": "",
+      "published": "2026-11-19T15:50:59+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "Sophie Cunningham’s ketchup moment is pure offseason comedy gold!",
@@ -918,86 +998,6 @@
       "image_url": "",
       "published": "2026-11-19T14:15:09+00:00",
       "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "جے یو آئی کے مفتی ابرار کے ناقابل ضمانت وارنٹ جاری",
-      "link": "https://jang.com.pk/news/1634937",
-      "summary": "انسدادِ دہشتگردی عدالت اسلام آباد نے جے یو آئی ف کے مفتی ابرار کے ناقابل ضمانت وارنٹ جاری کردیے۔ پولیس ذرائع کے مطابق عدالتی...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-19/b_1634937_074623_updates.jpg\"/",
-      "published": "2026-11-19T14:11:47+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "تیل کمپنیوں کو ڈیجیٹائزیشن سے پہلے مارجن میں اضافے کی تجویر مسترد",
-      "link": "https://jang.com.pk/news/1634931",
-      "summary": "فوٹو: سینیٹرانا محمود الحسن کی زیر صدارت سینیٹ کی کابینہ کمیٹی برائے کابینہ سیکریٹریٹ کے اجلاس میں تیل کمپنیوں کو ڈیجیٹائزیشن سے...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-19/b_1634931_072236_updates.jpg\"/",
-      "published": "2026-11-19T14:11:40+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "بلاول بھٹو کراچی میں خون بہنے کے بیان پر معافی مانگیں، آفاق احمد",
-      "link": "https://jang.com.pk/news/1634930",
-      "summary": "آفاق احمد۔مہاجر قومی موومنٹ کے چیئرمین آفاق احمد نے کہا ہے کہ بلاول بھٹو کراچی میں خون بہنے کے بیان پر معافی مانگیں، کچھ لوگ سندھ...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-19/b_1634930_071459_updates.jpg\"/",
-      "published": "2026-11-19T14:11:39+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کوٹ لکھپت جیل میں قید پی ٹی آئی قیادت کا چیف جسٹسز کو خط، عدالتی احکامات پر عملدرآمد کا مطالبہ",
-      "link": "https://jang.com.pk/news/1634935",
-      "summary": "فائل فوٹو۔کوٹ لکھپت جیل لاہور میں قید پی ٹی آئی قیادت نے چیف جسٹس آف پاکستان اور چیف جسٹس اسلام آباد ہائیکورٹ کو خط تحریر کیے...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-19/b_1634935_074247_updates.jpg\"/",
-      "published": "2026-11-19T14:11:32+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "وزیراعظم سے آسیان سیکرٹری جنرل کی ملاقات، تجارت، سرمایہ کاری پر تبادلہ خیال",
-      "link": "https://jang.com.pk/news/1634939",
-      "summary": "ملاقات میں غذائی تحفظ، موسمیاتی تبدیلی، انفارمیشن ٹیکنالوجی اور تعلیم کے شعبوں میں اشتراکِ عمل کو وسعت دینے پر بھی گفتگو ہوئی۔ فوٹو:...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-19/b_1634939_075827_updates.jpg\"/",
-      "published": "2026-11-19T14:11:09+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "گروپ کیپٹن شہید عاصم طارق قتل کیس، پراسیکیوشن کے مزید 3 گواہان کے بیانات ریکارڈ",
-      "link": "https://jang.com.pk/news/1634932",
-      "summary": "کولاج فوٹو: فائلاسلام آباد کی انسدادِ ہشتگردی عدالت میں گروپ کیپٹن شہید عاصم طارق قتل کیس میں پراسیکیوشن کے مزید 3 گواہان کے بیانات...",
-      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-19/b_1634932_071544_updates.jpg\"/",
-      "published": "2026-11-19T14:11:07+00:00",
-      "source": "Jang",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کراچی؛ سی آئی اے کا انسپکٹر شہری کے اغوا میں ملوث نکلا، پولیس",
-      "link": "https://www.express.pk/story/2845175/karachi-police-says-cia-inspector-found-involved-in-the-kidnapping-of-a-citizen-2845175",
-      "summary": "ملزم اے وی ایل سی لیاقت آباد میں ڈی آئی او تعینات تھا تاہم ساتھی سمیت گرفتار کرلیا گیا ہے، ترجمان ضلع ملیر پولیس",
-      "image_url": "",
-      "published": "2026-11-19T14:11:04+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "NADRA explains categories of Family Registration Certificate",
-      "link": "https://arynews.tv/nadra-explains-categories-of-family-registration-certificate",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/11/FCR-1.jpg",
-      "published": "2026-11-19T14:08:04+00:00",
-      "source": "ARY News",
       "category": "Pakistan",
       "language": "en"
     }
