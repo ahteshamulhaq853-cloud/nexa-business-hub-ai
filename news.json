@@ -1,15 +1,55 @@
 {
-  "updated": "2026-11-19T02:21:50.381774+00:00",
+  "updated": "2026-11-19T03:19:12.088211+00:00",
   "items": [
     {
-      "title": "Claude-maker Anthropic poised for stock market debut worth up to $1.5tn",
+      "title": "The Papers: 'I'd rejoin the Army to fight Russia' and 'Boiling point'",
+      "link": "https://www.bbc.co.uk/news/articles/cqly45eymjeko?at_medium=RSS&at_campaign=rss",
+      "summary": "Dominating newspaper headlines is Prince Harry's declaration that he would rejoin the army if needed.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/0a48/live/56834f50-e3c3-11f1-b4e7-593563d738bb.jpg",
+      "published": "2026-11-19T03:10:00+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Elon Musk says record spending on US midterms was 'pretty foolish'",
+      "link": "https://www.bbc.co.uk/news/articles/cm9q8j2z3gg8o?at_medium=RSS&at_campaign=rss",
+      "summary": "The multi-billionaire also said he was \"not Maga\", distancing himself from the political movement linked to Trump.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3333/live/c9ef87a0-e3b5-11f1-ac8e-bf9cbaf16b78.jpg",
+      "published": "2026-11-19T02:59:06+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Suparco warns of worsening smog across Punjab",
+      "link": "https://www.dawn.com/news/2045563/suparco-warns-of-worsening-smog-across-punjab",
+      "summary": "LAHORE: The Pakistan Space and Upper Atmosphere Research Commission (Suparco) has warned of worsening smog conditions across Punjab over the next three days, with satellite observations detecting 690 active fire incidents in Punjab and adjoining transboundary areas, while Lahore on Wednesday topped the list of the world’s most polluted major cities. Accordin",
+      "image_url": "https://i.dawn.com/large/2025/10/31094052e337196.webp",
+      "published": "2026-11-19T02:44:08+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "AI giant Anthropic valued at up to $1.5tn ahead of stock market debut",
       "link": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss",
-      "summary": "Anthropic started just five years ago an is now one of the biggest names in artificial intelligence.",
+      "summary": "The firm started just five years ago and is now one of the biggest names in artificial intelligence.",
       "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/3a11/live/4dfcb420-e37d-11f1-b879-03485a55c082.jpg",
       "published": "2026-11-19T02:20:15+00:00",
       "source": "BBC News",
       "category": "World",
       "language": "en"
+    },
+    {
+      "title": "کراچی، ریگل چوک کے قریب دکانوں میں آتشزدگی",
+      "link": "https://jang.com.pk/news/1634793",
+      "summary": "فوٹو: اسکرین گریبکراچی میں ریگل چوک کے قریب دکانوں میں آگ لگ گئی۔فائر بریگیڈ حکام کے مطابق 3 فائر ٹینڈر اور ایک واٹر باوزر آگ بجھانے...",
+      "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-19/b_1634793_074752_updates.jpg\"/",
+      "published": "2026-11-19T02:11:08+00:00",
+      "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
     },
     {
       "title": "'Feudal' leasehold system set to be scrapped in England and Wales",
@@ -22,6 +62,36 @@
       "language": "en"
     },
     {
+      "title": "FBR unveils proposed rules for faceless tax appeals",
+      "link": "https://www.dawn.com/news/2045500/fbr-unveils-proposed-rules-for-faceless-tax-appeals",
+      "summary": "ISLAMABAD: The Federal Board of Revenue (FBR) unveiled draft rules on Wednesday for its faceless income tax appeals system, eliminating the need for physical interaction between taxpayers and appellate authorities. The new system will also conceal the identity of officers responsible for deciding tax disputes. The rules are expected to be finalised this week",
+      "image_url": "https://i.dawn.com/large/2026/08/01073835a15dc31.webp",
+      "published": "2026-11-19T01:55:08+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "Israel forces kill 3 Palestinians in fresh Gaza push",
+      "link": "https://www.dawn.com/news/2045504/israel-forces-kill-3-palestinians-in-fresh-gaza-push",
+      "summary": "• Board of Peace report blames both Israel and Hamas for failure to end war • Hamas dismisses report, accuses board of ‘protecting Israel’ CAIRO: Israeli tanks advanced in an area of the central Gaza Strip on Wednesday and the Israeli military said its forces were targeting Hamas infrastructure outside areas that Israel controls in the enclave. Witnesses sai",
+      "image_url": "https://i.dawn.com/large/2026/11/1908020706bbc48.webp",
+      "published": "2026-11-19T01:55:08+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
+      "title": "PTI’s legal eagles ‘shake and make up’",
+      "link": "https://www.dawn.com/news/2045549/ptis-legal-eagles-shake-and-make-up",
+      "summary": "• Raja, Khosa deny internal rifts; Gohar maintains all decisions taken on Imran’s directions • PTI warns Adiala authorities against violating SC orders on ex-PM’s medical treatment • IHC directs proper medical care, hygienic living conditions for Bushra Bibi as per prison rules ISLAMABAD: PTI Sec­r­e­tary General Salman Akram Raja and senior lawyer Sardar La",
+      "image_url": "https://i.dawn.com/large/2026/11/190802047409bea.webp",
+      "published": "2026-11-19T01:53:58+00:00",
+      "source": "Dawn",
+      "category": "Pakistan",
+      "language": "en"
+    },
+    {
       "title": "پہلا پاکستانی خلا باز 25 نومبر کو خلا کیلئے روانہ ہوگا",
       "link": "https://jang.com.pk/news/1634774",
       "summary": "خلائی تاریخ میں پاکستان ایک نئی منزل کی جانب گامزن، پہلا پاکستانی خلا باز 25 نومبر کو چین کے شین ژو 24 مشن کے ذریعے خلا میں روانہ...",
@@ -30,6 +100,26 @@
       "source": "Jang",
       "category": "اردو",
       "language": "ur"
+    },
+    {
+      "title": "Crimean Bridge attacked again, Russian official says",
+      "link": "https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&at_campaign=rss",
+      "summary": "The head of Crimea said traffic was suspended after another attack on the link between Russia and the occupied territory.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/e29a/live/4b7210d0-e3ad-11f1-b942-5da5bfac5a5a.jpg",
+      "published": "2026-11-19T01:05:03+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
+    },
+    {
+      "title": "Van Gogh painting sells for record $190.4m after row over its Nazi history",
+      "link": "https://www.bbc.co.uk/news/articles/c5dj1dkwzvzwo?at_medium=RSS&at_campaign=rss",
+      "summary": "Châtaigniers en fleurs was painted in 1890 in the final two months of Vincent van Gogh's life.",
+      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ead6/live/066e7440-e3af-11f1-8476-9fd445fc522b.jpg",
+      "published": "2026-11-19T00:49:19+00:00",
+      "source": "BBC News",
+      "category": "World",
+      "language": "en"
     },
     {
       "title": "Is your child lying to you? That might not be a bad thing",
@@ -72,16 +162,6 @@
       "language": "en"
     },
     {
-      "title": "Seven Anthropic founders who are about to become multi-billionaires",
-      "link": "https://www.bbc.co.uk/news/articles/cmd7159vlr85o?at_medium=RSS&at_campaign=rss",
-      "summary": "The AI company behind Claude is about to sell its shares on the US stock market - making its founders very rich.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f70c/live/7ee6d930-e346-11f1-99aa-0f40b013ad11.jpg",
-      "published": "2026-11-18T23:42:07+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "Google rejects UK request for Russell Brand YouTube video to be removed, sources say",
       "link": "https://www.bbc.co.uk/news/articles/cmgrenln8p29o?at_medium=RSS&at_campaign=rss",
       "summary": "This comes after Brand's wife shared a message from him in which he claimed his innocence.",
@@ -112,6 +192,26 @@
       "language": "en"
     },
     {
+      "title": "اقوام متحدہ کے امن مشنز میں 183 پاکستانی اہلکاروں نے اپنی جان کا نذرانہ پیش کیا، خواجہ آصف",
+      "link": "https://www.express.pk/story/2845001/183-pakistani-personnel-have-sacrificed-their-lives-in-united-nations-peace-missions-says-khawaja-asif-2845001",
+      "summary": "پاکستان کی خدمات اور قربانیاں اس کے فعال بین الاقوامی کردار کا ثبوت ہیں، وزیر دفاع",
+      "image_url": "",
+      "published": "2026-11-18T21:59:05+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "اقوام متحدہ، بھارت کا پانی کو بطور ہتھیار استعمال کرنا عالمی قانون کی خلاف ورزی ہے، پاکستان",
+      "link": "https://www.express.pk/story/2845000/pakistans-ambassador-to-the-united-nations-rejected-the-notion-of-india-using-water-as-a-weapon-2845000",
+      "summary": "سفیر عثمان جادون نے قدرتی وسائل سے متعلق تنازعات کی روک تھام کے لیے تین اہم ترجیحات کی نشاندہی کی",
+      "image_url": "",
+      "published": "2026-11-18T21:49:37+00:00",
+      "source": "Express Urdu",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
       "title": "Can Anthropic's record-breaking IPO stop the AI bubble bursting?",
       "link": "https://www.bbc.co.uk/news/articles/cj4gnpzll020o?at_medium=RSS&at_campaign=rss",
       "summary": "Anthropic's hotly anticipated IPO is expected to put it in the top 10 most valuable US companies, but the future is uncertain.",
@@ -128,6 +228,16 @@
       "image_url": "https://jang.com.pk/assets/uploads/updates/2026-11-19/b_1634698_025241_updates.jpg\"/",
       "published": "2026-11-18T21:11:05+00:00",
       "source": "Jang",
+      "category": "اردو",
+      "language": "ur"
+    },
+    {
+      "title": "کراچی، مختلف علاقوں میں پولیس مقابلے، 3 زخمیوں سمیت 4 ملزمان گرفتار",
+      "link": "https://www.express.pk/story/2844999/karachi-police-encounters-in-various-areas-4-suspects-arrested-including-3-who-sustained-injuries-2844999",
+      "summary": "زخمیوں کو طبی امداد کے لیے اسپتال منتقل کر دیا گیا",
+      "image_url": "",
+      "published": "2026-11-18T21:08:35+00:00",
+      "source": "Express Urdu",
       "category": "اردو",
       "language": "ur"
     },
@@ -672,16 +782,6 @@
       "language": "en"
     },
     {
-      "title": "The sandpaper plot - who was there, who said what?",
-      "link": "https://www.bbc.co.uk/sport/cricket/articles/cqwy41w3zydgo?at_medium=RSS&at_campaign=rss",
-      "summary": "As Cameron Bancroft's explosive allegations raise more questions about the sandpaper scandal, BBC Sport looks at who was there and what they have said since.",
-      "image_url": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/f5ea/live/792a2740-e35f-11f1-a898-e7da1c1ebbf0.jpg",
-      "published": "2026-11-18T16:13:04+00:00",
-      "source": "BBC News",
-      "category": "World",
-      "language": "en"
-    },
-    {
       "title": "Pakistan, Singapore discuss stronger trade and investment ties",
       "link": "https://arynews.tv/pakistan-singapore-discuss-stronger-trade-and-investment-ties",
       "summary": "",
@@ -898,106 +998,6 @@
       "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/08/Jibran-Nasir.jpg",
       "published": "2026-11-18T14:34:54+00:00",
       "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "ارجنٹائن: فٹبال میچ کے دوران گیند سر پر لگنے سے نوجوان کھلاڑی ہلاک",
-      "link": "https://www.express.pk/story/2844979/tragedy-as-youth-footballer-2844979",
-      "summary": "واقعے کے بعد فٹبالر کو بے ہوشی حالت میں اسپتال منتقل کیا گیا جہاں وہ جانبر نہ ہوسکا",
-      "image_url": "",
-      "published": "2026-11-18T14:34:15+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "ICJ report deplores judicial independence in Pakistan after 26th, 27th Constitutional Amendments",
-      "link": "https://tribune.com.pk/story/2641046/icj-report-deplores-judicial-independence-in-pakistan-after-26th-27th-constitutional-amendments",
-      "summary": "Report says structural problems identified require 'substantial constitutional and statutory amendments'",
-      "image_url": "",
-      "published": "2026-11-18T14:30:53+00:00",
-      "source": "Express Tribune",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "نہ فردِ جرم، نہ مقدمہ؛ غزہ اسپتال کے ایم ایس کو مزید 6 ماہ جیل میں رکھنے کا حکم",
-      "link": "https://www.express.pk/story/2844978/israel-extends-hussam-abu-safiya-detention-six-months-2844978",
-      "summary": "عدالت نے یہ فیصلہ ڈاکٹر حسام ابو صفیہ کو اسرائیل کی ریاست کے لیے خطرہ قرار دیتے ہوئے سنایا۔",
-      "image_url": "",
-      "published": "2026-11-18T14:27:08+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "چلے بھی آؤ",
-      "link": "https://www.express.pk/story/2844977/do-come-along-2844977",
-      "summary": "مقبرہ جہانگیر آج بھی لاہور کے حسن میں شمار کیا جاتاہے",
-      "image_url": "",
-      "published": "2026-11-18T14:26:12+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "'He who claims equity must come with clean hands': Asif hits back at Bilawal",
-      "link": "https://www.dawn.com/news/2045397/he-who-claims-equity-must-come-with-clean-hands-asif-hits-back-at-bilawal",
-      "summary": "Defence Minister Khawaja Asif joined others from the ruling PML-N on Wednesday in responding to PPP Chairperson Bilawal Bhutto-Zardari following the latter’s hard-hitting speech over several issues, including new provinces, constitutional tweaks and treatment of the opposition. “He who claims equity must come with clean hands,” Asif reminded Bilawal in a pos",
-      "image_url": "https://i.dawn.com/large/2026/11/18125003c23b60e.webp",
-      "published": "2026-11-18T14:22:03+00:00",
-      "source": "Dawn",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "اتاترک… جدید ترکی کا بانی",
-      "link": "https://www.express.pk/story/2844976/ataturk-the-founder-of-modern-turkey-2844976",
-      "summary": "ترکی میں جدید فکری تحریک میں ضیاگو کلپ نے بنیادی کردار ادا کیا",
-      "image_url": "",
-      "published": "2026-11-18T14:21:47+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "گنج پن ختم کرنے کے لیے الیکٹرانک کنگھا تیار",
-      "link": "https://www.express.pk/story/2844975/new-electronic-comb-achieves-nearly-2844975",
-      "summary": "چوہوں پر کیے گئے تجربات میں کنگھے سے ایک ماہ کے اندر تقریباً 100 فی صد بال دوبارہ اگانے کے نتائج حاصل ہوئے",
-      "image_url": "",
-      "published": "2026-11-18T14:19:31+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "کینیڈا کا بجٹ 2026… نیا امیگریشن دروازہ",
-      "link": "https://www.express.pk/story/2844973/canadas-2026-budget-a-new-immigration-gateway-2844973",
-      "summary": "اہم ترین بات یہ ہے کہ کینیڈا نے دنیا کے لیے اپنے دروازے مکمل بند نہیں کیے",
-      "image_url": "",
-      "published": "2026-11-18T14:16:30+00:00",
-      "source": "Express Urdu",
-      "category": "اردو",
-      "language": "ur"
-    },
-    {
-      "title": "PSX: Stock ends lower as KSE-100 index falls over 1,000",
-      "link": "https://arynews.tv/psx-stock-ends-lower-as-kse-100-index-falls-over-1000",
-      "summary": "",
-      "image_url": "https://static.arynews.tv/zip-archives/wp-content/uploads/2026/10/Stocks-1.jpg",
-      "published": "2026-11-18T14:14:42+00:00",
-      "source": "ARY News",
-      "category": "Pakistan",
-      "language": "en"
-    },
-    {
-      "title": "Trump's Board of Peace faults Israel and Hamas for failure to end Gaza war",
-      "link": "https://www.dawn.com/news/2045436/trumps-board-of-peace-faults-israel-and-hamas-for-failure-to-end-gaza-war",
-      "summary": "The body overseeing US President Donald Trump’s plan to end the Gaza war accused both Israel and Hamas of failing to meet their commitments to end hostilities, leaving the population of Gaza in dire conditions and the ceasefire in danger of collapse. The 12-page Board of Peace report, seen by Reuters , is the body’s second to the United Nations Security Coun",
-      "image_url": "https://i.dawn.com/large/2026/11/181900391414053.webp",
-      "published": "2026-11-18T14:13:49+00:00",
-      "source": "Dawn",
       "category": "Pakistan",
       "language": "en"
     }
